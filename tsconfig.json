@@ -18,6 +18,13 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/pages/festival-program.js",
+    "src/pages/festival-program.js",
+    "src/pages/festival-program.js"
+  ],
   "exclude": ["node_modules"]
 }

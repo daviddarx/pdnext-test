@@ -7,7 +7,7 @@ import EventsList from '@/components/events/EventsList';
 const FestivalProgram = (props) => {
   const events = Object.values(props.items);
 
-  console.log('festival programm');
+  console.log(props.items);
   return (
     <Fragment>
       <Metas title='FestivalProgram' />
@@ -25,25 +25,8 @@ const FestivalProgram = (props) => {
 
 export default FestivalProgram;
 
-const fs = require('fs');
-import path from 'path';
+import loadJsonFiles from '../utils/load-json-files';
 
 export async function getStaticProps() {
-  const jsonsInDir = fs
-    .readdirSync('_content/events')
-    .filter((file) => path.extname(file) === '.json');
-
-  const pages = [];
-
-  jsonsInDir.forEach((file) => {
-    const fileData = fs.readFileSync(path.join('_content/events', file));
-    const json = JSON.parse(fileData.toString());
-    pages.push(json);
-  });
-
-  return {
-    props: {
-      items: pages,
-    },
-  };
+  return loadJsonFiles('_content/events');
 }
