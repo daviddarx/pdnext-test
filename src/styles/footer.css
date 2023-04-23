@@ -1,0 +1,13 @@
+.footer {
+  @apply flex justify-between;
+  @apply mt-auto;
+  @apply border-t border-t-black;
+}
+
+.footer__nav {
+  @apply flex space-x-4;
+}
+
+.footer__link--active {
+  @apply bg-black text-white;
+}

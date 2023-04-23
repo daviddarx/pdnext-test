@@ -1,0 +1,28 @@
+{
+  "forceBlank": false,
+  "uuid": "djs-2022",
+  "title": "Live-Acts und DJs",
+  "entryType": "Musik",
+  "desc": "**Line Up Mainfloor:**\n\nMatija\\\nZagara\\\nNathalie Froehlich feat. Yanneck (live)\\\nMarara Kelly\\\nRakita\n\n**Line Up Play Zone:**\n\nGloria Bulsara\\\nJuli the Titan",
+  "image": "/images/uploads/gloria-bulsara-quadratisch.jpg",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/matja-quadratisch.jpg"
+    },
+    {
+      "image": "/images/uploads/zagara-quadratisch.jpg"
+    },
+    {
+      "image": "/images/uploads/nathalie_02.jpg"
+    },
+    {
+      "image": "/images/uploads/juli-quadratisch.jpg"
+    },
+    {
+      "image": "/images/uploads/marara_02.jpeg.jpg"
+    },
+    {
+      "image": "/images/uploads/dj_rakita-quadratisch.jpg"
+    }
+  ]
+}

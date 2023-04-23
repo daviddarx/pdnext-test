@@ -1,0 +1,25 @@
+{
+  "timetable": [
+    {
+      "time": "11:00",
+      "title": "Start"
+    },
+    {
+      "time": "01:00",
+      "title": "Ende"
+    }
+  ],
+  "ticketsLink": "",
+  "eventdate": "2022-11-26T10:00:00.000Z",
+  "eventlocationlink": "https://dasgleis.ch",
+  "price": "",
+  "layout": "event",
+  "eventlocation": "Das Gleis (barrierefrei)",
+  "entries": [
+    "those-damn-bodies-glas"
+  ],
+  "desc": "Lina Ehrentraut und Marijpol, Autor*innen der Edition Moderne, stellen durch ihre Comics auf unterschiedliche Art Fragen zu Körper- und Rollenbildern.\n\nWährend Lina Ehrentraut in der Science-Fiction-Romanze «Melek + ich» darstellt, wie facettenreich Identität sein kann, dass Selbstliebe durch Dimensionen hindurch möglich ist und nicht zuletzt queere Körper, Lust und Sexualität sichtbar macht, verhandelt Marijpol in «Hort» unterschiedlich starke Wünsche nach Fürsorglichkeit, Selbstbestimmung und Elternschaft und nicht normschöne Körper in einer Zukunft zwischen Dystopie und Utopie.\n\nNeben der Ausstellung im Gleis könnt ihr bei der Edition Moderne ein Porny-Schaufenster bestaunen. Falls ihr Zutritt zur Edition Moderne haben möchtet, nehmt doch direkt Kontakt mit Ihnen auf.\n\n**Klingenstrasse 36, 8005 Zürich**\\\n**+41 44 223 79 33**\\\n[www.editionmoderne.ch](http://www.editionmoderne.ch)",
+  "ticketsLinkTitle": "",
+  "subtitle": "Austellung Glasmalerei - Kollaboration mit Edition Moderne und Literaturhaus",
+  "title": "Those damn bodies!"
+}

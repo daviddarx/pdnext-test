@@ -1,0 +1,14 @@
+{
+  "forceBlank": false,
+  "uuid": "eyes-and-horns",
+  "title": "Eyes and Horns",
+  "entryType": "Film",
+  "typeComplement": "Experimental Animation",
+  "desc": "Chaerin Im\\\nSüdkorea 2021, 6 Min., ohne Dialog\n\nDie Erforschung der Männlichkeit beginnt mit dem Minotaurus, einem Fabelwesen, mit dem sich Picasso in seiner Radierungsserie selbst porträtierte. Der Minotaurus durchlebt einen heftigen Kampf zwischen Männlichkeit und Weiblichkeit. Schließlich verschwimmen die Linien und die Grenzen zwischen den Geschlechtern verschwinden.",
+  "image": "/images/uploads/eyes_and_horn_01.jpg.jpg",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/eyes_and_horns_02.jpg.jpg"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "forceBlank": false,
+  "uuid": "sintic-mrz",
+  "title": "Sintić & MRZ",
+  "entryType": "Musik",
+  "typeComplement": "DJ-Duo",
+  "desc": "Sintić und MRZ sind eine symbiotische Form von musikalischer Teleportation, zwischen Full-House, Low-HighNRJ, Tech-Mech-Folk und blubberndem Stritch-Core. \n\nIn Zürich gehört das Duo zu einem festen Wert, seit ihrem ersten gemeinsamen Auftritt am Closing des legendären «Waffeleisens» in Urdorf.",
+  "image": "/images/uploads/sintic_mrz_paaaarrrrdy.jpg",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/sintić-mrz.jpg"
+    }
+  ]
+}

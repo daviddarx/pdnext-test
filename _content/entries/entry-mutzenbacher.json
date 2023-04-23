@@ -1,0 +1,18 @@
+{
+  "typeComplement": "Dok",
+  "forceBlank": false,
+  "entryType": "Film",
+  "desc": "Ruth Beckermann\\\nÖsterreich 2022, 100 Min., deutsch mit englischen Untertiteln\n\nMit einem Zeitungsaufruf lädt Ruth Beckermann zu einem Casting für einen Film ein, der einen bekannten pornografischen Text zur Grundlage hat. Der Film MUTZENBACHER konfrontiert hundert Männer mit Auszügen aus dem Roman „Josefine Mutzenbacher oder Die Geschichte einer Wienerischen Dirne“, in einer Zeit, in der Sex mehr denn je allgegenwärtig ist, aber gleichzeitig auf ein moralisch hochgradig aufgerüstetes Umfeld trifft.",
+  "videourl": "https://www.youtube.com/watch?v=kt7OdMxU4gA",
+  "title": "MUTZENBACHER",
+  "image": "/images/uploads/07_mutzenbacher©ruthbeckermannfilmproduktion.jpg",
+  "uuid": "mutzenbacher-film",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/05_mutzenbacher©ruthbeckermannfilmproduktion.jpg"
+    },
+    {
+      "image": "/images/uploads/04_mutzenbacher©ruthbeckermannfilmproduktion.jpg"
+    }
+  ]
+}

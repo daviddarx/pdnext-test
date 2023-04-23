@@ -1,0 +1,14 @@
+{
+  "forceBlank": false,
+  "uuid": "after-a-room",
+  "title": "After a room",
+  "entryType": "Film",
+  "typeComplement": "Fiction",
+  "desc": "Naomi Pacifique\\\nHolland 2021, 22 Min., Englisch, Französisch und Spanisch\n\nDie Nächte in Naomis und Rams Zimmer sind lang. Heute Abend haben sie Marina eingeladen, und ihr unordentlicher Raum steht auf dem Prüfstand. Bei der Erkundung der Intimität als persönlicher Spielplatz, der Haut als intimer Landkarte, verliert sich Naomis Körper inmitten der Spannung im Raum, den sie kennt und nicht kennt.",
+  "image": "/images/uploads/after_a_room_01.jpg.jpg",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/after_a_room_02.jpg.jpg"
+    }
+  ]
+}

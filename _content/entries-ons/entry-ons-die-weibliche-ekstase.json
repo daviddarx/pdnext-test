@@ -1,0 +1,17 @@
+{
+  "uuid": "die weibliche ekstase",
+  "title": "Die weibliche Ekstase",
+  "entryType": "Talk",
+  "typeComplement": "Talk",
+  "desc": "\\\nDie Porny Days zeigen ausgewählte Filmausschnitte und debattieren mit Charline Amereller (Online Content Managerin bei «Amorana»), Dania Schiftan (selbständige Sexual- und Psychotherapeutin), Talaya Schmid (Künstlerin und Co-Leiterin von Porny Days) und der Moderatorin Daria Wild über den weiblichen Sexrausch.\\\n\\\nWährend der Veranstaltung hast du die Möglichkeit, den geladenen Teilnehmerinnen über dein Handy anonym Fragen zum Thema zu stellen.",
+  "image": "/images/uploads/karl1.jpg",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/karl3.jpg"
+    },
+    {
+      "image": "/images/uploads/karl2.jpg"
+    }
+  ],
+  "forceBlank": false
+}

@@ -1,0 +1,17 @@
+{
+  "forceBlank": false,
+  "uuid": "uglysatisfying",
+  "title": "#uglysatisfying",
+  "entryType": "Film",
+  "typeComplement": "Experimentalfilm",
+  "desc": "Luisa Zieglmeier und Bennie Hess\\\nSchweiz, 2022, 2 Min, ohne Dialog\n\n«Oddly Satisfying Videos» sind ein Internettrend, bei dem die Zuschauer:innen das Gefühl von Befriedigung erfahren. Das Video spielt mit diesen Emotionen und will unsere Sinne ausreizen. \\\nUnd, fühlst du dich befriedigt?",
+  "image": "/images/uploads/02_-uglysatisfying2.jpg",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/02_-uglysatisfying1.jpg"
+    },
+    {
+      "image": "/images/uploads/02_-uglysatisfying3.jpg"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "forceBlank": false,
+  "desc": "Zwei tolle Frauen. Ein grossartiges Duo. Bruna & Ich, das ist wie Autoscooter fahren im Discolicht oder wilde Achterbahn ohne mulmiges Gefühl danach. Musik, wie ein Vergnügungspark im Schlummerlicht.",
+  "uuid": "bruna-und-ich",
+  "title": "Bruna & ich",
+  "entryType": "Music",
+  "typeComplement": "DJ",
+  "image": "/images/uploads/bruna-ich.jpg",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/bruna-und-ich.jpeg"
+    }
+  ]
+}

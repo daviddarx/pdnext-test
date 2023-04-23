@@ -1,0 +1,17 @@
+{
+  "forceBlank": false,
+  "uuid": "ohrwurm",
+  "title": "Ohrwurm",
+  "entryType": "Film",
+  "typeComplement": "Experimentalfilm",
+  "desc": "abcde Flash\\\nSchweiz, 2022, 15 Min., Deutsch mit englischen Untertiteln\n\nDiese Schnecke gibt uns einen Ohrwurm - eine Schweizer finta-only Crew richtet das Scheinwerferlicht ganz auf unsere Ohrmuscheln. Verspielt, originell, hot!\n\n**\\*** in Anwesenheit von abcde Flash",
+  "image": "/images/uploads/07_ohrwurm1.jpg",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/07_ohrwurm2.jpg"
+    },
+    {
+      "image": "/images/uploads/07_ohrwurm3.jpg"
+    }
+  ]
+}

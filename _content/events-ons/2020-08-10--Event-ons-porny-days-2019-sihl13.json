@@ -1,0 +1,25 @@
+{
+  "timetable": [
+    {
+      "time": "18:30",
+      "title": "gathering"
+    },
+    {
+      "time": "19:00",
+      "title": "movies"
+    }
+  ],
+  "ticketsLink": "https://eventfrog.ch/de/p/festivals/film/porny-days-2019-at-sihl13-6697485019922854495.html?fbclid=IwAR1wkhvwlNeepBeBLEbKB2sLYBD3SfibtKxQUYSTEI_958YN1rD4PtGc7oA",
+  "eventdate": "2020-09-03T16:30:00.000Z",
+  "eventlocationlink": "https://sihl13.ch",
+  "price": "20 CHF normal\n\n10 CHF Studenten",
+  "layout": "event",
+  "eventlocation": "Sihl13",
+  "entries": [
+    "porny days 2019 at sihl13"
+  ],
+  "desc": "Die Kunstplattform Sihl13 und die Porny Days vereinigen sich einen Abend lang, um euch ein vielfältiges Kunstprogramm zu bieten.",
+  "ticketsLinkTitle": "Tickets",
+  "subtitle": "Film und Performance",
+  "title": "Porny Days 2019 @ Sihl13"
+}

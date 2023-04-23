@@ -1,0 +1,48 @@
+{
+  "main": [
+    {
+      "title": "Riff Raff",
+      "link": "https://www.riffraff.ch/",
+      "image": "logo_riffraff",
+      "label": "Venue Partner"
+    },
+    {
+      "title": "25 Hours Hotel Langstrasse",
+      "link": "https://www.25hours-hotels.com/hotels/zuerich/langstrasse/",
+      "image": "logo_25h",
+      "label": "Hotel Partner"
+    },
+    {
+      "title": "Reseau Cinema",
+      "link": "http://www.netzwerk-cinema.ch/",
+      "image": "logo_reseau",
+      "label": "Mit Unterstützung von"
+    },
+    {
+      "title": "Kino Xenix",
+      "link": "https://xenix.ch/",
+      "image": "logo_xenix",
+      "label": "Venue Partner"
+    },
+    {
+      "title": "Lily's",
+      "link": "https://lilys.ch/",
+      "image": "logo_lilys",
+      "label": "Food Partner"
+    },
+    {
+      "title": "Cinématèque suisse",
+      "link": "https://www.cinematheque.ch/",
+      "image": "logo_cinemateque",
+      "label": "Partner"
+    },
+    {
+      "title": "Elastiq",
+      "link": "http://elastiq.ch/",
+      "image": "logo_elastiq",
+      "label": "Web Partner"
+    }
+  ],
+  "secondary": [
+  ]
+}

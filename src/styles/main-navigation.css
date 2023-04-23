@@ -1,0 +1,11 @@
+.main-nav {
+  @apply border-b border-b-black;
+}
+
+.main-nav__nav {
+  @apply flex space-x-4;
+}
+
+.main-nav__link--active {
+  @apply bg-black text-white;
+}

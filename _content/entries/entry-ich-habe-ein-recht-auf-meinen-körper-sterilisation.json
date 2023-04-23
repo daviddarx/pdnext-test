@@ -1,0 +1,16 @@
+{
+  "forceBlank": false,
+  "uuid": "sterilisation",
+  "title": "Ich habe ein Recht auf meinen Körper... STERILISATION",
+  "entryType": "Film",
+  "desc": "Lucienne Lanaz\\\nSchweiz, 1980, 30 Min., Dialekt mit deutschen Untertiteln\n\n«Ich mache immer Filme, die zu früh oder zu spät sind. In diesem Film ging es um die Sterilisation. (…) In meiner Naivität dachte ich, weil ich ehrlich gesagt immer ein wenig naiv bin, dass mit diesem Film eine Diskussion ausgelöst werden kann. Wo man einen Pfarrer einladen könnte, einer, der keine Vasektomie machen will, eine, die eine Sterilisation gemacht, hat, usw. Ein interessantes Panel machen im Fernsehen… Kannst du dir das vorstellen? Zu dieser Zeit war das total unmöglich.» (Lucienne Lanaz, Interview Her Story Box, Juni 2021).",
+  "image": "/images/uploads/sterilisation_01.jpg",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/sterilisation_02.jpg"
+    },
+    {
+      "image": "/images/uploads/sterilisation_03.jpg"
+    }
+  ]
+}

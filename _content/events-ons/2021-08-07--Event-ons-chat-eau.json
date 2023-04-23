@@ -1,0 +1,32 @@
+{
+  "timetable": [
+    {
+      "time": "20.08.21 14:00",
+      "title": "Festival-Start"
+    },
+    {
+      "time": "19:00",
+      "title": "Porny Performance"
+    },
+    {
+      "time": "21.08.21 16:00",
+      "title": "Porny Performance"
+    },
+    {
+      "time": "22.08.21 16:00",
+      "title": "Festival-Ende"
+    }
+  ],
+  "ticketsLink": "https://tixpot.com/chateau",
+  "eventdate": "2021-08-20T12:00:00.000Z",
+  "eventlocationlink": "https://www.google.ch/maps/place/Ch%C3%A2teau+Fougerette/@46.8557186,4.1987083,17z/data=!3m1!4b1!4m5!3m4!1s0x47f231b7f170098b:0xbaf9776bfc89760f!8m2!3d46.855715!4d4.200897",
+  "layout": "event",
+  "eventlocation": "Château Fougerette Bourgogne France",
+  "entries": [
+    "chatxeau"
+  ],
+  "desc": "Wach ich, oder träum‘ isch? Glorreich wird die noschmalige und pornyge Eroberung des CHAT:EAU vonstatten gehen!",
+  "ticketsLinkTitle": "Tickets",
+  "subtitle": "",
+  "title": "CHAT : EAU"
+}

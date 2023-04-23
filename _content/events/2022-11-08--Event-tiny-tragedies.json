@@ -1,0 +1,22 @@
+{
+  "timetable": [
+    {
+      "time": "11:00",
+      "title": "Offen"
+    },
+    {
+      "time": "01:00",
+      "title": "Geschlossen"
+    }
+  ],
+  "eventdate": "2022-11-25T10:00:45.024Z",
+  "eventlocationlink": "https://dasgleis.ch",
+  "layout": "event",
+  "eventlocation": "Das Gleis (barrierefrei)",
+  "entries": [
+    "tiny-tragedies "
+  ],
+  "desc": "Die interaktive Installation Tiny Tragedies lebt von alltäglichen Geschichten, in denen Grenzen überschritten wurden. Das Projekt der in Genf lebenden Künstlerin Julietta Saccardi behandelt das Thema sexuelle Übergriffe auf leichtfüssige Weise und legt genau damit deren Reichweite frei.",
+  "subtitle": "Interaktive Installation  ",
+  "title": "Tiny Tragedies"
+}

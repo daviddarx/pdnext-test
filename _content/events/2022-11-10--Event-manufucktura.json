@@ -1,0 +1,22 @@
+{
+  "timetable": [
+    {
+      "time": "11:00",
+      "title": "Start"
+    },
+    {
+      "time": "18:00",
+      "title": "Ende"
+    }
+  ],
+  "eventdate": "2022-11-27T10:00:00.000Z",
+  "eventlocationlink": "https://dasgleis.ch",
+  "layout": "event",
+  "eventlocation": "Das Gleis (barrierefrei)",
+  "entries": [
+    "manufucktura"
+  ],
+  "desc": "Manu*fuc*ktura ist ein herzens Projekt vom diplomierten Engadiner Schreiner Tino Andri. Die nachhaltigen, veganen, plastikfreien und zu 100% veganen Sex Toys sind in der Schweiz hergestellt. Das Kunsthandwerk steht der Konkurrenz aus der Massenproduktion in nichts nach.",
+  "subtitle": "Stand mit engadiner Sex-Toys",
+  "title": "Manufucktura"
+}

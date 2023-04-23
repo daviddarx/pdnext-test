@@ -1,0 +1,158 @@
+{
+  "title": "Das Festival",
+  "headerSubline": "Porny Days – Film Kunst Festival",
+  "headerTitle": "If you come, you will come again. ",
+  "lead": "Porny Days ist ein Film Kunst Festival in Zürich: Filme, Debatten, Performances, Workshops, Ausstellungen & Party.",
+  "contentSlot": [
+    {
+      "title": "Über uns",
+      "hiddenTitle": false,
+      "anchorTitle": "Über uns",
+      "image": "",
+      "firstText": "Die Porny Days sind ein viertägiges Film- und Kunst-Festival zum Thema Körperlichkeit und Sexualität, das jährlich in Zürich stattfindet. Mit einem offenen Zugang zum Körper und zur Darstellung von Sex setzen die Porny Days einen Kontrapunkt zu Mainstream-Pornografie und Neoprüderie und bringen einem breiten Publikum die Vielseitigkeit von Sexualität und die damit verbundenen Themen näher. \n\nDas Festival schafft in dieser Form eine einzigartige Öffentlichkeit für ein Thema, das mit vielschichtigen Tabus behaftet und zugleich zentrales sowie zeitloses Element der menschlichen Kultur ist. An den Porny Days gibt es Filme, Performances, Paneldiskussionen, Lesungen, Workshops, eine Porny Party und den Porny Brunch. Während des Jahres finden Porny-One-Night-Stands in Zürich und anderen Städten statt.\n\n![Poster Porny Days 2021](/images/uploads/poster.jpg \"Poster Porny Days 2021\")",
+      "collapsableText": {
+        "title": "Archive",
+        "text": "[Archive 2019](https://archive-2019.pornydays.love/)\\\n[Archive 2020](https://archive-2020.pornydays.love/program)\\\n[Archive 2021](https://archive-2021.pornydays.love/program)"
+      },
+      "downloads": [
+        {
+          "downloadTitle": "Poster 2022",
+          "fileTypeWeight": "JPG (471KB)",
+          "file": "/images/uploads/porny_days_poster_2022.jpg"
+        },
+        {
+          "downloadTitle": "Pressespiegel – Porny Days 2013-2014",
+          "fileTypeWeight": "(PDF, 5.6MB)",
+          "file": "/images/uploads/porny_pressspiegel.pdf"
+        },
+        {
+          "downloadTitle": "Awareness-Konzept",
+          "fileTypeWeight": "(PDF, 34KB)",
+          "file": "/images/uploads/awareness_poster_2seiten_895x1280_2021.pdf"
+        }
+      ]
+    },
+    {
+      "title": "Manifesto",
+      "hiddenTitle": false,
+      "anchorTitle": "Manifesto",
+      "firstText": "Sexualität ist Kommunikation und soll in gegenseitigem Einverständnis gelebt werden. Sie berührt Menschen, schafft Raum für Begegnungen, ist intim, spannend, facettenreich, lust- und humorvoll und in kontinuierlicher Bewegung.\\\n\\\nWir verstehen Pornografie als ein kulturelles Produkt und Phänomen, das mehr sein kann als reine Stimulation - eine Form der Politik, der Kritik und des Protests. Mit dem Film Kunst Festival Porny Days nutzen wir Pornografie als aktivistische und subkulturelle Praxis und als künstlerische Strategie, um jenseits des Mainstreams gesellschaftliche Normen und Strukturen infrage zu stellen (vgl. Pimmel Porn Protest von Sarah Held und Sylvia Sadzinski). Dabei schaffen wir Raum und Sichtbarkeit für ein Vielzahl von Geschlechtsidentitäten, Körperlichkeiten und sexuelle Orientierungen. \\\n\\\nWir wollen mit unserem Festival die Gesellschaft in eine Richtung bewegen, in der pornografische Inhalte auf Basis fairer Produktionsbedingungen und im Konsens aller Beteiligten produziert werden.",
+      "collapsableText": {
+        "title": "",
+        "text": ""
+      },
+      "downloads": []
+    },
+    {
+      "title": "Porny Team 2021",
+      "hiddenTitle": false,
+      "anchorTitle": "Team",
+      "image": "/images/uploads/nz7_1353-bearbeitet.jpg",
+      "firstText": "Die Porny Days wurden 2012 von Rona Schauwecker, Talaya Schmid und Dario Schoch gegründet.\\\n",
+      "definitionLists": [
+        {
+          "title": "Organigramm",
+          "listItem": [
+            {
+              "title": "Idee",
+              "description": "Talaya Schmid & Dario Schoch"
+            },
+            {
+              "title": "Programmgruppe Film",
+              "description": "Luisa Ricar, Angela Gallati & Emanuel Signer"
+            },
+            {
+              "title": "Programmgruppe Kunst",
+              "description": "Talaya Schmid & Stella Bohn"
+            },
+            {
+              "title": "Programmgruppe Wissenstransfer",
+              "description": "Tina Beerli & Ellinor Lori"
+            },
+            {
+              "title": "PR & Pressebetreuung",
+              "description": "Jenny Rieger"
+            },
+            {
+              "title": "Social Media",
+              "description": "Tina Beerli"
+            },
+            {
+              "title": "Grafik",
+              "description": "Maurice Ettlin"
+            },
+            {
+              "title": "Web",
+              "description": "David Darx & David Aerne"
+            },
+            {
+              "title": "Film Handling & DCP",
+              "description": "Miltutin Kostic - VOKOS GmbH"
+            },
+            {
+              "title": "Trailer",
+              "description": "Luisa Ricar"
+            },
+            {
+              "title": "Helfer*innen-Betreuung",
+              "description": "Lionel Voumard"
+            },
+            {
+              "title": "Hospitality",
+              "description": "Angela Gallati"
+            },
+            {
+              "title": "Finanzen & Sponsoring",
+              "description": "Emanuel Signer & Talaya Schmid"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Kontakt",
+      "anchorTitle": "Kontakt",
+      "firstText": "",
+      "definitionLists": [
+        {
+          "title": "",
+          "listItem": [
+            {
+              "title": "General contact",
+              "description": "festival@pornydays.ch"
+            },
+            {
+              "title": "Festival co–directors",
+              "description": "emanuel@filmkunstfestival.ch\\\ntalaya@filmkunstfestival.ch"
+            },
+            {
+              "title": "Film",
+              "description": "luisa@filmkunstfestival.ch\\\nangela@filmkunstfestival.ch\\\nemanuel@filmkunstfestival.ch"
+            },
+            {
+              "title": "Art",
+              "description": "stella@filmkunstfestival.ch"
+            },
+            {
+              "title": "Wissenstransfer",
+              "description": "tina@filmkunstfestival.ch"
+            },
+            {
+              "title": "PR & Pressebetreuung",
+              "description": "jenny@filmkunstfestival.ch"
+            },
+            {
+              "title": "Social Media",
+              "description": "tina@filmkunstfestival.ch"
+            },
+            {
+              "title": "Helpers coordinator",
+              "description": "lionel@filmkunstfestival.ch"
+            }
+          ]
+        }
+      ],
+      "secondText": "**Porny Days**\\\nc/o Catpics\\\nErlachstrasse 25\\\nCH-8003 Zürich\\\nSwitzerland"
+    }
+  ]
+}

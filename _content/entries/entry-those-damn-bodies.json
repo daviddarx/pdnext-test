@@ -1,0 +1,19 @@
+{
+  "forceBlank": false,
+  "uuid": "those-damn-bodies-talk",
+  "title": "Those damn bodies!",
+  "entryType": "Talk",
+  "desc": "Im Dialog mit Gesa Schneider, Leitung Literaturhaus Zürich, diskutieren Lina Ehrentraut und Marijpol das politische Potentential von Literatur und Bildern, Konventionen zu durchbrechen, marginalisierte Realitäten darzustellen, Fiktionen zu schaffen und in ihren Geschichten sowie als Autor*innen Raum einzunehmen. Wer erzählt, was wird gezeigt ... und was nicht?",
+  "image": "/images/uploads/edition-moderne-quadratisch1.jpg",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/edition-moderne-quadratisch2.jpg"
+    },
+    {
+      "image": "/images/uploads/edition-moderne-quadratisch4.jpg"
+    },
+    {
+      "image": "/images/uploads/edition-moderne-quadratisch3.jpg"
+    }
+  ]
+}

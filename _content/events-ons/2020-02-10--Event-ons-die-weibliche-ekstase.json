@@ -1,0 +1,25 @@
+{
+  "timetable": [
+    {
+      "time": "19:30",
+      "title": "Start"
+    },
+    {
+      "time": "22:30",
+      "title": "Ende"
+    }
+  ],
+  "ticketsLink": "https://www.karldergrosse.ch/ticketreservation/?veranstaltung=die-weibliche-ekstase",
+  "eventdate": "2020-09-22T17:30:00.000Z",
+  "eventlocationlink": "https://www.karldergrosse.ch/karl/kontakt",
+  "price": "Eintritt frei",
+  "layout": "event",
+  "eventlocation": "Zentrum Karl der Grosse",
+  "entries": [
+    "die weibliche ekstase"
+  ],
+  "desc": "Die Debatte um die weibliche Sexualität ist in aller Munde, trotzdem existieren immer noch viele Mythen und Tabus. Wir wollen herausfinden, wie sich die weibliche Sexualität entfaltet und wie es zu einem ekstatischen Erlebnis kommen kann. Welche Rolle spielen Sextoys und Pornos und was verraten gängige Marketingstrategien über die Vorstellungen von der weiblichen Sexualität?",
+  "ticketsLinkTitle": "Anmeldung erforderlich",
+  "subtitle": "Diskussion mit Filmausschnitten",
+  "title": "Die weibliche Ekstase"
+}

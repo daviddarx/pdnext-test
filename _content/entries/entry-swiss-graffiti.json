@@ -1,0 +1,14 @@
+{
+  "forceBlank": false,
+  "uuid": "swiss-graffiti",
+  "title": "Swiss Graffiti",
+  "entryType": "Film",
+  "desc": "Jacqueline Veuve\\\nSchweiz, 1976, 6 Min., ohne Dialog\n\nEin Zeichentrickfilm über die Schöpfungsgeschichte, die hier von zwei Frauen überprüft und korrigiert wird: «Graffiti nennt man Wandkritzeleien, wie sie sich vornehmlich in öffentlichen Toiletten auf der ganzen Welt befinden. ‘Swiss Graffiti’ rechnet mit dem Weltbild ab, das sich in diesen Kritzeleien spiegelt: es wird vom Penis beherrscht.» (R. Bächler, NZZ, 09.07.1976)",
+  "image": "/images/uploads/swiss_graffiti_01.jpg",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/swiss_graffiti_02.jpg"
+    }
+  ],
+  "typeComplement": "Animation"
+}

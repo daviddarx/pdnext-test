@@ -1,0 +1,14 @@
+{
+  "forceBlank": false,
+  "uuid": "perestroika",
+  "title": "Perestroika",
+  "entryType": "Film",
+  "typeComplement": "Experimentalfilm",
+  "desc": "Sascha-Alexandra Zaitseva, Lars* Kollros\\\nÖsterreich, 2022, 7 Min., ohne Dialog\n\nEin Spiel mit Ton, Tonalität, Gender. Einnehmend, sanft, nass.",
+  "image": "/images/uploads/07_perestroika1.jpg",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/07_perestroika2.jpg"
+    }
+  ]
+}

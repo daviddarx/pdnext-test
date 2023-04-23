@@ -1,0 +1,17 @@
+{
+  "forceBlank": false,
+  "uuid": "grace",
+  "title": "Grace.",
+  "entryType": "Film",
+  "typeComplement": "Experimentalfilm",
+  "desc": "abcde Flash\\\nSchweiz, 2022, 6 Min., Deutsch mit englischen Untertiteln\n\nDer Menstruationszyklus hat vier Phasen, und abcde Flash hat sie alle gemeistert. Vom ach so anstrengenden Eisprung bis zum absoluten hirnzermaternden Lutealphase gelangt sie in die Follikel- und Menstruationsphase, in der Kreativität einfach fließt. \\\n* Trigger-Warnung: blood, needles\n\n**\\*** in Anwesenheit von abcde Flash",
+  "image": "/images/uploads/06_grace1.jpg",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/06_grace2.jpg"
+    },
+    {
+      "image": "/images/uploads/06_grace3.jpg"
+    }
+  ]
+}

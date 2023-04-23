@@ -1,0 +1,13 @@
+{
+  "forceBlank": false,
+  "uuid": "manufucktura",
+  "title": "Manufucktura",
+  "entryType": "Ausstellung",
+  "desc": "Abgesehen vom hochwertigen und dekorativen Look ist jedes ein Unikat. In einem Engadinerstossholz sind mehrere Stunden Verarbeitung und einige Jahre Trocknungszeit beherbergt. Geduld und Passion schaffen es ein solch freudeschenkendes Produkt zu kreieren.\n\nÜn Dun da la Natüra. Eine Gabe der Natur, wie wir im Engadin sagen",
+  "image": "/images/uploads/manufucktura-quadratisch-1.jpg",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/manufucktura-quadratisch-2.jpg"
+    }
+  ]
+}

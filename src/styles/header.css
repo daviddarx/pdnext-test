@@ -1,0 +1,3 @@
+.header__logo {
+  @apply w-40 h-auto mb-4;
+}

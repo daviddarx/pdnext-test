@@ -1,0 +1,16 @@
+{
+  "forceBlank": false,
+  "uuid": "wall-of-nudes",
+  "title": "Wall of Nudes",
+  "entryType": "Ausstellung",
+  "desc": "In diesem interaktiven Kunstwerk sind die Gäst*innen des Festivals eingeladen, an diesem Gespräch teilzunehmen, indem sie sich in einem sicheren Space nackt vor die Polaroid-Kamera stellen, nach Belieben posieren und nach der Entwicklung des Polaroid-Bildes das Bild selbst nach Belieben mit einem schwarzen wasserfesten Marker zensieren, wie es ihnen gefällt.\n\nMit schriftlichem Einverständnis werden die Polaroids dann an einer Wand im Space aufgehängt, wo die Wand der Akte langsam zu dem wird, was sie ist: Eine analoge Studie über Selbstdarstellung und die persönliche Einstellung zu Zensur und Schönheit.\n\nDie Gäst*innen können auch entscheiden, ob ihr Bild nach Ende der Ausstellung vernichtet oder in einer gedruckten Version des Kunstwerks veröffentlicht werden soll.",
+  "image": "/images/uploads/nude3.jpg",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/nude2.jpg"
+    },
+    {
+      "image": "/images/uploads/nude1.jpg"
+    }
+  ]
+}

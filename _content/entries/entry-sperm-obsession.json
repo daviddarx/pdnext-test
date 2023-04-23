@@ -1,0 +1,17 @@
+{
+  "forceBlank": false,
+  "uuid": "sperm-obsession",
+  "title": "Sperm Obsession",
+  "entryType": "Film",
+  "typeComplement": "Animation",
+  "desc": "Klaudia Agata Prabucka\\\nPolen, 2021, 6 Min., Polnisch mit Englischen Untertiteln\n\n\"Sperm Obessions\" ist eine Geschichte über das Sammeln von Sperma und die die grosse Frage: Was jetzt damit?",
+  "image": "/images/uploads/05_spermobsession1.jpg",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/05_spermobsession2.jpg"
+    },
+    {
+      "image": "/images/uploads/05_spermobsession3.jpg"
+    }
+  ]
+}

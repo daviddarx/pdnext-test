@@ -1,0 +1,13 @@
+{
+  "forceBlank": false,
+  "uuid": "fireflees",
+  "title": "Fireflies (Vagalumes)",
+  "desc": "Léo Bittencourt\\\nBrasilien 2021, 19 Min.\n\nEin Portrait der Flora und Fauna der Gärten von Roberto Burle Marx, die von den Besuchern des Parque do Flamengo bewohnt werden, während die Stadt Rio de Janeiro einschläft.",
+  "entryType": "Film",
+  "image": "/images/uploads/vagalumes_01.jpeg",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/vagalumes_02.jpeg"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "timetable": [
+    {
+      "time": "20:00",
+      "title": "Garten/Bar"
+    },
+    {
+      "time": "22:00",
+      "title": "DJs"
+    },
+    {
+      "time": "04:00",
+      "title": "Ende"
+    }
+  ],
+  "ticketsLink": "",
+  "eventdate": "2021-09-10T18:00:00.000Z",
+  "eventlocationlink": "https://gds.fm/sender",
+  "price": "Eintritt: CHF 20.--\\\nMember: CHF 10.-- ([www.gds.fm/member](http://www.gds.fm/member?fbclid=IwAR2GsRw3v-kQJVFLrTBgxd_yw-uCw2eetAKeCfKScyWcWOu0CcfoskU2GxU))",
+  "layout": "event",
+  "eventlocation": "Sender / GDS.FM",
+  "entries": [
+    "vorspiel im sender"
+  ],
+  "desc": "Bevors Ende November mit dem 9. Festival an den Start geht, laden wir euch zu einem pornygen Vorspiel in den Sender ein. Es ist bereits der dritte One-Night-Stand, wahrscheinlich wäre ein langzeit Techtelmechtel der passendre Begriff....",
+  "ticketsLinkTitle": "Abendkasse",
+  "title": "Porny Vorspiel"
+}

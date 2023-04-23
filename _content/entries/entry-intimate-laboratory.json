@@ -1,0 +1,14 @@
+{
+  "forceBlank": false,
+  "title": "Intimate Laboratory",
+  "uuid": "intimate-laboratory",
+  "entryType": "Film",
+  "typeComplement": "Experimentalfilm",
+  "desc": "Serge Goldwicht\\\nBelgien 2022, 5 Min, ohne Dialog\n\nWas blubbert da für eine explosive Mischung? Oberflächen, Texturen und Konsistenzen verschmelzen mit orgasmischen Geräuschen.",
+  "image": "/images/uploads/03_intimatelaboratory1.jpg",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/03_intimatelaboratory2.jpg"
+    }
+  ]
+}

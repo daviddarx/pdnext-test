@@ -1,0 +1,25 @@
+{
+  "timetable": [
+    {
+      "time": "22:00",
+      "title": "Start"
+    },
+    {
+      "time": "22:30",
+      "title": "Ende"
+    }
+  ],
+  "ticketsLink": "",
+  "eventdate": "2022-11-25T21:00:58.293Z",
+  "eventlocationlink": "https://dasgleis.ch",
+  "price": "CHF 10 - 25",
+  "layout": "event",
+  "eventlocation": "Das Gleis (barrierefrei)",
+  "entries": [
+    "kupalua"
+  ],
+  "desc": "Auf der Reise vom Inneren der Pussy zum Weltraum mit Lichtgeschwindigkeit gibt es keine Trennung zwischen Natur-Kultur oder Körper-Kosmos; was ist Wurzel und was ist synthetisch; Regen, melodische Stimme, Synthesizer, Mikrofone und Prozessoren.\n\nKupalua benutzt Laserprothesen, um mit dem Publikum und dem Weltraum in Kontakt zu treten, während alle Materie durch Holzteile fließt, die uns der Entfremdung überlassen. Die Konstruktion des Körpers als Prothese und das Licht stellen die klangvolle Landschaft dar. Kupalua ist immer im Transit. Es gibt keine Spur von Moral oder Grenze. Es ist gleichzeitig außerirdisch und irdisch-physikalisch-körperlich.",
+  "ticketsLinkTitle": "Nur Abendkasse",
+  "subtitle": "Performance mit Laserprothesen",
+  "title": "Kupalua"
+}

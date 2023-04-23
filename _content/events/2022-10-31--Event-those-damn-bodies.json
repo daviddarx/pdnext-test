@@ -1,0 +1,25 @@
+{
+  "timetable": [
+    {
+      "time": "16:00",
+      "title": "Start"
+    },
+    {
+      "time": "17:30",
+      "title": "Ende"
+    }
+  ],
+  "ticketsLink": "",
+  "eventdate": "2022-11-26T15:00:00.000Z",
+  "eventlocationlink": "https://dasgleis.ch",
+  "price": "CHF 10-20",
+  "layout": "event",
+  "eventlocation": "Das Gleis (barrierefrei)",
+  "entries": [
+    "those-damn-bodies-talk"
+  ],
+  "desc": "Lina Ehrentraut und Marijpol, Autor*innen der Edition Moderne, stellen durch ihre Comics auf unterschiedliche Art Fragen zu Körper- und Rollenbildern.\n\nWährend Lina Ehrentraut in der Science-Fiction-Romanze «Melek + ich» darstellt, wie facettenreich Identität sein kann, dass Selbstliebe durch Dimensionen hindurch möglich ist und nicht zuletzt queere Körper, Lust und Sexualität sichtbar macht, verhandelt Marijpol in «Hort» unterschiedlich starke Wünsche nach Fürsorglichkeit, Selbstbestimmung und Elternschaft und nicht normschöne Körper in einer Zukunft zwischen Dystopie und Utopie.",
+  "ticketsLinkTitle": " nur Abendkasse",
+  "subtitle": "Gespräch, Lesung und Ausstellung - Kollaboration mit Edition Moderne und Literaturhaus",
+  "title": "Those damn bodies! (Talk)"
+}

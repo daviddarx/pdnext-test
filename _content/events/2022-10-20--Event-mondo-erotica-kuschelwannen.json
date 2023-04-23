@@ -1,0 +1,24 @@
+{
+  "timetable": [
+    {
+      "time": "14:00",
+      "title": "Start"
+    },
+    {
+      "time": "20:00",
+      "title": "Ende"
+    }
+  ],
+  "eventdate": "2022-11-26T13:00:00.000Z",
+  "eventlocationlink": "https://www.google.com/maps/place/Im+Struppen+1,+8048+Zürich/@47.3883215,8.4827189,17z/data=!3m1!4b1!4m5!3m4!1s0x47900bc701f6c54d:0x40c7184ca4468968!8m2!3d47.3883215!4d8.4827189",
+  "price": "Je nach Portemonnaiegrösse zwischen 15chf und 18chf.\\\nNimm Bargeld mit, damit du vor Ort bezahlen kannst.",
+  "layout": "event",
+  "eventlocation": "(T)raum (nicht rollstuhlgängig)",
+  "entries": [
+    "mondo-erotica"
+  ],
+  "desc": "Mondo Erotica ist eine Installation die ihre Besucher\\*innen auf der visuellen, auditiven und haptischen Ebene berührt. In einer riesigen Flauschwanne macht Mensch es sich gemütlich und sich lässt sich durch die intime Geräuschkulisse berieseln. Auf einer kreisrunden Fläche werden den Zuschauer\\*innen kurze Sequenzen von Körpern gezeigt. Die Installation lotet die schwammigen Übergänge von erotisch und unerotisch wahrgenommenen Inhalten aus. Was ist erotisch? Diese Frage dürfen sich die BesucherInnen selbst stellen und beantworten.\n\nMondo Erotica wurde in Kollaboration von Sophie Glenzer und Josephine Weber realisiert. Josephine Weber arbeitet als Fotografin und Sophie Glenzer als Industrie Designerin. Beide arbeiten zudem als freischaffende Künstlerinnen, die sich stark für aktuelle gesellschaftliche Themen rund um Sexualität und Körperausdruck interessieren. Sie arbeiten dabei multimedial und stimulieren die verschiedenen Sinne des Menschen.\n\nMehr Infos:\\\n<https://www.josephineweber.com>\\\n[https://www.instagram.com/josephine.weber](https://www.instagram.com/josephine.weber/)\\\n[https://www.sophieglenzer.com](https://www.sophieglenzer.com/portfolio)\n\nFalls du mit Rollstuhl unterwegs bist, können wir je nach Situation versuchen eine individuelle Lösung mit dir zu finden. Melde dich bei Fragen und zur Klärung hier: michelina@zwischenwelten.ch",
+  "ticketsLinkTitle": "zwischen 15chf und 18chf // Bargeld vor Ort",
+  "subtitle": "by Josephine Weber in Kollaboration mit Zwischenwelten",
+  "title": "Mondo Erotica - Kuschelwanne"
+}

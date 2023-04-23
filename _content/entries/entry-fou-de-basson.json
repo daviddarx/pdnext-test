@@ -1,0 +1,17 @@
+{
+  "forceBlank": false,
+  "uuid": "fou-de-basson",
+  "title": "Fou de Bassan",
+  "entryType": "Film",
+  "desc": "Yann Gonzalez\\\nFrankreich, 2021, 4 Min., ohne Dialog\n\nEine tote Stadt im Nebel. Ein Saxophon spielt. Das Verlangen erwacht.",
+  "image": "/images/uploads/01_fou-de-bassan1.jpg",
+  "typeComplement": "Experimentalfilm",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/01_fou-de-bassan2.jpg"
+    },
+    {
+      "image": "/images/uploads/01_fou-de-bassan3.jpg"
+    }
+  ]
+}
