@@ -7,7 +7,7 @@ import EventsList from '@/components/events/EventsList';
 const FestivalProgram = (props) => {
   const events = Object.values(props.items);
 
-  //console.log(props.items);
+  console.log('festival programm');
   return (
     <Fragment>
       <Metas title='FestivalProgram' />
