@@ -23,8 +23,7 @@
     "**/*.ts",
     "**/*.tsx",
     "src/pages/festival-program.js",
-    "src/pages/festival-program.js",
-    "src/pages/festival-program.js"
+    "src/components/events/EventsFilters.js"
   ],
   "exclude": ["node_modules"]
 }

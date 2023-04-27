@@ -3,22 +3,27 @@ import { useSelector } from 'react-redux';
 
 import Event from '@/components/events/Event';
 
-const EventsList = () => {
-  const dateClusteredEvents = useSelector((state: any) => state.events.list);
+interface Props {
+  clusteredEvents: Array<any>;
+}
 
+const EventsList = ({ clusteredEvents }: Props) => {
   return (
     <Fragment>
-      {dateClusteredEvents.map((date: any) => (
-        <div key={date.title}>
-          <h3 className='border-b border-black font-bold'>{date.title}</h3>
-          <ul>
-            {date.events.map((event: any) => (
-              <li key={event.id}>
-                <Event title={event.title} hour={event.date.hour} type={event.type} />
-              </li>
-            ))}
-          </ul>
-        </div>
+      {clusteredEvents.map((date: any) => (
+        <section key={date.dateReadable} className='events-list'>
+          <h2 className='events-list__title'>{date.dateReadable}</h2>
+          {date.events.map((event: any) => (
+            <Event
+              key={event.id + event.title}
+              title={event.title}
+              hour={event.date.hour}
+              location={event.eventlocation}
+              types={event.types}
+              specialState={event.specialstate}
+            />
+          ))}
+        </section>
       ))}
     </Fragment>
   );

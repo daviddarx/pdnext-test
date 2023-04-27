@@ -1,12 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
-import eventsSlice from './events-slice';
+import uiSlice from './ui-slice';
 
 const store = configureStore({
   reducer: {
-    events: eventsSlice.reducer,
+    ui: uiSlice.reducer,
   },
 });
 
 export default store;
 
-export const eventsActions = eventsSlice.actions;
+export const uiActions = uiSlice.actions;

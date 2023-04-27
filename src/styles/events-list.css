@@ -1,0 +1,6 @@
+.events-list {
+}
+
+.events-list__title {
+  @apply border-b border-black font-bold;
+}
