@@ -6,9 +6,9 @@ const Festival = () => {
   return (
     <Fragment>
       <Metas title='Festival' />
-      <section>
+      <div>
         <h1>Festival</h1>
-      </section>
+      </div>
     </Fragment>
   );
 };

@@ -6,9 +6,9 @@ const Impressum = () => {
   return (
     <Fragment>
       <Metas title='Impressum' />
-      <section>
+      <div>
         <h1>Impressum</h1>
-      </section>
+      </div>
     </Fragment>
   );
 };

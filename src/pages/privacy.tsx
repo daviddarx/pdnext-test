@@ -6,9 +6,9 @@ const Privacy = () => {
   return (
     <Fragment>
       <Metas title='Privacy' />
-      <section>
+      <div>
         <h1>Privacy</h1>
-      </section>
+      </div>
     </Fragment>
   );
 };

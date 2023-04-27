@@ -6,9 +6,9 @@ const Impressions = () => {
   return (
     <Fragment>
       <Metas title='Impressions' />
-      <section>
+      <div>
         <h1>Impressions</h1>
-      </section>
+      </div>
     </Fragment>
   );
 };

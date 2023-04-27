@@ -6,9 +6,9 @@ const News = () => {
   return (
     <Fragment>
       <Metas title='News' />
-      <section>
+      <div>
         <h1>News</h1>
-      </section>
+      </div>
     </Fragment>
   );
 };

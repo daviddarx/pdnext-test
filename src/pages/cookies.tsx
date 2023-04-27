@@ -6,9 +6,9 @@ const Cookies = () => {
   return (
     <Fragment>
       <Metas title='Cookies' />
-      <section>
+      <div>
         <h1>Cookies</h1>
-      </section>
+      </div>
     </Fragment>
   );
 };

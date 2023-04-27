@@ -6,9 +6,9 @@ const Press = () => {
   return (
     <Fragment>
       <Metas title='Press' />
-      <section>
+      <div>
         <h1>Press</h1>
-      </section>
+      </div>
     </Fragment>
   );
 };

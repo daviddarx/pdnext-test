@@ -6,9 +6,9 @@ const OneNightStands = () => {
   return (
     <Fragment>
       <Metas title='OneNightStands' />
-      <section>
+      <div>
         <h1>OneNightStands</h1>
-      </section>
+      </div>
     </Fragment>
   );
 };
