@@ -1,15 +1,14 @@
-import { Fragment } from 'react';
-
+import Layout from '@/components/layout/Layout';
 import Metas from '@/components/layout/Metas';
 
 const Festival = () => {
   return (
-    <Fragment>
+    <Layout>
       <Metas title='Festival' />
       <div>
         <h1>Festival</h1>
       </div>
-    </Fragment>
+    </Layout>
   );
 };
 

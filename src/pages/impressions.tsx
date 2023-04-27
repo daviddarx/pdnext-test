@@ -1,15 +1,14 @@
-import { Fragment } from 'react';
-
+import Layout from '@/components/layout/Layout';
 import Metas from '@/components/layout/Metas';
 
 const Impressions = () => {
   return (
-    <Fragment>
+    <Layout>
       <Metas title='Impressions' />
       <div>
         <h1>Impressions</h1>
       </div>
-    </Fragment>
+    </Layout>
   );
 };
 

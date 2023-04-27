@@ -1,8 +1,0 @@
-.layout {
-  @apply min-h-screen flex flex-col;
-  @apply p-10;
-}
-
-.layout__page {
-  @apply pt-10;
-}

@@ -1,15 +1,14 @@
-import { Fragment } from 'react';
-
+import Layout from '@/components/layout/Layout';
 import Metas from '@/components/layout/Metas';
 
 const Privacy = () => {
   return (
-    <Fragment>
+    <Layout>
       <Metas title='Privacy' />
       <div>
         <h1>Privacy</h1>
       </div>
-    </Fragment>
+    </Layout>
   );
 };
 

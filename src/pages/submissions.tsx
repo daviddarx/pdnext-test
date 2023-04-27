@@ -1,15 +1,14 @@
-import { Fragment } from 'react';
-
+import Layout from '@/components/layout/Layout';
 import Metas from '@/components/layout/Metas';
 
 const Submissions = () => {
   return (
-    <Fragment>
+    <Layout>
       <Metas title='Submissions' />
       <div>
         <h1>Submissions</h1>
       </div>
-    </Fragment>
+    </Layout>
   );
 };
 

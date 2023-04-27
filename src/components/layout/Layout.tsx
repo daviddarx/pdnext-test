@@ -1,27 +1,52 @@
-import { ReactNode } from 'react';
-import { Space_Grotesk } from 'next/font/google';
+import React, { ReactNode } from 'react';
+import { motion } from 'framer-motion';
 
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
+import eases from './../../utils/eases.js';
 
-const font = Space_Grotesk({
-  weight: ['400', '700'],
-  style: ['normal'],
-  subsets: ['latin'],
-});
-
-interface Props {
-  children?: ReactNode;
-}
-
-const Layout = ({ children }: Props) => {
-  return (
-    <div className={`layout ${font.className}`}>
-      <Header />
-      <main className='layout__page'>{children}</main>
-      <Footer />
-    </div>
-  );
+type Props = {
+  children: ReactNode;
 };
+
+const variants = {
+  hidden: {
+    opacity: 0,
+    x: 0,
+    y: 50,
+  },
+  enter: {
+    opacity: 1,
+    x: 0,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: eases.outQuint,
+    },
+  },
+  exit: {
+    opacity: 0,
+    x: 0,
+    y: 0,
+    transition: {
+      duration: 0.25,
+      ease: eases.outQuart,
+    },
+  },
+};
+
+const transition = { duration: 5, ease: 'backInOut' };
+
+const Layout = ({ children }: Props): JSX.Element => (
+  <div className={'h-[200vh]'}>
+    <motion.main
+      initial='hidden'
+      animate='enter'
+      exit='exit'
+      variants={variants}
+      transition={transition}
+    >
+      {children}
+    </motion.main>
+  </div>
+);
 
 export default Layout;

@@ -1,5 +1,6 @@
-import { Fragment, useState } from 'react';
+import { useState } from 'react';
 
+import Layout from '@/components/layout/Layout';
 import Metas from '@/components/layout/Metas';
 import EventsFilters from '@/components/events/EventsFilters';
 import EventsList from '@/components/events/EventsList';
@@ -64,7 +65,7 @@ const FestivalProgram = ({ dateClusteredEvents, entryTypes }) => {
   };
 
   return (
-    <Fragment>
+    <Layout>
       <Metas title='FestivalProgram' />
       <section>
         <h1>
@@ -85,7 +86,7 @@ const FestivalProgram = ({ dateClusteredEvents, entryTypes }) => {
         />
         <EventsList clusteredEvents={filteredEvents} />
       </section>
-    </Fragment>
+    </Layout>
   );
 };
 

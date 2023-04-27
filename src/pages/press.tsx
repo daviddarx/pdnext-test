@@ -1,15 +1,14 @@
-import { Fragment } from 'react';
-
+import Layout from '@/components/layout/Layout';
 import Metas from '@/components/layout/Metas';
 
 const Press = () => {
   return (
-    <Fragment>
+    <Layout>
       <Metas title='Press' />
       <div>
         <h1>Press</h1>
       </div>
-    </Fragment>
+    </Layout>
   );
 };
 
