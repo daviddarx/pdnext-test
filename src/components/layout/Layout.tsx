@@ -34,9 +34,10 @@ const variants = {
 };
 
 const transition = { duration: 5, ease: 'backInOut' };
+console.log('remove div here? ');
 
 const Layout = ({ children }: Props): JSX.Element => (
-  <div className={'h-[200vh]'}>
+  <div>
     <motion.main
       initial='hidden'
       animate='enter'

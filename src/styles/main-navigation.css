@@ -1,5 +1,5 @@
 .main-nav {
-  @apply border-b border-b-black;
+  @apply fixed right-20 top-20 border-b border-b-black;
 }
 
 .main-nav__nav {

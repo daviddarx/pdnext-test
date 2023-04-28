@@ -24,7 +24,9 @@ const Header = () => {
         <h2 className='hidden'>Porny Days – Film Kunst Festival Zürich</h2>
         <PornyLogo className='header__logo' />
       </Link>
-      <button onClick={toggleNavigation}>Navigation</button>
+      <button className='header__burger' onClick={toggleNavigation}>
+        Navigation
+      </button>
       {isNavigationOpened && <MainNav />}
     </header>
   );

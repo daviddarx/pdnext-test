@@ -25,7 +25,6 @@ const ease = {
   inOutExpo: [1.0, 0.0, 0.0, 1.0],
   inOutCirc: [0.785, 0.135, 0.15, 0.86],
   inOutBack: [0.68, -0.55, 0.265, 1.55],
-  custom: [0.0, 1.65, 1.0, -0.6],
 };
 
 export default ease;
