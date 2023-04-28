@@ -11,12 +11,10 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-}
+  --gutter: 2vw;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
+  @screen lg {
+    --gutter: 5vw;
   }
 }
 

@@ -1,7 +1,8 @@
 .header {
-  @apply pb-20;
 }
 
 .header__logo {
+  @apply fixed top-gutter left-gutter;
   @apply w-40 h-auto mb-4;
+  @apply translate-y-[-10%];
 }

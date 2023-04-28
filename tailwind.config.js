@@ -7,12 +7,13 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      spacing: {
+        gutter: 'var(--gutter)',
+        'gutter-1/2': 'calc(var(--gutter) * 0.5)',
+        'gutter-2': 'calc(var(--gutter) * 2)',
+        'gutter-4': 'calc(var(--gutter) * 4)',
       },
     },
   },
   plugins: [],
-}
+};

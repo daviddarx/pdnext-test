@@ -3,20 +3,19 @@ import { motion } from 'framer-motion';
 
 import eases from './../../utils/eases';
 
-import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
 type Props = {
   children: ReactNode;
 };
 
-const variants = {
-  hidden: {
+const motionVariants = {
+  initial: {
     opacity: 0,
     x: 0,
     y: 50,
   },
-  enter: {
+  animate: {
     opacity: 1,
     x: 0,
     y: 0,
@@ -39,13 +38,12 @@ const variants = {
 const Layout = ({ children }: Props): JSX.Element => {
   return (
     <motion.div
-      initial='hidden'
-      animate='enter'
+      initial='initial'
+      animate='animate'
       exit='exit'
-      variants={variants}
-      className='min-h-screen flex flex-col p-10'
+      variants={motionVariants}
+      className='layout min-h-screen flex flex-col p-gutter pt-gutter-4'
     >
-      <Header />
       <main>{children}</main>
       <Footer />
     </motion.div>

@@ -1,3 +1,3 @@
 .main-nav-burger {
-  @apply fixed top-10 right-20;
+  @apply fixed top-gutter right-gutter;
 }

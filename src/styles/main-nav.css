@@ -1,11 +1,34 @@
-.main-nav {
-  @apply fixed right-20 top-20 border-b border-b-black;
+.main-nav__panel {
+  @apply fixed top-0 right-0 z-10;
+  @apply w-1/2 h-screen p-gutter;
+  @apply bg-black text-white;
 }
 
 .main-nav__nav {
-  @apply flex space-x-4;
+  @apply mb-gutter-1/2;
+}
+
+.main-nav__link {
+  @apply inline-block mb-4;
+}
+
+.main-nav__link--main {
+  @apply font-bold;
 }
 
 .main-nav__link--active {
-  @apply bg-black text-white;
+  @apply opacity-50;
+}
+
+.main-nav__link-detail {
+  @apply block font-normal;
+}
+
+.main-nav__close {
+  @apply fixed top-gutter right-gutter;
+}
+
+.main-nav__bg {
+  @apply fixed top-0 left-0 w-screen h-screen;
+  @apply bg-white/75;
 }
