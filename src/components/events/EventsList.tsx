@@ -1,27 +1,23 @@
 import { Fragment } from 'react';
-import { useSelector } from 'react-redux';
+
+import { DateClusteredEvents } from '@/types/DateClusteredEvents';
+import { FormatedEvent } from '@/types/FormatedEvent';
 
 import Event from '@/components/events/Event';
 
 interface Props {
-  clusteredEvents: Array<any>;
+  dateClusteredEvents: DateClusteredEvents[];
 }
 
-const EventsList = ({ clusteredEvents }: Props) => {
+const EventsList = ({ dateClusteredEvents }: Props) => {
+  console.log(dateClusteredEvents[0].events[0].id);
   return (
     <Fragment>
-      {clusteredEvents.map((date: any) => (
+      {dateClusteredEvents.map((date: DateClusteredEvents) => (
         <section key={date.dateReadable} className='events-list'>
           <h2 className='events-list__title'>{date.dateReadable}</h2>
-          {date.events.map((event: any) => (
-            <Event
-              key={event.id + event.title}
-              title={event.title}
-              hour={event.date.hour}
-              location={event.eventlocation}
-              types={event.types}
-              specialState={event.specialstate}
-            />
+          {date.events.map((event: FormatedEvent) => (
+            <Event key={event.id + event.title} event={event} />
           ))}
         </section>
       ))}

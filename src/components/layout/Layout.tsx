@@ -1,7 +1,7 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 
-import eases from './../../utils/eases.js';
+import eases from './../../utils/eases';
 
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';

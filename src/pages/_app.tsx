@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
-import { Provider, useSelector } from 'react-redux';
+import { Provider } from 'react-redux';
 import { AnimatePresence } from 'framer-motion';
 import { Space_Grotesk } from 'next/font/google';
 
