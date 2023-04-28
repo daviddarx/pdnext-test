@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import { Provider } from 'react-redux';
@@ -11,6 +12,7 @@ const font = Space_Grotesk({
 });
 
 import store from '../../store/index';
+import { uiActions } from '../../store/index.js';
 
 import MainNavBurger from '@/components/layout/MainNavBurger';
 import MainNav from '@/components/layout/MainNav';
@@ -20,6 +22,18 @@ import '@/styles/globals.css';
 const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
   const pageKey = router.asPath;
+
+  useEffect(() => {
+    const handleRouteChangeStart = () => {
+      store.dispatch(uiActions.closeNavigation());
+    };
+
+    router.events.on('routeChangeStart', handleRouteChangeStart);
+
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChangeStart);
+    };
+  }, [router.events]);
 
   return (
     <Provider store={store}>

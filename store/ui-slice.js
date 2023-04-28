@@ -3,11 +3,14 @@ import { createSlice } from '@reduxjs/toolkit';
 const uiSlice = createSlice({
   name: 'ui',
   initialState: {
-    isNavigationOpened: true,
+    isNavigationOpened: false,
   },
   reducers: {
     toggleNavigation: (state) => {
       state.isNavigationOpened = !state.isNavigationOpened;
+    },
+    closeNavigation: (state) => {
+      state.isNavigationOpened = false;
     },
   },
 });
