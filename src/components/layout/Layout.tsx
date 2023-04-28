@@ -36,21 +36,20 @@ const variants = {
   },
 };
 
-const transition = { duration: 5, ease: 'backInOut' };
-
-const Layout = ({ children }: Props): JSX.Element => (
-  <motion.div
-    initial='hidden'
-    animate='enter'
-    exit='exit'
-    variants={variants}
-    transition={transition}
-    className='min-h-screen flex flex-col p-10'
-  >
-    <Header />
-    <main>{children}</main>
-    <Footer />
-  </motion.div>
-);
+const Layout = ({ children }: Props): JSX.Element => {
+  return (
+    <motion.div
+      initial='hidden'
+      animate='enter'
+      exit='exit'
+      variants={variants}
+      className='min-h-screen flex flex-col p-10'
+    >
+      <Header />
+      <main>{children}</main>
+      <Footer />
+    </motion.div>
+  );
+};
 
 export default Layout;
