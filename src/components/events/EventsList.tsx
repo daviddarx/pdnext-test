@@ -10,7 +10,6 @@ interface Props {
 }
 
 const EventsList = ({ dateClusteredEvents }: Props) => {
-  console.log(dateClusteredEvents[0].events[0].id);
   return (
     <Fragment>
       {dateClusteredEvents.map((date: DateClusteredEvents) => (
