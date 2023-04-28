@@ -3,6 +3,9 @@ import { motion } from 'framer-motion';
 
 import eases from './../../utils/eases.js';
 
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
+
 type Props = {
   children: ReactNode;
 };
@@ -34,20 +37,20 @@ const variants = {
 };
 
 const transition = { duration: 5, ease: 'backInOut' };
-console.log('remove div here? ');
 
 const Layout = ({ children }: Props): JSX.Element => (
-  <div>
-    <motion.main
-      initial='hidden'
-      animate='enter'
-      exit='exit'
-      variants={variants}
-      transition={transition}
-    >
-      {children}
-    </motion.main>
-  </div>
+  <motion.div
+    initial='hidden'
+    animate='enter'
+    exit='exit'
+    variants={variants}
+    transition={transition}
+    className='min-h-screen flex flex-col p-10'
+  >
+    <Header />
+    <main>{children}</main>
+    <Footer />
+  </motion.div>
 );
 
 export default Layout;

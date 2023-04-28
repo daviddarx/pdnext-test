@@ -2,7 +2,8 @@
 @import './events-list.css';
 @import './footer.css';
 @import './header.css';
-@import './main-navigation.css';
+@import './main-nav.css';
+@import './main-nav-burger.css';
 @import './utilities.css';
 
 @tailwind base;

@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
-import { Provider } from 'react-redux';
+import { Provider, useSelector } from 'react-redux';
 import { AnimatePresence } from 'framer-motion';
 import { Space_Grotesk } from 'next/font/google';
 
@@ -10,10 +10,10 @@ const font = Space_Grotesk({
   subsets: ['latin'],
 });
 
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
-import Layout from '../components/layout/Layout';
 import store from '../../store/index';
+
+import MainNavBurger from '@/components/layout/MainNavBurger';
+import MainNav from '@/components/layout/MainNav';
 
 import '@/styles/globals.css';
 
@@ -23,12 +23,12 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   return (
     <Provider store={store}>
-      <div className={`min-h-screen flex flex-col p-10 ${font.className}`}>
-        <Header />
+      <div className={font.className}>
+        <MainNavBurger />
+        <MainNav />
         <AnimatePresence mode='wait' initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
           <Component key={pageKey} {...pageProps} />
         </AnimatePresence>
-        <Footer />
       </div>
     </Provider>
   );
