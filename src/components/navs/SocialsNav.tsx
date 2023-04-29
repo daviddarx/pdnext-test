@@ -21,9 +21,13 @@ const socialsNavItems = [
   },
 ];
 
-const SocialsNav = () => {
+type SocialsNavProps = {
+  className?: string;
+};
+
+const SocialsNav: React.FC<SocialsNavProps> = ({ className }) => {
   return (
-    <article className='nav-socials'>
+    <article className={`nav-socials ${className}`}>
       <h3 className='hidden'>Bleiben Sie auf dem Laufenden.</h3>
       <ul>
         {socialsNavItems.map((item) => (
