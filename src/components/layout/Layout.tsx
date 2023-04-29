@@ -42,7 +42,7 @@ const Layout = ({ children }: Props): JSX.Element => {
       animate='animate'
       exit='exit'
       variants={motionVariants}
-      className='layout min-h-screen flex flex-col p-gutter pt-gutter-4'
+      className='min-h-screen flex flex-col p-gutter pt-gutter-4'
     >
       <main>{children}</main>
       <Footer />
