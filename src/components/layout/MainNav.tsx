@@ -6,8 +6,6 @@ import { uiActions } from '../../../store';
 import eases from '../../utils/eases';
 import { setFocusables, resetFocusables, loopFocusables } from './../../utils/get-focusables';
 
-const staticContent = require('./../../../static-content/static-content.json');
-
 import ActiveLink from '@/components/ui/ActiveLink';
 
 const mainNavItems = [
