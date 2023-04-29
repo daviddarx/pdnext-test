@@ -1,6 +1,5 @@
 .footer {
   @apply flex justify-between;
-  @apply mt-auto;
   @apply border-t border-t-black;
 }
 

@@ -7,6 +7,7 @@ import eases from '../../utils/eases';
 import { setFocusables, resetFocusables, loopFocusables } from './../../utils/get-focusables';
 
 import ActiveLink from '@/components/ui/ActiveLink';
+import SocialNav from '@/components/navs/SocialsNav';
 
 const mainNavItems = [
   {
@@ -27,29 +28,6 @@ const secondaryNavItems = [
   { title: 'Submissions', link: '/submissions' },
   { title: 'Impressions', link: '/impressions' },
   { title: 'Press', link: '/press' },
-];
-
-const socialsNavItems = [
-  {
-    title: 'Facebook',
-    link: 'https://www.facebook.com/pornydays',
-  },
-  {
-    title: 'Twitter',
-    link: 'https://twitter.com/pornydays',
-  },
-  {
-    title: 'Instagram',
-    link: 'https://www.instagram.com/filmkunstfestival',
-  },
-  {
-    title: 'Vimeo',
-    link: 'https://vimeo.com/pornydays',
-  },
-  {
-    title: 'Newsletter',
-    link: 'https://pornydays.us10.list-manage.com/subscribe/post?u=9c7ed05ab79d08599fd3d90ee&id=7073021cc1',
-  },
 ];
 
 const panelMotionVariants = {
@@ -172,20 +150,11 @@ const MainNav = () => {
               ))}
             </ul>
 
-            <article className='main-nav__socials'>
-              <h3 className='hidden'>Bleiben Sie auf dem Laufenden.</h3>
-              <ul>
-                {socialsNavItems.map((item) => (
-                  <li key={item.title}>
-                    <a href={item.link} target='_blank' className='main-nav__social'>
-                      {item.title}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </article>
+            <SocialNav />
 
-            <button onClick={goToSupport}>Unterstützen Sie uns</button>
+            <button className='main-nav__support' onClick={goToSupport}>
+              Unterstützen Sie uns
+            </button>
 
             <button className='main-nav__close' onClick={closeNavigation}>
               Close

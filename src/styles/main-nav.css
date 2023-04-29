@@ -5,11 +5,11 @@
 }
 
 .main-nav__nav {
-  @apply mb-gutter-1/2;
+  @apply flex flex-col space-y-3 mb-gutter;
 }
 
 .main-nav__link {
-  @apply inline-block mb-4;
+  @apply inline-block;
 }
 
 .main-nav__link--main {
@@ -22,6 +22,10 @@
 
 .main-nav__link-detail {
   @apply block font-normal;
+}
+
+.main-nav__support {
+  @apply mt-gutter;
 }
 
 .main-nav__close {

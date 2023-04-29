@@ -1,0 +1,4 @@
+.bottom-nav {
+  @apply mb-gutter p-gutter-1/2;
+  @apply border border-black;
+}

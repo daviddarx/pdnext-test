@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import eases from './../../utils/eases';
 
 import Footer from '@/components/layout/Footer';
+import BottomNav from '@/components/navs/BottomNav';
 
 type Props = {
   children: ReactNode;
@@ -45,7 +46,10 @@ const Layout = ({ children }: Props): JSX.Element => {
       className='min-h-screen flex flex-col p-gutter pt-gutter-4'
     >
       <main>{children}</main>
-      <Footer />
+      <div className='mt-auto'>
+        <BottomNav />
+        <Footer />
+      </div>
     </motion.div>
   );
 };

@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 
-import MainNavBurger from '@/components/layout/MainNavBurger';
-import MainNavPanel from '@/components/layout/MainNav';
+import MainNavBurger from '@/components/navs/MainNavBurger';
+import MainNavPanel from '@/components/navs/MainNav';
 import PornyLogo from '@/components/logos/PornyLogo';
 
 const staticContent = require('./../../../static-content/static-content.json');
