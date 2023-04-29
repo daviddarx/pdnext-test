@@ -5,6 +5,7 @@
 @import './header.css';
 @import './main-nav.css';
 @import './main-nav-burger.css';
+@import './support-us.css';
 @import './utilities.css';
 
 @tailwind base;

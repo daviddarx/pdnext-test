@@ -1,0 +1,7 @@
+.support-us {
+  @apply bg-black text-white my-gutter p-gutter-1/2;
+}
+
+.support-us__icon {
+  @apply inline-block ml-10 w-5 h-auto fill-white;
+}

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import eases from './../../utils/eases';
 
 import Footer from '@/components/layout/Footer';
+import SupportUs from '@/components/layout/SupportUs';
 import BottomNav from '@/components/navs/BottomNav';
 
 type Props = {
@@ -47,6 +48,7 @@ const Layout = ({ children }: Props): JSX.Element => {
     >
       <main>{children}</main>
       <div className='mt-auto'>
+        <SupportUs />
         <BottomNav />
         <Footer />
       </div>
