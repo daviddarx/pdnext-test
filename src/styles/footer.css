@@ -9,5 +9,5 @@
 }
 
 .footer__link--active {
-  @apply bg-black text-white;
+  @apply underline;
 }
