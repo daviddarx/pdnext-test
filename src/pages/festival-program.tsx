@@ -1,10 +1,13 @@
 import { useState } from 'react';
 
+import { SupportUsSlot } from '@/types/SupportUsSlot';
 import { DateClusteredEvents } from '@/types/DateClusteredEvents';
 import { Entry } from '@/types/Entry';
 import { EntryType } from '@/types/EntryType';
 import { Event } from '@/types/Event';
 import { FormatedEvent } from '@/types/FormatedEvent';
+
+import loadJsonFiles from '@/utils/load-json-files';
 
 import Layout from '@/components/layout/Layout';
 import Metas from '@/components/layout/Metas';
@@ -15,11 +18,12 @@ const allTypesFilter = 'Alle';
 const allDatesFilter = 'Alle Tage';
 
 type Props = {
+  supportUsData: SupportUsSlot[];
   dateClusteredEvents: DateClusteredEvents[];
   entryTypes: EntryType[];
 };
 
-const FestivalProgram = ({ dateClusteredEvents, entryTypes }: Props) => {
+const FestivalProgram = ({ supportUsData, dateClusteredEvents, entryTypes }: Props) => {
   const [currentType, setCurrentType] = useState(allTypesFilter);
   const [currentDate, setCurrentDate] = useState(allDatesFilter);
 
@@ -78,7 +82,7 @@ const FestivalProgram = ({ dateClusteredEvents, entryTypes }: Props) => {
   };
 
   return (
-    <Layout>
+    <Layout supportUsData={supportUsData}>
       <Metas title='FestivalProgram' />
       <section>
         <h1>
@@ -105,9 +109,10 @@ const FestivalProgram = ({ dateClusteredEvents, entryTypes }: Props) => {
 
 export default FestivalProgram;
 
-import loadJsonFiles from '../utils/load-json-files';
-
 export async function getStaticProps() {
+  const supportUsSlotsDir: SupportUsSlot[] = [];
+  const supportUsSlots = await loadJsonFiles(supportUsSlotsDir, '_content/supportUsSlots');
+
   const entryTypesDir: EntryType[] = [];
   const entryTypes = await loadJsonFiles(entryTypesDir, '_content/entryTypes');
   entryTypes.sort((a, b) => a.order - b.order);
@@ -198,6 +203,7 @@ export async function getStaticProps() {
 
   return {
     props: {
+      supportUsData: supportUsSlots,
       dateClusteredEvents: dateClusteredEvents,
       entryTypes: entryTypes,
     },

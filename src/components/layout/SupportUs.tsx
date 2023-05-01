@@ -1,4 +1,11 @@
-const SupportUs = () => {
+import { SupportUsSlot } from '@/types/SupportUsSlot';
+
+type Props = {
+  supportUsData: SupportUsSlot[];
+};
+
+const SupportUs = ({ supportUsData }: Props) => {
+  console.log('Support us', supportUsData);
   return (
     <div className='support-us'>
       <h2 className='support-us__title '>

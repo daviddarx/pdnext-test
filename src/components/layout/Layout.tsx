@@ -1,7 +1,8 @@
 import { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 
-import eases from './../../utils/eases';
+import eases from '@/utils/eases';
+import { SupportUsSlot } from '@/types/SupportUsSlot';
 
 import Footer from '@/components/layout/Footer';
 import SupportUs from '@/components/layout/SupportUs';
@@ -9,6 +10,7 @@ import BottomNav from '@/components/navs/BottomNav';
 
 type Props = {
   children: ReactNode;
+  supportUsData: SupportUsSlot[];
 };
 
 const motionVariants = {
@@ -37,7 +39,7 @@ const motionVariants = {
   },
 };
 
-const Layout = ({ children }: Props): JSX.Element => {
+const Layout = ({ children, supportUsData }: Props): JSX.Element => {
   return (
     <motion.div
       initial='initial'
@@ -48,7 +50,7 @@ const Layout = ({ children }: Props): JSX.Element => {
     >
       <main>{children}</main>
       <div className='mt-auto'>
-        <SupportUs />
+        <SupportUs supportUsData={supportUsData} />
         <BottomNav />
         <Footer />
       </div>

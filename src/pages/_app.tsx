@@ -11,14 +11,18 @@ const font = Space_Grotesk({
   subsets: ['latin'],
 });
 
-import store from '../../store/index';
-import { uiActions } from '../../store/index.js';
+import store from '@/store/';
+import { uiActions } from '@/store/';
 
 import Header from '@/components/layout/Header';
 
 import '@/styles/globals.css';
 
 const App = ({ Component, pageProps }: AppProps) => {
+  console.log(
+    'App: here get the pageProps for special announcement, pass it to the header',
+    pageProps,
+  );
   const router = useRouter();
   const pageKey = router.asPath;
 

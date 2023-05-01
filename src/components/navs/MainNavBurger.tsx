@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 
-import { uiActions } from './../../../store/index.js';
+import { uiActions } from '@/store/';
 
 const MainNavBurger = () => {
   const dispatch = useDispatch();

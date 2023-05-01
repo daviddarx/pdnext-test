@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { uiActions } from '../../../store';
+import { uiActions } from '../../store';
 import eases from '../../utils/eases';
 import { setFocusables, resetFocusables, loopFocusables } from './../../utils/get-focusables';
 

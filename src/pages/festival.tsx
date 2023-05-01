@@ -1,9 +1,16 @@
+import { SupportUsSlot } from '@/types/SupportUsSlot';
+import loadJsonFiles from '@/utils/load-json-files';
+
 import Layout from '@/components/layout/Layout';
 import Metas from '@/components/layout/Metas';
 
-const Festival = () => {
+type Props = {
+  supportUsData: SupportUsSlot[];
+};
+
+const Festival = ({ supportUsData }: Props) => {
   return (
-    <Layout>
+    <Layout supportUsData={supportUsData}>
       <Metas title='Festival' />
       <div>
         <h1>Festival</h1>
@@ -13,3 +20,14 @@ const Festival = () => {
 };
 
 export default Festival;
+
+export async function getStaticProps() {
+  const supportUsSlotsDir: SupportUsSlot[] = [];
+  const supportUsSlots = await loadJsonFiles(supportUsSlotsDir, '_content/supportUsSlots');
+
+  return {
+    props: {
+      supportUsData: supportUsSlots,
+    },
+  };
+}
