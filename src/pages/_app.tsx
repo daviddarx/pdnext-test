@@ -19,10 +19,10 @@ import Header from '@/components/layout/Header';
 import '@/styles/globals.css';
 
 const App = ({ Component, pageProps }: AppProps) => {
-  console.log(
-    'App: here get the pageProps for special announcement, pass it to the header',
-    pageProps,
-  );
+  // console.log(
+  //   'App: here get the pageProps for special announcement, pass it to the header',
+  //   pageProps,
+  // );
   const router = useRouter();
   const pageKey = router.asPath;
 

@@ -1,3 +1,5 @@
+import { marked } from 'marked';
+
 import { SupportUsSlot } from '@/types/SupportUsSlot';
 
 type Props = {
@@ -5,7 +7,8 @@ type Props = {
 };
 
 const SupportUs = ({ supportUsData }: Props) => {
-  console.log('Support us', supportUsData);
+  supportUsData.sort((a, b) => a.position - b.position);
+
   return (
     <div className='support-us'>
       <h2 className='support-us__title '>
@@ -20,6 +23,13 @@ const SupportUs = ({ supportUsData }: Props) => {
           <path d='M111.825 600.5c-28.543 0-57.021 11.011-78.75 32.85-43.459 43.68-43.405 114.392 0 158.101l168.15 169.5c5.615 5.633 14.733 5.648 20.367.033l.033-.033c56.133-56.416 112.317-112.783 168.45-169.2 43.458-43.678 43.458-114.571 0-158.25-43.459-43.678-114.19-43.68-157.65 0l-20.7 21-21-21.15c-21.73-21.84-50.358-32.851-78.9-32.851z' />
         </svg>
       </h2>
+
+      {supportUsData.map((item) => (
+        <div className='support-us__slot' key={item.title}>
+          <h3 className='support-us__slot-title'>{item.title}</h3>
+          <div dangerouslySetInnerHTML={{ __html: marked.parse(item.desc) }} />
+        </div>
+      ))}
     </div>
   );
 };
