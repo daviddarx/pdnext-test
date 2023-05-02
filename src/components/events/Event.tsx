@@ -8,6 +8,7 @@ const Event = ({ event }: Props) => {
   return (
     <article className='event'>
       <h3 className='event__title '>{`${event.date.hour} - ${event.title}`}</h3>
+      {event.subtitle && <div className='event__subtitle'>{event.subtitle}</div>}
       <div className='event__types'>{event.types.join(', ')}</div>
       <div className='event__location'>{event.eventlocation}</div>
       {event.specialstate && <div className='event__special-state'>{event.specialstate}</div>}
