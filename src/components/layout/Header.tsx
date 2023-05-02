@@ -5,12 +5,10 @@ import MainNavBurger from '@/components/navs/MainNavBurger';
 import MainNavPanel from '@/components/navs/MainNav';
 import PornyLogo from '@/components/logos/PornyLogo';
 
-const staticContent = require('./../../../static-content/static-content.json');
-
 const Header = () => {
   return (
     <header className='header'>
-      <Link href={staticContent.defaultRoute}>
+      <Link href='/festival-program'>
         <h2 className='hidden'>Porny Days – Film Kunst Festival Zürich</h2>
         <PornyLogo className='header__logo' />
       </Link>
