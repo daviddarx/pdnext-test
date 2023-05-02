@@ -3,5 +3,5 @@
 }
 
 .support-us__icon {
-  @apply inline-block ml-10 w-5 h-auto fill-white;
+  @apply inline-block ml-10 w-5 h-auto;
 }
