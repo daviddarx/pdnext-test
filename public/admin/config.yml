@@ -2,121 +2,123 @@ backend:
   name: github
   repo: meodai/pornydays # Path to your GitHub repository
 
-media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+local_backend: true # For local admin, remove for production
+
+media_folder: 'public/images/uploads' # Media files will be stored in the repo under static/images/uploads
+public_folder: '/images/uploads' # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
-  - name: "specialAnnouncement"
-    label: "Special Announcement"
+  - name: 'specialAnnouncement'
+    label: 'Special Announcement'
     create: false
     delete: false
-    folder: "_content/specialAnnouncement"
-    slug: "specialannouncement"
-    extension: "json"
-    format: "json"
-    summary: "Version: {{version}} - {{title}}"
+    folder: '_content/specialAnnouncement'
+    slug: 'specialannouncement'
+    extension: 'json'
+    format: 'json'
+    summary: 'Version: {{version}} - {{title}}'
     fields:
-      - label: "Title"
-        name: "title"
-        widget: "string"
+      - label: 'Title'
+        name: 'title'
+        widget: 'string'
 
-      - label: "Button Title"
-        name: "buttonTitle"
-        widget: "string"
+      - label: 'Button Title'
+        name: 'buttonTitle'
+        widget: 'string'
 
-      - label: "Description"
-        name: "desc"
-        widget: "markdown"
+      - label: 'Description'
+        name: 'desc'
+        widget: 'markdown'
         buttons:
           - bold
           - italic
           - link
 
-  - name: "news"
-    label: "News"
+  - name: 'news'
+    label: 'News'
     create: true
-    folder: "_content/news"
-    slug: "news-{{slug}}"
-    description: "Short news with links to Facebook, Twitter, Instagram, PDF, etc"
-    extension: "json"
-    format: "json"
-    summary: "Version: {{version}} - {{title}}"
+    folder: '_content/news'
+    slug: 'news-{{slug}}'
+    description: 'Short news with links to Facebook, Twitter, Instagram, PDF, etc'
+    extension: 'json'
+    format: 'json'
+    summary: 'Version: {{version}} - {{title}}'
     fields:
-      - label: "Title (max. 50 chars)"
-        name: "title"
-        widget: "string"
+      - label: 'Title (max. 50 chars)'
+        name: 'title'
+        widget: 'string'
 
-      - label: "Date"
-        name: "date"
-        widget: "datetime"
-        default: ""
+      - label: 'Date'
+        name: 'date'
+        widget: 'datetime'
+        default: ''
 
-      - label: "Featured Image (optional)"
-        name: "image"
-        widget: "image"
+      - label: 'Featured Image (optional)'
+        name: 'image'
+        widget: 'image'
         required: false
 
-      - label: "Link"
-        name: "link"
-        widget: "string"
+      - label: 'Link'
+        name: 'link'
+        widget: 'string'
         required: false
 
-  - name: "entryType"
-    label: "Entry Type"
+  - name: 'entryType'
+    label: 'Entry Type'
     create: false
     delete: false
-    folder: "_content/entryTypes/"
-    slug: "entryType-{{slug}}"
-    extension: "json"
-    format: "json"
-    summary: "Version: {{version}} - {{title}}"
+    folder: '_content/entryTypes/'
+    slug: 'entryType-{{slug}}'
+    extension: 'json'
+    format: 'json'
+    summary: 'Version: {{version}} - {{title}}'
     fields:
-      - label: "Title Singular"
-        name: "title"
-        widget: "string"
-      - label: "Title Plurial"
-        name: "titlePlurial"
-        widget: "string"
-      - label: "Order"
-        name: "order"
-        widget: "number"
+      - label: 'Title Singular'
+        name: 'title'
+        widget: 'string'
+      - label: 'Title Plurial'
+        name: 'titlePlurial'
+        widget: 'string'
+      - label: 'Order'
+        name: 'order'
+        widget: 'number'
         default: 1
-        valueType: "int"
+        valueType: 'int'
 
-  - name: "entry"
-    label: "Entry"
-    folder: "_content/entries"
+  - name: 'entry'
+    label: 'Entry'
+    folder: '_content/entries'
     create: true
-    slug: "entry-{{slug}}"
-    description: "You should create Films, Events, Workshops, Perfomace and Talks here, and after that create and event, where you can link one or more of those."
-    extension: "json"
-    format: "json"
-    summary: "Version: {{version}} - {{title}}"
+    slug: 'entry-{{slug}}'
+    description: 'You should create Films, Events, Workshops, Perfomace and Talks here, and after that create and event, where you can link one or more of those.'
+    extension: 'json'
+    format: 'json'
+    summary: 'Version: {{version}} - {{title}}'
     fields:
-      - label: "uuid"
-        name: "uuid"
-        widget: "string"
+      - label: 'uuid'
+        name: 'uuid'
+        widget: 'string'
 
-      - label: "Title"
-        name: "title"
-        widget: "string"
+      - label: 'Title'
+        name: 'title'
+        widget: 'string'
 
-      - label: "Type"
-        name: "entryType"
-        widget: "relation"
-        collection: "entryType"
-        searchFields: ["title"]
-        valueField: "title"
+      - label: 'Type'
+        name: 'entryType'
+        widget: 'relation'
+        collection: 'entryType'
+        searchFields: ['title']
+        valueField: 'title'
         multiple: false
 
-      - label: "Type Complement"
-        name: "typeComplement"
-        widget: "string"
+      - label: 'Type Complement'
+        name: 'typeComplement'
+        widget: 'string'
         required: false
 
-      - label: "Description"
-        name: "desc"
-        widget: "markdown"
+      - label: 'Description'
+        name: 'desc'
+        widget: 'markdown'
         buttons:
           - bold
           - italic
@@ -124,70 +126,70 @@ collections:
           - bulleted-list
           - numbered-list
 
-      - label: "Featured Image"
-        name: "image"
-        widget: "image"
+      - label: 'Featured Image'
+        name: 'image'
+        widget: 'image'
 
-      - label: "Additional Images"
-        name: "additionalImages"
-        widget: "list"
+      - label: 'Additional Images'
+        name: 'additionalImages'
+        widget: 'list'
         required: false
         fields:
-          - label: "Image"
-            name: "image"
-            widget: "image"
+          - label: 'Image'
+            name: 'image'
+            widget: 'image'
 
-      - label: "Featured Video"
-        name: "videourl"
-        widget: "string"
+      - label: 'Featured Video'
+        name: 'videourl'
+        widget: 'string'
         required: false
 
-      - label: "Force video to open in a new tab"
-        name: "forceBlank"
-        widget: "boolean"
+      - label: 'Force video to open in a new tab'
+        name: 'forceBlank'
+        widget: 'boolean'
         default: false
         required: false
 
-      - label: "Porny Pick Of"
-        name: "pornypickof"
-        value: "pickedby"
-        widget: "string"
+      - label: 'Porny Pick Of'
+        name: 'pornypickof'
+        value: 'pickedby'
+        widget: 'string'
         required: false
 
-  - name: "entryOns"
-    label: "Entry ONS"
-    folder: "_content/entries-ons"
+  - name: 'entryOns'
+    label: 'Entry ONS'
+    folder: '_content/entries-ons'
     create: true
-    slug: "entry-ons-{{slug}}"
-    description: "You should create Films, Events, Workshops, Perfomace and Talks here, and after that create and event, where you can link one or more of those."
-    extension: "json"
-    format: "json"
-    summary: "Version: {{version}} - {{title}}"
+    slug: 'entry-ons-{{slug}}'
+    description: 'You should create Films, Events, Workshops, Perfomace and Talks here, and after that create and event, where you can link one or more of those.'
+    extension: 'json'
+    format: 'json'
+    summary: 'Version: {{version}} - {{title}}'
     fields:
-      - label: "uuid"
-        name: "uuid"
-        widget: "string"
+      - label: 'uuid'
+        name: 'uuid'
+        widget: 'string'
 
-      - label: "Title"
-        name: "title"
-        widget: "string"
+      - label: 'Title'
+        name: 'title'
+        widget: 'string'
 
-      - label: "Type"
-        name: "entryType"
-        widget: "relation"
-        collection: "entryType"
-        searchFields: ["title"]
-        valueField: "title"
+      - label: 'Type'
+        name: 'entryType'
+        widget: 'relation'
+        collection: 'entryType'
+        searchFields: ['title']
+        valueField: 'title'
         multiple: false
 
-      - label: "Type Complement"
-        name: "typeComplement"
-        widget: "string"
+      - label: 'Type Complement'
+        name: 'typeComplement'
+        widget: 'string'
         required: false
 
-      - label: "Description"
-        name: "desc"
-        widget: "markdown"
+      - label: 'Description'
+        name: 'desc'
+        widget: 'markdown'
         buttons:
           - bold
           - italic
@@ -195,113 +197,113 @@ collections:
           - bulleted-list
           - numbered-list
 
-      - label: "Featured Image"
-        name: "image"
-        widget: "image"
+      - label: 'Featured Image'
+        name: 'image'
+        widget: 'image'
 
-      - label: "Additional Images"
-        name: "additionalImages"
-        widget: "list"
+      - label: 'Additional Images'
+        name: 'additionalImages'
+        widget: 'list'
         required: false
         fields:
-          - label: "Image"
-            name: "image"
-            widget: "image"
+          - label: 'Image'
+            name: 'image'
+            widget: 'image'
 
-      - label: "Featured Video"
-        name: "videourl"
-        widget: "string"
+      - label: 'Featured Video'
+        name: 'videourl'
+        widget: 'string'
         required: false
 
-      - label: "Force video to open in a new tab"
-        name: "forceBlank"
-        widget: "boolean"
+      - label: 'Force video to open in a new tab'
+        name: 'forceBlank'
+        widget: 'boolean'
         default: false
         required: false
 
-      - label: "Porny Pick Of"
-        name: "pornypickof"
-        value: "pickedby"
-        widget: "string"
+      - label: 'Porny Pick Of'
+        name: 'pornypickof'
+        value: 'pickedby'
+        widget: 'string'
         required: false
 
-  - name: "event" # Used in routes, e.g., /admin/collections/blog
-    label: "Event" # Used in the UI
-    folder: "_content/events" # The path to the folder where the documents are stored
+  - name: 'event' # Used in routes, e.g., /admin/collections/blog
+    label: 'Event' # Used in the UI
+    folder: '_content/events' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}--Event-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    description: "Those are the events that are listed in the program"
-    summary: "Version: {{version}} - {{title}}"
-    extension: "json"
-    format: "json"
+    slug: '{{year}}-{{month}}-{{day}}--Event-{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    description: 'Those are the events that are listed in the program'
+    summary: 'Version: {{version}} - {{title}}'
+    extension: 'json'
+    format: 'json'
     fields: # The fields for each document, usually in front matter
-      - label: "Layout"
-        name: "layout"
-        widget: "hidden"
-        default: "event"
+      - label: 'Layout'
+        name: 'layout'
+        widget: 'hidden'
+        default: 'event'
 
-      - label: "Title"
-        name: "title"
-        widget: "string"
+      - label: 'Title'
+        name: 'title'
+        widget: 'string'
 
-      - label: "Special State (Sold out, Zusatzt Vorstellung, Wiederholung, etc)"
-        name: "specialstate"
-        widget: "string"
+      - label: 'Special State (Sold out, Zusatzt Vorstellung, Wiederholung, etc)'
+        name: 'specialstate'
+        widget: 'string'
         required: false
 
-      - label: "Subtitle"
-        name: "subtitle"
-        widget: "string"
+      - label: 'Subtitle'
+        name: 'subtitle'
+        widget: 'string'
         required: false
 
-      - label: "Event Location"
-        name: "eventlocation"
-        type: "string"
+      - label: 'Event Location'
+        name: 'eventlocation'
+        type: 'string'
 
-      - label: "Event Location Link"
-        name: "eventlocationlink"
-        type: "string"
+      - label: 'Event Location Link'
+        name: 'eventlocationlink'
+        type: 'string'
 
-      - label: "Event Date"
-        name: "eventdate"
-        widget: "datetime"
-        default: ""
+      - label: 'Event Date'
+        name: 'eventdate'
+        widget: 'datetime'
+        default: ''
 
-      - label: "Description"
-        name: "desc"
-        widget: "markdown"
+      - label: 'Description'
+        name: 'desc'
+        widget: 'markdown'
         buttons:
           - bold
           - link
           - bulleted-list
           - numbered-list
 
-      - label: "Tickets Link"
-        name: "ticketsLink"
-        type: "string"
+      - label: 'Tickets Link'
+        name: 'ticketsLink'
+        type: 'string'
         required: false
 
-      - label: "Tickets Link Title"
-        name: "ticketsLinkTitle"
-        type: "string"
+      - label: 'Tickets Link Title'
+        name: 'ticketsLinkTitle'
+        type: 'string'
         required: false
 
-      - label: "Timetable"
-        name: "timetable"
-        widget: "list"
+      - label: 'Timetable'
+        name: 'timetable'
+        widget: 'list'
         required: false
         fields:
-          - label: "Time"
-            name: "time"
-            widget: "string"
-            default: "00:00"
-          - label: "Title"
-            name: "title"
-            widget: "string"
+          - label: 'Time'
+            name: 'time'
+            widget: 'string'
+            default: '00:00'
+          - label: 'Title'
+            name: 'title'
+            widget: 'string'
 
-      - label: "Price"
-        name: "price"
-        widget: "markdown"
+      - label: 'Price'
+        name: 'price'
+        widget: 'markdown'
         required: false
         buttons:
           - bold
@@ -309,92 +311,92 @@ collections:
           - bulleted-list
           - numbered-list
 
-      - label: "Entries"
-        name: "entries"
-        widget: "relation"
-        collection: "entry"
-        searchFields: ["title"]
-        valueField: "uuid"
+      - label: 'Entries'
+        name: 'entries'
+        widget: 'relation'
+        collection: 'entry'
+        searchFields: ['title']
+        valueField: 'uuid'
         multiple: true
         required: false
 
-  - name: "eventOns" # Used in routes, e.g., /admin/collections/blog
-    label: "Event ONS" # Used in the UI
-    folder: "_content/events-ons" # The path to the folder where the documents are stored
+  - name: 'eventOns' # Used in routes, e.g., /admin/collections/blog
+    label: 'Event ONS' # Used in the UI
+    folder: '_content/events-ons' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}--Event-ons-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    description: "Those are the events that are listed in the program"
-    summary: "Version: {{version}} - {{title}}"
-    extension: "json"
-    format: "json"
+    slug: '{{year}}-{{month}}-{{day}}--Event-ons-{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    description: 'Those are the events that are listed in the program'
+    summary: 'Version: {{version}} - {{title}}'
+    extension: 'json'
+    format: 'json'
     fields: # The fields for each document, usually in front matter
-      - label: "Layout"
-        name: "layout"
-        widget: "hidden"
-        default: "event"
+      - label: 'Layout'
+        name: 'layout'
+        widget: 'hidden'
+        default: 'event'
 
-      - label: "Title"
-        name: "title"
-        widget: "string"
+      - label: 'Title'
+        name: 'title'
+        widget: 'string'
 
-      - label: "Special State (Sold out, Zusatzt Vorstellung, Wiederholung, etc)"
-        name: "specialstate"
-        widget: "string"
+      - label: 'Special State (Sold out, Zusatzt Vorstellung, Wiederholung, etc)'
+        name: 'specialstate'
+        widget: 'string'
         required: false
 
-      - label: "Subtitle"
-        name: "subtitle"
-        widget: "string"
+      - label: 'Subtitle'
+        name: 'subtitle'
+        widget: 'string'
         required: false
 
-      - label: "Event Location"
-        name: "eventlocation"
-        type: "string"
+      - label: 'Event Location'
+        name: 'eventlocation'
+        type: 'string'
 
-      - label: "Event Location Link"
-        name: "eventlocationlink"
-        type: "string"
+      - label: 'Event Location Link'
+        name: 'eventlocationlink'
+        type: 'string'
 
-      - label: "Event Date"
-        name: "eventdate"
-        widget: "datetime"
-        default: ""
+      - label: 'Event Date'
+        name: 'eventdate'
+        widget: 'datetime'
+        default: ''
 
-      - label: "Description"
-        name: "desc"
-        widget: "markdown"
+      - label: 'Description'
+        name: 'desc'
+        widget: 'markdown'
         buttons:
           - bold
           - link
           - bulleted-list
           - numbered-list
 
-      - label: "Tickets Link"
-        name: "ticketsLink"
-        type: "string"
+      - label: 'Tickets Link'
+        name: 'ticketsLink'
+        type: 'string'
         required: false
 
-      - label: "Tickets Link Title"
-        name: "ticketsLinkTitle"
-        type: "string"
+      - label: 'Tickets Link Title'
+        name: 'ticketsLinkTitle'
+        type: 'string'
         required: false
 
-      - label: "Timetable"
-        name: "timetable"
-        widget: "list"
+      - label: 'Timetable'
+        name: 'timetable'
+        widget: 'list'
         required: false
         fields:
-          - label: "Time"
-            name: "time"
-            widget: "string"
-            default: "00:00"
-          - label: "Title"
-            name: "title"
-            widget: "string"
+          - label: 'Time'
+            name: 'time'
+            widget: 'string'
+            default: '00:00'
+          - label: 'Title'
+            name: 'title'
+            widget: 'string'
 
-      - label: "Price"
-        name: "price"
-        widget: "markdown"
+      - label: 'Price'
+        name: 'price'
+        widget: 'markdown'
         required: false
         buttons:
           - bold
@@ -402,101 +404,106 @@ collections:
           - bulleted-list
           - numbered-list
 
-      - label: "Entries"
-        name: "entries"
-        widget: "relation"
-        collection: "entryOns"
-        searchFields: ["title"]
-        valueField: "uuid"
+      - label: 'Entries'
+        name: 'entries'
+        widget: 'relation'
+        collection: 'entryOns'
+        searchFields: ['title']
+        valueField: 'uuid'
         multiple: true
         required: false
 
-  - name: "supportUsSlot"
-    label: "Support-us Slot"
+  - name: 'supportUsSlot'
+    label: 'Support-us Slot'
     create: true
-    folder: "_content/supportUsSlots"
-    slug: "supportUsSlot-{{slug}}"
-    extension: "json"
-    format: "json"
-    summary: "Version: {{version}} - {{title}}"
+    folder: '_content/supportUsSlots'
+    slug: 'supportUsSlot-{{title}}'
+    extension: 'json'
+    format: 'json'
+    summary: '{{position}} {{title}}'
     fields:
-      - label: "Position"
-        name: "position"
-        widget: "number"
-        valueType: "int"
+      - label: 'Position'
+        name: 'position'
+        widget: 'number'
+        valueType: 'int'
         min: 0
         step: 1
 
-      - label: "Title"
-        name: "title"
-        widget: "string"
+      - label: 'Title'
+        name: 'title'
+        widget: 'string'
 
-      - label: "Description"
-        name: "desc"
-        widget: "markdown"
+      - label: 'Description'
+        name: 'desc'
+        widget: 'markdown'
         buttons:
           - bold
           - italic
           - link
-          - heading-two
+          - heading-four
           - bulleted-list
           - numbered-list
 
-  - name: "contentPage"
-    label: "Content Page"
+      - label: 'With Paypal Button'
+        name: 'paypal'
+        widget: 'boolean'
+        required: false
+
+  - name: 'contentPage'
+    label: 'Content Page'
     create: false
     delete: false
-    folder: "_content/contentPages"
-    slug: "contentPage-{{slug}}"
-    extension: "json"
-    format: "json"
-    summary: "Version: {{version}} - {{title}}"
+    folder: '_content/contentPages'
+    slug: 'contentPage-{{slug}}'
+    extension: 'json'
+    format: 'json'
+    summary: 'Version: {{version}} - {{title}}'
     fields:
-      - label: "Title"
-        name: "title"
-        widget: "string"
+      - label: 'Title'
+        name: 'title'
+        widget: 'string'
 
-      - label: "Header Subline"
-        name: "headerSubline"
-        widget: "string"
+      - label: 'Header Subline'
+        name: 'headerSubline'
+        widget: 'string'
         required: false
 
-      - label: "Header Title"
-        name: "headerTitle"
-        widget: "string"
+      - label: 'Header Title'
+        name: 'headerTitle'
+        widget: 'string'
 
-      - label: "Header Lead"
-        name: "lead"
-        widget: "text"
+      - label: 'Header Lead'
+        name: 'lead'
+        widget: 'text'
         required: false
 
-      - label: "Content Slot"
-        name: "contentSlot"
-        widget: "list"
+      - label: 'Content Slot'
+        name: 'contentSlot'
+        widget: 'list'
         required: false
         fields:
-          - label: "Title"
-            name: "title"
-            widget: "string"
+          - label: 'Title'
+            name: 'title'
+            widget: 'string'
 
-          - label: "Hidden Title"
-            name: "hiddenTitle"
-            widget: "boolean"
+          - label: 'Hidden Title'
+            name: 'hiddenTitle'
+            widget: 'boolean'
             required: false
 
-          - label: "Anchor Title"
-            name: "anchorTitle"
-            widget: "string"
+          - label: 'Anchor Title'
+            name: 'anchorTitle'
+            widget: 'string'
             required: false
 
-          - label: "Image"
-            name: "image"
-            widget: "image"
+          - label: 'Image'
+            name: 'image'
+            widget: 'image'
             required: false
 
-          - label: "First Text"
-            name: "firstText"
-            widget: "markdown"
+          - label: 'First Text'
+            name: 'firstText'
+            widget: 'markdown'
             required: false
             buttons:
               - bold
@@ -507,28 +514,28 @@ collections:
               - bulleted-list
               - numbered-list
 
-          - label: "Definition Lists"
-            name: "definitionLists"
-            widget: "list"
+          - label: 'Definition Lists'
+            name: 'definitionLists'
+            widget: 'list'
             required: false
             fields:
-              - label: "Title"
-                name: "title"
-                width: "string"
+              - label: 'Title'
+                name: 'title'
+                width: 'string'
                 required: false
 
-              - label: "List Item"
-                name: "listItem"
-                widget: "list"
+              - label: 'List Item'
+                name: 'listItem'
+                widget: 'list'
                 required: false
                 fields:
-                  - label: "Title"
-                    name: "title"
-                    widget: "string"
+                  - label: 'Title'
+                    name: 'title'
+                    widget: 'string'
 
-                  - label: "Description"
-                    name: "description"
-                    widget: "markdown"
+                  - label: 'Description'
+                    name: 'description'
+                    widget: 'markdown'
                     buttons:
                       - bold
                       - italic
@@ -537,9 +544,9 @@ collections:
                       - bulleted-list
                       - numbered-list
 
-          - label: "Second Text"
-            name: "secondText"
-            widget: "markdown"
+          - label: 'Second Text'
+            name: 'secondText'
+            widget: 'markdown'
             required: false
             buttons:
               - bold
@@ -550,19 +557,19 @@ collections:
               - bulleted-list
               - numbered-list
 
-          - label: "Collapsable Text"
-            name: "collapsableText"
-            widget: "object"
+          - label: 'Collapsable Text'
+            name: 'collapsableText'
+            widget: 'object'
             required: false
             fields:
-              - label: "Title"
-                name: "title"
-                widget: "string"
+              - label: 'Title'
+                name: 'title'
+                widget: 'string'
                 required: false
 
-              - label: "Text"
-                name: "text"
-                widget: "markdown"
+              - label: 'Text'
+                name: 'text'
+                widget: 'markdown'
                 required: false
                 buttons:
                   - bold
@@ -573,59 +580,59 @@ collections:
                   - bulleted-list
                   - numbered-list
 
-          - label: "Downloads"
-            name: "downloads"
-            widget: "list"
+          - label: 'Downloads'
+            name: 'downloads'
+            widget: 'list'
             required: false
             fields:
-              - label: "Title"
-                name: "downloadTitle"
-                widget: "string"
+              - label: 'Title'
+                name: 'downloadTitle'
+                widget: 'string'
 
-              - label: "File Type & Weight (PDF, 224KB)"
-                name: "fileTypeWeight"
-                widget: "string"
+              - label: 'File Type & Weight (PDF, 224KB)'
+                name: 'fileTypeWeight'
+                widget: 'string'
 
-              - label: "File"
-                name: "file"
-                widget: "file"
+              - label: 'File'
+                name: 'file'
+                widget: 'file'
                 media_library:
                   config:
                     multiple: false
 
-  - name: "impressions"
-    label: "Impressions"
+  - name: 'impressions'
+    label: 'Impressions'
     create: true
     delete: true
-    folder: "_content/impressions"
-    slug: "impression-{{slug}}"
-    extension: "json"
-    format: "json"
-    summary: "Version: {{version}} - {{title}}"
+    folder: '_content/impressions'
+    slug: 'impression-{{slug}}'
+    extension: 'json'
+    format: 'json'
+    summary: 'Version: {{version}} - {{title}}'
     fields:
-      - label: "Title"
-        name: "title"
-        widget: "string"
+      - label: 'Title'
+        name: 'title'
+        widget: 'string'
 
-      - label: "Title formated"
-        name: "titleFormated"
-        widget: "markdown"
+      - label: 'Title formated'
+        name: 'titleFormated'
+        widget: 'markdown'
         buttons:
           - link
 
-      - label: "Type"
-        name: "type"
-        widget: "string"
+      - label: 'Type'
+        name: 'type'
+        widget: 'string'
 
-      - label: "Featured Image"
-        name: "image"
-        widget: "image"
+      - label: 'Featured Image'
+        name: 'image'
+        widget: 'image'
 
-      - label: "Link"
-        name: "link"
-        widget: "string"
+      - label: 'Link'
+        name: 'link'
+        widget: 'string'
 
-      - label: "Date"
-        name: "start"
-        widget: "datetime"
-        default: ""
+      - label: 'Date'
+        name: 'start'
+        widget: 'datetime'
+        default: ''
