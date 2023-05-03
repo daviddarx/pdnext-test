@@ -8,11 +8,6 @@ import Footer from '@/components/layout/Footer';
 import SupportUs from '@/components/layout/SupportUs';
 import BottomNav from '@/components/navs/BottomNav';
 
-type Props = {
-  children: ReactNode;
-  supportUsData: SupportUsSlot[];
-};
-
 const motionVariants = {
   initial: {
     opacity: 0,
@@ -37,6 +32,11 @@ const motionVariants = {
       ease: eases.outQuart,
     },
   },
+};
+
+type Props = {
+  children: ReactNode;
+  supportUsData: SupportUsSlot[];
 };
 
 const Layout: React.FC<Props> = ({ children, supportUsData }) => {
