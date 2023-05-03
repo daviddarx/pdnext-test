@@ -39,7 +39,7 @@ const motionVariants = {
   },
 };
 
-const Layout = ({ children, supportUsData }: Props): JSX.Element => {
+const Layout: React.FC<Props> = ({ children, supportUsData }) => {
   return (
     <motion.div
       initial='initial'
