@@ -21,11 +21,11 @@ const socialsNavItems = [
   },
 ];
 
-type SocialsNavProps = {
+type Props = {
   className?: string;
 };
 
-const SocialsNav: React.FC<SocialsNavProps> = ({ className }) => {
+const SocialsNav: React.FC<Props> = ({ className }) => {
   return (
     <article className={`nav-socials ${className}`}>
       <h3 className='hidden'>Bleiben Sie auf dem Laufenden.</h3>
