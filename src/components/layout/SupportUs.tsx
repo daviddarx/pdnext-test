@@ -1,3 +1,4 @@
+import { useSelector } from 'react-redux';
 import ReactMarkdown from 'react-markdown';
 
 import { SupportUsSlot } from '@/types/SupportUsSlot';
@@ -11,6 +12,10 @@ type Props = {
 };
 
 const SupportUs = ({ supportUsData }: Props) => {
+  const isSupportUsOpened = useSelector((state: any) => state.ui.isSupportUsOpened);
+
+  console.log('run support-us', isSupportUsOpened);
+
   supportUsData.sort((a, b) => a.position - b.position);
 
   return (

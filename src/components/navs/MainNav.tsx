@@ -103,7 +103,8 @@ const MainNav = () => {
     dispatch(uiActions.closeNavigation());
   };
 
-  const goToSupport = () => {
+  const goToSupportUs = () => {
+    dispatch(uiActions.openSupportUs());
     closeNavigation();
   };
 
@@ -152,7 +153,7 @@ const MainNav = () => {
 
             <SocialNav />
 
-            <button className='main-nav__support' onClick={goToSupport}>
+            <button className='main-nav__support' onClick={goToSupportUs}>
               Unterstützen Sie uns
             </button>
 

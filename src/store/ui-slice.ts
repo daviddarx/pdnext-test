@@ -4,6 +4,7 @@ const uiSlice = createSlice({
   name: 'ui',
   initialState: {
     isNavigationOpened: false,
+    isSupportUsOpened: false,
   },
   reducers: {
     toggleNavigation: (state) => {
@@ -11,6 +12,12 @@ const uiSlice = createSlice({
     },
     closeNavigation: (state) => {
       state.isNavigationOpened = false;
+    },
+    openSupportUs: (state) => {
+      state.isSupportUsOpened = true;
+    },
+    closeSupportUs: (state) => {
+      state.isSupportUsOpened = false;
     },
   },
 });
