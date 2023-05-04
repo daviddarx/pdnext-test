@@ -1,7 +1,31 @@
 .support-us {
-  @apply bg-black text-white my-gutter p-gutter-1/2;
+  @apply my-gutter border border-black;
 }
 
-.support-us__icon {
+.support-us__title {
+  @apply relative bg-black text-white p-gutter-1/2;
+}
+
+.support-us__heart {
   @apply inline-block ml-10 w-5 h-auto;
+}
+
+.support-us__close {
+  @apply absolute top-1/2 right-gutter-1/2 -translate-y-1/2 -mr-2 w-8 h-8;
+}
+
+.support-us__content {
+  @apply p-gutter-1/2 space-y-gutter-1/2;
+}
+
+.support-us__slot {
+  @apply pt-gutter-1/2 border-t border-black;
+
+  &:first-child {
+    @apply border-none pt-0;
+  }
+}
+
+.support-us__paypal {
+  @apply mt-gutter-1/2;
 }

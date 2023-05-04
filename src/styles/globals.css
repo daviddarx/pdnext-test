@@ -1,3 +1,5 @@
+@import './layers.css';
+@import './accordion.css';
 @import './bottom-nav.css';
 @import './event.css';
 @import './events-list.css';
@@ -7,7 +9,6 @@
 @import './main-nav.css';
 @import './main-nav-burger.css';
 @import './support-us.css';
-@import './utilities.css';
 
 @tailwind base;
 @tailwind components;

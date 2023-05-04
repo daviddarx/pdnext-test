@@ -2,7 +2,7 @@ type Props = {
   className?: string;
 };
 
-const IconHeart = ({ className }: Props) => {
+const HeartIcon = ({ className }: Props) => {
   return (
     <svg
       className={`icon ${className}`}
@@ -16,4 +16,4 @@ const IconHeart = ({ className }: Props) => {
   );
 };
 
-export default IconHeart;
+export default HeartIcon;

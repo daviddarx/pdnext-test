@@ -1,5 +1,0 @@
-@layer utilities {
-  .bg-title {
-    @apply bg-gray-50 font-bold text-black;
-  }
-}
