@@ -1,5 +1,5 @@
 .main-nav__panel {
-  @apply fixed top-0 right-0 z-10;
+  @apply fixed top-0 right-0 z-20;
   @apply w-1/2 h-screen p-gutter;
   @apply bg-black text-white;
 }
@@ -33,6 +33,6 @@
 }
 
 .main-nav__bg {
-  @apply fixed top-0 left-0 w-screen h-screen;
+  @apply fixed top-0 left-0 w-screen h-screen z-10;
   @apply bg-white/75;
 }
