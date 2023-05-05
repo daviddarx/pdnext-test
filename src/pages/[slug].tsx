@@ -12,7 +12,7 @@ import { SupportUsSlot } from '@/types/SupportUsSlot';
 import Layout from '@/components/layout/Layout';
 import Metas from '@/components/layout/Metas';
 
-import FestivalProgramPage from '@/components/pages/FestivalProgramPage';
+import ProgramPage from '@/components/pages/ProgramPage';
 import OnsPage from '@/components/pages/OnsPage';
 import NewsPage from '@/components/pages/NewsPage';
 import ImpressionsPage from '@/components/pages/ImpressionsPage';
@@ -50,7 +50,7 @@ const Page: NextPage<PageProps> = ({ page, supportUsData }) => {
        * Forced to declaratively cast the
        * components and data to get them typed.
        */}
-      {type === pages[0].slug && <FestivalProgramPage data={data as ProgramContent} />}
+      {type === pages[0].slug && <ProgramPage data={data as ProgramContent} />}
       {type === pages[1].slug && <OnsPage data={data as OnsContent} />}
       {type === pages[2].slug && <NewsPage data={data as NewsContent} />}
       {type === pages[3].slug && <ImpressionsPage data={data as ImpressionsContent} />}

@@ -13,7 +13,7 @@ type Props = {
   data: ProgramContent;
 };
 
-const FestivalProgramPage: React.FC<Props> = ({ data }) => {
+const ProgramPage: React.FC<Props> = ({ data }) => {
   const dateClusteredEvents = data.dateClusteredEvents;
   const entryTypes = data.entryTypes;
 
@@ -97,4 +97,4 @@ const FestivalProgramPage: React.FC<Props> = ({ data }) => {
   );
 };
 
-export default FestivalProgramPage;
+export default ProgramPage;
