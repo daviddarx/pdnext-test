@@ -1,14 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-type Props = {
-  isNavigationOpened: boolean;
-  isSupportUsOpened: boolean;
-  supportUsToggleId: number;
-};
-
-export type uiStateType = {
-  ui: Props;
-};
+export interface uiStateType {
+  ui: {
+    isNavigationOpened: boolean;
+    isSupportUsOpened: boolean;
+    supportUsToggleId: number;
+  };
+}
 
 export const uiSlice = createSlice({
   name: 'ui',

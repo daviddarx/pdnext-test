@@ -1,8 +1,4 @@
-type entryImage = {
-  image: string;
-};
-
-export type Entry = {
+export interface Entry {
   typeComplement: '';
   forceBlank: boolean;
   entryType: string;
@@ -11,5 +7,7 @@ export type Entry = {
   title: string;
   image: string;
   uuid: string;
-  additionalImages: entryImage[];
-};
+  additionalImages: {
+    image: string;
+  }[];
+}

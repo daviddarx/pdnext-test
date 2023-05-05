@@ -1,15 +1,12 @@
 import { Event } from '@/types/Event';
 import { Entry } from '@/types/Entry';
-
-type EventDate = {
-  readable: string;
-  filter?: string;
-  hour?: string;
-};
-
-export type FormatedEvent = Event & {
+export interface FormatedEvent extends Event {
   id: string;
-  date: EventDate;
+  date: {
+    readable: string;
+    filter?: string;
+    hour?: string;
+  };
   types: string[];
   entriesObjects: Entry[];
-};
+}

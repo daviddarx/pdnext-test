@@ -1,10 +1,8 @@
-type timeTableItem = {
-  time: string;
-  title: string;
-};
-
-export type Event = {
-  timetable: timeTableItem[];
+export interface Event {
+  timetable: {
+    time: string;
+    title: string;
+  }[];
   ticketsLink: string;
   eventdate: string;
   eventlocationlink: string;
@@ -17,4 +15,4 @@ export type Event = {
   subtitle: string;
   title: string;
   specialstate: string;
-};
+}
