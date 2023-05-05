@@ -1,13 +1,11 @@
 import { useState } from 'react';
+import { GetStaticProps, NextPage } from 'next';
 
-import { SupportUsSlot } from '@/types/SupportUsSlot';
+import { fetchProgramContent } from '@/utils/fetch-program-content';
+import { fetchCommonPageContent } from '@/utils/fetch-common-page-content';
+
+import { PageProps } from '@/types/PageProps';
 import { DateClusteredEvents } from '@/types/DateClusteredEvents';
-import { Entry } from '@/types/Entry';
-import { EntryType } from '@/types/EntryType';
-import { Event } from '@/types/Event';
-import { FormatedEvent } from '@/types/FormatedEvent';
-
-import loadJsonFiles from '@/utils/load-json-files';
 
 import Layout from '@/components/layout/Layout';
 import Metas from '@/components/layout/Metas';
@@ -17,13 +15,10 @@ import EventsList from '@/components/events/EventsList';
 const allTypesFilter = 'Alle';
 const allDatesFilter = 'Alle Tage';
 
-type Props = {
-  supportUsData: SupportUsSlot[];
-  dateClusteredEvents: DateClusteredEvents[];
-  entryTypes: EntryType[];
-};
+const Page: NextPage<PageProps> = ({ pageData, supportUsData }) => {
+  const dateClusteredEvents = pageData.pageContent!.dateClusteredEvents;
+  const entryTypes = pageData.pageContent!.entryTypes;
 
-const FestivalProgram = ({ supportUsData, dateClusteredEvents, entryTypes }: Props) => {
   const [currentType, setCurrentType] = useState(allTypesFilter);
   const [currentDate, setCurrentDate] = useState(allDatesFilter);
 
@@ -83,7 +78,7 @@ const FestivalProgram = ({ supportUsData, dateClusteredEvents, entryTypes }: Pro
 
   return (
     <Layout supportUsData={supportUsData}>
-      <Metas title='FestivalProgram' />
+      <Metas title={pageData.pageTitle} />
       <section>
         <h1>
           <span>
@@ -107,105 +102,21 @@ const FestivalProgram = ({ supportUsData, dateClusteredEvents, entryTypes }: Pro
   );
 };
 
-export default FestivalProgram;
+export default Page;
 
-export async function getStaticProps() {
-  const supportUsSlotsDir: SupportUsSlot[] = [];
-  const supportUsSlots = await loadJsonFiles(supportUsSlotsDir, '_content/supportUsSlots');
+export const getStaticProps: GetStaticProps<PageProps> = async () => {
+  const programContent = await fetchProgramContent();
+  const commonPageContent = await fetchCommonPageContent();
 
-  const entryTypesDir: EntryType[] = [];
-  const entryTypes = await loadJsonFiles(entryTypesDir, '_content/entryTypes');
-  entryTypes.sort((a, b) => a.order - b.order);
-
-  const eventsDir: Event[] = [];
-  const events = await loadJsonFiles(eventsDir, '_content/events');
-
-  const entriesDir: Entry[] = [];
-  const entries = await loadJsonFiles(entriesDir, '_content/entries');
-
-  const formatedEvents: FormatedEvent[] = events.map((event) => {
-    const eventDate = new Date(event.eventdate);
-
-    const eventEntries: Entry[] = event.entries
-      ? event.entries.map((entryId) => {
-          const entry = entries.find((entry) => entry.uuid === entryId);
-          return entry as Entry;
-        })
-      : [];
-
-    const eventTypes = eventEntries.reduce((current: string[], entry) => {
-      if (entry && !current.includes(entry.entryType)) {
-        current.push(entry.entryType);
-      }
-      return current;
-    }, []);
-
-    const dateReadable = eventDate.toLocaleDateString('de-DE', {
-      weekday: 'long',
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
-    });
-
-    const dateFilter = eventDate
-      .toLocaleDateString('de-DE', {
-        weekday: 'short',
-        day: 'numeric',
-        month: 'numeric',
-      })
-      .replace('.,', '')
-      .slice(0, -1);
-
-    const dateHour = eventDate.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
-
-    const id = `${dateFilter} ${event.title}`
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .replace(/[^\w\s./]/gi, '')
-      .toLowerCase()
-      .replace(/ /g, '-')
-      .replace(/\//g, '-')
-      .replace(/\./g, '-');
-
-    const formatedEvent: FormatedEvent = {
-      ...event,
-      id: id,
-      date: {
-        readable: dateReadable,
-        filter: dateFilter,
-        hour: dateHour,
-      },
-      types: eventTypes,
-      entriesObjects: eventEntries,
-    };
-
-    return formatedEvent;
-  });
-
-  formatedEvents.sort((a, b) => new Date(a.eventdate).getTime() - new Date(b.eventdate).getTime());
-
-  const dateClusteredEvents: DateClusteredEvents[] = formatedEvents.reduce(
-    (current: DateClusteredEvents[], event: FormatedEvent) => {
-      const index = current.findIndex((item) => item.events[0].date.filter === event.date.filter);
-      if (index === -1) {
-        current.push({
-          dateReadable: event.date.readable,
-          dateFilter: event.date.filter,
-          events: [{ ...event }],
-        });
-      } else {
-        current[index].events.push({ ...event });
-      }
-      return current;
+  const pageContent: PageProps = {
+    pageData: {
+      pageTitle: 'Festival Programm',
+      pageContent: programContent,
     },
-    [],
-  );
+    supportUsData: commonPageContent.supportUsData,
+  };
 
   return {
-    props: {
-      supportUsData: supportUsSlots,
-      dateClusteredEvents: dateClusteredEvents,
-      entryTypes: entryTypes,
-    },
+    props: pageContent,
   };
-}
+};

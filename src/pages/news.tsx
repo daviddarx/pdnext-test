@@ -1,33 +1,33 @@
-import { SupportUsSlot } from '@/types/SupportUsSlot';
-import loadJsonFiles from '@/utils/load-json-files';
+import { GetStaticProps, NextPage } from 'next';
+
+import { fetchCommonPageContent } from '@/utils/fetch-common-page-content';
+import { PageProps } from '@/types/PageProps';
 
 import Layout from '@/components/layout/Layout';
 import Metas from '@/components/layout/Metas';
 
-type Props = {
-  supportUsData: SupportUsSlot[];
-};
-
-const News = ({ supportUsData }: Props) => {
+const Page: NextPage<PageProps> = ({ pageData, supportUsData }) => {
   return (
     <Layout supportUsData={supportUsData}>
-      <Metas title='News' />
-      <div>
-        <h1>News</h1>
-      </div>
+      <Metas title={pageData.pageTitle} />
+      <h1>{pageData.pageTitle}</h1>
     </Layout>
   );
 };
 
-export default News;
+export default Page;
 
-export async function getStaticProps() {
-  const supportUsSlotsDir: SupportUsSlot[] = [];
-  const supportUsSlots = await loadJsonFiles(supportUsSlotsDir, '_content/supportUsSlots');
+export const getStaticProps: GetStaticProps<PageProps> = async () => {
+  const commonPageContent = await fetchCommonPageContent();
+
+  const pageContent: PageProps = {
+    pageData: {
+      pageTitle: 'News',
+    },
+    supportUsData: commonPageContent.supportUsData,
+  };
 
   return {
-    props: {
-      supportUsData: supportUsSlots,
-    },
+    props: pageContent,
   };
-}
+};
