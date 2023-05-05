@@ -28,3 +28,7 @@ export interface ContentPageContent {
     }[];
   }[];
 }
+
+export async function fetchContentPageContent(json: string): Promise<ContentPageContent> {
+  return require('../../_content/contentPages/' + json) as ContentPageContent;
+}

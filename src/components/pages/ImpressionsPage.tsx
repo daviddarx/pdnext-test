@@ -1,11 +1,12 @@
-import { ImpressionsContent } from '@/types/ImpressionsContent';
+import { ImpressionsContent } from '@/utils/fetch-impressions-content';
 
 type Props = {
   content: ImpressionsContent;
 };
 
 const ImpressionsPage: React.FC<Props> = ({ content }) => {
-  return <div>Je suis un ImpressionsPage: {content.title}</div>;
+  console.log(content);
+  return <div>Je suis un ImpressionsPage: </div>;
 };
 
 export default ImpressionsPage;

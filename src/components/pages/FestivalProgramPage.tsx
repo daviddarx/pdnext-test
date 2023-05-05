@@ -3,8 +3,6 @@ import { useState } from 'react';
 import { ProgramContent } from '@/utils/fetch-program-content';
 import { DateClusteredEvents } from '@/types/DateClusteredEvents';
 
-import Layout from '@/components/layout/Layout';
-import Metas from '@/components/layout/Metas';
 import EventsFilters from '@/components/events/EventsFilters';
 import EventsList from '@/components/events/EventsList';
 
@@ -16,8 +14,8 @@ type Props = {
 };
 
 const FestivalProgramPage: React.FC<Props> = ({ content }) => {
-  const dateClusteredEvents = content!.dateClusteredEvents;
-  const entryTypes = content!.entryTypes;
+  const dateClusteredEvents = content.dateClusteredEvents;
+  const entryTypes = content.entryTypes;
 
   const [currentType, setCurrentType] = useState(allTypesFilter);
   const [currentDate, setCurrentDate] = useState(allDatesFilter);

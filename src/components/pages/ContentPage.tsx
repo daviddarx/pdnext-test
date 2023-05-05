@@ -1,11 +1,12 @@
-import { ContentPageContent } from '@/types/ContentPageContent';
+import { ContentPageContent } from '@/utils/fetch-content-page-content';
 
 type Props = {
   content: ContentPageContent;
 };
 
 const ContentPage: React.FC<Props> = ({ content }) => {
-  return <div>Je suis un ContentPage: {content.title}</div>;
+  console.log(content);
+  return <div>Je suis un ContentPage</div>;
 };
 
 export default ContentPage;

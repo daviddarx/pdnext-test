@@ -1,13 +1,13 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 
-import { fetchCommonPageContent } from '@/utils/fetch-common-page-content';
 import { fetchProgramContent, ProgramContent } from '@/utils/fetch-program-content';
-import { OnsContent } from '@/types/OnsContent';
-import { NewsContent } from '@/types/NewsContent';
-import { ImpressionsContent } from '@/types/ImpressionsContent';
-import { ContentPageContent } from '@/types/ContentPageContent';
+import { fetchOnsContent, OnsContent } from '@/utils/fetch-ons-content';
+import { fetchNewsContent, NewsContent } from '@/utils/fetch-news-content';
+import { fetchImpressionsContent, ImpressionsContent } from '@/utils/fetch-impressions-content';
+import { fetchContentPageContent, ContentPageContent } from '@/utils/fetch-content-page-content';
 
-import { PageProps } from '@/types/PageProps';
+import { fetchCommonPageContent } from '@/utils/fetch-common-page-content';
+import { SupportUsSlot } from '@/types/SupportUsSlot';
 
 import Layout from '@/components/layout/Layout';
 import Metas from '@/components/layout/Metas';
@@ -30,6 +30,15 @@ const pages = [
   { slug: 'privacy', pageTitle: 'Datenschutz', json: 'contentpage-datenschutz.json' },
   { slug: 'submissions', pageTitle: 'Submissions', json: 'contentpage-submissions' },
 ];
+
+type PageProps = {
+  page: {
+    type: string;
+    title: string;
+    content: ProgramContent | ContentPageContent | NewsContent | ImpressionsContent | OnsContent;
+  };
+  supportUsData: SupportUsSlot[];
+};
 
 const Page: NextPage<PageProps> = ({ page, supportUsData }) => {
   const { type, title, content } = page;
@@ -61,24 +70,25 @@ export const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
     return { notFound: true };
   }
 
+  // rename data partout?
   let content;
   let type;
 
   if (slug === 'festival-program') {
     type = 'festival-program';
     content = await fetchProgramContent();
-  } else if (slug === 'news') {
-    type = 'news';
-    content = { title: 'News' } as NewsContent;
   } else if (slug === 'one-night-stands') {
     type = 'ons';
-    content = { title: 'ONS' } as NewsContent;
+    content = await fetchOnsContent();
+  } else if (slug === 'news') {
+    type = 'news';
+    content = await fetchNewsContent();
   } else if (slug === 'impressions') {
     type = 'impressions';
-    content = { title: 'Impressions' } as ImpressionsContent;
+    content = await fetchImpressionsContent();
   } else {
     type = 'content-page';
-    content = require('../../_content/contentPages/' + page.json) as ContentPageContent;
+    content = await fetchContentPageContent(page.json!);
   }
 
   const commonPageContent = await fetchCommonPageContent();
