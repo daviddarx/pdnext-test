@@ -21,11 +21,9 @@
   "eventdate": "2022-11-24T19:30:00.000Z",
   "eventlocationlink": "https://www.riffraff.ch/kinoprogramm/192294/archaologie-der-luste-porny-days-2022.html?date=all&sort=name&kino=combine",
   "layout": "event",
-  "eventlocation": "Kino Riffraff 1 (rollstuhlgängig)",
-  "entries": [
-    "tim",
-    "silent"
-  ],
+  "eventlocation": "Kino Riffraff 1",
+  "eventlocationcomplement": "rollstuhlgängig",
+  "entries": ["tim", "silent"],
   "desc": "Für die Porny Days hat das Institut für incohärente Cinematographie (IOIC) eine Auswahl mehrheitlich amerikanischer und französischer Sexfilme der Stummfilmzeit erstellt. Allesamt sind sie nicht jugendfrei und werden mit neuen, eigens für diesen Abend erarbeiteten und nicht unbedingt jugendfreieren Live-Vertonungen gezeigt. \n\n🚨 **Trigger-Warnung**: in diesem Block zeigen wir Filme, die 100 Jahre oder älter sind. Aus heutiger Sicht sind sie im wahrsten Sinne aus der Zeit gefallen und entsprechen nicht immer unseren Wertvorstellungen. Nichtsdestotrotz sind sie ein historisches Zeitdokument, das zeigt, dass unsere Ururgrosseltern in Sachen Perversionen uns in nichts nachstehen.",
   "ticketsLinkTitle": "ausverkauft",
   "subtitle": "Sex Flicks from the Silent Era / live vertont von Tim & Puma Mimi",

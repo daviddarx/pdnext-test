@@ -22,10 +22,9 @@
   "eventlocationlink": "http://www.werkerei-schwamendingen.ch/informationen",
   "price": "CHF 25",
   "layout": "event",
-  "eventlocation": "TeKi TéSpace - Werkerei - Rampe Ost",
-  "entries": [
-    "POPorno"
-  ],
+  "eventlocation": "TeKi TéSpace",
+  "eventlocationcomplement": "Werkerei - Rampe Ost",
+  "entries": ["POPorno"],
   "desc": "Nebst der energiegeladenen Performance (Beschreibung siehe unten) erwarten dich thematische Kurzfilme zum Thema Tanz & Körperlichkeit.\\\n\\\nDanach folgt ein kurzes Q&A mit Talaya Schmid (Co-Gründerin Porny Days) und den zwei Tänzerinnen von [TeKi TeKua.](www.bonjour-tekitekua.ch)\n\nAnschliessend könnt ihr die Nacht an der Bar und auf der Tanzfläche mit der Musik von [DJ Captain Planet](https://l.facebook.com/l.php?u=https%3A%2F%2Fsoundcloud.com%2Fcaptain-planet777%3Ffbclid%3DIwAR3Fux1egrqbksFJDAVPiBcJlkTljpi_coWLpy-uvBgsSj-HIRhq2U1XH4U&h=AT0AJ3zrCm2UV9Qhdj2IyoglHHkA9YdkCGcKFcKUofsue1tMUdM1GM7vnOGbB3K0fp5CvBbhyIlK8ngw5undADnjkqYJgPEr924QG2paoNRdt1JtaepoZAowOw9GqK4tOOK-hYs) geniessen.",
   "ticketsLinkTitle": "Tickets kaufen",
   "subtitle": "Performance und Porny-Kurzfilme zum Thema Tanz & Sex",

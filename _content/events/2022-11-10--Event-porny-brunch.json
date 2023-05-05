@@ -12,10 +12,9 @@
     }
   ],
   "title": "Porny Brunch",
-  "eventlocation": "Das Gleis (barrierefrei)",
+  "eventlocation": "Das Gleis",
+  "eventlocationcomplement": "barrierefrei",
   "eventlocationlink": "https://dasgleis.ch",
   "desc": "Ab 11.00 Uhr gibt’s im DAS GLEIS zum brunchen verschiedene Hot-Dogs und Blody Marys.",
-  "entries": [
-    "porny-brunch"
-  ]
+  "entries": ["porny-brunch"]
 }

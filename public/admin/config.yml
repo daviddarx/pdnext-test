@@ -260,6 +260,11 @@ collections:
         name: 'eventlocation'
         type: 'string'
 
+      - label: 'Event Location Complement'
+        name: 'eventlocationcomplement'
+        type: 'string'
+        required: false
+
       - label: 'Event Location Link'
         name: 'eventlocationlink'
         type: 'string'
@@ -352,6 +357,11 @@ collections:
       - label: 'Event Location'
         name: 'eventlocation'
         type: 'string'
+
+      - label: 'Event Location Complement'
+        name: 'eventlocationcomplement'
+        type: 'string'
+        required: false
 
       - label: 'Event Location Link'
         name: 'eventlocationlink'

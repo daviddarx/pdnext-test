@@ -4,7 +4,8 @@
   "eventdate": "2022-11-25T19:40:00.000Z",
   "eventlocationlink": "www.riffraff.ch",
   "layout": "event",
-  "eventlocation": "Kino Riffraff 4 (rollstuhlgängig)",
+  "eventlocation": "Kino Riffraff 4",
+  "eventlocationcomplement": "rollstuhlgängig",
   "entries": [
     "explicit-reproduction-of-obscene-subjects",
     "eyes-and-horns",

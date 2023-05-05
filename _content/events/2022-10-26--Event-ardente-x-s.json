@@ -4,11 +4,9 @@
   "eventdate": "2022-11-25T21:30:00.000Z",
   "eventlocationlink": "www.riffraff.ch",
   "layout": "event",
-  "eventlocation": "Kino Riffraff 4 (rollstuhlgängig)",
-  "entries": [
-    "ardente-x-s",
-    "goudou-auto"
-  ],
+  "eventlocation": "Kino Riffraff 4",
+  "eventlocationcomplement": "rollstuhlgängig",
+  "entries": ["ardente-x-s", "goudou-auto"],
   "desc": "Ein Dokumentarfilm über das Lausanner Porn-Kollektiv OIL PRODUCTIONS mit Vorfilm \"Goudou Auto\", ihrem neusten Werk.\n\nPremiere: Visions du Réel 2022",
   "ticketsLinkTitle": "Tickets",
   "subtitle": "Vorfilm: Goudou Auto",

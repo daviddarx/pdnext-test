@@ -4,10 +4,9 @@
   "eventdate": "2022-11-25T19:30:00.000Z",
   "eventlocationlink": "www.riffraff.ch",
   "layout": "event",
-  "eventlocation": "Kino Riffraff 3 (rollstuhlgängig)",
-  "entries": [
-    "regra-34"
-  ],
+  "eventlocation": "Kino Riffraff",
+  "eventlocationcomplement": "rollstuhlgängig",
+  "entries": ["regra-34"],
   "desc": "2022 am Locarno Film Festival mit dem Goldenen Leoparden ausgezeichnet, bringt RULE 34 auf eindrückliche Weise den Wunsch nach Selbstbestimmung und weiblicher Ermächtigung zum Ausdruck.\n\nIn Zusammenarbeit mit dem Human Rights Film Festival\n\nBegrüssungwort: Sascha Lara Bleuler, künstlerische Leiterin HRFF",
   "ticketsLinkTitle": "Tickets",
   "subtitle": "Spielfilm",

@@ -15,9 +15,8 @@
   "price": "Eintritt frei",
   "layout": "event",
   "eventlocation": "Zentrum Karl der Grosse",
-  "entries": [
-    "die weibliche ekstase"
-  ],
+  "eventlocationcomplement": "",
+  "entries": ["die weibliche ekstase"],
   "desc": "Die Debatte um die weibliche Sexualität ist in aller Munde, trotzdem existieren immer noch viele Mythen und Tabus. Wir wollen herausfinden, wie sich die weibliche Sexualität entfaltet und wie es zu einem ekstatischen Erlebnis kommen kann. Welche Rolle spielen Sextoys und Pornos und was verraten gängige Marketingstrategien über die Vorstellungen von der weiblichen Sexualität?",
   "ticketsLinkTitle": "Anmeldung erforderlich",
   "subtitle": "Diskussion mit Filmausschnitten",

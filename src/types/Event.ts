@@ -5,10 +5,11 @@ export interface Event {
   }[];
   ticketsLink: string;
   eventdate: string;
+  eventlocation: string;
+  eventlocationcomplement: string;
   eventlocationlink: string;
   price: string;
   layout: string;
-  eventlocation: string;
   entries: string[];
   desc: string;
   ticketsLinkTitle: string;
