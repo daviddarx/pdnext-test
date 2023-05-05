@@ -1,10 +1,6 @@
 import { useState } from 'react';
-import { GetStaticProps, NextPage } from 'next';
 
-import { fetchProgramContent } from '@/utils/fetch-program-content';
-import { fetchCommonPageContent } from '@/utils/fetch-common-page-content';
-
-import { PageProps } from '@/types/PageProps';
+import { ProgramContent } from '@/utils/fetch-program-content';
 import { DateClusteredEvents } from '@/types/DateClusteredEvents';
 
 import Layout from '@/components/layout/Layout';
@@ -15,9 +11,13 @@ import EventsList from '@/components/events/EventsList';
 const allTypesFilter = 'Alle';
 const allDatesFilter = 'Alle Tage';
 
-const Page: NextPage<PageProps> = ({ pageData, supportUsData }) => {
-  const dateClusteredEvents = pageData.pageContent!.dateClusteredEvents;
-  const entryTypes = pageData.pageContent!.entryTypes;
+type Props = {
+  content: ProgramContent;
+};
+
+const FestivalProgramPage: React.FC<Props> = ({ content }) => {
+  const dateClusteredEvents = content!.dateClusteredEvents;
+  const entryTypes = content!.entryTypes;
 
   const [currentType, setCurrentType] = useState(allTypesFilter);
   const [currentDate, setCurrentDate] = useState(allDatesFilter);
@@ -77,46 +77,26 @@ const Page: NextPage<PageProps> = ({ pageData, supportUsData }) => {
   };
 
   return (
-    <Layout supportUsData={supportUsData}>
-      <Metas title={pageData.pageTitle} />
-      <section>
-        <h1>
-          <span>
-            10. Porny Days
-            <br />
-            23. — 27. Nov. 2022
-          </span>
-          <span className='block'>Festival Programm</span>
-        </h1>
-        <EventsFilters
-          typeFilters={typeFilters}
-          currentType={currentType}
-          onFilterByType={filterByType}
-          dateFilters={dateFilters}
-          currentDate={currentDate}
-          onFilterByDate={filterByDate}
-        />
-        <EventsList dateClusteredEvents={filteredEvents} />
-      </section>
-    </Layout>
+    <section>
+      <h1>
+        <span>
+          10. Porny Days
+          <br />
+          23. — 27. Nov. 2022
+        </span>
+        <span className='block'>Festival Programm</span>
+      </h1>
+      <EventsFilters
+        typeFilters={typeFilters}
+        currentType={currentType}
+        onFilterByType={filterByType}
+        dateFilters={dateFilters}
+        currentDate={currentDate}
+        onFilterByDate={filterByDate}
+      />
+      <EventsList dateClusteredEvents={filteredEvents} />
+    </section>
   );
 };
 
-export default Page;
-
-export const getStaticProps: GetStaticProps<PageProps> = async () => {
-  const programContent = await fetchProgramContent();
-  const commonPageContent = await fetchCommonPageContent();
-
-  const pageContent: PageProps = {
-    pageData: {
-      pageTitle: 'Festival Programm',
-      pageContent: programContent,
-    },
-    supportUsData: commonPageContent.supportUsData,
-  };
-
-  return {
-    props: pageContent,
-  };
-};
+export default FestivalProgramPage;
