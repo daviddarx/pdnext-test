@@ -24,25 +24,39 @@ const motionVariants = {
 
 type Props = {
   className?: string;
-  title: ReactNode;
+  header: ReactNode;
   children: ReactNode;
+  isOpenedExt?: boolean;
+  onToggle?: (isOpened: boolean) => void;
 };
 
-const Accordion: React.FC<Props> = ({ className, title, children }) => {
+const Accordion: React.FC<Props> = ({
+  className,
+  header,
+  children,
+  isOpenedExt = false,
+  onToggle,
+}) => {
   const [isOpened, setIsOpened] = useState(true);
 
   useEffect(() => {
     setIsOpened(false);
   }, []);
 
+  useEffect(() => {
+    setIsOpened(isOpenedExt);
+  }, [isOpenedExt]);
+
   const toggleOpened = () => {
     setIsOpened((prev) => !prev);
+
+    if (onToggle) onToggle(!isOpened);
   };
 
   return (
     <section className={`accordion ${className ? className : ''} ${isOpened ? 'is-opened' : ''}`}>
       <header className='accordion__header'>
-        {title}
+        {header}
         <button className='accordion__button' onClick={toggleOpened}>
           {isOpened ? 'Schliessen' : 'Öffnen'}
         </button>

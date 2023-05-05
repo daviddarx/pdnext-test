@@ -1,10 +1,21 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const uiSlice = createSlice({
+type Props = {
+  isNavigationOpened: boolean;
+  isSupportUsOpened: boolean;
+  supportUsToggleId: number;
+};
+
+export type uiStateType = {
+  ui: Props;
+};
+
+export const uiSlice = createSlice({
   name: 'ui',
   initialState: {
     isNavigationOpened: false,
     isSupportUsOpened: false,
+    supportUsToggleId: 0,
   },
   reducers: {
     toggleNavigation: (state) => {

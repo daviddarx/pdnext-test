@@ -1,8 +1,10 @@
-import { ReactNode } from 'react';
+import { ReactNode, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { motion } from 'framer-motion';
 
 import eases from '@/utils/eases';
 import { SupportUsSlot } from '@/types/SupportUsSlot';
+import { uiActions } from '@/store/';
 
 import Footer from '@/components/layout/Footer';
 import SupportUs from '@/components/layout/SupportUs';
@@ -40,6 +42,12 @@ type Props = {
 };
 
 const Layout: React.FC<Props> = ({ children, supportUsData }) => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(uiActions.closeSupportUs());
+  }, [dispatch]);
+
   return (
     <motion.div
       initial='initial'

@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { uiActions } from '@/store';
+import { uiStateType } from '@/store/ui-slice';
 import eases from '@/utils/eases';
 import { setFocusables, resetFocusables, loopFocusables } from './../../utils/get-focusables';
 
@@ -71,7 +72,7 @@ const bgMotionVariants = {
 };
 
 const MainNav = () => {
-  const isNavigationOpened = useSelector((state: any) => state.ui.isNavigationOpened);
+  const isNavigationOpened = useSelector((state: uiStateType) => state.ui.isNavigationOpened);
 
   const dispatch = useDispatch();
   const navRef = useRef<HTMLElement>(null);
@@ -84,6 +85,7 @@ const MainNav = () => {
 
       if (navRef.current) {
         setFocusables(navRef.current);
+        dispatch(uiActions.closeSupportUs());
       }
     }
 
@@ -93,7 +95,7 @@ const MainNav = () => {
         currentActiveAtOpen?.focus?.();
       }
     };
-  }, [isNavigationOpened]);
+  }, [isNavigationOpened, dispatch]);
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
     loopFocusables(e);
