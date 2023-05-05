@@ -1,19 +1,19 @@
 export interface Event {
-  timetable: {
+  timetable?: {
     time: string;
     title: string;
   }[];
-  ticketsLink: string;
+  ticketsLink?: string;
   eventdate: string;
   eventlocation: string;
-  eventlocationcomplement: string;
+  eventlocationcomplement?: string;
   eventlocationlink: string;
-  price: string;
+  price?: string;
   layout: string;
-  entries: string[];
+  entries?: string[];
   desc: string;
-  ticketsLinkTitle: string;
-  subtitle: string;
+  ticketsLinkTitle?: string;
+  subtitle?: string;
   title: string;
-  specialstate: string;
+  specialstate?: string;
 }
