@@ -10,12 +10,12 @@ const allTypesFilter = 'Alle';
 const allDatesFilter = 'Alle Tage';
 
 type Props = {
-  content: ProgramContent;
+  data: ProgramContent;
 };
 
-const FestivalProgramPage: React.FC<Props> = ({ content }) => {
-  const dateClusteredEvents = content.dateClusteredEvents;
-  const entryTypes = content.entryTypes;
+const FestivalProgramPage: React.FC<Props> = ({ data }) => {
+  const dateClusteredEvents = data.dateClusteredEvents;
+  const entryTypes = data.entryTypes;
 
   const [currentType, setCurrentType] = useState(allTypesFilter);
   const [currentDate, setCurrentDate] = useState(allDatesFilter);

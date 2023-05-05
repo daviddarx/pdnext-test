@@ -1,11 +1,11 @@
 import { ContentPageContent } from '@/utils/fetch-content-page-content';
 
 type Props = {
-  content: ContentPageContent;
+  data: ContentPageContent;
 };
 
-const ContentPage: React.FC<Props> = ({ content }) => {
-  console.log(content);
+const ContentPage: React.FC<Props> = ({ data }) => {
+  console.log(data);
   return <div>Je suis un ContentPage</div>;
 };
 

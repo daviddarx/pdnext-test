@@ -1,11 +1,11 @@
 import { ImpressionsContent } from '@/utils/fetch-impressions-content';
 
 type Props = {
-  content: ImpressionsContent;
+  data: ImpressionsContent;
 };
 
-const ImpressionsPage: React.FC<Props> = ({ content }) => {
-  console.log(content);
+const ImpressionsPage: React.FC<Props> = ({ data }) => {
+  console.log(data);
   return <div>Je suis un ImpressionsPage: </div>;
 };
 

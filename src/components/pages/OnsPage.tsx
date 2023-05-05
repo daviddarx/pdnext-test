@@ -1,11 +1,11 @@
 import { OnsContent } from '@/utils/fetch-ons-content';
 
 type Props = {
-  content: OnsContent;
+  data: OnsContent;
 };
 
-const OnsPage: React.FC<Props> = ({ content }) => {
-  console.log(content);
+const OnsPage: React.FC<Props> = ({ data }) => {
+  console.log(data);
   return <div>Je suis un OnsPage:</div>;
 };
 

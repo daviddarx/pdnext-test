@@ -20,37 +20,41 @@ import ContentPage from '@/components/pages/ContentPage';
 
 const pages = [
   { slug: 'festival-program', pageTitle: 'Festival Programm' },
-  { slug: 'one-night-stands', pageTitle: 'One Night Stands – das saisonales Programm' },
-  { slug: 'news', pageTitle: 'Impressions' },
-  { slug: 'impressions', pageTitle: 'News' },
+  { slug: 'one-night-stands', pageTitle: 'One Night Stands' },
+  { slug: 'news', pageTitle: 'News' },
+  { slug: 'impressions', pageTitle: 'Impressions' },
   { slug: 'cookies', pageTitle: 'Cookie-Richtlinie', json: 'contentpage-cookie-richtlinie.json' },
   { slug: 'festival', pageTitle: 'Das Festival', json: 'contentpage-das-festival.json' },
   { slug: 'impressum', pageTitle: 'Impressum', json: 'contentpage-impressum.json' },
   { slug: 'press', pageTitle: 'Press', json: 'contentpage-presse.json' },
   { slug: 'privacy', pageTitle: 'Datenschutz', json: 'contentpage-datenschutz.json' },
-  { slug: 'submissions', pageTitle: 'Submissions', json: 'contentpage-submissions' },
+  { slug: 'submissions', pageTitle: 'Submissions', json: 'contentpage-submissions.json' },
 ];
 
 type PageProps = {
   page: {
     type: string;
     title: string;
-    content: ProgramContent | ContentPageContent | NewsContent | ImpressionsContent | OnsContent;
+    data: ProgramContent | ContentPageContent | NewsContent | ImpressionsContent | OnsContent;
   };
   supportUsData: SupportUsSlot[];
 };
 
 const Page: NextPage<PageProps> = ({ page, supportUsData }) => {
-  const { type, title, content } = page;
+  const { type, title, data } = page;
 
   return (
     <Layout supportUsData={supportUsData}>
       <Metas title={title} />
-      {type === 'festival-program' && <FestivalProgramPage content={content as ProgramContent} />}
-      {type === 'ons' && <OnsPage content={content as OnsContent} />}
-      {type === 'news' && <NewsPage content={content as NewsContent} />}
-      {type === 'impressions' && <ImpressionsPage content={content as ImpressionsContent} />}
-      {type === 'content-page' && <ContentPage content={content as ContentPageContent} />}
+      {/**
+       * Forced to declaratively cast the
+       * components and data to get them typed.
+       */}
+      {type === pages[0].slug && <FestivalProgramPage data={data as ProgramContent} />}
+      {type === pages[1].slug && <OnsPage data={data as OnsContent} />}
+      {type === pages[2].slug && <NewsPage data={data as NewsContent} />}
+      {type === pages[3].slug && <ImpressionsPage data={data as ImpressionsContent} />}
+      {type === 'content-page' && <ContentPage data={data as ContentPageContent} />}
     </Layout>
   );
 };
@@ -70,25 +74,29 @@ export const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
     return { notFound: true };
   }
 
-  // rename data partout?
-  let content;
-  let type;
+  const type = page.json === undefined ? page.slug : 'content-page';
 
-  if (slug === 'festival-program') {
-    type = 'festival-program';
-    content = await fetchProgramContent();
-  } else if (slug === 'one-night-stands') {
-    type = 'ons';
-    content = await fetchOnsContent();
-  } else if (slug === 'news') {
-    type = 'news';
-    content = await fetchNewsContent();
-  } else if (slug === 'impressions') {
-    type = 'impressions';
-    content = await fetchImpressionsContent();
-  } else {
-    type = 'content-page';
-    content = await fetchContentPageContent(page.json!);
+  /**
+   * Forced to declaratively fetch the data
+   * to get it correctly typed.
+   */
+  let data;
+  switch (slug) {
+    case pages[0].slug:
+      data = await fetchProgramContent();
+      break;
+    case pages[1].slug:
+      data = await fetchOnsContent();
+      break;
+    case pages[2].slug:
+      data = await fetchNewsContent();
+      break;
+    case pages[3].slug:
+      data = await fetchImpressionsContent();
+      break;
+    default:
+      data = await fetchContentPageContent(page.json!);
+      break;
   }
 
   const commonPageContent = await fetchCommonPageContent();
@@ -97,7 +105,7 @@ export const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
     page: {
       type: type,
       title: page.pageTitle,
-      content: content,
+      data: data,
     },
     supportUsData: commonPageContent.supportUsData,
   };
