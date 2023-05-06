@@ -4,7 +4,6 @@ export interface uiStateType {
   ui: {
     isNavigationOpened: boolean;
     isSupportUsOpened: boolean;
-    supportUsToggleId: number;
   };
 }
 
@@ -13,7 +12,6 @@ export const uiSlice = createSlice({
   initialState: {
     isNavigationOpened: false,
     isSupportUsOpened: false,
-    supportUsToggleId: 0,
   },
   reducers: {
     toggleNavigation: (state) => {

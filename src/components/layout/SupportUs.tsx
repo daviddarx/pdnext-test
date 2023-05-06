@@ -18,7 +18,6 @@ type Props = {
 const SupportUs = ({ supportUsData }: Props) => {
   const supportUsRef = useRef<HTMLDivElement>(null);
 
-  const supportUsToggleId = useSelector((state: uiStateType) => state.ui.supportUsToggleId);
   const isSupportUsOpened = useSelector((state: uiStateType) => state.ui.isSupportUsOpened);
 
   supportUsData.sort((a, b) => a.position - b.position);
