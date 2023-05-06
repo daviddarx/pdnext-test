@@ -12,7 +12,7 @@ type Props = {
 const EventsFilters: React.FC<Props> = (props) => {
   return (
     <div className='events-filters'>
-      <div className='filters space-x-4'>
+      <div className='events-filters__filter'>
         {props.typeFilters.map((filter) => (
           <button
             key={filter}
@@ -24,7 +24,7 @@ const EventsFilters: React.FC<Props> = (props) => {
         ))}
       </div>
       {props.dateFilters.length > 2 && (
-        <div className='filters space-x-4'>
+        <div className='events-filters__filter'>
           {props.dateFilters.map((filter) => (
             <button
               key={filter}
