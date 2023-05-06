@@ -1,0 +1,71 @@
+.content-page {
+}
+
+.content-page__subline {
+  @apply block;
+}
+
+.content-page__title {
+  @apply block;
+}
+
+.content-page__nav {
+  @apply mt-gutter flex space-x-4 border-y border-black py-4;
+}
+
+.content-page__video {
+  @apply mt-gutter;
+}
+
+.content-page__slots {
+  @apply mt-gutter;
+}
+
+/**
+ * Content Slots
+ */
+
+.content-slot {
+  @apply mt-gutter scroll-mt-gutter;
+}
+
+.content-slot__image {
+  @apply mt-gutter-1/2;
+}
+
+.content-slot__definition-list {
+  @apply mt-gutter-1/2;
+}
+
+.content-slot__second-text {
+  @apply mt-gutter-1/2;
+}
+
+.content-slot__downloads {
+  @apply mt-gutter-1/2;
+}
+
+.content-slot__expandable-text {
+  @apply mt-gutter-1/2;
+}
+
+/**
+ * Utils
+ */
+
+.definition-list__dl {
+  @apply grid grid-cols-2 gap-x-4;
+}
+
+.definition-list__dd,
+.definition-list__dt {
+  @apply mt-gutter-1/2;
+}
+
+.expandable-text__header {
+  @apply relative flex;
+}
+
+.expandable-text__close {
+  @apply w-4 h-4;
+}

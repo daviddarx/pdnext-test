@@ -1,0 +1,10 @@
+.decorative-video {
+  @apply relative;
+}
+
+.decorative-video__mute-button {
+  &::after {
+    content: '';
+    @apply absolute inset-0;
+  }
+}

@@ -21,6 +21,20 @@
 }
 
 @layer utilities {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+  }
+
+  b,
+  strong {
+    @apply font-bold;
+  }
+
   .bg-title {
     @apply bg-gray-50 font-bold text-black;
   }

@@ -1,3 +1,5 @@
+import sizeOf from 'image-size';
+import fs from 'fs';
 export interface ContentPageContent {
   title: string;
   headerSubline?: string;
@@ -8,6 +10,8 @@ export interface ContentPageContent {
     hiddenTitle?: boolean;
     anchorTitle?: string;
     image?: string;
+    imageWidth?: number;
+    imageHeight?: number;
     firstText?: string;
     definitionLists?: {
       title?: string;
@@ -30,5 +34,18 @@ export interface ContentPageContent {
 }
 
 export async function fetchContentPageContent(json: string): Promise<ContentPageContent> {
-  return require('../../_content/contentPages/' + json) as ContentPageContent;
+  const data = require('../../_content/contentPages/' + json) as ContentPageContent;
+
+  if (data.contentSlot) {
+    for (const slot of data.contentSlot) {
+      if (slot.image) {
+        const imagePath = `public${slot.image}`;
+        const dimensions = sizeOf(fs.readFileSync(imagePath));
+        slot.imageWidth = dimensions.width;
+        slot.imageHeight = dimensions.height;
+      }
+    }
+  }
+
+  return data;
 }
