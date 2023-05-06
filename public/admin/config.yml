@@ -58,8 +58,22 @@ collections:
         widget: 'image'
         required: false
 
-      - label: 'Link'
+      - label: 'Description'
+        name: 'desc'
+        widget: 'markdown'
+        buttons:
+          - bold
+          - italic
+          - link
+        required: false
+
+      - label: 'Link (optional)'
         name: 'link'
+        widget: 'string'
+        required: false
+
+      - label: 'Link Title (if Link is present)'
+        name: 'linkTitle'
         widget: 'string'
         required: false
 
