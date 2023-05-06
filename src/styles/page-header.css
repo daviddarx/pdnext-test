@@ -1,0 +1,14 @@
+.page-header {
+}
+
+.page-header__subline {
+  @apply block;
+}
+
+.page-header__title {
+  @apply block;
+}
+
+.page-header__lead {
+  @apply mt-gutter-1/2;
+}

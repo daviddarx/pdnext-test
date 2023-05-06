@@ -1,14 +1,6 @@
 .content-page {
 }
 
-.content-page__subline {
-  @apply block;
-}
-
-.content-page__title {
-  @apply block;
-}
-
 .content-page__nav {
   @apply mt-gutter flex space-x-4 border-y border-black py-4;
 }

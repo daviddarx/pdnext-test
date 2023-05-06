@@ -7,6 +7,7 @@ import remarkGfm from 'remark-gfm';
 import { ContentPageContent } from '@/utils/fetch-content-page-content';
 import { Fragment } from 'react';
 
+import PageHeader from '@/components/layout/PageHeader';
 import Accordion from '@/components/ui/Accordion';
 import CloseIcon from '@/components/icons/CloseIcon';
 import DecorativeVideo from '../ui/DecorativeVideo';
@@ -64,18 +65,7 @@ const ContentPage: React.FC<Props> = ({ data }) => {
 
   return (
     <section className='content-page' ref={pageRef}>
-      <header className='content-page__header'>
-        <h1>
-          {data.headerSubline && (
-            <span className='content-page__subline'>{data.headerSubline}</span>
-          )}
-          <ReactMarkdown className='content-page__title' remarkPlugins={[remarkGfm]}>
-            {data.headerTitle.replace('{shy}', '&shy;')}
-          </ReactMarkdown>
-        </h1>
-
-        {data.lead && <p className='content-page__lead'>{data.lead}</p>}
-      </header>
+      <PageHeader subline={data.headerSubline} title={data.headerTitle} lead={data.lead} />
 
       {anchorLinks && anchorLinks.length > 0 && (
         <ul className='content-page__nav'>
