@@ -10,7 +10,7 @@ const Newsletter = () => {
         target='_blank'
         noValidate
       >
-        <h3 className='newsletter__subtitle'>Newsletter</h3>
+        <h2 className='newsletter__subtitle'>Newsletter</h2>
         <label className='newsletter__title' htmlFor='mce-EMAIL'>
           War&apos;s das schon
           <br />
