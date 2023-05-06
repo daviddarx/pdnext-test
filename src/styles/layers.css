@@ -34,8 +34,4 @@
   strong {
     @apply font-bold;
   }
-
-  .bg-title {
-    @apply bg-gray-50 font-bold text-black;
-  }
 }

@@ -1,0 +1,7 @@
+.events-filters {
+  @apply mt-gutter space-y-4;
+}
+
+.events-filters__filter {
+  @apply space-x-4;
+}

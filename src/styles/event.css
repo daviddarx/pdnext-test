@@ -1,6 +1,3 @@
 .event {
-}
-
-.event__title {
-  @apply bg-title;
+  @apply border-t border-black py-4;
 }

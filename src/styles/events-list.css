@@ -1,6 +1,7 @@
 .events-list {
+  @apply mt-gutter;
 }
 
 .events-list__title {
-  @apply border-b border-black font-bold;
+  @apply bg-black text-white;
 }
