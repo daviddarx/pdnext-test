@@ -9,6 +9,7 @@
 @import './icon.css';
 @import './main-nav.css';
 @import './main-nav-burger.css';
+@import './newsletter.css';
 @import './support-us.css';
 
 @tailwind base;

@@ -1,0 +1,15 @@
+.newsletter {
+  @apply mt-gutter;
+}
+
+.newsletter__subtitle {
+  @apply block;
+}
+
+.newsletter__title {
+  @apply block;
+}
+
+.newsletter__field {
+  @apply border border-black;
+}

@@ -6,9 +6,10 @@ import eases from '@/utils/eases';
 import { SupportUsSlot } from '@/types/SupportUsSlot';
 import { uiActions } from '@/store/';
 
-import Footer from '@/components/layout/Footer';
-import SupportUs from '@/components/layout/SupportUs';
 import BottomNav from '@/components/navs/BottomNav';
+import SupportUs from '@/components/layout/SupportUs';
+import Newsletter from '@/components/layout/Newsletter';
+import Footer from '@/components/layout/Footer';
 
 const motionVariants = {
   initial: {
@@ -60,6 +61,7 @@ const Layout: React.FC<Props> = ({ children, supportUsData }) => {
       <div className='mt-auto'>
         <SupportUs supportUsData={supportUsData} />
         <BottomNav />
+        <Newsletter />
         <Footer />
       </div>
     </motion.div>
