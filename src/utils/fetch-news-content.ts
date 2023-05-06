@@ -31,6 +31,9 @@ export async function fetchNewsContent(): Promise<NewsContent> {
     });
 
     if (newItem.image) {
+      // log image to help clean images folder (empty folder, and add again the listed images)
+      // console.log(newItem.image.split('images/uploads/')[1]);
+
       const imagePath = `public${newItem.image}`;
       const dimensions = sizeOf(fs.readFileSync(imagePath));
       newItem.imageWidth = dimensions.width;

@@ -22,6 +22,11 @@ export async function fetchProgramContent(): Promise<ProgramContent> {
   const entriesDir: Entry[] = [];
   const entries = await loadJsonFiles(entriesDir, '_content/entries');
 
+  // log image to help clean images folder (empty folder, and add again the listed images)
+  // entries.map((entry) => {
+  //   console.log(entry.image.split('images/uploads/')[1]);
+  // });
+
   const formatedEvents: FormatedEvent[] = events.map((event) => {
     const eventDate = new Date(event.eventdate);
 

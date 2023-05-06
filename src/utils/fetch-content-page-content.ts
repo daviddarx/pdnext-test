@@ -39,6 +39,9 @@ export async function fetchContentPageContent(json: string): Promise<ContentPage
   if (data.contentSlot) {
     for (const slot of data.contentSlot) {
       if (slot.image) {
+        // log image to help clean images folder (empty folder, and add again the listed images)
+        // console.log(slot.image.split('images/uploads/')[1]);
+
         const imagePath = `public${slot.image}`;
         const dimensions = sizeOf(fs.readFileSync(imagePath));
         slot.imageWidth = dimensions.width;
