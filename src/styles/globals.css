@@ -10,6 +10,7 @@
 @import './main-nav.css';
 @import './main-nav-burger.css';
 @import './newsletter.css';
+@import './partners.css';
 @import './support-us.css';
 
 @tailwind base;

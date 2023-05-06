@@ -3,11 +3,12 @@ import { useDispatch } from 'react-redux';
 import { motion } from 'framer-motion';
 
 import eases from '@/utils/eases';
-import { SupportUsSlot } from '@/types/SupportUsSlot';
+import { CommonPageData } from '@/utils/fetch-common-page-content';
 import { uiActions } from '@/store/';
 
 import BottomNav from '@/components/navs/BottomNav';
 import SupportUs from '@/components/layout/SupportUs';
+import Partners from '@/components/layout/Partners';
 import Newsletter from '@/components/layout/Newsletter';
 import Footer from '@/components/layout/Footer';
 
@@ -38,11 +39,11 @@ const motionVariants = {
 };
 
 type Props = {
+  commonPageData: CommonPageData;
   children: ReactNode;
-  supportUsData: SupportUsSlot[];
 };
 
-const Layout: React.FC<Props> = ({ children, supportUsData }) => {
+const Layout: React.FC<Props> = ({ children, commonPageData }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -59,8 +60,9 @@ const Layout: React.FC<Props> = ({ children, supportUsData }) => {
     >
       <main>{children}</main>
       <div className='mt-auto'>
-        <SupportUs supportUsData={supportUsData} />
+        <SupportUs supportUsData={commonPageData.supportUsData} />
         <BottomNav />
+        <Partners partnersData={commonPageData.partnersData} />
         <Newsletter />
         <Footer />
       </div>

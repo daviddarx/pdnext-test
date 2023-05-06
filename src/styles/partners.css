@@ -1,0 +1,27 @@
+.partners {
+  @apply mt-gutter;
+}
+
+.partners__list {
+  @apply flex flex-wrap;
+}
+
+.partner {
+  @apply relative basis-1/4;
+}
+
+.partner__link {
+  @apply block aspect-[800/480];
+}
+
+.partner__logo {
+  @apply w-full h-auto;
+}
+
+.partner__logo-img {
+  @apply mix-blend-multiply;
+}
+
+.partner__label {
+  @apply absolute bottom-0 left-0;
+}

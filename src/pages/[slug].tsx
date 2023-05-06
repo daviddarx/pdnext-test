@@ -6,8 +6,7 @@ import { fetchNewsContent, NewsContent } from '@/utils/fetch-news-content';
 import { fetchImpressionsContent, ImpressionsContent } from '@/utils/fetch-impressions-content';
 import { fetchContentPageContent, ContentPageContent } from '@/utils/fetch-content-page-content';
 
-import { fetchCommonPageContent } from '@/utils/fetch-common-page-content';
-import { SupportUsSlot } from '@/types/SupportUsSlot';
+import { fetchCommonPageContent, CommonPageData } from '@/utils/fetch-common-page-content';
 
 import Layout from '@/components/layout/Layout';
 import Metas from '@/components/layout/Metas';
@@ -37,14 +36,14 @@ type PageProps = {
     title: string;
     data: ProgramContent | ContentPageContent | NewsContent | ImpressionsContent | OnsContent;
   };
-  supportUsData: SupportUsSlot[];
+  commonPageData: CommonPageData;
 };
 
-const Page: NextPage<PageProps> = ({ page, supportUsData }) => {
+const Page: NextPage<PageProps> = ({ page, commonPageData }) => {
   const { type, title, data } = page;
 
   return (
-    <Layout supportUsData={supportUsData}>
+    <Layout commonPageData={commonPageData}>
       <Metas title={title} />
       {/**
        * Forced to declaratively cast the
@@ -99,7 +98,7 @@ export const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
       break;
   }
 
-  const commonPageContent = await fetchCommonPageContent();
+  const commonPageData = await fetchCommonPageContent();
 
   const props: PageProps = {
     page: {
@@ -107,7 +106,7 @@ export const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
       title: page.pageTitle,
       data: data,
     },
-    supportUsData: commonPageContent.supportUsData,
+    commonPageData: commonPageData,
   };
 
   return {
