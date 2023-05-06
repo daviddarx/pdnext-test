@@ -1,6 +1,6 @@
 .bottom-nav {
   @apply flex;
-  @apply mb-gutter p-gutter-1/2;
+  @apply mt-gutter p-gutter-1/2;
   @apply border border-black;
 }
 
