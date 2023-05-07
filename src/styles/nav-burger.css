@@ -2,6 +2,13 @@
   @apply fixed z-10 top-gutter right-gutter-1/2 mt-gutter-1/3;
   @apply block w-gutter h-gutter rounded-full;
   @apply bg-black text-white;
+  @apply transition-transform duration-500 ease-out-back;
+}
+
+.nav-burger--hidden {
+  @apply transform-3d duration-300 ease-in-quint;
+
+  --tw-translate-y: calc(var(--gutter) * -3);
 }
 
 .nav-burger__text {
