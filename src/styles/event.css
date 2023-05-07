@@ -1,3 +1,11 @@
 .event {
   @apply border-t border-black py-4;
 }
+
+.event__date {
+  @apply font-normal;
+}
+
+.event__special-state {
+  @apply font-normal;
+}

@@ -4,8 +4,9 @@ export interface FormatedEvent extends Event {
   id: string;
   date: {
     readable: string;
-    filter?: string;
-    hour?: string;
+    short: string;
+    filter: string;
+    hour: string;
   };
   types: string[];
   entriesObjects: Entry[];

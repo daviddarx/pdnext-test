@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import { ProgramContent } from '@/utils/fetch-program-content';
-import { DateClusteredEvents } from '@/types/DateClusteredEvents';
+import { ClusteredEvents } from '@/types/ClusteredEvents';
 
 import EventsFilters from '@/components/events/EventsFilters';
 import EventsList from '@/components/events/EventsList';
@@ -46,7 +46,7 @@ const ProgramPage: React.FC<Props> = ({ data }) => {
   );
 
   const filteredEvents = dateClusteredEvents.reduce(
-    (current: DateClusteredEvents[], date: DateClusteredEvents) => {
+    (current: ClusteredEvents[], date: ClusteredEvents) => {
       if (currentDate === allDatesFilter || date.dateFilter === currentDate) {
         const processedDate = { ...date };
 

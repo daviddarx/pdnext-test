@@ -1,5 +1,5 @@
-.events-list {
-  @apply mt-gutter;
+.events-lists {
+  @apply mt-gutter space-y-4;
 }
 
 .events-list__title {

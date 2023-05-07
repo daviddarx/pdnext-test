@@ -1,6 +1,6 @@
 import { FormatedEvent } from '@/types/FormatedEvent';
 
-export interface DateClusteredEvents {
+export interface ClusteredEvents {
   dateReadable: string;
   dateFilter?: string;
   events: FormatedEvent[];
