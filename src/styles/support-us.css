@@ -1,9 +1,9 @@
 .support-us {
-  @apply mt-gutter border border-black;
+  @apply mt-gutter border-b border-black;
 }
 
 .support-us__title {
-  @apply relative bg-black text-white p-gutter-1/2;
+  @apply relative bg-black text-white col-padded py-gutter-1/2;
 }
 
 .support-us__heart {
@@ -15,7 +15,7 @@
 }
 
 .support-us__content {
-  @apply p-gutter-1/2 space-y-gutter-1/2;
+  @apply p-gutter space-y-gutter-1/2;
 }
 
 .support-us__slot {

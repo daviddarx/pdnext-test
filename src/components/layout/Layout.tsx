@@ -58,7 +58,7 @@ const Layout: React.FC<Props> = ({ children, commonPageData }) => {
       animate='animate'
       exit='exit'
       variants={motionVariants}
-      className='min-h-screen flex flex-col p-gutter pt-gutter-4'
+      className='min-h-screen flex flex-col'
     >
       <SaveTheDate data={commonPageData.saveTheDateData} />
       <SpecialAnnouncement data={commonPageData.specialAnnouncementData} />

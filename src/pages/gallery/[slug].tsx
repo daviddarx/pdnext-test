@@ -26,7 +26,7 @@ const Page: NextPage<PageProps> = ({ page, commonPageData }) => {
     <Layout commonPageData={commonPageData}>
       <Metas title={page.title} />
 
-      <section className='gallery-page'>
+      <section className='content-page gallery-page'>
         <PageHeader subline={page.subline} title={page.title} lead={page.lead} />
 
         <div className='gallery-page__images'>

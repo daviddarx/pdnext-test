@@ -1,5 +1,5 @@
 .partners {
-  @apply mt-gutter;
+  @apply mt-gutter col-marged;
 }
 
 .partners__list {

@@ -37,3 +37,8 @@
 body {
   color: rgb(var(--foreground-rgb));
 }
+
+b,
+strong {
+  @apply font-bold;
+}

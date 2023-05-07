@@ -20,7 +20,7 @@ const ImpressionsPage: React.FC<Props> = ({ data }) => {
   };
 
   return (
-    <section className='impressions-page'>
+    <section className='content-page impressions-page'>
       <PageHeader subline='Impressionen' title="Wenn niemand zuschaut, macht's kein Spass" />
       <div className='impressions-page__impressions'>
         {data.impressions.map((item) => (

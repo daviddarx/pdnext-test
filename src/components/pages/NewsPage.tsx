@@ -12,7 +12,7 @@ type Props = {
 
 const NewsPage: React.FC<Props> = ({ data }) => {
   return (
-    <section className='news-page'>
+    <section className='content-page news-page'>
       <PageHeader subline='Porny News' title='Keinen Höhepunkt verpassen' />
       <div className='news-page__news'>
         {data.news.map((item) => (

@@ -1,8 +1,9 @@
 .content-page {
+  @apply col-padded pt-gutter-2;
 }
 
 .content-page__nav {
-  @apply mt-gutter flex space-x-4 border-y border-black py-4;
+  @apply col-outer mt-gutter flex space-x-4 border-y border-black py-4;
 }
 
 .content-page__video {
