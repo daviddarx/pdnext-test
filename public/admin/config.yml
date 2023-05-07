@@ -8,6 +8,24 @@ media_folder: 'public/images/uploads' # Media files will be stored in the repo u
 public_folder: '/images/uploads' # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
+  - name: 'saveTheDate'
+    label: 'Save The Date Message'
+    create: true
+    delete: true
+    folder: '_content/saveTheDate'
+    slug: 'saveTheDate'
+    extension: 'json'
+    format: 'json'
+    summary: '{{title}}'
+    fields:
+      - label: 'Title'
+        name: 'title'
+        widget: 'string'
+
+      - label: 'Message'
+        name: 'message'
+        widget: 'string'
+
   - name: 'specialAnnouncement'
     label: 'Special Announcement'
     create: false
