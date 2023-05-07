@@ -1,2 +1,7 @@
 .special-announcement {
+  @apply space-x-4;
+}
+
+.special-announcement__title {
+  @apply inline;
 }

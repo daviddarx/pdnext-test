@@ -1,5 +1,5 @@
 .save-the-date {
-  @apply border-b border-black space-x-4;
+  @apply space-x-4;
 }
 
 .save-the-date__title {

@@ -7,8 +7,8 @@ type Props = {
 const SpecialAnnouncement: React.FC<Props> = ({ data }) => {
   return (
     <article className='special-announcement'>
-      <h2>Special Announcement</h2>
-      <button>{data.buttonTitle}</button>
+      <h2 className='special-announcement__title'>Special Announcement</h2>
+      <button className='special-announcement__btn'>{data.buttonTitle}</button>
     </article>
   );
 };

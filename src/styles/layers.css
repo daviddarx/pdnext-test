@@ -39,6 +39,10 @@
   }
 
   .col-outer {
+    @apply -mx-gutter;
+  }
+
+  .col-outer-padded {
     @apply -mx-gutter px-gutter;
   }
 }

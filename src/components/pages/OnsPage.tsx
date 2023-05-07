@@ -8,7 +8,7 @@ type Props = {
 
 const OnsPage: React.FC<Props> = ({ data }) => {
   return (
-    <section>
+    <section className='content-page'>
       <h1>
         <span>One Night Stands</span>
         <span className='block'>Saisonales Programm</span>

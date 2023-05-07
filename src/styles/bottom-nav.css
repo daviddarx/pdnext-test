@@ -1,13 +1,17 @@
 .bottom-nav {
-  @apply flex;
-  @apply col-marged mt-gutter p-gutter-1/2;
+  @apply grid grid-cols-2;
+  @apply col-marged mt-gutter;
   @apply border border-black;
 }
 
 .bottom-nav__group {
-  @apply flex-grow;
+  @apply p-gutter;
+
+  &:first-of-type {
+    @apply border-r border-black;
+  }
 }
 
-.bottom-nav__socials {
+.bottom-nav__group .bottom-nav__socials {
   @apply mt-gutter-1/2;
 }

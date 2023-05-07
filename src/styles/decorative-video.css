@@ -3,6 +3,7 @@
 }
 
 .decorative-video__mute-button {
+  @apply col-padded;
   &::after {
     content: '';
     @apply absolute inset-0;

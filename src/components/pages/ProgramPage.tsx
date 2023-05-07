@@ -75,7 +75,7 @@ const ProgramPage: React.FC<Props> = ({ data }) => {
   };
 
   return (
-    <section>
+    <section className='content-page'>
       <h1>
         <span>
           10. Porny Days

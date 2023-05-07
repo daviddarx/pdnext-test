@@ -1,8 +1,8 @@
-.header {
+.header__top-bar {
+  @apply flex justify-between col-padded py-2 border-b border-black;
 }
 
 .header__logo {
-  @apply fixed top-gutter left-gutter;
-  @apply w-40 h-auto mb-4;
+  @apply col-marged w-48 h-auto mt-gutter-1/2;
   @apply translate-y-[-10%];
 }

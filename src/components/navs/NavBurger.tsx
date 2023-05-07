@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 
 import { uiActions } from '@/store/';
 
-const MainNavBurger = () => {
+const NavBurger = () => {
   const dispatch = useDispatch();
 
   const toggleNavigation = () => {
@@ -10,10 +10,11 @@ const MainNavBurger = () => {
   };
 
   return (
-    <button className='main-nav-burger' onClick={toggleNavigation}>
-      Navigation
+    <button className='nav-burger' onClick={toggleNavigation}>
+      <span className='nav-burger__text'>Navigation</span>
+      <span className='nav-burger__icon'></span>
     </button>
   );
 };
 
-export default MainNavBurger;
+export default NavBurger;

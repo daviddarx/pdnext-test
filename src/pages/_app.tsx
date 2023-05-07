@@ -14,15 +14,12 @@ const font = Space_Grotesk({
 import store from '@/store/';
 import { uiActions } from '@/store/';
 
-import Header from '@/components/layout/Header';
+import NavBurger from '@/components/navs/NavBurger';
+import MainNavPanel from '@/components/navs/MainNav';
 
 import '@/styles/globals.css';
 
 const App = ({ Component, pageProps }: AppProps) => {
-  console.log(
-    'App: here get the pageProps for special announcement, pass it to the header',
-    pageProps,
-  );
   const router = useRouter();
   const pageKey = router.asPath;
 
@@ -41,7 +38,8 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <Provider store={store}>
       <div className={font.className}>
-        <Header />
+        <MainNavPanel />
+        <NavBurger />
         <AnimatePresence mode='wait' initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
           <Component key={pageKey} {...pageProps} />
         </AnimatePresence>
