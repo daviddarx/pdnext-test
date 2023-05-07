@@ -2,6 +2,9 @@
 
 const nextConfig = {
   reactStrictMode: true,
+  images: {
+    domains: ['files.daviddarx.com'],
+  },
   async redirects() {
     return [
       {
