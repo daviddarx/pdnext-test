@@ -45,4 +45,19 @@
   .col-outer-padded {
     @apply -mx-gutter px-gutter;
   }
+
+  .transform-3d {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-translate-z: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    --tw-scale-z: 1;
+    transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), var(--tw-translate-z))
+      rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+      scale3d(var(--tw-scale-x), var(--tw-scale-y), var(--tw-scale-z));
+  }
 }
