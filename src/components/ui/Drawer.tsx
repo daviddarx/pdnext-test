@@ -1,4 +1,5 @@
-import { ReactNode, useRef, useEffect } from 'react';
+import { ReactNode, useRef, useEffect, useState, Fragment } from 'react';
+import { Portal } from 'react-portal';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import eases from '@/utils/eases';
@@ -52,6 +53,11 @@ type Props = {
 
 const Drawer: React.FC<Props> = ({ children, isOpened, onClose }) => {
   const panelRef = useRef<HTMLDivElement>(null);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   useEffect(() => {
     let currentActiveAtOpen: HTMLElement;
@@ -81,38 +87,44 @@ const Drawer: React.FC<Props> = ({ children, isOpened, onClose }) => {
   };
 
   return (
-    <div className='drawer' onKeyDown={handleKeyDown}>
-      <AnimatePresence>
-        {isOpened && (
-          <motion.div
-            key='panel'
-            ref={panelRef}
-            className='drawer__panel'
-            initial='initial'
-            animate='animate'
-            exit='exit'
-            variants={panelMotionVariants}
-          >
-            {children}
-            <button className='drawer__close' onClick={onClose}>
-              Close
-            </button>
-          </motion.div>
-        )}
+    <Fragment>
+      {isMounted && (
+        <Portal>
+          <div className='drawer' onKeyDown={handleKeyDown}>
+            <AnimatePresence>
+              {isOpened && (
+                <motion.div
+                  key='panel'
+                  ref={panelRef}
+                  className='drawer__panel'
+                  initial='initial'
+                  animate='animate'
+                  exit='exit'
+                  variants={panelMotionVariants}
+                >
+                  {children}
+                  <button className='drawer__close' onClick={onClose}>
+                    Close
+                  </button>
+                </motion.div>
+              )}
 
-        {isOpened && (
-          <motion.div
-            key='background'
-            className='drawer__bg'
-            initial='initial'
-            animate='animate'
-            exit='exit'
-            variants={bgMotionVariants}
-            onClick={onClose}
-          ></motion.div>
-        )}
-      </AnimatePresence>
-    </div>
+              {isOpened && (
+                <motion.div
+                  key='background'
+                  className='drawer__bg'
+                  initial='initial'
+                  animate='animate'
+                  exit='exit'
+                  variants={bgMotionVariants}
+                  onClick={onClose}
+                ></motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        </Portal>
+      )}
+    </Fragment>
   );
 };
 

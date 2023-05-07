@@ -1,5 +1,4 @@
-import { Fragment, useState, useEffect } from 'react';
-import { Portal } from 'react-portal';
+import { Fragment, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
@@ -13,11 +12,6 @@ type Props = {
 
 const SpecialAnnouncement: React.FC<Props> = ({ data }) => {
   const [isOpened, setIsOpened] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
 
   const open = () => {
     setIsOpened(true);
@@ -35,22 +29,15 @@ const SpecialAnnouncement: React.FC<Props> = ({ data }) => {
           {data.buttonTitle}
         </button>
       </article>
-      {isMounted && (
-        <Portal>
-          <Drawer isOpened={isOpened} onClose={close}>
-            <div className='special-announcement-panel'>
-              <span className='special-announcement-panel__subline'>Special Announcement</span>
-              <h2 className='special-announcement-panel__title'>{data.title}</h2>
-              <ReactMarkdown
-                className='special-announcement-panel__desc'
-                remarkPlugins={[remarkGfm]}
-              >
-                {data.desc}
-              </ReactMarkdown>
-            </div>
-          </Drawer>
-        </Portal>
-      )}
+      <Drawer isOpened={isOpened} onClose={close}>
+        <div className='special-announcement-panel'>
+          <span className='special-announcement-panel__subline'>Special Announcement</span>
+          <h2 className='special-announcement-panel__title'>{data.title}</h2>
+          <ReactMarkdown className='special-announcement-panel__desc' remarkPlugins={[remarkGfm]}>
+            {data.desc}
+          </ReactMarkdown>
+        </div>
+      </Drawer>
     </Fragment>
   );
 };
