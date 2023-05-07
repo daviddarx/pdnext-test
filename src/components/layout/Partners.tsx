@@ -2,15 +2,15 @@ import { PartnersType } from '@/types/Partners';
 import dynamic from 'next/dynamic';
 
 type Props = {
-  partnersData: PartnersType;
+  data: PartnersType;
 };
 
-const Partners = ({ partnersData }: Props) => {
+const Partners = ({ data }: Props) => {
   return (
     <section className='partners'>
       <h2>Partners</h2>
       <ul className='partners__list'>
-        {partnersData.map((partner) => {
+        {data.map((partner) => {
           const LogoComponent = dynamic(
             () => import(`@/components/logos/partners/${partner.logo}`),
           );

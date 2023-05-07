@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 import { uiStateType } from '@/store/ui-slice';
 import { SupportUsSlot } from '@/types/SupportUsSlot';
@@ -12,15 +13,15 @@ import Accordion from '@/components/ui/Accordion';
 type TimeoutType = ReturnType<typeof setTimeout>;
 
 type Props = {
-  supportUsData: SupportUsSlot[];
+  data: SupportUsSlot[];
 };
 
-const SupportUs = ({ supportUsData }: Props) => {
+const SupportUs = ({ data }: Props) => {
   const supportUsRef = useRef<HTMLDivElement>(null);
 
   const isSupportUsOpened = useSelector((state: uiStateType) => state.ui.isSupportUsOpened);
 
-  supportUsData.sort((a, b) => a.position - b.position);
+  data.sort((a, b) => a.position - b.position);
 
   const scrollIntoView = useCallback((isOpened: boolean): TimeoutType => {
     /* delay needed because accordion animation has influence on the scroll behavior */
@@ -61,10 +62,12 @@ const SupportUs = ({ supportUsData }: Props) => {
         onToggle={onAccordionToggle}
       >
         <div className='support-us__content'>
-          {supportUsData.map((item) => (
+          {data.map((item) => (
             <div className='support-us__slot' key={item.title}>
               <h3 className='support-us__slot-title'>{item.title}</h3>
-              <ReactMarkdown className='support-us__slot-desc'>{item.desc}</ReactMarkdown>
+              <ReactMarkdown className='support-us__slot-desc' remarkPlugins={[remarkGfm]}>
+                {item.desc}
+              </ReactMarkdown>
               {item.paypal && (
                 <form
                   className='support-us__paypal'

@@ -60,9 +60,9 @@ const Layout: React.FC<Props> = ({ children, commonPageData }) => {
     >
       <main>{children}</main>
       <div className='mt-auto'>
-        <SupportUs supportUsData={commonPageData.supportUsData} />
+        <SupportUs data={commonPageData.supportUsData} />
         <BottomNav />
-        <Partners partnersData={commonPageData.partnersData} />
+        <Partners data={commonPageData.partnersData} />
         <Newsletter />
         <Footer />
       </div>
