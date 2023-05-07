@@ -2,7 +2,11 @@
   @apply flex justify-between col-padded py-2 border-b border-black;
 }
 
+.header__logo-link {
+  @apply col-marged;
+}
+
 .header__logo {
-  @apply col-marged w-48 h-auto mt-gutter-1/2;
+  @apply inline-block w-48 h-auto mt-gutter-1/2;
   @apply translate-y-[-10%];
 }

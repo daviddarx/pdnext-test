@@ -19,7 +19,7 @@ const Header: React.FC<Props> = ({ commonPageData }) => {
         <SpecialAnnouncement data={commonPageData.specialAnnouncementData} />
       </div>
 
-      <Link href='/festival-program'>
+      <Link href='/festival-program' className='header__logo-link'>
         <h2 className='hidden'>Porny Days – Film Kunst Festival Zürich</h2>
         <PornyLogo className='header__logo' />
       </Link>
