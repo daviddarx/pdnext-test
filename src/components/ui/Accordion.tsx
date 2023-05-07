@@ -1,7 +1,7 @@
 import { ReactNode, useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import eases from '../../utils/eases';
+import eases from '@/utils/eases';
 
 const motionVariants = {
   closed: {
