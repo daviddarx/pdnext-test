@@ -1,4 +1,27 @@
 import React from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+import eases from '@/utils/eases';
+
+const motionVariants = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 0.35,
+      ease: eases.outQuint,
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      duration: 0.15,
+      ease: eases.outQuart,
+    },
+  },
+};
 
 type Props = {
   typeFilters: string[];
@@ -10,6 +33,11 @@ type Props = {
 };
 
 const EventsFilters: React.FC<Props> = (props) => {
+  /**
+   * Unique key for each filters condifuration, to ensure
+   * they will be animated only when they change
+   */
+  const dateFilterAnimationKey = JSON.stringify(props.dateFilters);
   return (
     <div className='events-filters'>
       <div className='events-filters__filter'>
@@ -23,18 +51,29 @@ const EventsFilters: React.FC<Props> = (props) => {
           </button>
         ))}
       </div>
-      {props.dateFilters.length > 2 && (
-        <div className='events-filters__filter'>
-          {props.dateFilters.map((filter) => (
-            <button
-              key={filter}
-              className={props.currentDate === filter ? 'bg-black text-white' : ''}
-              onClick={props.onFilterByDate.bind(null, filter)}
-            >
-              {filter}
-            </button>
-          ))}
-        </div>
+      {props.dateFilters.length > 0 && (
+        <AnimatePresence mode='wait' initial={false}>
+          <motion.div
+            key={dateFilterAnimationKey}
+            className='events-lists'
+            initial='initial'
+            animate='animate'
+            exit='exit'
+            variants={motionVariants}
+          >
+            <div className='events-filters__filter'>
+              {props.dateFilters.map((filter) => (
+                <button
+                  key={filter}
+                  className={props.currentDate === filter ? 'bg-black text-white' : ''}
+                  onClick={props.onFilterByDate.bind(null, filter)}
+                >
+                  {filter}
+                </button>
+              ))}
+            </div>
+          </motion.div>
+        </AnimatePresence>
       )}
     </div>
   );
