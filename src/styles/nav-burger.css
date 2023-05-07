@@ -17,6 +17,6 @@
 
 .nav-burger__icon {
   @apply absolute top-1/2 left-1/2;
-  @apply w-1/4 h-1/4 -translate-x-1/2 -translate-y-1/2;
+  @apply w-1/6 h-1/6 -translate-x-1/2 -translate-y-1/2;
   @apply bg-white rounded-full;
 }
