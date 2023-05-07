@@ -8,8 +8,6 @@ interface Props {
   dateVisible?: boolean;
 }
 
-// ATTENTION: NE RENDRE LE CLUSTER QUE SI IL Y A DES EVENTS DEDANS
-
 const EventsList = ({ dateClusteredEvents, dateVisible = false }: Props) => {
   return (
     <div className='events-lists'>
