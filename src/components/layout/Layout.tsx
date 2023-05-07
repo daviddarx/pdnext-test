@@ -11,6 +11,8 @@ import SupportUs from '@/components/layout/SupportUs';
 import Partners from '@/components/layout/Partners';
 import Newsletter from '@/components/layout/Newsletter';
 import Footer from '@/components/layout/Footer';
+import SaveTheDate from '@/components/layout/SaveTheDate';
+import SpecialAnnouncement from '@/components/layout/SpecialAnnouncement';
 
 const motionVariants = {
   initial: {
@@ -58,6 +60,8 @@ const Layout: React.FC<Props> = ({ children, commonPageData }) => {
       variants={motionVariants}
       className='min-h-screen flex flex-col p-gutter pt-gutter-4'
     >
+      <SaveTheDate data={commonPageData.saveTheDateData} />
+      <SpecialAnnouncement data={commonPageData.specialAnnouncementData} />
       <main>{children}</main>
       <div className='mt-auto'>
         <SupportUs data={commonPageData.supportUsData} />
