@@ -16,12 +16,10 @@ import Footer from '@/components/layout/Footer';
 const motionVariants = {
   initial: {
     opacity: 0,
-    x: 0,
     y: 50,
   },
   animate: {
     opacity: 1,
-    x: 0,
     y: 0,
     transition: {
       duration: 0.5,
@@ -30,7 +28,6 @@ const motionVariants = {
   },
   exit: {
     opacity: 0,
-    x: 0,
     y: 0,
     transition: {
       duration: 0.25,
