@@ -5,3 +5,11 @@
 .special-announcement__title {
   @apply inline;
 }
+
+.special-announcement-panel__title {
+  @apply mt-gutter;
+}
+
+.special-announcement-panel__desc {
+  @apply mt-gutter-1/2;
+}
