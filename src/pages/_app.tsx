@@ -26,6 +26,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
     const handleRouteChangeStart = () => {
       store.dispatch(uiActions.closeNavigation());
+      store.dispatch(uiActions.closeEvent());
     };
 
     router.events.on('routeChangeStart', handleRouteChangeStart);

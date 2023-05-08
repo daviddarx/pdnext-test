@@ -38,6 +38,7 @@ const EventsFilters: React.FC<Props> = (props) => {
    * they will be animated only when they change
    */
   const dateFilterAnimationKey = JSON.stringify(props.dateFilters);
+
   return (
     <div className='events-filters'>
       <div>

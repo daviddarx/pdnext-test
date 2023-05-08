@@ -2,9 +2,18 @@
   @apply relative z-20 w-full h-full;
   @apply p-gutter bg-white;
 
-  &::before {
-    @apply absolute top-0 left-0 h-full w-px -ml-px bg-black;
+  &::before,
+  &::after {
+    @apply absolute top-0  h-full w-px  bg-black;
     content: '';
+  }
+
+  &::before {
+    @apply left-0 -ml-px;
+  }
+
+  &::after {
+    @apply right-0 -mr-px;
   }
 }
 

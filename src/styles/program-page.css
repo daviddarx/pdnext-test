@@ -3,7 +3,7 @@
 }
 
 .program-page__detail {
-  @apply sticky z-20 top-0 h-screen pointer-events-none;
+  @apply sticky z-20 top-0 h-screen overflow-hidden pointer-events-none;
 }
 
 .program-page__detail--opened {
