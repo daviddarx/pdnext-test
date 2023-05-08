@@ -4,6 +4,7 @@ export interface uiStateType {
   ui: {
     isNavigationOpened: boolean;
     isSupportUsOpened: boolean;
+    topbarHeight: number;
   };
 }
 
@@ -12,6 +13,7 @@ export const uiSlice = createSlice({
   initialState: {
     isNavigationOpened: false,
     isSupportUsOpened: false,
+    topbarHeight: 0,
   },
   reducers: {
     toggleNavigation: (state) => {
@@ -25,6 +27,9 @@ export const uiSlice = createSlice({
     },
     closeSupportUs: (state) => {
       state.isSupportUsOpened = false;
+    },
+    setTopBarHeight: (state, action) => {
+      state.topbarHeight = action.payload;
     },
   },
 });

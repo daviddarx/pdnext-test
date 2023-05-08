@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import Link from 'next/link';
+import { useDispatch } from 'react-redux';
 
+import { uiActions } from '@/store';
 import { CommonPageData } from '@/utils/fetch-common-page-content';
 
 import SaveTheDate from '@/components/layout/SaveTheDate';
@@ -12,9 +14,25 @@ type Props = {
 };
 
 const Header: React.FC<Props> = ({ commonPageData }) => {
+  const dispatch = useDispatch();
+  const topBarRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      dispatch(uiActions.setTopBarHeight(topBarRef.current?.offsetHeight));
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <header className='header'>
-      <div className='header__top-bar'>
+      <div className='header__top-bar' ref={topBarRef}>
         <SaveTheDate data={commonPageData.saveTheDateData} />
         <SpecialAnnouncement data={commonPageData.specialAnnouncementData} />
       </div>

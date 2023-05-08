@@ -29,9 +29,11 @@
 
 :root {
   --gutter: 2vw;
+  --h-logo: 3vw;
 
   @screen lg {
     --gutter: 5vw;
+    --h-logo: 6vw;
   }
 }
 

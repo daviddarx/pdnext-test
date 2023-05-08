@@ -7,6 +7,9 @@
 }
 
 .header__logo {
-  @apply inline-block w-48 h-auto mt-gutter-1/2;
+  @apply inline-block  mt-gutter-1/2;
   @apply translate-y-[-10%];
+
+  height: var(--h-logo);
+  width: auto;
 }
