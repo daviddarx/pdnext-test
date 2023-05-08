@@ -3,7 +3,11 @@
 }
 
 .program-page__detail {
-  @apply sticky z-0 top-0 h-screen bg-red-100;
+  @apply sticky z-20 top-0 h-screen pointer-events-none;
+}
+
+.program-page__detail--opened {
+  @apply pointer-events-auto;
 }
 
 .program-page__list {

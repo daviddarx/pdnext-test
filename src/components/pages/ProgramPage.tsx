@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 
 import { ProgramContent } from '@/utils/fetch-program-content';
 import { ClusteredEvents } from '@/types/ClusteredEvents';
 
+import ProgramPageLayout from '@/components/layout/ProgramPageLayout';
 import EventsFilters from '@/components/events/EventsFilters';
 import EventsList from '@/components/events/EventsList';
-import EventDetail from '@/components/events/EventDetail';
 
 const allTypesFilter = 'Alle';
 const allDatesFilter = 'Alle Tage';
@@ -76,12 +76,9 @@ const ProgramPage: React.FC<Props> = ({ data }) => {
   };
 
   return (
-    <section className='program-page'>
-      <div className='program-page__detail'>
-        <EventDetail />
-      </div>
-      <div className='program-page__list'>
-        <header className='program-page__header'>
+    <ProgramPageLayout
+      header={
+        <Fragment>
           <h1>
             <span>
               10. Porny Days
@@ -99,11 +96,11 @@ const ProgramPage: React.FC<Props> = ({ data }) => {
             currentDate={currentDate}
             onFilterByDate={filterByDate}
           />
-        </header>
-
-        <EventsList dateClusteredEvents={filteredEvents} />
-      </div>
-    </section>
+        </Fragment>
+      }
+    >
+      <EventsList dateClusteredEvents={filteredEvents} />
+    </ProgramPageLayout>
   );
 };
 

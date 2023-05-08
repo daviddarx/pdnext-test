@@ -1,5 +1,10 @@
 .event {
-  @apply border-t border-black col-program-px col-program-py;
+  @apply relative col-program-px col-program-py border-t border-black;
+  @apply transition-opacity duration-300 ease-out;
+}
+
+.event--active {
+  @apply opacity-30;
 }
 
 .event__date {
@@ -8,4 +13,8 @@
 
 .event__special-state {
   @apply font-normal;
+}
+
+.event__btn {
+  @apply absolute inset-0 opacity-0 bg-red-100;
 }

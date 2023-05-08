@@ -3,5 +3,5 @@
 }
 
 .events-filters__filter {
-  @apply space-x-4;
+  @apply mr-2 mb-2;
 }

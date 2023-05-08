@@ -1,0 +1,13 @@
+.event-detail {
+  @apply relative z-20 w-full h-full;
+  @apply p-gutter-1/2 bg-white;
+
+  &::before {
+    @apply absolute top-0 left-0 h-full w-px -ml-px bg-black;
+    content: '';
+  }
+}
+
+.event-detail__close {
+  @apply absolute top-gutter-1/2 right-gutter-1/2;
+}

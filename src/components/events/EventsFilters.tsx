@@ -40,11 +40,13 @@ const EventsFilters: React.FC<Props> = (props) => {
   const dateFilterAnimationKey = JSON.stringify(props.dateFilters);
   return (
     <div className='events-filters'>
-      <div className='events-filters__filter'>
+      <div>
         {props.typeFilters.map((filter) => (
           <button
             key={filter}
-            className={`tag${props.currentType === filter ? ' tag--inverted' : ''}`}
+            className={`events-filters__filter tag${
+              props.currentType === filter ? ' tag--inverted' : ''
+            }`}
             onClick={props.onFilterByType.bind(null, filter)}
           >
             {filter}
@@ -61,11 +63,13 @@ const EventsFilters: React.FC<Props> = (props) => {
             exit='exit'
             variants={motionVariants}
           >
-            <div className='events-filters__filter'>
+            <div>
               {props.dateFilters.map((filter) => (
                 <button
                   key={filter}
-                  className={`tag${props.currentDate === filter ? ' tag--inverted' : ''}`}
+                  className={`events-filters__filter tag${
+                    props.currentDate === filter ? ' tag--inverted' : ''
+                  }`}
                   onClick={props.onFilterByDate.bind(null, filter)}
                 >
                   {filter}
