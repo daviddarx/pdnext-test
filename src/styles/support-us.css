@@ -3,7 +3,7 @@
 }
 
 .support-us__title {
-  @apply relative bg-black text-white col-padded py-gutter-1/2;
+  @apply relative bg-black text-white col-padded py-gutter;
 }
 
 .support-us__heart {
@@ -11,15 +11,15 @@
 }
 
 .support-us__close {
-  @apply absolute top-1/2 right-gutter-1/2 -translate-y-1/2 -mr-2 w-8 h-8;
+  @apply absolute top-1/2 right-gutter -translate-y-1/2 -mr-2 w-8 h-8;
 }
 
 .support-us__content {
-  @apply p-gutter space-y-gutter-1/2;
+  @apply p-gutter space-y-gutter;
 }
 
 .support-us__slot {
-  @apply pt-gutter-1/2 border-t border-black;
+  @apply pt-gutter border-t border-black;
 
   &:first-child {
     @apply border-none pt-0;
@@ -27,5 +27,5 @@
 }
 
 .support-us__paypal {
-  @apply mt-gutter-1/2;
+  @apply mt-gutter;
 }

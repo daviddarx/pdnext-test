@@ -15,5 +15,5 @@
 }
 
 .program-page__header {
-  @apply p-gutter-1/2;
+  @apply p-gutter;
 }

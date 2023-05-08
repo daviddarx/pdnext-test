@@ -30,11 +30,11 @@
 @tailwind utilities;
 
 :root {
-  --gutter: 2vw;
+  --gutter: 1vw;
   --h-logo: 3vw;
 
   @screen lg {
-    --gutter: 5vw;
+    --gutter: 2.5vw;
     --h-logo: 6vw;
   }
 }

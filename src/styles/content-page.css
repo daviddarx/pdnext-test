@@ -25,23 +25,23 @@
 }
 
 .content-slot__image {
-  @apply mt-gutter-1/2;
+  @apply mt-gutter;
 }
 
 .content-slot__definition-list {
-  @apply mt-gutter-1/2;
+  @apply mt-gutter;
 }
 
 .content-slot__second-text {
-  @apply mt-gutter-1/2;
+  @apply mt-gutter;
 }
 
 .content-slot__downloads {
-  @apply mt-gutter-1/2;
+  @apply mt-gutter;
 }
 
 .content-slot__expandable-text {
-  @apply mt-gutter-1/2;
+  @apply mt-gutter;
 }
 
 /**
@@ -54,7 +54,7 @@
 
 .definition-list__dd,
 .definition-list__dt {
-  @apply mt-gutter-1/2;
+  @apply mt-gutter;
 }
 
 .expandable-text__header {

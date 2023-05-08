@@ -10,5 +10,5 @@
 }
 
 .page-header__lead {
-  @apply mt-gutter-1/2;
+  @apply mt-gutter;
 }

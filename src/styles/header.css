@@ -11,7 +11,7 @@
 }
 
 .header__logo {
-  @apply inline-block  mt-gutter-1/2;
+  @apply inline-block  mt-gutter;
   @apply translate-y-[-10%];
 
   height: var(--h-logo);

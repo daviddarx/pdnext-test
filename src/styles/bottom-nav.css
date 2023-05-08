@@ -13,5 +13,5 @@
 }
 
 .bottom-nav__group .bottom-nav__socials {
-  @apply mt-gutter-1/2;
+  @apply mt-gutter;
 }

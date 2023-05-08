@@ -2,7 +2,7 @@
 }
 
 .impressions-page__impressions {
-  @apply grid grid-cols-2 gap-gutter-1/2 mt-gutter;
+  @apply grid grid-cols-2 gap-gutter mt-gutter;
 }
 
 .impression {

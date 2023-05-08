@@ -1,5 +1,5 @@
 .footer {
-  @apply flex justify-between mt-gutter col-padded py-gutter-1/2;
+  @apply flex justify-between mt-gutter col-padded py-gutter;
   @apply border-t border-t-black;
 }
 
