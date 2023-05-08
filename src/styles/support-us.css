@@ -1,5 +1,5 @@
 .support-us {
-  @apply mt-gutter border-b border-black;
+  @apply border-b border-black;
 }
 
 .support-us__title {

@@ -31,7 +31,6 @@ const NavBurger = () => {
   }, []);
 
   useEffect(() => {
-    console.log('add listener');
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => {
       window.removeEventListener('scroll', handleScroll);

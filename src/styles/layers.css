@@ -46,6 +46,23 @@
     @apply -mx-gutter px-gutter;
   }
 
+  .col-program-px {
+    @apply px-8;
+  }
+
+  .col-program-py {
+    @apply py-6;
+  }
+
+  .tag {
+    @apply px-[0.75em] rounded-full border border-black;
+    @apply transition-colors duration-300 ease-out;
+  }
+
+  .tag--inverted {
+    @apply bg-black text-white;
+  }
+
   .transform-3d {
     --tw-translate-x: 0;
     --tw-translate-y: 0;

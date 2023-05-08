@@ -5,6 +5,7 @@ import { ClusteredEvents } from '@/types/ClusteredEvents';
 
 import EventsFilters from '@/components/events/EventsFilters';
 import EventsList from '@/components/events/EventsList';
+import EventDetail from '@/components/events/EventDetail';
 
 const allTypesFilter = 'Alle';
 const allDatesFilter = 'Alle Tage';
@@ -75,24 +76,33 @@ const ProgramPage: React.FC<Props> = ({ data }) => {
   };
 
   return (
-    <section className='content-page'>
-      <h1>
-        <span>
-          10. Porny Days
-          <br />
-          23. — 27. Nov. 2022
-        </span>
-        <span className='block'>Festival Programm</span>
-      </h1>
-      <EventsFilters
-        typeFilters={typeFilters}
-        currentType={currentType}
-        onFilterByType={filterByType}
-        dateFilters={dateFilters}
-        currentDate={currentDate}
-        onFilterByDate={filterByDate}
-      />
-      <EventsList dateClusteredEvents={filteredEvents} />
+    <section className='program-page'>
+      <div className='program-page__detail'>
+        <EventDetail />
+      </div>
+      <div className='program-page__list'>
+        <header className='program-page__header'>
+          <h1>
+            <span>
+              10. Porny Days
+              <br />
+              23. — 27. Nov. 2022
+            </span>
+            <span className='block'>Festival Programm</span>
+          </h1>
+
+          <EventsFilters
+            typeFilters={typeFilters}
+            currentType={currentType}
+            onFilterByType={filterByType}
+            dateFilters={dateFilters}
+            currentDate={currentDate}
+            onFilterByDate={filterByDate}
+          />
+        </header>
+
+        <EventsList dateClusteredEvents={filteredEvents} />
+      </div>
     </section>
   );
 };

@@ -1,5 +1,7 @@
 .content-page {
   @apply col-padded pt-gutter-2;
+
+  margin-top: var(--h-logo);
 }
 
 .content-page__nav {
@@ -11,7 +13,7 @@
 }
 
 .content-page__slots {
-  @apply mt-gutter;
+  @apply my-gutter;
 }
 
 /**

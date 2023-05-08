@@ -1,5 +1,5 @@
 .nav-burger {
-  @apply fixed z-10 right-gutter-1/2 mt-gutter-1/2;
+  @apply fixed z-20 right-gutter-1/2 mt-gutter-1/2;
   @apply block rounded-full;
   @apply bg-black border border-white;
   @apply transition-transform duration-500 ease-out-back;

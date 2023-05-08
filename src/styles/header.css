@@ -1,9 +1,13 @@
+.header {
+  @apply relative z-10;
+}
+
 .header__top-bar {
   @apply flex justify-between col-padded py-2 border-b border-black;
 }
 
 .header__logo-link {
-  @apply col-marged;
+  @apply absolute col-marged;
 }
 
 .header__logo {

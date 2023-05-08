@@ -1,0 +1,15 @@
+.program-page {
+  @apply grid grid-cols-2;
+}
+
+.program-page__detail {
+  @apply sticky z-0 top-0 h-screen bg-red-100;
+}
+
+.program-page__list {
+  @apply pb-gutter border-l border-black;
+}
+
+.program-page__header {
+  @apply p-gutter-1/2;
+}

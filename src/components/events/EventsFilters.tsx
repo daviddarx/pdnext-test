@@ -44,7 +44,7 @@ const EventsFilters: React.FC<Props> = (props) => {
         {props.typeFilters.map((filter) => (
           <button
             key={filter}
-            className={props.currentType === filter ? 'bg-black text-white' : ''}
+            className={`tag${props.currentType === filter ? ' tag--inverted' : ''}`}
             onClick={props.onFilterByType.bind(null, filter)}
           >
             {filter}
@@ -65,7 +65,7 @@ const EventsFilters: React.FC<Props> = (props) => {
               {props.dateFilters.map((filter) => (
                 <button
                   key={filter}
-                  className={props.currentDate === filter ? 'bg-black text-white' : ''}
+                  className={`tag${props.currentDate === filter ? ' tag--inverted' : ''}`}
                   onClick={props.onFilterByDate.bind(null, filter)}
                 >
                   {filter}

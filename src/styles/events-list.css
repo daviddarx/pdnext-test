@@ -1,7 +1,12 @@
 .events-lists {
-  @apply mt-gutter space-y-4;
+  @apply space-y-4;
+}
+
+.event-list {
+  @apply relative;
 }
 
 .events-list__title {
-  @apply bg-black text-white;
+  @apply sticky top-0 z-10;
+  @apply col-program-px py-2 bg-black text-white;
 }
