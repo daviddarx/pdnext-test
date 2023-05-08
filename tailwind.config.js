@@ -15,6 +15,9 @@ module.exports = {
         'gutter-3': 'calc(var(--gutter) * 3)',
         'gutter-4': 'calc(var(--gutter) * 4)',
       },
+      transitionDuration: {
+        400: '400ms',
+      },
       transitionTimingFunction: {
         // Easing functions from the Penner library
         'in-quad': 'cubic-bezier(0.55, 0.085, 0.68, 0.53)',
