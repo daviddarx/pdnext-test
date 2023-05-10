@@ -1,11 +1,11 @@
 @layer components {
   .close-icon {
-    @apply block rotate-45 scale-0;
+    @apply rotate-45 scale-0;
     @apply transition-transform duration-200 ease-in-out;
 
     &:before,
     &:after {
-      @apply absolute top-1/2 w-full h-px bg-current;
+      @apply absolute top-1/2 left-0 w-full h-px bg-current;
 
       content: '';
     }
@@ -21,7 +21,7 @@
 
   .close-button {
     @apply flex items-center justify-center;
-    @apply text-black border border-black rounded-full;
+    @apply text-black border border-black box-border rounded-full;
   }
 
   .close-button__text {

@@ -21,8 +21,9 @@
 }
 
 .program-page__close {
-  @apply fixed z-20 top-gutter right-gutter bg-white;
-  @apply transition-opacity duration-300 ease-out;
+  @apply burger-positioned z-20;
+  @apply bg-white;
+  @apply transition-all duration-500 ease-out-back;
 }
 
 .program-page__close--disabled {

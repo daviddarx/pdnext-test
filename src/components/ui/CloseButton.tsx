@@ -7,10 +7,10 @@ type Props = {
 
 const CloseButton: React.FC<Props> = ({ className, onClick }) => {
   return (
-    <div className={`close-button is-opened ${className}`.trim()} onClick={onClick}>
+    <button className={`close-button is-opened ${className}`.trim()} onClick={onClick}>
       <CloseIcon className='close-button__icon' />
       <span className='close-button__text'>Schliessen</span>
-    </div>
+    </button>
   );
 };
 

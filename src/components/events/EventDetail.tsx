@@ -1,9 +1,11 @@
-import { useSelector } from 'react-redux';
+import React, { useEffect, useRef } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { AnimatePresence, motion } from 'framer-motion';
 
 import eases from '@/utils/eases';
+import { uiActions } from '@/store';
 import { uiStateType } from '@/store/ui-slice';
 
 import Entry from '@/components/events/Entry';
@@ -28,7 +30,27 @@ const panelMotionVariants = {
 };
 
 const EventDetail = () => {
+  const dispatch = useDispatch();
   const event = useSelector((state: uiStateType) => state.ui.openedEvent);
+  const lastScrollTopRef = useRef(0);
+
+  const scrollHandler = (e: React.UIEvent<HTMLDivElement>) => {
+    const target = e.target as HTMLDivElement;
+
+    const currentScrollTop = target.scrollTop;
+
+    if (currentScrollTop > lastScrollTopRef.current) {
+      dispatch(uiActions.setBurgerVisibility(false));
+    } else {
+      dispatch(uiActions.setBurgerVisibility(true));
+    }
+
+    lastScrollTopRef.current = currentScrollTop;
+  };
+
+  useEffect(() => {
+    lastScrollTopRef.current = 0;
+  }, [event]);
 
   return (
     <AnimatePresence mode='popLayout'>
@@ -36,6 +58,7 @@ const EventDetail = () => {
         <motion.article
           key={event.id}
           className='event-detail'
+          onScroll={scrollHandler}
           initial='initial'
           animate='animate'
           exit='exit'
@@ -47,9 +70,9 @@ const EventDetail = () => {
             </div>
 
             <h2 className='mb-2'>
-              {event.title}{' '}
+              <span className='block'>{event.title} </span>
               {event.specialstate && (
-                <span className=' tag tag--inverted'>{event.specialstate}</span>
+                <span className='tag tag--inverted mt-4'>{event.specialstate}</span>
               )}
             </h2>
 
