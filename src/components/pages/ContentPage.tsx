@@ -16,10 +16,19 @@ type Props = {
   data: ContentPageContent;
 };
 
+/**
+ * Slug efined outside to keep the slug unchanged also when
+ * the page is being transitioned out on page change
+ */
+let slug: string | undefined;
+
 const ContentPage: React.FC<Props> = ({ data }) => {
   const pageRef = useRef<HTMLElement>(null);
   const router = useRouter();
-  const { slug } = router.query;
+
+  if (!slug) {
+    slug = router.query.slug?.toString();
+  }
 
   const getCleanedAnchorID = (anchorID: string | undefined) => {
     if (anchorID) {
