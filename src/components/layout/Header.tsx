@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { useDispatch } from 'react-redux';
 
@@ -15,20 +15,60 @@ type Props = {
 
 const Header: React.FC<Props> = ({ commonPageData }) => {
   const dispatch = useDispatch();
+
+  const topbarHeight = useRef(0);
+  const lastScrollTopRef = useRef(0);
   const topBarRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const handleResize = () => {
-      dispatch(uiActions.setTopBarHeight(topBarRef.current?.offsetHeight));
-    };
+  const handleResize = useCallback(() => {
+    if (topBarRef.current) {
+      topbarHeight.current = topBarRef.current.offsetHeight;
+    }
+  }, []);
 
+  const handleScroll = useCallback(() => {
+    const currentScrollTop = window.scrollY;
+
+    if (currentScrollTop > lastScrollTopRef.current) {
+      dispatch(uiActions.setBurgerVisibility(false));
+    } else {
+      dispatch(uiActions.setBurgerVisibility(true));
+    }
+
+    if (currentScrollTop > 50) {
+      dispatch(uiActions.setBurgerTextVisibility(false));
+    } else {
+      dispatch(uiActions.setBurgerTextVisibility(true));
+    }
+
+    lastScrollTopRef.current = currentScrollTop;
+
+    let visibleTopbarHeight = topbarHeight.current - window.scrollY;
+
+    if (visibleTopbarHeight < 0) {
+      visibleTopbarHeight = 0;
+    } else if (visibleTopbarHeight > topbarHeight.current) {
+      visibleTopbarHeight = topbarHeight.current;
+    }
+
+    if (document?.body) {
+      document.body.style.setProperty('--posy-burger', visibleTopbarHeight + 'px');
+    }
+  }, [dispatch]);
+
+  useEffect(() => {
     window.addEventListener('resize', handleResize);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     handleResize();
+    handleScroll();
+
+    dispatch(uiActions.setBurgerVisibility(true));
 
     return () => {
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
     };
-  }, [dispatch]);
+  }, [handleResize, handleScroll, dispatch]);
 
   return (
     <header className='header'>

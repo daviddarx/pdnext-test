@@ -1,22 +1,14 @@
 .nav-burger {
-  @apply fixed z-20 right-gutter mt-gutter;
+  @apply burger-positioned z-20;
   @apply block rounded-full;
   @apply bg-black border border-white;
-  @apply transition-transform duration-500 ease-out-back;
-
-  --size-burger: calc(var(--h-logo) * 0.75);
-  --h-topbar: 0;
-
-  width: var(--size-burger);
-  height: var(--size-burger);
-
-  top: var(--h-topbar);
+  @apply transition-all duration-500 ease-out-back;
 }
 
 .nav-burger--hidden {
-  @apply transform-3d duration-300 ease-in-quint;
+  @apply transform-3d duration-500 ease-in-quint;
 
-  --tw-translate-y: calc(var(--gutter) * -4);
+  --tw-translate-y: calc((var(--posy-burger) + var(--size-burger) + var(--gutter)) * -1);
 }
 
 .nav-burger__text {

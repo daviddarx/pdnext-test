@@ -32,6 +32,8 @@
 :root {
   --gutter: 1vw;
   --h-logo: 3vw;
+  --size-burger: calc(var(--h-logo) * 0.75);
+  --posy-burger: calc(var(--gutter) * 2); /* overwritten from Header */
 
   @screen lg {
     --gutter: 2.5vw;

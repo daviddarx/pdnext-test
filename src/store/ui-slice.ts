@@ -4,7 +4,8 @@ export interface uiStateType {
   ui: {
     isNavigationOpened: boolean;
     isSupportUsOpened: boolean;
-    topbarHeight: number;
+    isBurgerVisible: boolean;
+    isBurgerTextVisible: boolean;
     openedEvent: FormatedEvent | undefined;
   };
 }
@@ -14,7 +15,8 @@ export const uiSlice = createSlice({
   initialState: {
     isNavigationOpened: false,
     isSupportUsOpened: false,
-    topbarHeight: 0,
+    isBurgerVisible: false,
+    isBurgerTextVisible: true,
     openedEvent: undefined,
   },
   reducers: {
@@ -36,8 +38,11 @@ export const uiSlice = createSlice({
     closeSupportUs: (state) => {
       state.isSupportUsOpened = false;
     },
-    setTopBarHeight: (state, action) => {
-      state.topbarHeight = action.payload;
+    setBurgerVisibility: (state, action) => {
+      state.isBurgerVisible = action.payload;
+    },
+    setBurgerTextVisibility: (state, action) => {
+      state.isBurgerTextVisible = action.payload;
     },
   },
 });

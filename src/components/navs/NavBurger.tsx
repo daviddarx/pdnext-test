@@ -1,4 +1,3 @@
-import { useState, useEffect, useCallback, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { uiActions } from '@/store/';
@@ -6,51 +5,18 @@ import { uiStateType } from '@/store/ui-slice';
 
 const NavBurger = () => {
   const dispatch = useDispatch();
-  const topBarHeight = useSelector((state: uiStateType) => state.ui.topbarHeight);
-
-  const [isVisible, setIsVisible] = useState(false);
-  const [hasText, setHasText] = useState(true);
-  const lastScrollTopRef = useRef(0);
-
-  const handleScroll = useCallback(() => {
-    const currentScrollTop = window.scrollY;
-
-    if (currentScrollTop > lastScrollTopRef.current) {
-      setIsVisible(false);
-    } else {
-      setIsVisible(true);
-    }
-
-    if (currentScrollTop > 50) {
-      setHasText(false);
-    } else {
-      setHasText(true);
-    }
-
-    lastScrollTopRef.current = currentScrollTop;
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [handleScroll]);
+  const isBurgerVisible = useSelector((state: uiStateType) => state.ui.isBurgerVisible);
+  const isBurgerTextVisible = useSelector((state: uiStateType) => state.ui.isBurgerTextVisible);
 
   const toggleNavigation = () => {
     dispatch(uiActions.toggleNavigation());
   };
 
-  useEffect(() => {
-    setIsVisible(true);
-  }, [topBarHeight]);
-
   return (
     <button
-      className={`nav-burger${isVisible ? '' : ' nav-burger--hidden'}${
-        hasText ? '' : ' nav-burger--no-text'
+      className={`nav-burger${isBurgerVisible ? '' : ' nav-burger--hidden'}${
+        isBurgerTextVisible ? '' : ' nav-burger--no-text'
       }`}
-      style={{ '--h-topbar': `${topBarHeight}px` } as React.CSSProperties}
       onClick={toggleNavigation}
     >
       <span className='nav-burger__text'>NAV</span>
