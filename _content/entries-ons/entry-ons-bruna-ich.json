@@ -4,11 +4,5 @@
   "uuid": "bruna-und-ich",
   "title": "Bruna & ich",
   "entryType": "Music",
-  "typeComplement": "DJ",
-  "image": "/images/uploads/bruna-ich.jpg",
-  "additionalImages": [
-    {
-      "image": "/images/uploads/bruna-und-ich.jpeg"
-    }
-  ]
+  "typeComplement": "DJ"
 }
