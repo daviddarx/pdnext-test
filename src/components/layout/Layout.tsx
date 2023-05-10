@@ -49,22 +49,14 @@ const Layout: React.FC<Props> = ({ children, commonPageData }) => {
   }, [dispatch]);
 
   return (
-    <motion.div
-      initial='initial'
-      animate='animate'
-      exit='exit'
-      variants={motionVariants}
-      className='min-h-screen flex flex-col'
-    >
+    <motion.div initial='initial' animate='animate' exit='exit' variants={motionVariants}>
       <Header commonPageData={commonPageData} />
       <main>{children}</main>
-      <div className='mt-auto'>
-        <SupportUs data={commonPageData.supportUsData} />
-        <BottomNav />
-        <Partners data={commonPageData.partnersData} />
-        <Newsletter />
-        <Footer />
-      </div>
+      <SupportUs data={commonPageData.supportUsData} />
+      <BottomNav />
+      <Partners data={commonPageData.partnersData} />
+      <Newsletter />
+      <Footer />
     </motion.div>
   );
 };

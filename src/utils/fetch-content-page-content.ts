@@ -1,5 +1,5 @@
-import sizeOf from 'image-size';
-import fs from 'fs';
+import getImageDimensions from './get-image-dimensions';
+
 export interface ContentPageContent {
   title: string;
   headerSubline?: string;
@@ -42,8 +42,7 @@ export async function fetchContentPageContent(json: string): Promise<ContentPage
         // log image to help clean images folder (empty folder, and add again the listed images)
         // console.log(slot.image.split('images/uploads/')[1]);
 
-        const imagePath = `public${slot.image}`;
-        const dimensions = sizeOf(fs.readFileSync(imagePath));
+        const dimensions = getImageDimensions(`public${slot.image}`);
         slot.imageWidth = dimensions.width;
         slot.imageHeight = dimensions.height;
       }

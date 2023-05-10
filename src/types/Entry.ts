@@ -1,13 +1,18 @@
 export interface Entry {
-  typeComplement: '';
-  forceBlank: boolean;
+  typeComplement?: string;
+  forceBlank?: boolean;
   entryType: string;
   desc: string;
-  videourl: string;
+  videourl?: string;
   title: string;
-  image: string;
+  image?: string;
+  imageWidth?: number;
+  imageHeight?: number;
   uuid: string;
-  additionalImages: {
+  pornypickof?: string;
+  additionalImages?: {
     image: string;
+    imageWidth?: number;
+    imageHeight?: number;
   }[];
 }

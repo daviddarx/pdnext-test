@@ -28,7 +28,7 @@ const Header: React.FC<Props> = ({ commonPageData }) => {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [dispatch]);
 
   return (
     <header className='header'>

@@ -1,6 +1,5 @@
-import sizeOf from 'image-size';
-import fs from 'fs';
 import loadJsonFiles from '@/utils/load-json-files';
+import getImageDimensions from './get-image-dimensions';
 
 interface Impression {
   title: string;
@@ -30,8 +29,7 @@ export async function fetchImpressionsContent(): Promise<ImpressionsContent> {
       day: '2-digit',
     });
 
-    const imagePath = `public${impression.image}`;
-    const dimensions = sizeOf(fs.readFileSync(imagePath));
+    const dimensions = getImageDimensions(`public${impression.image}`);
 
     return {
       ...impression,

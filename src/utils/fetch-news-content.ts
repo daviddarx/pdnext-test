@@ -1,7 +1,5 @@
-import sizeOf from 'image-size';
-import fs from 'fs';
-
 import loadJsonFiles from '@/utils/load-json-files';
+import getImageDimensions from './get-image-dimensions';
 
 interface News {
   title: string;
@@ -34,8 +32,7 @@ export async function fetchNewsContent(): Promise<NewsContent> {
       // log image to help clean images folder (empty folder, and add again the listed images)
       // console.log(newItem.image.split('images/uploads/')[1]);
 
-      const imagePath = `public${newItem.image}`;
-      const dimensions = sizeOf(fs.readFileSync(imagePath));
+      const dimensions = getImageDimensions(`public${newItem.image}`);
       newItem.imageWidth = dimensions.width;
       newItem.imageHeight = dimensions.height;
     }

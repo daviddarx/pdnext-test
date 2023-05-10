@@ -1,3 +1,5 @@
+import getImageDimensions from './get-image-dimensions';
+
 import { Event } from '@/types/Event';
 import { Entry } from '@/types/Entry';
 import { FormatedEvent } from '@/types/FormatedEvent';
@@ -67,6 +69,25 @@ const formatEvent = (event: Event, entries: Entry[]): FormatedEvent => {
     types: eventTypes,
     entriesObjects: eventEntries,
   };
+
+  formatedEvent.entriesObjects.forEach((entry) => {
+    if (entry.image) {
+      const dimensions = getImageDimensions(`public${entry.image}`);
+      entry.imageWidth = dimensions.width;
+      entry.imageHeight = dimensions.height;
+    }
+
+    if (entry.additionalImages) {
+      entry.additionalImages = entry.additionalImages.map((image) => {
+        const dimensions = getImageDimensions(`public${image.image}`);
+        return {
+          image: image.image,
+          imageWidth: dimensions.width,
+          imageHeight: dimensions.height,
+        };
+      });
+    }
+  });
 
   return formatedEvent;
 };

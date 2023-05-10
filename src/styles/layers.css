@@ -18,6 +18,22 @@
       @apply scale-100;
     }
   }
+
+  .close-button {
+    @apply flex items-center justify-center;
+    @apply text-black border border-black rounded-full;
+
+    width: var(--size-burger);
+    height: var(--size-burger);
+  }
+
+  .close-button__text {
+    @apply hidden;
+  }
+
+  .close-button__icon {
+    @apply w-1/2 h-1/2;
+  }
 }
 
 @layer utilities {
@@ -55,7 +71,7 @@
   }
 
   .tag {
-    @apply px-[0.75em] rounded-full border border-black;
+    @apply px-[0.75em] bg-white rounded-full border border-black;
     @apply transition-colors duration-300 ease-out;
   }
 
