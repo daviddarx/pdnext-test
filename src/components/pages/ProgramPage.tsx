@@ -1,4 +1,4 @@
-import { Fragment, useState, useEffect } from 'react';
+import { Fragment, useState, useEffect, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
 
 import { uiActions } from '@/store';
@@ -71,7 +71,7 @@ const ProgramPage: React.FC<Props> = ({ data }) => {
     [],
   );
 
-  const scrollToEventOnPageLoad = () => {
+  const scrollToEventOnPageLoad = useCallback(() => {
     const hashId = window.location.hash.slice(1);
     const subArrayIndex = filteredEvents.findIndex((subArray) =>
       subArray.events.find((event) => event.id === hashId),
@@ -106,7 +106,7 @@ const ProgramPage: React.FC<Props> = ({ data }) => {
         }
       }
     }
-  };
+  }, [dispatch, filteredEvents]);
 
   useEffect(() => {
     /**
@@ -120,7 +120,7 @@ const ProgramPage: React.FC<Props> = ({ data }) => {
         scrollToEventOnPageLoad();
       }
     };
-  }, [dispatch, filteredEvents]);
+  }, [scrollToEventOnPageLoad]);
 
   const closeEvent = () => {
     dispatch(uiActions.closeEvent());
