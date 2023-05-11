@@ -1,10 +1,9 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 import { ImpressionsContent } from '@/utils/fetch-impressions-content';
 
 import PageHeader from '@/components/layout/PageHeader';
-
+import LoadedImage from '@/components/ui/LoadedImage';
 type Props = {
   data: ImpressionsContent;
 };
@@ -27,7 +26,7 @@ const ImpressionsPage: React.FC<Props> = ({ data }) => {
           <article key={item.date + item.title} className='impression'>
             <Link href={item.link} onClick={checkIfGalleryLink}>
               <div className='impression__image'>
-                <Image
+                <LoadedImage
                   src={item.image}
                   alt={item.title}
                   width={item.imageWidth}

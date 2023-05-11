@@ -1,8 +1,9 @@
-import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
 import { Entry } from '@/types/Entry';
+
+import LoadedImage from '@/components/ui/LoadedImage';
 
 type Props = {
   entry: Entry;
@@ -14,7 +15,7 @@ const Entry: React.FC<Props> = ({ entry }) => {
       <div className='-ml-gutter -mr-gutter'>
         <div className='relative aspect-video overflow:hidden'>
           {entry.image && (
-            <Image
+            <LoadedImage
               src={entry.image}
               alt={entry.title}
               width={entry.imageWidth}

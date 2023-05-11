@@ -1,5 +1,4 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
-import Image from 'next/image';
 
 import { fetchCommonPageContent, CommonPageData } from '@/utils/fetch-common-page-content';
 import { fetchGalleriesImagesContent, GalleryImage } from '@/utils/fetch-galleries-images-content';
@@ -8,6 +7,7 @@ const galleriesContent = require('../../../_content/galleries/galleries.json');
 
 import Layout from '@/components/layout/Layout';
 import Metas from '@/components/layout/Metas';
+import LoadedImage from '@/components/ui/LoadedImage';
 
 import PageHeader from '@/components/layout/PageHeader';
 
@@ -32,7 +32,7 @@ const Page: NextPage<PageProps> = ({ page, commonPageData }) => {
         <div className='gallery-page__images'>
           {page.images.map((image) => (
             <div className='gallery-page__image' key={image.main.url}>
-              <Image
+              <LoadedImage
                 src={image.thumb.url}
                 alt={page.title}
                 width={image.thumb.width}

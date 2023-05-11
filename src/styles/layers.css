@@ -31,6 +31,14 @@
   .close-button__icon {
     @apply w-1/2 h-1/2;
   }
+
+  .loaded-image {
+    @apply opacity-0 transition-opacity duration-1000 ease-out;
+  }
+
+  .loaded-image--loaded {
+    @apply opacity-100;
+  }
 }
 
 @layer utilities {

@@ -1,6 +1,5 @@
 import { useRef, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
@@ -8,6 +7,7 @@ import { ContentPageContent } from '@/utils/fetch-content-page-content';
 import { Fragment } from 'react';
 
 import PageHeader from '@/components/layout/PageHeader';
+import LoadedImage from '../ui/LoadedImage';
 import Accordion from '@/components/ui/Accordion';
 import CloseIcon from '@/components/icons/CloseIcon';
 import DecorativeVideo from '../ui/DecorativeVideo';
@@ -107,7 +107,7 @@ const ContentPage: React.FC<Props> = ({ data }) => {
             )}
 
             {slot.image && (
-              <Image
+              <LoadedImage
                 className='content-slot__image'
                 src={slot.image}
                 alt={slot.title}
