@@ -1,5 +1,6 @@
 import { OnsContent } from '@/utils/fetch-ons-content';
 
+import ProgramPageLayout from '@/components/layout/ProgramPageLayout';
 import EventsList from '@/components/events/EventsList';
 
 type Props = {
@@ -8,14 +9,16 @@ type Props = {
 
 const OnsPage: React.FC<Props> = ({ data }) => {
   return (
-    <section className='content-page'>
-      <h1>
-        <span>One Night Stands</span>
-        <span className='block'>Saisonales Programm</span>
-      </h1>
-
+    <ProgramPageLayout
+      header={
+        <h1>
+          <span>One Night Stands</span>
+          <span className='block'>Saisonales Programm</span>
+        </h1>
+      }
+    >
       <EventsList dateClusteredEvents={data.dateClusteredEvents} dateVisible={true} />
-    </section>
+    </ProgramPageLayout>
   );
 };
 
