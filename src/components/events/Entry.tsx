@@ -12,7 +12,7 @@ const Entry: React.FC<Props> = ({ entry }) => {
   return (
     <article className='entry mt-gutter-2 pb-gutter'>
       <div className='-ml-gutter -mr-gutter'>
-        <div className='relative height-o pb-[56.25%] overflow:hidden'>
+        <div className='relative aspect-video overflow:hidden'>
           {entry.image && (
             <Image
               src={entry.image}
