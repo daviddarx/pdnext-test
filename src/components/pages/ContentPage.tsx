@@ -7,7 +7,7 @@ import { ContentPageContent } from '@/utils/fetch-content-page-content';
 import { Fragment } from 'react';
 
 import PageHeader from '@/components/layout/PageHeader';
-import LoadedImage from '../ui/LoadedImage';
+import LoadedImage from '@/components/ui/LoadedImage';
 import Accordion from '@/components/ui/Accordion';
 import CloseIcon from '@/components/icons/CloseIcon';
 import DecorativeVideo from '../ui/DecorativeVideo';
