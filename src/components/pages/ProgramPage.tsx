@@ -1,5 +1,7 @@
 import { Fragment, useState } from 'react';
+import { useDispatch } from 'react-redux';
 
+import { uiActions } from '@/store';
 import { ProgramContent } from '@/utils/fetch-program-content';
 import { ClusteredEvents } from '@/types/ClusteredEvents';
 
@@ -15,6 +17,8 @@ type Props = {
 };
 
 const ProgramPage: React.FC<Props> = ({ data }) => {
+  const dispatch = useDispatch();
+
   const dateClusteredEvents = data.dateClusteredEvents;
   const entryTypes = data.entryTypes;
 
@@ -66,13 +70,19 @@ const ProgramPage: React.FC<Props> = ({ data }) => {
     [],
   );
 
+  const closeEvent = () => {
+    dispatch(uiActions.closeEvent());
+  };
+
   const filterByType = (type: string) => {
     setCurrentType(type);
     setCurrentDate(allDatesFilter);
+    closeEvent();
   };
 
   const filterByDate = (date: string) => {
     setCurrentDate(date);
+    closeEvent();
   };
 
   return (
