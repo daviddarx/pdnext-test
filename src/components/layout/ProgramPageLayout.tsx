@@ -23,8 +23,6 @@ const ProgramPageLayout: React.FC<Props> = ({ header, children }) => {
   };
 
   useEffect(() => {
-    console.log('program page mounted');
-
     const observer = new IntersectionObserver(
       (entries) => {
         // console.log(entries[0].intersectionRatio);
@@ -43,7 +41,6 @@ const ProgramPageLayout: React.FC<Props> = ({ header, children }) => {
 
     return () => {
       observer.disconnect();
-      console.log('program page unmounted');
     };
   }, []);
 

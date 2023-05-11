@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { uiActions } from '@/store';
@@ -14,15 +15,17 @@ const Event = ({ event, dateVisible = false }: Props) => {
   const dispatch = useDispatch();
   const openedEvent = useSelector((state: uiStateType) => state.ui.openedEvent);
 
-  const openEvent = () => {
-    dispatch(uiActions.openEvent(event));
-  };
-
   const title = dateVisible ? event.title : `${event.date.hour} - ${event.title}`;
   const date = dateVisible ? event.date.short : undefined;
 
+  const openEvent = () => {
+    dispatch(uiActions.openEvent(event));
+
+    window.location.hash = event.id;
+  };
+
   return (
-    <article className={`event${openedEvent === event ? ' event--active' : ''}`}>
+    <article data-id={event.id} className={`event${openedEvent === event ? ' event--active' : ''}`}>
       <h3 className='event__title'>
         {title}
         {date && <span className='event__date'> – {date}</span>}
