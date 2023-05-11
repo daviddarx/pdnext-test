@@ -41,8 +41,13 @@ const EventDetail = () => {
 
     if (currentScrollTop > lastScrollTopRef.current) {
       dispatch(uiActions.setBurgerVisibility(false));
+      dispatch(uiActions.setBurgerTextVisibility(false));
     } else {
       dispatch(uiActions.setBurgerVisibility(true));
+
+      if (currentScrollTop === 0) {
+        dispatch(uiActions.setBurgerTextVisibility(true));
+      }
     }
 
     lastScrollTopRef.current = currentScrollTop;
