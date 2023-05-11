@@ -1,4 +1,5 @@
 import { OnsContent } from '@/utils/fetch-ons-content';
+import { useScrollToEventOnPageLoad } from '@/utils/scrollToEventOnPageLoad';
 
 import ProgramPageLayout from '@/components/layout/ProgramPageLayout';
 import EventsList from '@/components/events/EventsList';
@@ -8,6 +9,8 @@ type Props = {
 };
 
 const OnsPage: React.FC<Props> = ({ data }) => {
+  useScrollToEventOnPageLoad(data.dateClusteredEvents);
+
   return (
     <ProgramPageLayout
       header={
