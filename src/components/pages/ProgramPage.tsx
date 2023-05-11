@@ -93,7 +93,6 @@ const ProgramPage: React.FC<Props> = ({ data }) => {
             const containerRect = container.getBoundingClientRect();
             const eventLinkRect = eventLink.getBoundingClientRect();
             let scrollPos = eventLinkRect.top - window.innerHeight * 0.25;
-            console.log('winh', window.innerHeight);
 
             if (scrollPos > containerRect.height - window.innerHeight) {
               scrollPos = containerRect.height - window.innerHeight;
