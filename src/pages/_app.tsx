@@ -14,6 +14,7 @@ const font = Space_Grotesk({
 import store from '@/store/';
 import { uiActions } from '@/store/';
 
+import RainbowBackground from '@/components/layout/RainbowBackground';
 import NavBurger from '@/components/navs/NavBurger';
 import MainNavPanel from '@/components/navs/MainNav';
 
@@ -28,13 +29,20 @@ const App = ({ Component, pageProps }: AppProps) => {
       store.dispatch(uiActions.closeNavigation());
       store.dispatch(uiActions.closeEvent());
     };
-
     router.events.on('routeChangeStart', handleRouteChangeStart);
 
     return () => {
       router.events.off('routeChangeStart', handleRouteChangeStart);
     };
   }, [router.events]);
+
+  useEffect(() => {
+    console.log('mounted');
+
+    return () => {
+      console.log('unmounted');
+    };
+  }, []);
 
   return (
     <Provider store={store}>
@@ -44,6 +52,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         <AnimatePresence mode='wait' initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
           <Component key={pageKey} {...pageProps} />
         </AnimatePresence>
+        <RainbowBackground />
       </div>
     </Provider>
   );
