@@ -13,6 +13,18 @@ module.exports = {
       black: '#000000',
       pink: 'hsl(0, 80%, 90%)',
     },
+    fontSize: {
+      xs: 'calc(var(--font-s) * .75)',
+      sm: 'calc(var(--font-s) * .875)',
+      base: 'var(--font-s)',
+      lg: 'calc(var(--font-s) * 1.125)',
+      xl: 'calc(var(--font-s) * 1.25)',
+      '2xl': 'calc(var(--font-s) * 1.5)',
+      '3xl': 'calc(var(--font-s) * 1.875)',
+      '4xl': 'calc(var(--font-s) * 2.25)',
+      '5xl': 'calc(var(--font-s) * 3)',
+      '6xl': 'calc(var(--font-s) * 4)',
+    },
     extend: {
       spacing: {
         gutter: 'var(--gutter)',
