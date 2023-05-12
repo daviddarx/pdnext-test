@@ -1,7 +1,7 @@
 .nav-burger {
   @apply burger-positioned z-20;
   @apply block rounded-full;
-  @apply bg-black border border-white;
+  @apply bg-black border border-pink;
   @apply transition-all duration-500 ease-out-back;
 
   width: var(--size-burger);

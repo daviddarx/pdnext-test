@@ -1,7 +1,3 @@
-.events-lists {
-  @apply space-y-4;
-}
-
 .event-list {
   @apply relative;
 }
