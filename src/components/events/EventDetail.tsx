@@ -12,19 +12,19 @@ import Entry from '@/components/events/Entry';
 
 const transition = {
   duration: 0.35,
-  ease: eases.outSine,
+  ease: eases.inOutQuart,
 };
 
 const panelMotionVariants = {
   initial: {
-    x: '-100%',
+    transform: 'translateX(-100%) translateZ(0)',
   },
   animate: {
-    x: 0,
+    transform: 'translateX(0) translateZ(0)',
     transition: transition,
   },
   exit: {
-    x: '100%',
+    transform: 'translateX(100%) translateZ(0)',
     transition: transition,
   },
 };

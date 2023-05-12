@@ -7,17 +7,17 @@ import { setFocusables, resetFocusables, loopFocusables } from '@/utils/get-focu
 
 const panelMotionVariants = {
   initial: {
-    x: '100%',
+    transform: 'translateX(100%) translateZ(0)',
   },
   animate: {
-    x: 0,
+    transform: 'translateX(0) translateZ(0)',
     transition: {
       duration: 0.5,
       ease: eases.outQuart,
     },
   },
   exit: {
-    x: '100%',
+    transform: 'translateX(100%) translateZ(0)',
     transition: {
       duration: 0.25,
       ease: eases.inOutQuart,
