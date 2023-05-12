@@ -15,7 +15,7 @@ export const uiSlice = createSlice({
   initialState: {
     isNavigationOpened: false,
     isSupportUsOpened: false,
-    isBurgerVisible: false,
+    isBurgerVisible: true,
     isBurgerTextVisible: true,
     openedEvent: undefined,
   },

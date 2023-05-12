@@ -9,7 +9,7 @@
 }
 
 .nav-burger--hidden {
-  @apply transform-3d duration-500 ease-in-quint;
+  @apply transform-3d duration-300 ease-in-quart;
 
   --tw-translate-y: calc((var(--posy-burger) + var(--size-burger) + var(--gutter)) * -1);
 }
@@ -39,10 +39,10 @@
 
   svg {
     @apply w-full h-full fill-white;
-    @apply transition-transform ease-in-quint;
+    @apply transition-transform ease-in-quart;
 
     .nav-burger:hover & {
-      @apply ease-out-quint;
+      @apply ease-out-quart;
     }
   }
 }
