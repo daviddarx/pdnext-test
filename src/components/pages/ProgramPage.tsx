@@ -1,10 +1,10 @@
-import { Fragment, useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import { useDispatch } from 'react-redux';
 
 import { uiActions } from '@/store';
 import { ProgramContent } from '@/utils/fetch-program-content';
-import { useScrollToEventOnPageLoad } from '@/utils/scrollToEventOnPageLoad';
 import { ClusteredEvents } from '@/types/ClusteredEvents';
+import useScrollToEventOnPageLoad from '@/hooks/useScrollToEventOnPageLoad';
 
 import ProgramPageLayout from '@/components/layout/ProgramPageLayout';
 import EventsFilters from '@/components/events/EventsFilters';
@@ -86,7 +86,7 @@ const ProgramPage: React.FC<Props> = ({ data }) => {
     closeEvent();
   };
 
-  useScrollToEventOnPageLoad(filteredEvents);
+  useScrollToEventOnPageLoad(dateClusteredEvents);
 
   return (
     <ProgramPageLayout
@@ -117,4 +117,4 @@ const ProgramPage: React.FC<Props> = ({ data }) => {
   );
 };
 
-export default ProgramPage;
+export default React.memo(ProgramPage);

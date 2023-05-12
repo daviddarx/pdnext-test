@@ -1,5 +1,5 @@
 import { OnsContent } from '@/utils/fetch-ons-content';
-import { useScrollToEventOnPageLoad } from '@/utils/scrollToEventOnPageLoad';
+import useScrollToEventOnPageLoad from '@/hooks/useScrollToEventOnPageLoad';
 
 import ProgramPageLayout from '@/components/layout/ProgramPageLayout';
 import EventsList from '@/components/events/EventsList';

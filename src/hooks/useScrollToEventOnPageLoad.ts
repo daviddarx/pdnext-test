@@ -5,7 +5,7 @@ import { uiActions } from '@/store';
 import { ClusteredEvents } from '@/types/ClusteredEvents';
 import { FormatedEvent } from '@/types/FormatedEvent';
 
-export const useScrollToEventOnPageLoad = (filteredEvents: ClusteredEvents[]) => {
+const useScrollToEventOnPageLoad = (filteredEvents: ClusteredEvents[]) => {
   const dispatch = useDispatch();
 
   const scrollToEventOnPageLoad = useCallback(() => {
@@ -59,3 +59,5 @@ export const useScrollToEventOnPageLoad = (filteredEvents: ClusteredEvents[]) =>
     };
   }, [scrollToEventOnPageLoad]);
 };
+
+export default useScrollToEventOnPageLoad;
