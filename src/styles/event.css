@@ -1,5 +1,5 @@
 .event {
-  @apply relative col-program-px col-program-py border-t border-black;
+  @apply relative program-row-px program-row-py border-t border-black;
   @apply transition-opacity duration-300 ease-out;
 }
 

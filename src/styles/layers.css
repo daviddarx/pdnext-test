@@ -51,27 +51,11 @@
     @apply font-bold;
   }
 
-  .col-padded {
-    @apply px-gutter;
-  }
-
-  .col-marged {
-    @apply mx-gutter;
-  }
-
-  .col-outer {
-    @apply -mx-gutter;
-  }
-
-  .col-outer-padded {
-    @apply -mx-gutter px-gutter;
-  }
-
-  .col-program-px {
+  .program-row-px {
     @apply px-8;
   }
 
-  .col-program-py {
+  .program-row-py {
     @apply py-6;
   }
 

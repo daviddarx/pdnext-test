@@ -8,5 +8,5 @@
 
 .events-list__title {
   @apply sticky top-0 z-10;
-  @apply col-program-px py-2 bg-black text-white;
+  @apply program-row-px py-2 bg-black text-white;
 }

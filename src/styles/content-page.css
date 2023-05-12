@@ -1,15 +1,15 @@
 .content-page {
-  @apply col-padded pt-gutter-2;
+  @apply px-gutter pt-gutter-2;
 
   margin-top: var(--h-logo);
 }
 
 .content-page__nav {
-  @apply col-outer-padded mt-gutter flex space-x-4 border-y border-black py-4;
+  @apply -mx-gutter mt-gutter px-gutter flex space-x-4 border-y border-black py-4;
 }
 
 .content-page__video {
-  @apply col-outer;
+  @apply -mx-gutter;
 }
 
 .content-page__slots {

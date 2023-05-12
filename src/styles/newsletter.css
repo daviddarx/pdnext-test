@@ -1,5 +1,5 @@
 .newsletter {
-  @apply mt-gutter col-marged;
+  @apply mt-gutter mx-gutter;
 }
 
 .newsletter__subtitle {
