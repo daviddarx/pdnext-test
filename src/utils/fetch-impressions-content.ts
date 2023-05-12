@@ -17,6 +17,8 @@ export interface ImpressionsContent {
   impressions: Impression[];
 }
 export async function fetchImpressionsContent(): Promise<ImpressionsContent> {
+  // console.log('----------------- FETCH IMPRESSIONS CONTENT ');
+
   const impressionsDir: Impression[] = [];
   const impressions = await loadJsonFiles(impressionsDir, '_content/impressions');
 

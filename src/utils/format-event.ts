@@ -70,6 +70,8 @@ const formatEvent = (event: Event, entries: Entry[]): FormatedEvent => {
     entriesObjects: eventEntries,
   };
 
+  // console.log('----------------- FETCH FORMAT EVENT', event.title);
+
   formatedEvent.entriesObjects.forEach((entry) => {
     if (entry.image) {
       const dimensions = getImageDimensions(`public${entry.image}`);

@@ -35,6 +35,8 @@ export interface ContentPageContent {
 }
 
 export async function fetchContentPageContent(json: string): Promise<ContentPageContent> {
+  // console.log('----------------- FETCH CONTENT PAGE CONTENT' + json);
+
   const data = require('../../_content/contentPages/' + json) as ContentPageContent;
 
   if (data.contentSlot) {

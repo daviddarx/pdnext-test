@@ -13,6 +13,8 @@ export interface GalleryImage {
 }
 
 function getImageData(imageUrl: string): Promise<Image> {
+  // console.log('----------------- FETCH GALLERY CONTENT', imageUrl);
+
   return new Promise((resolve, reject) => {
     https
       .get(imageUrl, (response) => {
@@ -22,12 +24,17 @@ function getImageData(imageUrl: string): Promise<Image> {
         });
         response.on('end', () => {
           const buffer = Buffer.concat(chunks);
-          const dimensions = sizeOf(buffer);
-          resolve({
-            url: imageUrl,
-            width: dimensions.width!,
-            height: dimensions.height!,
-          });
+          try {
+            const dimensions = sizeOf(buffer);
+            // console.log('get dimensions:  ', imageUrl);
+            resolve({
+              url: imageUrl,
+              width: dimensions.width!,
+              height: dimensions.height!,
+            });
+          } catch (error) {
+            console.error(error);
+          }
         });
       })
       .on('error', (error) => {

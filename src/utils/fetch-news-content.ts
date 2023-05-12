@@ -21,6 +21,8 @@ export async function fetchNewsContent(): Promise<NewsContent> {
   const newsDir: News[] = [];
   const news = await loadJsonFiles(newsDir, '_content/news');
 
+  // console.log('----------------- FETCH NEWS CONTENT');
+
   for (const newItem of news) {
     newItem.dateReadable = new Date(newItem.date).toLocaleDateString('de-DE', {
       year: 'numeric',

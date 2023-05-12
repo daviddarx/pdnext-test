@@ -7,6 +7,7 @@ type ImageDimension = {
 };
 
 const getImageDimensions = (path: string): ImageDimension => {
+  // console.log('get dimensions:  ', path);
   const dimensions = sizeOf(fs.readFileSync(path));
 
   return {
