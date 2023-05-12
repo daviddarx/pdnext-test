@@ -21,6 +21,7 @@
 @import './page-header.css';
 @import './partners.css';
 @import './program-page.css';
+@import './rainbow-background.css';
 @import './save-the-date.css';
 @import './special-announcement.css';
 @import './support-us.css';
@@ -42,7 +43,7 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  @apply text-base;
 }
 
 b,
