@@ -1,5 +1,4 @@
 import { useRef, useEffect } from 'react';
-import { useRouter } from 'next/router';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
@@ -18,9 +17,6 @@ type Props = {
 
 const ContentPage: React.FC<Props> = ({ data }) => {
   const pageRef = useRef<HTMLElement>(null);
-  const router = useRouter();
-
-  const slug = router.query.slug;
 
   const getCleanedAnchorID = (anchorID: string | undefined) => {
     if (anchorID) {
@@ -80,7 +76,7 @@ const ContentPage: React.FC<Props> = ({ data }) => {
         </ul>
       )}
 
-      {slug === 'festival' && (
+      {data.video && (
         <DecorativeVideo
           className='content-page__video'
           videoSettings={{

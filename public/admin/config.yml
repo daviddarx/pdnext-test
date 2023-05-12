@@ -519,6 +519,12 @@ collections:
         widget: 'text'
         required: false
 
+      - label: 'Has Video'
+        name: 'video'
+        widget: 'boolean'
+        default: false
+        required: false
+
       - label: 'Content Slot'
         name: 'contentSlot'
         widget: 'list'
