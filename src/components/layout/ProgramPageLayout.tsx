@@ -1,7 +1,8 @@
 import { ReactNode, useRef, useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import { uiStateType } from '@/store/ui-slice';
+import { uiActions } from '@/store';
 
 import EventDetail from '@/components/events/EventDetail';
 import EventDetailCloseButton from '@/components/events/EventDetailCloseButton';
@@ -12,7 +13,11 @@ type Props = {
 };
 
 const ProgramPageLayout: React.FC<Props> = ({ header, children }) => {
+  const dispatch = useDispatch();
+
   const [isDetailInViewport, setIsDetailInViewport] = useState(true);
+
+  const pageRef = useRef<HTMLElement>(null);
   const detailRef = useRef<HTMLDivElement>(null);
   const openedEvent = useSelector((state: uiStateType) => state.ui.openedEvent);
 
@@ -37,8 +42,25 @@ const ProgramPageLayout: React.FC<Props> = ({ header, children }) => {
     };
   }, []);
 
+  useEffect(() => {
+    if (openedEvent) {
+      const pageRect = pageRef.current!.getBoundingClientRect();
+
+      if (window.scrollY > pageRect.height - window.innerHeight) {
+        window.scroll({
+          top: pageRect.height - window.innerHeight,
+          behavior: 'smooth',
+        });
+      }
+    } else {
+      setTimeout(() => {
+        dispatch(uiActions.setBurgerVisibility(true));
+      }, 500);
+    }
+  }, [openedEvent, dispatch]);
+
   return (
-    <section className='program-page'>
+    <section className='program-page' ref={pageRef}>
       <div className='program-page__list'>
         <header className='program-page__header'>{header}</header>
         {children}
