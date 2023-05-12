@@ -36,13 +36,13 @@ const App = ({ Component, pageProps }: AppProps) => {
     };
   }, [router.events]);
 
-  useEffect(() => {
-    console.log('mounted');
+  // useEffect(() => {
+  //   console.log('app mounted');
 
-    return () => {
-      console.log('unmounted');
-    };
-  }, []);
+  //   return () => {
+  //     console.log('app unmounted');
+  //   };
+  // }, []);
 
   return (
     <Provider store={store}>
