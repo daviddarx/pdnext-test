@@ -21,7 +21,7 @@
 
   .close-button {
     @apply flex items-center justify-center;
-    @apply text-black border border-black box-border rounded-full;
+    @apply text-black outline outline-1 -outline-offset-1 outline-black rounded-full;
   }
 
   .close-button__text {
@@ -70,9 +70,6 @@
 
   .burger-positioned {
     @apply fixed right-gutter mt-gutter;
-
-    width: var(--size-burger);
-    height: var(--size-burger);
 
     top: var(--posy-burger);
   }

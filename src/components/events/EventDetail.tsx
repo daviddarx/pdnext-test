@@ -31,6 +31,7 @@ const panelMotionVariants = {
 
 const EventDetail = () => {
   const dispatch = useDispatch();
+
   const event = useSelector((state: uiStateType) => state.ui.openedEvent);
   const lastScrollTopRef = useRef(0);
 

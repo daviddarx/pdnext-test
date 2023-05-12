@@ -3,6 +3,9 @@
   @apply block rounded-full;
   @apply bg-black border border-white;
   @apply transition-all duration-500 ease-out-back;
+
+  width: var(--size-burger);
+  height: var(--size-burger);
 }
 
 .nav-burger--hidden {

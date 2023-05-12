@@ -1,11 +1,10 @@
 import { ReactNode, useRef, useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import { uiStateType } from '@/store/ui-slice';
-import { uiActions } from '@/store/';
 
-import CloseButton from '@/components/ui/CloseButton';
 import EventDetail from '@/components/events/EventDetail';
+import EventDetailCloseButton from '@/components/events/EventDetailCloseButton';
 
 type Props = {
   header: ReactNode;
@@ -13,19 +12,13 @@ type Props = {
 };
 
 const ProgramPageLayout: React.FC<Props> = ({ header, children }) => {
-  const dispatch = useDispatch();
   const [isDetailInViewport, setIsDetailInViewport] = useState(true);
   const detailRef = useRef<HTMLDivElement>(null);
   const openedEvent = useSelector((state: uiStateType) => state.ui.openedEvent);
 
-  const close = () => {
-    dispatch(uiActions.closeEvent());
-  };
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        // console.log(entries[0].intersectionRatio);
         if (entries[0].isIntersecting) {
           setIsDetailInViewport(true);
         } else {
@@ -56,12 +49,7 @@ const ProgramPageLayout: React.FC<Props> = ({ header, children }) => {
         }`}
         ref={detailRef}
       >
-        <CloseButton
-          className={`program-page__close${
-            openedEvent && isDetailInViewport ? '' : ' program-page__close--disabled'
-          }`}
-          onClick={close}
-        />
+        <EventDetailCloseButton disabled={openedEvent && isDetailInViewport} />
         <EventDetail />
       </div>
     </section>
