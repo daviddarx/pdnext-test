@@ -16,5 +16,5 @@
 }
 
 .event__btn {
-  @apply absolute inset-0 opacity-0 bg-red-100;
+  @apply absolute inset-0 opacity-0;
 }
