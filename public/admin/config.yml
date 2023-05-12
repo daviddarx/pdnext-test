@@ -18,9 +18,10 @@ collections:
     format: 'json'
     summary: '{{title}}'
     fields:
-      - label: 'Title'
+      - label: 'Title (Let empty to hide Save The Date)'
         name: 'title'
         widget: 'string'
+        require: false
 
       - label: 'Message'
         name: 'message'
@@ -40,9 +41,10 @@ collections:
         name: 'title'
         widget: 'string'
 
-      - label: 'Button Title'
+      - label: 'Button Title (Let empty to hide Special Announcement)'
         name: 'buttonTitle'
         widget: 'string'
+        required: false
 
       - label: 'Description'
         name: 'desc'

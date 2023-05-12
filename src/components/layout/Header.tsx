@@ -20,6 +20,10 @@ const Header: React.FC<Props> = ({ commonPageData }) => {
   const lastScrollTopRef = useRef(0);
   const topBarRef = useRef<HTMLDivElement>(null);
 
+  const hasSpecialAnnouncement =
+    commonPageData.specialAnnouncementData.buttonTitle.trim().length > 0;
+  const hasSaveTheDate = commonPageData.saveTheDateData.title.trim().length > 0;
+
   const handleResize = useCallback(() => {
     if (topBarRef.current) {
       topbarHeight.current = topBarRef.current.offsetHeight;
@@ -72,10 +76,14 @@ const Header: React.FC<Props> = ({ commonPageData }) => {
 
   return (
     <header className='header'>
-      <div className='header__top-bar' ref={topBarRef}>
-        <SaveTheDate data={commonPageData.saveTheDateData} />
-        <SpecialAnnouncement data={commonPageData.specialAnnouncementData} />
-      </div>
+      {hasSaveTheDate && hasSpecialAnnouncement && (
+        <div className='header__top-bar' ref={topBarRef}>
+          {hasSaveTheDate && <SaveTheDate data={commonPageData.saveTheDateData} />}
+          {hasSpecialAnnouncement && (
+            <SpecialAnnouncement data={commonPageData.specialAnnouncementData} />
+          )}
+        </div>
+      )}
 
       <Link href='/festival-program' className='header__logo-link'>
         <h2 className='hidden'>Porny Days – Film Kunst Festival Zürich</h2>
