@@ -43,7 +43,7 @@
 }
 
 body {
-  @apply text-base;
+  @apply bg-pink text-base;
 }
 
 b,

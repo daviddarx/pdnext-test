@@ -6,6 +6,13 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      white: '#ffffff',
+      black: '#000000',
+      pink: 'hsl(0, 80%, 90%)',
+    },
     extend: {
       spacing: {
         gutter: 'var(--gutter)',
