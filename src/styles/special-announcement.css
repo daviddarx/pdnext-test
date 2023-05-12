@@ -3,7 +3,7 @@
 }
 
 .special-announcement__title {
-  @apply inline;
+  @apply text-base inline;
 }
 
 .special-announcement-panel__title {

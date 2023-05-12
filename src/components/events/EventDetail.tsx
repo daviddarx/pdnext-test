@@ -70,7 +70,7 @@ const EventDetail = () => {
           exit='exit'
           variants={panelMotionVariants}
         >
-          <header>
+          <header className='pr-gutter-2'>
             <div className='block mb-gutter'>
               {event.date.hour} – {event.date.readable}
             </div>

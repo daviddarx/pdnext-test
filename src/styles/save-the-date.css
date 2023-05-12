@@ -3,5 +3,5 @@
 }
 
 .save-the-date__title {
-  @apply inline;
+  @apply text-base inline;
 }

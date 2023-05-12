@@ -3,7 +3,7 @@
 }
 
 .support-us__title {
-  @apply relative bg-black text-white px-gutter py-gutter;
+  @apply relative px-gutter py-gutter h3 text-white bg-black;
 }
 
 .support-us__heart {

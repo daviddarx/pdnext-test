@@ -3,11 +3,11 @@
 }
 
 .newsletter__subtitle {
-  @apply block;
+  @apply block text-base;
 }
 
 .newsletter__title {
-  @apply block;
+  @apply block h2;
 }
 
 .newsletter__field {

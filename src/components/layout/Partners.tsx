@@ -8,7 +8,7 @@ type Props = {
 const Partners = ({ data }: Props) => {
   return (
     <section className='partners'>
-      <h2>Partners</h2>
+      <h2 className='h3'>Partners</h2>
       <ul className='partners__list'>
         {data.map((partner) => {
           const LogoComponent = dynamic(
