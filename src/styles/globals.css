@@ -46,8 +46,3 @@
 body {
   @apply bg-pink text-base;
 }
-
-b,
-strong {
-  @apply font-bold;
-}

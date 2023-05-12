@@ -89,6 +89,16 @@
     @apply text-2xl;
   }
 
+  b,
+  strong {
+    @apply font-bold;
+  }
+
+  i,
+  em {
+    @apply italic;
+  }
+
   .program-row-px {
     @apply px-8;
   }
