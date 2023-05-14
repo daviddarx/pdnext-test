@@ -19,7 +19,7 @@ const NavBurger = () => {
       }`}
       onClick={toggleNavigation}
     >
-      <span className='nav-burger__text'>NAV</span>
+      <span className='nav-burger__text'>MENU</span>
 
       <span className='nav-burger__icon'></span>
 
