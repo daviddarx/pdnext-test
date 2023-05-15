@@ -97,6 +97,10 @@
     @apply italic;
   }
 
+  button {
+    @apply tracking-normal;
+  }
+
   .program-row-px {
     @apply px-8;
   }
@@ -106,8 +110,8 @@
   }
 
   .tag {
-    @apply inline-block px-[0.75em] pt-[0.45em] pb-[0.2em];
-    @apply text-base leading-none uppercase tracking-tag;
+    @apply inline-block px-[0.75em] pt-[0.5em] pb-[0.25em];
+    @apply text-base font-semibold leading-none uppercase tracking-tag;
     @apply bg-white rounded-full border border-black;
     @apply transition-colors duration-300 ease-out;
   }
