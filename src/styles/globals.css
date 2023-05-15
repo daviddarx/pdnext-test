@@ -44,5 +44,5 @@
 }
 
 body {
-  @apply bg-pink text-base;
+  @apply bg-pink text-base leading-normal tracking-normal;
 }

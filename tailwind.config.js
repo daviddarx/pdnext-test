@@ -13,6 +13,11 @@ module.exports = {
       black: '#000000',
       pink: 'hsl(0, 80%, 90%)',
     },
+    fontWeight: {
+      normal: '400',
+      semibold: '500',
+      bold: '800',
+    },
     fontSize: {
       xs: 'calc(var(--font-s) * .75)',
       sm: 'calc(var(--font-s) * .875)',
@@ -24,6 +29,16 @@ module.exports = {
       '4xl': 'calc(var(--font-s) * 2.25)',
       '5xl': 'calc(var(--font-s) * 3)',
       '6xl': 'calc(var(--font-s) * 4)',
+    },
+    lineHeight: {
+      normal: '1.65',
+      title: '1.1',
+      none: '1',
+    },
+    letterSpacing: {
+      normal: '0',
+      title: '0',
+      tag: '0',
     },
     extend: {
       spacing: {

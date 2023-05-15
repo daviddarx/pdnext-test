@@ -1,14 +1,12 @@
 import { useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
+import localFont from 'next/font/local';
 import { Provider } from 'react-redux';
 import { AnimatePresence } from 'framer-motion';
-import { Space_Grotesk } from 'next/font/google';
 
-const font = Space_Grotesk({
-  weight: ['400', '700'],
-  style: ['normal'],
-  subsets: ['latin'],
+const font = localFont({
+  src: './../fonts/Agrandir_Variable.ttf',
 });
 
 import store from '@/store/';

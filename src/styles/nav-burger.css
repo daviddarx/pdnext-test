@@ -16,7 +16,7 @@
 
 .nav-burger__text {
   @apply absolute left-0 top-1/2 -translate-y-1/2 -translate-x-full -ml-4;
-  @apply font-bold tracking-wider pointer-events-none;
+  @apply font-bold  pointer-events-none;
   @apply transition-opacity duration-300 ease-out;
 
   .nav-burger--no-text & {

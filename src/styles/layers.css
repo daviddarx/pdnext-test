@@ -54,9 +54,7 @@
   .h5,
   h6,
   .h6 {
-    @apply font-bold;
-
-    line-height: 1.1;
+    @apply font-semibold leading-title tracking-title;
   }
 
   h1,
@@ -91,7 +89,7 @@
 
   b,
   strong {
-    @apply font-bold;
+    @apply font-semibold;
   }
 
   i,
@@ -108,7 +106,9 @@
   }
 
   .tag {
-    @apply inline-block px-[0.75em] text-base bg-white rounded-full border border-black;
+    @apply inline-block px-[0.75em] pt-[0.45em] pb-[0.2em];
+    @apply text-base leading-none uppercase tracking-tag;
+    @apply bg-white rounded-full border border-black;
     @apply transition-colors duration-300 ease-out;
   }
 
