@@ -43,6 +43,15 @@
 
 @layer utilities {
   h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold;
+  }
+
+  h1,
   .h1,
   h2,
   .h2,
@@ -54,7 +63,7 @@
   .h5,
   h6,
   .h6 {
-    @apply font-semibold leading-title tracking-title;
+    @apply leading-title tracking-title uppercase;
   }
 
   h1,
@@ -101,14 +110,6 @@
     @apply tracking-normal;
   }
 
-  .program-row-px {
-    @apply px-8;
-  }
-
-  .program-row-py {
-    @apply py-6;
-  }
-
   .tag {
     @apply inline-block px-[0.75em] pt-[0.5em] pb-[0.25em];
     @apply text-base font-semibold leading-none uppercase tracking-tag;
@@ -118,6 +119,10 @@
 
   .tag--inverted {
     @apply bg-black text-white;
+  }
+
+  .tag--sm {
+    @apply text-xs;
   }
 
   .burger-positioned {

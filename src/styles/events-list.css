@@ -4,5 +4,7 @@
 
 .events-list__title {
   @apply sticky top-0 z-10;
-  @apply program-row-px py-2 text-lg bg-black text-white;
+  @apply px-gutter pt-[1em] pb-[0.75em];
+  @apply text-base font-semibold uppercase tracking-normal;
+  @apply bg-black text-white;
 }

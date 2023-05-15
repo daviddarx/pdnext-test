@@ -43,8 +43,9 @@ module.exports = {
     extend: {
       spacing: {
         gutter: 'var(--gutter)',
-        'gutter-1/3': 'calc(var(--gutter) * 0.3)',
+        'gutter-1/4': 'calc(var(--gutter) * 0.25)',
         'gutter-1/2': 'calc(var(--gutter) * 0.5)',
+        'gutter-3/4': 'calc(var(--gutter) * 0.75)',
         'gutter-2': 'calc(var(--gutter) * 2)',
         'gutter-3': 'calc(var(--gutter) * 3)',
         'gutter-4': 'calc(var(--gutter) * 4)',

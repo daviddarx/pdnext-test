@@ -1,5 +1,6 @@
 .event {
-  @apply relative program-row-px program-row-py border-t border-black;
+  @apply relative px-gutter pt-gutter-3/4 pb-gutter-1/2;
+  @apply border-t border-black;
   @apply transition-all duration-300 ease-out;
 
   &:first-of-type {
@@ -15,16 +16,24 @@
   @apply bg-white;
 }
 
-.event__title {
-  @apply text-lg;
+.event__cols {
+  @apply flex items-start;
 }
 
-.event__date {
-  @apply font-normal;
+.event__title {
+  @apply h5 mb-[0.5em];
+}
+
+.event__subtitle {
+  @apply font-semibold;
+}
+
+.event__hour {
+  @apply relative inline-block w-[4em] -top-[0.2em] shrink-0 text-base font-normal;
 }
 
 .event__special-state {
-  @apply font-normal;
+  @apply tag tag--sm relative -top-[0.35em] !bg-transparent;
 }
 
 .event__btn {
