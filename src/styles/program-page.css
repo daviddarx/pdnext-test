@@ -9,11 +9,11 @@
 }
 
 .program-page__header {
-  @apply p-gutter text-center;
+  @apply p-gutter mb-gutter-1/2 text-center;
 }
 
 .program-page__subtitle {
-  @apply text-base tracking-normal uppercase;
+  @apply block text-base tracking-tag uppercase pb-[2em];
 }
 
 .program-page__detail {

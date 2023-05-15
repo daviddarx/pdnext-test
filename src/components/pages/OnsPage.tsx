@@ -15,8 +15,8 @@ const OnsPage: React.FC<Props> = ({ data }) => {
     <ProgramPageLayout
       header={
         <h1>
-          <span>One Night Stands</span>
-          <span className='block'>Saisonales Programm</span>
+          <span className='program-page__subtitle'>One Night Stands</span>
+          <span>Saisonales Programm</span>
         </h1>
       }
     >
