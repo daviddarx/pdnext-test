@@ -36,8 +36,8 @@ module.exports = {
       none: '1',
     },
     letterSpacing: {
-      normal: '0',
-      title: '0',
+      normal: '0.03em',
+      title: '0.005em',
       tag: '0',
     },
     extend: {
