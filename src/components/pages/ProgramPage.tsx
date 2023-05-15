@@ -93,7 +93,7 @@ const ProgramPage: React.FC<Props> = ({ data }) => {
       header={
         <Fragment>
           <h1>
-            <span className='text-base'>10. Porny Days – 23. — 27. Nov. 2022</span>
+            <span className='program-page__subtitle'>10. Porny Days – 23. — 27. Nov. 2022</span>
             <span className='block'>Festival Programm</span>
           </h1>
 

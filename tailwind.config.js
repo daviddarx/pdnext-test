@@ -38,7 +38,7 @@ module.exports = {
     letterSpacing: {
       normal: '0.03em',
       title: '0.005em',
-      tag: '0',
+      tag: '0.03em',
     },
     extend: {
       spacing: {
