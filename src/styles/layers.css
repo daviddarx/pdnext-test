@@ -122,7 +122,7 @@
   }
 
   .tag--sm {
-    @apply text-xs;
+    @apply text-xs px-[0.6em] pt-[0.40em] pb-[0.15em];
   }
 
   .burger-positioned {
