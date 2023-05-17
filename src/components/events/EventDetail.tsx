@@ -70,53 +70,57 @@ const EventDetail = () => {
           exit='exit'
           variants={panelMotionVariants}
         >
-          <header className='pr-gutter-2'>
-            <div className='block mb-gutter'>
-              {event.date.hour} – {event.date.readable}
+          <header className='event-detail__header'>
+            <div className='event-detail__date'>
+              {event.date.readable} – {event.date.hour}
             </div>
 
-            <h2 className='mb-2'>
-              <span className='block'>{event.title} </span>
+            <h2 className='event-detail__title'>
+              <span className='event-detail__title-text'>{event.title}</span>
               {event.specialstate && (
-                <span className='tag tag--inverted mt-4'>{event.specialstate}</span>
+                <span className='tag event-detail__special-state'>{event.specialstate}</span>
               )}
             </h2>
 
-            {event.subtitle && <div>{event.subtitle}</div>}
+            {event.subtitle && <div className='event-detail__subtitle'>{event.subtitle}</div>}
           </header>
 
-          <ReactMarkdown className='mt-gutter' remarkPlugins={[remarkGfm]}>
+          <ReactMarkdown className='text-content event-detail__desc' remarkPlugins={[remarkGfm]}>
             {event.desc}
           </ReactMarkdown>
 
-          <div className='mt-gutter'>
-            <strong>Ort:</strong>{' '}
-            <a href={event.eventlocationlink} target='_blank'>
-              {event.eventlocation}
-            </a>{' '}
-            – {event.eventlocationcomplement && <span>({event.eventlocationcomplement})</span>}
+          <div className='event-detail__infos'>
+            <div className='event-detail__info'>
+              <h5 className='event-detail__info-title'>Ort:</h5>
+              <div>
+                <a href={event.eventlocationlink} target='_blank'>
+                  {event.eventlocation}
+                </a>{' '}
+                – {event.eventlocationcomplement && <span>({event.eventlocationcomplement})</span>}
+              </div>
+            </div>
+
+            {event.timetable?.length !== 0 && (
+              <div className='event-detail__info'>
+                <h5 className='event-detail__info-title'>Timetable: </h5>
+                <ul>
+                  {event.timetable?.map((item) => (
+                    <li key={item.title + item.time}>
+                      <span className='event-detail__timetable-title'>{item.time}</span>{' '}
+                      <span>{item.title}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {event.price && (
+              <div className='event-detail__info'>
+                <h5 className='event-detail__info-title'>Preis</h5>
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>{event.price}</ReactMarkdown>
+              </div>
+            )}
           </div>
-
-          {event.timetable?.length !== 0 && (
-            <div className='mt-gutter-1/2'>
-              <div className='mt-gutter-1/2'></div>
-              <h5>Timetable: </h5>
-              <ul>
-                {event.timetable?.map((item) => (
-                  <li key={item.title + item.time}>
-                    <span>{item.time}</span> <span>{item.title}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {event.price && (
-            <div className='mt-gutter'>
-              <h5>Preis</h5>
-              <ReactMarkdown remarkPlugins={[remarkGfm]}>{event.price}</ReactMarkdown>
-            </div>
-          )}
 
           <div className='event-detail__tickets'>
             {event.ticketsLink && event.ticketsLinkTitle && (
@@ -131,7 +135,7 @@ const EventDetail = () => {
           </div>
 
           {event.entries && (
-            <div className=' event-detail__entries mt-gutter space-y-gutter'>
+            <div className='event-detail__entries '>
               {event.entriesObjects.map((entry) => (
                 <Entry key={entry.uuid} entry={entry} />
               ))}

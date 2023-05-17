@@ -129,6 +129,16 @@
     @apply text-xs px-[0.6em] pt-[0.40em] pb-[0.15em];
   }
 
+  .text-content {
+    p {
+      @apply mb-[1em];
+    }
+
+    & > *:last-child {
+      @apply mb-0;
+    }
+  }
+
   .burger-positioned {
     @apply fixed right-gutter mt-gutter;
 

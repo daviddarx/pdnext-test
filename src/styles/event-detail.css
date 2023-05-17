@@ -3,6 +3,60 @@
   @apply p-gutter pb-gutter-3 bg-white outline outline-1 outline-black;
 }
 
+.event-detail__header {
+  @apply pr-gutter-3;
+}
+
+.event-detail__date {
+  @apply subline;
+}
+
+.event-detail__title {
+  @apply mt-gutter-3;
+}
+
+.event-detail__title-text {
+  @apply mr-[0.3em];
+}
+
+.event-detail__special-state {
+  @apply relative -top-[0.7em];
+}
+
+.event-detail__subtitle {
+  @apply font-semibold mt-gutter-3/4;
+}
+
+.event-detail__desc {
+  @apply mt-gutter-3/4;
+}
+
+.event-detail__infos {
+  @apply grid mt-gutter;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(33.33%, 1fr));
+}
+
+.event-detail__info {
+  @apply pr-[1em];
+
+  &:last-child {
+    @apply pr-0;
+  }
+}
+
+.event-detail__timetable-title {
+  @apply subline inline-block w-[4em];
+}
+
+.event-detail__info-title {
+  @apply mb-[0.5em];
+}
+
 .event-detail__tickets {
   @apply mt-gutter sticky top-0 z-20;
+}
+
+.event-detail__entries {
+  @apply mt-gutter-2 space-y-gutter;
 }
