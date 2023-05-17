@@ -11,30 +11,31 @@ type Props = {
 
 const Entry: React.FC<Props> = ({ entry }) => {
   return (
-    <article className='entry mt-gutter-2 pb-gutter'>
-      <div className='-ml-gutter -mr-gutter'>
-        <div className='relative aspect-video overflow:hidden'>
+    <article className='entry'>
+      <div className='entry__col-full'>
+        <div className='entry__image-container'>
           {entry.image && (
             <LoadedImage
               src={entry.image}
               alt={entry.title}
               width={entry.imageWidth}
               height={entry.imageHeight}
-              className='absolute top-0 left-0 w-full h-full object-cover'
+              className='entry__image'
             />
           )}
         </div>
       </div>
-      {entry.videourl && <button>Play video</button>}
 
-      {entry.pornypickof && <div>Favorite of: {entry.pornypickof}</div>}
+      {/* {entry.videourl && <button>Play video</button>} */}
 
-      <h3 className='mt-gutter'>{entry.title}</h3>
-      <p>
+      {/* {entry.pornypickof && <div>Favorite of: {entry.pornypickof}</div>} */}
+
+      <h3 className='entry__title'>{entry.title}</h3>
+      <div className='entry__type'>
         {entry.entryType} {entry.typeComplement && <span> – {entry.typeComplement}</span>}
-      </p>
+      </div>
 
-      <ReactMarkdown className='mt-gutter' remarkPlugins={[remarkGfm]}>
+      <ReactMarkdown className='text-content entry__desc' remarkPlugins={[remarkGfm]}>
         {entry.desc}
       </ReactMarkdown>
     </article>

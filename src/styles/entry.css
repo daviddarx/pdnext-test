@@ -1,0 +1,27 @@
+.entry {
+  @apply pb-gutter;
+}
+
+.entry__col-full {
+  @apply -ml-gutter -mr-gutter;
+}
+
+.entry__image-container {
+  @apply relative aspect-video overflow-hidden;
+}
+
+.entry__image {
+  @apply absolute top-0 left-0 w-full h-full object-cover;
+}
+
+.entry__title {
+  @apply mt-gutter mb-[0.25em];
+}
+
+.entry__type {
+  @apply font-semibold;
+}
+
+.entry__desc {
+  @apply mt-gutter-3/4;
+}
