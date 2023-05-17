@@ -13,5 +13,5 @@
 
 .drawer__bg {
   @apply fixed top-0 left-0 w-screen h-screen z-30;
-  @apply bg-white/75 cursor-pointer;
+  @apply bg-pink/75 cursor-pointer;
 }
