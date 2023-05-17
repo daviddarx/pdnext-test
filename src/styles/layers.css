@@ -110,6 +110,10 @@
     @apply tracking-normal;
   }
 
+  .subline {
+    @apply text-base font-semibold tracking-tag uppercase;
+  }
+
   .tag {
     @apply inline-block px-[0.75em] pt-[0.5em] pb-[0.25em];
     @apply text-base font-semibold leading-none uppercase tracking-tag;

@@ -3,7 +3,7 @@
 }
 
 .special-announcement__title {
-  @apply text-base inline font-semibold tracking-tag uppercase;
+  @apply subline inline;
 }
 
 .special-announcement-panel__title {

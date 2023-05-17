@@ -5,6 +5,6 @@
 .events-list__title {
   @apply sticky top-0 z-10;
   @apply px-gutter pt-[1em] pb-[0.75em];
-  @apply text-base font-semibold uppercase tracking-normal;
+  @apply subline;
   @apply bg-black text-white;
 }

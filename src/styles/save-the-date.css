@@ -3,5 +3,5 @@
 }
 
 .save-the-date__title {
-  @apply text-base font-semibold tracking-tag inline;
+  @apply inline subline;
 }

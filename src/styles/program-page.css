@@ -13,7 +13,7 @@
 }
 
 .program-page__subtitle {
-  @apply block text-base tracking-tag uppercase pb-[2em];
+  @apply block subline pb-[2em];
 }
 
 .program-page__detail {
