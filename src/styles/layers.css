@@ -158,6 +158,12 @@
     @apply text-xs px-[0.6em] pt-[0.40em] pb-[0.15em];
   }
 
+  .text-link {
+    &:hover {
+      @apply opacity-50;
+    }
+  }
+
   .text-content {
     p {
       @apply mb-[1em];
