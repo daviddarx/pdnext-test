@@ -179,6 +179,20 @@
       @apply mb-[1em];
     }
 
+    ul {
+      @apply mb-[1em];
+    }
+
+    li {
+      @apply relative pl-[1.7em];
+
+      &::before {
+        content: '';
+
+        @apply absolute left-0 top-[0.7em] w-[1em] h-px bg-current;
+      }
+    }
+
     & > *:last-child {
       @apply mb-0;
     }
