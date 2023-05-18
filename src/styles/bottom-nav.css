@@ -1,15 +1,38 @@
 .bottom-nav {
   @apply grid grid-cols-2;
-  @apply mx-gutter mt-gutter;
-  @apply border border-black;
+  @apply bg-white border border-current;
 }
 
 .bottom-nav__group {
   @apply p-gutter;
 
   &:first-of-type {
-    @apply border-r border-black;
+    @apply border-r border-current;
   }
+}
+
+.bottom-nav__title {
+  @apply mb-[1em];
+}
+
+.botton-nav__links {
+  @apply space-y-[0.75em];
+}
+
+.bottom-nav__link {
+  @apply h5 font-semibold;
+
+  &:hover {
+    @apply opacity-50;
+  }
+
+  .bottom-nav__title & {
+    @apply subline;
+  }
+}
+
+.bottom-nav__link--active {
+  @apply opacity-50;
 }
 
 .bottom-nav__group .bottom-nav__socials {
