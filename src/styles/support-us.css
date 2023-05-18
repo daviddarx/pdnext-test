@@ -1,7 +1,3 @@
-.support-us {
-  @apply border-b border-black;
-}
-
 .support-us__title {
   @apply relative px-gutter;
   @apply h3 text-white text-center bg-black;
@@ -19,7 +15,6 @@
 }
 
 .support-us__content-container {
-  /* @apply max-w-[50em] mx-auto space-y-gutter-2 text-center; */
   @apply grid grid-cols-3;
   @apply border-t border-current pt-gutter-2 pl-gutter pb-gutter-2;
 }
