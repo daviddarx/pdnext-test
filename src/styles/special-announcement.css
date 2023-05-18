@@ -13,3 +13,28 @@
 .special-announcement-panel__desc {
   @apply mt-gutter;
 }
+
+@keyframes btnAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(1em);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.special-announcement__btn {
+  @apply text-link;
+  animation: btnAnimation 2s infinite;
+}
+
+.special-announcement__btn-text {
+  @apply pr-[0.25em];
+}
+
+.special-announcement__btn-icon {
+  @apply relative inline-block h-[0.9em] w-auto -top-[0.07em];
+}

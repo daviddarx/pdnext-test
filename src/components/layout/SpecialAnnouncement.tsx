@@ -5,6 +5,7 @@ import remarkGfm from 'remark-gfm';
 import { SpecialAnnouncement } from '@/types/SpecialAnnouncement';
 
 import Drawer from '@/components/ui/Drawer';
+import ArrowIcon from '@/components/icons/ArrowIcon';
 
 type Props = {
   data: SpecialAnnouncement;
@@ -26,7 +27,8 @@ const SpecialAnnouncement: React.FC<Props> = ({ data }) => {
       <article className='special-announcement'>
         <h2 className='special-announcement__title'>Special Announcement</h2>
         <button className='special-announcement__btn' onClick={open}>
-          {data.buttonTitle}
+          <span className='special-announcement__btn-text'>{data.buttonTitle}</span>{' '}
+          <ArrowIcon className='special-announcement__btn-icon' />
         </button>
       </article>
       <Drawer isOpened={isOpened} onClose={close}>

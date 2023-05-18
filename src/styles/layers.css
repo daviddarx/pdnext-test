@@ -110,6 +110,14 @@
     @apply tracking-normal;
   }
 
+  .text-link {
+    @apply transition-opacity duration-300 ease-out-quart;
+
+    &:hover {
+      @apply opacity-50;
+    }
+  }
+
   .subline {
     @apply text-base font-semibold tracking-tag uppercase;
   }
