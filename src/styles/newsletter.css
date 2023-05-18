@@ -1,15 +1,24 @@
 .newsletter {
-  @apply mt-gutter mx-gutter;
+  @apply my-gutter-2 mx-gutter text-center;
 }
 
 .newsletter__subtitle {
-  @apply block text-base;
+  @apply subline pb-[2em];
 }
 
 .newsletter__title {
-  @apply block h2;
+  @apply block h2 font-semibold pb-[1em];
 }
 
 .newsletter__field {
-  @apply border border-black;
+  @apply w-[20em] mr-[1em] tag !normal-case;
+}
+
+.newsletter__button {
+  @apply tag--inverted;
+}
+
+input.newsletter__field,
+input.newsletter__button {
+  @apply h-[3em] !px-[1.5em];
 }
