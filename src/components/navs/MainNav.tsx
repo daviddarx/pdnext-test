@@ -53,40 +53,44 @@ const MainNav = () => {
     <Drawer isOpened={isNavigationOpened} onClose={closeNavigation}>
       <div className='main-nav'>
         <h2 className='hidden'>Navigation</h2>
-        <ul className='main-nav__nav'>
-          {mainNavItems.map((item) => (
-            <li key={item.link}>
-              <ActiveLink
-                className='main-nav__link main-nav__link--main'
-                activeClassName='main-nav__link--active'
-                href={item.link}
-              >
-                {item.title}
-                <span className='main-nav__link-detail'>{item.complement}</span>
-              </ActiveLink>
-            </li>
-          ))}
-        </ul>
+        <div>
+          <ul className='main-nav__nav main-nav__nav--main'>
+            {mainNavItems.map((item) => (
+              <li key={item.link}>
+                <ActiveLink
+                  className='main-nav__link main-nav__link--main'
+                  activeClassName='main-nav__link--active'
+                  href={item.link}
+                >
+                  <span className='main-nav__link-text'>{item.title}</span>
+                  <span className='main-nav__link-detail'>{item.complement}</span>
+                </ActiveLink>
+              </li>
+            ))}
+          </ul>
 
-        <ul className='main-nav__nav'>
-          {secondaryNavItems.map((item) => (
-            <li key={item.link}>
-              <ActiveLink
-                className='main-nav__link main-nav__link--secondary'
-                activeClassName='main-nav__link--active'
-                href={item.link}
-              >
-                {item.title}
-              </ActiveLink>
-            </li>
-          ))}
-        </ul>
+          <ul className='main-nav__nav main-nav__nav--secondary'>
+            {secondaryNavItems.map((item) => (
+              <li key={item.link}>
+                <ActiveLink
+                  className='main-nav__link main-nav__link--secondary'
+                  activeClassName='main-nav__link--active'
+                  href={item.link}
+                >
+                  {item.title}
+                </ActiveLink>
+              </li>
+            ))}
+          </ul>
+        </div>
 
-        <SocialNav />
+        <div>
+          <SocialNav className='main-nav__socials' />
 
-        <button className='main-nav__support' onClick={goToSupportUs}>
-          Unterstützen Sie uns
-        </button>
+          <button className='main-nav__support tag' onClick={goToSupportUs}>
+            Unterstützen Sie uns
+          </button>
+        </div>
       </div>
     </Drawer>
   );

@@ -1,26 +1,62 @@
-.main-nav  {
+.main-nav {
+  @apply flex flex-col min-h-full justify-between;
 }
 
 .main-nav__nav {
-  @apply flex flex-col space-y-3 mb-gutter;
+  @apply mb-gutter;
+}
+
+.main-nav__nav--main {
+  @apply space-y-[0.5em];
+}
+
+.main-nav__nav--secondary {
+  @apply space-y-[0.75em];
 }
 
 .main-nav__link {
-  @apply inline-block;
+  @apply relative inline-block;
 }
 
 .main-nav__link--main {
-  @apply font-bold;
+  @apply mb-gutter-1/2;
+}
+
+.main-nav__link--secondary {
+  @apply h5 font-semibold;
 }
 
 .main-nav__link--active {
-  @apply opacity-50;
+  @apply text-white;
+
+  &::before {
+    content: '';
+
+    @apply absolute -left-gutter w-gutter-3/4 h-px bg-white;
+  }
+}
+
+.main-nav__link--active.main-nav__link--main::before {
+  @apply top-[1.7em];
+}
+
+.main-nav__link--active.main-nav__link--secondary::before {
+  @apply top-[0.5em];
+}
+
+.main-nav__link-text {
+  @apply block h2 font-semibold mb-[0.1em];
 }
 
 .main-nav__link-detail {
-  @apply block font-normal;
+  @apply subline;
 }
 
 .main-nav__support {
   @apply mt-gutter;
+
+  &.tag {
+    /* fix weird bug with alignement there */
+    @apply pb-[0.5em] pt-[0.55em];
+  }
 }

@@ -10,7 +10,7 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
       white: '#ffffff',
-      black: '#000000',
+      black: 'hsl(200, 100%, 7%)',
       pink: 'hsl(0, 80%, 90%)',
     },
     fontWeight: {
@@ -82,6 +82,12 @@ module.exports = {
         'in-out-circ': 'cubic-bezier(0.785, 0.135, 0.15, 0.86)',
         'in-out-back': 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
       },
+    },
+  },
+  variants: {
+    extend: {
+      backgroundColor: ['dark'],
+      textColor: ['dark'],
     },
   },
   plugins: [],

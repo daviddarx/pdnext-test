@@ -4,11 +4,13 @@
 .drawer__panel {
   @apply fixed top-0 right-0 z-40;
   @apply w-1/2 h-screen p-gutter;
-  @apply bg-black text-white;
 }
 
 .drawer__close {
   @apply fixed top-gutter right-gutter;
+
+  width: var(--size-burger);
+  height: var(--size-burger);
 }
 
 .drawer__bg {

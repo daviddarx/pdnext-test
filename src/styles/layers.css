@@ -21,7 +21,12 @@
 
   .close-button {
     @apply flex items-center justify-center;
-    @apply text-black outline outline-1 -outline-offset-1 outline-black rounded-full;
+    @apply text-current outline outline-1 -outline-offset-1 outline-current rounded-full;
+    @apply transition-transform duration-300 ease-out-quart;
+
+    &:hover {
+      @apply rotate-90;
+    }
   }
 
   .close-button__text {
@@ -96,6 +101,10 @@
     @apply text-2xl;
   }
 
+  a {
+    @apply transition-all duration-200 ease-out-quart;
+  }
+
   b,
   strong {
     @apply font-semibold;
@@ -127,6 +136,18 @@
     @apply text-base font-semibold leading-none uppercase tracking-tag;
     @apply bg-white rounded-full border border-black;
     @apply transition-colors duration-300 ease-out;
+
+    &:hover {
+      @apply bg-black text-white;
+    }
+
+    .dark & {
+      @apply bg-black text-white border-white;
+
+      &:hover {
+        @apply bg-white text-black;
+      }
+    }
   }
 
   .tag--inverted {
@@ -166,5 +187,15 @@
     transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), var(--tw-translate-z))
       rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
       scale3d(var(--tw-scale-x), var(--tw-scale-y), var(--tw-scale-z));
+  }
+
+  .dark {
+    @apply bg-black text-pink;
+
+    & a {
+      &:hover {
+        @apply text-white;
+      }
+    }
   }
 }

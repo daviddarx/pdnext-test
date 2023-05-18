@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import eases from '@/utils/eases';
 import { setFocusables, resetFocusables, loopFocusables } from '@/utils/get-focusables';
 
+import CloseButton from '@/components/ui/CloseButton';
+
 const panelMotionVariants = {
   initial: {
     transform: 'translateX(100%) translateZ(0)',
@@ -96,16 +98,14 @@ const Drawer: React.FC<Props> = ({ children, isOpened, onClose }) => {
                 <motion.div
                   key='panel'
                   ref={panelRef}
-                  className='drawer__panel'
+                  className='drawer__panel dark'
                   initial='initial'
                   animate='animate'
                   exit='exit'
                   variants={panelMotionVariants}
                 >
                   {children}
-                  <button className='drawer__close' onClick={onClose}>
-                    Close
-                  </button>
+                  <CloseButton className='drawer__close' onClick={onClose} />
                 </motion.div>
               )}
 
