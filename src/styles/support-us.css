@@ -6,12 +6,25 @@
   padding-bottom: calc(var(--gutter) * 2 + 0em);
 }
 
+@keyframes heartAnimation {
+  0% {
+    transform: rotate(25deg);
+  }
+
+  100% {
+    transform: rotate(-25deg);
+  }
+}
+
 .support-us__heart {
-  @apply inline-block ml-10 w-5 h-auto;
+  @apply inline-block ml-10 w-[1.2em] h-auto -mt-[0.2em];
+
+  animation: heartAnimation infinite ease-in-out 1s;
+  animation-direction: alternate-reverse;
 }
 
 .support-us__close {
-  @apply absolute top-1/2 right-gutter -translate-y-1/2 -mr-2 w-8 h-8;
+  @apply absolute top-1/2 right-gutter -translate-y-1/2 -mr-2 w-gutter h-gutter;
 }
 
 .support-us__content-container {
