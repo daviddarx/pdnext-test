@@ -42,5 +42,5 @@
 }
 
 .special-announcement-panel__desc {
-  @apply mt-gutter;
+  @apply mt-gutter-2;
 }
