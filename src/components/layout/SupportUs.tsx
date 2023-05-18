@@ -17,14 +17,15 @@ const motionVariants = {
     opacity: 0,
     transform: 'translateY(calc(var(--gutter)*2)) translateZ(0)',
   },
-  animate: {
+  animate: (x: number) => ({
     opacity: 1,
     transform: 'translateY(0) translateZ(0)',
     transition: {
-      duration: 1,
-      ease: eases.inOutQuart,
+      delay: 0.3 + x * 0.1,
+      duration: 0.75,
+      ease: eases.outQuart,
     },
-  },
+  }),
   exit: {
     opacity: 0,
     transition: {
@@ -87,7 +88,7 @@ const SupportUs = ({ data }: Props) => {
       >
         <div className='support-us__content '>
           <div className='support-us__content-container'>
-            {data.map((item) => (
+            {data.map((item, index) => (
               <motion.div
                 className='support-us__slot'
                 key={item.title}
@@ -95,6 +96,7 @@ const SupportUs = ({ data }: Props) => {
                 animate='animate'
                 exit='exit'
                 variants={motionVariants}
+                custom={index}
               >
                 <h3 className='support-us__slot-title'>{item.title}</h3>
                 <ReactMarkdown
