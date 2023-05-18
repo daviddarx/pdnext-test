@@ -35,7 +35,10 @@ const SpecialAnnouncement: React.FC<Props> = ({ data }) => {
         <div className='special-announcement-panel'>
           <span className='special-announcement-panel__subline'>Special Announcement</span>
           <h2 className='special-announcement-panel__title'>{data.title}</h2>
-          <ReactMarkdown className='special-announcement-panel__desc' remarkPlugins={[remarkGfm]}>
+          <ReactMarkdown
+            className='text-content special-announcement-panel__desc'
+            remarkPlugins={[remarkGfm]}
+          >
             {data.desc}
           </ReactMarkdown>
         </div>

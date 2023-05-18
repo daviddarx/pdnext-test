@@ -6,14 +6,6 @@
   @apply subline inline;
 }
 
-.special-announcement-panel__title {
-  @apply mt-gutter;
-}
-
-.special-announcement-panel__desc {
-  @apply mt-gutter;
-}
-
 @keyframes btnAnimation {
   0% {
     transform: translateX(0);
@@ -37,4 +29,18 @@
 
 .special-announcement__btn-icon {
   @apply relative inline-block h-[0.9em] w-auto -top-[0.07em];
+}
+
+/* DRAWER'S PANEL */
+
+.special-announcement-panel__subline {
+  @apply subline;
+}
+
+.special-announcement-panel__title {
+  @apply mt-[0.2em];
+}
+
+.special-announcement-panel__desc {
+  @apply mt-gutter;
 }

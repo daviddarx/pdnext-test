@@ -4,6 +4,8 @@
 .drawer__panel {
   @apply fixed top-0 right-0 z-40;
   @apply w-1/2 h-screen p-gutter;
+
+  padding-right: calc(var(--gutter) * 2 + var(--size-burger));
 }
 
 .drawer__close {

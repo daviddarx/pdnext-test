@@ -159,6 +159,22 @@
   }
 
   .text-content {
+    a {
+      @apply underline;
+
+      &:hover {
+        @apply no-underline;
+      }
+
+      .dark & {
+        @apply text-white;
+
+        &:hover {
+          @apply text-pink;
+        }
+      }
+    }
+
     p {
       @apply mb-[1em];
     }
