@@ -1,9 +1,13 @@
 .partners {
-  @apply mt-gutter mx-gutter;
+  @apply mt-gutter-3 mx-gutter;
+}
+
+.partners__title {
+  @apply subline text-center;
 }
 
 .partners__list {
-  @apply flex flex-wrap;
+  @apply flex flex-wrap mt-gutter;
 }
 
 .partner {
@@ -11,11 +15,16 @@
 }
 
 .partner__link {
-  @apply block aspect-[800/480];
+  @apply flex items-center justify-center aspect-[800/480];
+  @apply transition-colors duration-300 ease-out-quart;
+
+  &:hover {
+    @apply bg-white;
+  }
 }
 
 .partner__logo {
-  @apply w-full h-auto;
+  @apply w-3/4 h-auto;
 }
 
 .partner__logo-img {
@@ -23,5 +32,11 @@
 }
 
 .partner__label {
-  @apply absolute bottom-0 left-0;
+  @apply absolute bottom-0 tag;
+  @apply translate-y-1/2 scale-0 opacity-0;
+  @apply transition-all duration-300 ease-in-out-quart;
+
+  .partner__link:hover & {
+    @apply scale-100 opacity-100;
+  }
 }
