@@ -159,22 +159,6 @@
   }
 
   .text-content {
-    a {
-      @apply underline;
-
-      &:hover {
-        @apply no-underline;
-      }
-
-      .dark & {
-        @apply text-white;
-
-        &:hover {
-          @apply text-pink;
-        }
-      }
-    }
-
     p {
       @apply mb-[1em];
     }
@@ -191,6 +175,26 @@
 
         @apply absolute left-0 top-[0.7em] w-[1em] h-px bg-current;
       }
+    }
+
+    a {
+      @apply underline;
+
+      &:hover {
+        @apply no-underline;
+      }
+
+      .dark & {
+        @apply text-white;
+
+        &:hover {
+          @apply text-pink;
+        }
+      }
+    }
+
+    hr {
+      @apply border-t border-current;
     }
 
     & > *:last-child {
@@ -222,10 +226,19 @@
   .dark {
     @apply bg-black text-pink;
 
-    & a {
+    a {
       &:hover {
         @apply text-white;
       }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @apply text-white;
     }
   }
 }

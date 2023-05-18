@@ -5,7 +5,6 @@ import eases from '@/utils/eases';
 
 const motionVariants = {
   closed: {
-    opacity: 0,
     height: 0,
     transition: {
       duration: 0.5,
@@ -13,7 +12,6 @@ const motionVariants = {
     },
   },
   opened: {
-    opacity: 1,
     height: 'auto',
     transition: {
       duration: 0.75,
