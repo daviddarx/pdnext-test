@@ -2,13 +2,37 @@ import React, { useEffect, useRef, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import { motion } from 'framer-motion';
 
+import eases from '@/utils/eases';
 import { uiStateType } from '@/store/ui-slice';
 import { SupportUsSlot } from '@/types/SupportUsSlot';
 
 import HeartIcon from '@/components/icons/HeartIcon';
 import CloseIcon from '@/components/icons/CloseIcon';
 import Accordion from '@/components/ui/Accordion';
+
+const motionVariants = {
+  initial: {
+    opacity: 0,
+    transform: 'translateY(calc(var(--gutter)*2)) translateZ(0)',
+  },
+  animate: {
+    opacity: 1,
+    transform: 'translateY(0) translateZ(0)',
+    transition: {
+      duration: 1,
+      ease: eases.inOutQuart,
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      duration: 0.5,
+      ease: eases.outQuart,
+    },
+  },
+};
 
 type TimeoutType = ReturnType<typeof setTimeout>;
 
@@ -64,7 +88,14 @@ const SupportUs = ({ data }: Props) => {
         <div className='support-us__content '>
           <div className='support-us__content-container'>
             {data.map((item) => (
-              <div className='support-us__slot' key={item.title}>
+              <motion.div
+                className='support-us__slot'
+                key={item.title}
+                initial='initial'
+                animate='animate'
+                exit='exit'
+                variants={motionVariants}
+              >
                 <h3 className='support-us__slot-title'>{item.title}</h3>
                 <ReactMarkdown
                   className='text-content support-us__slot-desc'
@@ -90,7 +121,7 @@ const SupportUs = ({ data }: Props) => {
                     />
                   </form>
                 )}
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
