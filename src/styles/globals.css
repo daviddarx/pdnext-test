@@ -32,13 +32,37 @@
 @tailwind utilities;
 
 :root {
-  --font-s: 1.05vw;
-  --gutter: 1vw;
-  --h-logo: 3vw;
+  --font-s: 4.5vw;
+  --gutter: 5vw;
+  --h-logo: 17vw;
   --size-burger: calc(var(--h-logo) * 0.75);
   --posy-burger: calc((var(--size-burger) + var(--gutter)) * -1); /* overwritten from Header */
 
+  @screen sm {
+    --font-s: 3vw;
+    --gutter: 4vw;
+    --h-logo: 12vw;
+  }
+
+  @screen md {
+    --font-s: 2.5vw;
+    --gutter: 4vw;
+    --h-logo: 12vw;
+  }
+
   @screen lg {
+    --font-s: 2vw;
+    --gutter: 3vw;
+    --h-logo: 10vw;
+  }
+
+  @screen xl {
+    --font-s: 1.5vw;
+    --h-logo: 6vw;
+  }
+
+  @screen 2xl {
+    --font-s: 1.05vw;
     --gutter: 2.5vw;
     --h-logo: 6vw;
   }
