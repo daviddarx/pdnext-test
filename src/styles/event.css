@@ -7,8 +7,10 @@
     @apply border-none;
   }
 
-  &:hover {
-    @apply bg-white;
+  @media (hover: hover) {
+    &:hover {
+      @apply bg-white;
+    }
   }
 }
 

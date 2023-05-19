@@ -41,8 +41,10 @@
     @apply w-full h-full fill-white;
     @apply transition-transform ease-in-quart;
 
-    .nav-burger:hover & {
-      @apply ease-out-quart;
+    @media (hover: hover) {
+      .nav-burger:hover & {
+        @apply ease-out-quart;
+      }
     }
   }
 }
@@ -51,8 +53,10 @@
   svg {
     @apply -translate-x-1/2 -translate-y-1/2  duration-200;
 
-    .nav-burger:hover & {
-      @apply -translate-x-px -translate-y-px duration-700;
+    @media (hover: hover) {
+      .nav-burger:hover & {
+        @apply -translate-x-px -translate-y-px duration-700;
+      }
     }
   }
 }
@@ -61,8 +65,10 @@
   svg {
     @apply translate-x-1/2 translate-y-1/2 duration-400;
 
-    .nav-burger:hover & {
-      @apply -translate-x-px -translate-y-px duration-1000;
+    @media (hover: hover) {
+      .nav-burger:hover & {
+        @apply -translate-x-px -translate-y-px duration-1000;
+      }
     }
   }
 }

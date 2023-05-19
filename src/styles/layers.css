@@ -74,8 +74,10 @@
   .text-link {
     @apply transition-opacity duration-300 ease-out-quart;
 
-    &:hover {
-      @apply opacity-50;
+    @media (hover: hover) {
+      &:hover {
+        @apply opacity-50;
+      }
     }
   }
 
@@ -97,13 +99,17 @@
   a.tag,
   button.tag,
   [type='submit'].tag {
-    &:hover {
-      @apply bg-black text-white;
+    @media (hover: hover) {
+      &:hover {
+        @apply bg-black text-white;
+      }
     }
 
     .dark & {
-      &:hover {
-        @apply bg-white text-black;
+      @media (hover: hover) {
+        &:hover {
+          @apply bg-white text-black;
+        }
       }
     }
   }
@@ -115,8 +121,10 @@
   a.tag--inverted,
   button.tag--inverted,
   [type='submit'].tag--inverted {
-    &:hover {
-      @apply bg-white text-black;
+    @media (hover: hover) {
+      &:hover {
+        @apply bg-white text-black;
+      }
     }
   }
 
@@ -125,8 +133,10 @@
   }
 
   .text-link {
-    &:hover {
-      @apply opacity-50;
+    @media (hover: hover) {
+      &:hover {
+        @apply opacity-50;
+      }
     }
   }
 
@@ -151,16 +161,18 @@
 
     a {
       @apply underline;
-
-      &:hover {
-        @apply no-underline;
+      @media (hover: hover) {
+        &:hover {
+          @apply no-underline;
+        }
       }
 
       .dark & {
         @apply text-white;
-
-        &:hover {
-          @apply text-pink;
+        @media (hover: hover) {
+          &:hover {
+            @apply text-pink;
+          }
         }
       }
     }
@@ -199,8 +211,10 @@
     @apply bg-black text-pink;
 
     a {
-      &:hover {
-        @apply text-white;
+      @media (hover: hover) {
+        &:hover {
+          @apply text-white;
+        }
       }
     }
 
@@ -240,9 +254,10 @@
     @apply flex items-center justify-center;
     @apply text-current outline outline-1 -outline-offset-1 outline-current rounded-full;
     @apply transition-transform duration-300 ease-out-quart;
-
-    &:hover {
-      @apply rotate-90;
+    @media (hover: hover) {
+      &:hover {
+        @apply rotate-90;
+      }
     }
   }
 

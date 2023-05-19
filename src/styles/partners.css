@@ -18,8 +18,10 @@
   @apply flex items-center justify-center aspect-[800/480];
   @apply transition-colors duration-300 ease-out-quart;
 
-  &:hover {
-    @apply bg-white;
+  @media (hover: hover) {
+    &:hover {
+      @apply bg-white;
+    }
   }
 }
 
@@ -36,7 +38,9 @@
   @apply translate-y-1/2 scale-0 opacity-0;
   @apply transition-all duration-300 ease-in-out-quart;
 
-  .partner__link:hover & {
-    @apply scale-100 opacity-100;
+  @media (hover: hover) {
+    .partner__link:hover & {
+      @apply scale-100 opacity-100;
+    }
   }
 }
