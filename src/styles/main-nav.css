@@ -11,7 +11,7 @@
 }
 
 .main-nav__nav--secondary {
-  @apply space-y-[0.75em];
+  @apply space-y-[0.3em] sm:space-y-[0.2em] lg:space-y-[0.75em];
 }
 
 .main-nav__link {
@@ -20,6 +20,8 @@
 
 .main-nav__link--main {
   @apply mb-gutter-1/2;
+
+  padding-right: calc(var(--gutter) + var(--size-burger));
 }
 
 .main-nav__link--secondary {
@@ -28,20 +30,6 @@
 
 .main-nav__link--active {
   @apply text-white;
-
-  &::before {
-    content: '';
-
-    @apply absolute -left-gutter w-gutter-3/4 h-px bg-white;
-  }
-}
-
-.main-nav__link--active.main-nav__link--main::before {
-  @apply top-[1.7em];
-}
-
-.main-nav__link--active.main-nav__link--secondary::before {
-  @apply top-[0.5em];
 }
 
 .main-nav__link-text {
@@ -53,10 +41,24 @@
 }
 
 .main-nav__support {
-  @apply mt-gutter;
+  @apply mt-gutter-3/4;
 
   &.tag {
     /* fix weird bug with alignement there */
     @apply pb-[0.5em] pt-[0.55em];
+  }
+}
+
+.main-nav__socials {
+  @apply mt-gutter-2 xl:mt-gutter;
+
+  @screen xl {
+    ul {
+      @apply flex flex-wrap;
+    }
+
+    li {
+      @apply mr-[1em];
+    }
   }
 }

@@ -1,11 +1,15 @@
-.drawer {
-}
-
 .drawer__panel {
   @apply fixed top-0 right-0 z-40;
-  @apply w-1/2 h-screen p-gutter;
 
-  padding-right: calc(var(--gutter) * 2 + var(--size-burger));
+  width: calc(100vw - var(--gutter) * 2);
+
+  @screen lg {
+    @apply w-1/2;
+  }
+}
+
+.drawer__content {
+  @apply h-screen scrollable p-gutter;
 }
 
 .drawer__close {

@@ -26,6 +26,7 @@ module.exports = {
       white: '#ffffff',
       black: 'hsl(200, 100%, 7%)',
       pink: 'hsl(0, 80%, 90%)',
+      pinkScrollable: 'hsla(0, 80%, 90%, 0.65)',
     },
     fontWeight: {
       normal: '400',

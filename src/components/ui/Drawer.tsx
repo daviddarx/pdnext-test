@@ -104,7 +104,7 @@ const Drawer: React.FC<Props> = ({ children, isOpened, onClose }) => {
                   exit='exit'
                   variants={panelMotionVariants}
                 >
-                  {children}
+                  <div className='drawer__content'>{children}</div>
                   <CloseButton className='drawer__close' onClick={onClose} />
                 </motion.div>
               )}

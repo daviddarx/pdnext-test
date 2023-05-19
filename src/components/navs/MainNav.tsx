@@ -82,14 +82,14 @@ const MainNav = () => {
               </li>
             ))}
           </ul>
-        </div>
-
-        <div>
-          <SocialNav className='main-nav__socials' />
 
           <button className='main-nav__support tag' onClick={goToSupportUs}>
             Unterstützen Sie uns
           </button>
+        </div>
+
+        <div>
+          <SocialNav className='main-nav__socials' />
         </div>
       </div>
     </Drawer>
