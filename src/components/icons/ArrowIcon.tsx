@@ -10,12 +10,11 @@ const ArrowIcon: React.FC<Props> = ({ className }) => {
       fill='none'
       viewBox='0 0 23 11'
     >
-      <g stroke='currentColor' stroke-linecap='round' clip-path='url(#a)'>
+      <g stroke='currentColor' strokeLinecap='round' clipPath='url(#a)'>
         <path strokeWidth='1px' vectorEffect='non-scaling-stroke' d='M1 5.5h21' />
         <path
           strokeWidth='1px'
           vectorEffect='non-scaling-stroke'
-          stroke-linejo
           in='round'
           d='m18 10 4-4.5L18 1'
         />
