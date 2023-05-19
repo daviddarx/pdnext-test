@@ -1,9 +1,19 @@
 .special-announcement {
-  @apply space-x-4;
+  @screen sm {
+    @apply text-right;
+  }
+
+  @screen xl {
+    @apply space-x-4 text-left;
+  }
 }
 
 .special-announcement__title {
-  @apply subline inline;
+  @apply hidden;
+
+  @screen xl {
+    @apply inline subline;
+  }
 }
 
 @keyframes btnAnimation {
@@ -19,8 +29,19 @@
 }
 
 .special-announcement__btn {
-  @apply text-link;
-  animation: btnAnimation 2s infinite;
+  @screen max-sm {
+    @apply mt-[0.25em];
+  }
+
+  @screen max-xl {
+    @apply tag;
+  }
+
+  @screen xl {
+    @apply text-link;
+
+    animation: btnAnimation 2s infinite;
+  }
 }
 
 .special-announcement__btn-text {

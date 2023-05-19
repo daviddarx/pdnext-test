@@ -1,7 +1,23 @@
 .save-the-date {
-  @apply space-x-4;
+  @apply text-xs uppercase;
+
+  @screen sm {
+    @apply pt-[0.2em] text-left self-center;
+  }
+
+  @screen md {
+    @apply text-base;
+  }
+
+  @screen xl {
+    @apply space-x-4 pt-0 normal-case;
+  }
 }
 
 .save-the-date__title {
-  @apply inline subline;
+  @apply hidden;
+
+  @screen lg {
+    @apply inline subline;
+  }
 }

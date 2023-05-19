@@ -3,8 +3,17 @@
 }
 
 .header__top-bar {
-  @apply grid grid-cols-2 px-gutter pt-[0.7em] pb-[0.5em];
-  @apply border-b border-black;
+  @apply px-gutter py-[0.5em] pb-[0.75em];
+  @apply bg-white text-center;
+
+  @screen sm {
+    @apply flex justify-between px-gutter py-gutter;
+    @apply bg-transparent border-b border-black;
+  }
+
+  @screen xl {
+    @apply grid grid-cols-2 pt-[0.8em] pb-[0.5em];
+  }
 }
 
 .header__logo-link {
