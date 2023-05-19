@@ -30,7 +30,7 @@
 
 .special-announcement__btn {
   @screen max-sm {
-    @apply mt-[0.25em];
+    @apply mt-[0.5em] !text-xs;
   }
 
   @screen max-xl {

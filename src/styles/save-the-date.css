@@ -1,5 +1,5 @@
 .save-the-date {
-  @apply text-xs uppercase;
+  @apply text-xs font-semibold uppercase;
 
   @screen sm {
     @apply pt-[0.2em] text-left self-center;
@@ -10,7 +10,7 @@
   }
 
   @screen xl {
-    @apply space-x-4 pt-0 normal-case;
+    @apply space-x-4 pt-0 normal-case font-normal;
   }
 }
 
