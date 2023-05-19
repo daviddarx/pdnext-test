@@ -9,7 +9,7 @@
 }
 
 .drawer__content {
-  @apply h-screen scrollable p-gutter;
+  @apply h-screen scrollable p-gutter overflow-x-hidden;
 }
 
 .drawer__close {

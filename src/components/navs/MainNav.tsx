@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { motion } from 'framer-motion';
 
+import drawerChildreMotionVariants from '@/utils/drawer-children-animation';
 import { uiActions } from '@/store';
 import { uiStateType } from '@/store/ui-slice';
 
@@ -54,7 +56,14 @@ const MainNav = () => {
       <div className='main-nav'>
         <h2 className='hidden'>Navigation</h2>
         <div>
-          <ul className='main-nav__nav main-nav__nav--main'>
+          <motion.ul
+            className='main-nav__nav main-nav__nav--main'
+            key='nav-main'
+            initial='initial'
+            animate='animate'
+            variants={drawerChildreMotionVariants}
+            custom={0}
+          >
             {mainNavItems.map((item) => (
               <li key={item.link}>
                 <ActiveLink
@@ -67,9 +76,16 @@ const MainNav = () => {
                 </ActiveLink>
               </li>
             ))}
-          </ul>
+          </motion.ul>
 
-          <ul className='main-nav__nav main-nav__nav--secondary'>
+          <motion.ul
+            className='main-nav__nav main-nav__nav--secondary'
+            key='nav-secondary'
+            initial='initial'
+            animate='animate'
+            variants={drawerChildreMotionVariants}
+            custom={1}
+          >
             {secondaryNavItems.map((item) => (
               <li key={item.link}>
                 <ActiveLink
@@ -81,16 +97,30 @@ const MainNav = () => {
                 </ActiveLink>
               </li>
             ))}
-          </ul>
+          </motion.ul>
 
-          <button className='main-nav__support tag' onClick={goToSupportUs}>
+          <motion.button
+            className='main-nav__support tag'
+            onClick={goToSupportUs}
+            key='support'
+            initial='initial'
+            animate='animate'
+            variants={drawerChildreMotionVariants}
+            custom={2}
+          >
             Unterstützen Sie uns
-          </button>
+          </motion.button>
         </div>
 
-        <div>
+        <motion.div
+          key='socials'
+          initial='initial'
+          animate='animate'
+          variants={drawerChildreMotionVariants}
+          custom={3}
+        >
           <SocialNav className='main-nav__socials' />
-        </div>
+        </motion.div>
       </div>
     </Drawer>
   );
