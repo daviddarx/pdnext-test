@@ -6,6 +6,20 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      'max-sm': { max: '639px' },
+      sm: '640px',
+      'max-md': { max: '767px' },
+      md: '768px',
+      'max-lg': { max: '1023px' },
+      lg: '1024px',
+      'max-xl': { max: '1279px' },
+      xl: '1280px',
+      'max-2xl': { max: '1535px' },
+      '2xl': '1536px',
+      'max-3xl': { max: '1919px' },
+      '3xl': '1920px',
+    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
