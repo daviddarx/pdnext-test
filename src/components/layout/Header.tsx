@@ -24,12 +24,6 @@ const Header: React.FC<Props> = ({ commonPageData }) => {
     commonPageData.specialAnnouncementData.buttonTitle.trim().length > 0;
   const hasSaveTheDate = commonPageData.saveTheDateData.title.trim().length > 0;
 
-  const handleResize = useCallback(() => {
-    if (topBarRef.current) {
-      topbarHeight.current = topBarRef.current.offsetHeight;
-    }
-  }, []);
-
   const handleScroll = useCallback(() => {
     const currentScrollTop = window.scrollY;
 
@@ -59,6 +53,14 @@ const Header: React.FC<Props> = ({ commonPageData }) => {
       document.body.style.setProperty('--height-topbar', visibleTopbarHeight + 'px');
     }
   }, [dispatch]);
+
+  const handleResize = useCallback(() => {
+    if (topBarRef.current) {
+      topbarHeight.current = topBarRef.current.offsetHeight;
+
+      handleScroll();
+    }
+  }, [handleScroll]);
 
   useEffect(() => {
     window.addEventListener('resize', handleResize);
