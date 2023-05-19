@@ -36,7 +36,7 @@
   --gutter: 5vw;
   --h-logo: 17vw;
   --size-burger: calc(var(--h-logo) * 0.75);
-  --posy-burger: calc((var(--size-burger) + var(--gutter)) * -1); /* overwritten from Header */
+  --height-topbar: calc((var(--size-burger) + var(--gutter)) * -1); /* overwritten from Header */
 
   @screen sm {
     --font-s: 3vw;

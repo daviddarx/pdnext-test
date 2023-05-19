@@ -56,7 +56,7 @@ const Header: React.FC<Props> = ({ commonPageData }) => {
     }
 
     if (document?.body) {
-      document.body.style.setProperty('--posy-burger', visibleTopbarHeight + 'px');
+      document.body.style.setProperty('--height-topbar', visibleTopbarHeight + 'px');
     }
   }, [dispatch]);
 

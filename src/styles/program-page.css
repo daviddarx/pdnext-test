@@ -25,17 +25,19 @@
 }
 
 .program-page__close {
-  @apply burger-positioned z-20;
+  @apply fixed z-20 right-gutter top-gutter;
   @apply bg-white;
-  @apply transition-all duration-500 ease-out-back;
+  @apply transform-3d transition-transform duration-500 ease-out-back;
 
   width: calc(var(--size-burger) - 2px);
   height: calc(var(--size-burger) - 2px);
   margin-right: 1px;
+
+  --tw-translate-y: var(--height-topbar);
 }
 
 .program-page__close--nav-opened {
-  top: calc(var(--posy-burger) + var(--size-burger) + var(--gutter) * 0.5);
+  --tw-translate-y: calc(var(--height-topbar) + var(--size-burger) + var(--gutter) * 0.5);
 }
 
 .program-page__close--disabled {

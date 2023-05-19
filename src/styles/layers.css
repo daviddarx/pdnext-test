@@ -186,12 +186,6 @@
     }
   }
 
-  .burger-positioned {
-    @apply fixed right-gutter mt-gutter;
-
-    top: var(--posy-burger);
-  }
-
   .transform-3d {
     --tw-translate-x: 0;
     --tw-translate-y: 0;

@@ -1,17 +1,18 @@
 .nav-burger {
-  @apply burger-positioned z-20;
-  @apply block rounded-full;
-  @apply bg-black border border-pink;
-  @apply transition-all duration-500 ease-out-back;
+  @apply fixed z-20 right-gutter top-gutter;
+  @apply bg-black border border-pink rounded-full;
+  @apply transform-3d transition-transform duration-500 ease-out-back;
 
   width: var(--size-burger);
   height: var(--size-burger);
+
+  --tw-translate-y: var(--height-topbar);
 }
 
 .nav-burger--hidden {
-  @apply transform-3d duration-300 ease-in-quart;
+  @apply duration-300 ease-in-quart;
 
-  --tw-translate-y: calc((var(--posy-burger) + var(--size-burger) + var(--gutter)) * -1);
+  --tw-translate-y: calc((var(--size-burger) + var(--gutter)) * -1);
 }
 
 .nav-burger__text {
