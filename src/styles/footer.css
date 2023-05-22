@@ -1,10 +1,16 @@
 .footer {
-  @apply flex justify-between mt-gutter px-gutter py-gutter;
+  @apply mt-gutter p-gutter space-y-gutter;
   @apply border-t border-t-black;
+
+  @screen md {
+    @apply flex justify-between space-y-0;
+  }
 }
 
 .footer__nav {
-  @apply flex space-x-4;
+  @screen md {
+    @apply flex space-x-4;
+  }
 }
 
 .footer__link {
