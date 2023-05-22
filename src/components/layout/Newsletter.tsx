@@ -11,38 +11,42 @@ const Newsletter = () => {
         noValidate
       >
         <h2 className='newsletter__subtitle'>Newsletter</h2>
+
         <label className='newsletter__title' htmlFor='mce-EMAIL'>
           War&apos;s das schon
           <br />
           zwischen uns?
         </label>
-        <input
-          type='email'
-          name='EMAIL'
-          className='newsletter__field'
-          id='mce-EMAIL'
-          placeholder='Email Addresse'
-          defaultValue=''
-          required
-        />
 
-        {/* real people should not fill this in and expect good things - do not remove this or risk form bot signups */}
-        <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden='true'>
+        <div className='newsletter__controls'>
           <input
-            type='text'
-            name='b_9c7ed05ab79d08599fd3d90ee_7073021cc1'
-            tabIndex={-1}
+            type='email'
+            name='EMAIL'
+            className='newsletter__field'
+            id='mce-EMAIL'
+            placeholder='Email Addresse'
             defaultValue=''
+            required
+          />
+
+          {/* real people should not fill this in and expect good things - do not remove this or risk form bot signups */}
+          <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden='true'>
+            <input
+              type='text'
+              name='b_9c7ed05ab79d08599fd3d90ee_7073021cc1'
+              tabIndex={-1}
+              defaultValue=''
+            />
+          </div>
+
+          <input
+            type='submit'
+            value='Ich will mehr'
+            name='subscribe'
+            id='mc-embedded-subscribe'
+            className='newsletter__button'
           />
         </div>
-
-        <input
-          type='submit'
-          value='Ich will mehr'
-          name='subscribe'
-          id='mc-embedded-subscribe'
-          className='newsletter__button'
-        />
       </form>
     </section>
   );

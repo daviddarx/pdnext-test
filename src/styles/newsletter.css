@@ -1,21 +1,33 @@
 .newsletter {
-  @apply my-gutter-2 mx-gutter text-center;
+  @apply my-gutter-3 lg:my-gutter-2 mx-gutter text-center;
 }
 
 .newsletter__subtitle {
-  @apply subline pb-[2em];
+  @apply subline pb-[1em] lg:pb-[2em];
 }
 
 .newsletter__title {
-  @apply block h2 font-semibold pb-[1em];
+  @apply block h2 font-semibold pb-[0.75em];
+}
+
+.newsletter__controls {
+  @apply flex flex-col justify-center w-full space-y-gutter;
+
+  @screen lg {
+    @apply flex flex-row space-y-0 space-x-[1em];
+  }
 }
 
 .newsletter__field {
-  @apply w-[20em] mr-[1em] tag !normal-case;
+  @apply w-full tag !normal-case;
+
+  @screen lg {
+    @apply w-[20em];
+  }
 }
 
 .newsletter__button {
-  @apply tag--inverted;
+  @apply block lg:inline-block tag--inverted;
 }
 
 input.newsletter__field,
