@@ -1,6 +1,6 @@
 import { ReactNode, useRef, useEffect, useState, Fragment } from 'react';
 import { Portal } from 'react-portal';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useWillChange } from 'framer-motion';
 
 import eases from '@/utils/eases';
 import { setFocusables, resetFocusables, loopFocusables } from '@/utils/get-focusables';
@@ -88,6 +88,8 @@ const Drawer: React.FC<Props> = ({ children, isOpened, onClose }) => {
     }
   };
 
+  const willChange = useWillChange();
+
   return (
     <Fragment>
       {isMounted && (
@@ -103,6 +105,7 @@ const Drawer: React.FC<Props> = ({ children, isOpened, onClose }) => {
                   animate='animate'
                   exit='exit'
                   variants={panelMotionVariants}
+                  style={{ willChange }}
                 >
                   <div className='drawer__content'>{children}</div>
                   <CloseButton className='drawer__close' onClick={onClose} />

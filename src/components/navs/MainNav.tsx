@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { motion } from 'framer-motion';
+import { motion, useWillChange } from 'framer-motion';
 
 import drawerChildreMotionVariants from '@/utils/drawer-children-animation';
 import { uiActions } from '@/store';
@@ -34,6 +34,8 @@ const secondaryNavItems = [
 const MainNav = () => {
   const isNavigationOpened = useSelector((state: uiStateType) => state.ui.isNavigationOpened);
 
+  const willChange = useWillChange();
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -62,6 +64,7 @@ const MainNav = () => {
             initial='initial'
             animate='animate'
             variants={drawerChildreMotionVariants}
+            style={{ willChange }}
             custom={0}
           >
             {mainNavItems.map((item) => (
