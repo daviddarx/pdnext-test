@@ -1,13 +1,20 @@
 .bottom-nav {
-  @apply grid grid-cols-2;
-  @apply bg-white border border-current;
+  @apply bg-white;
+
+  @screen lg {
+    @apply grid grid-cols-2;
+  }
 }
 
 .bottom-nav__group {
   @apply p-gutter;
 
   &:first-of-type {
-    @apply border-r border-current;
+    @apply border-current border-b;
+
+    @screen lg {
+      @apply border-b-0 border-r;
+    }
   }
 }
 
@@ -16,7 +23,7 @@
 }
 
 .botton-nav__links {
-  @apply space-y-[0.75em];
+  @apply space-y-[0.25em] lg:space-y-[0.75em];
 }
 
 .bottom-nav__link {
