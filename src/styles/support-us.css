@@ -1,9 +1,15 @@
 .support-us__title {
-  @apply relative px-gutter;
-  @apply h3 text-white text-center bg-black;
+  @apply relative p-gutter pr-gutter-3;
+  @apply h3 text-white bg-black;
 
-  padding-top: calc(var(--gutter) * 2 + 0.3em);
-  padding-bottom: calc(var(--gutter) * 2 + 0em);
+  padding-top: calc(var(--gutter) + 0.3em);
+  padding-bottom: calc(var(--gutter) + 0em);
+
+  @screen lg {
+    @apply px-gutter text-center;
+    padding-top: calc(var(--gutter) * 2 + 0.4em);
+    padding-bottom: calc(var(--gutter) * 2 + 0em);
+  }
 }
 
 @keyframes heartAnimation {
@@ -17,23 +23,37 @@
 }
 
 .support-us__heart {
-  @apply inline-block ml-10 w-[1.2em] h-auto -mt-[0.2em];
+  @apply inline-block w-[1em] h-auto;
+  @apply ml-[0.5em] -mt-[0.2em];
+
+  @screen lg {
+    @apply w-[1.2em];
+  }
 
   animation: heartAnimation infinite ease-in-out 1s;
   animation-direction: alternate-reverse;
 }
 
 .support-us__close {
-  @apply absolute top-1/2 right-gutter -translate-y-1/2 -mr-2 w-gutter h-gutter;
+  @apply absolute top-gutter right-gutter w-[1em] h-[1em] mt-[0.2em];
+
+  @screen lg {
+    @apply top-1/2 -translate-y-1/2 right-gutter mt-0;
+  }
 }
 
 .support-us__content-container {
-  @apply grid grid-cols-3;
-  @apply border-t border-current pt-gutter-2 pl-gutter pb-gutter-2;
+  @apply space-y-gutter-2 py-gutter-2 px-gutter border-t border-current;
+
+  @screen lg {
+    @apply grid grid-cols-3 space-y-0 py-gutter pl-gutter pr-0;
+  }
 }
 
 .support-us__slot {
-  @apply pr-gutter;
+  @screen lg {
+    @apply pr-gutter;
+  }
 }
 
 .support-us__slot-title {
