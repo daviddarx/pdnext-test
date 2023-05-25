@@ -7,8 +7,7 @@ import { Fragment } from 'react';
 
 import PageHeader from '@/components/layout/PageHeader';
 import LoadedImage from '@/components/ui/LoadedImage';
-import Accordion from '@/components/ui/Accordion';
-import CloseIcon from '@/components/icons/CloseIcon';
+import ExpansableText from '@/components/layout/ExpansableText';
 import DecorativeVideo from '../ui/DecorativeVideo';
 
 type Props = {
@@ -184,22 +183,11 @@ const ContentPage: React.FC<Props> = ({ data }) => {
               slot.collapsableText.title.trim().length > 0 &&
               slot.collapsableText.text &&
               slot.collapsableText.text.trim().length > 0 && (
-                <Accordion
-                  className='content-slot__expandable-text expandable-text content-page__column-left'
-                  header={
-                    <h3 className='expandable-text__title'>
-                      <span className='align-text-v'>{slot.collapsableText.title}</span>
-                      <CloseIcon className='expandable-text__close' />
-                    </h3>
-                  }
-                >
-                  <ReactMarkdown
-                    className='expandable-text__copy text-content'
-                    remarkPlugins={[remarkGfm]}
-                  >
-                    {slot.collapsableText.text}
-                  </ReactMarkdown>
-                </Accordion>
+                <ExpansableText
+                  title={slot.collapsableText.title}
+                  markdown={slot.collapsableText.text}
+                  className='content-slot__expandable-text'
+                />
               )}
           </article>
         ))}

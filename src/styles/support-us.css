@@ -1,14 +1,9 @@
 .support-us__title {
-  @apply relative p-gutter pr-gutter-3;
+  @apply relative p-gutter;
   @apply h3 text-white bg-black;
-
-  padding-top: calc(var(--gutter) + 0.3em);
-  padding-bottom: calc(var(--gutter) + 0em);
 
   @screen lg {
     @apply px-gutter text-center;
-    padding-top: calc(var(--gutter) * 2 + 0.4em);
-    padding-bottom: calc(var(--gutter) * 2 + 0em);
   }
 }
 

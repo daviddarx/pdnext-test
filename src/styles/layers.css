@@ -72,11 +72,15 @@
   }
 
   .text-link {
-    @apply transition-opacity duration-300 ease-out-quart;
+    @apply transition-[opacity] duration-300 ease-out-quart;
 
     @media (hover: hover) {
       &:hover {
         @apply opacity-50;
+
+        .dark & {
+          @apply text-pink opacity-100 transition-colors;
+        }
       }
     }
   }
@@ -145,7 +149,7 @@
   }
 
   .align-text-v {
-    @apply translate-y-[0.11em];
+    @apply translate-y-[0.1em];
   }
 
   .text-link {
@@ -194,6 +198,7 @@
 
       .dark & {
         @apply text-white;
+
         @media (hover: hover) {
           &:hover {
             @apply text-pink;
@@ -282,7 +287,7 @@
 
 @layer components {
   .close-icon {
-    @apply rotate-45 scale-0;
+    @apply rotate-0;
     @apply transition-transform duration-200 ease-in-out;
 
     &:before,
@@ -297,7 +302,7 @@
     }
 
     .is-opened & {
-      @apply scale-100;
+      @apply rotate-[135deg];
     }
   }
 

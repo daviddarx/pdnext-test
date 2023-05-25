@@ -54,9 +54,8 @@ const Accordion: React.FC<Props> = ({
   return (
     <section className={`accordion ${className ? className : ''} ${isOpened ? 'is-opened' : ''}`}>
       <header className='accordion__header'>
-        {header}
         <button className='accordion__button' onClick={toggleOpened}>
-          {isOpened ? 'Schliessen' : 'Öffnen'}
+          {header}
         </button>
       </header>
       <AnimatePresence initial={true}>

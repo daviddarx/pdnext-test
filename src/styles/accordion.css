@@ -1,9 +1,5 @@
-.accordion__header {
-  @apply relative;
-}
-
 .accordion__button {
-  @apply absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer;
+  @apply block w-full;
 }
 
 .accordion__content {
