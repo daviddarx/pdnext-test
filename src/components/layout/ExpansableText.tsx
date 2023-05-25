@@ -35,7 +35,7 @@ const motionVariants = {
   },
 };
 
-const ExpansableText: React.FC<Props> = ({ className, title, markdown }) => {
+const ExpansableText: React.FC<Props> = ({ className = '', title, markdown }) => {
   return (
     <Accordion
       className={`expandable-text ${className}`}

@@ -12,7 +12,7 @@ type ActiveLinkProps = LinkProps & {
 const ActiveLink = ({
   children,
   activeClassName,
-  className,
+  className = '',
   ...props
 }: PropsWithChildren<ActiveLinkProps>) => {
   const { asPath, isReady } = useRouter();

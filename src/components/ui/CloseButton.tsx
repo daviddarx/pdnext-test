@@ -5,7 +5,7 @@ type Props = {
   onClick: () => void;
 };
 
-const CloseButton: React.FC<Props> = ({ className, onClick }) => {
+const CloseButton: React.FC<Props> = ({ className = '', onClick }) => {
   return (
     <button className={`close-button is-opened ${className}`.trim()} onClick={onClick}>
       <CloseIcon className='close-button__icon' />

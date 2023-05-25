@@ -8,7 +8,7 @@ type Props = {
   lead?: string;
 };
 
-const PageHeader: React.FC<Props> = ({ className, subline, title, lead }) => {
+const PageHeader: React.FC<Props> = ({ className = '', subline, title, lead }) => {
   return (
     <header className={`page-header ${className}`}>
       <h1>

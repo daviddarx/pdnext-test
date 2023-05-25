@@ -9,7 +9,7 @@ type Props = {
   };
 };
 
-const DecorativeVideo: React.FC<Props> = ({ className, videoSettings }) => {
+const DecorativeVideo: React.FC<Props> = ({ className = '', videoSettings }) => {
   const [isMuted, setIsMuted] = useState(true);
 
   const toggleVideoMute = () => {
