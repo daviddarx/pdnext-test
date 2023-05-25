@@ -20,7 +20,7 @@
 
   @media (hover: hover) {
     &:hover {
-      @apply bg-white;
+      @apply bg-white border border-current;
     }
   }
 }

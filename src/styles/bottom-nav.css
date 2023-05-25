@@ -1,5 +1,5 @@
 .bottom-nav {
-  @apply bg-white;
+  @apply bg-white border-b border-current;
 
   @screen lg {
     @apply grid grid-cols-2;
