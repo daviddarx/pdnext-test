@@ -62,13 +62,22 @@ const ContentPage: React.FC<Props> = ({ data }) => {
 
   return (
     <section className='content-page' ref={pageRef}>
-      <PageHeader subline={data.headerSubline} title={data.headerTitle} lead={data.lead} />
+      <PageHeader
+        subline={data.headerSubline}
+        title={data.headerTitle}
+        lead={data.lead}
+        className='content-page__column'
+      />
 
       {anchorLinks && anchorLinks.length > 0 && (
         <ul className='content-page__nav'>
           {anchorLinks.map((link) => (
             <li key={link.hash}>
-              <a href={`#${link.hash}`} onClick={handleAnchorClick}>
+              <a
+                href={`#${link.hash}`}
+                onClick={handleAnchorClick}
+                className='content-page__nav-link'
+              >
                 {link.title}
               </a>
             </li>
@@ -94,17 +103,22 @@ const ContentPage: React.FC<Props> = ({ data }) => {
             className='content-slot'
             id={getCleanedAnchorID(slot.anchorTitle)}
           >
-            {!slot.hiddenTitle && <h2 className='content-slot__title'>{slot.title}</h2>}
+            {!slot.hiddenTitle && (
+              <h2 className='content-slot__title content-page__column'>{slot.title}</h2>
+            )}
 
             {slot.firstText && slot.firstText !== '' && (
-              <ReactMarkdown className='content-slot__first-text' remarkPlugins={[remarkGfm]}>
+              <ReactMarkdown
+                className='content-slot__first-text text-content content-page__column'
+                remarkPlugins={[remarkGfm]}
+              >
                 {slot.firstText}
               </ReactMarkdown>
             )}
 
             {slot.image && (
               <LoadedImage
-                className='content-slot__image'
+                className='content-slot__image content-page__column-left'
                 src={slot.image}
                 alt={slot.title}
                 width={slot.imageWidth}
@@ -113,7 +127,7 @@ const ContentPage: React.FC<Props> = ({ data }) => {
             )}
 
             {slot.definitionLists && slot.definitionLists.length > 0 && (
-              <div className='content-slot__definition-list'>
+              <div className='content-slot__definition-list content-page__column'>
                 {slot.definitionLists.map((list, i) => (
                   <div key={slot.title + i} className='definition-list'>
                     {list.title && <h3 className='definition-list__title'>{list.title}</h3>}
@@ -141,13 +155,16 @@ const ContentPage: React.FC<Props> = ({ data }) => {
             )}
 
             {slot.secondText && slot.secondText.trim().length > 0 && (
-              <ReactMarkdown className='content-slot__second-text' remarkPlugins={[remarkGfm]}>
+              <ReactMarkdown
+                className='content-slot__second-text content-page__column'
+                remarkPlugins={[remarkGfm]}
+              >
                 {slot.secondText}
               </ReactMarkdown>
             )}
 
             {slot.downloads && slot.downloads.length > 0 && (
-              <aside className='content-slot__downloads downloads'>
+              <aside className='content-slot__downloads downloads content-page__column text-content'>
                 <h3 className='downloads__title'>Downloads</h3>
                 <ul className='downloads__list'>
                   {slot.downloads.map((download) => (
@@ -168,15 +185,18 @@ const ContentPage: React.FC<Props> = ({ data }) => {
               slot.collapsableText.text &&
               slot.collapsableText.text.trim().length > 0 && (
                 <Accordion
-                  className='content-slot__expandable-text expandable-text'
+                  className='content-slot__expandable-text expandable-text content-page__column-left'
                   header={
-                    <h3 className='expandable-text__header '>
-                      {slot.collapsableText.title}
+                    <h3 className='expandable-text__title'>
+                      <span className='align-text-v'>{slot.collapsableText.title}</span>
                       <CloseIcon className='expandable-text__close' />
                     </h3>
                   }
                 >
-                  <ReactMarkdown className='expandable-text__copy' remarkPlugins={[remarkGfm]}>
+                  <ReactMarkdown
+                    className='expandable-text__copy text-content'
+                    remarkPlugins={[remarkGfm]}
+                  >
                     {slot.collapsableText.text}
                   </ReactMarkdown>
                 </Accordion>

@@ -85,6 +85,14 @@
     @apply text-base font-semibold tracking-tag uppercase;
   }
 
+  .subline--lg {
+    @apply h5;
+  }
+
+  .subline--above-title {
+    @apply pb-[1em] lg:pb-[2em];
+  }
+
   .tag {
     @apply inline-block px-[0.75em] pt-[0.5em] pb-[0.25em];
     @apply text-base font-semibold leading-none uppercase tracking-tag;
@@ -129,7 +137,15 @@
   }
 
   .tag--sm {
-    @apply text-xs px-[0.6em] pt-[0.40em] pb-[0.15em];
+    @apply text-xs px-[0.4em] pt-[0.3em] pb-[0.05em];
+
+    @screen lg {
+      @apply px-[0.6em] pt-[0.4em] pb-[0.15em];
+    }
+  }
+
+  .align-text-v {
+    @apply translate-y-[0.11em];
   }
 
   .text-link {
@@ -141,6 +157,15 @@
   }
 
   .text-content {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @apply mb-[0.7em];
+    }
+
     p {
       @apply mb-[1em];
     }
@@ -187,7 +212,7 @@
   }
 
   .transform-3d {
-    --tw-translate-x: 0;
+    §tw-translate-x: 0;
     --tw-translate-y: 0;
     --tw-translate-z: 0;
     --tw-rotate: 0;

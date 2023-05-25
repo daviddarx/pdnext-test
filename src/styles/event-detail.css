@@ -9,6 +9,14 @@
 
 .event-detail__date {
   @apply subline;
+
+  span {
+    @apply block md:inline-block;
+  }
+}
+
+.event-detail__date-separator {
+  @apply !hidden md:inline-block;
 }
 
 .event-detail__title {
@@ -20,7 +28,11 @@
 }
 
 .event-detail__special-state {
-  @apply relative -top-[0.7em];
+  @apply tag relative -top-[0.5em] lg:-top-[0.6em];
+
+  @screen max-lg {
+    @apply tag--sm;
+  }
 }
 
 .event-detail__subtitle {
@@ -32,9 +44,14 @@
 }
 
 .event-detail__infos {
-  @apply grid mt-gutter;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(33.33%, 1fr));
+  @apply mt-gutter space-y-gutter;
+
+  @screen lg {
+    @apply space-y-0;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(33.33%, 1fr));
+  }
 }
 
 .event-detail__info {
@@ -50,7 +67,7 @@
 }
 
 .event-detail__info-title {
-  @apply mb-[0.5em];
+  @apply mb-[0.25em] lg:mb-[0.5em];
 }
 
 .event-detail__tickets {

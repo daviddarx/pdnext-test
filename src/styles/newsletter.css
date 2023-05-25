@@ -3,7 +3,7 @@
 }
 
 .newsletter__subtitle {
-  @apply subline pb-[1em] lg:pb-[2em];
+  @apply subline subline--above-title;
 }
 
 .newsletter__title {

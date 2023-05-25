@@ -1,5 +1,5 @@
 .events-filters {
-  @apply mt-gutter space-y-6;
+  @apply mt-gutter-1.5 lg:mt-gutter space-y-6;
 }
 
 .events-filters__filter {

@@ -27,7 +27,7 @@
 }
 
 .bottom-nav__link {
-  @apply h5 font-semibold text-link;
+  @apply h3 font-semibold text-link;
 
   .bottom-nav__title & {
     @apply subline;

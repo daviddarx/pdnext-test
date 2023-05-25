@@ -42,13 +42,8 @@ const EventDetail = () => {
 
     if (currentScrollTop > lastScrollTopRef.current) {
       dispatch(uiActions.setBurgerVisibility(false));
-      dispatch(uiActions.setBurgerTextVisibility(false));
     } else {
       dispatch(uiActions.setBurgerVisibility(true));
-
-      if (currentScrollTop === 0) {
-        dispatch(uiActions.setBurgerTextVisibility(true));
-      }
     }
 
     lastScrollTopRef.current = currentScrollTop;
@@ -72,13 +67,15 @@ const EventDetail = () => {
         >
           <header className='event-detail__header'>
             <div className='event-detail__date'>
-              {event.date.readable} – {event.date.hour}
+              <span>{event.date.readable}</span>
+              <span className='event-detail__date-separator'> – </span>
+              <span>{event.date.hour}</span>
             </div>
 
             <h2 className='event-detail__title'>
               <span className='event-detail__title-text'>{event.title}</span>
               {event.specialstate && (
-                <span className='tag event-detail__special-state'>{event.specialstate}</span>
+                <span className='event-detail__special-state'>{event.specialstate}</span>
               )}
             </h2>
 

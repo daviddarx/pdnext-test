@@ -19,7 +19,7 @@ const PageHeader: React.FC<Props> = ({ className, subline, title, lead }) => {
         </ReactMarkdown>
       </h1>
 
-      {lead && <p className='page-header__lead'>{lead}</p>}
+      {lead && <p className='page-header__lead text-content'>{lead}</p>}
     </header>
   );
 };

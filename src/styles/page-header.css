@@ -1,14 +1,11 @@
 .page-header {
+  @apply text-center;
 }
 
 .page-header__subline {
-  @apply block;
+  @apply block subline subline--above-title;
 }
 
 .page-header__title {
-  @apply block;
-}
-
-.page-header__lead {
-  @apply mt-gutter;
+  @apply block mb-[0.6em];
 }

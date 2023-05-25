@@ -1,7 +1,11 @@
 .event {
-  @apply relative px-gutter pt-gutter-3/4 pb-gutter-1/2;
+  @apply relative px-gutter pt-gutter pb-gutter-3/4;
   @apply border-t border-black;
   @apply transition-all duration-300 ease-out;
+
+  @screen lg {
+    @apply pt-gutter-3/4 pb-gutter-1/2;
+  }
 
   &:first-of-type {
     @apply border-none;
@@ -22,20 +26,24 @@
   @apply flex items-start;
 }
 
-.event__title {
-  @apply h5 mb-[0.5em];
-}
-
-.event__subtitle {
-  @apply font-semibold;
-}
-
 .event__hour {
   @apply relative inline-block w-[4em] -top-[0.2em] shrink-0 text-base font-normal;
 }
 
+.event__title {
+  @apply h5 font-semibold mb-[0.4em] lg:mb-[0.5em];
+}
+
+.event__subtitle {
+  @apply font-semibold leading-tight mb-[0.4em];
+}
+
+.event__details {
+  @apply leading-tight;
+}
+
 .event__special-state {
-  @apply tag tag--sm relative -top-[0.35em] !bg-transparent;
+  @apply tag tag--sm relative -top-[0.2em] lg:-top-[0.35em] !bg-transparent;
 }
 
 .event__btn {

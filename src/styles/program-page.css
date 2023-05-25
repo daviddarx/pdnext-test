@@ -1,27 +1,37 @@
 .program-page {
-  @apply grid grid-cols-2;
+  @apply mt-[50vh];
+
+  @screen xl {
+    @apply grid grid-cols-2 mt-0;
+  }
 }
 
 .program-page__list {
-  @apply pb-gutter border-r border-black;
+  @screen xl {
+    @apply pb-gutter border-r border-black;
 
-  padding-top: calc(var(--gutter) + var(--h-logo));
+    padding-top: calc(var(--gutter) + var(--h-logo));
+  }
 }
 
 .program-page__header {
-  @apply p-gutter mb-gutter-1/2 text-center;
+  @apply p-gutter pt-gutter-2 mb-gutter-1/2 text-center;
 }
 
 .program-page__subtitle {
-  @apply block subline pb-[2em];
+  @apply block subline subline--above-title;
 }
 
 .program-page__detail {
-  @apply sticky top-0 h-screen overflow-hidden pointer-events-none;
+  @apply fixed top-0 left-0 w-0 h-screen;
+
+  @screen xl {
+    @apply sticky top-0 overflow-hidden pointer-events-none;
+  }
 }
 
 .program-page__detail--opened {
-  @apply pointer-events-auto;
+  @apply w-full pointer-events-auto;
 }
 
 .program-page__close {

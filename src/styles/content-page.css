@@ -1,11 +1,26 @@
 .content-page {
-  @apply px-gutter pt-gutter-2;
+  --px-col: 20%;
+
+  @apply pt-gutter-4;
 
   margin-top: var(--h-logo);
+
+  & .text-content {
+    @apply text-2xl;
+  }
 }
 
 .content-page__nav {
-  @apply -mx-gutter mt-gutter px-gutter flex space-x-4 border-y border-black py-4;
+  @apply flex justify-center w-full mt-gutter-2 px-gutter;
+  @apply bg-black text-white;
+}
+
+.content-page__nav-link {
+  @apply block  h5 py-gutter px-gutter-1/2 font-semibold align-text-v;
+
+  &:hover {
+    @apply opacity-50;
+  }
 }
 
 .content-page__video {
@@ -16,32 +31,45 @@
   @apply my-gutter;
 }
 
+.content-page__column,
+.content-page__column-left {
+  @apply px-[--px-col];
+}
+
+.content-page__column-left {
+  @apply pr-0;
+}
+
 /**
  * Content Slots
  */
 
 .content-slot {
-  @apply mt-gutter scroll-mt-gutter;
+  @apply mt-gutter-4 scroll-mt-gutter-4;
+}
+
+.content-slot__title {
+  @apply mb-[0.7em];
 }
 
 .content-slot__image {
-  @apply mt-gutter;
+  @apply mt-gutter-2 w-full;
 }
 
 .content-slot__definition-list {
-  @apply mt-gutter;
+  @apply mt-gutter-2;
 }
 
 .content-slot__second-text {
-  @apply mt-gutter;
+  @apply mt-gutter-2;
 }
 
 .content-slot__downloads {
-  @apply mt-gutter;
+  @apply mt-gutter-2;
 }
 
 .content-slot__expandable-text {
-  @apply mt-gutter;
+  @apply mt-gutter-2;
 }
 
 /**
@@ -57,10 +85,21 @@
   @apply mt-gutter;
 }
 
-.expandable-text__header {
-  @apply relative flex;
+.expandable-text {
+  @apply border-y border-black py-gutter;
+}
+
+.expandable-text__title {
+  @apply relative flex items-center;
 }
 
 .expandable-text__close {
-  @apply w-4 h-4;
+  @apply absolute right-gutter;
+
+  &.close-icon {
+    @apply w-[1em] h-[1em] scale-100 rotate-0;
+    .is-opened & {
+      @apply rotate-[135deg];
+    }
+  }
 }

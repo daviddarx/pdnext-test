@@ -15,7 +15,7 @@
 }
 
 .entry__title {
-  @apply mt-gutter mb-[0.25em];
+  @apply mt-gutter pt-[0.2em] lg:pt-0 mb-[0.25em];
 }
 
 .entry__type {
