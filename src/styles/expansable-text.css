@@ -1,0 +1,22 @@
+.expandable-text {
+  @apply border-y border-black bg-white;
+}
+
+.expandable-text__title {
+  @apply relative flex items-center py-gutter;
+}
+
+.expandable-text__copy {
+  @apply bg-white pb-gutter;
+}
+
+.expandable-text__close {
+  @apply absolute right-gutter;
+
+  &.close-icon {
+    @apply w-[1em] h-[1em] scale-100 rotate-0;
+    .is-opened & {
+      @apply rotate-[135deg];
+    }
+  }
+}

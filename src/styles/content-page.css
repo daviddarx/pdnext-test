@@ -1,6 +1,4 @@
 .content-page {
-  --px-col: 20%;
-
   @apply pt-gutter-4;
 
   margin-top: var(--h-logo);
@@ -16,10 +14,10 @@
 }
 
 .content-page__nav-link {
-  @apply block  h5 py-gutter px-gutter-1/2 font-semibold align-text-v;
+  @apply block h3 py-gutter px-gutter-1/2 font-semibold align-text-v;
 
   &:hover {
-    @apply opacity-50;
+    @apply text-pink;
   }
 }
 
@@ -33,7 +31,7 @@
 
 .content-page__column,
 .content-page__column-left {
-  @apply px-[--px-col];
+  @apply px-[--content-page-px-col];
 }
 
 .content-page__column-left {
@@ -83,23 +81,4 @@
 .definition-list__dd,
 .definition-list__dt {
   @apply mt-gutter;
-}
-
-.expandable-text {
-  @apply border-y border-black py-gutter;
-}
-
-.expandable-text__title {
-  @apply relative flex items-center;
-}
-
-.expandable-text__close {
-  @apply absolute right-gutter;
-
-  &.close-icon {
-    @apply w-[1em] h-[1em] scale-100 rotate-0;
-    .is-opened & {
-      @apply rotate-[135deg];
-    }
-  }
 }
