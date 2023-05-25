@@ -67,15 +67,14 @@ type BottomNavGroupProps = {
 const BottomNavGroup = ({ items, withSocials }: BottomNavGroupProps) => {
   return (
     <section className='bottom-nav__group'>
-      <h3 className='bottom-nav__title'>
-        <ActiveLink
-          className='bottom-nav__link'
-          activeClassName='bottom-nav__link--active'
-          href={items.header.link}
-        >
-          {items.header.title}
-        </ActiveLink>
-      </h3>
+      <ActiveLink
+        className='bottom-nav__link'
+        activeClassName='bottom-nav__link--active'
+        href={items.header.link}
+      >
+        <h3 className='bottom-nav__title'>{items.header.title} </h3>
+      </ActiveLink>
+
       <ul className='botton-nav__links'>
         {items.links.map((link) => (
           <li key={link.link}>

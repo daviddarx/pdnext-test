@@ -19,11 +19,11 @@
 }
 
 .bottom-nav__title {
-  @apply mb-[1em];
+  @apply subline mt-gutter mb-[1em];
 }
 
 .botton-nav__links {
-  @apply space-y-[0.25em] lg:space-y-[0.75em];
+  @apply space-y-[0.25em] mt-gutter lg:space-y-[0.75em];
 }
 
 .bottom-nav__link {
