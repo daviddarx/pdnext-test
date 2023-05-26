@@ -28,7 +28,7 @@
 .nav-burger__icon {
   @apply absolute top-1/2 left-1/2;
   @apply -translate-x-1/2 -translate-y-1/2;
-  @apply bg-white rounded-full;
+  @apply bg-pink rounded-full;
 
   --size-icon: calc(var(--size-burger) * 0.15);
   width: var(--size-icon);
@@ -39,7 +39,7 @@
   @apply absolute -inset-px rounded-full overflow-hidden;
 
   svg {
-    @apply w-full h-full fill-white;
+    @apply w-full h-full fill-pink;
     @apply transition-transform ease-in-quart;
 
     @media (hover: hover) {
@@ -48,11 +48,39 @@
       }
     }
   }
+
+  span {
+    @apply block;
+  }
 }
 
-.nav-burger__hand--tl {
+@keyframes handleft {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(-0.2em, 0.2em, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes handright {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0.25em, 0.25em, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.nav-burger__hand--left {
   svg {
-    @apply -translate-x-1/2 -translate-y-1/2  duration-200;
+    @apply -translate-x-1/2 translate-y-1/2  duration-300;
 
     @media (hover: hover) {
       .nav-burger:hover & {
@@ -60,16 +88,22 @@
       }
     }
   }
+  span {
+    animation: handleft 3s infinite;
+  }
 }
 
-.nav-burger__hand--br {
+.nav-burger__hand--right {
   svg {
-    @apply translate-x-1/2 translate-y-1/2 duration-400;
+    @apply translate-x-1/2 translate-y-1/2 duration-500;
 
     @media (hover: hover) {
       .nav-burger:hover & {
         @apply -translate-x-px -translate-y-px duration-1000;
       }
     }
+  }
+  span {
+    animation: handright 3s 1s infinite;
   }
 }
