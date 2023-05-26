@@ -200,23 +200,6 @@
     }
   }
 
-  .zoomed-image-on-hover {
-    @apply overflow-hidden;
-
-    & img {
-      @apply transform-3d transition-transform duration-300 ease-out-quad;
-    }
-
-    a:hover & {
-      & img {
-        --scale: 1.08;
-
-        --tw-scale-x: var(--scale);
-        --tw-scale-y: var(--scale);
-      }
-    }
-  }
-
   .layout-cols {
     @apply grid gap-px;
 
@@ -388,11 +371,32 @@
   }
 
   .loaded-image {
-    @apply w-full h-auto opacity-0 transition-opacity duration-1000 ease-out;
+    @apply w-full h-auto opacity-0 transition-opacity duration-500 ease-out;
   }
 
   .loaded-image--loaded {
     @apply opacity-100;
+  }
+
+  .zoomed-image-on-hover {
+    @apply overflow-hidden;
+
+    & img {
+      @apply transform-3d;
+
+      transition-property: opacity, transform;
+      transition-duration: 500ms, 300ms;
+      transition-timing-function: ease-out, theme('transitionTimingFunction.out-quad');
+    }
+
+    a:hover & {
+      & img {
+        --scale: 1.08;
+
+        --tw-scale-x: var(--scale);
+        --tw-scale-y: var(--scale);
+      }
+    }
   }
 
   [type='submit'] {
