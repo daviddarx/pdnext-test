@@ -7,7 +7,7 @@
 }
 
 .expandable-text__copy {
-  @apply bg-white pt-gutter pb-gutter-2;
+  @apply bg-white pt-gutter pb-gutter-2 pr-gutter-2;
 }
 
 .expandable-text__close {

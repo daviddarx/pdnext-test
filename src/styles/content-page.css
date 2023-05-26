@@ -9,7 +9,7 @@
 }
 
 .content-page__nav {
-  @apply w-full flex flex-wrap justify-center mt-gutter-2 px-gutter py-gutter-1/2;
+  @apply w-full flex flex-wrap justify-center px-gutter py-gutter-1/2;
   @apply text-center bg-black text-white;
 
   @screen lg {
@@ -115,7 +115,7 @@
 }
 
 .definition-list__dd {
-  @apply pr-gutter;
+  @apply pr-gutter-2;
 
   @screen max-lg {
     @apply pt-[0.25em];

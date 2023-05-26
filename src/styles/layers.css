@@ -130,8 +130,13 @@
     }
   }
 
-  .tag--inverted {
+  .tag--inverted,
+  .tag--active {
     @apply bg-black text-white;
+  }
+
+  .tag--active {
+    @apply pointer-events-none;
   }
 
   a.tag--inverted,
@@ -212,7 +217,7 @@
     }
 
     hr {
-      @apply border-t border-current;
+      @apply border-t border-current pb-gutter mt-gutter;
     }
 
     & > *:last-child {

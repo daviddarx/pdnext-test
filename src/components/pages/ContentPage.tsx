@@ -61,12 +61,7 @@ const ContentPage: React.FC<Props> = ({ data }) => {
 
   return (
     <section className='content-page' ref={pageRef}>
-      <PageHeader
-        subline={data.headerSubline}
-        title={data.headerTitle}
-        lead={data.lead}
-        className='content-page__column'
-      />
+      <PageHeader subline={data.headerSubline} title={data.headerTitle} lead={data.lead} />
 
       {anchorLinks && anchorLinks.length > 0 && (
         <ul className='content-page__nav'>
