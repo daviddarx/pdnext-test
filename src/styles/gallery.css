@@ -1,55 +1,16 @@
 .gallery-page__images {
-  @apply grid grid-cols-2 gap-px;
-
-  padding-bottom: var(--columns-vertical-shift);
-
-  & > :nth-child(2n) {
-    transform: translateY(var(--columns-vertical-shift));
-  }
+  @apply layout-cols layout-cols-2;
 
   @screen md {
-    @apply grid-cols-3;
-
-    & > :nth-child(2n) {
-      transform: none;
-    }
-
-    & > :nth-child(3n + 2) {
-      transform: translateY(var(--columns-vertical-shift));
-    }
+    @apply layout-cols-3;
   }
 
   @screen xl {
-    @apply grid-cols-4;
-
-    & > :nth-child(3n + 2) {
-      transform: none;
-    }
-
-    & > :nth-child(4n + 2) {
-      transform: translateY(var(--columns-vertical-shift));
-    }
-
-    & > :nth-child(4n + 4) {
-      transform: translateY(calc(var(--columns-vertical-shift) * 0.5));
-    }
+    @apply layout-cols-4;
   }
 
   @screen 3xl {
-    @apply grid-cols-5;
-
-    & > :nth-child(4n + 2),
-    & > :nth-child(4n + 4) {
-      transform: none;
-    }
-
-    & > :nth-child(5n + 2) {
-      transform: translateY(var(--columns-vertical-shift));
-    }
-
-    & > :nth-child(5n + 4) {
-      transform: translateY(calc(var(--columns-vertical-shift) * 0.5));
-    }
+    @apply layout-cols-5;
   }
 }
 

@@ -1,24 +1,10 @@
 .impressions-page__impressions {
   @screen md {
-    @apply grid grid-cols-2 gap-px;
-
-    padding-bottom: var(--columns-vertical-shift);
-
-    & > :nth-child(2n) {
-      transform: translateY(var(--columns-vertical-shift));
-    }
+    @apply layout-cols layout-cols-2;
   }
 
   @screen 3xl {
-    @apply grid-cols-3;
-
-    & > :nth-child(2n) {
-      transform: none;
-    }
-
-    & > :nth-child(3n + 2) {
-      transform: translateY(var(--columns-vertical-shift));
-    }
+    @apply layout-cols-3;
   }
 }
 
