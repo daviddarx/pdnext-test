@@ -7,7 +7,7 @@ const galleriesContent = require('../../../_content/galleries/galleries.json');
 
 import Layout from '@/components/layout/Layout';
 import Metas from '@/components/layout/Metas';
-import LoadedImage from '@/components/ui/LoadedImage';
+import LoadedImageCustom from '@/components/ui/LoadedImageCustom';
 
 import PageHeader from '@/components/layout/PageHeader';
 
@@ -31,15 +31,9 @@ const Page: NextPage<PageProps> = ({ page, commonPageData }) => {
 
         <div className='gallery-page__images'>
           {page.images.map((image) => (
-            <a href={image.main.url} key={image.main.url} className='gallery-page__link'>
+            <a href={image.main} key={image.main} className='gallery-page__link'>
               <div className='gallery-page__image'>
-                <LoadedImage
-                  src={image.thumb.url}
-                  alt={page.title}
-                  width={image.thumb.width}
-                  height={image.thumb.height}
-                  unoptimized={true}
-                />
+                <LoadedImageCustom src={image.thumb} alt={page.title} />
               </div>
             </a>
           ))}
