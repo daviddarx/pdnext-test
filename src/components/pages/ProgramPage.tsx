@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { uiActions } from '@/store';
 import { ProgramContent } from '@/utils/fetch-program-content';
 import { ClusteredEvents } from '@/types/ClusteredEvents';
+import { FormatedEvent } from '@/types/FormatedEvent';
 import useScrollToEventOnPageLoad from '@/hooks/useScrollToEventOnPageLoad';
 
 import ProgramPageLayout from '@/components/layout/ProgramPageLayout';
@@ -63,6 +64,12 @@ const ProgramPage: React.FC<Props> = ({ data }) => {
         }
 
         if (processedDate.events.length > 0) {
+          processedDate.events.forEach((event: FormatedEvent, i: number) => {
+            event.prevId = processedDate.events[i - 1]?.id;
+            event.prevTitle = processedDate.events[i - 1]?.title;
+            event.nextId = processedDate.events[i + 1]?.id;
+            event.nextTitle = processedDate.events[i + 1]?.title;
+          });
           current.push(processedDate);
         }
       }

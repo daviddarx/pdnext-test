@@ -9,6 +9,10 @@ export interface FormatedEvent extends Event {
     filter: string;
     hour: string;
   };
+  prevId?: string;
+  prevTitle?: string;
+  nextId?: string;
+  nextTitle?: string;
   types: string[];
   entriesObjects: Entry[];
 }

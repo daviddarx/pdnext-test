@@ -9,6 +9,7 @@ import { uiActions } from '@/store';
 import { uiStateType } from '@/store/ui-slice';
 
 import Entry from '@/components/events/Entry';
+import ArrowIcon from '@/components/icons/ArrowIcon';
 
 const transition = {
   duration: 0.35,
@@ -52,6 +53,10 @@ const EventDetail = () => {
   useEffect(() => {
     lastScrollTopRef.current = 0;
   }, [event]);
+
+  const switchEvent = (id: string) => {
+    console.log('switch', id); // trouver le moyen de picker le event sans devoir le mettre dans le array
+  };
 
   return (
     <AnimatePresence mode='popLayout'>
@@ -138,6 +143,34 @@ const EventDetail = () => {
               ))}
             </div>
           )}
+
+          <div className='event-detail__nav'>
+            {event.prevId && (
+              <button
+                onClick={switchEvent.bind(null, event.prevId)}
+                className='event-detail__nav-button'
+              >
+                <span className='event-detail__nav-subline'>
+                  <ArrowIcon className='event-detail__nav-icon event-detail__nav-icon--prev' />
+                  <span>Davor</span>
+                </span>
+                <span className='event-detail__nav-title'>{event.prevTitle}</span>
+              </button>
+            )}
+            {event.nextId && (
+              <button
+                onClick={switchEvent.bind(null, event.nextId)}
+                className='event-detail__nav-button'
+              >
+                <span className='event-detail__nav-subline'>
+                  <span>Danach</span>
+                  <ArrowIcon className='event-detail__nav-icon event-detail__nav-icon--next' />
+                </span>
+
+                <span className='event-detail__nav-title'>{event.nextTitle}</span>
+              </button>
+            )}
+          </div>
         </motion.article>
       )}
     </AnimatePresence>

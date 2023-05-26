@@ -1,6 +1,6 @@
 .event-detail {
   @apply w-full h-full overflow-y-auto overscroll-contain;
-  @apply p-gutter pb-gutter-3 bg-white outline outline-1 outline-black;
+  @apply p-gutter pb-0 bg-white outline outline-1 outline-black;
 }
 
 .event-detail__header {
@@ -76,4 +76,39 @@
 
 .event-detail__entries {
   @apply mt-gutter-2 space-y-gutter;
+}
+
+.event-detail__nav {
+  @apply -mx-gutter mt-gutter-2 bg-white border-t border-current;
+
+  @screen max-xl {
+    @apply sticky bottom-0 z-20 flex;
+  }
+}
+
+.event-detail__nav-button {
+  @apply p-gutter-1/2 w-full flex-1;
+
+  &:last-of-type {
+    @apply border-l border-current;
+  }
+}
+
+.event-detail__nav-subline {
+  @apply subline flex space-x-[0.5em] items-center justify-center !text-xs align-text-v;
+}
+
+.event-detail__nav-icon {
+  @apply relative inline-block h-[0.9em] w-auto -top-[0.1em];
+}
+
+.event-detail__nav-icon--prev {
+  @apply scale-x-[-1];
+}
+
+.event-detail__nav-title {
+  @apply hidden;
+  x @screen xl {
+    @apply block pt-[0.25em] h5 font-semibold;
+  }
 }
