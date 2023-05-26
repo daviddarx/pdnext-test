@@ -24,7 +24,7 @@ const ImpressionsPage: React.FC<Props> = ({ data }) => {
       <div className='impressions-page__impressions'>
         {data.impressions.map((item) => (
           <article key={item.date + item.title} className='impression'>
-            <Link href={item.link} onClick={checkIfGalleryLink}>
+            <Link href={item.link} onClick={checkIfGalleryLink} className='impression__link'>
               <div className='impression__image'>
                 <LoadedImage
                   src={item.image}

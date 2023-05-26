@@ -225,8 +225,25 @@
     }
   }
 
+  .zoomed-image-on-hover {
+    @apply overflow-hidden;
+
+    & img {
+      @apply transform-3d transition-transform duration-300 ease-out-quad;
+    }
+
+    a:hover & {
+      & img {
+        --scale: 1.08;
+
+        --tw-scale-x: var(--scale);
+        --tw-scale-y: var(--scale);
+      }
+    }
+  }
+
   .transform-3d {
-    §tw-translate-x: 0;
+    --tw-translate-x: 0;
     --tw-translate-y: 0;
     --tw-translate-z: 0;
     --tw-rotate: 0;
@@ -335,7 +352,7 @@
   }
 
   .loaded-image {
-    @apply opacity-0 transition-opacity duration-1000 ease-out;
+    @apply w-full h-auto opacity-0 transition-opacity duration-1000 ease-out;
   }
 
   .loaded-image--loaded {

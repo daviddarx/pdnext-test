@@ -1,9 +1,41 @@
-.impressions-page {
-}
-
 .impressions-page__impressions {
-  @apply grid grid-cols-2 gap-gutter mt-gutter;
+  --vertical-shift: 15vw;
+
+  @screen md {
+    @apply grid grid-cols-2 gap-px pb-[--vertical-shift];
+
+    & > *:nth-child(even) {
+      @apply translate-y-[--vertical-shift];
+    }
+  }
 }
 
-.impression {
+.impression__link {
+  @apply block h-full pb-gutter transition-[background-color] duration-200 ease-out-quad;
+
+  @media (hover: hover) {
+    &:hover {
+      @apply bg-white;
+    }
+  }
+
+  .impression:nth-last-child(2) & {
+    @apply h-auto;
+  }
+}
+
+.impression__image {
+  @apply zoomed-image-on-hover;
+}
+
+.impression__infos {
+  @apply p-gutter;
+}
+
+.impression__details {
+  @apply subline;
+}
+
+.impression__title {
+  @apply h5 mt-[0.2em] xl:h2;
 }
