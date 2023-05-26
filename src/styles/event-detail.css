@@ -79,15 +79,15 @@
 }
 
 .event-detail__nav {
-  @apply -mx-gutter mt-gutter-2 bg-white border-t border-current;
+  @apply flex -mx-gutter mt-gutter-2 bg-white border-t border-current;
 
   @screen max-xl {
-    @apply sticky bottom-0 z-20 flex;
+    @apply sticky bottom-0 z-20;
   }
 }
 
 .event-detail__nav-button {
-  @apply p-gutter-1/2 w-full flex-1;
+  @apply p-gutter w-1/2;
 
   &:last-of-type {
     @apply border-l border-current;
@@ -95,7 +95,11 @@
 }
 
 .event-detail__nav-subline {
-  @apply subline flex space-x-[0.5em] items-center justify-center !text-xs align-text-v;
+  @apply subline flex gap-[1em] items-center justify-center !text-xs align-text-v;
+
+  @screen xl {
+    @apply flex-col gap-[0.5em];
+  }
 }
 
 .event-detail__nav-icon {
@@ -108,7 +112,8 @@
 
 .event-detail__nav-title {
   @apply hidden;
-  x @screen xl {
-    @apply block pt-[0.25em] h5 font-semibold;
+
+  @screen xl {
+    @apply block pt-[0.75em] h5 font-semibold;
   }
 }

@@ -163,7 +163,7 @@ const EventDetail = () => {
                 className='event-detail__nav-button'
               >
                 <span className='event-detail__nav-subline'>
-                  <span>Danach</span>
+                  <span className='xl:order-2'>Danach</span>
                   <ArrowIcon className='event-detail__nav-icon event-detail__nav-icon--next' />
                 </span>
 
