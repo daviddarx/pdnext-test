@@ -82,6 +82,10 @@
 
 .downloads__link {
   @apply underline;
+
+  a:hover > & {
+    @apply no-underline;
+  }
 }
 
 .downloads__detail {
