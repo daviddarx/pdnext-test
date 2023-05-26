@@ -1,12 +1,10 @@
 .gallery-page__images {
-  --vertical-shift: 15vw;
-
   @apply grid grid-cols-2 gap-px;
 
-  padding-bottom: var(--vertical-shift);
+  padding-bottom: var(--columns-vertical-shift);
 
   & > :nth-child(2n) {
-    transform: translateY(var(--vertical-shift));
+    transform: translateY(var(--columns-vertical-shift));
   }
 
   @screen md {
@@ -17,7 +15,7 @@
     }
 
     & > :nth-child(3n + 2) {
-      transform: translateY(var(--vertical-shift));
+      transform: translateY(var(--columns-vertical-shift));
     }
   }
 
@@ -29,18 +27,16 @@
     }
 
     & > :nth-child(4n + 2) {
-      transform: translateY(var(--vertical-shift));
+      transform: translateY(var(--columns-vertical-shift));
     }
 
     & > :nth-child(4n + 4) {
-      transform: translateY(calc(var(--vertical-shift) * 0.5));
+      transform: translateY(calc(var(--columns-vertical-shift) * 0.5));
     }
   }
 
   @screen 3xl {
     @apply grid-cols-5;
-
-    padding-bottom: 0;
 
     & > :nth-child(4n + 2),
     & > :nth-child(4n + 4) {
@@ -48,11 +44,11 @@
     }
 
     & > :nth-child(5n + 2) {
-      transform: translateY(var(--vertical-shift));
+      transform: translateY(var(--columns-vertical-shift));
     }
 
     & > :nth-child(5n + 4) {
-      transform: translateY(calc(var(--vertical-shift) * 0.5));
+      transform: translateY(calc(var(--columns-vertical-shift) * 0.5));
     }
   }
 }

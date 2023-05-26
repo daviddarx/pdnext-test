@@ -39,6 +39,7 @@
   --size-burger: calc(var(--h-logo) * 0.75);
   --height-topbar: calc((var(--size-burger) + var(--gutter)) * -1); /* overwritten from Header */
   --content-page-px-col: var(--gutter);
+  --columns-vertical-shift: 15vw;
 
   @screen sm {
     --font-s: 3vw;

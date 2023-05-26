@@ -32,7 +32,7 @@ const SocialsNav: React.FC<Props> = ({ className }) => {
       <ul>
         {socialsNavItems.map((item) => (
           <li key={item.title}>
-            <a href={item.link} target='_blank' className='nav-socials__item'>
+            <a href={item.link} target='_blank' className='nav-socials__item text-link'>
               {item.title}
             </a>
           </li>

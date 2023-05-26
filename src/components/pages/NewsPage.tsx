@@ -21,34 +21,40 @@ const NewsPage: React.FC<Props> = ({ data }) => {
               <div className='news-item__image'>
                 {item.link ? (
                   <a href={item.link}>
+                    <div className='news-item__image-container'>
+                      <LoadedImage
+                        src={item.image}
+                        alt={item.title}
+                        width={item.imageWidth}
+                        height={item.imageHeight}
+                      />
+                    </div>
+                  </a>
+                ) : (
+                  <div className='news-item__image-container'>
                     <LoadedImage
                       src={item.image}
                       alt={item.title}
                       width={item.imageWidth}
                       height={item.imageHeight}
                     />
-                  </a>
-                ) : (
-                  <LoadedImage
-                    src={item.image}
-                    alt={item.title}
-                    width={item.imageWidth}
-                    height={item.imageHeight}
-                  />
+                  </div>
                 )}
               </div>
             )}
             <div className='news-item__content'>
               <div className='news-item__date'>{item.dateReadable}</div>
-              <h2 className='news-item__title'>
-                {item.title} {item.imageWidth} {item.imageHeight}
-              </h2>
+              <h2 className='news-item__title'>{item.title}</h2>
               {item.desc && (
                 <ReactMarkdown className='news-item__desc' remarkPlugins={[remarkGfm]}>
                   {item.desc}
                 </ReactMarkdown>
               )}
-              {item.link && <a href={item.link}>{item.linkTitle ? item.linkTitle : 'Link'}</a>}
+              {item.link && (
+                <a href={item.link} className='news-item__link'>
+                  {item.linkTitle ? item.linkTitle : 'Link'}
+                </a>
+              )}
             </div>
           </article>
         ))}

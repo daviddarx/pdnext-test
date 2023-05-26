@@ -1,11 +1,23 @@
 .impressions-page__impressions {
-  --vertical-shift: 15vw;
-
   @screen md {
-    @apply grid grid-cols-2 gap-px pb-[--vertical-shift];
+    @apply grid grid-cols-2 gap-px;
 
-    & > *:nth-child(even) {
-      @apply translate-y-[--vertical-shift];
+    padding-bottom: var(--columns-vertical-shift);
+
+    & > :nth-child(2n) {
+      transform: translateY(var(--columns-vertical-shift));
+    }
+  }
+
+  @screen 3xl {
+    @apply grid-cols-3;
+
+    & > :nth-child(2n) {
+      transform: none;
+    }
+
+    & > :nth-child(3n + 2) {
+      transform: translateY(var(--columns-vertical-shift));
     }
   }
 }
@@ -37,5 +49,5 @@
 }
 
 .impression__title {
-  @apply h5 mt-[0.2em] xl:h2;
+  @apply h5 mt-[0.2em] xl:h2 3xl:h3;
 }
