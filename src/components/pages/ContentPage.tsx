@@ -126,7 +126,7 @@ const ContentPage: React.FC<Props> = ({ data }) => {
             )}
 
             {slot.definitionLists && slot.definitionLists.length > 0 && (
-              <div className='content-slot__definition-list content-page__column'>
+              <div className='content-slot__definition-list content-page__column-left'>
                 {slot.definitionLists.map((list, i) => (
                   <div key={slot.title + i} className='definition-list'>
                     {list.title && <h3 className='definition-list__title'>{list.title}</h3>}
@@ -134,11 +134,9 @@ const ContentPage: React.FC<Props> = ({ data }) => {
                       <dl className='definition-list__dl'>
                         {list.listItem.map((item) => (
                           <Fragment key={item.title}>
-                            <dt className='definition-list__dt'>
-                              <h4>{item.title}</h4>
-                            </dt>
+                            <dt className='definition-list__dt'>{item.title}</dt>
                             {item.description && (
-                              <dd className='definition-list__dd'>
+                              <dd className='definition-list__dd text-content'>
                                 <ReactMarkdown remarkPlugins={[remarkGfm]}>
                                   {item.description}
                                 </ReactMarkdown>
@@ -155,7 +153,7 @@ const ContentPage: React.FC<Props> = ({ data }) => {
 
             {slot.secondText && slot.secondText.trim().length > 0 && (
               <ReactMarkdown
-                className='content-slot__second-text content-page__column'
+                className='content-slot__second-text text-content content-page__column'
                 remarkPlugins={[remarkGfm]}
               >
                 {slot.secondText}
@@ -169,7 +167,7 @@ const ContentPage: React.FC<Props> = ({ data }) => {
                   {slot.downloads.map((download) => (
                     <li key={download.downloadTitle} className='downloads__row'>
                       <a href={download.file} target='_blank'>
-                        {download.downloadTitle}
+                        <span className='downloads__link'>{download.downloadTitle}</span>
                         <span className='downloads__detail'>{download.fileTypeWeight}</span>
                       </a>
                     </li>

@@ -3,9 +3,17 @@
 }
 
 .decorative-video__mute-button {
-  @apply px-gutter;
-  &::after {
-    content: '';
-    @apply absolute inset-0;
+  @apply absolute inset-0;
+}
+
+.decorative-video__mute-icon {
+  @apply absolute top-gutter right-gutter flex items-center justify-center;
+  @apply text-pink bg-black border border-pink rounded-full;
+
+  width: var(--size-burger);
+  height: var(--size-burger);
+
+  .icon {
+    @apply w-1/2 h-1/2;
   }
 }

@@ -1,5 +1,8 @@
 import { useState } from 'react';
 
+import SoundOnIcon from '@/components/icons/SoundOnIcon';
+import SoundOffIcon from '@/components/icons/SoundOffIcon';
+
 type Props = {
   className: string;
   videoSettings: {
@@ -32,7 +35,11 @@ const DecorativeVideo: React.FC<Props> = ({ className = '', videoSettings }) => 
         <a href={videoSettings.urlMp4}>here</a>.
       </video>
       <button className='decorative-video__mute-button' onClick={toggleVideoMute}>
-        {isMuted ? 'Unmute' : 'Mute'} Video
+        <span className='opacity-0'>{isMuted ? 'Unmute' : 'Mute'} Video</span>
+        <span className='decorative-video__mute-icon'>
+          {isMuted && <SoundOnIcon />}
+          {!isMuted && <SoundOffIcon />}
+        </span>
       </button>
     </div>
   );

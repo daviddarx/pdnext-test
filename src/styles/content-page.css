@@ -1,5 +1,5 @@
 .content-page {
-  @apply pt-gutter-4;
+  @apply pt-gutter-4 pb-gutter-2;
 
   margin-top: var(--h-logo);
 
@@ -14,15 +14,11 @@
 }
 
 .content-page__nav-link {
-  @apply block h3 py-gutter px-gutter-1/2 font-semibold align-text-v;
+  @apply block h5 py-gutter px-gutter-1/2 font-semibold align-text-v;
 
   &:hover {
     @apply text-pink;
   }
-}
-
-.content-page__video {
-  @apply -mx-gutter;
 }
 
 .content-page__slots {
@@ -56,6 +52,10 @@
 
 .content-slot__definition-list {
   @apply mt-gutter-2;
+
+  .content-slot__title + & {
+    @apply mt-gutter;
+  }
 }
 
 .content-slot__second-text {
@@ -74,11 +74,35 @@
  * Utils
  */
 
+.downloads__row {
+  a {
+    @apply !no-underline flex justify-start;
+  }
+}
+
+.downloads__link {
+  @apply underline;
+}
+
+.downloads__detail {
+  @apply text-base no-underline ml-[1em] pt-[0.3em];
+}
+
+.definition-list__title {
+  @apply h3 border-b border-black pb-[0.4em] mb-gutter;
+}
+
 .definition-list__dl {
-  @apply grid grid-cols-2 gap-x-4;
+  @apply grid grid-cols-3 gap-x-gutter;
+
+  grid-template-columns: 1fr 2fr;
+}
+
+.definition-list__dt {
+  @apply subline pt-[0.3em];
 }
 
 .definition-list__dd,
 .definition-list__dt {
-  @apply mt-gutter;
+  @apply mt-gutter-1/2;
 }
