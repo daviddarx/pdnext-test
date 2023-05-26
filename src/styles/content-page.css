@@ -4,20 +4,28 @@
   margin-top: var(--h-logo);
 
   & .text-content {
-    @apply text-2xl;
+    @apply text-bigger;
   }
 }
 
 .content-page__nav {
-  @apply flex justify-center w-full mt-gutter-2 px-gutter;
-  @apply bg-black text-white;
+  @apply w-full flex flex-wrap justify-center mt-gutter-2 px-gutter py-gutter-1/2;
+  @apply text-center bg-black text-white;
+
+  @screen lg {
+    @apply py-0;
+  }
 }
 
 .content-page__nav-link {
-  @apply block h5 py-gutter px-gutter-1/2 font-semibold align-text-v;
+  @apply block py-[0.4em] px-[0.4em] h5 font-semibold align-text-v;
 
   &:hover {
     @apply text-pink;
+  }
+
+  @screen lg {
+    @apply py-gutter px-gutter-1/2;
   }
 }
 
@@ -52,10 +60,6 @@
 
 .content-slot__definition-list {
   @apply mt-gutter-2;
-
-  .content-slot__title + & {
-    @apply mt-gutter;
-  }
 }
 
 .content-slot__second-text {
@@ -74,12 +78,6 @@
  * Utils
  */
 
-.downloads__row {
-  a {
-    @apply !no-underline flex justify-start;
-  }
-}
-
 .downloads__link {
   @apply underline;
 
@@ -89,7 +87,7 @@
 }
 
 .downloads__detail {
-  @apply text-base no-underline ml-[1em] pt-[0.3em];
+  @apply inline-block text-xs lg:text-base no-underline ml-[0.5em] -translate-y-[0.1em];
 }
 
 .definition-list__title {
@@ -97,16 +95,35 @@
 }
 
 .definition-list__dl {
-  @apply grid grid-cols-3 gap-x-gutter;
+  @screen lg {
+    @apply grid grid-cols-3 gap-x-gutter;
 
-  grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 2fr;
+  }
 }
 
 .definition-list__dt {
-  @apply subline pt-[0.3em];
+  @apply subline leading-tight mt-gutter;
+
+  @screen lg {
+    @apply pt-[0.15em];
+  }
+
+  @screen xl {
+    @apply pt-[0.53em];
+  }
 }
 
-.definition-list__dd,
-.definition-list__dt {
-  @apply mt-gutter-1/2;
+.definition-list__dd {
+  @apply pr-gutter;
+
+  @screen max-lg {
+    @apply pt-[0.25em];
+  }
+}
+.definition-list__dt,
+.definition-list__dd {
+  @screen lg {
+    @apply mt-gutter-1/2;
+  }
 }

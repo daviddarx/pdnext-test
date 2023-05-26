@@ -14,7 +14,7 @@ const motionVariants = {
   opened: {
     height: 'auto',
     transition: {
-      duration: 0.75,
+      duration: 0.5,
       ease: eases.inOutQuart,
     },
   },

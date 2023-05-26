@@ -19,7 +19,11 @@
 }
 
 .bottom-nav__title {
-  @apply subline mt-gutter mb-[1em];
+  @apply subline mt-[0.2em] mb-[1em];
+
+  @screen lg {
+    @apply mt-gutter;
+  }
 }
 
 .botton-nav__links {

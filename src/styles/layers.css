@@ -25,32 +25,36 @@
 
   h1,
   .h1 {
-    @apply text-4xl lg:text-6xl;
+    @apply text-4xl xl:text-6xl;
   }
 
   h2,
   .h2 {
-    @apply text-3xl lg:text-5xl;
+    @apply text-3xl xl:text-5xl;
   }
 
   h3,
   .h3 {
-    @apply text-2xl lg:text-4xl;
+    @apply text-2xl xl:text-4xl;
   }
 
   h4,
   .h4 {
-    @apply text-xl lg:text-3xl;
+    @apply text-xl xl:text-3xl;
   }
 
   h5,
   .h5 {
-    @apply text-xl lg:text-2xl;
+    @apply text-xl xl:text-2xl;
   }
 
   h6,
   .h6 {
-    @apply text-xl lg:text-2xl;
+    @apply text-xl xl:text-2xl;
+  }
+
+  .text-bigger {
+    @apply text-base xl:text-2xl;
   }
 
   a {
@@ -94,7 +98,7 @@
   }
 
   .subline--above-title {
-    @apply pb-[1em] lg:pb-[2em];
+    @apply pb-[1em] xl:pb-[2em];
   }
 
   .tag {

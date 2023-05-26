@@ -60,8 +60,10 @@
 
 .special-announcement-panel__title {
   @apply mt-[0.2em];
+
+  padding-right: calc(var(--size-burger) + var(--gutter));
 }
 
 .special-announcement-panel__desc {
-  @apply mt-gutter-2;
+  @apply mt-gutter-2 text-bigger;
 }

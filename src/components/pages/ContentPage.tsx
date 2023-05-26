@@ -166,8 +166,8 @@ const ContentPage: React.FC<Props> = ({ data }) => {
                 <ul className='downloads__list'>
                   {slot.downloads.map((download) => (
                     <li key={download.downloadTitle} className='downloads__row'>
-                      <a href={download.file} target='_blank'>
-                        <span className='downloads__link'>{download.downloadTitle}</span>
+                      <a href={download.file} target='_blank' className='downloads__link'>
+                        {download.downloadTitle}
                         <span className='downloads__detail'>{download.fileTypeWeight}</span>
                       </a>
                     </li>

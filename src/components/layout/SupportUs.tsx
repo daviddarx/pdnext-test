@@ -78,8 +78,10 @@ const SupportUs = ({ data }: Props) => {
       <Accordion
         header={
           <h2 className='support-us__title text-link'>
-            <span className='inline-block align-text-v'>Unterstützen Sie uns</span>
-            <HeartIcon className='support-us__heart' />
+            <span className='inline-block align-text-v'>
+              Unterstützen Sie uns
+              <HeartIcon className='support-us__heart' />
+            </span>
             <CloseIcon className='support-us__close' />
           </h2>
         }

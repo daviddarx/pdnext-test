@@ -1,5 +1,11 @@
+.support-us {
+  .accordion__button {
+    @apply text-left;
+  }
+}
+
 .support-us__title {
-  @apply relative p-gutter;
+  @apply relative p-gutter pr-gutter-3;
   @apply h3 text-white bg-black;
 
   @screen lg {
@@ -30,10 +36,10 @@
 }
 
 .support-us__close {
-  @apply absolute top-gutter right-gutter w-[1em] h-[1em] mt-[0.2em];
+  @apply absolute top-gutter right-gutter  w-[1em] h-[1em];
 
   @screen lg {
-    @apply top-1/2 -translate-y-1/2 right-gutter mt-0;
+    @apply top-1/2 -translate-y-1/2 mt-0;
   }
 }
 

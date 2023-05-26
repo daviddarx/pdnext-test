@@ -38,7 +38,7 @@
   --h-logo: 17vw;
   --size-burger: calc(var(--h-logo) * 0.75);
   --height-topbar: calc((var(--size-burger) + var(--gutter)) * -1); /* overwritten from Header */
-  --content-page-px-col: 20%;
+  --content-page-px-col: var(--gutter);
 
   @screen sm {
     --font-s: 3vw;
@@ -60,13 +60,15 @@
 
   @screen xl {
     --font-s: 1.5vw;
-    --h-logo: 6vw;
+    --h-logo: 8vw;
+    --content-page-px-col: 10%;
   }
 
   @screen 2xl {
     --font-s: 1.05vw;
     --gutter: 2.5vw;
     --h-logo: 6vw;
+    --content-page-px-col: 20%;
   }
 }
 
