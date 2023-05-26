@@ -23,15 +23,19 @@
 }
 
 .program-page__detail {
-  @apply fixed top-0 left-0 w-0 h-screen;
+  @apply fixed top-0 left-0 w-0 h-screen pointer-events-none;
 
   @screen xl {
-    @apply sticky top-0 overflow-hidden pointer-events-none;
+    @apply sticky left-auto w-auto overflow-hidden;
   }
 }
 
 .program-page__detail--opened {
   @apply w-full pointer-events-auto;
+
+  @screen xl {
+    @apply w-auto;
+  }
 }
 
 .program-page__close {
