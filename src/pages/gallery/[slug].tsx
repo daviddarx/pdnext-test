@@ -31,14 +31,16 @@ const Page: NextPage<PageProps> = ({ page, commonPageData }) => {
 
         <div className='gallery-page__images'>
           {page.images.map((image) => (
-            <div className='gallery-page__image' key={image.main.url}>
-              <LoadedImage
-                src={image.thumb.url}
-                alt={page.title}
-                width={image.thumb.width}
-                height={image.thumb.height}
-              />
-            </div>
+            <a href={image.main.url} key={image.main.url} className='gallery-page__link'>
+              <div className='gallery-page__image'>
+                <LoadedImage
+                  src={image.thumb.url}
+                  alt={page.title}
+                  width={image.thumb.width}
+                  height={image.thumb.height}
+                />
+              </div>
+            </a>
           ))}
         </div>
       </section>

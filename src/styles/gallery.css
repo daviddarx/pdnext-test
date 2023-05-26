@@ -1,3 +1,66 @@
 .gallery-page__images {
-  @apply grid grid-cols-2 gap-gutter mt-gutter;
+  --vertical-shift: 15vw;
+
+  @apply grid grid-cols-2 gap-px;
+
+  padding-bottom: var(--vertical-shift);
+
+  & > :nth-child(2n) {
+    transform: translateY(var(--vertical-shift));
+  }
+
+  @screen md {
+    @apply grid-cols-3;
+
+    & > :nth-child(2n) {
+      transform: none;
+    }
+
+    & > :nth-child(3n + 2) {
+      transform: translateY(var(--vertical-shift));
+    }
+  }
+
+  @screen xl {
+    @apply grid-cols-4;
+
+    & > :nth-child(3n + 2) {
+      transform: none;
+    }
+
+    & > :nth-child(4n + 2) {
+      transform: translateY(var(--vertical-shift));
+    }
+
+    & > :nth-child(4n + 4) {
+      transform: translateY(calc(var(--vertical-shift) * 0.5));
+    }
+  }
+
+  @screen 3xl {
+    @apply grid-cols-5;
+
+    padding-bottom: 0;
+
+    & > :nth-child(4n + 2),
+    & > :nth-child(4n + 4) {
+      transform: none;
+    }
+
+    & > :nth-child(5n + 2) {
+      transform: translateY(var(--vertical-shift));
+    }
+
+    & > :nth-child(5n + 4) {
+      transform: translateY(calc(var(--vertical-shift) * 0.5));
+    }
+  }
+}
+
+.gallery-page__link {
+  @apply block;
+}
+
+.gallery-page__image {
+  @apply zoomed-image-on-hover;
 }
