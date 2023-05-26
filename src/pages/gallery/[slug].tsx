@@ -38,6 +38,7 @@ const Page: NextPage<PageProps> = ({ page, commonPageData }) => {
                   alt={page.title}
                   width={image.thumb.width}
                   height={image.thumb.height}
+                  unoptimized={true}
                 />
               </div>
             </a>

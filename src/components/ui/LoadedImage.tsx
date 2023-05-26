@@ -6,10 +6,18 @@ type Props = {
   alt: string;
   width?: number;
   height?: number;
+  unoptimized?: boolean;
   className?: string;
 };
 
-const LoadedImage: React.FC<Props> = ({ src, alt, width, height, className }) => {
+const LoadedImage: React.FC<Props> = ({
+  src,
+  alt,
+  width,
+  height,
+  unoptimized = false,
+  className,
+}) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   const handleLoaded = () => {
@@ -24,6 +32,7 @@ const LoadedImage: React.FC<Props> = ({ src, alt, width, height, className }) =>
       height={height}
       className={`loaded-image ${isLoaded ? 'loaded-image--loaded' : ''} ${className}`.trim()}
       onLoad={handleLoaded}
+      unoptimized={unoptimized}
     />
   );
 };
