@@ -29,7 +29,7 @@
 }
 
 .main-nav__link--active {
-  @apply text-white;
+  @apply !text-pink opacity-50;
 }
 
 .main-nav__link-text {

@@ -57,10 +57,6 @@
     @apply text-base xl:text-2xl;
   }
 
-  a {
-    @apply transition-all duration-200 ease-out-quart;
-  }
-
   b,
   strong {
     @apply font-semibold;
@@ -81,10 +77,6 @@
     @media (hover: hover) {
       &:hover {
         @apply opacity-50;
-
-        .dark & {
-          @apply text-pink opacity-100 transition-colors;
-        }
       }
     }
   }
@@ -105,7 +97,7 @@
     @apply inline-block px-[0.75em] pt-[0.5em] pb-[0.25em];
     @apply text-base font-semibold leading-none uppercase tracking-tag;
     @apply bg-white rounded-full border border-black;
-    @apply transition-colors duration-300 ease-out;
+    @apply transition-colors duration-200 ease-out;
 
     .dark & {
       @apply bg-black text-white border-white;
@@ -161,14 +153,6 @@
     @apply translate-y-[0.1em];
   }
 
-  .text-link {
-    @media (hover: hover) {
-      &:hover {
-        @apply opacity-50;
-      }
-    }
-  }
-
   .text-content {
     h1,
     h2,
@@ -198,20 +182,11 @@
     }
 
     a {
-      @apply underline;
+      @apply underline text-link;
+
       @media (hover: hover) {
         &:hover {
           @apply no-underline;
-        }
-      }
-
-      .dark & {
-        @apply text-white;
-
-        @media (hover: hover) {
-          &:hover {
-            @apply text-pink;
-          }
         }
       }
     }
@@ -260,10 +235,12 @@
   .dark {
     @apply bg-black text-pink;
 
-    a {
+    .text-link {
+      @apply text-white;
+
       @media (hover: hover) {
         &:hover {
-          @apply text-white;
+          @apply text-pink;
         }
       }
     }

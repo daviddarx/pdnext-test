@@ -70,7 +70,7 @@ const MainNav = () => {
             {mainNavItems.map((item) => (
               <li key={item.link}>
                 <ActiveLink
-                  className='main-nav__link main-nav__link--main'
+                  className='main-nav__link main-nav__link--main text-link'
                   activeClassName='main-nav__link--active'
                   href={item.link}
                 >
@@ -92,7 +92,7 @@ const MainNav = () => {
             {secondaryNavItems.map((item) => (
               <li key={item.link}>
                 <ActiveLink
-                  className='main-nav__link main-nav__link--secondary'
+                  className='main-nav__link main-nav__link--secondary text-link'
                   activeClassName='main-nav__link--active'
                   href={item.link}
                 >
