@@ -2,8 +2,6 @@ import { ClusteredEvents } from '@/types/ClusteredEvents';
 import { FormatedEvent } from '@/types/FormatedEvent';
 
 const setClusteredEventsPrevNext = (clusteredEvent: ClusteredEvents[]) => {
-  console.log('first event inside: ', clusteredEvent[0].events[0].title);
-
   clusteredEvent.forEach((date, dateI: number) => {
     date.events = date.events.map((event: FormatedEvent, eventI: number) => {
       let prevId = null;
