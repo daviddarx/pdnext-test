@@ -16,8 +16,6 @@ const Event = ({ event, dateVisible = false }: Props) => {
 
   const openEvent = () => {
     dispatch(uiActions.openEvent(event));
-
-    window.location.hash = event.id;
   };
 
   return (

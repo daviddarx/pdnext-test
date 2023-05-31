@@ -21,9 +21,13 @@ export const uiSlice = createSlice({
   },
   reducers: {
     openEvent: (state, action) => {
+      window.history.pushState(null, '', `#${action.payload.id}`);
+
       state.openedEvent = action.payload;
     },
     closeEvent: (state) => {
+      window.history.pushState(null, '', window.location.pathname);
+
       state.openedEvent = undefined;
     },
     toggleNavigation: (state) => {
