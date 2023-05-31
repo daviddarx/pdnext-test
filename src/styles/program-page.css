@@ -23,7 +23,7 @@
 }
 
 .program-page__detail {
-  @apply fixed top-0 left-0 w-0 h-screen pointer-events-none;
+  @apply fixed z-10 top-0 left-0 w-0 h-screen pointer-events-none;
 
   @screen xl {
     @apply sticky left-auto w-auto overflow-hidden;
