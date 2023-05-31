@@ -28,9 +28,9 @@
 }
 
 .event-detail__special-state {
-  @apply tag relative -top-[0.5em] lg:-top-[0.6em];
+  @apply tag relative top-[-0.45em] sm:top-[-0.4em] lg:top-[-0.5em] xl:top-[-0.65em];
 
-  @screen max-lg {
+  @screen max-xl {
     @apply tag--sm;
   }
 }

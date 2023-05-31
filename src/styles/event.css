@@ -43,7 +43,7 @@
 }
 
 .event__special-state {
-  @apply tag tag--sm relative -top-[0.2em] lg:-top-[0.35em] !bg-transparent;
+  @apply tag tag--sm relative -top-[0.2em] lg:-top-[0.25em] xl:-top-[0.35em] !bg-transparent;
 }
 
 .event__btn {
