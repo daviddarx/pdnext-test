@@ -3,7 +3,7 @@
   @apply border-t border-black;
   @apply transition-all duration-300 ease-out;
 
-  @screen lg {
+  @screen xl {
     @apply pt-gutter-3/4 pb-gutter-1/2;
   }
 
