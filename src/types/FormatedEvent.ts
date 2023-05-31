@@ -9,10 +9,14 @@ export interface FormatedEvent extends Event {
     filter: string;
     hour: string;
   };
-  prevId?: string;
-  prevTitle?: string;
-  nextId?: string;
-  nextTitle?: string;
+  /**
+   * null needed for server side rendering as setClusteredEventsPrevNext()
+   * set to undefined, which isn't allowed on the server.
+   */
+  prevId?: string | null;
+  prevTitle?: string | null;
+  nextId?: string | null;
+  nextTitle?: string | null;
   types: string[];
   entriesObjects: Entry[];
 }

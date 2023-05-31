@@ -1,5 +1,4 @@
 import { OnsContent } from '@/utils/fetch-ons-content';
-import setClusteredEventsPrevNext from '@/utils/set-clustered-events-prev-next';
 import useScrollToEventOnPageLoad from '@/hooks/useScrollToEventOnPageLoad';
 
 import ProgramPageLayout from '@/components/layout/ProgramPageLayout';
@@ -11,8 +10,6 @@ type Props = {
 
 const OnsPage: React.FC<Props> = ({ data }) => {
   useScrollToEventOnPageLoad(data.dateClusteredEvents);
-
-  setClusteredEventsPrevNext(data.dateClusteredEvents);
 
   return (
     <ProgramPageLayout

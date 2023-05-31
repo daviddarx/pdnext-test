@@ -2,14 +2,16 @@ import { ClusteredEvents } from '@/types/ClusteredEvents';
 import { FormatedEvent } from '@/types/FormatedEvent';
 
 const setClusteredEventsPrevNext = (clusteredEvent: ClusteredEvents[]) => {
+  console.log('first event inside: ', clusteredEvent[0].events[0].title);
+
   clusteredEvent.forEach((date, dateI: number) => {
     date.events = date.events.map((event: FormatedEvent, eventI: number) => {
-      let prevId = undefined;
-      let prevTitle = undefined;
+      let prevId = null;
+      let prevTitle = null;
       let prevCluster = clusteredEvent[dateI - 1];
 
-      let nextId = undefined;
-      let nextTitle = undefined;
+      let nextId = null;
+      let nextTitle = null;
       let nextCluster = clusteredEvent[dateI + 1];
 
       if (date.events[eventI - 1]) {
@@ -30,10 +32,10 @@ const setClusteredEventsPrevNext = (clusteredEvent: ClusteredEvents[]) => {
 
       return {
         ...event,
-        prevId: prevId,
-        prevTitle: prevTitle,
-        nextId: nextId,
-        nextTitle: nextTitle,
+        prevId,
+        prevTitle,
+        nextId,
+        nextTitle,
       };
     });
   });

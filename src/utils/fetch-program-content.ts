@@ -1,5 +1,6 @@
 import loadJsonFiles from '@/utils/load-json-files';
 import formatEvent from '@/utils/format-event';
+import setClusteredEventsPrevNext from '@/utils/set-clustered-events-prev-next';
 
 import { Entry } from '@/types/Entry';
 import { Event } from '@/types/Event';
@@ -50,6 +51,8 @@ export async function fetchProgramContent(): Promise<ProgramContent> {
     },
     [],
   );
+
+  setClusteredEventsPrevNext(dateClusteredEvents);
 
   return {
     dateClusteredEvents: dateClusteredEvents,
