@@ -4,6 +4,10 @@ import { FormatedEvent } from '@/types/FormatedEvent';
 const setClusteredEventsPrevNext = (clusteredEvent: ClusteredEvents[]) => {
   clusteredEvent.forEach((date, dateI: number) => {
     date.events = date.events.map((event: FormatedEvent, eventI: number) => {
+      /**
+       * null needed for server side rendering as
+       * undefined isn't allowed on the server.
+       */
       let prevId = null;
       let prevTitle = null;
       let prevCluster = clusteredEvent[dateI - 1];
