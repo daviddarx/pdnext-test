@@ -24,7 +24,7 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
       white: '#ffffff',
-      black: 'hsl(200, 100%, 7%)',
+      black: 'hsl(200, 100%, 10%)',
       pink: 'hsl(0, 80%, 90%)',
       pinkScrollable: 'hsla(0, 80%, 90%, 0.65)',
     },
