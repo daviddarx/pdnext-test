@@ -16,7 +16,7 @@
 }
 
 .event-detail__date-separator {
-  @apply !hidden md:inline-block;
+  @apply !hidden md:!inline-block md:mx-[0.5em];
 }
 
 .event-detail__title {
@@ -88,9 +88,9 @@
     content: '';
   }
 
-  @screen max-xl {
-    @apply sticky bottom-0 z-20;
-  }
+  /* @screen max-xl { */
+  @apply sticky bottom-0 z-20;
+  /* } */
 }
 
 .event-detail__nav-button {
