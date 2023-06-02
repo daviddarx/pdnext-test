@@ -1,5 +1,11 @@
-.event-list {
+.events-list {
   @apply relative;
+
+  &:last-of-type {
+    & .event:last-of-type {
+      @apply pb-gutter-2;
+    }
+  }
 }
 
 .events-list__title {

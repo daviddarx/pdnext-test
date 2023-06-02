@@ -1,7 +1,7 @@
 .event {
   @apply relative px-gutter pt-gutter pb-gutter-3/4;
   @apply border-t border-black;
-  @apply transition-all duration-300 ease-out;
+  @apply transition-colors duration-300 ease-out;
 
   @screen xl {
     @apply pt-gutter-3/4 pb-gutter-1/2;
@@ -9,10 +9,6 @@
 
   &:first-of-type {
     @apply border-none;
-  }
-
-  &:last-of-type {
-    @apply pb-gutter-2;
   }
 
   @media (hover: hover) {
