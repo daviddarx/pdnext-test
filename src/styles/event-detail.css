@@ -20,7 +20,7 @@
 }
 
 .event-detail__title {
-  @apply mt-gutter-3;
+  @apply mt-gutter-3 hyphens-auto;
 }
 
 .event-detail__title-text {
