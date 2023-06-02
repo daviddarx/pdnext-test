@@ -20,8 +20,10 @@
 .content-page__nav-link {
   @apply block py-[0.4em] px-[0.4em] h5 font-semibold align-text-v text-link;
 
-  &:hover {
-    @apply text-pink;
+  @media (hover: hover) {
+    &:hover {
+      @apply text-pink;
+    }
   }
 
   @screen lg {
