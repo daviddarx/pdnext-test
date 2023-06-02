@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 
 import { uiActions } from '@/store';
@@ -23,6 +23,8 @@ type Props = {
 
 const ProgramPage: React.FC<Props> = ({ data }) => {
   const dispatch = useDispatch();
+
+  const filterRef = useRef<HTMLDivElement>(null);
 
   const dateClusteredEvents = data.dateClusteredEvents;
   const entryTypes = data.entryTypes;
@@ -82,15 +84,21 @@ const ProgramPage: React.FC<Props> = ({ data }) => {
     dispatch(uiActions.closeEvent());
   };
 
+  const scrollToFilters = () => {
+    filterRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   const filterByType = (type: string) => {
     setCurrentType(type);
     setCurrentDate(allDatesFilter);
     closeEvent();
+    scrollToFilters();
   };
 
   const filterByDate = (date: string) => {
     setCurrentDate(date);
     closeEvent();
+    scrollToFilters();
   };
 
   useScrollToEventOnPageLoad(dateClusteredEvents);
@@ -104,14 +112,16 @@ const ProgramPage: React.FC<Props> = ({ data }) => {
             <span>Festival Programm</span>
           </h1>
 
-          <EventsFilters
-            typeFilters={typeFilters}
-            currentType={currentType}
-            onFilterByType={filterByType}
-            dateFilters={dateFilters}
-            currentDate={currentDate}
-            onFilterByDate={filterByDate}
-          />
+          <div className='program-page__filters' ref={filterRef}>
+            <EventsFilters
+              typeFilters={typeFilters}
+              currentType={currentType}
+              onFilterByType={filterByType}
+              dateFilters={dateFilters}
+              currentDate={currentDate}
+              onFilterByDate={filterByDate}
+            />
+          </div>
         </Fragment>
       }
     >
