@@ -52,7 +52,7 @@ module.exports = {
       none: '1',
     },
     letterSpacing: {
-      normal: '0.03em',
+      normal: '0.04em',
       title: '0.005em',
       tag: '0.03em',
     },
