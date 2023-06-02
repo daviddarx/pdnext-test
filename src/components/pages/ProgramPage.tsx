@@ -3,7 +3,10 @@ import { useDispatch } from 'react-redux';
 
 import { uiActions } from '@/store';
 import { ProgramContent } from '@/utils/fetch-program-content';
-import setClusteredEventsPrevNext from '@/utils/set-clustered-events-prev-next';
+import {
+  setClusteredEventsPrevNext,
+  registerClusteredEvents,
+} from '@/utils/set-clustered-events-prev-next';
 import { ClusteredEvents } from '@/types/ClusteredEvents';
 import useScrollToEventOnPageLoad from '@/hooks/useScrollToEventOnPageLoad';
 
@@ -73,6 +76,7 @@ const ProgramPage: React.FC<Props> = ({ data }) => {
   );
 
   setClusteredEventsPrevNext(filteredEvents);
+  registerClusteredEvents(filteredEvents);
 
   const closeEvent = () => {
     dispatch(uiActions.closeEvent());

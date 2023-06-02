@@ -1,7 +1,7 @@
 import { ClusteredEvents } from '@/types/ClusteredEvents';
 import { FormatedEvent } from '@/types/FormatedEvent';
 
-const setClusteredEventsPrevNext = (clusteredEvent: ClusteredEvents[]) => {
+export function setClusteredEventsPrevNext(clusteredEvent: ClusteredEvents[]) {
   clusteredEvent.forEach((date, dateI: number) => {
     date.events = date.events.map((event: FormatedEvent, eventI: number) => {
       /**
@@ -26,7 +26,7 @@ const setClusteredEventsPrevNext = (clusteredEvent: ClusteredEvents[]) => {
 
       if (date.events[eventI + 1]) {
         nextId = date.events[eventI + 1].id;
-        prevTitle = date.events[eventI + 1].title;
+        nextTitle = date.events[eventI + 1].title;
       } else if (nextCluster && nextCluster.events) {
         nextId = nextCluster.events[0].id;
         nextTitle = nextCluster.events[0].title;
@@ -41,6 +41,29 @@ const setClusteredEventsPrevNext = (clusteredEvent: ClusteredEvents[]) => {
       };
     });
   });
-};
+}
 
-export default setClusteredEventsPrevNext;
+/**
+ * Setted outside of the store because of
+ * immutable problem in the store when trying
+ * to reset the value.
+ */
+let registeredClusterEvents: { [key: string]: FormatedEvent };
+
+export function registerClusteredEvents(clusteredEvent: ClusteredEvents[]) {
+  registeredClusterEvents = {};
+
+  for (const cluster of clusteredEvent) {
+    for (const event of cluster.events) {
+      registeredClusterEvents[event.id] = event;
+    }
+  }
+}
+
+export function getEventById(id: string): FormatedEvent | undefined {
+  if (id in registeredClusterEvents) {
+    return registeredClusterEvents[id];
+  } else {
+    return undefined;
+  }
+}

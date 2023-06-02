@@ -1,5 +1,5 @@
 import loadJsonFiles from '@/utils/load-json-files';
-import setClusteredEventsPrevNext from '@/utils/set-clustered-events-prev-next';
+import { setClusteredEventsPrevNext } from '@/utils/set-clustered-events-prev-next';
 
 import { Entry } from '@/types/Entry';
 import { Event } from '@/types/Event';

@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { AnimatePresence, motion } from 'framer-motion';
 
+import { getEventById } from '@/utils/set-clustered-events-prev-next';
 import eases from '@/utils/eases';
 import { uiActions } from '@/store';
 import { uiStateType } from '@/store/ui-slice';
@@ -55,7 +56,8 @@ const EventDetail = () => {
   }, [event]);
 
   const switchEvent = (id: string) => {
-    console.log('switch', id); // trouver le moyen de picker le event sans devoir le mettre dans le array
+    const event = getEventById(id);
+    dispatch(uiActions.openEvent(event));
   };
 
   return (
@@ -148,10 +150,10 @@ const EventDetail = () => {
             {event.prevId && (
               <button
                 onClick={switchEvent.bind(null, event.prevId)}
-                className='event-detail__nav-button'
+                className='event-detail__nav-button event-detail__nav-button--prev'
               >
                 <span className='event-detail__nav-subline'>
-                  <ArrowIcon className='event-detail__nav-icon event-detail__nav-icon--prev' />
+                  <ArrowIcon className='event-detail__nav-icon' />
                   <span>Davor</span>
                 </span>
                 <span className='event-detail__nav-title'>{event.prevTitle}</span>
@@ -160,13 +162,12 @@ const EventDetail = () => {
             {event.nextId && (
               <button
                 onClick={switchEvent.bind(null, event.nextId)}
-                className='event-detail__nav-button'
+                className='event-detail__nav-button event-detail__nav-button--next'
               >
                 <span className='event-detail__nav-subline'>
                   <span className='xl:order-2'>Danach</span>
-                  <ArrowIcon className='event-detail__nav-icon event-detail__nav-icon--next' />
+                  <ArrowIcon className='event-detail__nav-icon' />
                 </span>
-
                 <span className='event-detail__nav-title'>{event.nextTitle}</span>
               </button>
             )}
