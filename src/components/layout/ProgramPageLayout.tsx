@@ -44,13 +44,16 @@ const ProgramPageLayout: React.FC<Props> = ({ header, children }) => {
 
   useEffect(() => {
     if (openedEvent) {
-      const pageRect = pageRef.current!.getBoundingClientRect();
+      if (window.innerWidth >= 1280) {
+        const pageRect = pageRef.current!.getBoundingClientRect();
 
-      if (window.scrollY > pageRect.height - window.innerHeight) {
-        window.scroll({
-          top: pageRect.height - window.innerHeight,
-          behavior: 'smooth',
-        });
+        if (window.scrollY > pageRect.height - window.innerHeight) {
+          console.log('scrolllll');
+          window.scroll({
+            top: pageRect.height - window.innerHeight,
+            behavior: 'smooth',
+          });
+        }
       }
     } else {
       setTimeout(() => {
