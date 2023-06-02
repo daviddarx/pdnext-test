@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { uiStateType } from '@/store/ui-slice';
 import { uiActions } from '@/store';
+import { scrollToEvent } from '@/hooks/useScrollToEventOnPageLoad';
 
 import EventDetail from '@/components/events/EventDetail';
 import EventDetailCloseButton from '@/components/events/EventDetailCloseButton';
@@ -20,6 +21,7 @@ const ProgramPageLayout: React.FC<Props> = ({ header, children }) => {
   const pageRef = useRef<HTMLElement>(null);
   const detailRef = useRef<HTMLDivElement>(null);
   const openedEvent = useSelector((state: uiStateType) => state.ui.openedEvent);
+  const isOpenedEventPrevNext = useSelector((state: uiStateType) => state.ui.isOpenedEventPrevNext);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -44,23 +46,28 @@ const ProgramPageLayout: React.FC<Props> = ({ header, children }) => {
 
   useEffect(() => {
     if (openedEvent) {
+      /* Desktop recenter the page when at the bottom */
       if (window.innerWidth >= 1280) {
         const pageRect = pageRef.current!.getBoundingClientRect();
 
         if (window.scrollY > pageRect.height - window.innerHeight) {
-          console.log('scrolllll');
           window.scroll({
             top: pageRect.height - window.innerHeight,
             behavior: 'smooth',
           });
         }
       }
+
+      /* Scroll management when using prev/next nav in EventDetail */
+      if (isOpenedEventPrevNext) {
+        scrollToEvent(openedEvent.id);
+      }
     } else {
       setTimeout(() => {
         dispatch(uiActions.setBurgerVisibility(true));
       }, 500);
     }
-  }, [openedEvent, dispatch]);
+  }, [openedEvent, isOpenedEventPrevNext, dispatch]);
 
   return (
     <section className='program-page' ref={pageRef}>

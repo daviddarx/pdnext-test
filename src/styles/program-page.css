@@ -8,7 +8,7 @@
 
 .program-page__list {
   @screen xl {
-    @apply pb-gutter border-r border-black;
+    @apply border-r border-black;
 
     padding-top: calc(var(--gutter) + var(--h-logo));
   }

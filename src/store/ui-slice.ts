@@ -7,6 +7,7 @@ export interface uiStateType {
     isBurgerVisible: boolean;
     isBurgerTextVisible: boolean;
     openedEvent: FormatedEvent | undefined;
+    isOpenedEventPrevNext: boolean;
   };
 }
 
@@ -18,12 +19,14 @@ export const uiSlice = createSlice({
     isBurgerVisible: true,
     isBurgerTextVisible: true,
     openedEvent: undefined,
+    isOpenedEventPrevNext: false,
   },
   reducers: {
     openEvent: (state, action) => {
-      window.history.pushState(null, '', `#${action.payload.id}`);
+      window.history.pushState(null, '', `#${action.payload.event.id}`);
 
-      state.openedEvent = action.payload;
+      state.isOpenedEventPrevNext = action.payload.nextPrev;
+      state.openedEvent = action.payload.event;
     },
     closeEvent: (state) => {
       window.history.pushState(null, '', window.location.pathname);

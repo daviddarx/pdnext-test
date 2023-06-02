@@ -57,7 +57,7 @@ const EventDetail = () => {
 
   const switchEvent = (id: string) => {
     const event = getEventById(id);
-    dispatch(uiActions.openEvent(event));
+    dispatch(uiActions.openEvent({ event: event, nextPrev: true }));
   };
 
   return (

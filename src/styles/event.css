@@ -11,6 +11,10 @@
     @apply border-none;
   }
 
+  &:last-of-type {
+    @apply pb-gutter-2;
+  }
+
   @media (hover: hover) {
     &:hover {
       @apply bg-white;

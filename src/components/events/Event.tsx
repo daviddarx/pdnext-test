@@ -15,11 +15,14 @@ const Event = ({ event, dateVisible = false }: Props) => {
   const openedEvent = useSelector((state: uiStateType) => state.ui.openedEvent);
 
   const openEvent = () => {
-    dispatch(uiActions.openEvent(event));
+    dispatch(uiActions.openEvent({ event: event, nextPrev: false }));
   };
 
   return (
-    <article data-id={event.id} className={`event${openedEvent === event ? ' event--active' : ''}`}>
+    <article
+      data-id={event.id}
+      className={`event${openedEvent?.title === event.title ? ' event--active' : ''}`}
+    >
       <div className={`${dateVisible ? '' : 'event__cols'}`}>
         {!dateVisible && <div className='event__hour'>{event.date.hour}</div>}
 
