@@ -15,7 +15,16 @@ const Event = ({ event, dateVisible = false }: Props) => {
   const openedEvent = useSelector((state: uiStateType) => state.ui.openedEvent);
 
   const openEvent = () => {
-    dispatch(uiActions.openEvent({ event: event, nextPrev: false }));
+    dispatch(uiActions.setEventSwitchDirection(event));
+
+    /**
+     * Delay to allow the EventDetail to be
+     * first updated with direction and then
+     * trigger the animation on event change.
+     * */
+    requestAnimationFrame(() => {
+      dispatch(uiActions.openEvent({ event: event, nextPrev: false }));
+    });
   };
 
   return (

@@ -4,6 +4,7 @@ import { Entry } from '@/types/Entry';
 export interface FormatedEvent extends Event {
   id: string;
   date: {
+    bare: string;
     readable: string;
     short: string;
     filter: string;

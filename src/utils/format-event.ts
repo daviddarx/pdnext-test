@@ -61,6 +61,7 @@ const formatEvent = (event: Event, entries: Entry[]): FormatedEvent => {
     ...event,
     id: id,
     date: {
+      bare: event.eventdate,
       readable: dateReadable,
       short: dateShort,
       filter: dateFilter,

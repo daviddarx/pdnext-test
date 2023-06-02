@@ -7,7 +7,9 @@ export interface uiStateType {
     isBurgerVisible: boolean;
     isBurgerTextVisible: boolean;
     openedEvent: FormatedEvent | undefined;
+    previousEvent: FormatedEvent | undefined;
     eventNavUsed: boolean;
+    eventSwitchDirection: 'prev' | 'next';
   };
 }
 
@@ -18,8 +20,9 @@ export const uiSlice = createSlice({
     isSupportUsOpened: false,
     isBurgerVisible: true,
     isBurgerTextVisible: true,
-    openedEvent: undefined,
+    openedEvent: undefined as FormatedEvent | undefined,
     eventNavUsed: false,
+    eventSwitchDirection: 'next',
   },
   reducers: {
     openEvent: (state, action) => {
@@ -28,9 +31,18 @@ export const uiSlice = createSlice({
       state.eventNavUsed = action.payload.nextPrev;
       state.openedEvent = action.payload.event;
     },
+    setEventSwitchDirection: (state, action) => {
+      if (state.openedEvent) {
+        state.eventSwitchDirection =
+          new Date(state.openedEvent.date.bare) < new Date(action.payload.date.bare)
+            ? 'next'
+            : 'prev';
+      }
+    },
     closeEvent: (state) => {
       window.history.pushState(null, '', window.location.pathname);
 
+      state.eventSwitchDirection = 'next';
       state.openedEvent = undefined;
     },
     toggleNavigation: (state) => {

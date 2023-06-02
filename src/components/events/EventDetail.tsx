@@ -18,23 +18,24 @@ const transition = {
 };
 
 const panelMotionVariants = {
-  initial: {
-    transform: 'translateX(-100%) translateZ(0)',
-  },
+  initial: (direction: string) => ({
+    transform: `translateX(${direction === 'prev' ? '-100%' : '100%'}) translateZ(0)`,
+  }),
   animate: {
     transform: 'translateX(0) translateZ(0)',
     transition: transition,
   },
-  exit: {
-    transform: 'translateX(100%) translateZ(0)',
+  exit: (direction: string) => ({
+    transform: `translateX(${direction === 'prev' ? '100%' : '-100%'}) translateZ(0)`,
     transition: transition,
-  },
+  }),
 };
 
 const EventDetail = () => {
   const dispatch = useDispatch();
 
   const event = useSelector((state: uiStateType) => state.ui.openedEvent);
+  const eventSwitchDirection = useSelector((state: uiStateType) => state.ui.eventSwitchDirection);
   const lastScrollTopRef = useRef(0);
 
   const scrollHandler = (e: React.UIEvent<HTMLDivElement>) => {
@@ -57,7 +58,17 @@ const EventDetail = () => {
 
   const switchEvent = (id: string) => {
     const event = getEventById(id);
-    dispatch(uiActions.openEvent({ event: event, nextPrev: true }));
+
+    dispatch(uiActions.setEventSwitchDirection(event));
+
+    /**
+     * Delay to allow the EventDetail to be
+     * first updated with direction and then
+     * trigger the animation on event change.
+     * */
+    requestAnimationFrame(() => {
+      dispatch(uiActions.openEvent({ event: event, nextPrev: true }));
+    });
   };
 
   return (
@@ -71,6 +82,7 @@ const EventDetail = () => {
           animate='animate'
           exit='exit'
           variants={panelMotionVariants}
+          custom={eventSwitchDirection}
         >
           <header className='event-detail__header'>
             <div className='event-detail__date'>
