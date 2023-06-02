@@ -79,7 +79,14 @@
 }
 
 .event-detail__nav {
-  @apply flex -mx-gutter mt-gutter-2 bg-white border-t border-current;
+  @apply relative grid grid-cols-2 -mx-gutter mt-gutter-2;
+  @apply bg-white border-t border-current;
+
+  &::before {
+    @apply absolute w-px h-full left-1/2 bg-current;
+
+    content: '';
+  }
 
   @screen max-xl {
     @apply sticky bottom-0 z-20;
@@ -87,11 +94,27 @@
 }
 
 .event-detail__nav-button {
-  @apply p-gutter w-1/2;
+  @apply p-gutter flex flex-col justify-start items-center;
 
-  &:last-of-type {
-    @apply border-l border-current;
+  @media (hover: hover) {
+    @apply transition-colors duration-200 ease-out;
+
+    &:hover {
+      @apply bg-pink;
+    }
   }
+}
+
+.event-detail__nav-button--prev {
+  @apply col-start-1;
+
+  & .event-detail__nav-icon {
+    @apply scale-x-[-1];
+  }
+}
+
+.event-detail__nav-button--next {
+  @apply col-start-2;
 }
 
 .event-detail__nav-subline {
@@ -104,10 +127,6 @@
 
 .event-detail__nav-icon {
   @apply relative inline-block h-[0.9em] w-auto -top-[0.1em];
-}
-
-.event-detail__nav-icon--prev {
-  @apply scale-x-[-1];
 }
 
 .event-detail__nav-title {
