@@ -88,9 +88,9 @@
     content: '';
   }
 
-  /* @screen max-xl { */
-  @apply sticky bottom-0 z-20;
-  /* } */
+  @screen max-xl {
+    @apply sticky bottom-0 z-20;
+  }
 }
 
 .event-detail__nav-button {

@@ -21,7 +21,7 @@ const ProgramPageLayout: React.FC<Props> = ({ header, children }) => {
   const pageRef = useRef<HTMLElement>(null);
   const detailRef = useRef<HTMLDivElement>(null);
   const openedEvent = useSelector((state: uiStateType) => state.ui.openedEvent);
-  const isOpenedEventPrevNext = useSelector((state: uiStateType) => state.ui.isOpenedEventPrevNext);
+  const eventNavUsed = useSelector((state: uiStateType) => state.ui.eventNavUsed);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -59,7 +59,7 @@ const ProgramPageLayout: React.FC<Props> = ({ header, children }) => {
       }
 
       /* Scroll management when using prev/next nav in EventDetail */
-      if (isOpenedEventPrevNext) {
+      if (eventNavUsed) {
         scrollToEvent(openedEvent.id);
       }
     } else {
@@ -67,7 +67,7 @@ const ProgramPageLayout: React.FC<Props> = ({ header, children }) => {
         dispatch(uiActions.setBurgerVisibility(true));
       }, 500);
     }
-  }, [openedEvent, isOpenedEventPrevNext, dispatch]);
+  }, [openedEvent, eventNavUsed, dispatch]);
 
   return (
     <section className='program-page' ref={pageRef}>
