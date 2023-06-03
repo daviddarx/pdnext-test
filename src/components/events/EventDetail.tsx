@@ -92,7 +92,13 @@ const EventDetail = () => {
             </div>
 
             <h2 className='event-detail__title'>
-              <span className='event-detail__title-text'>{event.title}</span>
+              <span
+                className='event-detail__title-text'
+                dangerouslySetInnerHTML={{
+                  __html: event.title.replace(/&shy;/g, '<span>&shy;</span>'),
+                }}
+              />
+
               {event.specialstate && (
                 <span className='event-detail__special-state'>{event.specialstate}</span>
               )}

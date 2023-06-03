@@ -22,7 +22,7 @@
 }
 
 .event-detail__title {
-  @apply mt-gutter-3 hyphens-auto;
+  @apply mt-gutter-3;
 }
 
 .event-detail__title-text {

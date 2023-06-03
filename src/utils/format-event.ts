@@ -49,6 +49,7 @@ const formatEvent = (event: Event, entries: Entry[]): FormatedEvent => {
   const dateHour = eventDate.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
 
   const id = `${dateFilter} ${event.title}`
+    .replace(/&shy;/g, '')
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
     .replace(/[^\w\s./]/gi, '')

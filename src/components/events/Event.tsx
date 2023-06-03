@@ -37,7 +37,11 @@ const Event = ({ event, dateVisible = false }: Props) => {
 
         <div className='event__infos'>
           <h3 className='event__title'>
-            {event.title}{' '}
+            <span
+              dangerouslySetInnerHTML={{
+                __html: event.title.replace(/&shy;/g, '<span>&shy;</span>'),
+              }}
+            />{' '}
             {event.specialstate && (
               <span className='tag tag--sm event__special-state'>{event.specialstate}</span>
             )}
