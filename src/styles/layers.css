@@ -21,6 +21,8 @@
   h6,
   .h6 {
     @apply leading-title tracking-title uppercase;
+
+    font-family: var(--font-title);
   }
 
   h1,
@@ -83,6 +85,8 @@
 
   .subline {
     @apply text-base font-semibold tracking-tag uppercase;
+
+    font-family: var(--font-title);
   }
 
   .subline--lg {
@@ -98,6 +102,8 @@
     @apply text-base font-semibold leading-none uppercase tracking-tag;
     @apply bg-white rounded-full border border-black;
     @apply transition-colors duration-200 ease-out;
+
+    font-family: var(--font-title);
 
     .dark & {
       @apply bg-black text-white border-white;

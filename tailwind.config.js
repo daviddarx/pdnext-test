@@ -28,11 +28,6 @@ module.exports = {
       pink: 'hsl(0, 80%, 90%)',
       pinkScrollable: 'hsla(0, 80%, 90%, 0.65)',
     },
-    fontWeight: {
-      normal: '400',
-      semibold: '500',
-      bold: '800',
-    },
     fontSize: {
       xs: 'calc(var(--font-s) * .75)',
       sm: 'calc(var(--font-s) * .875)',
@@ -45,6 +40,11 @@ module.exports = {
       '5xl': 'calc(var(--font-s) * 3)',
       '6xl': 'calc(var(--font-s) * 4)',
     },
+    fontWeight: {
+      normal: '400',
+      semibold: '500',
+      bold: '800',
+    },
     lineHeight: {
       normal: '1.65',
       tight: '1.4',
@@ -52,7 +52,7 @@ module.exports = {
       none: '1',
     },
     letterSpacing: {
-      normal: '0.04em',
+      normal: '0em',
       title: '0.005em',
       tag: '0.03em',
     },
