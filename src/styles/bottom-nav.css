@@ -27,11 +27,11 @@
 }
 
 .botton-nav__links {
-  @apply space-y-[0.25em] mt-gutter lg:space-y-[0.75em];
+  @apply space-y-[0.25em] mt-gutter-1/2 lg:space-y-[0.75em];
 }
 
 .bottom-nav__link {
-  @apply h3 font-semibold text-link;
+  @apply inline-block h3 font-semibold text-link;
 
   .bottom-nav__title & {
     @apply subline;
