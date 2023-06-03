@@ -29,9 +29,11 @@ export async function fetchProgramContent(): Promise<ProgramContent> {
   //   console.log(entry.image.split('images/uploads/')[1]);
   // });
 
-  const formatedEvents: FormatedEvent[] = events.map((event) => {
-    return formatEvent(event, entries);
-  });
+  const formatedEvents: FormatedEvent[] = events
+    .filter((event) => !event.deactivated)
+    .map((event) => {
+      return formatEvent(event, entries);
+    });
 
   formatedEvents.sort((a, b) => new Date(a.eventdate).getTime() - new Date(b.eventdate).getTime());
 

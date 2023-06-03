@@ -15,4 +15,5 @@ export interface Entry {
     imageWidth?: number;
     imageHeight?: number;
   }[];
+  deactivated?: boolean;
 }

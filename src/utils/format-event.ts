@@ -69,7 +69,7 @@ const formatEvent = (event: Event, entries: Entry[]): FormatedEvent => {
       hour: dateHour,
     },
     types: eventTypes,
-    entriesObjects: eventEntries,
+    entriesObjects: eventEntries.filter((entry) => !entry.deactivated),
   };
 
   // console.log('----------------- FETCH FORMAT EVENT', event.title);

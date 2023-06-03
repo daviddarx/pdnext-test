@@ -16,4 +16,5 @@ export interface Event {
   subtitle?: string;
   title: string;
   specialstate?: string;
+  deactivated?: boolean;
 }

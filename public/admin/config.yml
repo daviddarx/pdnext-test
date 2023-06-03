@@ -190,6 +190,12 @@ collections:
         widget: 'string'
         required: false
 
+      - labe: 'Deactivated'
+        name: 'deactivated'
+        widget: 'boolean'
+        default: false
+        required: false
+
   - name: 'entryOns'
     label: 'Entry ONS'
     folder: '_content/entries-ons'
@@ -259,6 +265,12 @@ collections:
         name: 'pornypickof'
         value: 'pickedby'
         widget: 'string'
+        required: false
+
+      - labe: 'Deactivated'
+        name: 'deactivated'
+        widget: 'boolean'
+        default: false
         required: false
 
   - name: 'event' # Used in routes, e.g., /admin/collections/blog
@@ -359,6 +371,12 @@ collections:
         multiple: true
         required: false
 
+      - labe: 'Deactivated'
+        name: 'deactivated'
+        widget: 'boolean'
+        default: false
+        required: false
+
   - name: 'eventOns' # Used in routes, e.g., /admin/collections/blog
     label: 'Event ONS' # Used in the UI
     folder: '_content/events-ons' # The path to the folder where the documents are stored
@@ -455,6 +473,12 @@ collections:
         searchFields: ['title']
         valueField: 'uuid'
         multiple: true
+        required: false
+
+      - labe: 'Deactivated'
+        name: 'deactivated'
+        widget: 'boolean'
+        default: false
         required: false
 
   - name: 'supportUsSlot'
