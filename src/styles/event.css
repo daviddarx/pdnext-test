@@ -1,10 +1,10 @@
 .event {
-  @apply relative px-gutter pt-gutter pb-gutter-3/4;
+  @apply relative px-gutter py-gutter;
   @apply border-t border-black;
   @apply transition-colors duration-300 ease-out;
 
   @screen xl {
-    @apply pt-gutter-3/4 pb-gutter-1/2;
+    @apply py-gutter-3/4;
   }
 
   &:first-of-type {
@@ -27,15 +27,15 @@
 }
 
 .event__hour {
-  @apply relative inline-block w-[4em] -top-[0.2em] shrink-0 text-base font-normal;
+  @apply relative inline-block w-[4em] shrink-0 text-base;
 }
 
 .event__title {
-  @apply h5 font-semibold mb-[0.4em] lg:mb-[0.5em];
+  @apply h5 font-semibold mt-[0.2em] mb-[0.4em] lg:mb-[0.5em];
 }
 
 .event__subtitle {
-  @apply font-semibold leading-tight mb-[0.4em];
+  @apply font-semibold leading-tight mb-[0.2em];
 }
 
 .event__details {

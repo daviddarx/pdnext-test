@@ -12,7 +12,7 @@
   @apply hidden;
 
   @screen xl {
-    @apply inline subline;
+    @apply inline-block;
   }
 }
 
@@ -59,7 +59,7 @@
 }
 
 .special-announcement-panel__title {
-  @apply mt-[0.2em];
+  @apply mt-gutter;
 
   padding-right: calc(var(--size-burger) + var(--gutter));
 }

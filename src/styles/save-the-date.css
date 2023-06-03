@@ -18,6 +18,6 @@
   @apply hidden;
 
   @screen lg {
-    @apply inline subline;
+    @apply inline-block;
   }
 }

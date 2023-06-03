@@ -27,7 +27,7 @@ const SpecialAnnouncement: React.FC<Props> = ({ data }) => {
   return (
     <Fragment>
       <article className='special-announcement'>
-        <h2 className='special-announcement__title'>Special Announcement</h2>
+        <h2 className='special-announcement__title header__top-bar-title'>Special Announcement</h2>
         <button className='special-announcement__btn' onClick={open}>
           <span className='special-announcement__btn-text'>{data.buttonTitle}</span>{' '}
           <ArrowIcon className='special-announcement__btn-icon' />

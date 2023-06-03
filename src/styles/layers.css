@@ -159,6 +159,10 @@
     @apply translate-y-[0.1em];
   }
 
+  .align-title-font-v {
+    @apply translate-y-[0.025em];
+  }
+
   .text-content {
     h1,
     h2,

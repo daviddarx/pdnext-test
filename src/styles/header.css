@@ -3,7 +3,7 @@
 }
 
 .header__top-bar {
-  @apply px-gutter py-[0.5em] pb-[0.75em];
+  @apply px-gutter py-[0.5em];
   @apply bg-white text-center;
 
   @screen sm {
@@ -12,8 +12,12 @@
   }
 
   @screen xl {
-    @apply grid grid-cols-2 pt-[0.8em] pb-[0.5em];
+    @apply grid grid-cols-2 py-[0.8em];
   }
+}
+
+.header__top-bar-title {
+  @apply subline align-title-font-v;
 }
 
 .header__logo-link {

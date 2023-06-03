@@ -86,7 +86,7 @@ const EventDetail = () => {
         >
           <header className='event-detail__header'>
             <div className='event-detail__date'>
-              <span>{event.date.readable}</span>
+              <span className='event-detail__date-title'>{event.date.readable}</span>
               <span className='event-detail__date-separator'> – </span>
               <span>{event.date.hour}</span>
             </div>

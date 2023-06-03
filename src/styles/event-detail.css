@@ -8,11 +8,13 @@
 }
 
 .event-detail__date {
-  @apply subline;
-
   span {
     @apply block md:inline-block;
   }
+}
+
+.event-detail__date-title {
+  @apply subline align-title-font-v;
 }
 
 .event-detail__date-separator {
@@ -63,7 +65,7 @@
 }
 
 .event-detail__timetable-title {
-  @apply subline inline-block w-[4em];
+  @apply inline-block w-[4em] font-semibold;
 }
 
 .event-detail__info-title {
