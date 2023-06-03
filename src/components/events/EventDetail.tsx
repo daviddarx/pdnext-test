@@ -95,7 +95,7 @@ const EventDetail = () => {
               <span
                 className='event-detail__title-text'
                 dangerouslySetInnerHTML={{
-                  __html: event.title.replace(/&shy;/g, '<span>&shy;</span>'),
+                  __html: event.title,
                 }}
               />
 
