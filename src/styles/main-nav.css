@@ -42,11 +42,6 @@
 
 .main-nav__support {
   @apply mt-gutter-3/4;
-
-  &.tag {
-    /* fix weird bug with alignement there */
-    @apply pb-[0.5em] pt-[0.55em];
-  }
 }
 
 .main-nav__socials {

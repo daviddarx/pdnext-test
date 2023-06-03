@@ -2,6 +2,7 @@ import { ReactNode, useRef, useEffect, useState, Fragment } from 'react';
 import { Portal } from 'react-portal';
 import { motion, AnimatePresence, useWillChange } from 'framer-motion';
 
+import font from '@/utils/get-fonts';
 import eases from '@/utils/eases';
 import { setFocusables, resetFocusables, loopFocusables } from '@/utils/get-focusables';
 
@@ -94,7 +95,7 @@ const Drawer: React.FC<Props> = ({ children, isOpened, onClose }) => {
     <Fragment>
       {isMounted && (
         <Portal>
-          <div className='drawer' onKeyDown={handleKeyDown}>
+          <div className={`drawer ${font.className}`} onKeyDown={handleKeyDown}>
             <AnimatePresence>
               {isOpened && (
                 <motion.div

@@ -1,14 +1,10 @@
 import { useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
-import localFont from 'next/font/local';
 import { Provider } from 'react-redux';
 import { AnimatePresence } from 'framer-motion';
 
-const font = localFont({
-  src: './../fonts/Agrandir_Variable.ttf',
-});
-
+import font from '@/utils/get-fonts';
 import store from '@/store/';
 import { uiActions } from '@/store/';
 
@@ -33,14 +29,6 @@ const App = ({ Component, pageProps }: AppProps) => {
       router.events.off('routeChangeStart', handleRouteChangeStart);
     };
   }, [router.events]);
-
-  // useEffect(() => {
-  //   console.log('app mounted');
-
-  //   return () => {
-  //     console.log('app unmounted');
-  //   };
-  // }, []);
 
   return (
     <Provider store={store}>
