@@ -5,6 +5,10 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  corePlugins: {
+    aspectRatio: false,
+  },
+  plugins: [require('@tailwindcss/aspect-ratio')],
   theme: {
     screens: {
       'max-sm': { max: '639px' },
@@ -108,5 +112,4 @@ module.exports = {
       textColor: ['dark'],
     },
   },
-  plugins: [],
 };

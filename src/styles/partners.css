@@ -15,18 +15,18 @@
 }
 
 .partner__link {
-  @apply flex items-center justify-center aspect-[800/480];
+  @apply flex items-center justify-center border border-transparent;
   @apply transition-colors duration-300 ease-out-quart;
 
   @media (hover: hover) {
     &:hover {
-      @apply bg-white border border-current;
+      @apply bg-white border-current;
     }
   }
 }
 
 .partner__logo {
-  @apply w-5/6 lg:w-3/4 h-auto;
+  @apply w-5/6 lg:w-3/4 h-auto py-gutter-1/2;
 }
 
 .partner__logo-img {
