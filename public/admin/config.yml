@@ -184,11 +184,11 @@ collections:
         default: false
         required: false
 
-      - label: 'Porny Pick Of'
-        name: 'pornypickof'
-        value: 'pickedby'
-        widget: 'string'
-        required: false
+      # - label: 'Porny Pick Of'
+      #   name: 'pornypickof'
+      #   value: 'pickedby'
+      #   widget: 'string'
+      #   required: false
 
       - labe: 'Deactivated'
         name: 'deactivated'
@@ -261,11 +261,11 @@ collections:
         default: false
         required: false
 
-      - label: 'Porny Pick Of'
-        name: 'pornypickof'
-        value: 'pickedby'
-        widget: 'string'
-        required: false
+      # - label: 'Porny Pick Of'
+      #   name: 'pornypickof'
+      #   value: 'pickedby'
+      #   widget: 'string'
+      #   required: false
 
       - labe: 'Deactivated'
         name: 'deactivated'
