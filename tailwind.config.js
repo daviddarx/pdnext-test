@@ -35,6 +35,7 @@ module.exports = {
       focusVisible: 'hsla(200, 100%, 60%, 0.7)',
     },
     fontSize: {
+      0: '0px',
       xs: 'calc(var(--font-s) * .75)',
       sm: 'calc(var(--font-s) * .875)',
       base: 'var(--font-s)',

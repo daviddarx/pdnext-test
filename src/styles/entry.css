@@ -6,6 +6,10 @@
   @apply -ml-gutter -mr-gutter;
 }
 
+.entry__medias {
+  @apply relative;
+}
+
 .entry__image-container {
   @apply relative aspect-w-16 aspect-h-9 overflow-hidden;
 }
@@ -32,6 +36,14 @@
 .entry__gallery-image--active {
   opacity: 1;
   transition-delay: 0s;
+}
+
+.entry__play-button {
+  @apply absolute w-full h-full top-0 left-0;
+
+  & .play-button {
+    @apply !absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
 }
 
 .entry__title {

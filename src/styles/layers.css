@@ -380,6 +380,33 @@
     @apply w-1/2 h-1/2;
   }
 
+  .play-button {
+    --s-button: calc(var(--size-burger) * 1);
+    --s-icon: calc(var(--s-button) * 0.35);
+
+    @apply relative inline-block w-[--s-button] h-[--s-button];
+    @apply text-0 bg-pink rounded-full transition-colors ease-out duration-150;
+
+    &::after {
+      @apply absolute top-1/2 left-1/2;
+      @apply w-[--s-icon] h-[--s-icon] border-solid box-border;
+
+      content: '';
+      border-width: calc(var(--s-icon) * 0.5) 0 calc(var(--s-icon) * 0.5) var(--s-icon);
+      border-color: transparent transparent transparent theme('colors.black');
+      transform: translate(-40%, -50%);
+    }
+
+    &:hover,
+    :hover > & {
+      background-color: theme('colors.black');
+
+      &::after {
+        border-color: transparent transparent transparent theme('colors.pink');
+      }
+    }
+  }
+
   .loaded-image {
     @apply bg-lightGrey;
 
