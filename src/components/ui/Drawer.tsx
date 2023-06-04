@@ -6,9 +6,10 @@ import { fontText, fontTitle } from '@/utils/get-fonts';
 import eases from '@/utils/eases';
 import { setFocusables, resetFocusables, loopFocusables } from '@/utils/get-focusables';
 
+import BackgroundOverlay from '@/components/ui/BackgroundOverlay';
 import CloseButton from '@/components/ui/CloseButton';
 
-const panelMotionVariants = {
+const motionVariants = {
   initial: {
     transform: 'translateX(100%) translateZ(0)',
   },
@@ -28,26 +29,6 @@ const panelMotionVariants = {
   },
 };
 
-const bgMotionVariants = {
-  initial: {
-    opacity: 0,
-  },
-  animate: {
-    opacity: 1,
-    transition: {
-      duration: 0.5,
-      ease: eases.outQuint,
-    },
-  },
-  exit: {
-    opacity: 0,
-    transition: {
-      duration: 0.25,
-      ease: eases.outQuart,
-    },
-  },
-};
-
 type Props = {
   children: ReactNode;
   isOpened: boolean;
@@ -59,6 +40,10 @@ const Drawer: React.FC<Props> = ({ children, isOpened, onClose }) => {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    /**
+     * Needed to render component only on the client, not on the server.
+     * If else if makes an hydration missmatch error.
+     */
     setIsMounted(true);
   }, []);
 
@@ -108,7 +93,7 @@ const Drawer: React.FC<Props> = ({ children, isOpened, onClose }) => {
                   initial='initial'
                   animate='animate'
                   exit='exit'
-                  variants={panelMotionVariants}
+                  variants={motionVariants}
                   style={{ willChange }}
                 >
                   <div className='drawer__content'>{children}</div>
@@ -116,17 +101,7 @@ const Drawer: React.FC<Props> = ({ children, isOpened, onClose }) => {
                 </motion.div>
               )}
 
-              {isOpened && (
-                <motion.div
-                  key='background'
-                  className='drawer__bg'
-                  initial='initial'
-                  animate='animate'
-                  exit='exit'
-                  variants={bgMotionVariants}
-                  onClick={onClose}
-                ></motion.div>
-              )}
+              {isOpened && <BackgroundOverlay key='drawerBg' dark={false} onClick={onClose} />}
             </AnimatePresence>
           </div>
         </Portal>

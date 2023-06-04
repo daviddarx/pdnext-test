@@ -11,6 +11,7 @@ import { uiActions } from '@/store/';
 import RainbowBackground from '@/components/layout/RainbowBackground';
 import NavBurger from '@/components/navs/NavBurger';
 import MainNavPanel from '@/components/navs/MainNav';
+import VideoOverlay from '@/components/ui/VideoOverlay';
 
 import '@/styles/globals.css';
 
@@ -39,6 +40,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           <Component key={pageKey} {...pageProps} />
         </AnimatePresence>
         <RainbowBackground />
+        <VideoOverlay />
       </div>
     </Provider>
   );

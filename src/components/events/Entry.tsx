@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
+import { uiActions } from '@/store';
 import { Entry } from '@/types/Entry';
 
 import LoadedImage from '@/components/ui/LoadedImage';
@@ -13,6 +15,7 @@ type Props = {
 
 const Entry: React.FC<Props> = ({ entry }) => {
   const [isImageLoaded, setIsImageLoaded] = useState(false);
+  const dispatch = useDispatch();
 
   const handleImageLoaded = () => {
     setIsImageLoaded(true);
@@ -26,8 +29,7 @@ const Entry: React.FC<Props> = ({ entry }) => {
         videoURL.indexOf('vimeo') !== -1 ||
         videoURL.indexOf('pornydays') !== -1
       ) {
-        console.log(videoURL);
-        // this.$router.app.$children[0].$refs.videoOverlay.playVideo(videoURL, e.target.getAttribute('title'), this.day, this.location);
+        dispatch(uiActions.openVideo(videoURL));
         e.preventDefault();
       }
     }

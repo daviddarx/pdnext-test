@@ -1,0 +1,14 @@
+.video-overlay__video {
+  @apply fixed top-0 left-0 z-40;
+
+  width: 80vw;
+  min-height: 100px;
+  background-color: red;
+}
+
+.video-overlay__close {
+  @apply fixed top-gutter right-gutter z-50;
+
+  width: calc(var(--size-burger) - 2px);
+  height: calc(var(--size-burger) - 2px);
+}

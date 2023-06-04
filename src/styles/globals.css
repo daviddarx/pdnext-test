@@ -27,6 +27,7 @@
 @import './save-the-date.css';
 @import './special-announcement.css';
 @import './support-us.css';
+@import './video-overlay.css';
 
 @tailwind base;
 @tailwind components;

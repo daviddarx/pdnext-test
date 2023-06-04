@@ -10,6 +10,7 @@ export interface uiStateType {
     previousEvent: FormatedEvent | undefined;
     eventNavUsed: boolean;
     eventSwitchDirection: 'prev' | 'next';
+    openedVideo: string | undefined;
   };
 }
 
@@ -23,6 +24,7 @@ export const uiSlice = createSlice({
     openedEvent: undefined as FormatedEvent | undefined,
     eventNavUsed: false,
     eventSwitchDirection: 'next',
+    openedVideo: undefined,
   },
   reducers: {
     openEvent: (state, action) => {
@@ -65,6 +67,12 @@ export const uiSlice = createSlice({
     },
     setBurgerTextVisibility: (state, action) => {
       state.isBurgerTextVisible = action.payload;
+    },
+    openVideo: (state, action) => {
+      state.openedVideo = action.payload;
+    },
+    closeVideo: (state) => {
+      state.openedVideo = undefined;
     },
   },
 });
