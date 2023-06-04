@@ -26,7 +26,7 @@ export const uiSlice = createSlice({
   },
   reducers: {
     openEvent: (state, action) => {
-      window.history.pushState(null, '', `#${action.payload.event.id}`);
+      window.location.hash = action.payload.event.id;
 
       state.eventNavUsed = action.payload.nextPrev;
       state.openedEvent = action.payload.event;
@@ -40,8 +40,6 @@ export const uiSlice = createSlice({
       }
     },
     closeEvent: (state) => {
-      window.history.pushState(null, '', window.location.pathname);
-
       state.eventSwitchDirection = 'next';
       state.openedEvent = undefined;
     },
