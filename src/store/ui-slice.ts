@@ -40,6 +40,11 @@ export const uiSlice = createSlice({
       }
     },
     closeEvent: (state) => {
+      // use this hack because window.history & react-router.replace/push cause problems.
+      const scrollPosition = window.scrollY;
+      window.location.hash = '';
+      window.scrollTo(0, scrollPosition);
+
       state.eventSwitchDirection = 'next';
       state.openedEvent = undefined;
     },

@@ -1,5 +1,4 @@
 import React, { Fragment, useState, useRef } from 'react';
-import { useRouter } from 'next/router';
 import { useDispatch } from 'react-redux';
 
 import { uiActions } from '@/store';
@@ -24,7 +23,6 @@ type Props = {
 
 const ProgramPage: React.FC<Props> = ({ data }) => {
   const dispatch = useDispatch();
-  const router = useRouter();
 
   const filterRef = useRef<HTMLDivElement>(null);
 
@@ -84,7 +82,6 @@ const ProgramPage: React.FC<Props> = ({ data }) => {
 
   const closeEvent = () => {
     dispatch(uiActions.closeEvent());
-    router.push(location.pathname, undefined, { shallow: true });
   };
 
   const scrollToFilters = () => {

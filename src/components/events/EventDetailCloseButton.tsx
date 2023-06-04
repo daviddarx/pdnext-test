@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { uiStateType } from '@/store/ui-slice';
@@ -12,14 +11,12 @@ type Props = {
 
 const EventDetailCloseButton: React.FC<Props> = ({ disabled }) => {
   const dispatch = useDispatch();
-  const router = useRouter();
 
   const openedEvent = useSelector((state: uiStateType) => state.ui.openedEvent);
   const isBurgerVisible = useSelector((state: uiStateType) => state.ui.isBurgerVisible);
 
   const close = () => {
     dispatch(uiActions.closeEvent());
-    router.push(location.pathname, undefined, { shallow: true });
   };
 
   return (
