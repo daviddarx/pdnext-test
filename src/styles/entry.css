@@ -7,11 +7,31 @@
 }
 
 .entry__image-container {
-  @apply relative aspect-video overflow-hidden;
+  @apply relative aspect-w-16 aspect-h-9 overflow-hidden;
 }
 
-.entry__image {
-  @apply absolute top-0 left-0 w-full h-full object-cover;
+.entry__image,
+.entry__gallery-image {
+  & img {
+    @apply absolute top-0 left-0 w-full !h-full object-cover object-center;
+  }
+}
+
+.entry__gallery-image {
+  --duration: 0.4s;
+
+  opacity: 0;
+  transition: opacity var(--duration) linear;
+  transition-delay: var(--duration);
+
+  &.entry__gallery-image--last {
+    transition-delay: 0s;
+  }
+}
+
+.entry__gallery-image--active {
+  opacity: 1;
+  transition-delay: 0s;
 }
 
 .entry__title {

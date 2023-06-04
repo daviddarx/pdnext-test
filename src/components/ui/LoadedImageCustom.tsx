@@ -25,11 +25,9 @@ const LoadedImage: React.FC<Props> = ({ src, alt, className }) => {
   }, [src]);
 
   return (
-    <img
-      src={src}
-      alt={alt}
-      className={`loaded-image ${isLoaded ? 'loaded-image--loaded' : ''} ${className}`.trim()}
-    />
+    <div className={`loaded-image ${isLoaded ? 'loaded-image--loaded' : ''} ${className}`.trim()}>
+      <img src={src} alt={alt} />
+    </div>
   );
 };
 

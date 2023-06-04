@@ -1,3 +1,9 @@
+export type EntryImage = {
+  image: string;
+  imageWidth?: number;
+  imageHeight?: number;
+};
+
 export interface Entry {
   typeComplement?: string;
   forceBlank?: boolean;
@@ -10,10 +16,6 @@ export interface Entry {
   imageHeight?: number;
   uuid: string;
   pornypickof?: string;
-  additionalImages?: {
-    image: string;
-    imageWidth?: number;
-    imageHeight?: number;
-  }[];
+  additionalImages?: EntryImage[];
   deactivated?: boolean;
 }

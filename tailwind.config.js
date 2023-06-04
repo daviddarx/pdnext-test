@@ -29,6 +29,7 @@ module.exports = {
       current: 'currentColor',
       white: '#ffffff',
       black: 'hsl(200, 100%, 10%)',
+      lightGrey: 'hsla(200, 100%, 10%, 0.07)',
       pink: 'hsl(0, 80%, 90%)',
       pinkScrollable: 'hsla(0, 80%, 90%, 0.65)',
       focusVisible: 'hsla(200, 100%, 60%, 0.7)',
