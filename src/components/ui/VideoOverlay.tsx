@@ -48,7 +48,22 @@ const VideoOverlay = () => {
 
   useEffect(() => {
     if (videoUrl) {
-      const player = new Plyr('#player');
+      const player = new Plyr('#player', {
+        controls: [
+          'play-large',
+          'play',
+          'progress',
+          'current-time',
+          'mute',
+          'volume',
+          'fullscreen',
+        ],
+        autoplay: true,
+      });
+
+      requestAnimationFrame(() => {
+        player.play();
+      });
     }
   }, [videoUrl]);
 
