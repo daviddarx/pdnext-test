@@ -43,6 +43,11 @@
   --height-topbar: calc((var(--size-burger) + var(--gutter)) * -1); /* overwritten from Header */
   --content-page-px-col: var(--gutter);
   --columns-vertical-shift: 15vw;
+  --plyr-color-main: theme(colors.pink);
+  --plyr-video-control-color: theme(colors.pink);
+  --plyr-range-thumb-background: theme(colors.pink);
+  --plyr-video-control-color-hover: theme(colors.black);
+  --plyr-video-progress-buffered-background: rgba(255, 255, 255, 0.1);
 
   @screen sm {
     --font-s: 3vw;
