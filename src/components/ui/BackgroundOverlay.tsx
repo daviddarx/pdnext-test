@@ -15,8 +15,7 @@ const motionVariants = {
   exit: {
     opacity: 0,
     transition: {
-      duration: 0.25,
-      ease: eases.outQuart,
+      duration: 0.35,
     },
   },
 };
