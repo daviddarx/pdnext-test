@@ -1,5 +1,7 @@
+import { useDispatch } from 'react-redux';
 import Link from 'next/link';
 
+import { uiActions } from '@/store';
 import { ImpressionsContent } from '@/utils/fetch-impressions-content';
 
 import PageHeader from '@/components/layout/PageHeader';
@@ -9,11 +11,20 @@ type Props = {
 };
 
 const ImpressionsPage: React.FC<Props> = ({ data }) => {
+  const dispatch = useDispatch();
+
   const checkIfGalleryLink = (e: React.MouseEvent) => {
     const href = e.currentTarget.getAttribute('href');
 
-    if (!href?.includes('/gallery')) {
-      alert('video player');
+    if (href && !href.includes('/gallery')) {
+      if (
+        href.indexOf('youtube') !== -1 ||
+        href.indexOf('vimeo') !== -1 ||
+        href.indexOf('pornydays') !== -1
+      ) {
+        dispatch(uiActions.openVideo(href));
+        e.preventDefault();
+      }
       e.preventDefault();
     }
   };
