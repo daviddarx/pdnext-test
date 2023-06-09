@@ -1,18 +1,38 @@
 .video-overlay {
-  @apply text-pink;
+  @apply fixed top-0 left-0 z-30 flex items-center justify-center w-full h-full;
+  @apply text-pink pointer-events-none;
+}
+
+.video-overlay--active {
+  @apply pointer-events-auto;
 }
 
 .video-overlay__video {
-  @apply fixed top-gutter left-gutter z-40;
+  @apply relative z-40;
+  @apply overflow-y-auto overscroll-contain;
 
-  width: 80vw;
+  width: 100vw;
+
+  @media only screen and (orientation: landscape) and (max-width: 1024px) {
+    width: 100vw;
+    height: 100vh;
+    @apply flex items-center justify-center;
+  }
+
+  @screen lg {
+    @apply m-gutter;
+
+    width: calc(100vw - var(--gutter) * 4);
+    max-width: 1280px;
+  }
 }
 
 .video-overlay__close {
-  @apply fixed top-gutter right-gutter z-40;
+  @apply fixed top-gutter right-gutter z-50;
 }
 
 .video-overlay__close-button {
+  @apply bg-black;
   width: calc(var(--size-burger) - 2px);
   height: calc(var(--size-burger) - 2px);
 }

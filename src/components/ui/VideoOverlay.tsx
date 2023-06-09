@@ -88,7 +88,7 @@ const VideoOverlay = () => {
     <Fragment>
       {isMounted && (
         <Portal>
-          <div className='video-overlay'>
+          <div className={`video-overlay ${videoUrl ? 'video-overlay--active' : ''}`.trim()}>
             <AnimatePresence>
               {videoUrl && (
                 <motion.div
