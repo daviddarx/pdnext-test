@@ -21,3 +21,7 @@
 .gallery-page__image {
   @apply zoomed-image-on-hover;
 }
+
+.test {
+  background-color: red;
+}
