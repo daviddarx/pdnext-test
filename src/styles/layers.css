@@ -361,23 +361,72 @@
     }
   }
 
-  .close-button {
+  .close-button,
+  .nav-button {
+    --w: calc(var(--size-burger) - 2px);
+    --h: calc(var(--size-burger) - 2px);
+
     @apply flex items-center justify-center;
     @apply text-current outline outline-1 -outline-offset-1 outline-current rounded-full;
-    @apply transition-transform duration-300 ease-out-quart;
+    @apply transition-all duration-300 ease-out-quart;
     @media (hover: hover) {
       &:hover {
         @apply rotate-90;
       }
     }
+
+    width: var(--w);
+    height: var(--h);
+    margin-right: 1px;
   }
 
-  .close-button__text {
+  .nav-button {
+    @media (hover: hover) {
+      &:hover {
+        @apply rotate-0;
+      }
+    }
+  }
+
+  .close-button__text,
+  .nav-button__text {
     @apply hidden;
   }
 
   .close-button__icon {
     @apply w-1/2 h-1/2;
+  }
+
+  @keyframes navButtonAnimation {
+    0% {
+      transform: translateX(0) scaleX(var(--scale-x));
+    }
+    50% {
+      transform: translateX(var(--hover-translate-x)) scaleX(var(--scale-x));
+    }
+    100% {
+      transform: translateX(0) scaleX(var(--scale-x));
+    }
+  }
+
+  .nav-button__icon {
+    --hover-translate-x: 15%;
+    --scale-x: 100%;
+
+    @apply w-1/2 h-1/2 transition-transform duration-300 ease-out-quart;
+
+    transform: scaleX(var(--scale-x));
+
+    @media (hover: hover) {
+      :hover > & {
+        animation: navButtonAnimation 1.5s infinite;
+      }
+    }
+
+    .nav-button--prev & {
+      --hover-translate-x: -15%;
+      --scale-x: -100%;
+    }
   }
 
   .play-button {

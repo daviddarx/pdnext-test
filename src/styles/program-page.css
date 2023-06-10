@@ -47,10 +47,6 @@
   @apply bg-white;
   @apply transform-3d transition-transform duration-500 ease-out-back;
 
-  width: calc(var(--size-burger) - 2px);
-  height: calc(var(--size-burger) - 2px);
-  margin-right: 1px;
-
   --tw-translate-y: var(--height-topbar);
 }
 

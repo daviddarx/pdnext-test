@@ -33,6 +33,4 @@
 
 .video-overlay__close-button {
   @apply bg-black;
-  width: calc(var(--size-burger) - 2px);
-  height: calc(var(--size-burger) - 2px);
 }

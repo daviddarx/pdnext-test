@@ -14,6 +14,8 @@ const galleriesContent = require('../../../_content/galleries/galleries.json');
 import Layout from '@/components/layout/Layout';
 import Metas from '@/components/layout/Metas';
 import LoadedImageCustom from '@/components/ui/LoadedImageCustom';
+import CloseButton from '@/components/ui/CloseButton';
+import NavButton from '@/components/ui/NavButton';
 
 import PageHeader from '@/components/layout/PageHeader';
 
@@ -77,9 +79,7 @@ const Page: NextPage<PageProps> = ({ page, commonPageData }) => {
         close={closeGallery}
         index={galleryIndex}
         slides={galleryImages}
-        controller={{ closeOnBackdropClick: true }}
         plugins={[Counter]}
-        counter={{ container: { className: 'test' } }}
         animation={{
           fade: 250,
           swipe: 750,
@@ -90,6 +90,16 @@ const Page: NextPage<PageProps> = ({ page, commonPageData }) => {
             navigation: 'cubic-bezier(0.860, 0.000, 0.070, 1.000)' /* inOutQuint */,
           },
         }}
+        render={{
+          iconPrev: () => (
+            <NavButton className='gallery-page__nav-button' renderAsDiv={true} isPrev={true} />
+          ),
+          iconNext: () => <NavButton className='gallery-page__nav-button' renderAsDiv={true} />,
+          iconClose: () => (
+            <CloseButton className='gallery-page__close-button' renderAsDiv={true} />
+          ),
+        }}
+        className='gallery-page__lightbox'
       />
     </Layout>
   );

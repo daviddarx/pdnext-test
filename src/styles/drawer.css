@@ -14,7 +14,4 @@
 
 .drawer__close {
   @apply fixed top-gutter right-gutter;
-
-  width: var(--size-burger);
-  height: var(--size-burger);
 }
