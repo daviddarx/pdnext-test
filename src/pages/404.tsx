@@ -16,7 +16,7 @@ const Page: NextPage<PageProps> = ({ commonPageData }) => {
       <section className='content-page'>
         <PageHeader
           subline='404 - Not Found'
-          title='Die Lust verschwand 😅'
+          title='Ups 😅, die Lust verschwand'
           lead="Diese Seite konnte nicht gefunden werden. Wie wär's mit einer anderen?"
         />
       </section>
