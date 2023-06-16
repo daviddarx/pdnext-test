@@ -1,10 +1,11 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import { Provider } from 'react-redux';
 import { AnimatePresence } from 'framer-motion';
 
 import { fontText, fontTitle } from '@/utils/get-fonts';
+import { Timeout } from '@/types/Timeout';
 import store from '@/store/';
 import { uiActions } from '@/store/';
 
@@ -18,16 +19,41 @@ import '@/styles/globals.css';
 const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
   const pageKey = router.asPath;
+  const backScrollTimeout = useRef<Timeout | null>(null);
 
   useEffect(() => {
     const handleRouteChangeStart = () => {
       store.dispatch(uiActions.closeNavigation());
       store.dispatch(uiActions.closeEvent());
     };
+
+    const handlePopState = () => {
+      if (backScrollTimeout.current) {
+        clearTimeout(backScrollTimeout.current);
+      }
+
+      backScrollTimeout.current = setTimeout(() => {
+        const backScrollPosition = sessionStorage.getItem('back-scroll-position');
+        window.scroll({
+          top: parseInt(backScrollPosition!),
+          behavior: 'smooth',
+        });
+        sessionStorage.setItem('back-scroll-position', '0');
+      }, 500);
+    };
+
+    const handleBeforeHistoryChange = () => {
+      sessionStorage.setItem('back-scroll-position', String(window.scrollY));
+    };
+
     router.events.on('routeChangeStart', handleRouteChangeStart);
+    router.events.on('beforeHistoryChange', handleBeforeHistoryChange);
+    window.addEventListener('popstate', handlePopState);
 
     return () => {
       router.events.off('routeChangeStart', handleRouteChangeStart);
+      router.events.off('beforeHistoryChange', handleBeforeHistoryChange);
+      window.removeEventListener('popstate', handlePopState);
     };
   }, [router.events]);
 

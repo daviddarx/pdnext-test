@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import eases from '@/utils/eases';
 import { uiStateType } from '@/store/ui-slice';
 import { SupportUsSlot } from '@/types/SupportUsSlot';
+import { Timeout } from '@/types/Timeout';
 
 import HeartIcon from '@/components/icons/HeartIcon';
 import CloseIcon from '@/components/icons/CloseIcon';
@@ -35,8 +36,6 @@ const motionVariants = {
   },
 };
 
-type TimeoutType = ReturnType<typeof setTimeout>;
-
 type Props = {
   data: SupportUsSlot[];
 };
@@ -48,7 +47,7 @@ const SupportUs = ({ data }: Props) => {
 
   data.sort((a, b) => a.position - b.position);
 
-  const scrollIntoView = useCallback((isOpened: boolean): TimeoutType => {
+  const scrollIntoView = useCallback((isOpened: boolean): Timeout => {
     /* delay needed because accordion animation has influence on the scroll behavior */
     const scrollTimeout = setTimeout(() => {
       if (isOpened) {

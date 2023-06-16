@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 import Lightbox from 'yet-another-react-lightbox';
 import Counter from 'yet-another-react-lightbox/plugins/counter';
 import 'yet-another-react-lightbox/styles.css';
@@ -35,6 +36,7 @@ type PageProps = {
 const Page: NextPage<PageProps> = ({ page, commonPageData }) => {
   const [isGalleryOpened, setGalleryOpened] = useState(false);
   const [galleryIndex, setGalleryIndex] = useState(0);
+  const router = useRouter();
 
   const galleryImages = page.images.map((item) => {
     return { src: item.main };
@@ -52,6 +54,12 @@ const Page: NextPage<PageProps> = ({ page, commonPageData }) => {
 
   const closeGallery = () => {
     setGalleryOpened(false);
+  };
+
+  const backToImpressions = (e: React.MouseEvent) => {
+    const scrollPosition = window.scrollY;
+
+    router.back();
   };
 
   return (
@@ -79,6 +87,7 @@ const Page: NextPage<PageProps> = ({ page, commonPageData }) => {
           <ActiveLink
             className='gallery-page__back-button'
             href={routes.secondary.impressions.link}
+            onClick={backToImpressions}
           >
             <ArrowIcon className='gallery-page__back-icon' />
             <span>{routes.secondary.impressions.title}</span>
