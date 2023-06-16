@@ -36,7 +36,7 @@ const routes = {
     news: { title: 'News', link: '/news' },
     submissions: { title: 'Submissions', link: '/submissions' },
     impressions: { title: 'Impressions', link: '/impressions' },
-    press: { title: 'Presse', link: '/press' },
+    press: { title: 'Press', link: '/press' },
   },
   bottomNav: {
     about: {
