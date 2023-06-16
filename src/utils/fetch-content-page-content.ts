@@ -4,6 +4,7 @@ export interface ContentPageContent {
   title: string;
   headerSubline?: string;
   headerTitle: string;
+  headerCentered: boolean;
   lead?: string;
   video?: boolean;
   contentSlot?: {

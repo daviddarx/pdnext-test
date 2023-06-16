@@ -6,11 +6,14 @@ type Props = {
   subline?: string;
   title: string;
   lead?: string;
+  centered?: boolean;
 };
 
-const PageHeader: React.FC<Props> = ({ className = '', subline, title, lead }) => {
+const PageHeader: React.FC<Props> = ({ className = '', subline, title, lead, centered = true }) => {
   return (
-    <header className={`page-header ${className}`}>
+    <header
+      className={`page-header ${centered ? 'page-header--centered' : ''} ${className}`.trim()}
+    >
       <h1>
         {subline && <span className='page-header__subline'>{subline}</span>}
         <ReactMarkdown className='page-header__title' remarkPlugins={[remarkGfm]}>

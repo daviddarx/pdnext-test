@@ -1,5 +1,9 @@
 .page-header {
-  @apply px-[--content-page-px-col] text-center mb-gutter-3;
+  @apply px-[--content-page-px-col] mb-gutter-3;
+}
+
+.page-header--centered {
+  @apply text-center;
 }
 
 .page-header__subline {

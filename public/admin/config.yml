@@ -540,6 +540,11 @@ collections:
         name: 'headerTitle'
         widget: 'string'
 
+      - label: 'Header Centered'
+        name: 'headerCentered'
+        widget: 'boolean'
+        default: true
+
       - label: 'Header Lead'
         name: 'lead'
         widget: 'text'
