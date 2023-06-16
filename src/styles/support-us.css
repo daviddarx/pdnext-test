@@ -23,9 +23,13 @@
   }
 }
 
+.support-us__headline {
+  @apply mr-[0.5em];
+}
+
 .support-us__heart {
   @apply inline-block w-[1em] h-auto;
-  @apply ml-[0.5em] -mt-[0.2em];
+  @apply -mt-[0.2em];
 
   @screen lg {
     @apply w-[1.2em];

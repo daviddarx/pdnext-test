@@ -78,7 +78,7 @@ const SupportUs = ({ data }: Props) => {
         header={
           <h2 className='support-us__title text-link'>
             <span className='inline-block align-text-v'>
-              Unterstützen Sie uns
+              <span className='support-us__headline'>Verhilf uns zu unserem Höhepunkt</span>
               <HeartIcon className='support-us__heart' />
             </span>
             <CloseIcon className='support-us__close' />

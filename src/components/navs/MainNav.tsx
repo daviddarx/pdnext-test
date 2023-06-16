@@ -97,7 +97,7 @@ const MainNav = () => {
             variants={drawerChildreMotionVariants}
             custom={2}
           >
-            Unterstützen Sie uns
+            Unterstütze uns
           </motion.button>
         </div>
 
