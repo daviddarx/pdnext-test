@@ -1,19 +1,5 @@
 import ActiveLink from '@/components/ui/ActiveLink';
-
-const footerNavItems = [
-  {
-    title: 'Impressum',
-    link: '/impressum',
-  },
-  {
-    title: 'Datenschutz',
-    link: '/privacy',
-  },
-  {
-    title: 'Cookie-Richtlinie',
-    link: '/cookies',
-  },
-];
+import routes, { Route } from '@/routes/routes';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -23,17 +9,20 @@ const Footer = () => {
       <nav>
         <h2 className='hidden'>Footer Navigation</h2>
         <ul className='footer__nav'>
-          {footerNavItems.map((item) => (
-            <li key={item.link}>
-              <ActiveLink
-                className='footer__link'
-                activeClassName='footer__link--active'
-                href={item.link}
-              >
-                {item.title}
-              </ActiveLink>
-            </li>
-          ))}
+          {Object.keys(routes.footer).map((key) => {
+            const route = routes.footer[key as keyof typeof routes.footer] as Route;
+            return (
+              <li key={route.link}>
+                <ActiveLink
+                  className='footer__link'
+                  activeClassName='footer__link--active'
+                  href={route.link}
+                >
+                  {route.title}
+                </ActiveLink>
+              </li>
+            );
+          })}
         </ul>
       </nav>
       <p>©{currentYear} Porny Days</p>

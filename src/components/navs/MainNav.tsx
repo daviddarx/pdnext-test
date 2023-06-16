@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { motion, useWillChange } from 'framer-motion';
 
+import routes, { Route } from '@/routes/routes';
 import drawerChildreMotionVariants from '@/utils/drawer-children-animation';
 import { uiActions } from '@/store';
 import { uiStateType } from '@/store/ui-slice';
@@ -9,27 +10,6 @@ import { uiStateType } from '@/store/ui-slice';
 import Drawer from '@/components/ui/Drawer';
 import ActiveLink from '@/components/ui/ActiveLink';
 import SocialNav from '@/components/navs/SocialsNav';
-
-const mainNavItems = [
-  {
-    title: 'Festival Programm',
-    complement: ' 23. — 27. Nov. 2022',
-    link: '/festival-program',
-  },
-  {
-    title: 'One Night Stands',
-    complement: 'Saisonales Programm',
-    link: '/one-night-stands',
-  },
-];
-
-const secondaryNavItems = [
-  { title: 'Das Festival', link: '/festival' },
-  { title: 'News', link: '/news' },
-  { title: 'Submissions', link: '/submissions' },
-  { title: 'Impressions', link: '/impressions' },
-  { title: 'Press', link: '/press' },
-];
 
 const MainNav = () => {
   const isNavigationOpened = useSelector((state: uiStateType) => state.ui.isNavigationOpened);
@@ -67,18 +47,21 @@ const MainNav = () => {
             style={{ willChange }}
             custom={0}
           >
-            {mainNavItems.map((item) => (
-              <li key={item.link}>
-                <ActiveLink
-                  className='main-nav__link main-nav__link--main text-link'
-                  activeClassName='main-nav__link--active'
-                  href={item.link}
-                >
-                  <span className='main-nav__link-text'>{item.title}</span>
-                  <span className='main-nav__link-detail'>{item.complement}</span>
-                </ActiveLink>
-              </li>
-            ))}
+            {Object.keys(routes.main).map((key) => {
+              const route = routes.main[key as keyof typeof routes.main] as Route;
+              return (
+                <li key={route.link}>
+                  <ActiveLink
+                    className='main-nav__link main-nav__link--main text-link'
+                    activeClassName='main-nav__link--active'
+                    href={route.link}
+                  >
+                    <span className='main-nav__link-text'>{route.title}</span>
+                    <span className='main-nav__link-detail'>{route.complement}</span>
+                  </ActiveLink>
+                </li>
+              );
+            })}
           </motion.ul>
 
           <motion.ul
@@ -89,17 +72,20 @@ const MainNav = () => {
             variants={drawerChildreMotionVariants}
             custom={1}
           >
-            {secondaryNavItems.map((item) => (
-              <li key={item.link}>
-                <ActiveLink
-                  className='main-nav__link main-nav__link--secondary text-link'
-                  activeClassName='main-nav__link--active'
-                  href={item.link}
-                >
-                  {item.title}
-                </ActiveLink>
-              </li>
-            ))}
+            {Object.keys(routes.secondary).map((key) => {
+              const route = routes.secondary[key as keyof typeof routes.secondary] as Route;
+              return (
+                <li key={route.link}>
+                  <ActiveLink
+                    className='main-nav__link main-nav__link--secondary text-link'
+                    activeClassName='main-nav__link--active'
+                    href={route.link}
+                  >
+                    {route.title}
+                  </ActiveLink>
+                </li>
+              );
+            })}
           </motion.ul>
 
           <motion.button
