@@ -6,12 +6,12 @@ import React, { PropsWithChildren, useState, useEffect } from 'react';
 
 type ActiveLinkProps = LinkProps & {
   className?: string;
-  activeClassName: string;
+  activeClassName?: string;
 };
 
 const ActiveLink = ({
   children,
-  activeClassName,
+  activeClassName = '',
   className = '',
   ...props
 }: PropsWithChildren<ActiveLinkProps>) => {
