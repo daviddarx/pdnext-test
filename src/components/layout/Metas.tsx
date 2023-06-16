@@ -16,14 +16,8 @@ const Metas = ({ title }: Props) => {
       />
       <meta property='og:url' content='https://www.pornydays.love' />
       <meta property='og:title' content='10. Porny Days / 23. bis 27. Nov. 2022 / Zürich' />
-      <meta
-        property='og:image:url'
-        content='http://pornydays.love/images/pornydays_facebookk.jpg'
-      />
-      <meta
-        property='og:image:secure_url'
-        content='https://pornydays.love/images/pornydays_facebookk.jpg'
-      />
+      <meta property='og:image:url' content='/images/pornydays.jpg' />
+      <meta property='og:image:secure_url' content='/images/pornydays.jpg' />
       <meta property='og:image:type' content='image/jpeg' />
       <meta property='og:image:width' content='1200' />
       <meta property='og:image:height' content='630' />
