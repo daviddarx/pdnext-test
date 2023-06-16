@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 
 import { fetchProgramContent, ProgramContent } from '@/utils/fetch-program-content';
