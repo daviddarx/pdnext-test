@@ -1,3 +1,15 @@
+.gallery-page__back {
+  @apply p-gutter pt-gutter-2 sticky bottom-0;
+}
+
+.gallery-page__back-button {
+  @apply tag !inline-flex gap-[0.5em];
+}
+
+.gallery-page__back-icon {
+  @apply relative inline-block h-[0.9em] w-auto -top-[0.07em] scale-x-[-1];
+}
+
 .gallery-page__images {
   @apply layout-cols layout-cols-2;
 

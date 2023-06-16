@@ -6,6 +6,7 @@ import 'yet-another-react-lightbox/plugins/counter.css';
 
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 
+import routes from '@/routes/routes';
 import { fetchCommonPageContent, CommonPageData } from '@/utils/fetch-common-page-content';
 import { fetchGalleriesImagesContent, GalleryImage } from '@/utils/fetch-galleries-images-content';
 
@@ -16,6 +17,8 @@ import Metas from '@/components/layout/Metas';
 import LoadedImageCustom from '@/components/ui/LoadedImageCustom';
 import CloseButton from '@/components/ui/CloseButton';
 import NavButton from '@/components/ui/NavButton';
+import ActiveLink from '@/components/ui/ActiveLink';
+import ArrowIcon from '@/components/icons/ArrowIcon';
 
 import PageHeader from '@/components/layout/PageHeader';
 
@@ -71,6 +74,15 @@ const Page: NextPage<PageProps> = ({ page, commonPageData }) => {
               </div>
             </a>
           ))}
+        </div>
+        <div className='gallery-page__back'>
+          <ActiveLink
+            className='gallery-page__back-button'
+            href={routes.secondary.impressions.link}
+          >
+            <ArrowIcon className='gallery-page__back-icon' />
+            <span>{routes.secondary.impressions.title}</span>
+          </ActiveLink>
         </div>
       </section>
 
