@@ -116,13 +116,14 @@ const ContentPage: React.FC<Props> = ({ data }) => {
             )}
 
             {slot.image && (
-              <LoadedImage
-                className='content-slot__image content-page__column-left'
-                src={slot.image}
-                alt={slot.title}
-                width={slot.imageWidth}
-                height={slot.imageHeight}
-              />
+              <div className='content-slot__image content-page__column-left'>
+                <LoadedImage
+                  src={slot.image}
+                  alt={slot.title}
+                  width={slot.imageWidth}
+                  height={slot.imageHeight}
+                />
+              </div>
             )}
 
             {slot.definitionLists && slot.definitionLists.length > 0 && (
