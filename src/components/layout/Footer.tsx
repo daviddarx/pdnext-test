@@ -1,5 +1,5 @@
 import ActiveLink from '@/components/ui/ActiveLink';
-import routes, { Route } from '@/routes/routes';
+import { routes, Route } from '@/routes/routes';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,11 +12,11 @@ const Footer = () => {
           {Object.keys(routes.footer).map((key) => {
             const route = routes.footer[key as keyof typeof routes.footer] as Route;
             return (
-              <li key={route.link}>
+              <li key={route.slug}>
                 <ActiveLink
                   className='footer__link'
                   activeClassName='footer__link--active'
-                  href={route.link}
+                  href={'/' + route.slug}
                 >
                   {route.title}
                 </ActiveLink>

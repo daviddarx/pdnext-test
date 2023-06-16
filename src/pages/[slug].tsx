@@ -1,11 +1,11 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 
+import { routes, findRouteBySlug, Route } from '@/routes/routes';
 import { fetchProgramContent, ProgramContent } from '@/utils/fetch-program-content';
 import { fetchOnsContent, OnsContent } from '@/utils/fetch-ons-content';
 import { fetchNewsContent, NewsContent } from '@/utils/fetch-news-content';
 import { fetchImpressionsContent, ImpressionsContent } from '@/utils/fetch-impressions-content';
 import { fetchContentPageContent, ContentPageContent } from '@/utils/fetch-content-page-content';
-
 import { fetchCommonPageContent, CommonPageData } from '@/utils/fetch-common-page-content';
 
 import Layout from '@/components/layout/Layout';
@@ -16,19 +16,6 @@ import OnsPage from '@/components/pages/OnsPage';
 import NewsPage from '@/components/pages/NewsPage';
 import ImpressionsPage from '@/components/pages/ImpressionsPage';
 import ContentPage from '@/components/pages/ContentPage';
-
-const pages = [
-  { slug: 'festival-program', pageTitle: 'Festival Programm' },
-  { slug: 'one-night-stands', pageTitle: 'One Night Stands' },
-  { slug: 'news', pageTitle: 'News' },
-  { slug: 'impressions', pageTitle: 'Impressions' },
-  { slug: 'cookies', pageTitle: 'Cookie-Richtlinie', json: 'contentpage-cookie-richtlinie.json' },
-  { slug: 'festival', pageTitle: 'Das Festival', json: 'contentpage-das-festival.json' },
-  { slug: 'impressum', pageTitle: 'Impressum', json: 'contentpage-impressum.json' },
-  { slug: 'press', pageTitle: 'Press', json: 'contentpage-presse.json' },
-  { slug: 'privacy', pageTitle: 'Datenschutz', json: 'contentpage-datenschutz.json' },
-  { slug: 'submissions', pageTitle: 'Submissions', json: 'contentpage-submissions.json' },
-];
 
 type PageProps = {
   page: {
@@ -49,17 +36,28 @@ const Page: NextPage<PageProps> = ({ page, commonPageData }) => {
        * Forced to declaratively cast the
        * components and data to get them typed.
        */}
-      {type === pages[0].slug && <ProgramPage data={data as ProgramContent} />}
-      {type === pages[1].slug && <OnsPage data={data as OnsContent} />}
-      {type === pages[2].slug && <NewsPage data={data as NewsContent} />}
-      {type === pages[3].slug && <ImpressionsPage data={data as ImpressionsContent} />}
+      {type === routes.main.festival.slug && <ProgramPage data={data as ProgramContent} />}
+      {type === routes.main.ons.slug && <OnsPage data={data as OnsContent} />}
+      {type === routes.secondary.news.slug && <NewsPage data={data as NewsContent} />}
+      {type === routes.secondary.impressions.slug && (
+        <ImpressionsPage data={data as ImpressionsContent} />
+      )}
       {type === 'content-page' && <ContentPage data={data as ContentPageContent} />}
     </Layout>
   );
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const slugs = pages.map((page) => page.slug);
+  const slugs: string[] = [];
+  for (let key in routes.main) {
+    slugs.push(routes.main[key as keyof typeof routes.main].slug);
+  }
+  for (let key in routes.secondary) {
+    slugs.push(routes.secondary[key as keyof typeof routes.secondary].slug);
+  }
+  for (let key in routes.footer) {
+    slugs.push(routes.footer[key as keyof typeof routes.footer].slug);
+  }
   const paths = slugs.map((slug: string) => ({ params: { slug } }));
 
   return { paths, fallback: false };
@@ -67,13 +65,21 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
   const { slug } = params ?? {};
-  const page = pages.find((page) => page.slug === slug);
 
-  if (!page) {
+  let slugString = '';
+  if (Array.isArray(slug)) {
+    slugString = slug[slug.length - 1];
+  } else if (typeof slug === 'string') {
+    slugString = slug;
+  }
+
+  let route = findRouteBySlug(routes, slugString);
+
+  if (route === null) {
     return { notFound: true };
   }
 
-  const type = page.json === undefined ? page.slug : 'content-page';
+  const type = route.json === undefined ? route.slug : 'content-page';
 
   /**
    * Forced to declaratively fetch the data
@@ -81,20 +87,20 @@ export const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
    */
   let data;
   switch (slug) {
-    case pages[0].slug:
+    case routes.main.festival.slug:
       data = await fetchProgramContent();
       break;
-    case pages[1].slug:
+    case routes.main.ons.slug:
       data = await fetchOnsContent();
       break;
-    case pages[2].slug:
+    case routes.secondary.news.slug:
       data = await fetchNewsContent();
       break;
-    case pages[3].slug:
+    case routes.secondary.impressions.slug:
       data = await fetchImpressionsContent();
       break;
     default:
-      data = await fetchContentPageContent(page.json!);
+      data = await fetchContentPageContent(route.json!);
       break;
   }
 
@@ -103,7 +109,7 @@ export const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
   const props: PageProps = {
     page: {
       type: type,
-      title: page.pageTitle,
+      title: route.title,
       data: data,
     },
     commonPageData: commonPageData,

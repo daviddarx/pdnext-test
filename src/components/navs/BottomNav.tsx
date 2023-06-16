@@ -1,4 +1,4 @@
-import routes, { Route, RoutesCollection } from '@/routes/routes';
+import { routes, bottomNavRoutes, Route, RoutesCollection } from '@/routes/routes';
 import ActiveLink from '@/components/ui/ActiveLink';
 import SocialsNav from '@/components/navs/SocialsNav';
 
@@ -14,7 +14,7 @@ const BottomNavGroup = ({ header, items, withSocials }: BottomNavGroupProps) => 
       <ActiveLink
         className='bottom-nav__link'
         activeClassName='bottom-nav__link--active'
-        href={header.link}
+        href={'/' + header.slug}
       >
         <h3 className='bottom-nav__title'>{header.title} </h3>
       </ActiveLink>
@@ -23,11 +23,11 @@ const BottomNavGroup = ({ header, items, withSocials }: BottomNavGroupProps) => 
         {Object.keys(items).map((key) => {
           const route = items[key as keyof typeof items] as Route;
           return (
-            <li key={route.link}>
+            <li key={route.slug}>
               <ActiveLink
                 className='bottom-nav__link'
                 activeClassName='bottom-nav__link--active'
-                href={route.link}
+                href={'/' + route.slug}
               >
                 {route.title}
               </ActiveLink>
@@ -48,12 +48,12 @@ const BottomNav = () => {
 
       <BottomNavGroup
         header={routes.secondary.about}
-        items={routes.bottomNav.about}
+        items={bottomNavRoutes.about}
         withSocials={true}
       />
       <BottomNavGroup
         header={routes.secondary.press}
-        items={routes.bottomNav.press}
+        items={bottomNavRoutes.press}
         withSocials={false}
       />
     </nav>

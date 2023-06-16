@@ -7,7 +7,7 @@ import 'yet-another-react-lightbox/plugins/counter.css';
 
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 
-import routes from '@/routes/routes';
+import { routes } from '@/routes/routes';
 import { fetchCommonPageContent, CommonPageData } from '@/utils/fetch-common-page-content';
 import { fetchGalleriesImagesContent, GalleryImage } from '@/utils/fetch-galleries-images-content';
 
@@ -68,7 +68,6 @@ const Page: NextPage<PageProps> = ({ page, commonPageData }) => {
 
       <section className='content-page gallery-page'>
         <PageHeader subline={page.subline} title={page.title} lead={page.lead} />
-
         <div className='gallery-page__images'>
           {page.images.map((image, i) => (
             <a
@@ -86,7 +85,7 @@ const Page: NextPage<PageProps> = ({ page, commonPageData }) => {
         <div className='gallery-page__back'>
           <ActiveLink
             className='gallery-page__back-button'
-            href={routes.secondary.impressions.link}
+            href={'/' + routes.secondary.impressions.slug}
             onClick={backToImpressions}
           >
             <ArrowIcon className='gallery-page__back-icon' />

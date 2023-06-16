@@ -1,7 +1,8 @@
 export type Route = {
   title: string;
-  link: string;
+  slug: string;
   complement?: string;
+  json?: string;
 };
 
 export type RoutesCollection = {
@@ -12,80 +13,102 @@ export type Routes = {
   main: RoutesCollection;
   secondary: RoutesCollection;
   footer: RoutesCollection;
-  bottomNav: {
-    about: RoutesCollection;
-    press: RoutesCollection;
-  };
 };
 
-const routes = {
+export type BottomNavRoutes = {
+  about: RoutesCollection;
+  press: RoutesCollection;
+};
+
+export const routes = {
   main: {
     festival: {
+      slug: 'festival-program',
       title: 'Festival Programm',
       complement: ' 23. — 27. Nov. 2022',
-      link: '/festival-program',
     },
     ons: {
+      slug: 'one-night-stands',
       title: 'One Night Stands',
       complement: 'Saisonales Programm',
-      link: '/one-night-stands',
     },
   },
   secondary: {
-    about: { title: 'Das Festival', link: '/festival' },
-    news: { title: 'News', link: '/news' },
-    submissions: { title: 'Submissions', link: '/submissions' },
-    impressions: { title: 'Impressions', link: '/impressions' },
-    press: { title: 'Press', link: '/press' },
-  },
-  bottomNav: {
-    about: {
-      about: {
-        title: 'Über uns',
-        link: '/festival#uber-uns',
-      },
-      mainfesto: {
-        title: 'Manifesto',
-        link: '/festival#manifesto',
-      },
-      team: {
-        title: 'Team',
-        link: '/festival#team',
-      },
-      contact: {
-        title: 'Kontakt',
-        link: '/festival#kontakt',
-      },
+    about: { slug: 'festival', title: 'Das Festival', json: 'contentpage-das-festival.json' },
+    news: { slug: 'news', title: 'News' },
+    submissions: {
+      slug: 'submissions',
+      title: 'Submissions',
+      json: 'contentpage-submissions.json',
     },
-    press: {
-      contact: {
-        title: 'Presse-Kontakt',
-        link: '/press#presse-kontakt',
-      },
-      releases: {
-        title: 'Medienmitteilungen',
-        link: '/press#medienmitteilungen',
-      },
-      review: {
-        title: 'Pressespiegel',
-        link: '/press#pressespiegel',
-      },
-    },
+    impressions: { slug: 'impressions', title: 'Impressions' },
+    press: { slug: 'press', title: 'Press', json: 'contentpage-presse.json' },
   },
   footer: {
     impressum: {
+      slug: 'impressum',
       title: 'Impressum',
-      link: '/impressum',
+      json: 'contentpage-impressum.json',
     },
     pricacy: {
+      slug: 'privacy',
       title: 'Datenschutz',
-      link: '/privacy',
+      json: 'contentpage-datenschutz.json',
     },
     cookies: {
+      slug: 'cookies',
       title: 'Cookie-Richtlinie',
-      link: '/cookies',
+      json: 'contentpage-cookie-richtlinie.json',
     },
   },
 };
 
-export default routes;
+export function findRouteBySlug(routes: Routes, slug: string): Route | null {
+  for (const key of Object.keys(routes) as (keyof Routes)[]) {
+    if (typeof routes[key] === 'object') {
+      for (const subKey of Object.keys(routes[key]) as (keyof RoutesCollection)[]) {
+        const route = routes[key][subKey];
+        if (route.slug === slug) {
+          return route;
+        }
+      }
+    }
+  }
+
+  return null; // Route with the given slug not found
+}
+
+export const bottomNavRoutes = {
+  about: {
+    about: {
+      slug: 'festival#uber-uns',
+      title: 'Über uns',
+    },
+    mainfesto: {
+      slug: 'festival#manifesto',
+      title: 'Manifesto',
+    },
+    team: {
+      slug: 'festival#team',
+      title: 'Team',
+    },
+    contact: {
+      slug: 'festival#kontakt',
+      title: 'Kontakt',
+    },
+  },
+  press: {
+    contact: {
+      slug: 'press#presse-kontakt',
+      title: 'Presse-Kontakt',
+    },
+    releases: {
+      slug: 'press#medienmitteilungen',
+      title: 'Medienmitteilungen',
+    },
+    review: {
+      slug: 'press#pressespiegel',
+      title: 'Pressespiegel',
+    },
+  },
+};
