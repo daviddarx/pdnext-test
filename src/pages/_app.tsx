@@ -19,6 +19,7 @@ import '@/styles/globals.css';
 
 const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
+  const scrollPositions = useRef<number[]>([]);
   const pageKey = router.asPath;
   const backScrollTimeout = useRef<Timeout | null>(null);
 
@@ -42,9 +43,8 @@ const App = ({ Component, pageProps }: AppProps) => {
       }
 
       backScrollTimeout.current = setTimeout(() => {
-        const backScrollPosition = sessionStorage.getItem('back-scroll-position');
         window.scroll({
-          top: parseInt(backScrollPosition!),
+          top: scrollPositions.current[0],
           behavior: 'smooth',
         });
         sessionStorage.setItem('back-scroll-position', '0');
@@ -52,7 +52,10 @@ const App = ({ Component, pageProps }: AppProps) => {
     };
 
     const handleBeforeHistoryChange = () => {
-      sessionStorage.setItem('back-scroll-position', String(window.scrollY));
+      scrollPositions.current.push(window.scrollY);
+      if (scrollPositions.current.length > 2) {
+        scrollPositions.current.shift();
+      }
     };
 
     router.events.on('routeChangeStart', handleRouteChangeStart);
@@ -62,9 +65,13 @@ const App = ({ Component, pageProps }: AppProps) => {
     return () => {
       router.events.off('routeChangeStart', handleRouteChangeStart);
       router.events.off('beforeHistoryChange', handleBeforeHistoryChange);
+      router.beforePopState((state) => {
+        state.options.scroll = false;
+        return true;
+      });
       window.removeEventListener('popstate', handlePopState);
     };
-  }, [router.events, pageKey]);
+  }, [router, router.events, pageKey]);
 
   useEffect(() => {
     const pageSlug = pageKey.split('/')[1].split('#')[0];
