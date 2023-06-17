@@ -1,4 +1,6 @@
 import { useEffect, useCallback, useRef } from 'react';
+import { useSelector } from 'react-redux';
+import { uiStateType } from '@/store/ui-slice';
 
 // CREDITS: https://codepen.io/tmrDevelops/pen/vOPZBv
 
@@ -41,6 +43,7 @@ const paintBackground = () => {
 };
 
 const RainbowBackground = () => {
+  const isDark = useSelector((state: uiStateType) => state.ui.isDark);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   const init = useCallback(() => {
@@ -63,13 +66,16 @@ const RainbowBackground = () => {
   }, [init, destroy]);
 
   return (
-    <canvas
-      ref={canvasRef}
-      id='rainbow-background'
-      className='rainbow-background'
-      width='32'
-      height='32'
-    ></canvas>
+    <div className={`rainbow-background ${isDark ? 'rainbow-background--dark' : ''}`.trim()}>
+      <canvas
+        ref={canvasRef}
+        id='rainbow-background'
+        className='rainbow-background__canvas'
+        width='32'
+        height='32'
+      />
+      <div className='rainbow-background__dark-overlay'></div>
+    </div>
   );
 };
 

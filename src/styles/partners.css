@@ -21,16 +21,28 @@
   @media (hover: hover) {
     &:hover {
       @apply bg-white border-current;
+
+      .dark & {
+        @apply bg-black;
+      }
     }
   }
 }
 
 .partner__logo {
   @apply w-5/6 lg:w-3/4 h-auto py-gutter-1/2;
+
+  .dark & {
+    @apply fill-white;
+  }
 }
 
 .partner__logo-img {
   @apply mix-blend-multiply;
+
+  .dark & {
+    @apply mix-blend-screen;
+  }
 }
 
 .partner__label {

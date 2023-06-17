@@ -2,6 +2,10 @@
   .accordion__button {
     @apply text-left;
   }
+
+  .dark & {
+    @apply border-y border-current;
+  }
 }
 
 .support-us__title {

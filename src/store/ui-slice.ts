@@ -11,6 +11,7 @@ export interface uiStateType {
     eventNavUsed: boolean;
     eventSwitchDirection: 'prev' | 'next';
     openedVideo: string | undefined;
+    isDark: boolean;
   };
 }
 
@@ -25,6 +26,7 @@ export const uiSlice = createSlice({
     eventNavUsed: false,
     eventSwitchDirection: 'next',
     openedVideo: undefined,
+    isDark: false,
   },
   reducers: {
     openEvent: (state, action) => {
@@ -73,6 +75,9 @@ export const uiSlice = createSlice({
     },
     closeVideo: (state) => {
       state.openedVideo = undefined;
+    },
+    setDark: (state, action) => {
+      state.isDark = action.payload;
     },
   },
 });

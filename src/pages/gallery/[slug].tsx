@@ -63,7 +63,7 @@ const Page: NextPage<PageProps> = ({ page, commonPageData }) => {
   };
 
   return (
-    <Layout commonPageData={commonPageData}>
+    <Layout commonPageData={commonPageData} isDark={true}>
       <Metas title={page.title} />
 
       <section className='content-page gallery-page'>

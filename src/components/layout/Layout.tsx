@@ -38,10 +38,11 @@ const motionVariants = {
 
 type Props = {
   commonPageData: CommonPageData;
+  isDark?: boolean;
   children: ReactNode;
 };
 
-const Layout: React.FC<Props> = ({ children, commonPageData }) => {
+const Layout: React.FC<Props> = ({ children, isDark = false, commonPageData }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -49,7 +50,13 @@ const Layout: React.FC<Props> = ({ children, commonPageData }) => {
   }, [dispatch]);
 
   return (
-    <motion.div initial='initial' animate='animate' exit='exit' variants={motionVariants}>
+    <motion.div
+      initial='initial'
+      animate='animate'
+      exit='exit'
+      variants={motionVariants}
+      className={isDark ? 'dark dark--no-bg' : ''}
+    >
       <Header commonPageData={commonPageData} />
       <main>{children}</main>
       <SupportUs data={commonPageData.supportUsData} />

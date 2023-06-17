@@ -1,5 +1,9 @@
 .expandable-text {
-  @apply border-y border-black bg-white;
+  @apply border-y border-current bg-white;
+
+  .dark & {
+    @apply bg-black;
+  }
 }
 
 .expandable-text__title {

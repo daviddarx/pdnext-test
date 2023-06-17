@@ -23,6 +23,10 @@
   .nav-burger--no-text & {
     @apply opacity-0;
   }
+
+  .nav-burger--dark & {
+    @apply text-pink;
+  }
 }
 
 .nav-burger__icon {

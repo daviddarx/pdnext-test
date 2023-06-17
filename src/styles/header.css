@@ -8,7 +8,7 @@
 
   @screen sm {
     @apply flex justify-between px-gutter py-gutter;
-    @apply bg-transparent border-b border-black;
+    @apply bg-transparent border-b border-current;
   }
 
   @screen xl {
@@ -30,4 +30,8 @@
 
   height: var(--h-logo);
   width: auto;
+
+  .dark & {
+    @apply text-white;
+  }
 }

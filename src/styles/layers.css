@@ -307,6 +307,10 @@
     }
   }
 
+  .dark--no-bg {
+    @apply bg-transparent;
+  }
+
   .scrollable {
     @apply overflow-y-auto overscroll-contain;
 
@@ -455,7 +459,6 @@
       }
     }
   }
-
   .loaded-image {
     @apply bg-lightGrey;
 
@@ -465,6 +468,10 @@
       transition-property: opacity;
       transition-duration: 400ms;
       transition-timing-function: ease-out;
+    }
+
+    .dark & {
+      @apply bg-white/5;
     }
   }
 

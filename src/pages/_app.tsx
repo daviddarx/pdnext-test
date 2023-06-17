@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import { Provider } from 'react-redux';
 import { AnimatePresence } from 'framer-motion';
 
+import { routes } from '@/routes/routes';
 import { fontText, fontTitle } from '@/utils/get-fonts';
 import { Timeout } from '@/types/Timeout';
 import store from '@/store/';
@@ -56,6 +57,19 @@ const App = ({ Component, pageProps }: AppProps) => {
       window.removeEventListener('popstate', handlePopState);
     };
   }, [router.events]);
+
+  useEffect(() => {
+    const pageSlug = pageKey.split('/')[1];
+    if (
+      pageSlug === routes.secondary.about.slug ||
+      pageSlug === routes.secondary.impressions.slug ||
+      pageSlug === 'gallery'
+    ) {
+      store.dispatch(uiActions.setDark(true));
+    } else {
+      store.dispatch(uiActions.setDark(false));
+    }
+  }, [pageKey]);
 
   return (
     <Provider store={store}>

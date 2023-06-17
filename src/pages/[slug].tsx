@@ -19,6 +19,7 @@ import ContentPage from '@/components/pages/ContentPage';
 
 type PageProps = {
   page: {
+    slug: string;
     type: string;
     title: string;
     data: ProgramContent | ContentPageContent | NewsContent | ImpressionsContent | OnsContent;
@@ -27,10 +28,11 @@ type PageProps = {
 };
 
 const Page: NextPage<PageProps> = ({ page, commonPageData }) => {
-  const { type, title, data } = page;
+  const { slug, type, title, data } = page;
+  const isDark = slug === routes.secondary.about.slug || type === routes.secondary.impressions.slug;
 
   return (
-    <Layout commonPageData={commonPageData}>
+    <Layout commonPageData={commonPageData} isDark={isDark}>
       <Metas title={title} />
       {/**
        * Forced to declaratively cast the
@@ -108,6 +110,7 @@ export const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
 
   const props: PageProps = {
     page: {
+      slug: slugString,
       type: type,
       title: route.title,
       data: data,

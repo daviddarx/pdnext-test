@@ -7,6 +7,7 @@ const NavBurger = () => {
   const dispatch = useDispatch();
   const isBurgerVisible = useSelector((state: uiStateType) => state.ui.isBurgerVisible);
   const isBurgerTextVisible = useSelector((state: uiStateType) => state.ui.isBurgerTextVisible);
+  const isDark = useSelector((state: uiStateType) => state.ui.isDark);
 
   const toggleNavigation = () => {
     dispatch(uiActions.toggleNavigation());
@@ -14,9 +15,11 @@ const NavBurger = () => {
 
   return (
     <button
-      className={`nav-burger${isBurgerVisible ? '' : ' nav-burger--hidden'}${
-        isBurgerTextVisible ? '' : ' nav-burger--no-text'
-      }`}
+      className={`
+        nav-burger
+        ${isBurgerVisible ? '' : 'nav-burger--hidden'}
+        ${isBurgerTextVisible ? '' : 'nav-burger--no-text'}
+        ${isDark ? 'nav-burger--dark' : ''}`.trim()}
       onClick={toggleNavigation}
     >
       <span className='nav-burger__text'>MENU</span>

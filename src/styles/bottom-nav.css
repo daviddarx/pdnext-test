@@ -4,6 +4,10 @@
   @screen lg {
     @apply grid grid-cols-2;
   }
+
+  .dark & {
+    @apply bg-transparent;
+  }
 }
 
 .bottom-nav__group {

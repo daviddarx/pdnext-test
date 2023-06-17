@@ -15,6 +15,10 @@
   @screen lg {
     @apply py-0;
   }
+
+  .dark & {
+    @apply border-y border-pink;
+  }
 }
 
 .content-page__nav-link {
@@ -93,7 +97,11 @@
 }
 
 .definition-list__title {
-  @apply h3 border-b border-black pb-[0.4em] mb-gutter;
+  @apply h3 border-b border-current pb-[0.4em] mb-gutter;
+
+  .dark & {
+    @apply border-pink;
+  }
 }
 
 .definition-list__dl {

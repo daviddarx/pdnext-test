@@ -8,6 +8,10 @@
 
 .page-header__subline {
   @apply block subline subline--above-title;
+
+  .dark & {
+    @apply text-pink;
+  }
 }
 
 .page-header__title {
