@@ -64,10 +64,10 @@ const App = ({ Component, pageProps }: AppProps) => {
       router.events.off('beforeHistoryChange', handleBeforeHistoryChange);
       window.removeEventListener('popstate', handlePopState);
     };
-  }, [router.events]);
+  }, [router.events, pageKey]);
 
   useEffect(() => {
-    const pageSlug = pageKey.split('/')[1];
+    const pageSlug = pageKey.split('/')[1].split('#')[0];
     if (
       pageSlug === routes.secondary.about.slug ||
       pageSlug === routes.secondary.impressions.slug ||
