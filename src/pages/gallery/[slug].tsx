@@ -57,9 +57,9 @@ const Page: NextPage<PageProps> = ({ page, commonPageData }) => {
   };
 
   const backToImpressions = (e: React.MouseEvent) => {
-    const scrollPosition = window.scrollY;
-
     router.back();
+
+    e.preventDefault();
   };
 
   return (

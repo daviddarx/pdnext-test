@@ -29,6 +29,14 @@ const App = ({ Component, pageProps }: AppProps) => {
     };
 
     const handlePopState = () => {
+      /**
+       * Stop process for program pages, which interfer and trigger
+       * a popstate event because of the hash-change.
+       */
+      if (pageKey.includes(routes.main.festival.slug) || pageKey.includes(routes.main.ons.slug)) {
+        return;
+      }
+
       if (backScrollTimeout.current) {
         clearTimeout(backScrollTimeout.current);
       }
