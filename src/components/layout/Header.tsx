@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { uiActions } from '@/store';
 import { CommonPageData } from '@/utils/fetch-common-page-content';
 
+import ActiveLink from '@/components/ui/ActiveLink';
 import SaveTheDate from '@/components/layout/SaveTheDate';
 import SpecialAnnouncement from '@/components/layout/SpecialAnnouncement';
 import PornyLogo from '@/components/logos/PornyLogo';
@@ -87,10 +88,10 @@ const Header: React.FC<Props> = ({ commonPageData }) => {
         </div>
       )}
 
-      <Link href='/festival-program' className='header__logo-link'>
+      <ActiveLink href='/festival-program' className='header__logo-link'>
         <h2 className='hidden'>Porny Days – Film Kunst Festival Zürich</h2>
         <PornyLogo className='header__logo' />
-      </Link>
+      </ActiveLink>
     </header>
   );
 };

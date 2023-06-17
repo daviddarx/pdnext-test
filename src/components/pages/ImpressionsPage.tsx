@@ -6,6 +6,8 @@ import { ImpressionsContent } from '@/utils/fetch-impressions-content';
 
 import PageHeader from '@/components/layout/PageHeader';
 import LoadedImage from '@/components/ui/LoadedImage';
+import ActiveLink from '@/components/ui/ActiveLink';
+
 type Props = {
   data: ImpressionsContent;
 };
@@ -35,7 +37,7 @@ const ImpressionsPage: React.FC<Props> = ({ data }) => {
       <div className='impressions-page__impressions'>
         {data.impressions.map((item) => (
           <article key={item.date + item.title} className='impression'>
-            <Link href={item.link} onClick={checkIfGalleryLink} className='impression__link'>
+            <ActiveLink href={item.link} onClick={checkIfGalleryLink} className='impression__link'>
               <div className='impression__image'>
                 <LoadedImage
                   src={item.image}
@@ -50,7 +52,7 @@ const ImpressionsPage: React.FC<Props> = ({ data }) => {
                 </span>
                 <h2 className='impression__title'>{item.titleFormated}</h2>
               </div>
-            </Link>
+            </ActiveLink>
           </article>
         ))}
       </div>
