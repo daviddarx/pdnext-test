@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import { Provider } from 'react-redux';
 import { AnimatePresence } from 'framer-motion';
+import { detect } from 'detect-browser';
 
 import { routes } from '@/routes/routes';
 import { fontText, fontTitle } from '@/utils/get-fonts';
@@ -86,7 +87,18 @@ const App = ({ Component, pageProps }: AppProps) => {
   }, [router, router.events, pageKey]);
 
   useEffect(() => {
-    console.log('mounted');
+    const browser = detect();
+    let os = '';
+
+    if (browser && browser.os) {
+      if (browser.os.indexOf('Windows') > -1) {
+        os = 'windows';
+      } else if (browser?.os.indexOf('Mac') > -1) {
+        os = 'mac';
+      }
+      document.body.classList.add(browser.name);
+      document.body.classList.add(os);
+    }
   });
 
   return (
