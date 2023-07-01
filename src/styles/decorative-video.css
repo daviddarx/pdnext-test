@@ -3,7 +3,7 @@
 }
 
 .decorative-video__mute-button {
-  @apply absolute inset-0;
+  @apply absolute inset-0 w-full;
 }
 
 .decorative-video__mute-icon {

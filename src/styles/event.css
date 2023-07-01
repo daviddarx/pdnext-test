@@ -47,5 +47,5 @@
 }
 
 .event__btn {
-  @apply absolute inset-0 text-[transparent];
+  @apply absolute inset-0 w-full text-[transparent];
 }

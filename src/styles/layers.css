@@ -189,7 +189,7 @@
       &::before {
         content: '';
 
-        @apply absolute left-0 top-[0.7em] w-[1em] h-px bg-current;
+        @apply absolute left-0 top-[0.85em] w-[1em] h-px bg-current;
       }
     }
 
