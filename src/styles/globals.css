@@ -79,6 +79,11 @@
     --h-logo: 6vw;
     --content-page-px-col: 20%;
   }
+
+  @screen 3xl {
+    --font-s: 0.8vw;
+    --content-page-px-col: 25%;
+  }
 }
 
 body {

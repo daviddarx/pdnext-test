@@ -174,7 +174,7 @@
     }
 
     p {
-      @apply mb-[1em];
+      @apply mb-[1em] max-w-[45em];
     }
 
     ul {
