@@ -10,7 +10,7 @@ type Props = {
 const NavButton: React.FC<Props> = ({
   className = '',
   onClick,
-  renderAsDiv = true,
+  renderAsDiv = false,
   isPrev = false,
 }) => {
   const Component = renderAsDiv ? 'div' : 'button';

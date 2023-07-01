@@ -97,7 +97,7 @@ const Drawer: React.FC<Props> = ({ children, isOpened, onClose }) => {
                   style={{ willChange }}
                 >
                   <div className='drawer__content'>{children}</div>
-                  <CloseButton className='drawer__close' onClick={onClose} renderAsDiv={true} />
+                  <CloseButton className='drawer__close' onClick={onClose} />
                 </motion.div>
               )}
 

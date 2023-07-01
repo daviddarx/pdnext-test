@@ -6,7 +6,7 @@ type Props = {
   renderAsDiv?: boolean;
 };
 
-const CloseButton: React.FC<Props> = ({ className = '', onClick, renderAsDiv = true }) => {
+const CloseButton: React.FC<Props> = ({ className = '', onClick, renderAsDiv = false }) => {
   const Component = renderAsDiv ? 'div' : 'button';
 
   return (
