@@ -7,6 +7,7 @@ import { scrollToEvent } from '@/hooks/useScrollToEventOnPageLoad';
 
 import EventDetail from '@/components/events/EventDetail';
 import EventDetailCloseButton from '@/components/events/EventDetailCloseButton';
+import EventDetailNavigation from '@/components/events/EventDetailNavigation';
 
 type Props = {
   header: ReactNode;
@@ -83,6 +84,10 @@ const ProgramPageLayout: React.FC<Props> = ({ header, children }) => {
       >
         <EventDetailCloseButton disabled={openedEvent && isDetailInViewport} />
         <EventDetail />
+
+        <div className='program-page__mobile-detail-nav'>
+          <EventDetailNavigation currentEvent={openedEvent} />
+        </div>
       </div>
     </section>
   );

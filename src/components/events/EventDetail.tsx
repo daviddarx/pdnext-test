@@ -4,13 +4,12 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { AnimatePresence, motion } from 'framer-motion';
 
-import { getEventById } from '@/utils/set-clustered-events-prev-next';
 import eases from '@/utils/eases';
 import { uiActions } from '@/store';
 import { uiStateType } from '@/store/ui-slice';
 
+import EventDetailNavigation from '@/components/events/EventDetailNavigation';
 import Entry from '@/components/events/Entry';
-import ArrowIcon from '@/components/icons/ArrowIcon';
 
 const transition = {
   duration: 0.35,
@@ -55,21 +54,6 @@ const EventDetail = () => {
   useEffect(() => {
     lastScrollTopRef.current = 0;
   }, [event]);
-
-  const switchEvent = (id: string) => {
-    const event = getEventById(id);
-
-    dispatch(uiActions.setEventSwitchDirection(event));
-
-    /**
-     * Delay to allow the EventDetail to be
-     * first updated with direction and then
-     * trigger the animation on event change.
-     * */
-    requestAnimationFrame(() => {
-      dispatch(uiActions.openEvent({ event: event, nextPrev: true }));
-    });
-  };
 
   return (
     <AnimatePresence mode='popLayout'>
@@ -165,30 +149,7 @@ const EventDetail = () => {
           )}
 
           <div className='event-detail__nav'>
-            {event.prevId && (
-              <button
-                onClick={switchEvent.bind(null, event.prevId)}
-                className='event-detail__nav-button event-detail__nav-button--prev'
-              >
-                <span className='event-detail__nav-subline'>
-                  <ArrowIcon className='event-detail__nav-icon' />
-                  <span>Davor</span>
-                </span>
-                <span className='event-detail__nav-title'>{event.prevTitle}</span>
-              </button>
-            )}
-            {event.nextId && (
-              <button
-                onClick={switchEvent.bind(null, event.nextId)}
-                className='event-detail__nav-button event-detail__nav-button--next'
-              >
-                <span className='event-detail__nav-subline'>
-                  <span className='xl:order-2'>Danach</span>
-                  <ArrowIcon className='event-detail__nav-icon' />
-                </span>
-                <span className='event-detail__nav-title'>{event.nextTitle}</span>
-              </button>
-            )}
+            <EventDetailNavigation currentEvent={event} />
           </div>
         </motion.article>
       )}

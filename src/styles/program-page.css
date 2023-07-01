@@ -59,3 +59,8 @@
 .program-page__close--disabled {
   @apply scale-0 rotate-90 pointer-events-none;
 }
+
+.program-page__mobile-detail-nav {
+  @apply fixed bottom-0 w-full;
+  @apply xl:hidden;
+}
