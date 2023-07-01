@@ -514,4 +514,13 @@
   [type='submit'] {
     @apply tag tag--inverted cursor-pointer;
   }
+
+  .cookie-banner {
+    @apply fixed right-gutter bottom-gutter p-[0.25em] pl-[1em];
+    @apply bg-white border border-black rounded-full;
+  }
+
+  .cookie-banner__content {
+    @apply flex items-center gap-gutter-1/2 text-sm;
+  }
 }
