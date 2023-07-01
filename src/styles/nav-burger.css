@@ -41,10 +41,13 @@
 
 .nav-burger__hand {
   @apply absolute -inset-px rounded-full overflow-hidden;
+  transform: translateZ(0);
 
   svg {
     @apply w-full h-full fill-pink;
     @apply transition-transform ease-in-quart;
+
+    will-change: transform;
 
     @media (hover: hover) {
       .nav-burger:hover & {
