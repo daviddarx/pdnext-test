@@ -33,7 +33,7 @@
 }
 
 .main-nav__link-text {
-  @apply block h2 font-semibold mb-[0.1em];
+  @apply block h2 font-semibold;
 }
 
 .main-nav__link-detail {
