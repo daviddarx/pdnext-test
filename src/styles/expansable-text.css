@@ -12,6 +12,10 @@
 
 .expandable-text__copy {
   @apply bg-white pt-gutter pb-gutter-2 pr-gutter-2;
+
+  .dark & {
+    @apply bg-black;
+  }
 }
 
 .expandable-text__close {
