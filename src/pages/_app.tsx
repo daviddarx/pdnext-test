@@ -85,6 +85,10 @@ const App = ({ Component, pageProps }: AppProps) => {
     };
   }, [router, router.events, pageKey]);
 
+  useEffect(() => {
+    console.log('mounted');
+  });
+
   return (
     <Provider store={store}>
       <div className={`${fontText.className} ${fontTitle.variable}`}>
