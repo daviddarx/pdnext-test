@@ -63,18 +63,6 @@ const App = ({ Component, pageProps }: AppProps) => {
     router.events.on('beforeHistoryChange', handleBeforeHistoryChange);
     window.addEventListener('popstate', handlePopState);
 
-    return () => {
-      router.events.off('routeChangeStart', handleRouteChangeStart);
-      router.events.off('beforeHistoryChange', handleBeforeHistoryChange);
-      router.beforePopState((state) => {
-        state.options.scroll = false;
-        return true;
-      });
-      window.removeEventListener('popstate', handlePopState);
-    };
-  }, [router, router.events, pageKey]);
-
-  useEffect(() => {
     const pageSlug = pageKey.split('/')[1].split('#')[0];
     if (
       pageSlug === routes.secondary.about.slug ||
@@ -85,7 +73,17 @@ const App = ({ Component, pageProps }: AppProps) => {
     } else {
       store.dispatch(uiActions.setDark(false));
     }
-  }, [pageKey]);
+
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChangeStart);
+      router.events.off('beforeHistoryChange', handleBeforeHistoryChange);
+      router.beforePopState((state) => {
+        state.options.scroll = false;
+        return true;
+      });
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, [router, router.events, pageKey]);
 
   return (
     <Provider store={store}>
