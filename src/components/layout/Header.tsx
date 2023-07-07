@@ -1,6 +1,5 @@
 import React, { useRef, useEffect, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
-import { debounce } from 'lodash-es';
 
 import { uiActions } from '@/store';
 import { CommonPageData } from '@/utils/fetch-common-page-content';
@@ -26,7 +25,7 @@ const Header: React.FC<Props> = ({ commonPageData }) => {
   const hasSaveTheDate = commonPageData.saveTheDateData.title.trim().length > 0;
 
   const handleScroll = useCallback(() => {
-    const currentScrollTop = window.scrollY;
+    const currentScrollTop = Math.max(window.scrollY, 0);
 
     if (currentScrollTop > lastScrollTopRef.current) {
       dispatch(uiActions.setBurgerVisibility(false));
@@ -55,8 +54,6 @@ const Header: React.FC<Props> = ({ commonPageData }) => {
     }
   }, [dispatch]);
 
-  const debounceHandleScroll = debounce(handleScroll, 50);
-
   const handleResize = useCallback(() => {
     if (topBarRef.current) {
       topbarHeight.current = topBarRef.current.offsetHeight;
@@ -67,7 +64,7 @@ const Header: React.FC<Props> = ({ commonPageData }) => {
 
   useEffect(() => {
     window.addEventListener('resize', handleResize);
-    window.addEventListener('scroll', debounceHandleScroll, { passive: true });
+    window.addEventListener('scroll', handleScroll, { passive: true });
     handleResize();
     handleScroll();
 
@@ -75,9 +72,9 @@ const Header: React.FC<Props> = ({ commonPageData }) => {
 
     return () => {
       window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', debounceHandleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
-  }, [handleResize, handleScroll, dispatch, debounceHandleScroll]);
+  }, [handleResize, handleScroll, dispatch]);
 
   return (
     <header className='header'>

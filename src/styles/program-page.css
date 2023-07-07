@@ -50,6 +50,8 @@
   @apply transform-3d transition-transform duration-500 ease-out-back;
 
   --tw-translate-y: var(--height-topbar);
+  --tw-translate-z: 0;
+  will-change: transform;
 }
 
 .program-page__close--nav-opened {
