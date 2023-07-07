@@ -30,7 +30,7 @@ const Event = ({ event, dateVisible = false }: Props) => {
   return (
     <article
       data-id={event.id}
-      className={`event${openedEvent?.title === event.title ? ' event--active' : ''}`}
+      className={`event${openedEvent?.id === event.id ? ' event--active' : ''}`}
     >
       <div className={`${dateVisible ? '' : 'event__cols'}`}>
         {!dateVisible && <div className='event__hour'>{event.date.hour}</div>}
