@@ -1,19 +1,18 @@
 .nav-burger {
   @apply fixed z-20 right-gutter top-gutter;
-  @apply block bg-black border border-pink rounded-full;
-  @apply transition-transform duration-500 ease-out-back;
+  @apply bg-black border border-pink rounded-full;
+  @apply transform-3d transition-transform duration-500 ease-out-back;
 
   width: var(--size-burger);
   height: var(--size-burger);
 
-  transform: translate3d(0, var(--height-topbar), 0);
-  will-change: transform;
+  --tw-translate-y: var(--height-topbar);
 }
 
 .nav-burger--hidden {
   @apply duration-300 ease-in-quart;
 
-  transform: translate3d(0, calc((var(--size-burger) + var(--gutter)) * -1), 0);
+  --tw-translate-y: calc((var(--size-burger) + var(--gutter)) * -1);
 }
 
 .nav-burger__text {
