@@ -88,16 +88,17 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   useEffect(() => {
     const browser = detect();
-    let os = '';
 
     if (browser && browser.os) {
-      if (browser.os.indexOf('Windows') > -1) {
+      let os = browser.os as string;
+
+      if (os.indexOf('Windows') > -1) {
         os = 'windows';
-      } else if (browser?.os.indexOf('Mac') > -1) {
+      } else if (browser.os.indexOf('Mac') > -1) {
         os = 'mac';
       }
-      document.body.classList.add(browser.name);
       document.body.classList.add(os);
+      document.body.classList.add(browser.name);
     }
   });
 
