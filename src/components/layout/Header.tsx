@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useCallback } from 'react';
-import Link from 'next/link';
 import { useDispatch } from 'react-redux';
+import { debounce } from 'lodash-es';
 
 import { uiActions } from '@/store';
 import { CommonPageData } from '@/utils/fetch-common-page-content';
@@ -55,6 +55,8 @@ const Header: React.FC<Props> = ({ commonPageData }) => {
     }
   }, [dispatch]);
 
+  const debounceHandleScroll = debounce(handleScroll, 50);
+
   const handleResize = useCallback(() => {
     if (topBarRef.current) {
       topbarHeight.current = topBarRef.current.offsetHeight;
@@ -65,7 +67,7 @@ const Header: React.FC<Props> = ({ commonPageData }) => {
 
   useEffect(() => {
     window.addEventListener('resize', handleResize);
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('scroll', debounceHandleScroll, { passive: true });
     handleResize();
     handleScroll();
 
@@ -73,9 +75,9 @@ const Header: React.FC<Props> = ({ commonPageData }) => {
 
     return () => {
       window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', debounceHandleScroll);
     };
-  }, [handleResize, handleScroll, dispatch]);
+  }, [handleResize, handleScroll, dispatch, debounceHandleScroll]);
 
   return (
     <header className='header'>
