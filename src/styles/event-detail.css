@@ -87,11 +87,11 @@
 }
 
 .event-detail__entries {
-  @apply mt-gutter-2 space-y-gutter;
+  @apply mt-gutter-2 space-y-gutter max-xl:pb-[30vh];
 }
 
 .event-detail__nav {
-  @apply mt-gutter-2;
+  @apply mt-gutter-2 hidden xl:block;
 }
 
 /* PREV/NEXT NAV */
