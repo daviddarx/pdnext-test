@@ -58,6 +58,10 @@
 
 .content-slot__title {
   @apply mb-[0.7em];
+
+  @screen max-sm {
+    @apply hyphens-auto;
+  }
 }
 
 .content-slot__image {
