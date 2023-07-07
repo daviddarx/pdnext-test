@@ -21,6 +21,7 @@ const Metas = ({ title }: Props) => {
       <meta property='og:image:type' content='image/jpeg' />
       <meta property='og:image:width' content='1200' />
       <meta property='og:image:height' content='630' />
+      <meta name='format-detection' content='telephone=no' />
     </Head>
   );
 };
