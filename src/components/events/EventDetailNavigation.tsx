@@ -1,13 +1,34 @@
-import { Fragment } from 'react';
 import { useDispatch } from 'react-redux';
+import { AnimatePresence, motion } from 'framer-motion';
 
 import { uiActions } from '@/store';
+import eases from '@/utils/eases';
 import { FormatedEvent } from '@/types/FormatedEvent';
 import { getEventById } from '@/utils/set-clustered-events-prev-next';
 import ArrowIcon from '@/components/icons/ArrowIcon';
 
 type Props = {
   currentEvent: FormatedEvent | undefined;
+};
+
+const motionVariants = {
+  initial: {
+    transform: 'translate3d(0, 100%, 0)',
+  },
+  animate: {
+    transform: 'translate3d(0, 0, 0)',
+    transition: {
+      duration: 0.5,
+      ease: eases.outQuart,
+    },
+  },
+  exit: {
+    transform: 'translate3d(0, 100%, 0)',
+    transition: {
+      duration: 0.25,
+      ease: eases.inQuart,
+    },
+  },
 };
 
 const EventDetailNavigation = ({ currentEvent }: Props) => {
@@ -29,9 +50,16 @@ const EventDetailNavigation = ({ currentEvent }: Props) => {
   };
 
   return (
-    <Fragment>
+    <AnimatePresence>
       {currentEvent && (
-        <div className='event-detail-nav'>
+        <motion.div
+          key='nav'
+          className='event-detail-nav'
+          initial='initial'
+          animate='animate'
+          exit='exit'
+          variants={motionVariants}
+        >
           {currentEvent.prevId && (
             <button
               onClick={switchEvent.bind(null, currentEvent.prevId)}
@@ -56,9 +84,9 @@ const EventDetailNavigation = ({ currentEvent }: Props) => {
               <span className='event-detail-nav__title'>{currentEvent.nextTitle}</span>
             </button>
           )}
-        </div>
+        </motion.div>
       )}
-    </Fragment>
+    </AnimatePresence>
   );
 };
 
