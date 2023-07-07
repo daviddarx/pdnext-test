@@ -47,13 +47,18 @@
 .program-page__close {
   @apply fixed z-20 right-gutter top-gutter;
   @apply bg-white;
-  @apply transform-3d transition-transform duration-500 ease-out-back;
+  @apply transition-transform duration-500 ease-out-back;
 
-  --tw-translate-y: var(--height-topbar);
+  transform: translate3d(0, var(--height-topbar), 0);
+  will-change: transform;
 }
 
 .program-page__close--nav-opened {
-  --tw-translate-y: calc(var(--height-topbar) + var(--size-burger) + var(--gutter) * 0.5);
+  transform: translate3d(
+    0,
+    calc(var(--height-topbar) + var(--size-burger) + var(--gutter) * 0.5),
+    0
+  );
 }
 
 .program-page__close--disabled {
