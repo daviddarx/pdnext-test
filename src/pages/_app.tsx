@@ -91,15 +91,27 @@ const App = ({ Component, pageProps }: AppProps) => {
     const browser = detect();
 
     if (browser && browser.os) {
-      let os = browser.os as string;
+      let os = browser.os.replace(/\s+/g, '') as string;
 
       if (os.indexOf('Windows') > -1) {
         os = 'windows';
       } else if (browser.os.indexOf('Mac') > -1) {
         os = 'mac';
+      } else if (browser.os.indexOf('iOS') > -1) {
+        os = 'ios';
+      } else if (browser.os.indexOf('Android') > -1) {
+        os = 'android';
       }
+
       document.body.classList.add(os);
       document.body.classList.add(browser.name);
+
+      store.dispatch(
+        uiActions.setSystem({
+          os: os,
+          browser: browser.name,
+        }),
+      );
     }
   });
 

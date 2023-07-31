@@ -12,6 +12,10 @@ export interface uiStateType {
     eventSwitchDirection: 'prev' | 'next';
     openedVideo: string | undefined;
     isDark: boolean;
+    system: {
+      os: string;
+      browser: string;
+    };
   };
 }
 
@@ -27,6 +31,10 @@ export const uiSlice = createSlice({
     eventSwitchDirection: 'next',
     openedVideo: undefined,
     isDark: false,
+    system: {
+      os: '',
+      browser: '',
+    },
   },
   reducers: {
     openEvent: (state, action) => {
@@ -78,6 +86,9 @@ export const uiSlice = createSlice({
     },
     setDark: (state, action) => {
       state.isDark = action.payload;
+    },
+    setSystem: (state, action) => {
+      state.system = action.payload;
     },
   },
 });
