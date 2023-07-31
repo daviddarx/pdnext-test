@@ -67,14 +67,10 @@ const CookieBanner = () => {
         >
           <div className='cookie-banner__content text-content'>
             <span>This website uses cookies. </span>
-            <ActiveLink
-              className='footer__link'
-              activeClassName='footer__link--active'
-              href={'/' + routes.footer.cookies.slug}
-            >
+            <ActiveLink className='cookie-banner__link' href={'/' + routes.footer.cookies.slug}>
               {routes.footer.cookies.title}
             </ActiveLink>
-            <button className='tag tag--inverted' onClick={handleAccept}>
+            <button className='cookie-banner__button tag tag--inverted' onClick={handleAccept}>
               Accept
             </button>
           </div>

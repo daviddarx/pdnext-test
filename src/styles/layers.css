@@ -513,11 +513,25 @@
   }
 
   .cookie-banner {
-    @apply fixed right-gutter bottom-gutter p-[0.25em] pl-[1em];
-    @apply bg-white border border-black rounded-full;
+    @apply fixed left-gutter-1/2 right-gutter-1/2 bottom-gutter-1/2 p-gutter;
+    @apply rounded-2xl bg-white border border-black;
+
+    @screen sm {
+      @apply left-auto rounded-full p-[0.25em] pl-[1em];
+    }
   }
 
   .cookie-banner__content {
-    @apply flex items-center gap-gutter-1/2 text-sm;
+    @apply text-sm;
+
+    @screen sm {
+      @apply flex items-center gap-gutter-1/2;
+    }
+  }
+
+  .cookie-banner__button {
+    @screen max-sm {
+      @apply mt-[0.5em];
+    }
   }
 }
