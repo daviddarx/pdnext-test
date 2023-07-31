@@ -1,6 +1,7 @@
 import { ReactNode, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { motion } from 'framer-motion';
+import classNames from 'classnames';
 
 import eases from '@/utils/eases';
 import { CommonPageData } from '@/utils/fetch-common-page-content';
@@ -55,7 +56,9 @@ const Layout: React.FC<Props> = ({ children, isDark = false, commonPageData }) =
       animate='animate'
       exit='exit'
       variants={motionVariants}
-      className={isDark ? 'dark dark--no-bg' : ''}
+      className={classNames({
+        'dark dark--no-bg': isDark,
+      })}
     >
       <Header commonPageData={commonPageData} />
       <main>{children}</main>

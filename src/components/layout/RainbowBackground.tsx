@@ -1,5 +1,7 @@
 import { useEffect, useCallback, useRef } from 'react';
 import { useSelector } from 'react-redux';
+import classNames from 'classnames';
+
 import { uiStateType } from '@/store/ui-slice';
 
 // CREDITS: https://codepen.io/tmrDevelops/pen/vOPZBv
@@ -66,7 +68,11 @@ const RainbowBackground = () => {
   }, [init, destroy]);
 
   return (
-    <div className={`rainbow-background ${isDark ? 'rainbow-background--dark' : ''}`.trim()}>
+    <div
+      className={classNames('rainbow-background', {
+        'rainbow-background--dark': isDark,
+      })}
+    >
       <canvas
         ref={canvasRef}
         id='rainbow-background'

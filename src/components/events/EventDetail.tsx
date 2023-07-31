@@ -141,7 +141,7 @@ const EventDetail = () => {
           </div>
 
           {event.entries && (
-            <div className='event-detail__entries '>
+            <div className='event-detail__entries'>
               {event.entriesObjects.map((entry) => (
                 <Entry key={entry.uuid} entry={entry} />
               ))}

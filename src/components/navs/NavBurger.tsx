@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
+import classNames from 'classnames';
 
 import { uiActions } from '@/store/';
 import { uiStateType } from '@/store/ui-slice';
@@ -15,11 +16,11 @@ const NavBurger = () => {
 
   return (
     <button
-      className={`
-        nav-burger
-        ${isBurgerVisible ? '' : 'nav-burger--hidden'}
-        ${isBurgerTextVisible ? '' : 'nav-burger--no-text'}
-        ${isDark ? 'nav-burger--dark' : ''}`.trim()}
+      className={classNames('nav-burger', {
+        'nav-burger--hidden': !isBurgerVisible,
+        'nav-burger--no-text': !isBurgerTextVisible,
+        'nav-burger--dark': isDark,
+      })}
       onClick={toggleNavigation}
     >
       <span className='nav-burger__text'>MENU</span>

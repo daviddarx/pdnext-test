@@ -1,5 +1,6 @@
 import { ReactNode, useRef, useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import classNames from 'classnames';
 
 import { uiStateType } from '@/store/ui-slice';
 import { uiActions } from '@/store';
@@ -77,9 +78,9 @@ const ProgramPageLayout: React.FC<Props> = ({ header, children }) => {
         {children}
       </div>
       <div
-        className={`program-page__detail${
-          openedEvent !== undefined ? ' program-page__detail--opened' : ''
-        }`}
+        className={classNames('program-page__detail', {
+          'program-page__detail--opened': openedEvent !== undefined,
+        })}
         ref={detailRef}
       >
         <EventDetailCloseButton disabled={openedEvent && isDetailInViewport} />

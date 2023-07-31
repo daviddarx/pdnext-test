@@ -1,6 +1,7 @@
 import { ReactNode, useRef, useEffect, useState, Fragment } from 'react';
 import { Portal } from 'react-portal';
 import { motion, AnimatePresence, useWillChange } from 'framer-motion';
+import classNames from 'classnames';
 
 import { fontText, fontTitle } from '@/utils/get-fonts';
 import eases from '@/utils/eases';
@@ -81,7 +82,7 @@ const Drawer: React.FC<Props> = ({ children, isOpened, onClose }) => {
       {isMounted && (
         <Portal>
           <div
-            className={`drawer ${fontText.className} ${fontTitle.variable}`}
+            className={classNames('drawer', fontText.className, fontTitle.variable)}
             onKeyDown={handleKeyDown}
           >
             <AnimatePresence>

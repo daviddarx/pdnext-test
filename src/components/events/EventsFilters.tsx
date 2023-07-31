@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import classNames from 'classnames';
 
 import eases from '@/utils/eases';
 
@@ -45,9 +46,9 @@ const EventsFilters: React.FC<Props> = (props) => {
         {props.typeFilters.map((filter) => (
           <button
             key={filter}
-            className={`events-filters__filter tag${
-              props.currentType === filter ? ' tag--active' : ''
-            }`}
+            className={classNames('events-filters__filter tag', {
+              'tag--active': props.currentType === filter,
+            })}
             onClick={props.onFilterByType.bind(null, filter)}
           >
             {filter}
@@ -68,9 +69,9 @@ const EventsFilters: React.FC<Props> = (props) => {
               {props.dateFilters.map((filter) => (
                 <button
                   key={filter}
-                  className={`events-filters__filter tag${
-                    props.currentDate === filter ? ' tag--active' : ''
-                  }`}
+                  className={classNames('events-filters__filter tag', {
+                    'tag--active': props.currentDate === filter,
+                  })}
                   onClick={props.onFilterByDate.bind(null, filter)}
                 >
                   {filter}

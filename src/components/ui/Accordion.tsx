@@ -1,5 +1,6 @@
 import { ReactNode, useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import classNames from 'classnames';
 
 import eases from '@/utils/eases';
 
@@ -52,7 +53,7 @@ const Accordion: React.FC<Props> = ({
   };
 
   return (
-    <section className={`accordion ${className ? className : ''} ${isOpened ? 'is-opened' : ''}`}>
+    <section className={classNames('accordion', { 'is-opened': isOpened }, className)}>
       <header className='accordion__header'>
         <button className='accordion__button' onClick={toggleOpened}>
           {header}

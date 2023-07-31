@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import classNames from 'classnames';
 
 import { EntryImage } from '@/types/Entry';
 import LoadedImage from '@/components/ui/LoadedImage';
@@ -31,9 +32,10 @@ const EntryGallery: React.FC<Props> = ({ title, images }) => {
           alt={title + ' ' + i}
           width={image.imageWidth}
           height={image.imageHeight}
-          className={`entry__gallery-image ${
-            i + 1 === currentId ? 'entry__gallery-image--active' : ''
-          } ${i === images.length - 1 ? 'entry__gallery-image--last' : ''}`.trim()}
+          className={classNames('entry__gallery-image', {
+            'entry__gallery-image--active': i + 1 === currentId,
+            'entry__gallery-image--last': i === images.length - 1,
+          })}
         />
       ))}
     </div>

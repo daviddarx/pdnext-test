@@ -1,5 +1,6 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import classNames from 'classnames';
 
 type Props = {
   className?: string;
@@ -12,7 +13,13 @@ type Props = {
 const PageHeader: React.FC<Props> = ({ className = '', subline, title, lead, centered = true }) => {
   return (
     <header
-      className={`page-header ${centered ? 'page-header--centered' : ''} ${className}`.trim()}
+      className={classNames(
+        'page-header',
+        {
+          'page-header--centered': centered,
+        },
+        className,
+      )}
     >
       <h1>
         {subline && <span className='page-header__subline'>{subline}</span>}

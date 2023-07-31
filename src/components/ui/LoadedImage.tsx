@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
+import classNames from 'classnames';
 
 type Props = {
   src: string;
@@ -19,7 +20,15 @@ const LoadedImage: React.FC<Props> = ({ src, alt, width, height, className, onLo
   };
 
   return (
-    <div className={`loaded-image ${isLoaded ? 'loaded-image--loaded' : ''} ${className}`.trim()}>
+    <div
+      className={classNames(
+        'loaded-image',
+        {
+          'loaded-image--loaded': isLoaded,
+        },
+        className,
+      )}
+    >
       <Image src={src} alt={alt} width={width} height={height} onLoad={handleLoaded} />
     </div>
   );

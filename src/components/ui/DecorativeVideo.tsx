@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import classNames from 'classnames';
 
 import SoundOnIcon from '@/components/icons/SoundOnIcon';
 import SoundOffIcon from '@/components/icons/SoundOffIcon';
@@ -20,7 +21,7 @@ const DecorativeVideo: React.FC<Props> = ({ className = '', videoSettings }) => 
   };
 
   return (
-    <div className={`decorative-video ${className}`}>
+    <div className={classNames('decorative-video', className)}>
       <video
         width='100%'
         muted={isMuted}

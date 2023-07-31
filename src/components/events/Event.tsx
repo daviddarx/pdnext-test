@@ -1,4 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
+import classNames from 'classnames';
 
 import { uiActions } from '@/store';
 import { uiStateType } from '@/store/ui-slice';
@@ -30,9 +31,11 @@ const Event = ({ event, dateVisible = false }: Props) => {
   return (
     <article
       data-id={event.id}
-      className={`event${openedEvent?.id === event.id ? ' event--active' : ''}`}
+      className={classNames('event', {
+        'event--active': openedEvent?.id === event.id,
+      })}
     >
-      <div className={`${dateVisible ? '' : 'event__cols'}`}>
+      <div className={classNames({ event__cols: !dateVisible })}>
         {!dateVisible && <div className='event__hour'>{event.date.hour}</div>}
 
         <div className='event__infos'>

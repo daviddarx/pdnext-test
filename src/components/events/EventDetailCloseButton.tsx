@@ -1,4 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
+import classNames from 'classnames';
 
 import { uiStateType } from '@/store/ui-slice';
 import { uiActions } from '@/store/';
@@ -21,9 +22,10 @@ const EventDetailCloseButton: React.FC<Props> = ({ disabled }) => {
 
   return (
     <CloseButton
-      className={`program-page__close ${
-        openedEvent && disabled ? '' : 'program-page__close--disabled'
-      } ${isBurgerVisible ? 'program-page__close--nav-opened' : ''}`.trim()}
+      className={classNames('program-page__close', {
+        'program-page__close--disabled': !openedEvent && !disabled,
+        'program-page__close--nav-opened': isBurgerVisible,
+      })}
       onClick={close}
     />
   );

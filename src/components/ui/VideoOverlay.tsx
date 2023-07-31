@@ -3,6 +3,7 @@ import { Portal } from 'react-portal';
 import { useSelector, useDispatch } from 'react-redux';
 import { motion, AnimatePresence } from 'framer-motion';
 import Plyr from 'plyr';
+import classNames from 'classnames';
 
 import eases from '@/utils/eases';
 import { uiStateType } from '@/store/ui-slice';
@@ -88,7 +89,11 @@ const VideoOverlay = () => {
     <Fragment>
       {isMounted && (
         <Portal>
-          <div className={`video-overlay ${videoUrl ? 'video-overlay--active' : ''}`.trim()}>
+          <div
+            className={classNames('video-overlay', {
+              'video-overlay--active': videoUrl,
+            })}
+          >
             <AnimatePresence>
               {videoUrl && (
                 <motion.div

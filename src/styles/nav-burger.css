@@ -19,7 +19,7 @@
 
 .nav-burger__text {
   @apply absolute left-0 top-1/2 -translate-y-1/2 -translate-x-full -ml-4;
-  @apply subline pt-[0.2em];
+  @apply subline pt-[0.3em];
   @apply transition-opacity duration-300 ease-out;
 
   .nav-burger--no-text & {

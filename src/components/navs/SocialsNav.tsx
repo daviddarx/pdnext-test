@@ -1,3 +1,5 @@
+import classNames from 'classnames';
+
 const socialsNavItems = [
   {
     title: 'Facebook',
@@ -27,7 +29,7 @@ type Props = {
 
 const SocialsNav: React.FC<Props> = ({ className }) => {
   return (
-    <article className={`nav-socials ${className}`}>
+    <article className={classNames('nav-socials', className)}>
       <h3 className='hidden'>Bleiben Sie auf dem Laufenden.</h3>
       <ul>
         {socialsNavItems.map((item) => (

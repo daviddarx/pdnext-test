@@ -1,6 +1,7 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { motion } from 'framer-motion';
+import classNames from 'classnames';
 
 import eases from '@/utils/eases';
 import Accordion from '@/components/ui/Accordion';
@@ -38,7 +39,7 @@ const motionVariants = {
 const ExpansableText: React.FC<Props> = ({ className = '', title, markdown }) => {
   return (
     <Accordion
-      className={`expandable-text ${className}`}
+      className={classNames('expandable-text', className)}
       header={
         <h3 className='expandable-text__title content-page__column-left text-link'>
           <span className='align-text-v'>{title}</span>

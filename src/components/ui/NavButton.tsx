@@ -1,3 +1,5 @@
+import classNames from 'classnames';
+
 import ChevronIcon from '@/components/icons/ChevronIcon';
 
 type Props = {
@@ -17,9 +19,11 @@ const NavButton: React.FC<Props> = ({
 
   return (
     <Component
-      className={`nav-button ${
-        isPrev ? 'nav-button--prev' : 'nav-button--next'
-      } ${className}`.trim()}
+      className={classNames(
+        'nav-button',
+        isPrev ? 'nav-button--prev' : 'nav-button--next',
+        className,
+      )}
       onClick={onClick}
     >
       <ChevronIcon className='nav-button__icon' />

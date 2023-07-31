@@ -1,3 +1,5 @@
+import classNames from 'classnames';
+
 type Props = {
   className?: string;
 };
@@ -5,7 +7,7 @@ type Props = {
 const HeartIcon = ({ className }: Props) => {
   return (
     <svg
-      className={`icon ${className}`}
+      className={classNames('icon', className)}
       xmlns='http://www.w3.org/2000/svg'
       width='422.169'
       height='364.685'

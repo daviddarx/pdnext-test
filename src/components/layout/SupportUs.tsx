@@ -87,7 +87,7 @@ const SupportUs = ({ data }: Props) => {
         isOpenedExt={isSupportUsOpened}
         onToggle={onAccordionToggle}
       >
-        <div className='support-us__content '>
+        <div className='support-us__content'>
           <div className='support-us__content-container'>
             {data.map((item, index) => (
               <motion.div

@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import { Provider } from 'react-redux';
 import { AnimatePresence } from 'framer-motion';
 import { detect } from 'detect-browser';
+import classNames from 'classnames';
 
 import { routes } from '@/routes/routes';
 import { fontText, fontTitle } from '@/utils/get-fonts';
@@ -104,7 +105,7 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   return (
     <Provider store={store}>
-      <div className={`${fontText.className} ${fontTitle.variable}`}>
+      <div className={classNames(fontText.className, fontTitle.variable)}>
         <MainNavPanel />
         <NavBurger />
         <AnimatePresence mode='wait' initial={false} onExitComplete={() => window.scrollTo(0, 0)}>

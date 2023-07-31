@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import classNames from 'classnames';
+
 import eases from '@/utils/eases';
 
 const motionVariants = {
@@ -28,7 +30,9 @@ type Props = {
 const BackgroundOverlay: React.FC<Props> = ({ dark, onClick }) => {
   return (
     <motion.button
-      className={`background-overlay${dark ? ' background-overlay__dark' : ''}`}
+      className={classNames('background-overlay', {
+        'background-overlay__dark': dark,
+      })}
       initial='initial'
       animate='animate'
       exit='exit'

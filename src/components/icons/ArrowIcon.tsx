@@ -1,3 +1,5 @@
+import classNames from 'classnames';
+
 type Props = {
   className?: string;
 };
@@ -5,7 +7,7 @@ type Props = {
 const ArrowIcon: React.FC<Props> = ({ className }) => {
   return (
     <svg
-      className={`arrow-icon ${className}`.trim()}
+      className={classNames('arrow-icon', className)}
       xmlns='http://www.w3.org/2000/svg'
       fill='none'
       viewBox='0 0 23 11'
