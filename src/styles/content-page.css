@@ -117,10 +117,10 @@
 }
 
 .definition-list__dt {
-  @apply subline leading-tight mt-gutter;
+  @apply subline leading-tight mt-gutter-1.5;
 
   @screen lg {
-    @apply pt-[0.15em];
+    @apply mt-gutter pt-[0.15em];
   }
 
   @screen xl {
@@ -130,11 +130,8 @@
 
 .definition-list__dd {
   @apply pr-gutter-2;
-
-  @screen max-lg {
-    @apply pt-[0.25em];
-  }
 }
+
 .definition-list__dt,
 .definition-list__dd {
   @screen lg {
