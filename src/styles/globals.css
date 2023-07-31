@@ -82,7 +82,7 @@
   }
 
   @screen 3xl {
-    --font-s: 0.8vw;
+    --font-s: 0.9vw;
     --content-page-px-col: 25%;
   }
 }
