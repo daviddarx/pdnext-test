@@ -66,10 +66,12 @@ const CookieBanner = () => {
           variants={motionVariants}
         >
           <div className='cookie-banner__content text-content'>
-            <span>This website uses cookies. </span>
-            <ActiveLink className='cookie-banner__link' href={'/' + routes.footer.cookies.slug}>
-              {routes.footer.cookies.title}
-            </ActiveLink>
+            <span className='cookie-banner__infos'>
+              <span>This website uses cookies. </span>
+              <ActiveLink className='cookie-banner__link' href={'/' + routes.footer.cookies.slug}>
+                {routes.footer.cookies.title}
+              </ActiveLink>
+            </span>
             <button className='cookie-banner__button tag tag--inverted' onClick={handleAccept}>
               Accept
             </button>

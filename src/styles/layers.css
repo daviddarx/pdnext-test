@@ -529,9 +529,15 @@
     }
   }
 
+  .cookie-banner__infos {
+    @screen max-sm {
+      @apply block;
+    }
+  }
+
   .cookie-banner__button {
     @screen max-sm {
-      @apply inline-block mt-[0.5em];
+      @apply mt-[0.75em];
     }
   }
 }
