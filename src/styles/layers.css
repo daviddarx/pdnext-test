@@ -531,7 +531,7 @@
 
   .cookie-banner__button {
     @screen max-sm {
-      @apply mt-[0.5em];
+      @apply inline-block mt-[0.5em];
     }
   }
 }
