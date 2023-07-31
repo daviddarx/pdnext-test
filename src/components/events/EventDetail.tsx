@@ -40,7 +40,7 @@ const EventDetail = () => {
   const scrollHandler = (e: React.UIEvent<HTMLDivElement>) => {
     const target = e.target as HTMLDivElement;
 
-    const currentScrollTop = target.scrollTop;
+    const currentScrollTop = Math.max(target.scrollTop, 0);
 
     if (currentScrollTop > lastScrollTopRef.current) {
       dispatch(uiActions.setBurgerVisibility(false));
