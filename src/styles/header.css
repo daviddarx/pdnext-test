@@ -3,7 +3,7 @@
 }
 
 .header__top-bar {
-  @apply px-gutter py-[0.5em];
+  @apply px-gutter pt-[0.5em] pb-[0.8em];
   @apply bg-white text-center;
 
   @screen sm {
@@ -13,6 +13,10 @@
 
   @screen xl {
     @apply grid grid-cols-2 py-[0.8em];
+  }
+
+  .dark & {
+    @apply bg-transparent border-b;
   }
 }
 
