@@ -10,7 +10,7 @@ import { setFocusables, resetFocusables, loopFocusables } from '@/utils/get-focu
 import BackgroundOverlay from '@/components/ui/BackgroundOverlay';
 import CloseButton from '@/components/ui/CloseButton';
 
-const motionVariants = {
+const panelMotionVariants = {
   initial: {
     transform: 'translateX(100%) translateZ(0)',
   },
@@ -26,6 +26,32 @@ const motionVariants = {
     transition: {
       duration: 0.25,
       ease: eases.inOutQuart,
+    },
+  },
+};
+
+const contentMotionVariants = {
+  initial: {
+    opacity: 0,
+    transform: 'translateX(50%) translateZ(0)',
+  },
+  animate: {
+    opacity: 1,
+    transform: 'translateX(0) translateZ(0)',
+    transition: {
+      duration: 0.65,
+      ease: eases.outQuart,
+      opacity: {
+        duration: 0.65,
+        ease: eases.linear,
+      },
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      duration: 0.15,
+      ease: eases.linear,
     },
   },
 };
@@ -94,10 +120,20 @@ const Drawer: React.FC<Props> = ({ children, isOpened, onClose }) => {
                   initial='initial'
                   animate='animate'
                   exit='exit'
-                  variants={motionVariants}
+                  variants={panelMotionVariants}
                   style={{ willChange }}
                 >
-                  <div className='drawer__content'>{children}</div>
+                  <motion.div
+                    className='drawer__content'
+                    key='content'
+                    initial='initial'
+                    animate='animate'
+                    exit='exit'
+                    variants={contentMotionVariants}
+                  >
+                    {children}
+                  </motion.div>
+
                   <CloseButton className='drawer__close' onClick={onClose} />
                 </motion.div>
               )}
