@@ -38,7 +38,10 @@ export const uiSlice = createSlice({
   },
   reducers: {
     openEvent: (state, action) => {
-      window.location.hash = action.payload.event.id;
+      const params = new URLSearchParams(window.location.search);
+      params.set('e', action.payload.event.id);
+      const newUrl = `${window.location.pathname}?${params.toString()}`;
+      window.history.replaceState(null, '', newUrl);
 
       state.eventNavUsed = action.payload.nextPrev;
       state.openedEvent = action.payload.event;
@@ -52,10 +55,11 @@ export const uiSlice = createSlice({
       }
     },
     closeEvent: (state) => {
-      // use this hack because window.history & react-router.replace/push cause problems.
-      const scrollPosition = window.scrollY;
-      window.location.hash = '';
-      window.scrollTo(0, scrollPosition);
+      if (state.openedEvent) {
+        const url = new URL(window.location.href);
+        url.search = '';
+        history.replaceState({}, document.title, url.toString());
+      }
 
       state.eventSwitchDirection = 'next';
       state.openedEvent = undefined;

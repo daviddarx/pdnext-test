@@ -65,4 +65,9 @@
 .program-page__mobile-detail-nav {
   @apply fixed bottom-0 w-full;
   @apply xl:hidden;
+
+  /* Safari iOS safe area to avoid to click the space for the bottom-bar */
+  .safari.ios & {
+    bottom: env(safe-area-inset-bottom);
+  }
 }

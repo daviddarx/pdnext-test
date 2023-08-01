@@ -105,6 +105,10 @@
 
     content: '';
   }
+
+  @screen max-xl {
+    @apply bg-pink m-gutter rounded-full border overflow-hidden;
+  }
 }
 
 .event-detail-nav__button {

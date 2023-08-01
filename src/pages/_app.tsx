@@ -88,28 +88,36 @@ const App = ({ Component, pageProps }: AppProps) => {
   }, [router, router.events, pageKey]);
 
   useEffect(() => {
-    const browser = detect();
+    const detected = detect();
 
-    if (browser && browser.os) {
-      let os = browser.os.replace(/\s+/g, '') as string;
+    if (detected && detected.os && detected.name) {
+      let os = detected.os.replace(/\s+/g, '') as string;
+      let browser = detected.name.replace(/\s+/g, '') as string;
 
-      if (os.indexOf('Windows') > -1) {
+      if (detected.os.indexOf('Windows') > -1) {
         os = 'windows';
-      } else if (browser.os.indexOf('Mac') > -1) {
+      } else if (detected.os.indexOf('Mac') > -1) {
         os = 'mac';
-      } else if (browser.os.indexOf('iOS') > -1) {
+      } else if (detected.os.indexOf('iOS') > -1) {
         os = 'ios';
-      } else if (browser.os.indexOf('Android') > -1) {
+      } else if (detected.os.indexOf('Android') > -1) {
         os = 'android';
       }
 
+      const ios = /iP(ad|od|hone)/i.test(window.navigator.userAgent);
+      const safari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
+
+      if (ios && safari) {
+        browser = 'safari';
+      }
+
       document.body.classList.add(os);
-      document.body.classList.add(browser.name);
+      document.body.classList.add(browser);
 
       store.dispatch(
         uiActions.setSystem({
           os: os,
-          browser: browser.name,
+          browser: browser,
         }),
       );
     }

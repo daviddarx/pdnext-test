@@ -30,28 +30,34 @@ export function scrollToEvent(id: string) {
 const useScrollToEventOnPageLoad = (filteredEvents: ClusteredEvents[]) => {
   const dispatch = useDispatch();
 
-  const scrollToEventOnPageLoad = useCallback(() => {
-    const hashId = window.location.hash.slice(1);
-    const subArrayIndex = filteredEvents.findIndex((subArray) =>
-      subArray.events.find((event) => event.id === hashId),
-    );
-    if (subArrayIndex !== -1) {
-      const event = filteredEvents[subArrayIndex].events.find(
-        (event: FormatedEvent) => event.id === hashId,
+  const scrollToEventOnPageLoad = useCallback(
+    (eventId: string) => {
+      const subArrayIndex = filteredEvents.findIndex((subArray) =>
+        subArray.events.find((event) => event.id === eventId),
       );
+      if (subArrayIndex !== -1) {
+        const event = filteredEvents[subArrayIndex].events.find(
+          (event: FormatedEvent) => event.id === eventId,
+        );
 
-      if (event) {
-        dispatch(uiActions.openEvent({ event: event, nextPrev: false }));
+        if (event) {
+          dispatch(uiActions.openEvent({ event: event, nextPrev: false }));
 
-        scrollToEvent(hashId);
+          scrollToEvent(eventId);
+        }
       }
-    }
-  }, [dispatch, filteredEvents]);
+    },
+    [dispatch, filteredEvents],
+  );
 
   useEffect(() => {
     return () => {
-      if (window.location.hash) {
-        scrollToEventOnPageLoad();
+      const url = new URL(window.location.href);
+      const searchParams = new URLSearchParams(url.search);
+      const event = searchParams.get('e');
+
+      if (event && event !== '') {
+        scrollToEventOnPageLoad(event);
       }
     };
   }, [scrollToEventOnPageLoad]);
