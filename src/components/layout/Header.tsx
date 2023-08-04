@@ -87,7 +87,11 @@ const Header: React.FC<Props> = ({ commonPageData }) => {
         </div>
       )}
 
-      <ActiveLink href='/festival-program' className='header__logo-link'>
+      <ActiveLink
+        href='/festival-program'
+        className='header__logo-link'
+        aria-label='Zur Startseite'
+      >
         <h2 className='hidden'>Porny Days – Film Kunst Festival Zürich</h2>
         <PornyLogo className='header__logo' />
       </ActiveLink>

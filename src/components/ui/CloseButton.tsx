@@ -12,7 +12,11 @@ const CloseButton: React.FC<Props> = ({ className = '', onClick, renderAsDiv = f
   const Component = renderAsDiv ? 'div' : 'button';
 
   return (
-    <Component className={classNames('close-button is-opened', className)} onClick={onClick}>
+    <Component
+      className={classNames('close-button is-opened', className)}
+      aria-label='Schliessen'
+      onClick={onClick}
+    >
       <CloseIcon className='close-button__icon' />
       <span className='close-button__text'>Schliessen</span>
     </Component>
