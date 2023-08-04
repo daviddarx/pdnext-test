@@ -38,7 +38,7 @@
 }
 
 .event-detail__subtitle {
-  @apply font-semibold mt-gutter-3/4;
+  @apply font-semibold mt-gutter-1/4;
 }
 
 .event-detail__desc {
