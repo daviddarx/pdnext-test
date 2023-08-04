@@ -456,6 +456,7 @@
       }
     }
   }
+
   .loaded-image {
     @apply bg-lightGrey;
 
@@ -539,5 +540,11 @@
     @screen max-sm {
       @apply mt-[0.75em];
     }
+  }
+
+  /* Remove youtube overlay when video is paused. */
+  .plyr iframe[id^='youtube'] {
+    top: -50%;
+    height: 200%;
   }
 }

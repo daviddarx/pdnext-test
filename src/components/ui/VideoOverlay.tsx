@@ -2,7 +2,6 @@ import { Fragment, useState, useEffect } from 'react';
 import { Portal } from 'react-portal';
 import { useSelector, useDispatch } from 'react-redux';
 import { motion, AnimatePresence } from 'framer-motion';
-import Plyr from 'plyr';
 import classNames from 'classnames';
 
 import eases from '@/utils/eases';
@@ -10,6 +9,7 @@ import { uiStateType } from '@/store/ui-slice';
 import { uiActions } from '@/store';
 import CloseButton from '@/components/ui/CloseButton';
 import BackgroundOverlay from '@/components/ui/BackgroundOverlay';
+import VideoPlayer from '@/components/ui/VideoPlayer';
 
 const motionVariants = {
   initial: {
@@ -47,43 +47,9 @@ const VideoOverlay = () => {
     setIsMounted(true);
   }, []);
 
-  useEffect(() => {
-    if (videoUrl) {
-      const player = new Plyr('#player', {
-        controls: [
-          'play-large',
-          'play',
-          'progress',
-          'current-time',
-          'mute',
-          'volume',
-          'fullscreen',
-        ],
-        autoplay: true,
-      });
-
-      requestAnimationFrame(() => {
-        player.play();
-      });
-    }
-  }, [videoUrl]);
-
   const closeOverlay = () => {
     dispatch(uiActions.closeVideo());
   };
-
-  let videoType = 'custom';
-  let videoId = '';
-
-  if (videoUrl) {
-    if (videoUrl.indexOf('youtube') !== -1) {
-      videoType = 'youtube';
-      videoId = videoUrl.split('youtube.com/watch?v=')[1];
-    } else if (videoUrl.indexOf('vimeo') !== -1) {
-      videoType = 'vimeo';
-      videoId = videoUrl.split('vimeo.com/')[1];
-    }
-  }
 
   return (
     <Fragment>
@@ -104,18 +70,7 @@ const VideoOverlay = () => {
                   className='video-overlay__video'
                   variants={motionVariants}
                 >
-                  {videoType === 'custom' && (
-                    <video id='player' playsInline controls>
-                      <source src={videoUrl} type='video/mp4' />
-                    </video>
-                  )}
-                  {videoType !== 'custom' && (
-                    <div
-                      id='player'
-                      data-plyr-provider={videoType}
-                      data-plyr-embed-id={videoId}
-                    ></div>
-                  )}
+                  <VideoPlayer videoUrl={videoUrl} autoPlay={true} />
                 </motion.div>
               )}
 

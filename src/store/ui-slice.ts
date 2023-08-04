@@ -13,8 +13,8 @@ export interface uiStateType {
     openedVideo: string | undefined;
     isDark: boolean;
     system: {
-      os: string;
-      browser: string;
+      os: string | undefined;
+      browser: string | undefined;
     };
   };
 }
@@ -32,8 +32,8 @@ export const uiSlice = createSlice({
     openedVideo: undefined,
     isDark: false,
     system: {
-      os: '',
-      browser: '',
+      os: undefined,
+      browser: undefined,
     },
   },
   reducers: {

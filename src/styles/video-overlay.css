@@ -14,9 +14,10 @@
   width: 100vw;
 
   @media only screen and (orientation: landscape) and (max-width: 1024px) {
-    width: 100vw;
-    height: 100vh;
-    @apply flex items-center justify-center;
+    --height: 90vh;
+
+    height: var(--height);
+    width: calc(var(--height) * 16 / 9);
   }
 
   @screen lg {
