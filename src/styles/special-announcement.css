@@ -21,7 +21,7 @@
     transform: translateX(0);
   }
   50% {
-    transform: translateX(1em);
+    transform: translateX(1.5em);
   }
   100% {
     transform: translateX(0);
@@ -29,17 +29,13 @@
 }
 
 .special-announcement__btn {
+  @apply tag;
+
   @screen max-sm {
     @apply mt-[0.5em] !text-xs;
   }
 
-  @screen max-xl {
-    @apply tag;
-  }
-
   @screen xl {
-    @apply text-link;
-
     animation: btnAnimation 2s infinite;
   }
 }

@@ -21,7 +21,7 @@
 }
 
 .header__top-bar-title {
-  @apply subline align-title-font-v;
+  @apply subline;
 }
 
 .header__logo-link {
