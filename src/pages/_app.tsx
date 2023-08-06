@@ -50,7 +50,6 @@ const App = ({ Component, pageProps }: AppProps) => {
 
     router.events.on('routeChangeStart', handleRouteChangeStart);
     router.events.on('beforeHistoryChange', handleBeforeHistoryChange);
-    console.log('test beforepostate');
     router.beforePopState((state) => {
       /**
        * Deactive Next's scroll restoration on back/popstate navigation.
