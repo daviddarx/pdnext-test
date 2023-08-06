@@ -97,7 +97,7 @@ const EventDetail = () => {
 
           <div className='event-detail__infos'>
             <div className='event-detail__info'>
-              <h5 className='event-detail__info-title'>Ort:</h5>
+              <h3 className='event-detail__info-title h5'>Ort:</h3>
               <div>
                 <a href={event.eventlocationlink} target='_blank'>
                   {event.eventlocation}
@@ -108,7 +108,7 @@ const EventDetail = () => {
 
             {event.timetable?.length !== 0 && (
               <div className='event-detail__info'>
-                <h5 className='event-detail__info-title'>Timetable: </h5>
+                <h3 className='event-detail__info-title h5'>Timetable: </h3>
                 <ul>
                   {event.timetable?.map((item) => (
                     <li key={item.title + item.time}>
@@ -122,7 +122,7 @@ const EventDetail = () => {
 
             {event.price && (
               <div className='event-detail__info'>
-                <h5 className='event-detail__info-title'>Preis</h5>
+                <h3 className='event-detail__info-title h5'>Preis</h3>
                 <ReactMarkdown remarkPlugins={[remarkGfm]}>{event.price}</ReactMarkdown>
               </div>
             )}
