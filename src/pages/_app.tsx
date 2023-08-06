@@ -50,6 +50,14 @@ const App = ({ Component, pageProps }: AppProps) => {
 
     router.events.on('routeChangeStart', handleRouteChangeStart);
     router.events.on('beforeHistoryChange', handleBeforeHistoryChange);
+    console.log('test beforepostate');
+    router.beforePopState((state) => {
+      /**
+       * Deactive Next's scroll restoration on back/popstate navigation.
+       */
+      state.options.scroll = false;
+      return true;
+    });
     window.addEventListener('popstate', handlePopState);
     /**
      * Deactivate completely the scroll restoration
@@ -72,14 +80,6 @@ const App = ({ Component, pageProps }: AppProps) => {
     return () => {
       router.events.off('routeChangeStart', handleRouteChangeStart);
       router.events.off('beforeHistoryChange', handleBeforeHistoryChange);
-      console.log('test beforepostate');
-      router.beforePopState((state) => {
-        /**
-         * Deactive Next's scroll restoration on back/popstate navigation.
-         */
-        state.options.scroll = false;
-        return true;
-      });
       window.removeEventListener('popstate', handlePopState);
     };
   }, [router, router.events, pageKey]);
