@@ -56,7 +56,6 @@ const useScrollToEventOnPageLoad = (filteredEvents: ClusteredEvents[]) => {
     const event = searchParams.get('e');
 
     if (event && event !== '') {
-      console.log('event detected', event);
       scrollToEventOnPageLoad(event);
     }
   }, [scrollToEventOnPageLoad]);
