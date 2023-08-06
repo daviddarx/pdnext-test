@@ -51,15 +51,14 @@ const useScrollToEventOnPageLoad = (filteredEvents: ClusteredEvents[]) => {
   );
 
   useEffect(() => {
-    return () => {
-      const url = new URL(window.location.href);
-      const searchParams = new URLSearchParams(url.search);
-      const event = searchParams.get('e');
+    const url = new URL(window.location.href);
+    const searchParams = new URLSearchParams(url.search);
+    const event = searchParams.get('e');
 
-      if (event && event !== '') {
-        scrollToEventOnPageLoad(event);
-      }
-    };
+    if (event && event !== '') {
+      console.log('event detected', event);
+      scrollToEventOnPageLoad(event);
+    }
   }, [scrollToEventOnPageLoad]);
 };
 
