@@ -1,12 +1,14 @@
-import { Fragment, useState, useEffect } from 'react';
+import { Fragment, useState, useEffect, useRef } from 'react';
 import { Portal } from 'react-portal';
 import { useSelector, useDispatch } from 'react-redux';
 import { motion, AnimatePresence } from 'framer-motion';
 import classNames from 'classnames';
 
 import eases from '@/utils/eases';
+import { setFocusables, resetFocusables, loopFocusables } from '@/utils/get-focusables';
 import { uiStateType } from '@/store/ui-slice';
 import { uiActions } from '@/store';
+
 import CloseButton from '@/components/ui/CloseButton';
 import BackgroundOverlay from '@/components/ui/BackgroundOverlay';
 import VideoPlayer from '@/components/ui/VideoPlayer';
@@ -35,6 +37,7 @@ const motionVariants = {
 };
 
 const VideoOverlay = () => {
+  const videoOverlayRef = useRef<HTMLDivElement>(null);
   const [isMounted, setIsMounted] = useState(false);
   const dispatch = useDispatch();
   const videoUrl = useSelector((state: uiStateType) => state.ui.openedVideo);
@@ -46,6 +49,33 @@ const VideoOverlay = () => {
      */
     setIsMounted(true);
   }, []);
+
+  useEffect(() => {
+    let currentActiveAtOpen: HTMLElement;
+
+    if (videoUrl) {
+      currentActiveAtOpen = document.activeElement as HTMLElement;
+
+      if (videoOverlayRef.current) {
+        setFocusables(videoOverlayRef.current);
+      }
+    }
+
+    return () => {
+      if (videoUrl) {
+        resetFocusables();
+        currentActiveAtOpen?.focus?.();
+      }
+    };
+  }, [videoUrl]);
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    loopFocusables(e);
+
+    if (e.key === 'Escape' || e.key === 'Esc') {
+      closeOverlay();
+    }
+  };
 
   const closeOverlay = () => {
     dispatch(uiActions.closeVideo());
@@ -59,6 +89,8 @@ const VideoOverlay = () => {
             className={classNames('video-overlay', {
               'video-overlay--active': videoUrl,
             })}
+            ref={videoOverlayRef}
+            onKeyDown={handleKeyDown}
           >
             <AnimatePresence>
               {videoUrl && (
