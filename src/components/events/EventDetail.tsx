@@ -98,7 +98,7 @@ const EventDetail = () => {
           <div className='event-detail__infos'>
             <div className='event-detail__info'>
               <h3 className='event-detail__info-title h5'>Ort:</h3>
-              <div>
+              <div className='text-content'>
                 <a href={event.eventlocationlink} target='_blank'>
                   {event.eventlocation}
                 </a>{' '}
