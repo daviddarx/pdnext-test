@@ -10,7 +10,10 @@ export const getFocusables = (element: HTMLElement): HTMLElement[] => {
   );
 
   return elements.filter(
-    (el) => !el.hasAttribute('disabled') && !el.getAttribute('aria-hidden'),
+    (el) =>
+      !el.hasAttribute('disabled') &&
+      !el.getAttribute('aria-hidden') &&
+      window.getComputedStyle(el).display !== 'none',
   ) as HTMLElement[];
 };
 

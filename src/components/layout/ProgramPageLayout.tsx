@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import { uiStateType } from '@/store/ui-slice';
 import { uiActions } from '@/store';
 import { scrollToEvent } from '@/hooks/useScrollToEventOnPageLoad';
+import { setFocusables, resetFocusables, loopFocusables } from '@/utils/get-focusables';
 
 import EventDetail from '@/components/events/EventDetail';
 import EventDetailCloseButton from '@/components/events/EventDetailCloseButton';
@@ -14,6 +15,14 @@ type Props = {
   header: ReactNode;
   children: ReactNode;
 };
+
+/**
+ * Stores the reference to the corresponding event's button
+ * outside the component, as the usage of a useState for
+ * this in the same useEffect as for the focusable manamegement
+ * cause an too much additional code's running.
+ */
+let eventButtonRef: HTMLElement | null;
 
 const ProgramPageLayout: React.FC<Props> = ({ header, children }) => {
   const dispatch = useDispatch();
@@ -71,6 +80,30 @@ const ProgramPageLayout: React.FC<Props> = ({ header, children }) => {
     }
   }, [openedEvent, eventNavUsed, dispatch]);
 
+  useEffect(() => {
+    if (pageRef.current && detailRef.current) {
+      if (openedEvent) {
+        eventButtonRef = pageRef.current.querySelector(`[data-id="${openedEvent.id}"] > button`);
+        setFocusables(detailRef.current);
+      } else {
+        eventButtonRef?.focus?.();
+        resetFocusables();
+      }
+    }
+
+    return () => {
+      resetFocusables();
+    };
+  }, [openedEvent]);
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    loopFocusables(e);
+
+    if (e.key === 'Escape' || e.key === 'Esc') {
+      dispatch(uiActions.closeEvent());
+    }
+  };
+
   return (
     <section className='program-page' ref={pageRef}>
       <div className='program-page__list'>
@@ -82,6 +115,7 @@ const ProgramPageLayout: React.FC<Props> = ({ header, children }) => {
           'program-page__detail--opened': openedEvent !== undefined,
         })}
         ref={detailRef}
+        onKeyDown={handleKeyDown}
       >
         <EventDetailCloseButton disabled={openedEvent && isDetailInViewport} />
         <EventDetail />
