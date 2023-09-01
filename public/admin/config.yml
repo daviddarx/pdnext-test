@@ -1,6 +1,7 @@
 backend:
   name: github
-  repo: meodai/pornydays # Path to your GitHub repository
+  repo: daviddarx/pdnext-test # Path to your GitHub repository
+  branch: main
 
 local_backend: true # For local admin, remove for production
 
