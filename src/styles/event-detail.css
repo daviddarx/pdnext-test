@@ -151,6 +151,6 @@
   @apply hidden;
 
   @screen xl {
-    @apply block pt-[0.75em] h5 font-semibold;
+    @apply block pt-[0.75em] h5 font-semibold w-full line-clamp-2;
   }
 }

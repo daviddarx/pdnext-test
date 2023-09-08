@@ -69,7 +69,14 @@ const EventDetailNavigation = ({ currentEvent }: Props) => {
                 <ArrowIcon className='event-detail-nav__icon' />
                 <span>Davor</span>
               </span>
-              <span className='event-detail-nav__title'>{currentEvent.prevTitle}</span>
+              {currentEvent.prevTitle && (
+                <span
+                  className='event-detail-nav__title'
+                  dangerouslySetInnerHTML={{
+                    __html: currentEvent.prevTitle,
+                  }}
+                />
+              )}
             </button>
           )}
           {currentEvent.nextId && (
@@ -81,7 +88,14 @@ const EventDetailNavigation = ({ currentEvent }: Props) => {
                 <span className='xl:order-2'>Danach</span>
                 <ArrowIcon className='event-detail-nav__icon' />
               </span>
-              <span className='event-detail-nav__title'>{currentEvent.nextTitle}</span>
+              {currentEvent.nextTitle && (
+                <span
+                  className='event-detail-nav__title'
+                  dangerouslySetInnerHTML={{
+                    __html: currentEvent.nextTitle,
+                  }}
+                />
+              )}
             </button>
           )}
         </motion.div>
