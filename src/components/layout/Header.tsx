@@ -20,9 +20,7 @@ const Header: React.FC<Props> = ({ commonPageData }) => {
   const lastScrollTopRef = useRef(0);
   const topBarRef = useRef<HTMLDivElement>(null);
 
-  const hasSpecialAnnouncement =
-    commonPageData.specialAnnouncementData.buttonTitle.trim().length > 0;
-  const hasSaveTheDate = commonPageData.saveTheDateData.title.trim().length > 0;
+  console.log(commonPageData.specialAnnouncementData);
 
   const handleScroll = useCallback(() => {
     const currentScrollTop = Math.max(window.scrollY, 0);
@@ -78,15 +76,17 @@ const Header: React.FC<Props> = ({ commonPageData }) => {
 
   return (
     <header className='header'>
-      {hasSaveTheDate && hasSpecialAnnouncement && (
+      {(!commonPageData.saveTheDateData.disable ||
+        !commonPageData.specialAnnouncementData.disable) && (
         <div className='header__top-bar' ref={topBarRef}>
-          {hasSaveTheDate && <SaveTheDate data={commonPageData.saveTheDateData} />}
-          {hasSpecialAnnouncement && (
+          {!commonPageData.saveTheDateData.disable && (
+            <SaveTheDate data={commonPageData.saveTheDateData} />
+          )}
+          {!commonPageData.specialAnnouncementData.disable && (
             <SpecialAnnouncement data={commonPageData.specialAnnouncementData} />
           )}
         </div>
       )}
-
       <ActiveLink
         href='/festival-program'
         className='header__logo-link'

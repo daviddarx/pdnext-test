@@ -9,7 +9,7 @@
     @apply text-base;
   }
 
-  @screen xl {
+  @screen lg {
     @apply space-x-4 pt-0 normal-case font-normal;
   }
 }
