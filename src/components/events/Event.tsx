@@ -62,13 +62,16 @@ const Event = ({ event, dateVisible = false }: Props) => {
       </div>
 
       <button className='event__btn' onClick={openEvent}>
-        <span>{event.date.hour}</span>
         <span
           dangerouslySetInnerHTML={{
             __html: event.title,
           }}
         />
-        <span>{event.eventlocation}</span>
+        ,
+        <span>
+          {event.date.readable} {event.date.hour}
+        </span>
+        ,<span>{event.eventlocation}</span>
       </button>
     </article>
   );
