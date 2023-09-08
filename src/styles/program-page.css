@@ -22,6 +22,10 @@
   @apply block subline subline--above-title;
 }
 
+.program-page__subtitle-separation {
+  @apply px-[0.75em];
+}
+
 .program-page__filters {
   @apply scroll-mt-gutter;
 }
