@@ -59,11 +59,6 @@
     grid-row-gap: var(--gutter);
     grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
   }
-
-  @screen 2xl {
-    grid-row-gap: 0;
-    grid-template-columns: repeat(auto-fit, minmax(33.33%, 1fr));
-  }
 }
 
 .event-detail__info {
@@ -74,12 +69,20 @@
   }
 }
 
-.event-detail__timetable-title {
-  @apply inline-block w-[4em] font-semibold;
+.event-detail__info--price {
+  @apply col-span-2;
 }
 
 .event-detail__info-title {
   @apply mb-[0.25em] lg:mb-[0.5em];
+}
+
+.event-detail__timetable-title {
+  @apply inline-block w-[4em] font-semibold;
+}
+
+.event-detail__reduced-price {
+  @apply mt-[0.75em] text-sm;
 }
 
 .event-detail__tickets {

@@ -16,6 +16,9 @@ export interface uiStateType {
       os: string | undefined;
       browser: string | undefined;
     };
+    settings: {
+      reducedPriceText: string;
+    };
   };
 }
 
@@ -34,6 +37,9 @@ export const uiSlice = createSlice({
     system: {
       os: undefined,
       browser: undefined,
+    },
+    settings: {
+      reducedPriceText: '',
     },
   },
   reducers: {
@@ -93,6 +99,9 @@ export const uiSlice = createSlice({
     },
     setSystem: (state, action) => {
       state.system = action.payload;
+    },
+    setSettings: (state, action) => {
+      state.settings = action.payload;
     },
   },
 });

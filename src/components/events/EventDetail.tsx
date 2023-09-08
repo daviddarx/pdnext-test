@@ -35,6 +35,8 @@ const EventDetail = () => {
 
   const event = useSelector((state: uiStateType) => state.ui.openedEvent);
   const eventSwitchDirection = useSelector((state: uiStateType) => state.ui.eventSwitchDirection);
+  const reducedPriceText = useSelector((state: uiStateType) => state.ui.settings.reducedPriceText);
+
   const lastScrollTopRef = useRef(0);
 
   const scrollHandler = (e: React.UIEvent<HTMLDivElement>) => {
@@ -121,9 +123,17 @@ const EventDetail = () => {
             )}
 
             {event.price && (
-              <div className='event-detail__info'>
+              <div className='event-detail__info event-detail__info--price'>
                 <h3 className='event-detail__info-title h5'>Preis</h3>
                 <ReactMarkdown remarkPlugins={[remarkGfm]}>{event.price}</ReactMarkdown>
+                {event.hideReducedPrice !== true && (
+                  <ReactMarkdown
+                    remarkPlugins={[remarkGfm]}
+                    className='event-detail__reduced-price'
+                  >
+                    {reducedPriceText}
+                  </ReactMarkdown>
+                )}
               </div>
             )}
           </div>

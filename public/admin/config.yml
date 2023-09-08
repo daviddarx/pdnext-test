@@ -9,6 +9,24 @@ media_folder: 'public/images/uploads' # Media files will be stored in the repo u
 public_folder: '/images/uploads' # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
+  - label: 'Settings'
+    name: 'settings'
+    create: false
+    delete: false
+    folder: '_content/settings'
+    slug: 'settings'
+    extension: 'json'
+    format: 'json'
+    summary: 'Settings'
+    fields:
+      - label: 'Reduced Price Text'
+        name: 'reducedPriceText'
+        widget: 'markdown'
+        buttons:
+          - bold
+          - italic
+          - link
+
   - name: 'saveTheDate'
     label: 'Save The Date Message'
     create: true
@@ -203,7 +221,7 @@ collections:
       #   widget: 'string'
       #   required: false
 
-      - labe: 'Deactivated'
+      - label: 'Deactivated'
         name: 'deactivated'
         widget: 'boolean'
         default: false
@@ -280,7 +298,7 @@ collections:
       #   widget: 'string'
       #   required: false
 
-      - labe: 'Deactivated'
+      - label: 'Deactivated'
         name: 'deactivated'
         widget: 'boolean'
         default: false
@@ -375,6 +393,12 @@ collections:
           - bulleted-list
           - numbered-list
 
+      - label: 'Hide text for reduced price'
+        name: 'hideReducedPrice'
+        widget: 'boolean'
+        default: false
+        required: false
+
       - label: 'Entries'
         name: 'entries'
         widget: 'relation'
@@ -384,7 +408,7 @@ collections:
         multiple: true
         required: false
 
-      - labe: 'Deactivated'
+      - label: 'Deactivated'
         name: 'deactivated'
         widget: 'boolean'
         default: false
@@ -479,6 +503,12 @@ collections:
           - bulleted-list
           - numbered-list
 
+      - label: 'Hide text for reduced price'
+        name: 'hideReducedPrice'
+        widget: 'boolean'
+        default: false
+        required: false
+
       - label: 'Entries'
         name: 'entries'
         widget: 'relation'
@@ -488,7 +518,7 @@ collections:
         multiple: true
         required: false
 
-      - labe: 'Deactivated'
+      - label: 'Deactivated'
         name: 'deactivated'
         widget: 'boolean'
         default: false

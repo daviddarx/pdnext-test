@@ -116,6 +116,12 @@ const App = ({ Component, pageProps }: AppProps) => {
           browser: browser,
         }),
       );
+
+      store.dispatch(
+        uiActions.setSettings({
+          reducedPriceText: pageProps.commonPageData.settingsData.reducedPriceText,
+        }),
+      );
     }
   });
 

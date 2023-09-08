@@ -9,6 +9,7 @@ export interface Event {
   eventlocationcomplement?: string;
   eventlocationlink: string;
   price?: string;
+  hideReducedPrice?: boolean;
   layout: string;
   entries?: string[];
   desc: string;
