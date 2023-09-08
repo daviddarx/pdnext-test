@@ -79,6 +79,12 @@ const Entry: React.FC<Props> = ({ entry }) => {
       <ReactMarkdown className='text-content entry__desc' remarkPlugins={[remarkGfm]}>
         {entry.desc}
       </ReactMarkdown>
+
+      {entry.warning && (
+        <ReactMarkdown className='text-content entry__warning' remarkPlugins={[remarkGfm]}>
+          {entry.warning}
+        </ReactMarkdown>
+      )}
     </article>
   );
 };

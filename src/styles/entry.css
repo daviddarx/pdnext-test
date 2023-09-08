@@ -57,3 +57,7 @@
 .entry__desc {
   @apply mt-gutter-3/4;
 }
+
+.entry__warning {
+  @apply bg-pink py-[0.5em] px-[1em] mt-gutter rounded-[0.5em];
+}

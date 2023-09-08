@@ -191,6 +191,13 @@ collections:
           - bulleted-list
           - numbered-list
 
+      - label: 'Trigger Warning'
+        name: 'warning'
+        widget: 'markdown'
+        buttons:
+          - bold
+          - italic
+
       - label: 'Featured Image'
         name: 'image'
         widget: 'image'
@@ -267,6 +274,13 @@ collections:
           - link
           - bulleted-list
           - numbered-list
+
+      - label: 'Trigger Warning'
+        name: 'warning'
+        widget: 'markdown'
+        buttons:
+          - bold
+          - italic
 
       - label: 'Featured Image'
         name: 'image'

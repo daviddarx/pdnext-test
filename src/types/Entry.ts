@@ -9,6 +9,7 @@ export interface Entry {
   forceBlank?: boolean;
   entryType: string;
   desc: string;
+  warning?: string;
   videourl?: string;
   title: string;
   image?: string;
