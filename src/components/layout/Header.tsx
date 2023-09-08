@@ -20,8 +20,6 @@ const Header: React.FC<Props> = ({ commonPageData }) => {
   const lastScrollTopRef = useRef(0);
   const topBarRef = useRef<HTMLDivElement>(null);
 
-  console.log(commonPageData.specialAnnouncementData);
-
   const handleScroll = useCallback(() => {
     const currentScrollTop = Math.max(window.scrollY, 0);
 
