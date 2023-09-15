@@ -3,6 +3,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
+    formats: ['image/webp', 'image/avif'],
     domains: ['files.daviddarx.com'],
   },
   async redirects() {
