@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import classNames from 'classnames';
 
@@ -13,10 +13,23 @@ type Props = {
 
 const LoadedImage: React.FC<Props> = ({ src, alt, width, height, className, onLoaded }) => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [loadingStartTime, setLoadingStartTime] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (!loadingStartTime) {
+      setLoadingStartTime(performance.now());
+    }
+  }, [loadingStartTime]);
 
   const handleLoaded = () => {
     if (onLoaded) onLoaded();
     setIsLoaded(true);
+
+    if (loadingStartTime !== null) {
+      console.log(
+        `Loaded: ${src.split('/').slice(-1)} / ${performance.now() - loadingStartTime} ms`,
+      );
+    }
   };
 
   return (
