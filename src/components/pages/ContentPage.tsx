@@ -122,6 +122,7 @@ const ContentPage: React.FC<Props> = ({ data }) => {
                   alt={slot.title}
                   width={slot.imageWidth}
                   height={slot.imageHeight}
+                  sizes='(min-width: 1280px) 75vw, 100vw'
                 />
               </div>
             )}

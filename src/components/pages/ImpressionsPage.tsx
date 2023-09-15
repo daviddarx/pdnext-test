@@ -44,6 +44,7 @@ const ImpressionsPage: React.FC<Props> = ({ data }) => {
                   alt={item.title}
                   width={item.imageWidth}
                   height={item.imageHeight}
+                  sizes='(min-width: 1920px) 33vw, (min-width: 768px) 50vw, 100vw'
                 />
               </div>
               <div className='impression__infos'>
