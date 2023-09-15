@@ -7,6 +7,7 @@ import { uiActions } from '@/store';
 import { scrollToEvent } from '@/hooks/useScrollToEventOnPageLoad';
 import { setFocusables, resetFocusables, loopFocusables } from '@/utils/get-focusables';
 
+import Visual from '@/components/layout/Visual';
 import EventDetail from '@/components/events/EventDetail';
 import EventDetailCloseButton from '@/components/events/EventDetailCloseButton';
 import EventDetailNavigation from '@/components/events/EventDetailNavigation';
@@ -124,6 +125,7 @@ const ProgramPageLayout: React.FC<Props> = ({ header, children }) => {
           <EventDetailNavigation currentEvent={openedEvent} />
         </div>
       </div>
+      <Visual />
     </section>
   );
 };
