@@ -49,6 +49,8 @@ const LoadedImage: React.FC<Props> = ({ src, alt, width, height, sizes, classNam
         width={width}
         height={height}
         sizes={sizes}
+        quality={75}
+        placeholder='blur'
         onLoad={handleLoaded}
       />
     </div>
