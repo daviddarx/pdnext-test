@@ -461,10 +461,10 @@
     @apply bg-lightGrey;
 
     & img {
-      @apply w-full h-auto; /*opacity-0*/
+      @apply w-full h-auto opacity-0;
 
       transition-property: opacity;
-      transition-duration: 400ms;
+      transition-duration: 250ms;
       transition-timing-function: ease-out;
     }
 
@@ -474,9 +474,9 @@
   }
 
   .loaded-image--loaded {
-    /* & img {
+    & img {
       @apply opacity-100;
-    } */
+    }
   }
 
   .zoomed-image-on-hover {
@@ -486,7 +486,7 @@
       @apply transform-3d;
 
       transition-property: opacity, transform;
-      transition-duration: 400ms, 300ms;
+      transition-duration: 250ms, 300ms;
       transition-timing-function: ease-out, theme('transitionTimingFunction.out-quad');
     }
 
