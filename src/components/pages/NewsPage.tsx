@@ -27,6 +27,7 @@ const NewsPage: React.FC<Props> = ({ data }) => {
                         alt={item.title}
                         width={item.imageWidth}
                         height={item.imageHeight}
+                        sizes='(min-width: 1920px) 25vw, (min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw'
                       />
                     </div>
                   </a>
@@ -37,6 +38,7 @@ const NewsPage: React.FC<Props> = ({ data }) => {
                       alt={item.title}
                       width={item.imageWidth}
                       height={item.imageHeight}
+                      sizes='(min-width: 1920px) 25vw, (min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw'
                     />
                   </div>
                 )}

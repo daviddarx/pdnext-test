@@ -32,6 +32,7 @@ const EntryGallery: React.FC<Props> = ({ title, images }) => {
           alt={title + ' ' + i}
           width={image.imageWidth}
           height={image.imageHeight}
+          sizes='(min-width: 1280px) 50vw, 100vw'
           className={classNames('entry__gallery-image', {
             'entry__gallery-image--active': i + 1 === currentId,
             'entry__gallery-image--last': i === images.length - 1,
