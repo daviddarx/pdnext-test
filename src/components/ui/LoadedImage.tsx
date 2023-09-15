@@ -8,11 +8,21 @@ type Props = {
   width?: number;
   height?: number;
   sizes?: string;
+  priority?: boolean;
   className?: string;
   onLoaded?: () => void;
 };
 
-const LoadedImage: React.FC<Props> = ({ src, alt, width, height, sizes, className, onLoaded }) => {
+const LoadedImage: React.FC<Props> = ({
+  src,
+  alt,
+  width,
+  height,
+  sizes,
+  priority = false,
+  className,
+  onLoaded,
+}) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   const handleLoaded = () => {
@@ -36,6 +46,7 @@ const LoadedImage: React.FC<Props> = ({ src, alt, width, height, sizes, classNam
         width={width}
         height={height}
         sizes={sizes}
+        priority={priority}
         quality={75}
         onLoad={handleLoaded}
       />

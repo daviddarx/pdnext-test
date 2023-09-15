@@ -46,7 +46,8 @@ const Entry: React.FC<Props> = ({ entry }) => {
                 alt={entry.title}
                 width={entry.imageWidth}
                 height={entry.imageHeight}
-                sizes='(min-width: 1280px) 50vw, 100vw'
+                sizes='(min-width: 1920px) 1280px, (min-width: 1280px) 50vw, 100vw'
+                priority={true}
                 className='entry__image'
                 onLoaded={handleImageLoaded}
               />
