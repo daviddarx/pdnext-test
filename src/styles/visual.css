@@ -1,3 +1,3 @@
 .visual {
-  @apply fixed -z-10 top-0 left-0 w-full h-full bg-focusVisible;
+  @apply fixed z-[100] top-0 left-0 w-full h-full;
 }
