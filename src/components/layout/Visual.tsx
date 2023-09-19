@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 import Stats from 'three/examples/jsm/libs/stats.module';
+// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 const Visual = () => {
   const container = useRef<HTMLDivElement>(null);
@@ -35,24 +36,21 @@ const Visual = () => {
 
     let scene = new THREE.Scene();
 
-    scene.background = new THREE.Color(0xfad1d1); /* TODO: transaprent? */
-
     const loader = new THREE.TextureLoader();
 
     const materials = [];
 
     const texture = loader.load('/images/visual/texture_01.jpg');
+    texture.colorSpace = THREE.SRGBColorSpace;
     const textureMap = loader.load('/images/visual/texture_01_map.jpg');
     const textureAlpha = loader.load('/images/visual/texture_01_alpha.jpg');
-    const textureMat = new THREE.MeshLambertMaterial({
-      color: 0xfad1d1,
+    const textureMat = new THREE.MeshStandardMaterial({
       map: texture,
       displacementMap: textureMap,
       displacementScale: 0.5,
       alphaMap: textureAlpha,
       transparent: true,
-      wireframe: false,
-      depthTest: true,
+      depthTest: true /* check if needed */,
     });
     materials.push(textureMat);
 
@@ -60,12 +58,10 @@ const Visual = () => {
     const plane = new THREE.Mesh(planeGeo, textureMat);
     scene.add(plane);
 
-    /* check pourquoi lumiere so fade */
-    const light = new THREE.AmbientLight(0xfad1d1, 1);
-    light.position.set(0, 0, 3);
+    const light = new THREE.AmbientLight(0xffffff, 3);
     scene.add(light);
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setAnimationLoop(animate);
     // renderer.shadowMap.enabled = true; /* What's this?  */
@@ -73,6 +69,9 @@ const Visual = () => {
 
     const stats = new Stats();
     document.body.appendChild(stats.dom);
+
+    // const controls = new OrbitControls(camera, renderer.domElement);
+    // controls.update();
 
     function animate() {
       stats.update();
