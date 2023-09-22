@@ -31,14 +31,13 @@ class ThreeVisual {
 
   materials: MaterialType[] = [];
 
-  paused: boolean | null = null;
+  paused = true;
 
   constructor() {
     this.init();
   }
 
   init() {
-    console.log('init');
     this.camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.01, 10);
     this.camera.position.z = 3;
 
@@ -71,15 +70,9 @@ class ThreeVisual {
     document.body.appendChild(this.stats.dom);
 
     this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    this.renderer.setSize(window.innerWidth, window.innerHeight);
-    this.renderer.setAnimationLoop(this.animate);
 
     // const controls = new OrbitControls(camera, renderer.domElement);
     // controls.update();
-
-    document.addEventListener('mousemove', this.onMouseMove);
-    window.addEventListener('resize', this.onResize);
-    this.onResize();
   }
 
   animate = () => {
@@ -102,18 +95,29 @@ class ThreeVisual {
   };
 
   pause = () => {
-    console.log('pause');
-    this.paused = true;
-    if (this.renderer) {
-      this.renderer.setAnimationLoop(null);
+    if (this.paused === false) {
+      this.paused = true;
+
+      if (this.renderer) {
+        this.renderer.setAnimationLoop(null);
+      }
+
+      document.removeEventListener('mousemove', this.onMouseMove);
+      window.removeEventListener('resize', this.onResize);
     }
   };
 
   resume = () => {
-    console.log('resume');
-    this.paused = false;
-    if (this.renderer) {
-      this.renderer.setAnimationLoop(this.animate);
+    if (this.paused) {
+      this.paused = false;
+
+      if (this.renderer) {
+        this.renderer.setAnimationLoop(this.animate);
+      }
+
+      document.addEventListener('mousemove', this.onMouseMove);
+      window.addEventListener('resize', this.onResize);
+      this.onResize();
     }
   };
 
@@ -150,9 +154,7 @@ const Visual = () => {
     const containerRef = container.current;
 
     if (threeVisual?.renderer) {
-      if (threeVisual.paused) {
-        threeVisual.resume();
-      }
+      threeVisual.resume();
       containerRef?.appendChild(threeVisual.renderer.domElement);
     }
 
