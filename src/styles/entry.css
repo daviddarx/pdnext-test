@@ -47,15 +47,31 @@
 }
 
 .entry__title {
-  @apply mt-gutter pt-[0.2em] lg:pt-0 mb-[0.25em];
+  @apply mt-gutter pt-[0.2em] lg:pt-0 mb-[0.1em];
+
+  @screen md {
+    @apply inline-block mb-[0.4em] pr-[0.5em];
+  }
 }
 
 .entry__type {
-  @apply font-semibold;
+  @apply font-semibold text-sm;
+
+  @screen md {
+    @apply inline relative top-[-0.55em];
+  }
+
+  @screen xl {
+    @apply top-[-1.1em];
+  }
 }
 
 .entry__desc {
-  @apply mt-gutter-3/4;
+  @apply mt-gutter;
+
+  @screen md {
+    @apply mt-[0.75em];
+  }
 }
 
 .entry__warning {
