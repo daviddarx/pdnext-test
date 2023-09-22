@@ -4,34 +4,75 @@ import * as THREE from 'three';
 import Stats from 'three/examples/jsm/libs/stats.module';
 // import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
-type MaterialType = THREE.MeshStandardMaterial;
+type Material = THREE.MeshStandardMaterial;
+
+type Vector3 = {
+  x: number;
+  y: number;
+  z: number;
+};
+
+type AnimationStep = {
+  pos: Vector3;
+  rot: Vector3;
+  scale: number;
+  dmScale: number;
+};
+
+type Texture = {
+  url: string;
+  w: number;
+  h: number;
+  steps: AnimationStep[];
+  mat: Material | undefined;
+};
 class ThreeVisual {
+  camera = null as THREE.PerspectiveCamera | null;
+  scene = null as THREE.Scene | null;
+  loader = null as THREE.TextureLoader | null;
+  container = null as THREE.Mesh | null;
+  plane = null as THREE.Mesh | null;
+  light = null as THREE.AmbientLight | null;
+  renderer = null as THREE.WebGLRenderer | null;
+  stats = null as Stats | null;
+
   windowW = 0;
   windowH = 0;
+
+  textures: Texture[] = [
+    {
+      url: '01',
+      w: 719,
+      h: 1040,
+      steps: [
+        {
+          pos: { x: 0, y: 0, z: 0 },
+          rot: { x: 0, y: 0, z: 45 },
+          scale: 1.5,
+          dmScale: 1.5,
+        },
+        {
+          pos: { x: 0, y: 0, z: 0 },
+          rot: { x: 0, y: 0, z: 45 },
+          scale: 1,
+          dmScale: -1.5,
+        },
+      ],
+      mat: undefined,
+    },
+  ];
+  texture: Texture | undefined = undefined;
+  paused = true;
 
   mouseXToCenter = 0;
   mouseXToCenterAbs = 0;
   mouseYToCenter = 0;
-  dmFactor = 4;
-  dmFactorEase = 0.05;
   rotX = 0;
   rotXFactor = 0.75;
   rotXFactorEase = 0.05;
   rotY = 0;
   rotYFactor = 0.75;
   rotYFactorEase = 0.05;
-
-  camera = null as THREE.PerspectiveCamera | null;
-  scene = null as THREE.Scene | null;
-  loader = null as THREE.TextureLoader | null;
-  plane = null as THREE.Mesh | null;
-  light = null as THREE.AmbientLight | null;
-  renderer = null as THREE.WebGLRenderer | null;
-  stats = null as Stats | null;
-
-  materials: MaterialType[] = [];
-
-  paused = true;
 
   constructor() {
     this.init();
@@ -45,23 +86,30 @@ class ThreeVisual {
 
     this.loader = new THREE.TextureLoader();
 
-    const texture = this.loader.load('/images/visual/texture_01.jpg');
-    texture.colorSpace = THREE.SRGBColorSpace;
-    const textureMap = this.loader.load('/images/visual/texture_01_map.jpg');
-    const textureAlpha = this.loader.load('/images/visual/texture_01_alpha.jpg');
-    const textureMat = new THREE.MeshStandardMaterial({
-      map: texture,
-      displacementMap: textureMap,
-      displacementScale: 0.5,
-      alphaMap: textureAlpha,
-      transparent: true,
-      depthTest: true /* default true, try false to see what happen */,
+    this.textures.forEach((texture) => {
+      const image = this.loader!.load(`/images/visual/${texture.url}.jpg`);
+      image.colorSpace = THREE.SRGBColorSpace;
+      const map = this.loader!.load(`/images/visual/${texture.url}_map.jpg`);
+      const alpha = this.loader!.load(`/images/visual/${texture.url}_alpha.jpg`);
+      texture.mat = new THREE.MeshStandardMaterial({
+        map: image,
+        alphaMap: alpha,
+        displacementMap: map,
+        displacementScale: 0,
+        transparent: true,
+        depthTest: true /* default true, try false to see what happen */,
+      });
     });
-    this.materials.push(textureMat);
 
-    const planeGeo = new THREE.PlaneGeometry(7, 4, 256, 256);
-    this.plane = new THREE.Mesh(planeGeo, this.materials[0]);
-    this.scene.add(this.plane);
+    this.texture = this.textures[0];
+
+    this.container = new THREE.Mesh();
+    this.scene.add(this.container);
+
+    console.log(this.texture);
+    const planeGeo = new THREE.PlaneGeometry(4, 4, 256, 256);
+    this.plane = new THREE.Mesh(planeGeo, this.texture.mat);
+    this.container.add(this.plane);
 
     this.light = new THREE.AmbientLight(0xffffff, 3);
     this.scene.add(this.light);
@@ -71,36 +119,36 @@ class ThreeVisual {
 
     this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 
+    this.animate();
+
     // const controls = new OrbitControls(camera, renderer.domElement);
     // controls.update();
   }
 
   animate = () => {
-    if (this.stats) {
-      this.stats.update();
-    }
+    const step = this.texture!.steps[0];
+    this.plane!.scale.y = step.scale;
+    this.plane!.scale.x = step.scale * (this.texture!.w / this.texture!.h);
+    this.plane!.position.x = step.pos.x;
+    this.plane!.position.y = step.pos.y;
+    this.plane!.rotation.z = THREE.MathUtils.degToRad(step.rot.z);
+    this.texture!.mat!.displacementScale = step.dmScale;
+  };
 
-    if (this.plane) {
-      const material = this.plane.material as MaterialType;
+  render = () => {
+    this.stats!.update();
 
-      material.displacementScale +=
-        (this.mouseXToCenterAbs * this.dmFactor - material.displacementScale) * this.dmFactorEase;
-      this.plane.rotation.x += (this.rotX - this.plane.rotation.x) * this.rotXFactorEase;
-      this.plane.rotation.y += (this.rotY - this.plane.rotation.y) * this.rotYFactorEase;
-    }
+    this.container!.rotation.x += (this.rotX - this.container!.rotation.x) * this.rotXFactorEase;
+    this.container!.rotation.y += (this.rotY - this.container!.rotation.y) * this.rotYFactorEase;
 
-    if (this.renderer && this.scene && this.camera) {
-      this.renderer.render(this.scene, this.camera);
-    }
+    this.renderer!.render(this.scene!, this.camera!);
   };
 
   pause = () => {
     if (this.paused === false) {
       this.paused = true;
 
-      if (this.renderer) {
-        this.renderer.setAnimationLoop(null);
-      }
+      this.renderer!.setAnimationLoop(null);
 
       document.removeEventListener('mousemove', this.onMouseMove);
       window.removeEventListener('resize', this.onResize);
@@ -111,9 +159,7 @@ class ThreeVisual {
     if (this.paused) {
       this.paused = false;
 
-      if (this.renderer) {
-        this.renderer.setAnimationLoop(this.animate);
-      }
+      this.renderer!.setAnimationLoop(this.render);
 
       document.addEventListener('mousemove', this.onMouseMove);
       window.addEventListener('resize', this.onResize);
@@ -125,11 +171,9 @@ class ThreeVisual {
     this.windowW = window.innerWidth;
     this.windowH = window.innerHeight;
 
-    if (this.renderer && this.camera) {
-      this.camera.aspect = this.windowW / this.windowH;
-      this.camera.updateProjectionMatrix();
-      this.renderer.setSize(this.windowW, this.windowH);
-    }
+    this.camera!.aspect = this.windowW / this.windowH;
+    this.camera!.updateProjectionMatrix();
+    this.renderer!.setSize(this.windowW, this.windowH);
   };
 
   onMouseMove = (e: MouseEvent) => {

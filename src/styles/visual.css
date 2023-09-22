@@ -1,3 +1,10 @@
 .visual {
-  @apply fixed -z-10 top-0 left-0 w-full h-full pointer-events-none;
+  @apply fixed -z-10 top-0 left-0 w-full h-full pointer-events-none overflow-hidden;
+
+  @screen xl {
+    canvas {
+      position: relative;
+      margin-left: 25vw;
+    }
+  }
 }
