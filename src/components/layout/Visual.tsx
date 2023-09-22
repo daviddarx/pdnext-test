@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { render } from 'react-dom';
+import { gsap } from 'gsap';
 import * as THREE from 'three';
 import Stats from 'three/examples/jsm/libs/stats.module';
 // import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
@@ -48,30 +48,31 @@ class ThreeVisual {
         {
           pos: { x: 0, y: 0, z: 0 },
           rot: { x: 0, y: 0, z: 45 },
-          scale: 1.5,
+          scale: 1.25,
           dmScale: 1.5,
         },
         {
-          pos: { x: 0, y: 0, z: 0 },
-          rot: { x: 0, y: 0, z: 45 },
-          scale: 1,
-          dmScale: -1.5,
+          pos: { x: 0.5, y: 0.2, z: 0 },
+          rot: { x: 0, y: -10, z: -45 },
+          scale: 3,
+          dmScale: -5,
         },
       ],
       mat: undefined,
     },
   ];
   texture: Texture | undefined = undefined;
+  stepId = Math.round(Math.random());
   paused = true;
 
   mouseXToCenter = 0;
   mouseXToCenterAbs = 0;
   mouseYToCenter = 0;
   rotX = 0;
-  rotXFactor = 0.75;
+  rotXFactor = 0.2;
   rotXFactorEase = 0.05;
   rotY = 0;
-  rotYFactor = 0.75;
+  rotYFactor = 0.2;
   rotYFactorEase = 0.05;
 
   constructor() {
@@ -106,7 +107,6 @@ class ThreeVisual {
     this.container = new THREE.Mesh();
     this.scene.add(this.container);
 
-    console.log(this.texture);
     const planeGeo = new THREE.PlaneGeometry(4, 4, 256, 256);
     this.plane = new THREE.Mesh(planeGeo, this.texture.mat);
     this.container.add(this.plane);
@@ -119,20 +119,92 @@ class ThreeVisual {
 
     this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 
-    this.animate();
-
     // const controls = new OrbitControls(camera, renderer.domElement);
     // controls.update();
   }
 
   animate = () => {
-    const step = this.texture!.steps[0];
-    this.plane!.scale.y = step.scale;
-    this.plane!.scale.x = step.scale * (this.texture!.w / this.texture!.h);
-    this.plane!.position.x = step.pos.x;
-    this.plane!.position.y = step.pos.y;
-    this.plane!.rotation.z = THREE.MathUtils.degToRad(step.rot.z);
-    this.texture!.mat!.displacementScale = step.dmScale;
+    this.stepId = this.stepId === 0 ? 1 : 0;
+    const step = this.texture!.steps[this.stepId];
+
+    const tl = gsap.timeline();
+    /*tl.to(this.plane!.position, {
+      x: 0,
+      y: 0,
+      z: 0,
+      duration: 5,
+      ease: 'power4.inOut',
+    });
+    tl.to(
+      this.plane!.rotation,
+      {
+        x: THREE.MathUtils.degToRad(0),
+        y: THREE.MathUtils.degToRad(0),
+        z: THREE.MathUtils.degToRad(0),
+        duration: 5,
+        ease: 'power4.inOut',
+      },
+      '<',
+    );
+    tl.to(
+      this.plane!.scale,
+      {
+        x: this.texture!.w / this.texture!.h,
+        y: 1,
+        duration: 5,
+        ease: 'power4.inOut',
+      },
+      '<',
+    );
+    tl.to(
+      this.texture!.mat!,
+      {
+        displacementScale: step.dmScale,
+        duration: 5,
+        ease: 'power4.inOut',
+      },
+      '<',
+    );*/
+    // next
+    /**
+     * dynamiser duration
+     * check timeline
+     */
+    tl.to(this.plane!.position, {
+      ...step.pos,
+      duration: 5,
+      ease: 'power4.inOut',
+    });
+    tl.to(
+      this.plane!.rotation,
+      {
+        x: THREE.MathUtils.degToRad(step.rot.x),
+        y: THREE.MathUtils.degToRad(step.rot.y),
+        z: THREE.MathUtils.degToRad(step.rot.z),
+        duration: 5,
+        ease: 'power4.inOut',
+      },
+      '<',
+    );
+    tl.to(
+      this.plane!.scale,
+      {
+        x: step.scale * (this.texture!.w / this.texture!.h),
+        y: step.scale,
+        duration: 5,
+        ease: 'power4.inOut',
+      },
+      '<',
+    );
+    tl.to(
+      this.texture!.mat!,
+      {
+        displacementScale: step.dmScale,
+        duration: 5,
+        ease: 'power4.inOut',
+      },
+      '<',
+    );
   };
 
   render = () => {
@@ -144,26 +216,31 @@ class ThreeVisual {
     this.renderer!.render(this.scene!, this.camera!);
   };
 
+  resume = () => {
+    if (this.paused) {
+      this.animate();
+
+      this.paused = false;
+
+      this.renderer!.setAnimationLoop(this.render);
+
+      document.addEventListener('click', this.animate);
+      document.addEventListener('mousemove', this.onMouseMove);
+      window.addEventListener('resize', this.onResize);
+      this.onResize();
+    }
+  };
+
   pause = () => {
     if (this.paused === false) {
       this.paused = true;
 
       this.renderer!.setAnimationLoop(null);
+      gsap.globalTimeline.clear();
 
+      document.removeEventListener('click', this.animate);
       document.removeEventListener('mousemove', this.onMouseMove);
       window.removeEventListener('resize', this.onResize);
-    }
-  };
-
-  resume = () => {
-    if (this.paused) {
-      this.paused = false;
-
-      this.renderer!.setAnimationLoop(this.render);
-
-      document.addEventListener('mousemove', this.onMouseMove);
-      window.addEventListener('resize', this.onResize);
-      this.onResize();
     }
   };
 
