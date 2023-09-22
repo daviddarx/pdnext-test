@@ -30,7 +30,7 @@
 }
 
 .event-detail__special-state {
-  @apply tag relative top-[-0.45em] sm:top-[-0.4em] lg:top-[-0.5em] xl:top-[-0.65em];
+  @apply tag relative top-[-0.75em] xl:top-[-0.9em];
 
   @screen max-xl {
     @apply tag--sm;
@@ -124,7 +124,11 @@
 }
 
 .event-detail-nav__button {
-  @apply p-gutter flex flex-col justify-start items-center;
+  @apply flex flex-col justify-start items-center;
+
+  @screen xl {
+    @apply p-gutter;
+  }
 
   @media (hover: hover) {
     @apply transition-colors duration-200 ease-out;
@@ -148,10 +152,10 @@
 }
 
 .event-detail-nav__subline {
-  @apply subline flex gap-[1em] items-center justify-center !text-xs align-text-v;
+  @apply subline flex gap-[1em] leading-none pt-[0.5em] pb-[0.25em] items-center justify-center;
 
   @screen xl {
-    @apply flex-col gap-[0.5em];
+    @apply flex-col gap-[0.5em] py-[0] !text-xs align-text-v;
   }
 }
 
