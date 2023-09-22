@@ -46,17 +46,17 @@
 }
 
 .event-detail__infos {
-  @apply mt-gutter space-y-gutter;
+  @apply mt-gutter-1.5 space-y-gutter-1.5;
 
   @screen lg {
-    @apply space-y-0;
+    @apply mt-gutter space-y-0;
 
     display: grid;
+    grid-row-gap: var(--gutter);
     grid-template-columns: repeat(auto-fit, minmax(33.33%, 1fr));
   }
 
   @screen xl {
-    grid-row-gap: var(--gutter);
     grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
   }
 }
@@ -69,10 +69,6 @@
   }
 }
 
-.event-detail__info--price {
-  @apply col-span-2;
-}
-
 .event-detail__info-title {
   @apply mb-[0.25em] lg:mb-[0.5em];
 }
@@ -81,8 +77,21 @@
   @apply inline-block w-[4em] font-semibold;
 }
 
-.event-detail__reduced-price {
-  @apply mt-[0.75em] text-sm;
+.event-detail__price-text {
+  /* Displays inline in case there is reduced text */
+  @apply inline;
+
+  p:last-child {
+    @apply inline;
+  }
+}
+
+.event-detail__reduced-price-button {
+  @apply text-link underline pl-[0.5em];
+}
+
+.event-detail__reduced-price-text {
+  @apply mt-gutter text-sm pink-box;
 }
 
 .event-detail__tickets {

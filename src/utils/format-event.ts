@@ -4,7 +4,7 @@ import { Event } from '@/types/Event';
 import { Entry } from '@/types/Entry';
 import { FormatedEvent } from '@/types/FormatedEvent';
 
-const formatEvent = (event: Event, entries: Entry[]): FormatedEvent => {
+const formatEvent = (event: Event, entries: Entry[], isONS = false): FormatedEvent => {
   const eventDate = new Date(event.eventdate);
 
   const eventEntries: Entry[] = event.entries
@@ -58,6 +58,8 @@ const formatEvent = (event: Event, entries: Entry[]): FormatedEvent => {
     .replace(/\//g, '-')
     .replace(/\./g, '-');
 
+  let hideReducedPrice = isONS ? true : event.hideReducedPrice || false;
+
   const formatedEvent: FormatedEvent = {
     ...event,
     id: id,
@@ -70,6 +72,7 @@ const formatEvent = (event: Event, entries: Entry[]): FormatedEvent => {
     },
     types: eventTypes,
     entriesObjects: eventEntries.filter((entry) => !entry.deactivated),
+    hideReducedPrice: hideReducedPrice,
   };
 
   // console.log('----------------- FETCH FORMAT EVENT', event.title);

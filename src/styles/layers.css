@@ -165,6 +165,10 @@
     @apply translate-y-[0.025em];
   }
 
+  .pink-box {
+    @apply bg-pink py-[0.75em] px-[1em] rounded-[0.5em];
+  }
+
   .text-content {
     h1,
     h2,

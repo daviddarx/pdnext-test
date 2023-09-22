@@ -23,7 +23,7 @@ const motionVariants = {
 
 type Props = {
   className?: string;
-  header: ReactNode;
+  header?: ReactNode;
   children: ReactNode;
   isOpenedExt?: boolean;
   onToggle?: (isOpened: boolean) => void;
@@ -54,11 +54,13 @@ const Accordion: React.FC<Props> = ({
 
   return (
     <section className={classNames('accordion', { 'is-opened': isOpened }, className)}>
-      <header className='accordion__header'>
-        <button className='accordion__button' onClick={toggleOpened}>
-          {header}
-        </button>
-      </header>
+      {header && (
+        <header className='accordion__header'>
+          <button className='accordion__button' onClick={toggleOpened}>
+            {header}
+          </button>
+        </header>
+      )}
       <AnimatePresence initial={true}>
         {isOpened && (
           <motion.section

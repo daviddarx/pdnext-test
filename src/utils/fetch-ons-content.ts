@@ -25,7 +25,7 @@ export async function fetchOnsContent(): Promise<OnsContent> {
   const formatedEvents: FormatedEvent[] = events
     .filter((event) => !event.deactivated)
     .map((event) => {
-      return formatEvent(event, entries);
+      return formatEvent(event, entries, true);
     });
 
   formatedEvents.sort((a, b) => new Date(b.eventdate).getTime() - new Date(a.eventdate).getTime());

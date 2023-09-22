@@ -517,12 +517,6 @@ collections:
           - bulleted-list
           - numbered-list
 
-      - label: 'Hide text for reduced price'
-        name: 'hideReducedPrice'
-        widget: 'boolean'
-        default: false
-        required: false
-
       - label: 'Entries'
         name: 'entries'
         widget: 'relation'

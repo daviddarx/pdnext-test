@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -8,6 +8,7 @@ import eases from '@/utils/eases';
 import { uiActions } from '@/store';
 import { uiStateType } from '@/store/ui-slice';
 
+import Accordion from '@/components/ui/Accordion';
 import EventDetailNavigation from '@/components/events/EventDetailNavigation';
 import Entry from '@/components/events/Entry';
 
@@ -30,12 +31,36 @@ const panelMotionVariants = {
   }),
 };
 
+const reducedPriceMotionVariants = {
+  initial: {
+    opacity: 0,
+    transform: 'translateY(1em)',
+  },
+  animate: {
+    opacity: 1,
+    transform: 'translateY(0)',
+    transition: {
+      delay: 0.3,
+      duration: 0.5,
+      ease: eases.outQuart,
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      duration: 0.25,
+      ease: eases.outQuart,
+    },
+  },
+};
+
 const EventDetail = () => {
   const dispatch = useDispatch();
 
   const event = useSelector((state: uiStateType) => state.ui.openedEvent);
   const eventSwitchDirection = useSelector((state: uiStateType) => state.ui.eventSwitchDirection);
   const reducedPriceText = useSelector((state: uiStateType) => state.ui.settings.reducedPriceText);
+  const [displayReducedPrice, setDisplayReducedPrice] = useState(false);
 
   const lastScrollTopRef = useRef(0);
 
@@ -55,7 +80,12 @@ const EventDetail = () => {
 
   useEffect(() => {
     lastScrollTopRef.current = 0;
+    setDisplayReducedPrice(false);
   }, [event]);
+
+  const toggleReducedPrice = () => {
+    setDisplayReducedPrice((prev) => !prev);
+  };
 
   return (
     <AnimatePresence mode='popLayout'>
@@ -125,18 +155,37 @@ const EventDetail = () => {
             {event.price && (
               <div className='event-detail__info event-detail__info--price'>
                 <h3 className='event-detail__info-title h5'>Preis</h3>
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>{event.price}</ReactMarkdown>
+                <ReactMarkdown remarkPlugins={[remarkGfm]} className='event-detail__price-text'>
+                  {event.price}
+                </ReactMarkdown>
+
                 {event.hideReducedPrice !== true && (
-                  <ReactMarkdown
-                    remarkPlugins={[remarkGfm]}
-                    className='event-detail__reduced-price'
+                  <button
+                    className='event-detail__reduced-price-button'
+                    onClick={toggleReducedPrice}
                   >
-                    {reducedPriceText}
-                  </ReactMarkdown>
+                    Reduced Price
+                  </button>
                 )}
               </div>
             )}
           </div>
+
+          <Accordion isOpenedExt={displayReducedPrice}>
+            <motion.div
+              initial='initial'
+              animate='animate'
+              exit='exit'
+              variants={reducedPriceMotionVariants}
+            >
+              <ReactMarkdown
+                className='event-detail__reduced-price-text text-content'
+                remarkPlugins={[remarkGfm]}
+              >
+                {reducedPriceText}
+              </ReactMarkdown>
+            </motion.div>
+          </Accordion>
 
           <div className='event-detail__tickets'>
             {event.ticketsLink && event.ticketsLinkTitle && (
