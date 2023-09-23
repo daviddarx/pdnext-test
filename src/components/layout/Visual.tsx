@@ -110,7 +110,11 @@ class ThreeVisual {
       });
     });
 
-    this.textureId = Math.floor(Math.random() * this.textures.length);
+    const url = new URL(window.location.href);
+    const searchParams = new URLSearchParams(url.search);
+    const id = searchParams.get('id');
+
+    this.textureId = id ? parseInt(id) : Math.floor(Math.random() * this.textures.length);
     this.texture = this.textures[this.textureId];
 
     this.container = new THREE.Mesh();
