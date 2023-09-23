@@ -53,7 +53,7 @@ class ThreeVisual {
         },
         {
           pos: { x: 0.5, y: 0.2, z: 0 },
-          rot: { x: 0, y: -10, z: -45 },
+          rot: { x: 0, y: -10, z: 40 },
           scale: 3,
           dmScale: -5,
         },
@@ -62,8 +62,16 @@ class ThreeVisual {
     },
   ];
   texture: Texture | undefined = undefined;
-  stepId = Math.round(Math.random());
+  textureId = 0;
+  stepId: null | number = null;
   paused = true;
+  timeline: GSAPTimeline | undefined = undefined;
+  animation = {
+    duration: 5,
+    durationRandomRange: 1,
+    easeStep: 'back.inOut',
+    easeReinit: 'power2.inOut',
+  };
 
   mouseXToCenter = 0;
   mouseXToCenterAbs = 0;
@@ -102,7 +110,8 @@ class ThreeVisual {
       });
     });
 
-    this.texture = this.textures[0];
+    this.textureId = Math.floor(Math.random() * this.textures.length);
+    this.texture = this.textures[this.textureId];
 
     this.container = new THREE.Mesh();
     this.scene.add(this.container);
@@ -124,84 +133,68 @@ class ThreeVisual {
   }
 
   animate = () => {
-    this.stepId = this.stepId === 0 ? 1 : 0;
-    const step = this.texture!.steps[this.stepId];
+    if (this.stepId === null) {
+      this.stepId = 0;
+    } else if (this.stepId === 0) {
+      this.stepId = 1;
+    } else {
+      this.stepId = null;
+    }
+    console.log(this.stepId);
 
-    const tl = gsap.timeline();
-    /*tl.to(this.plane!.position, {
-      x: 0,
-      y: 0,
-      z: 0,
-      duration: 5,
-      ease: 'power4.inOut',
-    });
-    tl.to(
-      this.plane!.rotation,
-      {
-        x: THREE.MathUtils.degToRad(0),
-        y: THREE.MathUtils.degToRad(0),
-        z: THREE.MathUtils.degToRad(0),
-        duration: 5,
-        ease: 'power4.inOut',
-      },
-      '<',
-    );
-    tl.to(
-      this.plane!.scale,
-      {
-        x: this.texture!.w / this.texture!.h,
-        y: 1,
-        duration: 5,
-        ease: 'power4.inOut',
-      },
-      '<',
-    );
-    tl.to(
-      this.texture!.mat!,
-      {
-        displacementScale: step.dmScale,
-        duration: 5,
-        ease: 'power4.inOut',
-      },
-      '<',
-    );*/
-    // next
-    /**
-     * dynamiser duration
-     * check timeline
-     */
-    tl.to(this.plane!.position, {
+    let step: AnimationStep;
+    let ease: string;
+
+    if (this.stepId !== null) {
+      step = this.texture!.steps[this.stepId];
+      ease = this.animation.easeStep;
+    } else {
+      step = { pos: { x: 0, y: 0, z: 0 }, rot: { x: 0, y: 0, z: 0 }, scale: 1, dmScale: 0 };
+      ease = this.animation.easeReinit;
+    }
+
+    const { duration, durationRandomRange } = this.animation;
+    const durationStart = duration - durationRandomRange;
+    const durationEnd = duration + durationRandomRange;
+    const randomDuration = this.getRandomNumber(durationStart, durationEnd);
+
+    if (this.timeline) {
+      this.timeline.kill();
+    }
+    this.timeline = gsap.timeline();
+
+    this.timeline.to(this.plane!.position, {
       ...step.pos,
-      duration: 5,
-      ease: 'power4.inOut',
+      duration: randomDuration,
+      ease: ease,
     });
-    tl.to(
+    this.timeline.to(
       this.plane!.rotation,
       {
         x: THREE.MathUtils.degToRad(step.rot.x),
         y: THREE.MathUtils.degToRad(step.rot.y),
         z: THREE.MathUtils.degToRad(step.rot.z),
-        duration: 5,
-        ease: 'power4.inOut',
+        duration: randomDuration,
+        ease: ease,
       },
       '<',
     );
-    tl.to(
+    this.timeline.to(
       this.plane!.scale,
       {
         x: step.scale * (this.texture!.w / this.texture!.h),
         y: step.scale,
-        duration: 5,
-        ease: 'power4.inOut',
+        duration: randomDuration,
+        ease: ease,
       },
       '<',
     );
-    tl.to(
+    this.timeline.to(
       this.texture!.mat!,
       {
         displacementScale: step.dmScale,
-        duration: 5,
-        ease: 'power4.inOut',
+        duration: randomDuration,
+        ease: ease,
       },
       '<',
     );
@@ -259,6 +252,10 @@ class ThreeVisual {
     this.mouseYToCenter = e.clientY / this.windowH - 0.5;
     this.rotX = this.mouseYToCenter * this.rotXFactor;
     this.rotY = this.mouseXToCenter * this.rotYFactor;
+  };
+
+  getRandomNumber = (start: number, end: number) => {
+    return Math.random() * (end - start) + start;
   };
 }
 
