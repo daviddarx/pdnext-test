@@ -8,3 +8,11 @@
     }
   }
 }
+
+.visual__caption {
+  @apply absolute z-10 bottom-0 right-0 p-gutter text-xs text-right;
+}
+
+.visual__caption-film {
+  @apply font-semibold uppercase block;
+}

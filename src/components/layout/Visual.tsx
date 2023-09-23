@@ -21,6 +21,8 @@ type AnimationStep = {
 
 type Texture = {
   url: string;
+  film: string;
+  director: string;
   w: number;
   h: number;
   steps: AnimationStep[];
@@ -42,6 +44,8 @@ class ThreeVisual {
   textures: Texture[] = [
     {
       url: '01',
+      film: 'Pizza Topping',
+      director: 'Ethan Folk & Ty Wardwell',
       w: 719,
       h: 1040,
       steps: [
@@ -288,7 +292,14 @@ const Visual = () => {
     };
   });
 
-  return <div className='visual' ref={container}></div>;
+  return (
+    <figure className='visual' ref={container}>
+      <figcaption className='visual__caption'>
+        <span className='visual__caption-film'>{threeVisual?.texture?.film}</span>
+        <span className='visual__caption-director'>{threeVisual?.texture?.director}</span>
+      </figcaption>
+    </figure>
+  );
 };
 
 export default React.memo(Visual);
