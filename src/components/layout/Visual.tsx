@@ -119,13 +119,13 @@ class ThreeVisual {
     const id = searchParams.get('id');
 
     this.textureId = id ? parseInt(id) : Math.floor(Math.random() * this.textures.length);
-    this.texture = this.textures[this.textureId];
+    this.setTexture();
 
     this.container = new THREE.Mesh();
     this.scene.add(this.container);
 
     const planeGeo = new THREE.PlaneGeometry(4, 4, 256, 256);
-    this.plane = new THREE.Mesh(planeGeo, this.texture.mat);
+    this.plane = new THREE.Mesh(planeGeo, this.texture!.mat);
     this.container.add(this.plane);
 
     this.light = new THREE.AmbientLight(0xffffff, 3);
@@ -148,7 +148,6 @@ class ThreeVisual {
     } else {
       this.stepId = null;
     }
-    console.log(this.stepId);
 
     let step: AnimationStep;
     let ease: string;
@@ -206,6 +205,18 @@ class ThreeVisual {
       },
       '<',
     );
+  };
+
+  setTexture = () => {
+    this.texture = this.textures[this.textureId];
+    setTimeout(() => {
+      this.udpateCredits();
+    }, 1000);
+  };
+
+  udpateCredits = () => {
+    document.querySelector('.visual__caption-film')!.innerHTML = this.texture!.film;
+    document.querySelector('.visual__caption-director')!.innerHTML = this.texture!.director;
   };
 
   render = () => {
@@ -295,8 +306,8 @@ const Visual = () => {
   return (
     <figure className='visual' ref={container}>
       <figcaption className='visual__caption'>
-        <span className='visual__caption-film'>{threeVisual?.texture?.film}</span>
-        <span className='visual__caption-director'>{threeVisual?.texture?.director}</span>
+        <span className='visual__caption-film'></span>
+        <span className='visual__caption-director'></span>
       </figcaption>
     </figure>
   );
