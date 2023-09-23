@@ -1,6 +1,14 @@
 .visual {
   @apply fixed -z-10 top-0 left-0 w-full h-full pointer-events-none overflow-hidden;
 
+  canvas {
+    @apply transition-opacity duration-1000;
+
+    &.faded {
+      @apply opacity-40;
+    }
+  }
+
   @screen xl {
     canvas {
       position: relative;

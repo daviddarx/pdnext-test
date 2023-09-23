@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import * as THREE from 'three';
+import { debounce } from 'lodash-es';
 import Stats from 'three/examples/jsm/libs/stats.module';
 // import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
@@ -52,13 +53,13 @@ class ThreeVisual {
         {
           pos: { x: 0, y: 0, z: 0 },
           rot: { x: 0, y: 0, z: 45 },
-          scale: 1.25,
+          scale: 1.15,
           dmScale: 1.5,
         },
         {
-          pos: { x: 0.5, y: 0.2, z: 0 },
-          rot: { x: 0, y: -10, z: 40 },
-          scale: 3,
+          pos: { x: 0, y: 0, z: 0 },
+          rot: { x: 0, y: 0, z: 40 },
+          scale: 2.5,
           dmScale: -5,
         },
       ],
@@ -76,6 +77,8 @@ class ThreeVisual {
     easeStep: 'back.inOut',
     easeReinit: 'power2.inOut',
   };
+
+  isFaded = false;
 
   mouseXToCenter = 0;
   mouseXToCenterAbs = 0;
@@ -209,6 +212,7 @@ class ThreeVisual {
 
   setTexture = () => {
     this.texture = this.textures[this.textureId];
+
     setTimeout(() => {
       this.udpateCredits();
     }, 1000);
@@ -238,6 +242,7 @@ class ThreeVisual {
 
       document.addEventListener('click', this.animate);
       document.addEventListener('mousemove', this.onMouseMove);
+      document.addEventListener('scroll', this.onScrollDebounced, { passive: true });
       window.addEventListener('resize', this.onResize);
       this.onResize();
     }
@@ -252,17 +257,9 @@ class ThreeVisual {
 
       document.removeEventListener('click', this.animate);
       document.removeEventListener('mousemove', this.onMouseMove);
+      document.removeEventListener('scroll', this.onScrollDebounced);
       window.removeEventListener('resize', this.onResize);
     }
-  };
-
-  onResize = () => {
-    this.windowW = window.innerWidth;
-    this.windowH = window.innerHeight;
-
-    this.camera!.aspect = this.windowW / this.windowH;
-    this.camera!.updateProjectionMatrix();
-    this.renderer!.setSize(this.windowW, this.windowH);
   };
 
   onMouseMove = (e: MouseEvent) => {
@@ -271,6 +268,31 @@ class ThreeVisual {
     this.mouseYToCenter = e.clientY / this.windowH - 0.5;
     this.rotX = this.mouseYToCenter * this.rotXFactor;
     this.rotY = this.mouseXToCenter * this.rotYFactor;
+  };
+
+  onScroll = () => {
+    if (window.scrollY > 200) {
+      if (!this.isFaded) {
+        console.log('fade', this.renderer?.domElement);
+        this.renderer?.domElement.classList.add('faded');
+        this.isFaded = true;
+      }
+    } else {
+      if (this.isFaded) {
+        this.renderer?.domElement.classList.remove('faded');
+        this.isFaded = false;
+      }
+    }
+  };
+  onScrollDebounced = debounce(this.onScroll, 20);
+
+  onResize = () => {
+    this.windowW = window.innerWidth;
+    this.windowH = window.innerHeight;
+
+    this.camera!.aspect = this.windowW / this.windowH;
+    this.camera!.updateProjectionMatrix();
+    this.renderer!.setSize(this.windowW, this.windowH);
   };
 
   getRandomNumber = (start: number, end: number) => {
