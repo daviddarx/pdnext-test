@@ -3,9 +3,8 @@ import { gsap } from 'gsap';
 import * as THREE from 'three';
 import { debounce } from 'lodash-es';
 import Stats from 'three/examples/jsm/libs/stats.module';
+import { constants } from 'fs';
 // import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-
-type Material = THREE.MeshStandardMaterial;
 
 type Vector3 = {
   x: number;
@@ -27,14 +26,14 @@ type Texture = {
   w: number;
   h: number;
   steps: AnimationStep[];
-  mat: Material | undefined;
+  mat: THREE.MeshStandardMaterial | undefined;
+  plane: THREE.Mesh | undefined;
 };
 class ThreeVisual {
   camera = null as THREE.PerspectiveCamera | null;
   scene = null as THREE.Scene | null;
   loader = null as THREE.TextureLoader | null;
   container = null as THREE.Mesh | null;
-  plane = null as THREE.Mesh | null;
   light = null as THREE.AmbientLight | null;
   renderer = null as THREE.WebGLRenderer | null;
   stats = null as Stats | null;
@@ -52,6 +51,12 @@ class ThreeVisual {
       steps: [
         {
           pos: { x: 0, y: 0, z: 0 },
+          rot: { x: 0, y: 0, z: 0 },
+          scale: 1,
+          dmScale: 0,
+        },
+        {
+          pos: { x: 0, y: 0, z: 0 },
           rot: { x: 0, y: 0, z: 45 },
           scale: 1.15,
           dmScale: 1.5,
@@ -64,11 +69,41 @@ class ThreeVisual {
         },
       ],
       mat: undefined,
+      plane: undefined,
+    },
+    {
+      url: '02',
+      film: 'BARE BREASTED // BARE CHESTED',
+      director: 'Emma Fragorzi/Veronica Franchetti',
+      w: 1563,
+      h: 883,
+      steps: [
+        {
+          pos: { x: 0, y: 0, z: 0 },
+          rot: { x: 0, y: 0, z: 0 },
+          scale: 0.7,
+          dmScale: 0,
+        },
+        {
+          pos: { x: -0.25, y: 0, z: 0 },
+          rot: { x: 0, y: 0, z: -30 },
+          scale: 0.6,
+          dmScale: 2,
+        },
+        {
+          pos: { x: -0.25, y: 0, z: 0 },
+          rot: { x: 40, y: -40, z: -30 },
+          scale: 1,
+          dmScale: -2,
+        },
+      ],
+      mat: undefined,
+      plane: undefined,
     },
   ];
   texture: Texture | undefined = undefined;
   textureId = 0;
-  stepId: null | number = null;
+  stepId = 0;
   paused = true;
   timeline: GSAPTimeline | undefined = undefined;
   animation = {
@@ -77,6 +112,8 @@ class ThreeVisual {
     easeStep: 'back.inOut',
     easeReinit: 'power2.inOut',
   };
+  testId: number | undefined = undefined;
+  testStep: number | undefined = undefined;
 
   isFaded = false;
 
@@ -115,21 +152,26 @@ class ThreeVisual {
         transparent: true,
         depthTest: true /* default true, try false to see what happen */,
       });
+
+      const planeGeo = new THREE.PlaneGeometry(4, 4, 256, 256);
+      texture.plane = new THREE.Mesh(planeGeo, texture.mat);
+      texture.plane.scale.x = texture.steps[0].scale * (texture.w / texture.h);
+      texture.plane.scale.y = texture.steps[0].scale;
     });
 
     const url = new URL(window.location.href);
     const searchParams = new URLSearchParams(url.search);
-    const id = searchParams.get('id');
+    const searchId = searchParams.get('id');
+    const searchStep = searchParams.get('step');
 
-    this.textureId = id ? parseInt(id) : Math.floor(Math.random() * this.textures.length);
-    this.setTexture();
+    this.testId = searchId ? parseInt(searchId) : undefined;
+    this.testStep = searchStep ? parseInt(searchStep) : undefined;
 
     this.container = new THREE.Mesh();
     this.scene.add(this.container);
 
-    const planeGeo = new THREE.PlaneGeometry(4, 4, 256, 256);
-    this.plane = new THREE.Mesh(planeGeo, this.texture!.mat);
-    this.container.add(this.plane);
+    this.textureId = this.testId || Math.floor(Math.random() * this.textures.length);
+    this.setTexture();
 
     this.light = new THREE.AmbientLight(0xffffff, 3);
     this.scene.add(this.light);
@@ -144,58 +186,61 @@ class ThreeVisual {
   }
 
   animate = () => {
-    if (this.stepId === null) {
+    if (this.stepId < 2) {
+      this.stepId++;
+    } else {
       this.stepId = 0;
-    } else if (this.stepId === 0) {
-      this.stepId = 1;
-    } else {
-      this.stepId = null;
     }
 
-    let step: AnimationStep;
-    let ease: string;
-
-    if (this.stepId !== null) {
-      step = this.texture!.steps[this.stepId];
-      ease = this.animation.easeStep;
-    } else {
-      step = { pos: { x: 0, y: 0, z: 0 }, rot: { x: 0, y: 0, z: 0 }, scale: 1, dmScale: 0 };
-      ease = this.animation.easeReinit;
-    }
+    let step = this.texture!.steps[this.stepId];
+    let stepEase: string;
+    let stepDuration: number;
 
     const { duration, durationRandomRange } = this.animation;
     const durationStart = duration - durationRandomRange;
     const durationEnd = duration + durationRandomRange;
-    const randomDuration = this.getRandomNumber(durationStart, durationEnd);
+    stepDuration = this.getRandomNumber(durationStart, durationEnd);
+
+    if (this.testStep !== undefined) {
+      step = this.texture!.steps[this.testStep];
+      stepDuration = 0;
+      console.log('test step');
+    }
+
+    if (this.stepId === 0) {
+      stepEase = this.animation.easeStep;
+    } else {
+      stepEase = this.animation.easeReinit;
+    }
 
     if (this.timeline) {
       this.timeline.kill();
     }
     this.timeline = gsap.timeline();
 
-    this.timeline.to(this.plane!.position, {
+    this.timeline.to(this.texture!.plane!.position, {
       ...step.pos,
-      duration: randomDuration,
-      ease: ease,
+      duration: stepDuration,
+      ease: stepEase,
     });
     this.timeline.to(
-      this.plane!.rotation,
+      this.texture!.plane!.rotation,
       {
         x: THREE.MathUtils.degToRad(step.rot.x),
         y: THREE.MathUtils.degToRad(step.rot.y),
         z: THREE.MathUtils.degToRad(step.rot.z),
-        duration: randomDuration,
-        ease: ease,
+        duration: stepDuration,
+        ease: stepEase,
       },
       '<',
     );
     this.timeline.to(
-      this.plane!.scale,
+      this.texture!.plane!.scale,
       {
         x: step.scale * (this.texture!.w / this.texture!.h),
         y: step.scale,
-        duration: randomDuration,
-        ease: ease,
+        duration: stepDuration,
+        ease: stepEase,
       },
       '<',
     );
@@ -203,8 +248,8 @@ class ThreeVisual {
       this.texture!.mat!,
       {
         displacementScale: step.dmScale,
-        duration: randomDuration,
-        ease: ease,
+        duration: stepDuration,
+        ease: stepEase,
       },
       '<',
     );
@@ -212,6 +257,7 @@ class ThreeVisual {
 
   setTexture = () => {
     this.texture = this.textures[this.textureId];
+    this.container!.add(this.texture.plane!);
 
     setTimeout(() => {
       this.udpateCredits();
@@ -273,7 +319,6 @@ class ThreeVisual {
   onScroll = () => {
     if (window.scrollY > 200) {
       if (!this.isFaded) {
-        console.log('fade', this.renderer?.domElement);
         this.renderer?.domElement.classList.add('faded');
         this.isFaded = true;
       }
