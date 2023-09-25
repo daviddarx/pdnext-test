@@ -204,7 +204,6 @@ class ThreeVisual {
     if (this.testStep !== undefined) {
       step = this.texture!.steps[this.testStep];
       stepDuration = 0;
-      console.log('test step');
     }
 
     if (this.stepId === 0) {
