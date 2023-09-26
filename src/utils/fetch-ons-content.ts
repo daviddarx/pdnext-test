@@ -19,7 +19,13 @@ export async function fetchOnsContent(): Promise<OnsContent> {
 
   // log image to help clean images folder (empty folder, and add again the listed images)
   // entries.map((entry) => {
-  //   console.log(entry.image.split('images/uploads/')[1]);
+  //   console.log(entry.image?.split('images/uploads/')[1]);
+
+  //   if (entry.additionalImages) {
+  //     entry.additionalImages.forEach((image) => {
+  //       console.log(image);
+  //     });
+  //   }
   // });
 
   const formatedEvents: FormatedEvent[] = events
