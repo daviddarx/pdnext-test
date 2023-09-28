@@ -19,8 +19,9 @@
   "price": "Eintritt: CHF 20.--\\\nMember: CHF 10.-- ([www.gds.fm/member](http://www.gds.fm/member?fbclid=IwAR2GsRw3v-kQJVFLrTBgxd_yw-uCw2eetAKeCfKScyWcWOu0CcfoskU2GxU))",
   "layout": "event",
   "eventlocation": "Sender / GDS.FM",
-  "eventlocationcomplement": "",
-  "entries": ["vorspiel im sender"],
+  "entries": [
+    "vorspiel im sender"
+  ],
   "desc": "Bevors Ende November mit dem 9. Festival an den Start geht, laden wir euch zu einem pornygen Vorspiel in den Sender ein. Es ist bereits der dritte One-Night-Stand, wahrscheinlich wäre ein langzeit Techtelmechtel der passendre Begriff....",
   "ticketsLinkTitle": "Abendkasse",
   "title": "Porny Vorspiel"

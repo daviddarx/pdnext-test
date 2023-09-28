@@ -1,0 +1,13 @@
+{
+  "forceBlank": false,
+  "uuid": "dance-performance",
+  "title": "Dance Performance",
+  "entryType": "Performance",
+  "desc": "The two zurich based dancers Liv & Kira are gonna be at Kauz and hit the dance floor with you! Get ready to sweat and be seduced by their moves!\n\nFoto Kira: Glossygritty\\\nFoto Livia: David Ferreira Lima",
+  "image": "/images/uploads/gogodancer2-quadratisch.jpg",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/gogodancer1-quadratisch.jpg"
+    }
+  ]
+}

@@ -1,9 +1,9 @@
 {
   "forceBlank": false,
-  "uuid": "line-up-spring",
-  "title": "Line-Up",
+  "uuid": "line-up-spring-23",
+  "title": "Line-Up Spring 2023",
   "entryType": "Musik",
-  "desc": "Unser Line-up lässt auch dieses Mal keine Wünsche übrig:\n\n* Julie the Titan\n* Betty\n* Herzschwester\n* Mia Kaltes",
+  "desc": "Unser Line-up lässt auch dieses Mal keine Wünsche übrig:\n\n* Juli the Titan\n* Betty Apple\n* Captain Planet (Herzschwester fällt krankheitshalber aus)\n* Mia Kaltes",
   "image": "/images/uploads/juli-quadratisch.jpg",
   "additionalImages": [
     {
@@ -13,7 +13,7 @@
       "image": "/images/uploads/betty2-quadratisch.jpg"
     },
     {
-      "image": "/images/uploads/herzschwester-quadratischjpeg.jpeg"
+      "image": "/images/uploads/captainplanet1.jpg"
     },
     {
       "image": "/images/uploads/miakaltes.jpg"

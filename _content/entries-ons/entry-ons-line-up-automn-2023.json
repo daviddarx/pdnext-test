@@ -1,0 +1,22 @@
+{
+  "forceBlank": false,
+  "uuid": "line-up-autumn-23",
+  "title": "Line-Up Autumn 2023",
+  "entryType": "Musik",
+  "desc": "Unser Line-up lässt auch dieses Mal keine Wünsche übrig:\n\n* Rosanna\n* Hausvrau\n* Aramiss\n* Herzschwester",
+  "image": "/images/uploads/kauz-oktober.jpg",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/rosanna_quadratisch.jpg"
+    },
+    {
+      "image": "/images/uploads/hausvrau_quadratisch.jpg"
+    },
+    {
+      "image": "/images/uploads/aramiss-nicole.jpg"
+    },
+    {
+      "image": "/images/uploads/herzschwester-quadratischjpeg.jpeg"
+    }
+  ]
+}
