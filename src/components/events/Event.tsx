@@ -56,7 +56,13 @@ const Event = ({ event, dateVisible = false }: Props) => {
             </div>
           )}
           <div className='event__details'>
-            {event.eventlocation} – <i>{event.types.join(', ')}</i>
+            {event.eventlocation}
+            {event.types.length > 0 && (
+              <span>
+                {' '}
+                – <i>{event.types.join(', ')}</i>
+              </span>
+            )}
           </div>
         </div>
       </div>

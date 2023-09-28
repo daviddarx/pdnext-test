@@ -133,8 +133,8 @@ const EventDetail = () => {
               <div className='text-content'>
                 <a href={event.eventlocationlink} target='_blank'>
                   {event.eventlocation}
-                </a>{' '}
-                – {event.eventlocationcomplement && <span>({event.eventlocationcomplement})</span>}
+                </a>
+                {event.eventlocationcomplement && <span> – ({event.eventlocationcomplement})</span>}
               </div>
             </div>
 
