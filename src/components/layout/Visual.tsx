@@ -52,16 +52,20 @@ class ThreeVisual {
   textures: Texture[] = [
     {
       url: '01',
-      film: 'Pizza Topping',
-      director: 'Ethan Folk & Ty Wardwell',
+      film: 'Pigs At First Sight',
+      director: 'Jamal Phoenix, Skip Marshall',
       w: 719,
       h: 1040,
       steps: [
         {
           pos: { x: 0, y: 0, z: 0 },
-          rot: { x: 0, y: 0, z: THREE.MathUtils.degToRad(45) },
+          rot: {
+            x: THREE.MathUtils.degToRad(20),
+            y: THREE.MathUtils.degToRad(45),
+            z: THREE.MathUtils.degToRad(45),
+          },
           scale: 1.15,
-          dmScale: 1.5,
+          dmScale: 0,
         },
         {
           pos: { x: 0, y: 0, z: 0 },
@@ -82,9 +86,9 @@ class ThreeVisual {
       plane: undefined,
     },
     {
-      url: '02',
-      film: 'BARE BREASTED // BARE CHESTED',
-      director: 'Emma Fragorzi/Veronica Franchetti',
+      url: '02.1',
+      film: 'Maman',
+      director: 'Four Chambers',
       w: 1563,
       h: 883,
       steps: [
@@ -92,7 +96,7 @@ class ThreeVisual {
           pos: { x: -0.25, y: 0, z: 0 },
           rot: { x: 0, y: 0, z: THREE.MathUtils.degToRad(-30) },
           scale: 0.6,
-          dmScale: 2,
+          dmScale: 1,
         },
         {
           pos: { x: 0, y: 0, z: 0 },
@@ -105,6 +109,41 @@ class ThreeVisual {
           pos: { x: -0.25, y: 0, z: 0 },
           rot: {
             x: THREE.MathUtils.degToRad(40),
+            y: THREE.MathUtils.degToRad(-40),
+            z: THREE.MathUtils.degToRad(-30),
+          },
+          scale: 1,
+          dmScale: -2,
+          duration: 1,
+        },
+      ],
+      mat: undefined,
+      plane: undefined,
+    },
+    {
+      url: '02.2',
+      film: 'Maman',
+      director: 'Four Chambers',
+      w: 1577,
+      h: 883,
+      steps: [
+        {
+          pos: { x: -0, y: 0, z: 0 },
+          rot: { x: 0, y: 0, z: THREE.MathUtils.degToRad(-30) },
+          scale: 0.4,
+          dmScale: 3,
+        },
+        {
+          pos: { x: 0, y: 0, z: 0 },
+          rot: { x: 0, y: 0, z: 0 },
+          scale: 0.9,
+          dmScale: 0,
+          duration: 1,
+        },
+        {
+          pos: { x: -0.5, y: 0, z: 0 },
+          rot: {
+            x: THREE.MathUtils.degToRad(0),
             y: THREE.MathUtils.degToRad(-40),
             z: THREE.MathUtils.degToRad(-30),
           },
