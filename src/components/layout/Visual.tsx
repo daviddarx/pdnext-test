@@ -3,8 +3,6 @@ import { gsap } from 'gsap';
 import * as THREE from 'three';
 import { debounce } from 'lodash-es';
 import Stats from 'three/examples/jsm/libs/stats.module';
-import { constants } from 'fs';
-// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 type Vector3 = {
   x: number;
@@ -17,7 +15,6 @@ type AnimationStep = {
   rot: Vector3;
   scale: number;
   dmScale: number;
-  duration?: number;
 };
 
 type Texture = {
@@ -43,7 +40,10 @@ class ThreeVisual {
   windowH = 0;
 
   animation = {
-    delayIn: 1,
+    duration: 7,
+    delayIn: 7,
+    delayOut: 4,
+    startDelayIn: 1,
     opacityDurationIn: 1,
     opacityDurationOut: 1,
     ease: 'power2.inOut',
@@ -58,28 +58,30 @@ class ThreeVisual {
       h: 1040,
       steps: [
         {
-          pos: { x: 0, y: 0, z: 0 },
+          pos: { x: -0.2, y: -0.4, z: 0 },
           rot: {
-            x: THREE.MathUtils.degToRad(20),
-            y: THREE.MathUtils.degToRad(45),
-            z: THREE.MathUtils.degToRad(45),
+            x: THREE.MathUtils.degToRad(14),
+            y: THREE.MathUtils.degToRad(18),
+            z: THREE.MathUtils.degToRad(26),
           },
-          scale: 1.15,
-          dmScale: 0,
-        },
-        {
-          pos: { x: 0, y: 0, z: 0 },
-          rot: { x: 0, y: 0, z: 0 },
           scale: 1,
-          dmScale: 0,
-          duration: 1,
+          dmScale: 1.6,
         },
         {
-          pos: { x: 0, y: 0, z: 0 },
-          rot: { x: 0, y: 0, z: THREE.MathUtils.degToRad(40) },
-          scale: 2.5,
-          dmScale: -5,
-          duration: 1,
+          pos: { x: 0, y: -0.3, z: 0 },
+          rot: { x: 0, y: 0, z: 0 },
+          scale: 1.2,
+          dmScale: 0,
+        },
+        {
+          pos: { x: -0.3, y: -1.4, z: 0 },
+          rot: {
+            x: THREE.MathUtils.degToRad(8),
+            y: THREE.MathUtils.degToRad(-18),
+            z: THREE.MathUtils.degToRad(-32),
+          },
+          scale: 1.9,
+          dmScale: -2.2,
         },
       ],
       mat: undefined,
@@ -94,16 +96,19 @@ class ThreeVisual {
       steps: [
         {
           pos: { x: -0.25, y: 0, z: 0 },
-          rot: { x: 0, y: 0, z: THREE.MathUtils.degToRad(-30) },
+          rot: {
+            x: THREE.MathUtils.degToRad(10),
+            y: THREE.MathUtils.degToRad(-2),
+            z: THREE.MathUtils.degToRad(-30),
+          },
           scale: 0.6,
-          dmScale: 1,
+          dmScale: 1.5,
         },
         {
-          pos: { x: 0, y: 0, z: 0 },
-          rot: { x: 0, y: 0, z: 0 },
-          scale: 0.7,
+          pos: { x: 0, y: -0.2, z: 0 },
+          rot: { x: 0, y: 0, z: THREE.MathUtils.degToRad(-10) },
+          scale: 0.87,
           dmScale: 0,
-          duration: 1,
         },
         {
           pos: { x: -0.25, y: 0, z: 0 },
@@ -114,7 +119,6 @@ class ThreeVisual {
           },
           scale: 1,
           dmScale: -2,
-          duration: 1,
         },
       ],
       mat: undefined,
@@ -138,7 +142,6 @@ class ThreeVisual {
           rot: { x: 0, y: 0, z: 0 },
           scale: 0.9,
           dmScale: 0,
-          duration: 1,
         },
         {
           pos: { x: -0.5, y: 0, z: 0 },
@@ -149,7 +152,43 @@ class ThreeVisual {
           },
           scale: 1,
           dmScale: -2,
-          duration: 1,
+        },
+      ],
+      mat: undefined,
+      plane: undefined,
+    },
+    {
+      url: '03',
+      film: 'Transit',
+      director: 'Jizz Lee, Vanniall',
+      w: 1916,
+      h: 802,
+      steps: [
+        {
+          pos: { x: 0, y: -0.1, z: 0 },
+          rot: {
+            x: THREE.MathUtils.degToRad(6),
+            y: THREE.MathUtils.degToRad(0),
+            z: THREE.MathUtils.degToRad(-32),
+          },
+          scale: 0.48,
+          dmScale: 1.5,
+        },
+        {
+          pos: { x: -0.6, y: 0, z: 0 },
+          rot: { x: 0, y: 0, z: THREE.MathUtils.degToRad(-30) },
+          scale: 0.64,
+          dmScale: 0,
+        },
+        {
+          pos: { x: 0, y: -0.6, z: 0.2 },
+          rot: {
+            x: THREE.MathUtils.degToRad(48),
+            y: THREE.MathUtils.degToRad(-32),
+            z: THREE.MathUtils.degToRad(-32),
+          },
+          scale: 0.64,
+          dmScale: -1.1,
         },
       ],
       mat: undefined,
@@ -227,10 +266,57 @@ class ThreeVisual {
     document.body.appendChild(this.stats.dom);
 
     this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-
-    // const controls = new OrbitControls(camera, renderer.domElement);
-    // controls.update();
   }
+
+  initDatGUI = async () => {
+    const dat = await import('dat.gui');
+    const gui = new dat.GUI();
+
+    const step = this.texture!.steps[this.stepId];
+
+    var tempValues = {
+      rotX: THREE.MathUtils.radToDeg(step.rot.x),
+      rotY: THREE.MathUtils.radToDeg(step.rot.y),
+      rotZ: THREE.MathUtils.radToDeg(step.rot.z),
+      scale: step.scale,
+      dmScale: step.dmScale,
+    };
+
+    const position = gui.addFolder('Position');
+
+    position.add(this.texture!.plane!.position, 'x', -2, 2).step(0.1);
+    position.add(this.texture!.plane!.position, 'y', -2, 2).step(0.1);
+    position.add(this.texture!.plane!.position, 'z', -2, 2).step(0.1);
+    position.open();
+
+    const rotation = gui.addFolder('Rotation');
+
+    rotation.add(tempValues, 'rotX', -90, 90).onChange(() => {
+      this.texture!.plane!.rotation.x = THREE.MathUtils.degToRad(tempValues.rotX);
+    });
+    rotation.add(tempValues, 'rotY', -90, 90).onChange(() => {
+      this.texture!.plane!.rotation.y = THREE.MathUtils.degToRad(tempValues.rotY);
+    });
+    rotation.add(tempValues, 'rotZ', -90, 90).onChange(() => {
+      this.texture!.plane!.rotation.z = THREE.MathUtils.degToRad(tempValues.rotZ);
+    });
+    rotation.open();
+
+    gui.add(tempValues, 'scale', 0, 3).onChange(() => {
+      this.texture!.plane!.scale.set(
+        tempValues.scale * (this.texture!.w / this.texture!.h),
+        tempValues.scale,
+        1,
+      );
+    });
+
+    gui
+      .add(tempValues, 'dmScale', -5, 5)
+      .step(0.1)
+      .onChange(() => {
+        this.texture!.mat!.displacementScale = tempValues.dmScale;
+      });
+  };
 
   setTexture = () => {
     if (this.texture) {
@@ -252,11 +338,6 @@ class ThreeVisual {
     this.container!.add(this.texture.plane!);
   };
 
-  switchTexture = () => {
-    this.switchStep();
-    this.setTexture();
-  };
-
   switchStep = () => {
     if (this.stepId < this.texture!.steps.length - 1) {
       this.stepId++;
@@ -265,7 +346,7 @@ class ThreeVisual {
     }
   };
 
-  animateStep = (delayIn = 0) => {
+  animateStep = (startDelayIn = 0) => {
     let step = this.texture!.steps[this.stepId];
 
     if (this.timeline) {
@@ -275,7 +356,7 @@ class ThreeVisual {
 
     if (this.stepId === 1 && this.texture!.mat) {
       this.timeline.to(this.texture!.mat, {
-        delay: delayIn,
+        delay: startDelayIn,
         opacity: 1,
         duration: this.animation.opacityDurationIn,
         onStart: this.udpateCredits,
@@ -284,14 +365,15 @@ class ThreeVisual {
 
     this.timeline.to(this.texture!.plane!.position, {
       ...step.pos,
-      duration: step.duration,
+      duration: this.animation.duration,
+      delay: this.stepId === 1 ? this.animation.delayIn : 0,
       ease: this.animation.ease,
     });
     this.timeline.to(
       this.texture!.plane!.rotation,
       {
         ...step.rot,
-        duration: step.duration,
+        duration: this.animation.duration,
         ease: this.animation.ease,
       },
       '<',
@@ -301,7 +383,7 @@ class ThreeVisual {
       {
         x: step.scale * (this.texture!.w / this.texture!.h),
         y: step.scale,
-        duration: step.duration,
+        duration: this.animation.duration,
         ease: this.animation.ease,
       },
       '<',
@@ -310,7 +392,7 @@ class ThreeVisual {
       this.texture!.mat!,
       {
         displacementScale: step.dmScale,
-        duration: step.duration,
+        duration: this.animation.duration,
         ease: this.animation.ease,
         onComplete: () => {
           if (this.stepId < this.texture!.steps.length - 1) {
@@ -325,6 +407,7 @@ class ThreeVisual {
       this.timeline.to(this.texture!.mat, {
         opacity: 0,
         duration: this.animation.opacityDurationIn,
+        delay: this.animation.delayOut,
         onComplete: () => {
           if (this.textureId < this.textures.length - 1) {
             this.textureId++;
@@ -369,14 +452,13 @@ class ThreeVisual {
 
       if (this.testStep === undefined) {
         this.switchStep();
-        this.animateStep(this.animation.delayIn);
+        this.animateStep(this.animation.startDelayIn);
+      } else {
+        this.initDatGUI();
       }
 
       this.renderer!.setAnimationLoop(this.render);
 
-      if (this.testStep !== undefined) {
-        document.addEventListener('click', this.switchTexture);
-      }
       document.addEventListener('mousemove', this.onMouseMove);
       document.addEventListener('scroll', this.onScrollDebounced, { passive: true });
       window.addEventListener('resize', this.onResize);
@@ -391,9 +473,6 @@ class ThreeVisual {
       this.renderer!.setAnimationLoop(null);
       gsap.globalTimeline.clear();
 
-      if (this.testStep !== undefined) {
-        document.removeEventListener('click', this.switchTexture);
-      }
       document.removeEventListener('mousemove', this.onMouseMove);
       document.removeEventListener('scroll', this.onScrollDebounced);
       window.removeEventListener('resize', this.onResize);
@@ -461,7 +540,7 @@ const Visual = () => {
          * will always call the start() twice, as the component
          * is mounted twice in dev mode.
          */
-        threeVisual.kill();
+        // threeVisual.kill();
         containerRef?.removeChild(threeVisual.renderer.domElement);
       }
     };

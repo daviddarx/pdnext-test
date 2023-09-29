@@ -28,3 +28,14 @@
 .visual__caption-film {
   @apply font-semibold uppercase block;
 }
+
+/* DAT.GUI */
+.dg {
+  z-index: 100 !important;
+  right: unset !important;
+  top: 100px !important;
+
+  .close-button {
+    display: none;
+  }
+}
