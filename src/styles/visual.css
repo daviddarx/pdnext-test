@@ -3,10 +3,10 @@
 
   canvas {
     @apply transition-opacity duration-1000;
+  }
 
-    &.faded {
-      @apply opacity-40;
-    }
+  &.faded canvas {
+    @apply opacity-40;
   }
 
   @screen xl {
@@ -18,7 +18,11 @@
 }
 
 .visual__caption {
-  @apply absolute z-10 bottom-0 right-0 p-gutter text-xs text-right;
+  @apply absolute z-10 bottom-0 right-0 p-gutter text-xs text-right transition-opacity duration-1000;
+
+  .faded & {
+    @apply opacity-0;
+  }
 }
 
 .visual__caption-film {

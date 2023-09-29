@@ -17,7 +17,7 @@ type AnimationStep = {
   rot: Vector3;
   scale: number;
   dmScale: number;
-  duration: number;
+  duration?: number;
 };
 
 type Texture = {
@@ -42,6 +42,13 @@ class ThreeVisual {
   windowW = 0;
   windowH = 0;
 
+  animation = {
+    delayIn: 1,
+    opacityDurationIn: 1,
+    opacityDurationOut: 1,
+    ease: 'power2.inOut',
+  };
+
   textures: Texture[] = [
     {
       url: '01',
@@ -55,7 +62,6 @@ class ThreeVisual {
           rot: { x: 0, y: 0, z: THREE.MathUtils.degToRad(45) },
           scale: 1.15,
           dmScale: 1.5,
-          duration: 1,
         },
         {
           pos: { x: 0, y: 0, z: 0 },
@@ -87,7 +93,6 @@ class ThreeVisual {
           rot: { x: 0, y: 0, z: THREE.MathUtils.degToRad(-30) },
           scale: 0.6,
           dmScale: 2,
-          duration: 1,
         },
         {
           pos: { x: 0, y: 0, z: 0 },
@@ -117,10 +122,6 @@ class ThreeVisual {
   stepId = 0;
   running = false;
   timeline: GSAPTimeline | undefined = undefined;
-  animation = {
-    easeStep: 'back.inOut',
-    easeReinit: 'power2.inOut',
-  };
   testId: number | undefined = undefined;
   testStep: number | undefined = undefined;
 
@@ -205,12 +206,11 @@ class ThreeVisual {
     this.texture.plane!.rotation.set(step.rot.x, step.rot.y, step.rot.z);
     this.texture.plane!.scale.set(step.scale * (this.texture.w / this.texture.h), step.scale, 1);
     this.texture.mat!.displacementScale = step.dmScale;
+    if (this.testStep === undefined) {
+      this.texture.mat!.opacity = 0;
+    }
 
     this.container!.add(this.texture.plane!);
-
-    setTimeout(() => {
-      this.udpateCredits();
-    }, 1000);
   };
 
   switchTexture = () => {
@@ -226,41 +226,34 @@ class ThreeVisual {
     }
   };
 
-  animateStep = () => {
-    //  this.switchStep();
-    console.log('animation start');
+  animateStep = (delayIn = 0) => {
     let step = this.texture!.steps[this.stepId];
-    let stepEase: string;
-
-    if (this.stepId === 0) {
-      stepEase = this.animation.easeStep;
-      if (this.texture!.mat) {
-        this.texture!.mat.opacity = 0;
-        gsap.to(this.texture!.mat, {
-          opacity: 1,
-          duration: 1,
-        });
-      }
-    } else {
-      stepEase = this.animation.easeReinit;
-    }
 
     if (this.timeline) {
       this.timeline.kill();
     }
     this.timeline = gsap.timeline();
 
+    if (this.stepId === 1 && this.texture!.mat) {
+      this.timeline.to(this.texture!.mat, {
+        delay: delayIn,
+        opacity: 1,
+        duration: this.animation.opacityDurationIn,
+        onStart: this.udpateCredits,
+      });
+    }
+
     this.timeline.to(this.texture!.plane!.position, {
       ...step.pos,
       duration: step.duration,
-      ease: stepEase,
+      ease: this.animation.ease,
     });
     this.timeline.to(
       this.texture!.plane!.rotation,
       {
         ...step.rot,
         duration: step.duration,
-        ease: stepEase,
+        ease: this.animation.ease,
       },
       '<',
     );
@@ -270,7 +263,7 @@ class ThreeVisual {
         x: step.scale * (this.texture!.w / this.texture!.h),
         y: step.scale,
         duration: step.duration,
-        ease: stepEase,
+        ease: this.animation.ease,
       },
       '<',
     );
@@ -279,10 +272,34 @@ class ThreeVisual {
       {
         displacementScale: step.dmScale,
         duration: step.duration,
-        ease: stepEase,
+        ease: this.animation.ease,
+        onComplete: () => {
+          if (this.stepId < this.texture!.steps.length - 1) {
+            this.stepId++;
+            this.animateStep();
+          }
+        },
       },
       '<',
     );
+    if (this.stepId === this.texture!.steps.length - 1 && this.texture!.mat) {
+      this.timeline.to(this.texture!.mat, {
+        opacity: 0,
+        duration: this.animation.opacityDurationIn,
+        onComplete: () => {
+          if (this.textureId < this.textures.length - 1) {
+            this.textureId++;
+          } else {
+            this.textureId = 0;
+          }
+
+          this.stepId = 0;
+          this.setTexture();
+          this.stepId = 1;
+          this.animateStep();
+        },
+      });
+    }
   };
 
   udpateCredits = () => {
@@ -310,7 +327,11 @@ class ThreeVisual {
       this.stepId = this.testStep !== undefined ? this.testStep : 0;
 
       this.setTexture();
-      this.animateStep();
+
+      if (this.testStep === undefined) {
+        this.switchStep();
+        this.animateStep(this.animation.delayIn);
+      }
 
       this.renderer!.setAnimationLoop(this.render);
 
@@ -351,12 +372,12 @@ class ThreeVisual {
   onScroll = () => {
     if (window.scrollY > 200) {
       if (!this.isFaded) {
-        this.renderer?.domElement.classList.add('faded');
+        document.querySelector('.visual')!.classList.add('faded');
         this.isFaded = true;
       }
     } else {
       if (this.isFaded) {
-        this.renderer?.domElement.classList.remove('faded');
+        document.querySelector('.visual')!.classList.remove('faded');
         this.isFaded = false;
       }
     }
@@ -398,8 +419,8 @@ const Visual = () => {
       if (threeVisual?.renderer) {
         /**
          * Comment the .kill() out to develop, if else it
-         * will always call the start() twice, as the it mounted
-         * twice in dev mode.
+         * will always call the start() twice, as the component
+         * is mounted twice in dev mode.
          */
         threeVisual.kill();
         containerRef?.removeChild(threeVisual.renderer.domElement);
