@@ -540,7 +540,7 @@ const Visual = () => {
          * will always call the start() twice, as the component
          * is mounted twice in dev mode.
          */
-        // threeVisual.kill();
+        threeVisual.kill();
         containerRef?.removeChild(threeVisual.renderer.domElement);
       }
     };
