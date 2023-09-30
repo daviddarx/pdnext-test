@@ -2,8 +2,8 @@
   @apply w-full h-full overflow-y-auto overscroll-contain;
   @apply p-gutter pb-0 bg-white outline outline-1 outline-black;
 
-  background-color: #170e1e;
-  /* color: #0b0212;
+  background-color: white;
+  color: #0b0212;
 
   h1,
   h2,
@@ -12,7 +12,7 @@
   h5,
   h6 {
     color: #0b0212;
-  } */
+  }
 }
 
 .event-detail__header {
