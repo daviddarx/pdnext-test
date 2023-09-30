@@ -1,19 +1,8 @@
 .visual {
-  @apply fixed -z-10 top-0 left-0 w-full h-full pointer-events-none overflow-hidden;
+  @apply fixed -z-10 top-0 left-0 w-full h-full pointer-events-none;
 
   canvas {
-    @apply transition-opacity duration-1000;
-  }
-
-  &.faded canvas {
     @apply opacity-40;
-  }
-
-  @screen xl {
-    canvas {
-      position: relative;
-      margin-left: 25vw;
-    }
   }
 }
 
@@ -32,8 +21,6 @@
 /* DAT.GUI */
 .dg {
   z-index: 100 !important;
-  right: unset !important;
-  top: 100px !important;
 
   .close-button {
     display: none;
