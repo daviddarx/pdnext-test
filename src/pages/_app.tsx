@@ -146,7 +146,6 @@ const App = ({ Component, pageProps }: AppProps) => {
         <AnimatePresence mode='wait' initial={false} onExitComplete={handleExitComplete}>
           <Component key={pageKey} {...pageProps} />
         </AnimatePresence>
-        <RainbowBackground />
         <VideoOverlay />
         <CookieBanner />
       </div>

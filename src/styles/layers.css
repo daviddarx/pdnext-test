@@ -23,6 +23,8 @@
     @apply leading-title tracking-title uppercase;
 
     font-family: var(--font-title);
+
+    color: white;
   }
 
   h1,
@@ -105,6 +107,10 @@
     @apply bg-white rounded-full border border-black;
     @apply transition-colors duration-200 ease-out;
 
+    background-color: #07aed9;
+    color: #0b0212;
+    border: 0px;
+
     font-family: var(--font-title);
 
     .dark & {
@@ -118,6 +124,8 @@
     @media (hover: hover) {
       &:hover {
         @apply bg-black text-white;
+        background-color: #ff4147;
+        color: #0b0212;
       }
     }
 
@@ -133,6 +141,9 @@
   .tag--inverted,
   .tag--active {
     @apply bg-black text-white;
+
+    background-color: #ff4147;
+    color: #0b0212;
   }
 
   .tag--active {

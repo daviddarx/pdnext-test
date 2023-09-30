@@ -10,6 +10,8 @@
   @screen xl {
     @apply border-r border-black;
 
+    border-color: rgba(255, 255, 255, 0.2);
+
     padding-top: calc(var(--gutter) + var(--h-logo));
   }
 }
@@ -20,6 +22,8 @@
 
 .program-page__subtitle {
   @apply block subline subline--above-title;
+
+  color: #ff4147;
 }
 
 .program-page__subtitle-separation {
@@ -31,13 +35,16 @@
 }
 
 .program-page__detail {
-  @apply fixed z-10 top-0 left-0 w-0 h-screen pointer-events-none;
+  @apply fixed z-10 top-0 left-0  h-screen pointer-events-none;
 
   @screen xl {
     @apply sticky left-auto w-auto overflow-hidden;
     /* will-change: transform; */
     transform: translateZ(0);
   }
+
+  overflow: hidden;
+  width: 100%;
 }
 
 .program-page__detail--opened {
@@ -52,6 +59,9 @@
   @apply fixed z-20 right-gutter top-gutter;
   @apply bg-white;
   @apply transform-3d transition-transform duration-500 ease-out-back;
+
+  background-color: #07aed9;
+  color: #0b0212 !important;
 
   --tw-translate-y: var(--height-topbar);
   --tw-translate-z: 0;

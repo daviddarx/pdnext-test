@@ -3,6 +3,9 @@
   @apply bg-black border border-pink rounded-full;
   @apply transform-3d transition-transform duration-500 ease-out-back;
 
+  background-color: #ff4147;
+  border: 0px;
+
   width: var(--size-burger);
   height: var(--size-burger);
 
@@ -35,6 +38,8 @@
   @apply absolute top-1/2 left-1/2;
   @apply -translate-x-1/2 -translate-y-1/2;
   @apply bg-pink rounded-full;
+
+  background-color: #0b0212;
 
   --size-icon: calc(var(--size-burger) * 0.15);
   width: var(--size-icon);

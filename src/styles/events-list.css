@@ -13,4 +13,10 @@
   @apply px-gutter pt-[1em] pb-[0.75em];
   @apply subline;
   @apply bg-black text-white;
+
+  background-color: #07aed9;
+  color: #0b0212;
+
+  background-color: #231b2a; /* rgba(255, 255, 255, 0.1); */
+  color: white;
 }

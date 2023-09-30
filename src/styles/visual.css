@@ -2,7 +2,7 @@
   @apply fixed -z-10 top-0 left-0 w-full h-full pointer-events-none;
 
   canvas {
-    @apply opacity-30;
+    @apply opacity-10;
   }
 }
 
