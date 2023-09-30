@@ -3,8 +3,6 @@
   @apply border-t border-black;
   @apply transition-colors duration-300 ease-out;
 
-  border-color: rgba(255, 255, 255, 0.2);
-
   @screen xl {
     @apply py-gutter-3/4;
   }
@@ -35,8 +33,6 @@
 .event__hour {
   @apply relative inline-block w-[4em] shrink-0 text-base -top-[0.15em];
 
-  color: #07aed9;
-
   @screen 2xl {
     @apply -top-[0.1em];
   }
@@ -48,14 +44,10 @@
 
 .event__subtitle {
   @apply font-semibold leading-tight mb-[0.2em];
-
-  color: #07aed9;
 }
 
 .event__details {
   @apply leading-tight;
-
-  color: #07aed9;
 }
 
 .event__special-state {

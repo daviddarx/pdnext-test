@@ -10,7 +10,7 @@
   @screen xl {
     @apply border-r border-black;
 
-    border-color: rgba(255, 255, 255, 0.2);
+    border-color: #0b0212;
 
     padding-top: calc(var(--gutter) + var(--h-logo));
   }
@@ -22,8 +22,6 @@
 
 .program-page__subtitle {
   @apply block subline subline--above-title;
-
-  color: #ff4147;
 }
 
 .program-page__subtitle-separation {
@@ -35,7 +33,7 @@
 }
 
 .program-page__detail {
-  @apply fixed z-10 top-0 left-0  h-screen pointer-events-none;
+  @apply fixed z-10 top-0 left-0 w-0 h-screen pointer-events-none;
 
   @screen xl {
     @apply sticky left-auto w-auto overflow-hidden;
@@ -60,7 +58,7 @@
   @apply bg-white;
   @apply transform-3d transition-transform duration-500 ease-out-back;
 
-  background-color: #07aed9;
+  background-color: #1dc8f4;
   color: #0b0212 !important;
 
   --tw-translate-y: var(--height-topbar);

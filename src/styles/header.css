@@ -10,7 +10,7 @@
     @apply flex justify-between px-gutter py-gutter;
     @apply bg-transparent border-b border-current;
 
-    border-color: rgba(255, 255, 255, 0.2);
+    border-color: #0b0212;
   }
 
   @screen xl {
@@ -24,8 +24,6 @@
 
 .header__top-bar-title {
   @apply subline;
-
-  color: #07aed9;
 }
 
 .header__logo-link {

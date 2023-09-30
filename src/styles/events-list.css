@@ -14,9 +14,9 @@
   @apply subline;
   @apply bg-black text-white;
 
-  background-color: #07aed9;
+  background-color: #1dc8f4;
   color: #0b0212;
 
-  background-color: #231b2a; /* rgba(255, 255, 255, 0.1); */
+  background-color: #0b0212; /* rgba(255, 255, 255, 0.1); */
   color: white;
 }
