@@ -262,8 +262,8 @@ class ThreeVisual {
     this.light = new THREE.AmbientLight(0xffffff, 3);
     this.scene.add(this.light);
 
-    this.stats = new Stats();
-    document.body.appendChild(this.stats.dom);
+    // this.stats = new Stats();
+    // document.body.appendChild(this.stats.dom);
 
     this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
   }
@@ -430,7 +430,7 @@ class ThreeVisual {
   };
 
   render = () => {
-    this.stats!.update();
+    // this.stats!.update();
 
     this.container!.rotation.x += (this.rotX - this.container!.rotation.x) * this.rotXFactorEase;
     this.container!.rotation.y += (this.rotY - this.container!.rotation.y) * this.rotYFactorEase;
