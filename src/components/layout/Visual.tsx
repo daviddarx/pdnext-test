@@ -40,9 +40,9 @@ class ThreeVisual {
   windowH = 0;
 
   animation = {
-    duration: 7,
-    delayIn: 7,
-    delayOut: 4,
+    duration: 10,
+    delayIn: 3,
+    delayOut: 3,
     startDelayIn: 1,
     opacityDurationIn: 1,
     opacityDurationOut: 1,
@@ -58,30 +58,26 @@ class ThreeVisual {
       h: 1040,
       steps: [
         {
-          pos: { x: -0.2, y: -0.4, z: 0 },
-          rot: {
-            x: THREE.MathUtils.degToRad(14),
-            y: THREE.MathUtils.degToRad(18),
-            z: THREE.MathUtils.degToRad(26),
-          },
+          pos: { x: 0, y: 0, z: 1.2 },
+          rot: { x: 0, y: 0, z: THREE.MathUtils.degToRad(-61) },
           scale: 1,
-          dmScale: 1.6,
+          dmScale: 1,
         },
         {
-          pos: { x: 0, y: -0.3, z: 0 },
-          rot: { x: 0, y: 0, z: 0 },
-          scale: 1.2,
+          pos: { x: 0, y: -0.4, z: 0 },
+          rot: { x: 0, y: 0, z: THREE.MathUtils.degToRad(-61) },
+          scale: 2.2,
           dmScale: 0,
         },
         {
-          pos: { x: -0.3, y: -1.4, z: 0 },
+          pos: { x: -0.3, y: -1.1, z: 1.5 },
           rot: {
             x: THREE.MathUtils.degToRad(8),
             y: THREE.MathUtils.degToRad(-18),
             z: THREE.MathUtils.degToRad(-32),
           },
-          scale: 1.9,
-          dmScale: -2.2,
+          scale: 3,
+          dmScale: -4.2,
         },
       ],
       mat: undefined,
@@ -95,30 +91,30 @@ class ThreeVisual {
       h: 883,
       steps: [
         {
-          pos: { x: -0.25, y: 0, z: 0 },
+          pos: { x: 0.2, y: 0, z: 0.4 },
           rot: {
-            x: THREE.MathUtils.degToRad(10),
-            y: THREE.MathUtils.degToRad(-2),
+            x: THREE.MathUtils.degToRad(-10),
+            y: THREE.MathUtils.degToRad(-13.8),
             z: THREE.MathUtils.degToRad(-30),
           },
-          scale: 0.6,
-          dmScale: 1.5,
+          scale: 0.55,
+          dmScale: 1.8,
         },
         {
-          pos: { x: 0, y: -0.2, z: 0 },
+          pos: { x: 0.2, y: 0.1, z: 0.7 },
           rot: { x: 0, y: 0, z: THREE.MathUtils.degToRad(-10) },
           scale: 0.87,
           dmScale: 0,
         },
         {
-          pos: { x: -0.25, y: 0, z: 0 },
+          pos: { x: -0.8, y: 0.4, z: 1.3 },
           rot: {
-            x: THREE.MathUtils.degToRad(40),
+            x: THREE.MathUtils.degToRad(24),
             y: THREE.MathUtils.degToRad(-40),
             z: THREE.MathUtils.degToRad(-30),
           },
           scale: 1,
-          dmScale: -2,
+          dmScale: -1.3,
         },
       ],
       mat: undefined,
@@ -132,23 +128,27 @@ class ThreeVisual {
       h: 883,
       steps: [
         {
-          pos: { x: -0, y: 0, z: 0 },
-          rot: { x: 0, y: 0, z: THREE.MathUtils.degToRad(-30) },
-          scale: 0.4,
+          pos: { x: 0.9, y: 0.2, z: 0 },
+          rot: {
+            x: THREE.MathUtils.degToRad(0),
+            y: THREE.MathUtils.degToRad(-16),
+            z: THREE.MathUtils.degToRad(-18),
+          },
+          scale: 0.61,
           dmScale: 3,
         },
         {
-          pos: { x: 0, y: 0, z: 0 },
-          rot: { x: 0, y: 0, z: 0 },
+          pos: { x: 1.2, y: 0, z: 0.5 },
+          rot: { x: THREE.MathUtils.degToRad(2), y: 0, z: 0 },
           scale: 0.9,
           dmScale: 0,
         },
         {
-          pos: { x: -0.5, y: 0, z: 0 },
+          pos: { x: 0.3, y: 0.7, z: 0.7 },
           rot: {
-            x: THREE.MathUtils.degToRad(0),
-            y: THREE.MathUtils.degToRad(-40),
-            z: THREE.MathUtils.degToRad(-30),
+            x: THREE.MathUtils.degToRad(-26),
+            y: THREE.MathUtils.degToRad(-61),
+            z: THREE.MathUtils.degToRad(-29.9),
           },
           scale: 1,
           dmScale: -2,
@@ -165,27 +165,31 @@ class ThreeVisual {
       h: 802,
       steps: [
         {
-          pos: { x: 0, y: -0.1, z: 0 },
+          pos: { x: 0.2, y: 0, z: -0.4 },
           rot: {
-            x: THREE.MathUtils.degToRad(6),
+            x: THREE.MathUtils.degToRad(-23.69),
             y: THREE.MathUtils.degToRad(0),
-            z: THREE.MathUtils.degToRad(-32),
+            z: THREE.MathUtils.degToRad(-19.72),
           },
-          scale: 0.48,
-          dmScale: 1.5,
+          scale: 0.64,
+          dmScale: 1.8,
         },
         {
-          pos: { x: -0.6, y: 0, z: 0 },
-          rot: { x: 0, y: 0, z: THREE.MathUtils.degToRad(-30) },
+          pos: { x: -0.2, y: 0, z: 0.8 },
+          rot: {
+            x: THREE.MathUtils.degToRad(0),
+            y: THREE.MathUtils.degToRad(0),
+            z: THREE.MathUtils.degToRad(0),
+          },
           scale: 0.64,
           dmScale: 0,
         },
         {
-          pos: { x: 0, y: -0.6, z: 0.2 },
+          pos: { x: -0.3, y: -0.3, z: 0.9 },
           rot: {
-            x: THREE.MathUtils.degToRad(48),
+            x: THREE.MathUtils.degToRad(41.82),
             y: THREE.MathUtils.degToRad(-32),
-            z: THREE.MathUtils.degToRad(-32),
+            z: THREE.MathUtils.degToRad(2.12),
           },
           scale: 0.64,
           dmScale: -1.1,
@@ -316,6 +320,21 @@ class ThreeVisual {
       .onChange(() => {
         this.texture!.mat!.displacementScale = tempValues.dmScale;
       });
+
+    document.addEventListener('click', () => {
+      navigator.clipboard.writeText(`{
+          pos: { x: ${parseFloat(this.texture!.plane!.position.x.toFixed(2))}, y: ${parseFloat(
+        this.texture!.plane!.position.y.toFixed(2),
+      )}, z: ${parseFloat(this.texture!.plane!.position.z.toFixed(2))},},
+          rot: {
+            x: THREE.MathUtils.degToRad(${parseFloat(tempValues.rotX.toFixed(2))}),
+            y: THREE.MathUtils.degToRad(${parseFloat(tempValues.rotY.toFixed(2))}),
+            z: THREE.MathUtils.degToRad(${parseFloat(tempValues.rotZ.toFixed(2))}),
+          },
+          scale: ${parseFloat(tempValues.scale.toFixed(2))},
+          dmScale: ${parseFloat(tempValues.dmScale.toFixed(2))},
+        },`);
+    });
   };
 
   setTexture = () => {
