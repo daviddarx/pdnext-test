@@ -1,15 +1,39 @@
 [
   {
-    "title": "Riff Raff",
-    "link": "https://www.riffraff.ch/",
-    "logo": "LogoRiffRaff",
-    "label": "Venue Partner"
+    "title": "Migros Kulturpozent",
+    "link": "https://engagement.migros.ch/de/kulturprozent",
+    "logo": "LogoMigros",
+    "label": "Finanzielle Unterstützung"
   },
   {
-    "title": "25 Hours Hotel Langstrasse",
-    "link": "https://www.25hours-hotels.com/hotels/zuerich/langstrasse/",
-    "logo": "Logo25h",
-    "label": "Hotel Partner"
+    "title": "Kanton Zürich Fachstelle Kultur",
+    "link": "https://www.zh.ch/de/direktion-der-justiz-und-des-innern/fachstelle-kultur.html",
+    "logo": "LogoZurichFK",
+    "label": "Finanzielle Unterstützung"
+  },
+  {
+    "title": "Kultur Stadt Zürich",
+    "link": "https://www.stadt-zuerich.ch/prd/de/index/kultur.html",
+    "logo": "LogoKulturStadtZurich",
+    "label": "Finanzielle Unterstützung"
+  },
+  {
+    "title": "Stiftung Temperatio",
+    "link": "https://temperatio.ch/",
+    "logo": "LogoTemperatio",
+    "label": "Finanzielle Unterstützung"
+  },
+  {
+    "title": "Ernst und Olga Gubler-Hablützel Stiftung",
+    "link": "https://gubler-habluetzel.ch/",
+    "logo": "LogoEOGH",
+    "label": "Finanzielle Unterstützung"
+  },
+  {
+    "title": "Cassinelli-Vogel-Stiftung",
+    "link": "https://cassinelli-vogel-stiftung.ch/",
+    "logo": "LogoCVS",
+    "label": "Finanzielle Unterstützung"
   },
   {
     "title": "Reseau Cinema",
@@ -18,10 +42,10 @@
     "label": "Mit Unterstützung von"
   },
   {
-    "title": "Kino Xenix",
-    "link": "https://xenix.ch/",
-    "logo": "LogoXenix",
-    "label": "Venue Partner"
+    "title": "25 Hours Hotel Langstrasse",
+    "link": "https://www.25hours-hotels.com/hotels/zuerich/langstrasse/",
+    "logo": "Logo25h",
+    "label": "Hotel Partner:in"
   },
   {
     "title": "Lily's",
@@ -30,15 +54,105 @@
     "label": "Food Partner"
   },
   {
+    "title": "Restaurant Osso",
+    "link": "https://ossozuerich.ch/",
+    "logo": "LogoOsso",
+    "label": "Restaurant Partner:in"
+  },
+  {
+    "title": "John Baker",
+    "link": "https://johnbaker.ch/",
+    "logo": "LogoJohnBaker",
+    "label": "Sachsponsoring"
+  },
+  {
+    "title": "Einhorn",
+    "link": "https://einhorn.my/",
+    "logo": "LogoEinhorn",
+    "label": "Sachsponsoring"
+  },
+  {
+    "title": "Marinello",
+    "link": "https://www.marinello.ch/",
+    "logo": "LogoMarinello",
+    "label": "Sachsponsoring"
+  },
+  {
+    "title": "Die Wochenzeitung WOZ",
+    "link": "https://www.woz.ch/",
+    "logo": "LogoWOZ",
+    "label": "Media Partner:in"
+  },
+  {
+    "title": "Riff Raff",
+    "link": "https://www.riffraff.ch/",
+    "logo": "LogoRiffRaff",
+    "label": "Kultur Partner:in"
+  },
+  {
+    "title": "Kino Xenix",
+    "link": "https://xenix.ch/",
+    "logo": "LogoXenix",
+    "label": "Kultur Partner:in"
+  },
+  {
     "title": "Cinématèque suisse",
     "link": "https://www.cinematheque.ch/",
     "logo": "LogoCinemateque",
-    "label": "Partner"
+    "label": "Kultur Partner:in"
   },
   {
-    "title": "Elastiq",
-    "link": "http://elastiq.ch/",
-    "logo": "LogoElastiq",
-    "label": "Web Partner"
+    "title": "Schauspielhaus",
+    "link": "https://www.schauspielhaus.ch/",
+    "logo": "LogoSchauspielhaus",
+    "label": "Kultur Partner:in"
+  },
+  {
+    "title": "Das Gleis",
+    "link": "https://dasgleis.ch/",
+    "logo": "LogoGleis",
+    "label": "Kultur Partner:in"
+  },
+  {
+    "title": "Langstrasse 200",
+    "link": "https://langstrasse200.ch/",
+    "logo": "LogoLS200",
+    "label": "Kultur Partner:in"
+  },
+  {
+    "title": "Exil",
+    "link": "https://exil.club/",
+    "logo": "LogoExil",
+    "label": "Kultur Partner:in"
+  },
+  {
+    "title": "Baby Angel",
+    "link": "https://www.instagram.com/babyangelpr/",
+    "logo": "LogoBabyAngel",
+    "label": "Kultur Partner:in"
+  },
+  {
+    "title": "Edition Moderne",
+    "link": "https://www.editionmoderne.ch/",
+    "logo": "LogoEditionModerne",
+    "label": "Kultur Partner:in"
+  },
+  {
+    "title": "Paranoia City",
+    "link": "https://paranoiacity.ch/",
+    "logo": "LogoParanoiaCity",
+    "label": "Kultur Partner:in"
+  },
+  {
+    "title": "Shedhalle",
+    "link": "https://shedhalle.ch/",
+    "logo": "LogoShedhalle",
+    "label": "Kultur Partner:in"
+  },
+  {
+    "title": "Strapazin",
+    "link": "https://strapazin.ch/",
+    "logo": "LogoStrapazin",
+    "label": "Kultur Partner:in"
   }
 ]
