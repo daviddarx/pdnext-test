@@ -3,7 +3,7 @@
 }
 
 .rainbow-background__canvas {
-  @apply absolute w-full h-full opacity-20;
+  @apply absolute w-full h-full;
 }
 
 .rainbow-background__dark-overlay {
