@@ -118,14 +118,14 @@ const ProgramPageLayout: React.FC<Props> = ({ header, children }) => {
         ref={detailRef}
         onKeyDown={handleKeyDown}
       >
+        <Visual />
+
         <EventDetailCloseButton disabled={openedEvent && isDetailInViewport} />
         <EventDetail />
-
         <div className='program-page__mobile-detail-nav'>
           <EventDetailNavigation currentEvent={openedEvent} />
         </div>
       </div>
-      <Visual />
     </section>
   );
 };
