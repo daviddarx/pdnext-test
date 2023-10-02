@@ -1,5 +1,5 @@
 .rainbow-background {
-  @apply fixed -z-20 top-0 left-0 w-full h-full;
+  @apply fixed -z-20 top-0 left-0 w-full h-full opacity-20;
 }
 
 .rainbow-background__canvas {
