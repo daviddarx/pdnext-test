@@ -20,8 +20,12 @@ export const getFocusables = (element: HTMLElement): HTMLElement[] => {
 export const setFocusables = (element: HTMLElement): void => {
   localFocusables = getFocusables(element);
 
+  const scrollY = window.scrollY;
+
   const firstFocusable = localFocusables[0] as HTMLInputElement | undefined;
   firstFocusable?.focus?.();
+
+  window.scrollTo({ top: scrollY });
 };
 
 export const resetFocusables = (): void => {
