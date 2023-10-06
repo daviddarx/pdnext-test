@@ -1,9 +1,9 @@
 .rainbow-background {
-  @apply fixed -z-20 top-0 left-0 w-full h-full opacity-20;
+  @apply fixed -z-10 top-0 left-0 w-full h-full;
 }
 
 .rainbow-background__canvas {
-  @apply absolute w-full h-full;
+  @apply absolute w-full h-full opacity-20;
 }
 
 .rainbow-background__dark-overlay {
