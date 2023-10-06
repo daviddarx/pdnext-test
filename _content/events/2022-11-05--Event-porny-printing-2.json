@@ -9,18 +9,16 @@
       "title": "Ende"
     }
   ],
-  "eventdate": "2022-11-24T18:00:14.330Z",
+  "eventdate": "2022-11-24T17:00:14.330Z",
   "eventlocationlink": "https://www.google.ch/maps/place/Albulastrasse+24,+8048+Zürich/@47.3880136,8.4927092,17z/data=!3m1!4b1!4m5!3m4!1s0x47900bca582fbd93:0xf99dd45aa4561845!8m2!3d47.38801!4d8.4948979?hl=de",
   "price": "69.- pro Siebdruck",
   "layout": "event",
   "eventlocation": "SIEBDRUCK27",
-  "entries": [
-    "porny-printing"
-  ],
-  "desc": "Im geschützten Rahmen fotografierst du deine Genitalien und unter professioneller Anleitung kannst du dann selber einen Siebdruck herstellen.\n\nDa du mit Farben hantieren wirst, bitte nicht deine besten Kleider anziehen.",
   "eventlocationcomplement": "Albulastrasse 24, 8048 Zürich",
+  "entries": ["porny-printing"],
+  "desc": "Im geschützten Rahmen fotografierst du deine Genitalien und unter professioneller Anleitung kannst du dann selber einen Siebdruck herstellen.\n\nDa du mit Farben hantieren wirst, bitte nicht deine besten Kleider anziehen.",
   "ticketsLinkTitle": "ausverkauft",
   "subtitle": "Mach deinen eigenen Siebdruck",
-  "title": "Porny Printing 2",
+  "title": "Porny Printing",
   "specialstate": "sold out"
 }
