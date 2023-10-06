@@ -58,14 +58,19 @@ const ProgramPageLayout: React.FC<Props> = ({ header, children }) => {
 
   useEffect(() => {
     if (openedEvent) {
-      /* Desktop recenter the page when at the bottom */
+      /* Desktop recenter the page when at the bottom of the two-cols layout*/
       if (window.innerWidth >= 1280) {
         const pageRect = pageRef.current!.getBoundingClientRect();
+        const pagePosY = pageRect.top + window.scrollY;
+        const maximalScroll = pagePosY + pageRect.height - window.innerHeight;
 
-        if (window.scrollY > pageRect.height - window.innerHeight) {
-          window.scroll({
-            top: pageRect.height - window.innerHeight,
-            behavior: 'smooth',
+        if (window.scrollY > maximalScroll) {
+          // RAF as the setFocusable() sets focus in the EventDetail and reinit the scroll to avoid jump.
+          requestAnimationFrame(() => {
+            window.scroll({
+              top: maximalScroll,
+              behavior: 'smooth',
+            });
           });
         }
       }
@@ -87,7 +92,10 @@ const ProgramPageLayout: React.FC<Props> = ({ header, children }) => {
         eventButtonRef = pageRef.current.querySelector(`[data-id="${openedEvent.id}"] > button`);
         setFocusables(detailRef.current);
       } else {
+        const scrollY = window.scrollY;
         eventButtonRef?.focus?.();
+        window.scrollTo({ top: scrollY });
+
         resetFocusables();
       }
     }
