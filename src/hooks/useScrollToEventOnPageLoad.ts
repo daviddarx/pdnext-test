@@ -19,9 +19,16 @@ export function scrollToEvent(id: string) {
         scrollPos = containerRect.height - window.innerHeight;
       }
 
-      window.scroll({
-        top: scrollPos,
-        behavior: 'smooth',
+      /**
+       * RAF as the EventDetail opening/closing can reinit
+       * the scroll position to avoid jump on focus to the
+       * opened event.
+       */
+      requestAnimationFrame(() => {
+        window.scroll({
+          top: scrollPos,
+          behavior: 'smooth',
+        });
       });
     }
   }
