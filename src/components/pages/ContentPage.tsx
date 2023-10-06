@@ -49,13 +49,17 @@ const ContentPage: React.FC<Props> = ({ data }) => {
     if (hash) scrollToAnchor(hash);
   };
 
-  const scrollToAnchor = (hash: string) => {
-    pageRef?.current?.querySelector(`#${hash.slice(1)}`)?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToAnchor = (hash: string, smooth = true) => {
+    pageRef?.current
+      ?.querySelector(`#${hash.slice(1)}`)
+      ?.scrollIntoView({ behavior: smooth ? 'smooth' : 'instant' });
   };
 
   useEffect(() => {
     if (window.location.hash !== '') {
-      scrollToAnchor(window.location.hash);
+      setTimeout(() => {
+        scrollToAnchor(window.location.hash, false);
+      }, 50);
     }
   }, []);
 
