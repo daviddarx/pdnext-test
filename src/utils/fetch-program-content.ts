@@ -37,6 +37,15 @@ export async function fetchProgramContent(): Promise<ProgramContent> {
 
   formatedEvents.sort((a, b) => new Date(a.eventdate).getTime() - new Date(b.eventdate).getTime());
 
+  const formatedEventsTypesSet = new Set();
+  formatedEvents.forEach((event) => {
+    event.types.forEach((typeTitle) => formatedEventsTypesSet.add(typeTitle));
+  });
+
+  const filteredEntryTypes = entryTypes.filter((entryType) =>
+    formatedEventsTypesSet.has(entryType.title),
+  );
+
   const dateClusteredEvents: ClusteredEvents[] = formatedEvents.reduce(
     (current: ClusteredEvents[], event: FormatedEvent) => {
       const index = current.findIndex((item) => item.events[0].date.filter === event.date.filter);
@@ -58,6 +67,6 @@ export async function fetchProgramContent(): Promise<ProgramContent> {
 
   return {
     dateClusteredEvents: dateClusteredEvents,
-    entryTypes: entryTypes,
+    entryTypes: filteredEntryTypes,
   };
 }
