@@ -25,7 +25,14 @@ const Visual = () => {
     <div className='visual'>
       {mounted && (
         <video autoPlay muted loop playsInline className='visual__video'>
-          <source src='https://files.daviddarx.com/pornydays/porny_bg_video.mp4' type='video/mp4' />
+          <source
+            src='https://files.daviddarx.com/pornydays/videos/2023/teaser.webm'
+            type='video/webm'
+          />
+          <source
+            src='https://files.daviddarx.com/pornydays/videos/2023/teaser.mp4'
+            type='video/mp4'
+          />
         </video>
       )}
     </div>
