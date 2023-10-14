@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 
 const Visual = () => {
   const [mounted, setMounted] = useState(false);
-  const minScreenWidth = 1280;
+  const maxScreenWidth = 1280;
 
   useEffect(() => {
     const onResize = () => {
-      if (window.innerWidth <= minScreenWidth && mounted) {
-        setMounted(false);
-      } else if (window.innerWidth > minScreenWidth && !mounted) {
+      if (window.innerWidth < maxScreenWidth) {
         setMounted(true);
+      } else {
+        setMounted(false);
       }
     };
     onResize();
@@ -24,7 +24,7 @@ const Visual = () => {
   return (
     <React.Fragment>
       {mounted && (
-        <div className='visual visual--desktop'>
+        <div className='visual visual--mobile'>
           <video className='visual__video' autoPlay muted loop playsInline>
             <source
               src='https://files.daviddarx.com/pornydays/videos/2023/teaser.webm'

@@ -13,6 +13,7 @@ import SupportUs from '@/components/layout/SupportUs';
 import Partners from '@/components/layout/Partners';
 import Newsletter from '@/components/layout/Newsletter';
 import Footer from '@/components/layout/Footer';
+import VisualMobile from '@/components/layout/VisualMobile';
 
 const motionVariants = {
   initial: {
@@ -68,6 +69,7 @@ const Layout: React.FC<Props> = ({ children, isDark = false, commonPageData }) =
       <Partners data={commonPageData.partnersData} />
       <Newsletter />
       <Footer />
+      <VisualMobile />
     </motion.div>
   );
 };

@@ -1,7 +1,15 @@
 .visual {
-  @apply absolute w-full h-full;
+  @apply w-full h-full pointer-events-none;
 }
 
 .visual__video {
   @apply relative w-full h-full object-cover opacity-20;
+}
+
+.visual--desktop {
+  @apply absolute;
+}
+
+.visual--mobile {
+  @apply fixed top-0 left-0 -z-10;
 }
