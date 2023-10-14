@@ -6,10 +6,18 @@
   @apply relative w-full h-full object-cover opacity-20;
 }
 
+.visual__video--fadedout {
+  @apply opacity-0;
+}
+
 .visual--desktop {
   @apply absolute;
 }
 
 .visual--mobile {
   @apply fixed top-0 left-0 -z-10;
+
+  & .visual__video {
+    @apply transition-opacity duration-500;
+  }
 }
