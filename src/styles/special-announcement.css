@@ -29,8 +29,6 @@
 }
 
 .special-announcement__btn {
-  @apply tag;
-
   @screen max-sm {
     @apply mt-[0.5em] !text-xs;
   }

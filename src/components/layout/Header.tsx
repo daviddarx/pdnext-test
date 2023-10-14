@@ -76,7 +76,7 @@ const Header: React.FC<Props> = ({ commonPageData }) => {
     <header className='header'>
       {(!commonPageData.saveTheDateData.disable ||
         !commonPageData.specialAnnouncementData.disable) && (
-        <div className='header__top-bar' ref={topBarRef}>
+        <div className='header__top-bar max-sm:dark' ref={topBarRef}>
           {!commonPageData.saveTheDateData.disable && (
             <SaveTheDate data={commonPageData.saveTheDateData} />
           )}
