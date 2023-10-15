@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@p5-wrapper/next": "^0.2.0",
+    "@p5-wrapper/react": "^4.2.0",
     "@reduxjs/toolkit": "^1.9.5",
     "classnames": "^2.3.2",
     "detect-browser": "^5.3.0",

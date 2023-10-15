@@ -1,5 +1,5 @@
 .visual {
-  @apply w-full h-full pointer-events-none;
+  @apply relative w-full h-full pointer-events-none;
 }
 
 .visual__video {
