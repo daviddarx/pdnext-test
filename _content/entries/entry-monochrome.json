@@ -1,0 +1,18 @@
+{
+  "typeComplement": "Fiktion",
+  "forceBlank": false,
+  "entryType": "Film",
+  "deactivated": false,
+  "desc": "Dan Nieders\\\nSchweiz/Kanada 2022, 13 Min, Englisch / Französisch / Spanisch\n\nHeimlich lebt Juan seine Phantasien durch sein Alter Ego Elise aus. Während nun Elise an einer Party mit Marius flirtet, sieht sich Juan plötzlich mit einem verruchten Spiel konfrontiert: Er muss die Kontrolle über den Körper zurück gewinnen. Ein Film, der Kopf und Geist verdreht und einem ins Innenleben einer suchenden Figur mitnimmt.",
+  "title": "Monochrome",
+  "image": "/images/uploads/monochrome_01.jpg",
+  "uuid": "monochrome",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/monochrome_02.jpg"
+    },
+    {
+      "image": "/images/uploads/monochrome_03.jpg"
+    }
+  ]
+}
