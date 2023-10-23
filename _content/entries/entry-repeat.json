@@ -1,0 +1,14 @@
+{
+  "forceBlank": false,
+  "deactivated": false,
+  "desc": "DACID GO8LIN\\\nMark Gerstorfer, Österreich 2023, 4 Min, Englisch, Albanisch  \n\nKörperwelten, Texturen und verschiedene Formen der Selbstwahrnehmung stehen hier im Mittelpunkt. Eine Ode an die Ambiguität von Körperformen in ihrer positivsten Form, bei der Lippen, Poren, Nägel und Haare zu Projektionsfeldern für pansexuelle Utopien werden.",
+  "uuid": "repeat",
+  "title": "Repeat",
+  "entryType": "Film",
+  "image": "/images/uploads/repeat_01.jpg",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/repeat_02.jpg"
+    }
+  ]
+}
