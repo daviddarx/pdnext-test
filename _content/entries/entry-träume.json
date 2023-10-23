@@ -1,0 +1,18 @@
+{
+  "typeComplement": "Musikvideo",
+  "forceBlank": false,
+  "entryType": "Film",
+  "deactivated": false,
+  "desc": "Paulita Pappel/Rod Wyler\\\nDeutschland 2023, 5 Min \n\nWie aus einem Tiroler Traum entsprungen sind Serafina Sky, Noir So und Roman Raw in ihren besten Kleidern bereit uns ein Ständchen zu singen. Die dreiköpfige Band erfreut uns mit ihrem Schlager und einem Waldspaziergang, der in einem leidenschaftlichen Dreier mündet.",
+  "title": "Träume",
+  "image": "/images/uploads/träume_01.jpg",
+  "uuid": "träume",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/träume_02.jpg"
+    },
+    {
+      "image": "/images/uploads/träume_03.jpg"
+    }
+  ]
+}
