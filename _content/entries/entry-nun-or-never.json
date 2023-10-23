@@ -1,0 +1,18 @@
+{
+  "typeComplement": "Animation",
+  "forceBlank": false,
+  "entryType": "Musik",
+  "deactivated": false,
+  "desc": "Heta Jäälinoja\\\nFinland, 2023, 10 Min, ohne Dialog \n\nDie Nonnen leben im Kloster in Zufriedenheit und Harmonie, sind miteinander verschmolzen. Eine der Nonnen entdeckt einen Mann unter der Erde, während sie Kartoffeln gräbt. Die Nonne beginnt von diesem Mann zu träumen, ist sichtlich verwirrt und verliert den gemeinsamen Rhythmus mit den anderen.",
+  "title": "Nun or Never!",
+  "image": "/images/uploads/nun_or_never_03.jpg",
+  "uuid": "nun-or-never",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/nun_or_never_02.jpg"
+    },
+    {
+      "image": "/images/uploads/nun_or_never_04.jpg"
+    }
+  ]
+}
