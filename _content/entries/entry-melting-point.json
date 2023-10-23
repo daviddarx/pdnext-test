@@ -1,0 +1,17 @@
+{
+  "forceBlank": false,
+  "deactivated": false,
+  "desc": "Mindy Stricke\\\nKanada 2022, 5 Min, kein Dialog \n\nIst es möglich, die Hitze zwischen zwei Liebenden einzufangen? Mit einer Wärmebildkamera aufgenommen, zeichnet der Film die Szene anhand von Temperatur anstelle von Licht auf und enthüllt auf diese Weise neue Perspektiven, um Lust, Spiel und Verlangen lodern zu sehen.",
+  "title": "Melting Point",
+  "uuid": "melting-point",
+  "entryType": "Film",
+  "image": "/images/uploads/melting_point_01.jpg",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/meltin_point_02.jpg"
+    },
+    {
+      "image": "/images/uploads/melting_point_03.jpg"
+    }
+  ]
+}
