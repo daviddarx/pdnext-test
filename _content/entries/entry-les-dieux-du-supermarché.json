@@ -1,0 +1,18 @@
+{
+  "typeComplement": "Experimental",
+  "forceBlank": false,
+  "entryType": "Film",
+  "deactivated": false,
+  "desc": "Alberto Gonzalez Morales\\\nSchweiz, 2022, 8 Min, Englisch / Französisch \n\nIn Zeiten der Body-Positive-Bewegung ist dieser Film eine Hommage an die Mainstream-Darstellung des männlichen Körpers, zu der der Regisseur eine Hassliebe pflegt. Durch diesen Found-Footage Film stellt er unsere kulturelle Besessenheit von unrealistischen Schönheitsstandards in Frage und nimmt uns mit auf eine Shoppingtour der anderen Art.",
+  "title": "Les Dieux du supermarché",
+  "image": "/images/uploads/les_dieux_du_supermarché-_01.jpg",
+  "uuid": "les-dieux-du",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/les_dieux_du_supermarché-_02.jpg"
+    },
+    {
+      "image": "/images/uploads/les_dieux_du_supermarché-_03.jpg"
+    }
+  ]
+}
