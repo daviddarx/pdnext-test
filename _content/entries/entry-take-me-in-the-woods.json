@@ -1,0 +1,18 @@
+{
+  "typeComplement": "Experimental",
+  "forceBlank": false,
+  "entryType": "Film",
+  "deactivated": false,
+  "desc": "Popo la Soda/Ernesto Fag/Kim Possible/LuSiDxxx/Otto\\\nBelgien, 2022, 4 Min, ohne Dialog\n\nMit dem Satz “Nimm mich mit in den Wald” eröffnet dieser Kurzfilm und nur zu gerne kommen wir dieser Aufforderung nach! In wunderschönen Bildern werden Körper und Natur inszeniert und verschmelzen zu einer Einheit. Eine fotografische, lustvolle Hommage an den Moment.",
+  "title": "Take Me in the Woods",
+  "image": "/images/uploads/take_me_in_the_woods_02.jpg",
+  "uuid": "take-me-in-the-woods-w",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/take_me_in_the_woods_01.jpeg"
+    },
+    {
+      "image": "/images/uploads/take_me_in_the_woods_03.jpg"
+    }
+  ]
+}
