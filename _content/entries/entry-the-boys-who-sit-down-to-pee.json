@@ -1,0 +1,18 @@
+{
+  "typeComplement": "Doku",
+  "forceBlank": false,
+  "entryType": "Film",
+  "deactivated": false,
+  "desc": "Bonaventure Sung Vee Tain\\\nMalaysia, 2023, 22 Min, English, Mandarin/Englische Untertitel \n\nWenn der Regisseur und Hauptdarsteller aufs Klo geht, muss er sich hinsetzen. Aufgrund eines Gendeffekts namens Hypospadias ist der Ausgang der Harnröhre nicht vorne, sondern auf seinem Penis. Nun trifft er zum aller ersten Mal auf jemanden, der unter gleichen Bedingungen pissen geht. Ein Film über Akzeptanz und Selbstliebe, der auch psychisch schwierige Momente thematisiert, und zum Nachdenken anregt.",
+  "title": "The Boys Who Sit Down to Pee",
+  "image": "/images/uploads/boys_who_02.jpg",
+  "uuid": "the-boys-who-sit",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/boys_who_01.jpg"
+    },
+    {
+      "image": "/images/uploads/boys_who_03.jpg"
+    }
+  ]
+}
