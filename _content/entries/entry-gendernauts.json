@@ -1,0 +1,19 @@
+{
+  "typeComplement": "Doku",
+  "forceBlank": false,
+  "entryType": "Film",
+  "deactivated": false,
+  "desc": "Monika Treut\\\nDeutschland 1999, 87 Minuten, Englisch/Deutsche Untertitel \n\n«Der Film erforscht Phänomene von Gender-Auflösung am Ende des Jahrtausends in der Bay Area in Kalifornien. Im Mittelpunkt des Dokumentarfilms stehen Cyborgs: Menschen, die mithilfe neuer Technologien ihren Körper und ihr Denken verändern, vor allem aber biologische Frauen, die das männliche Sexualhormon Testosteron benutzen. Wir lernen San Franciscos führende Gender-Mixer kennen: Max Wolf Valerio, der aus seinem Buch ‹Max, A Man› liest; Jordy Jones und seine Internet-Kunst; Texas Tomboy und seine neuen Videofilme und Jordys und Staffords aussergewöhnlichen Club für Gender-Mixers: den Club Confidential. Ausserdem Hida Viloria, eine Intersex-Frau, die im Zwischenraum der Geschlechter lebt, und zwei besondere biologische Frauen, die transgender Menschen unterstützen: die Sexgöttin Annie Sprinkle und das ehemalige Hustler-Modell Tornado, die Geliebte von Stafford und selbst ernannte ‹Mutter› von Texas Tomboy.» \n\n• Xenia-Programm «Wie es euch gefällt » – Juni/Juli 1999",
+  "videourl": "https://vimeo.com/263111436",
+  "title": "Gendernauts",
+  "image": "/images/uploads/gendernauts_02.jpg",
+  "uuid": "gendernauts",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/gendernauts_03.jpg"
+    },
+    {
+      "image": "/images/uploads/gendernauts_01.jpg"
+    }
+  ]
+}
