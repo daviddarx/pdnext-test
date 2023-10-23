@@ -1,0 +1,18 @@
+{
+  "typeComplement": "Fiktion",
+  "forceBlank": false,
+  "entryType": "Film",
+  "deactivated": false,
+  "desc": "Leandro Goddinho, Paulo Menezes\\\nDeutschland/Brasilien 2023, 17 Min, Englisch/Portugiesisch/Deutsch \n\nAn dem Tag, an dem Tausende von Menschen in Berlin gegen unbezahlbare Mieten protestieren, kämpft ein Brasilianer, der gerade aus seiner Wohnung geworfen wurde, um ein neues Zimmer. Doch gleichzeitig fällt sein Privatleben auseinander. Ein berührender Dokumentarfilm, der Privates und Politisches verschränkt und Gentrifizierung spürbar macht.",
+  "title": "Du bist so wunderbar",
+  "image": "/images/uploads/du_bist_so_wunderbar_01.jpg",
+  "uuid": "du-bist-so-wunderbar",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/du_bist_so_wunderbar_02.jpg"
+    },
+    {
+      "image": "/images/uploads/du_bist_so_wunderbar_03.jpg"
+    }
+  ]
+}
