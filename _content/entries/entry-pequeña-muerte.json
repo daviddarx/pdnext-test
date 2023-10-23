@@ -1,0 +1,18 @@
+{
+  "typeComplement": "Experimental/Porno",
+  "forceBlank": false,
+  "entryType": "Film",
+  "deactivated": false,
+  "desc": "Pedro Lavin\\\nMexiko, 7 Min, ohne Dialog \n\nIn diesem visuellen Gedicht erleben zwei Liebende einen leidenschaftlichen Nachmittag, während in ihren Träumen eine alte Gottheit einen ekstatischen Tanz vollführt. Es verschmelzen christliche Symbolik, magischer Realismus und mexikanische Mythologie.",
+  "title": "Pequeña Muerte",
+  "image": "/images/uploads/la_pequena_02.jpg",
+  "uuid": "pequena-muerte",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/la_pequena_01.jpg"
+    },
+    {
+      "image": "/images/uploads/la_pequena_03.jpg"
+    }
+  ]
+}
