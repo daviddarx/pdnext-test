@@ -1,0 +1,18 @@
+{
+  "typeComplement": "Fiktion",
+  "forceBlank": false,
+  "entryType": "Film",
+  "deactivated": false,
+  "desc": "Henrika Kull\\\nDeutschland, 2021, 90 Min, Deutsch/Englisch  \n\nSascha arbeitet schon seit Jahren im Berliner Bordell Queens. Maria ist die Neue, unangepasst, autark, queer. Sascha fühlt sich sofort von dieser Persönlichkeit angezogen, Maria wiederum ist fasziniert von Saschas Souveränität. Aus der Anziehung wird eine Liebe, die anders funktioniert, als alles, was beide bisher kannten. Es ist die Verheißung auf das große Glück. Doch dann droht ihre Verbindung zu zerbrechen – an der Angst, sich einander wirklich zu zeigen und sich den eigenen Abgründen zu stellen.  \n\nIn „Glück/Bliss“ erzählt Henrika Kull von zwei Frauen, die sich in einer Welt begegnen, in der weibliche Körper Waren sind. In authentischen, kraftvollen Bildern folgt sie ihren beiden Hauptfiguren, die sich erst umschleichen, dann umtanzen, bald nicht mehr ohne einander können, aber auch nicht wirklich miteinander.  \n\nDer Spielfilm wurde von mehreren Mitglieder:innen des[ Sexworkers Collective Schweiz](https://sexworkers.ch/) empfohlen, als eine gelungene authentische Repräsentation von Bordell-Arbeit.  \n\nIm Anschluss an den Film sprechen Estelle Starstruck (Sexarbeiterin und diesjährige Jury-Mitglied der Porny Days) mit Filmemacherin Henrika Kull (sowie Schauspieler und Sexarbeiter Adam Hoya -> noch nicht bestätigt) über die Darstellung und Repräsentation von Sexarbeit in Kunst und Kultur.",
+  "title": "Glück/Bliss",
+  "image": "/images/uploads/glück_bliss03.jpg",
+  "uuid": "glück-bliss",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/glück_bliss.02.jpg"
+    },
+    {
+      "image": "/images/uploads/glück_bliss.01.jpg"
+    }
+  ]
+}
