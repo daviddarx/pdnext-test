@@ -1,0 +1,15 @@
+{
+  "typeComplement": "Experimental/Doku",
+  "forceBlank": false,
+  "entryType": "Film",
+  "deactivated": false,
+  "desc": "Pedro Bastos\\\nPortugal, 2023, 10 Min, Englisch \n\nIm Jahr 1981 verschwand die englische Pornodarstellerin Kathy Harcourt auf mysteriöse Art und Weise. 40 Jahre später rollt der Filmemacher ihre Geschichte anhand einer alten 35mm Kopie des letzten Filmes auf, in dem Kathy Harcourt mitgespielt hatte. Ein intimer Einblick in das goldene Zeitalter des Pornokinos.",
+  "title": "Flyby Kathy",
+  "image": "/images/uploads/flyby_01.jpg",
+  "uuid": "flyby-kathy",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/flyby_02.jpg"
+    }
+  ]
+}
