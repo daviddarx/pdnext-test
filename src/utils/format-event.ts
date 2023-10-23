@@ -48,7 +48,9 @@ const formatEvent = (event: Event, entries: Entry[], isONS = false): FormatedEve
 
   const dateHour = eventDate.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
 
-  const id = `${dateFilter} ${event.title}`
+  console.log(`${dateFilter} ${event.title} ${dateHour}`);
+
+  const id = `${event.title} -- ${dateFilter} -- ${dateHour}`
     .replace(/&shy;/g, '')
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
@@ -56,7 +58,8 @@ const formatEvent = (event: Event, entries: Entry[], isONS = false): FormatedEve
     .toLowerCase()
     .replace(/ /g, '-')
     .replace(/\//g, '-')
-    .replace(/\./g, '-');
+    .replace(/\./g, '-')
+    .replace(/(\d{2})(\d{2})$/, '$1-$2');
 
   let hideReducedPrice = isONS ? true : event.hideReducedPrice || false;
 
