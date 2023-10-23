@@ -1,0 +1,18 @@
+{
+  "typeComplement": "Experimental/Porno",
+  "forceBlank": false,
+  "entryType": "Film",
+  "deactivated": false,
+  "desc": " Andor Polgár\\\nNiederlande 2022, 4 Min, ohne Dialog \n\n«Flor de piel» ist ein experimenteller Kurzfilm, der vollständig mit einer analogen 35-mm-Messsucherkamera gedreht wurde. Der Titel ist eine spanische Redewendung, die wörtlich übersetzt «wie die Blume der Haut» bedeutet. Der Ausdruck drückt eine sichtliche Darstellung von Emotionen aus. Er ist vergleichbar mit dem deutschen Ausdruck «das Herz auf der Zunge tragen».",
+  "title": "Vorfilm: A Flor de Piel",
+  "image": "/images/uploads/a_flor_de_piel_03.jpg",
+  "uuid": "a-flor-de-piel",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/a_flor_de_piel_02.jpg"
+    },
+    {
+      "image": "/images/uploads/a_flor_de_piel_01.jpg"
+    }
+  ]
+}
