@@ -1,0 +1,18 @@
+{
+  "typeComplement": "Doku/Fiktion",
+  "forceBlank": false,
+  "entryType": "Film",
+  "deactivated": false,
+  "desc": "Tomás Paula Marques\\\nPortugal, 2023, 16 Min, Portugiesisch/Englische Untertitel \n\nIn der heutigen Zeit versucht Rebeca, eine Kollektion von nicht-phallischen Keramikdildos zu formen. Während der Inquisition entdeckt Josefa ein Sexspielzeug, das in einer verbotenen queeren Liebesbeziehung mit Maria verwendet wird. Obwohl sie in unterschiedlichen Zeitepochen leben, kreuzen sich schließlich die Wege von Rebeca und Josefa. Ein unglaublich einfühlsamer und poetischer Kurzfilm.",
+  "title": "Dildotectonics",
+  "image": "/images/uploads/dildotectonics_01.jpg",
+  "uuid": "dildoteconics",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/dildotectonics_02.jpg"
+    },
+    {
+      "image": "/images/uploads/dildotectonics_03.jpg"
+    }
+  ]
+}
