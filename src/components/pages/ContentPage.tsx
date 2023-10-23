@@ -50,9 +50,9 @@ const ContentPage: React.FC<Props> = ({ data }) => {
   };
 
   const scrollToAnchor = (hash: string, smooth = true) => {
-    pageRef?.current
-      ?.querySelector(`#${hash.slice(1)}`)
-      ?.scrollIntoView({ behavior: smooth ? 'smooth' : 'instant' });
+    // pageRef?.current
+    //   ?.querySelector(`#${hash.slice(1)}`)
+    //   ?.scrollIntoView({ behavior: smooth ? 'smooth' : 'instant' });
   };
 
   useEffect(() => {
