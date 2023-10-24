@@ -48,8 +48,6 @@ const formatEvent = (event: Event, entries: Entry[], isONS = false): FormatedEve
 
   const dateHour = eventDate.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
 
-  console.log(`${dateFilter} ${event.title} ${dateHour}`);
-
   const id = `${event.title} -- ${dateFilter} -- ${dateHour}`
     .replace(/&shy;/g, '')
     .normalize('NFD')
