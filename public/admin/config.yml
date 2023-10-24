@@ -366,7 +366,7 @@ collections:
       - label: 'Event Date'
         name: 'eventdate'
         widget: 'datetime'
-        picker_utc: false
+        picker_utc: true
         default: ''
 
       - label: 'Description'
