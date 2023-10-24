@@ -6,6 +6,7 @@ import { FormatedEvent } from '@/types/FormatedEvent';
 
 const formatEvent = (event: Event, entries: Entry[], isONS = false): FormatedEvent => {
   const eventDate = new Date(event.eventdate);
+  const timeZone = 'Etc/UTC';
 
   const eventEntries: Entry[] = event.entries
     ? event.entries.map((entryId) => {
@@ -22,6 +23,7 @@ const formatEvent = (event: Event, entries: Entry[], isONS = false): FormatedEve
   }, []);
 
   const dateReadable = eventDate.toLocaleDateString('de-DE', {
+    timeZone,
     weekday: 'long',
     year: 'numeric',
     month: 'short',
@@ -30,6 +32,7 @@ const formatEvent = (event: Event, entries: Entry[], isONS = false): FormatedEve
 
   const dateShort = eventDate
     .toLocaleDateString('de-DE', {
+      timeZone,
       weekday: 'short',
       year: '2-digit',
       month: '2-digit',
@@ -39,6 +42,7 @@ const formatEvent = (event: Event, entries: Entry[], isONS = false): FormatedEve
 
   const dateFilter = eventDate
     .toLocaleDateString('de-DE', {
+      timeZone,
       weekday: 'short',
       day: 'numeric',
       month: 'numeric',
@@ -46,7 +50,11 @@ const formatEvent = (event: Event, entries: Entry[], isONS = false): FormatedEve
     .replace('.,', '')
     .slice(0, -1);
 
-  const dateHour = eventDate.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
+  const dateHour = eventDate.toLocaleTimeString('de-DE', {
+    timeZone,
+    hour: '2-digit',
+    minute: '2-digit',
+  });
 
   const id = `${event.title} -- ${dateFilter} -- ${dateHour}`
     .replace(/&shy;/g, '')
