@@ -326,7 +326,7 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: '{{year}}-{{month}}-{{day}}--Event-{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     description: 'Those are the events that are listed in the program'
-    summary: '{{eventdate}} - {{title}}'
+    summary: '{{title}}'
     sortable_fields: ['title', 'eventdate']
     extension: 'json'
     format: 'json'
@@ -366,6 +366,7 @@ collections:
       - label: 'Event Date'
         name: 'eventdate'
         widget: 'datetime'
+        picker_utc: false
         default: ''
 
       - label: 'Description'
@@ -437,7 +438,7 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: '{{year}}-{{month}}-{{day}}--Event-ons-{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     description: 'Those are the events that are listed in the program'
-    summary: '{{eventdate}} - {{title}}'
+    summary: '{{title}}'
     sortable_fields: ['title', 'eventdate']
     extension: 'json'
     format: 'json'
