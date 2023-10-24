@@ -102,6 +102,7 @@ collections:
       - label: 'Date'
         name: 'date'
         widget: 'datetime'
+        picker_utc: true
         default: ''
 
       - label: 'Featured Image (optional)'
@@ -478,6 +479,7 @@ collections:
       - label: 'Event Date'
         name: 'eventdate'
         widget: 'datetime'
+        picker_utc: true
         default: ''
 
       - label: 'Description'
@@ -770,4 +772,5 @@ collections:
       - label: 'Date'
         name: 'start'
         widget: 'datetime'
+        picker_utc: true
         default: ''
