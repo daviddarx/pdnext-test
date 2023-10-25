@@ -25,7 +25,7 @@ export const routes = {
     festival: {
       slug: 'festival-program',
       title: 'Festival Programm',
-      complement: '29. Nov. bis 03. Dez. 2023',
+      complement: '29. Nov. bis 3. Dez. 2023',
     },
     ons: {
       slug: 'one-night-stands',
