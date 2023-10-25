@@ -42,9 +42,21 @@
     "label": "Finanzielle Unterstützung"
   },
   {
+    "title": "Ernst Göhner Stiftung",
+    "link": "https://www.ernst-goehner-stiftung.ch/",
+    "logo": "LogoErnstGoehner",
+    "label": "Finanzielle Unterstützung"
+  },
+  {
     "title": "25 Hours Hotel Langstrasse",
     "link": "https://www.25hours-hotels.com/hotels/zuerich/langstrasse/",
     "logo": "Logo25h",
+    "label": "Hotel Partner:in"
+  },
+  {
+    "title": "Guesthouse Zollhaus",
+    "link": "https://guesthouse-zollhaus.ch/",
+    "logo": "LogoGuestHouse",
     "label": "Hotel Partner:in"
   },
   {
@@ -75,6 +87,12 @@
     "title": "Marinello",
     "link": "https://www.marinello.ch/",
     "logo": "LogoMarinello",
+    "label": "Sachsponsoring"
+  },
+  {
+    "title": "Fairamour",
+    "link": "https://fairamour.ch/",
+    "logo": "LogoFairAmour",
     "label": "Sachsponsoring"
   },
   {
@@ -129,12 +147,6 @@
     "title": "Baby Angel",
     "link": "https://www.instagram.com/babyangelpr/",
     "logo": "LogoBabyAngel",
-    "label": "Kultur Partner:in"
-  },
-  {
-    "title": "Edition Moderne",
-    "link": "https://www.editionmoderne.ch/",
-    "logo": "LogoEditionModerne",
     "label": "Kultur Partner:in"
   },
   {
