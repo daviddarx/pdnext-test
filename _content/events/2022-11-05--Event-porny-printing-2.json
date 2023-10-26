@@ -14,7 +14,10 @@
   "price": "69.- pro Siebdruck",
   "layout": "event",
   "eventlocation": "SIEBDRUCK27",
-  "entries": ["porny-printing"],
+  "entries": [
+    "porny-printing"
+  ],
+  "deactivated": true,
   "desc": "Im geschützten Rahmen fotografierst du deine Genitalien und unter professioneller Anleitung kannst du dann selber einen Siebdruck herstellen.\n\nDa du mit Farben hantieren wirst, bitte nicht deine besten Kleider anziehen.",
   "eventlocationcomplement": "Albulastrasse 24, 8048 Zürich",
   "ticketsLinkTitle": "ausverkauft",
