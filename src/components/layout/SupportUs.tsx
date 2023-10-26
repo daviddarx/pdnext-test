@@ -107,22 +107,13 @@ const SupportUs = ({ data }: Props) => {
                   {item.desc}
                 </ReactMarkdown>
                 {item.paypal && (
-                  <form
-                    className='support-us__paypal'
-                    action='https://www.paypal.com/cgi-bin/webscr'
-                    method='post'
-                    target='_top'
-                    style={{ height: '47px' }}
+                  <a
+                    href='https://www.paypal.com/paypalme/pornydays?country.x=CH&locale.x=de_DE'
+                    target='_blank'
+                    className='support-us__paypal-button'
                   >
-                    <input type='hidden' name='cmd' value='_s-xclick' />
-                    <input type='hidden' name='hosted_button_id' value='J96E96JPAAKPE' />
-                    <input
-                      type='image'
-                      src='https://www.paypalobjects.com/de_DE/CH/i/btn/btn_subscribeCC_LG.gif'
-                      name='submit'
-                      alt='Jetzt einfach, schnell und sicher online bezahlen – mit PayPal.'
-                    />
-                  </form>
+                    Mit PayPal spenden
+                  </a>
                 )}
               </motion.div>
             ))}

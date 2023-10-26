@@ -69,6 +69,6 @@
   @apply h5 mb-[0.75em];
 }
 
-.support-us__paypal {
-  @apply mt-gutter;
+.support-us__paypal-button {
+  @apply tag mt-gutter;
 }
