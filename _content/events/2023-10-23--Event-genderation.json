@@ -5,8 +5,10 @@
   "eventlocationlink": "www.xenix.ch",
   "layout": "event",
   "hideReducedPrice": false,
-  "eventlocation": "Xenix",
-  "entries": ["genderation"],
+  "eventlocation": "Xenix (rollstuhlgängig)",
+  "entries": [
+    "genderation"
+  ],
   "deactivated": false,
   "desc": "Das Frauenkino Xenia war ein feministisches Filmkollektiv, das von 1988 bis 2003 im Kino Xenix Filme projizierte und ein wichtiger Treffpunkt für die lesbische Community in Zürich war. Hier wurden auch erstmals postpornografische Filme in Zürich im Kino gezeigt. Den ganzen November hindurch läuft im Xenix eine Retrospektive zum Frauenkino Xenia. \n\nFür die Porny Days haben wir in Zusammenarbeit mit der Cinémathèque suisse und dem Kino Xenix einen Schwerpunkt auf die sexpositive und postpornografische Kultur der Neunzigerjahre in San Francisco sowie auf einzelne sexpositive Filme jener Zeit aus dem deutschsprachigen Raum gelegt. Mit einer Ausnahme (GENDERATION; 2023) stammen alle Filmtexte aus den originalen Filmprogrammen des Frauenkino Xenia.",
   "ticketsLinkTitle": "Xenix Vorverkauf",
