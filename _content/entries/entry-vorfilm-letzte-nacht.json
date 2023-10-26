@@ -1,0 +1,18 @@
+{
+  "typeComplement": "Fiktion",
+  "forceBlank": false,
+  "entryType": "Film",
+  "deactivated": false,
+  "desc": "Lea Bloch\\\nSchweiz, 2023, 15 Min, Schweizerdeutsch  \n\nNachdem sie eine Nacht lang gemeinsam gefeiert haben, treffen sich vier Freundinnen und vier Freunde unter sich. Der Vorabend rekonstruiert sich in beiden Gruppen zeitgleich und nimmt nach und nach Form an. Die Stimmung ist ausgelassen, bis klar wird, dass letzte Nacht eine Grenze überschritten wurde. In beiden Gruppen stellen sich Fragen rund um Schuld, Verantwortung und Einverständnis. \n\nIn Anwesenheit von Lea Bloch",
+  "title": "Vorfilm: Letzte Nacht",
+  "image": "/images/uploads/letzte-nacht_01.jpg",
+  "uuid": "letzte-nacht",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/letzte-nacht_02.jpg"
+    },
+    {
+      "image": "/images/uploads/letzte-nacht_03.jpg"
+    }
+  ]
+}
