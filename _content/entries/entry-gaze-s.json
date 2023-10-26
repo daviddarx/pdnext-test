@@ -1,0 +1,18 @@
+{
+  "forceBlank": false,
+  "entryType": "Performance",
+  "deactivated": false,
+  "desc": "In ihrer autobiografischen Lecture Performance Gaze.S erkunden die Künstlerinnen und Sexarbeiterinnen Romy Alizée und Marianne Chargois einen «Sex Worker Gaze». Sie bieten ein radikales Manifest mit Live-Sex Einlagen und viel Humor und entwerfen damit eine Neuanordnung der herrschenden Blicke.",
+  "title": "Gaze.S",
+  "image": "/images/uploads/gazes_01.jpg",
+  "uuid": "gazes",
+  "warning": "Stroboskoplicht",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/gazes_02.jpg"
+    },
+    {
+      "image": "/images/uploads/gazes_03.jpg"
+    }
+  ]
+}
