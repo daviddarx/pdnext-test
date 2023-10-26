@@ -1,0 +1,17 @@
+{
+  "timetable": [],
+  "ticketsLink": "https://www.zurichticket.ch/shz.webshop/webticket/seatmap?eventId=11165",
+  "eventdate": "2023-12-02T21:00:00.000Z",
+  "eventlocationlink": "www.schauspielhaus.ch",
+  "price": "30CHF / 15 CHF - 20CHF / 10 CHF",
+  "layout": "event",
+  "hideReducedPrice": false,
+  "eventlocation": "Schauspielhaus - Schiffbau (rollstuhlgängig)",
+  "entries": [
+    "decolonize-the"
+  ],
+  "deactivated": false,
+  "desc": "In Decolonize the Dancefloor legt Habibitch Konzepte wie Rassismus, Privilegien, Dominanzen, Widerstand, Kreation, Gemeinschaften unter das dekoloniale Brennglas.",
+  "ticketsLinkTitle": "Vorverkauf Schauspielhaus",
+  "title": "Decolonize the Dancefloor"
+}
