@@ -1,0 +1,17 @@
+{
+  "forceBlank": false,
+  "deactivated": false,
+  "desc": "Zwei Mitglieder des sexworkers collective bieten einen Einblick in die Arbeitswelt der Sexarbeit und erzählen von Erfahrungen, Problemen und dem Selbstbild von Sexarbeitenden in der Schweiz. Das Sexworkers Collective wurde 2021 für und von Sexarbeiter\\*innen gegründet. Wir alle hatten das Bedürfnis gegen die Diskriminierung, Stigmatisierung und Kriminalisierung unserer Arbeitsplätze zu kämpfen, und zu vernetzen und gegenseitig zu unterstützen. Einerseits organisiert das Sexworkers Collective Anlässe, welche für alle aktuellen und ehemaligen Sexarbeiter\\*innen offen sind und zum Ziel haben, in der Schweiz arbeitende Sexarbeiter*innen zu vernetzen. Andererseits engagieren wir uns in Zusammenarbeit mit Beratungsstellen und Organisationen gegen die Kriminalisierung und Stigamtisierung der Sexarbeit.",
+  "uuid": "stigma-sexarbeit",
+  "title": "Stigma Sexarbeit",
+  "entryType": "Workshop",
+  "image": "/images/uploads/sexarbeit_01.jpg",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/sexarbeit_02.jpg"
+    },
+    {
+      "image": "/images/uploads/sexarbeit_03.jpg"
+    }
+  ]
+}
