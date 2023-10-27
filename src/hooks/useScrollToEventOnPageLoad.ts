@@ -21,8 +21,8 @@ export function scrollToEvent(id: string) {
 
       /**
        * RAF as the EventDetail opening/closing can reinit
-       * the scroll position to avoid jump on focus to the
-       * opened event.
+       * the scroll position while managing the focus. Wait for
+       * this reinit to avoid jump on focus to the opened event.
        */
       requestAnimationFrame(() => {
         window.scroll({

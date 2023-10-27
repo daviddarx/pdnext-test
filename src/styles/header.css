@@ -3,8 +3,8 @@
 }
 
 .header__top-bar {
-  @apply px-gutter pt-[0.5em] pb-[0.8em];
-  @apply bg-white text-center;
+  @apply max-lg:dark px-gutter pt-[0.5em] pb-[0.8em];
+  @apply text-center;
 
   @screen lg {
     @apply flex justify-between px-gutter py-gutter;

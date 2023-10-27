@@ -87,10 +87,10 @@ const ProgramPage: React.FC<Props> = ({ data }) => {
   const scrollToFilters = () => {
     /**
      * RAF in case an event is opened. In this case, the ProgramPageLayout
-     * would give close the EventDetail and give back the focus to the event
+     * would close the EventDetail and give back the focus to the event,
      * which would scroll to the event. This behavious is avoided by scroll
-     * reinitialization. RAF to wait for this reinit before scrolling to the
-     * filters.
+     * reinitialization. RAF to wait for this reinitialization before
+     * scrolling to the filters.
      */
     requestAnimationFrame(() => {
       filterRef.current?.scrollIntoView({ behavior: 'smooth' });
