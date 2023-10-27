@@ -1,18 +1,18 @@
 .special-announcement {
-  @screen sm {
+  @screen lg {
     @apply text-right;
   }
 
   @screen xl {
-    @apply space-x-4 text-left;
+    @apply text-left;
   }
 }
 
 .special-announcement__title {
   @apply hidden;
 
-  @screen xl {
-    @apply inline-block;
+  @screen 2xl {
+    @apply inline-block mr-4;
   }
 }
 
@@ -31,7 +31,7 @@
 .special-announcement__btn {
   @apply tag;
 
-  @screen max-sm {
+  @screen max-lg {
     @apply mt-[0.5em] !text-xs;
   }
 

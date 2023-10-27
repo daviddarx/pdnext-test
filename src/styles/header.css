@@ -6,7 +6,7 @@
   @apply px-gutter pt-[0.5em] pb-[0.8em];
   @apply bg-white text-center;
 
-  @screen sm {
+  @screen lg {
     @apply flex justify-between px-gutter py-gutter;
     @apply bg-transparent border-b border-current;
   }

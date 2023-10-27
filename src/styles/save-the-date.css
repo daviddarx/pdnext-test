@@ -1,16 +1,9 @@
 .save-the-date {
   @apply text-xs font-semibold uppercase;
 
-  @screen sm {
-    @apply pt-[0.2em] text-left self-center;
-  }
-
-  @screen md {
-    @apply text-base;
-  }
-
   @screen lg {
-    @apply space-x-4 pt-0 normal-case font-normal;
+    @apply space-x-4 pr-gutter self-center;
+    @apply text-left text-base normal-case font-normal;
   }
 }
 
