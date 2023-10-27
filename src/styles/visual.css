@@ -3,25 +3,21 @@
 }
 
 .visual__video {
-  @apply relative w-full h-full object-cover;
+  @apply relative w-full h-full object-cover opacity-0 transition-opacity duration-500;
+}
+
+.visual__video--active {
+  @apply opacity-20;
+}
+
+.visual__video--fadedout {
+  @apply opacity-0;
 }
 
 .visual--desktop {
   @apply absolute;
-
-  & .visual__video {
-    @apply opacity-20;
-  }
 }
 
 .visual--mobile {
   @apply fixed top-0 left-0 -z-10;
-
-  & .visual__video {
-    @apply opacity-20 transition-opacity duration-500;
-  }
-
-  & .visual__video--fadedout {
-    @apply opacity-0;
-  }
 }

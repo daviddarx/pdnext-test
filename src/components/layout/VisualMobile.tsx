@@ -4,6 +4,7 @@ import classNames from 'classnames';
 
 const Visual = () => {
   const [mounted, setMounted] = useState(false);
+  const [active, setActive] = useState(false);
   const [faded, setFaded] = useState(false);
 
   const maxScreenWidth = 1280;
@@ -39,18 +40,24 @@ const Visual = () => {
     };
   }, [mounted]);
 
+  const onPlay = () => {
+    setActive(true);
+  };
+
   return (
     <React.Fragment>
       {mounted && (
         <div className='visual visual--mobile'>
           <video
             className={classNames('visual__video', {
+              'visual__video--active': active,
               'visual__video--fadedout': faded,
             })}
             autoPlay
             muted
             loop
             playsInline
+            onPlay={onPlay}
           >
             <source
               src='https://files.daviddarx.com/pornydays/videos/2023/teaser.webm'

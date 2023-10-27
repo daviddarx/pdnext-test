@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import classNames from 'classnames';
 
 const Visual = () => {
   const [mounted, setMounted] = useState(false);
+  const [active, setActive] = useState(false);
+
   const minScreenWidth = 1280;
 
   useEffect(() => {
@@ -21,11 +24,22 @@ const Visual = () => {
     };
   });
 
+  const onPlay = () => {
+    setActive(true);
+  };
+
   return (
     <React.Fragment>
       {mounted && (
         <div className='visual visual--desktop'>
-          <video className='visual__video' autoPlay muted loop playsInline>
+          <video
+            className={classNames('visual__video', { 'visual__video--active': active })}
+            autoPlay
+            muted
+            loop
+            playsInline
+            onPlay={onPlay}
+          >
             <source
               src='https://files.daviddarx.com/pornydays/videos/2023/teaser.webm'
               type='video/webm'
