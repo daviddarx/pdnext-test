@@ -7,6 +7,7 @@ import { uiActions } from '@/store';
 import { scrollToEvent } from '@/hooks/useScrollToEventOnPageLoad';
 import { setFocusables, resetFocusables, loopFocusables } from '@/utils/get-focusables';
 
+import VisualDesktop from '@/components/layout/VisualDesktop';
 import EventDetail from '@/components/events/EventDetail';
 import EventDetailCloseButton from '@/components/events/EventDetailCloseButton';
 import EventDetailNavigation from '@/components/events/EventDetailNavigation';
@@ -125,9 +126,10 @@ const ProgramPageLayout: React.FC<Props> = ({ header, children }) => {
         ref={detailRef}
         onKeyDown={handleKeyDown}
       >
+        <VisualDesktop />
+
         <EventDetailCloseButton disabled={openedEvent && isDetailInViewport} />
         <EventDetail />
-
         <div className='program-page__mobile-detail-nav'>
           <EventDetailNavigation currentEvent={openedEvent} />
         </div>
