@@ -33,7 +33,7 @@ const ImpressionsPage: React.FC<Props> = ({ data }) => {
 
   return (
     <section className='content-page impressions-page'>
-      <PageHeader subline='Impressionen' title="Wenn niemand zuschaut, macht's kein Spass" />
+      <PageHeader subline='Impressionen' title="Wenn niemand zuschaut, macht's keinen Spass" />
       <div className='impressions-page__impressions'>
         {data.impressions.map((item) => (
           <article key={item.date + item.title} className='impression'>
