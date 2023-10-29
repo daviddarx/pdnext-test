@@ -7,6 +7,9 @@
   "layout": "event",
   "hideReducedPrice": false,
   "eventlocation": "Schauspielhaus - Schiffbau (rollstuhlgängig)",
+  "entries": [
+    "deproduction"
+  ],
   "deactivated": false,
   "desc": "Deproduction ist eine Video-, Musik- und Textinstalltion basierend auf dem gleichnamigen Album der preisgekrönten Multi-Media-Produzentin, Autorin und DJ Terre Thaemlitz.",
   "ticketsLinkTitle": "Vorverkauf Schauspielhaus",
