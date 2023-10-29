@@ -1,11 +1,15 @@
 {
   "timetable": [],
+  "ticketsLink": "https://www.riffraff.ch/kinoprogramm/202509/porny-days-23-soll-ich-dich-einem-sommertag-vergleichen.html?date=all&sort=name&kino=combine",
   "eventdate": "2023-12-03T16:40:00.000Z",
   "eventlocationlink": "www.xenix.ch",
   "layout": "event",
   "hideReducedPrice": false,
-  "eventlocation": "Riffraff 4",
-  "entries": ["soll-ich-dich-einem", "a-flor-de-piel"],
+  "eventlocation": "Riffraff 4 (rollstuhlgängig)",
+  "entries": [
+    "soll-ich-dich-einem",
+    "a-flor-de-piel"
+  ],
   "deactivated": false,
   "desc": "Die Liebesgeschichte beginnt, wie tausendundeine Liebegeschichten vor ihr begonnen haben: «Es war einmal». Eine Erzählerin berichtet von der Beziehung zweier Männer. Ein polyamouröser Chor von früheren Liebhabern setzt ein. Im Club Sheherazad kommen und gehen die Menschen. Es geht um Grindr-Dates, Herzschmerz, Liebe zu dritt. Und was ist mit einem Happy End?",
   "ticketsLinkTitle": "Vorverkauf Riffraff",
