@@ -5,7 +5,10 @@
   "price": "15CHF / 25CHF / 35CHF",
   "layout": "event",
   "hideReducedPrice": false,
-  "eventlocation": "Das Gleis",
+  "eventlocation": "Das Gleis (rollstuhlgängig)",
+  "entries": [
+    "alternative-beziehungsformen"
+  ],
   "deactivated": false,
   "desc": "Modelle, Utopien, Realitäten, Risiken und Chancen. Begleitet von kurzen Inputs bieten wir Raum für gemeinsames Lernen und Austausch.",
   "title": "Workshop zu alternativen Beziehungsformen/Polyamorie "
