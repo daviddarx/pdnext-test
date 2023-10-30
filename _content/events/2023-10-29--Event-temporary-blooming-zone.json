@@ -2,14 +2,14 @@
   "timetable": [
     {
       "time": "18:00",
-      "title": "Slot 1"
+      "title": "Zeitfenster 1"
     },
     {
       "time": "20:00",
-      "title": "Slot 2"
+      "title": "Zeitfenster 2"
     }
   ],
-  "eventdate": "2023-12-01T00:00:00.000Z",
+  "eventdate": "2023-12-01T18:00:00.000Z",
   "eventlocationlink": "https://www.instagram.com/babyangelpr/",
   "price": "10CHF / 20CH / 30 CHF",
   "layout": "event",
