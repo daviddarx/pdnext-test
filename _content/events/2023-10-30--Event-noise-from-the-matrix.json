@@ -6,8 +6,11 @@
   "layout": "event",
   "hideReducedPrice": false,
   "eventlocation": "Das Gleis",
+  "entries": [
+    "noise-from-the-matrix"
+  ],
   "deactivated": false,
-  "desc": "«Noise from the Matrix» ist eine Performance, die mit Hilfe eines Kontaktmikrofons eine Atmosphäre erzeugt, die an Post-Porno erinnert. Durch weibliche Masturbation wird ein Klangprotest erzeugt, um die Stimme dieses umstrittenen Territoriums zu verstärken: einem Körper, der das Recht auf Vergnügen und Autonomie in diesem politischen Raum einfordert.",
+  "desc": "«Noise from the Matrix» ist eine Performance, die mit Hilfe eines Kontaktmikrofons eine Atmosphäre erzeugt, die an Post-Porno erinnert. Durch weibliche Masturbation wird ein Klangprotest erzeugt, um die Stimme dieses umstrittenen Territoriums zu verstärken: einem Körper, der das Recht auf Vergnügen und Autonomie in diesem politischen Raum einfordert.\\\n\\\nPerformance von: Nicol Rivera und Siavash Namehshiri\\\n\\\nSprache: Englisch",
   "eventlocationcomplement": "",
   "title": "Noise from the Matrix"
 }
