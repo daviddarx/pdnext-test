@@ -1,11 +1,11 @@
 {
   "timetable": [
     {
-      "time": "17:00 bis 18:00",
+      "time": "17:00",
       "title": "Zeitfenster 2"
     },
     {
-      "time": "18:00 bis 17:00",
+      "time": "19:00",
       "title": "Zeitfenster 3"
     }
   ],
