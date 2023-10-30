@@ -2,7 +2,7 @@
   "timetable": [],
   "eventdate": "2023-12-02T14:00:00.000Z",
   "eventlocationlink": "www.shedhalle.ch",
-  "price": "25CHF / 15CHF / 5CHF \\\nFreier Eintritt für alle mit Aufenthaltsausweis N, F, S",
+  "price": "5CHF / 15CHF / 25CHF\\\nFreier Eintritt für alle mit Aufenthaltsausweis N, F, S",
   "layout": "event",
   "hideReducedPrice": false,
   "eventlocation": "Shedhalle (rollstuhlgängig)",
