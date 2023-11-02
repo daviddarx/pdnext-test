@@ -2,11 +2,11 @@
   "timetable": [
     {
       "time": "22:00",
-      "title": "Öffnung Abendkasse"
+      "title": "Türöffnung"
     },
     {
       "time": "06:00",
-      "title": "Schluss Party"
+      "title": "Ende"
     }
   ],
   "eventdate": "2023-12-02T22:00:00.000Z",
