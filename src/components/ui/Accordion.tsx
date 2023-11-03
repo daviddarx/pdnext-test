@@ -36,11 +36,7 @@ const Accordion: React.FC<Props> = ({
   isOpenedExt = false,
   onToggle,
 }) => {
-  const [isOpened, setIsOpened] = useState(true);
-
-  useEffect(() => {
-    setIsOpened(false);
-  }, []);
+  const [isOpened, setIsOpened] = useState(false);
 
   useEffect(() => {
     setIsOpened(isOpenedExt);
