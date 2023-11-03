@@ -1,6 +1,10 @@
 .event-detail {
   @apply w-full h-full overflow-y-auto overscroll-contain;
   @apply p-gutter pb-0 bg-white outline outline-1 outline-black;
+
+  @screen max-lg {
+    @apply pb-[30vh];
+  }
 }
 
 .event-detail__header {
@@ -99,7 +103,7 @@
 }
 
 .event-detail__entries {
-  @apply mt-gutter-2 space-y-gutter max-xl:pb-[30vh];
+  @apply mt-gutter-2 space-y-gutter;
 }
 
 .event-detail__nav {

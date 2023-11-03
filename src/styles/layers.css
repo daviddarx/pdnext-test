@@ -152,6 +152,10 @@
   .tag--sm {
     @apply text-xs px-[0.4em] pt-[0.3em] pb-[0.05em];
 
+    .ios & {
+      @apply px-[0.8em] pt-[0.4em];
+    }
+
     @screen lg {
       @apply px-[0.6em] pt-[0.4em] pb-[0.15em];
     }
