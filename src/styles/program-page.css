@@ -23,7 +23,11 @@
 }
 
 .program-page__subtitle-separation {
-  @apply px-[0.75em];
+  @apply max-sm:hidden px-[0.75em];
+}
+
+.program-page__subtitle-date {
+  @apply max-sm:block max-sm:pt-[0.3em];
 }
 
 .program-page__filters {
