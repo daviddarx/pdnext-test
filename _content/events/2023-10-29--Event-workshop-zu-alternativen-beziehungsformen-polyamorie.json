@@ -6,10 +6,8 @@
   "layout": "event",
   "hideReducedPrice": false,
   "eventlocation": "Das Gleis (rollstuhlgängig)",
-  "entries": [
-    "alternative-beziehungsformen"
-  ],
+  "entries": ["alternative-beziehungsformen"],
   "deactivated": false,
   "desc": "Modelle, Utopien, Realitäten, Risiken und Chancen. Begleitet von kurzen Inputs bieten wir Raum für gemeinsames Lernen und Austausch.",
-  "title": "Workshop zu alternativen Beziehungsformen/Polyamorie "
+  "title": "Workshop zu alternativen Beziehungsformen / Polyamorie "
 }
