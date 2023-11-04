@@ -56,9 +56,11 @@
   @apply fixed z-20 right-gutter top-gutter;
   @apply bg-white;
   @apply transform-3d transition-transform duration-500 ease-out-back;
+  @apply safari-fixed-fix;
 
   --tw-translate-y: var(--height-topbar);
   --tw-translate-z: 0;
+
   will-change: transform;
 }
 
@@ -73,6 +75,7 @@
 .program-page__mobile-detail-nav {
   @apply fixed bottom-0 w-full;
   @apply xl:hidden;
+  @apply safari-fixed-fix;
 
   & button {
     /*

@@ -2,6 +2,7 @@
   @apply fixed z-20 right-gutter top-gutter;
   @apply bg-black border border-pink rounded-full;
   @apply transform-3d transition-transform duration-500 ease-out-back;
+  @apply safari-fixed-fix;
 
   width: var(--size-burger);
   height: var(--size-burger);
