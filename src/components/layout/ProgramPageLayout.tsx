@@ -16,6 +16,7 @@ import EventDetailNavigation from '@/components/events/EventDetailNavigation';
 type Props = {
   header: ReactNode;
   children: ReactNode;
+  hideEventNav?: boolean;
 };
 
 /**
@@ -26,7 +27,7 @@ type Props = {
  */
 let eventButtonRef: HTMLElement | null;
 
-const ProgramPageLayout: React.FC<Props> = ({ header, children }) => {
+const ProgramPageLayout: React.FC<Props> = ({ header, children, hideEventNav = false }) => {
   const dispatch = useDispatch();
 
   const [isDetailInViewport, setIsDetailInViewport] = useState(true);
@@ -130,10 +131,13 @@ const ProgramPageLayout: React.FC<Props> = ({ header, children }) => {
         <VisualDesktop />
 
         <EventDetailCloseButton disabled={openedEvent && isDetailInViewport} />
-        <EventDetail />
-        <div className='program-page__mobile-detail-nav'>
-          <EventDetailNavigation currentEvent={openedEvent} />
-        </div>
+        <EventDetail hideEventNav={hideEventNav} />
+
+        {!hideEventNav && (
+          <div className='program-page__mobile-detail-nav'>
+            <EventDetailNavigation currentEvent={openedEvent} />
+          </div>
+        )}
       </div>
     </section>
   );

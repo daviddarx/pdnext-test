@@ -54,7 +54,11 @@ const reducedPriceMotionVariants = {
   },
 };
 
-const EventDetail = () => {
+type Props = {
+  hideEventNav?: boolean;
+};
+
+const EventDetail: React.FC<Props> = ({ hideEventNav = false }) => {
   const dispatch = useDispatch();
 
   const event = useSelector((state: uiStateType) => state.ui.openedEvent);
@@ -207,9 +211,11 @@ const EventDetail = () => {
             </div>
           )}
 
-          <div className='event-detail__nav'>
-            <EventDetailNavigation currentEvent={event} />
-          </div>
+          {!hideEventNav && (
+            <div className='event-detail__nav'>
+              <EventDetailNavigation currentEvent={event} />
+            </div>
+          )}
         </motion.article>
       )}
     </AnimatePresence>

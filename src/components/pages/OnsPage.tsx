@@ -21,6 +21,7 @@ const OnsPage: React.FC<Props> = ({ data }) => {
           <span>Saisonales Programm</span>
         </h1>
       }
+      hideEventNav={true}
     >
       <EventsList dateClusteredEvents={data.dateClusteredEvents} dateVisible={true} />
     </ProgramPageLayout>
