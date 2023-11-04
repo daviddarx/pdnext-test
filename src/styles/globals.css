@@ -94,7 +94,6 @@ body {
 
 :focus-visible {
   outline: 5px solid theme('colors.focusVisible');
-  border-radius: 5px;
 
   .ios & {
     outline-color: transparent;
