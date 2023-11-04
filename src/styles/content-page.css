@@ -97,7 +97,7 @@
 }
 
 .downloads__detail {
-  @apply inline-block text-xs lg:text-base no-underline ml-[0.5em] -translate-y-[0.1em];
+  @apply inline-block text-xs lg:text-base no-underline ml-[0.5em] -translate-y-[0.2em] lg:-translate-y-[0.4em];
 }
 
 .definition-list__title {
