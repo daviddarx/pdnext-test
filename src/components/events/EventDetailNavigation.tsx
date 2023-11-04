@@ -13,7 +13,7 @@ type Props = {
 
 const motionVariants = {
   initial: {
-    transform: 'translate3d(0, 100%, 0)',
+    transform: 'translate3d(0, 100px, 0)',
   },
   animate: {
     transform: 'translate3d(0, 0, 0)',
@@ -23,7 +23,7 @@ const motionVariants = {
     },
   },
   exit: {
-    transform: 'translate3d(0, 100%, 0)',
+    transform: 'translate3d(0, 100px, 0)',
     transition: {
       duration: 0.25,
       ease: eases.inQuart,
