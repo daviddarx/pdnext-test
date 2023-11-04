@@ -13,4 +13,8 @@
   @apply px-gutter pt-[1em] pb-[0.75em];
   @apply subline;
   @apply bg-black text-white;
+
+  @screen max-sm {
+    padding-right: calc(var(--gutter) * 2 + var(--size-burger));
+  }
 }

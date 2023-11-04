@@ -64,6 +64,7 @@ const EventDetail = () => {
 
   const lastScrollTopRef = useRef(0);
 
+  /* Dynamic activing and deactiving of burger on scroll */
   const scrollHandler = (e: React.UIEvent<HTMLDivElement>) => {
     const target = e.target as HTMLDivElement;
 
@@ -93,7 +94,6 @@ const EventDetail = () => {
         <motion.article
           key={event.id}
           className='event-detail'
-          onScroll={scrollHandler}
           initial='initial'
           animate='animate'
           exit='exit'

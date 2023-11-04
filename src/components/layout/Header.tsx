@@ -23,11 +23,12 @@ const Header: React.FC<Props> = ({ commonPageData }) => {
   const handleScroll = useCallback(() => {
     const currentScrollTop = Math.max(window.scrollY, 0);
 
-    if (currentScrollTop > lastScrollTopRef.current) {
-      dispatch(uiActions.setBurgerVisibility(false));
-    } else {
-      dispatch(uiActions.setBurgerVisibility(true));
-    }
+    /* Dynamic activing and deactiving of burger on scroll */
+    // if (currentScrollTop > lastScrollTopRef.current) {
+    //   dispatch(uiActions.setBurgerVisibility(false));
+    // } else {
+    //   dispatch(uiActions.setBurgerVisibility(true));
+    // }
 
     if (currentScrollTop > 50) {
       dispatch(uiActions.setBurgerTextVisibility(false));
