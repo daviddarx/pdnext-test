@@ -6,6 +6,7 @@ import { uiStateType } from '@/store/ui-slice';
 import { uiActions } from '@/store';
 import { scrollToEvent } from '@/hooks/useScrollToEventOnPageLoad';
 import { setFocusables, resetFocusables, loopFocusables } from '@/utils/get-focusables';
+import { screens } from '@/utils/screens';
 
 import VisualDesktop from '@/components/layout/VisualDesktop';
 import EventDetail from '@/components/events/EventDetail';
@@ -59,7 +60,7 @@ const ProgramPageLayout: React.FC<Props> = ({ header, children }) => {
   useEffect(() => {
     if (openedEvent) {
       /* Desktop recenter the page when at the bottom of the two-cols layout*/
-      if (window.innerWidth >= 1280) {
+      if (window.innerWidth >= screens.xl) {
         const pageRect = pageRef.current!.getBoundingClientRect();
         const pagePosY = pageRect.top + window.scrollY;
         const maximalScroll = pagePosY + pageRect.height - window.innerHeight;

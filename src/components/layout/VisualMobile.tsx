@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { debounce } from 'lodash-es';
 import classNames from 'classnames';
+import { screens } from '@/utils/screens';
 
 const Visual = () => {
   const [mounted, setMounted] = useState(false);
   const [active, setActive] = useState(false);
   const [faded, setFaded] = useState(false);
 
-  const maxScreenWidth = 1280;
+  const maxScreenWidth = screens.xl;
 
   useEffect(() => {
     const onResize = () => {

@@ -10,6 +10,7 @@ module.exports = {
   },
   plugins: [require('@tailwindcss/aspect-ratio')],
   theme: {
+    // Update sizes in utils/screens.ts accordingly
     screens: {
       'max-sm': { max: '639px' },
       sm: '640px',

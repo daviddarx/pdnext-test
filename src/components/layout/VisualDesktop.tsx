@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
+import { screens } from '@/utils/screens';
 
 const Visual = () => {
   const [mounted, setMounted] = useState(false);
   const [active, setActive] = useState(false);
 
-  const minScreenWidth = 1280;
+  const minScreenWidth = screens.xl;
 
   useEffect(() => {
     const onResize = () => {
