@@ -550,6 +550,14 @@
     }
   }
 
+  /* Fixes rendering problem on Safari iOS (thin subpixel black border on the bottom right) */
+  .nav-burger,
+  .program-page__close {
+    .ios & {
+      box-shadow: 0px 0px 1px rgba(255, 255, 255, 0.1);
+    }
+  }
+
   /* Remove youtube overlay when video is paused. */
   .plyr iframe[id^='youtube'] {
     top: -50%;
