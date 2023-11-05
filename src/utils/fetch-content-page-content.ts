@@ -9,6 +9,7 @@ export interface ContentPageContent {
   video?: boolean;
   contentSlot?: {
     title: string;
+    deactivated?: boolean;
     hiddenTitle?: boolean;
     anchorTitle?: string;
     image?: string;
@@ -41,7 +42,9 @@ export async function fetchContentPageContent(json: string): Promise<ContentPage
   const data = require('../../_content/contentPages/' + json) as ContentPageContent;
 
   if (data.contentSlot) {
-    for (const slot of data.contentSlot) {
+    const slots = data.contentSlot.filter((slot) => slot.deactivated !== true);
+
+    for (const slot of slots) {
       if (slot.image) {
         // log image to help clean images folder (empty folder, and add again the listed images)
         // console.log(slot.image.split('images/uploads/')[1]);
@@ -51,6 +54,8 @@ export async function fetchContentPageContent(json: string): Promise<ContentPage
         slot.imageHeight = dimensions.height;
       }
     }
+
+    data.contentSlot = slots;
   }
 
   return data;

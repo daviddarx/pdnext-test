@@ -623,6 +623,12 @@ collections:
             name: 'title'
             widget: 'string'
 
+          - label: 'Deactivated'
+            name: 'deactivated'
+            widget: 'boolean'
+            default: false
+            required: false
+
           - label: 'Hidden Title'
             name: 'hiddenTitle'
             widget: 'boolean'
