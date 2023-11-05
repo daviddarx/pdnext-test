@@ -98,6 +98,7 @@ const EventDetail: React.FC<Props> = ({ hideEventNav = false }) => {
         <motion.article
           key={event.id}
           className='event-detail'
+          onScroll={scrollHandler}
           initial='initial'
           animate='animate'
           exit='exit'
