@@ -522,7 +522,7 @@
   }
 
   .cookie-banner {
-    @apply fixed left-gutter-1/2 right-gutter-1/2 bottom-gutter-1/2 p-gutter;
+    @apply fixed left-gutter-1/2 right-gutter-1/2 bottom-gutter-1/2 p-gutter z-10;
     @apply rounded-2xl bg-white border border-black;
 
     @screen sm {
