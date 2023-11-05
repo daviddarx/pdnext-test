@@ -7,10 +7,12 @@
       "firstText": "For films please submit here:\n\n[film submissions](https://filmfreeway.com/PornyDaysSexfilmfestival)\n\nFor art projects, performances, live acts, workshops, roundtables, talks and other acts here:\n\n[other submissions](https://cloud.seatable.io/dtable/forms/4b35d407-6fa6-4ddf-9f6e-abddbb784faf)",
       "title": "Open till June 1st 2024",
       "hiddenTitle": false,
-      "image": ""
+      "image": "",
+      "deactivated": true
     },
     {
-      "title": "We'll be open for your submissions from February 1st, 2024"
+      "title": "We'll be open for your submissions from February 1st, 2024",
+      "deactivated": false
     }
   ],
   "headerCentered": false
