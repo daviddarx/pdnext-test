@@ -1,6 +1,6 @@
 .event-detail {
   @apply w-full h-full overflow-y-auto overscroll-contain;
-  @apply p-gutter pb-24 lg:pb-32 xl:pb-0 bg-white outline outline-1 outline-black;
+  @apply p-gutter pb-48 lg:pb-32 xl:pb-0 bg-white outline outline-1 outline-black;
 }
 
 .event-detail__header {
