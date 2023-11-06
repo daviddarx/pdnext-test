@@ -50,14 +50,17 @@
 
 /* DRAWER'S PANEL */
 
+.special-announcement-panel__subline,
+.special-announcement-panel__title {
+  padding-right: calc(var(--size-burger) + var(--gutter));
+}
+
 .special-announcement-panel__subline {
-  @apply subline;
+  @apply subline leading-tight block;
 }
 
 .special-announcement-panel__title {
-  @apply mt-gutter;
-
-  padding-right: calc(var(--size-burger) + var(--gutter));
+  @apply mt-gutter-3 lg:mt-gutter max-lg:h3;
 }
 
 .special-announcement-panel__desc {

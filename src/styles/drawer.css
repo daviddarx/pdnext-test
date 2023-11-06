@@ -13,5 +13,5 @@
 }
 
 .drawer__close {
-  @apply fixed top-gutter right-gutter;
+  @apply fixed top-gutter right-gutter bg-black;
 }
