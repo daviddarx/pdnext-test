@@ -2,11 +2,11 @@
   "timetable": [
     {
       "time": "17:00",
-      "title": "Zeitfenster 2"
+      "title": "Zeitfenster 2 - Performance"
     },
     {
       "time": "19:00",
-      "title": "Zeitfenster 3"
+      "title": "Zeitfenster 3 - Dinner"
     }
   ],
   "eventdate": "2023-12-02T17:00:01.000Z",
