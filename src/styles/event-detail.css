@@ -49,7 +49,7 @@
   @apply mt-gutter-1.5 space-y-gutter-1.5;
 
   @screen lg {
-    @apply mt-gutter space-y-0;
+    @apply space-y-0;
 
     display: grid;
     grid-row-gap: var(--gutter);
