@@ -79,7 +79,7 @@
 
 .event-detail__price-text {
   /* Displays inline in case there is reduced text */
-  @apply inline;
+  @apply inline-block pr-[0.5em];
 
   p:last-child {
     @apply inline;
@@ -87,7 +87,7 @@
 }
 
 .event-detail__reduced-price-button {
-  @apply text-link underline pl-[0.5em];
+  @apply text-link underline;
 }
 
 .event-detail__reduced-price-text {
