@@ -1,8 +1,8 @@
 {
   "timetable": [
     {
-      "time": "17:00 - Ausstellung",
-      "title": "Zeitfenster 1"
+      "time": "17:00",
+      "title": "Zeitfenster 1 - Ausstellung"
     }
   ],
   "ticketsLink": "https://eventfrog.ch/de/p/kunst-ausstellungen/kultur/little-whorehouse-of-china-7127690355491706866.html",
