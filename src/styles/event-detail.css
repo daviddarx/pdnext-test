@@ -74,7 +74,7 @@
 }
 
 .event-detail__timetable-title {
-  @apply inline-block w-[4em] font-semibold;
+  @apply inline-block min-w-[4em] pr-[0.5em] font-semibold;
 }
 
 .event-detail__price-text {
