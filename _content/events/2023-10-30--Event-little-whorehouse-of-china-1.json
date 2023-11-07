@@ -2,11 +2,11 @@
   "timetable": [
     {
       "time": "17:00",
-      "title": "Zeitfenster 2 - Performance"
+      "title": "Teil 2 - Performance"
     },
     {
       "time": "19:00",
-      "title": "Zeitfenster 3 - Dinner/party*"
+      "title": "Teil 3 - Dinner/party*"
     }
   ],
   "ticketsLink": "https://eventfrog.ch/de/p/kunst-ausstellungen/kultur/little-whorehouse-of-china-7127690355491706866.html",
@@ -22,6 +22,6 @@
   "deactivated": false,
   "desc": "Das \"The Little Whore House of Chinoise\" ist ein immersiver Performance– und Ausstellungsabend, präsentiert von Ziwei und Yumo. Wir werden entführt in eine Welt chinesischer erotischer Fantasien, die inspiriert wird vom traditionellen chinesischen 青楼 (Qinglou, Grünes Haus), einem Ort, an dem sowohl Künstler:innen als auch Kurtisanen ihre Gäst:innen unterhalten. Es wird auch an die \"Frisörsalons\" und \"Massagestudios\" angespielt, die in Asien oft als Orte für sinnliche Erfahrungen dienen.\\\n\\\n**Performance von:** Yumo Cheng und Ziwei Huang\\\n**Dauer:** 60 Min\\\n**Sprache:** Englisch",
   "ticketsLinkTitle": "Tickets",
-  "title": "Little Whorehouse of China",
+  "title": "Little Whorehouse of Chinoise",
   "specialstate": "Fokus Sexarbeit"
 }
