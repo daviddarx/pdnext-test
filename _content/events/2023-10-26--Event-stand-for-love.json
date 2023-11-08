@@ -1,7 +1,7 @@
 {
   "timetable": [],
   "eventdate": "2023-12-02T17:00:00.000Z",
-  "eventlocationlink": "www.langstrasse200.ch",
+  "eventlocationlink": "https://langstrasse200.ch/pub/de",
   "price": "Kollekte",
   "layout": "event",
   "hideReducedPrice": false,
