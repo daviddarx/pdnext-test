@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
+import Script from 'next/script';
 import { Provider } from 'react-redux';
 import { AnimatePresence } from 'framer-motion';
 import { detect } from 'detect-browser';
@@ -140,6 +141,24 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   return (
     <Provider store={store}>
+      <Script
+        strategy='afterInteractive'
+        src={`https://www.googletagmanager.com/gtag/js?id=G-2MWEKQP4MH`}
+      />
+      <Script
+        id='google-script'
+        strategy='afterInteractive'
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-2MWEKQP4MH', {
+              page_path: window.location.pathname,
+            });
+          `,
+        }}
+      />
       <div className={classNames(fontText.className, fontTitle.variable)}>
         <MainNavPanel />
         <NavBurger />
