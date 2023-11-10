@@ -1,9 +1,20 @@
 .main-nav {
   @apply flex flex-col min-h-full justify-between;
+
+  @screen max-sm {
+    /* In case Safari's or Chrome's bottom bar is still visible */
+    @apply pb-32;
+  }
 }
 
 .main-nav__nav {
   @apply mb-gutter-1/2;
+}
+
+.main-nav__nav--secondary {
+  @screen lg {
+    @apply columns-2 mt-gutter-2;
+  }
 }
 
 .main-nav__link {
@@ -17,7 +28,7 @@
 }
 
 .main-nav__link--secondary {
-  @apply h5 font-semibold pb-[0.5em] lg:pb-[0.75em];
+  @apply h5 font-semibold pb-[0.5em] lg:pb-[0.5em] xl:pb-[0.65em];
 }
 
 .main-nav__link--active {
