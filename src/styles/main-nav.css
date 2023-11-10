@@ -24,7 +24,9 @@
 .main-nav__link--main {
   @apply mb-gutter-1.5 lg:mb-gutter;
 
-  padding-right: calc(var(--gutter) + var(--size-burger));
+  @screen lg {
+    padding-right: calc(var(--gutter) + var(--size-burger));
+  }
 }
 
 .main-nav__link--secondary {
