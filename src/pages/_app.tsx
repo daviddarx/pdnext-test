@@ -83,8 +83,6 @@ const App = ({ Component, pageProps }: AppProps) => {
       store.dispatch(uiActions.setDark(false));
     }
 
-    console.log('test', gtag.GA_TRACKING_ID);
-
     return () => {
       router.events.off('routeChangeStart', handleRouteChangeStart);
       router.events.off('routeChangeComplete', handleRouteChangeComplete);
