@@ -72,6 +72,17 @@
   @apply mt-gutter-2;
 }
 
+.content-slot__first-text,
+.content-slot__second-text {
+  & ul {
+    @apply !mb-[2em];
+
+    & li {
+      @apply mb-[1em];
+    }
+  }
+}
+
 .content-slot__second-text {
   @apply mt-gutter-2;
 }

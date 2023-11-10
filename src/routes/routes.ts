@@ -35,13 +35,14 @@ export const routes = {
   },
   secondary: {
     about: { slug: 'festival', title: 'Das Festival', json: 'contentpage-das-festival.json' },
+    awareness: { slug: 'awareness', title: 'Awareness', json: 'contentpage-awarness.json' },
     news: { slug: 'news', title: 'News' },
+    impressions: { slug: 'impressions', title: 'Impressions' },
     submissions: {
       slug: 'submissions',
       title: 'Submissions',
       json: 'contentpage-submissions.json',
     },
-    impressions: { slug: 'impressions', title: 'Impressions' },
     press: { slug: 'press', title: 'Press', json: 'contentpage-presse.json' },
   },
   footer: {
