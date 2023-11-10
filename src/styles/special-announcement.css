@@ -50,8 +50,7 @@
 
 /* DRAWER'S PANEL */
 
-.special-announcement-panel__subline,
-.special-announcement-panel__title {
+.special-announcement-panel__subline {
   padding-right: calc(var(--size-burger) + var(--gutter));
 }
 
@@ -60,9 +59,9 @@
 }
 
 .special-announcement-panel__title {
-  @apply mt-gutter-3 lg:mt-gutter max-lg:h3;
+  @apply mt-gutter-3 max-lg:h3 hyphens-auto;
 }
 
 .special-announcement-panel__desc {
-  @apply mt-gutter-2 text-bigger;
+  @apply mt-gutter text-bigger;
 }

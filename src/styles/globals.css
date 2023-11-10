@@ -88,6 +88,10 @@
   }
 }
 
+html {
+  hyphenate-limit-chars: 3 5 2; /* Minimum 3 characters before and after hyphenation point */
+}
+
 body {
   @apply text-black text-base leading-normal tracking-normal bg-pink font-normal;
 }
