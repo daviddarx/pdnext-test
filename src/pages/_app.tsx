@@ -7,6 +7,7 @@ import { AnimatePresence } from 'framer-motion';
 import { detect } from 'detect-browser';
 import classNames from 'classnames';
 
+import * as gtag from '@/utils/ga';
 import { routes } from '@/routes/routes';
 import { fontText, fontTitle } from '@/utils/get-fonts';
 import store from '@/store/';
@@ -32,6 +33,10 @@ const App = ({ Component, pageProps }: AppProps) => {
       store.dispatch(uiActions.closeEvent());
     };
 
+    const handleRouteChangeComplete = (url: string) => {
+      gtag.pageview(url);
+    };
+
     const handlePopState = () => {
       /**
        * On back/popstate navigation, override the scroll
@@ -50,6 +55,7 @@ const App = ({ Component, pageProps }: AppProps) => {
     };
 
     router.events.on('routeChangeStart', handleRouteChangeStart);
+    router.events.on('routeChangeComplete', handleRouteChangeComplete);
     router.events.on('beforeHistoryChange', handleBeforeHistoryChange);
     router.beforePopState((state) => {
       /**
@@ -77,8 +83,11 @@ const App = ({ Component, pageProps }: AppProps) => {
       store.dispatch(uiActions.setDark(false));
     }
 
+    console.log('test', gtag.GA_TRACKING_ID);
+
     return () => {
       router.events.off('routeChangeStart', handleRouteChangeStart);
+      router.events.off('routeChangeComplete', handleRouteChangeComplete);
       router.events.off('beforeHistoryChange', handleBeforeHistoryChange);
       window.removeEventListener('popstate', handlePopState);
     };
@@ -143,7 +152,7 @@ const App = ({ Component, pageProps }: AppProps) => {
     <Provider store={store}>
       <Script
         strategy='afterInteractive'
-        src={`https://www.googletagmanager.com/gtag/js?id=G-2MWEKQP4MH`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
       />
       <Script
         id='google-script'
@@ -153,7 +162,7 @@ const App = ({ Component, pageProps }: AppProps) => {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-2MWEKQP4MH', {
+            gtag('config', '${gtag.GA_TRACKING_ID}', {
               page_path: window.location.pathname,
             });
           `,

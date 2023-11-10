@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@types/gtag.js": "^0.0.18",
     "@types/lodash-es": "^4.17.9",
     "@types/node": "18.15.13",
     "@types/react": "18.0.38",
