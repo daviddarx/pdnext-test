@@ -5,6 +5,9 @@
   "layout": "event",
   "hideReducedPrice": false,
   "eventlocation": "25hours Hotel Langstrasse",
+  "entries": [
+    "bipoc-festival-space "
+  ],
   "deactivated": false,
   "desc": "Der BIPoC Festival Space ist ein Raum, der Black, Indigenous und People of Color eine Gelegenheit bietet, sich in einer sensibilisierteren und diskriminierungsfreieren Umgebung zu versammeln und eigene Gedanken, Gefühle und Erfahrungen zu teilen. Dieser Raum soll als Treffpunkt und Rückzugsort dienen.",
   "title": "BIPoC Festival Space"
