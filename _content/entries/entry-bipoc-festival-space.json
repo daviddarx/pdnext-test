@@ -1,0 +1,14 @@
+{
+  "forceBlank": false,
+  "deactivated": false,
+  "desc": "Der Space wird von BIPoC Space Holders initiiert. Dennoch liegt es in der Verantwortung aller Teilnehmenden, den Raum mitzuhalten und sicherzustellen, dass der Raum ein safer* Space ist. \n\nDer Safer Space bietet Sitz- und Liegemöglichkeiten, Materialien für kreative Aktivitäten wie Schreiben und Zeichnen, themenbezogene Bücher, Tee und Möglichkeiten zur Entspannung. Hier kann mensch sich Zeit füreinander und sich selbst nehmen und die kollektive Erschöpfung aber auch die Zuversicht miteinander teilen.\n\nDer Space duldet keine Formen von Diskriminierungen. Die Räumlichkeiten sind barrierefrei. \n\n Wann: Freitag- Sonntag, genaue Zeiten tba",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/bipoc-festival-space1.jpg"
+    }
+  ],
+  "image": "/images/uploads/bipoc-festival-space-2.jpg",
+  "title": "BIPoC Festival Space ",
+  "uuid": "bipoc-festival-space ",
+  "entryType": "Talk"
+}
