@@ -1,6 +1,7 @@
 import { Fragment, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import classNames from 'classnames';
 
 import { SpecialAnnouncement } from '@/types/SpecialAnnouncement';
 
@@ -25,7 +26,13 @@ const SpecialAnnouncement: React.FC<Props> = ({ data }) => {
   return (
     <Fragment>
       <article className='special-announcement'>
-        <h2 className='special-announcement__title header__top-bar-title'>Special Announcement</h2>
+        <h2
+          className={classNames('special-announcement__title header__top-bar-title', {
+            'sr-only': data.hideTitle,
+          })}
+        >
+          Special Announcement
+        </h2>
         <button className='special-announcement__btn tag' onClick={open}>
           <span className='special-announcement__btn-text'>{data.buttonTitle}</span>{' '}
           <ArrowIcon className='special-announcement__btn-icon' />
