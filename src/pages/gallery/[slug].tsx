@@ -63,7 +63,9 @@ const Page: NextPage<PageProps> = ({ page, commonPageData }) => {
   };
 
   return (
-    <Layout commonPageData={commonPageData} isDark={true}></Layout>
+    <Layout commonPageData={commonPageData} isDark={true}>
+      <div></div>
+    </Layout>
 
     // <Layout commonPageData={commonPageData} isDark={true}>
     //   <Metas title={page.title} />
