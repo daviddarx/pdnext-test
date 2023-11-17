@@ -37,7 +37,7 @@ export const routes = {
     about: { slug: 'festival', title: 'Das Festival', json: 'contentpage-das-festival.json' },
     awareness: { slug: 'awareness', title: 'Awareness', json: 'contentpage-awarness.json' },
     news: { slug: 'news', title: 'News' },
-    impressions: { slug: 'impressions', title: 'Impressions' },
+    // impressions: { slug: 'impressions', title: 'Impressions' },
     submissions: {
       slug: 'submissions',
       title: 'Submissions',
