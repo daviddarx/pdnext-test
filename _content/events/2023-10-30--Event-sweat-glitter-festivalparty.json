@@ -1,6 +1,10 @@
 {
   "timetable": [
     {
+      "time": "22:00 - 06:00",
+      "title": "Filmdreh im Beichtstuhl"
+    },
+    {
       "time": "22:00",
       "title": "Nici Oko (DJ)"
     },
@@ -37,6 +41,7 @@
   "hideReducedPrice": false,
   "eventlocation": "Exil (rollstuhlgängig)",
   "entries": [
+    "filmdreh-im-beichtstuhl",
     "nici-oko",
     "nygel-panasco",
     "power-puff",
