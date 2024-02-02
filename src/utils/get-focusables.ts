@@ -5,7 +5,7 @@ let localFocusables: HTMLElement[] | undefined;
 export const getFocusables = (element: HTMLElement): HTMLElement[] => {
   const elements = Array.from(
     element.querySelectorAll(
-      'a[href], button, input, textarea, select, details,[tabindex]:not([tabindex="-1"])',
+      'a[href], button, input:not([type="hidden"]), textarea, select, details,[tabindex]:not([tabindex="-1"])',
     ),
   );
 
@@ -23,7 +23,7 @@ export const setFocusables = (element: HTMLElement): void => {
   const scrollY = window.scrollY;
 
   const firstFocusable = localFocusables[0] as HTMLInputElement | undefined;
-  firstFocusable?.focus?.();
+  firstFocusable?.focus?.({ preventScroll: true });
 
   window.scrollTo({ top: scrollY });
 };
