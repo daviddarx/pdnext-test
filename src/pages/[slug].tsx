@@ -29,8 +29,7 @@ type PageProps = {
 
 const Page: NextPage<PageProps> = ({ page, commonPageData }) => {
   const { slug, type, title, data } = page;
-  // const isDark = slug === routes.secondary.about.slug || type === routes.secondary.impressions.slug;
-  const isDark = slug === routes.secondary.about.slug;
+  const isDark = slug === routes.secondary.about.slug || type === routes.secondary.impressions.slug;
 
   return (
     <Layout commonPageData={commonPageData} isDark={isDark}>
@@ -42,9 +41,9 @@ const Page: NextPage<PageProps> = ({ page, commonPageData }) => {
       {type === routes.main.festival.slug && <ProgramPage data={data as ProgramContent} />}
       {type === routes.main.ons.slug && <OnsPage data={data as OnsContent} />}
       {type === routes.secondary.news.slug && <NewsPage data={data as NewsContent} />}
-      {/* {type === routes.secondary.impressions.slug && (
+      {type === routes.secondary.impressions.slug && (
         <ImpressionsPage data={data as ImpressionsContent} />
-      )} */}
+      )}
       {type === 'content-page' && <ContentPage data={data as ContentPageContent} />}
     </Layout>
   );
@@ -99,9 +98,9 @@ export const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
     case routes.secondary.news.slug:
       data = await fetchNewsContent();
       break;
-    // case routes.secondary.impressions.slug:
-    //   data = await fetchImpressionsContent();
-    //   break;
+    case routes.secondary.impressions.slug:
+      data = await fetchImpressionsContent();
+      break;
     default:
       data = await fetchContentPageContent(route.json!);
       break;

@@ -73,12 +73,12 @@ const App = ({ Component, pageProps }: AppProps) => {
     window.history.scrollRestoration = 'manual';
 
     const pageSlug = pageKey.split('/')[1].split('#')[0];
-    /**
+
+    if (
       pageSlug === routes.secondary.about.slug ||
       pageSlug === routes.secondary.impressions.slug ||
       pageSlug === 'gallery'
-     */
-    if (pageSlug === routes.secondary.about.slug || pageSlug === 'gallery') {
+    ) {
       store.dispatch(uiActions.setDark(true));
     } else {
       store.dispatch(uiActions.setDark(false));

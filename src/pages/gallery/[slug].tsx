@@ -64,68 +64,64 @@ const Page: NextPage<PageProps> = ({ page, commonPageData }) => {
 
   return (
     <Layout commonPageData={commonPageData} isDark={true}>
-      <div></div>
+      <Metas title={page.title} />
+
+      <section className='content-page gallery-page'>
+        <PageHeader subline={page.subline} title={page.title} lead={page.lead} />
+        <div className='gallery-page__images'>
+          {page.images.map((image, i) => (
+            <a
+              href={image.main}
+              key={image.main}
+              className='gallery-page__link'
+              onClick={(e) => openGallery(e, i)}
+            >
+              <div className='gallery-page__image'>
+                <LoadedImageCustom src={image.thumb} alt={page.title} />
+              </div>
+            </a>
+          ))}
+        </div>
+        <div className='gallery-page__back'>
+          <ActiveLink
+            className='gallery-page__back-button'
+            href={'/' + routes.secondary.impressions.slug}
+            onClick={backToImpressions}
+          >
+            <ArrowIcon className='gallery-page__back-icon' />
+            <span>{routes.secondary.impressions.title}</span>
+          </ActiveLink>
+        </div>
+      </section>
+
+      <Lightbox
+        open={isGalleryOpened}
+        close={closeGallery}
+        index={galleryIndex}
+        slides={galleryImages}
+        plugins={[Counter]}
+        animation={{
+          fade: 250,
+          swipe: 750,
+          navigation: 500,
+          easing: {
+            fade: 'ease',
+            swipe: 'cubic-bezier(0.230, 1.000, 0.320, 1.000)' /* outQuint */,
+            navigation: 'cubic-bezier(0.860, 0.000, 0.070, 1.000)' /* inOutQuint */,
+          },
+        }}
+        render={{
+          iconPrev: () => (
+            <NavButton className='gallery-page__nav-button' renderAsDiv={true} isPrev={true} />
+          ),
+          iconNext: () => <NavButton className='gallery-page__nav-button' renderAsDiv={true} />,
+          iconClose: () => (
+            <CloseButton className='gallery-page__close-button' renderAsDiv={true} />
+          ),
+        }}
+        className='gallery-page__lightbox'
+      />
     </Layout>
-
-    // <Layout commonPageData={commonPageData} isDark={true}>
-    //   <Metas title={page.title} />
-
-    //   <section className='content-page gallery-page'>
-    //     <PageHeader subline={page.subline} title={page.title} lead={page.lead} />
-    //     <div className='gallery-page__images'>
-    //       {page.images.map((image, i) => (
-    //         <a
-    //           href={image.main}
-    //           key={image.main}
-    //           className='gallery-page__link'
-    //           onClick={(e) => openGallery(e, i)}
-    //         >
-    //           <div className='gallery-page__image'>
-    //             <LoadedImageCustom src={image.thumb} alt={page.title} />
-    //           </div>
-    //         </a>
-    //       ))}
-    //     </div>
-    //     <div className='gallery-page__back'>
-    //       <ActiveLink
-    //         className='gallery-page__back-button'
-    //         href={'/' + routes.secondary.impressions.slug}
-    //         onClick={backToImpressions}
-    //       >
-    //         <ArrowIcon className='gallery-page__back-icon' />
-    //         <span>{routes.secondary.impressions.title}</span>
-    //       </ActiveLink>
-    //     </div>
-    //   </section>
-
-    //   <Lightbox
-    //     open={isGalleryOpened}
-    //     close={closeGallery}
-    //     index={galleryIndex}
-    //     slides={galleryImages}
-    //     plugins={[Counter]}
-    //     animation={{
-    //       fade: 250,
-    //       swipe: 750,
-    //       navigation: 500,
-    //       easing: {
-    //         fade: 'ease',
-    //         swipe: 'cubic-bezier(0.230, 1.000, 0.320, 1.000)' /* outQuint */,
-    //         navigation: 'cubic-bezier(0.860, 0.000, 0.070, 1.000)' /* inOutQuint */,
-    //       },
-    //     }}
-    //     render={{
-    //       iconPrev: () => (
-    //         <NavButton className='gallery-page__nav-button' renderAsDiv={true} isPrev={true} />
-    //       ),
-    //       iconNext: () => <NavButton className='gallery-page__nav-button' renderAsDiv={true} />,
-    //       iconClose: () => (
-    //         <CloseButton className='gallery-page__close-button' renderAsDiv={true} />
-    //       ),
-    //     }}
-    //     className='gallery-page__lightbox'
-    //   />
-    // </Layout>
   );
 };
 

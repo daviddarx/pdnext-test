@@ -25,21 +25,21 @@
     "date": "2015",
     "lead": "Kino Riffraff & Club Langstrasse Kultur",
     "folder": "2015",
-    "imageNumber": 25
+    "imageNumber": 24
   },
   "2016": {
     "title": "4. Porny Days",
     "date": "2016",
     "lead": "Kino Riffraff & Kunstraum Walcheturm",
     "folder": "2016",
-    "imageNumber": 44
+    "imageNumber": 40
   },
   "2017": {
     "title": "5. Porny Days",
     "date": "2017",
     "lead": "Kino Riffraff & Kunstraum Walcheturm",
     "folder": "2017",
-    "imageNumber": 51
+    "imageNumber": 47
   },
   "2018": {
     "title": "6. Porny Days",
@@ -53,28 +53,35 @@
     "date": "2019",
     "lead": "Kino Riffraff, 25hours Hotel & Stall 6<br>(Fotos von Michel Gilgen & Pierre Yves Massot)",
     "folder": "2019",
-    "imageNumber": 62
+    "imageNumber": 46
   },
   "2020": {
     "title": "8. Porny Days",
     "date": "2020",
     "lead": "Kino Riffraff (Fotos von Michel Gilgen)",
     "folder": "2020",
-    "imageNumber": 38
+    "imageNumber": 31
   },
   "2021": {
     "title": "9. Porny Days",
     "date": "2021",
     "lead": "Kino Riffraff, Das Gleis, Kauz & Xenix (Fotos von Michel Gilgen, Toni Karat & Noel Ortiz)",
     "folder": "2021",
-    "imageNumber": 57
+    "imageNumber": 51
   },
   "2022": {
     "title": "10. Porny Days",
     "date": "2022",
-    "lead": "RiffRaff, Xenix, Hund, Das Gleis, 25Hours Hotel, (T)raum,  Serrat(u)s, Gessnerallee (Fotos von Michel Gilgen & Layla Baraké",
+    "lead": "RiffRaff, Xenix, Hund, Das Gleis, 25Hours Hotel, (T)raum,  Serrat(u)s, Gessnerallee (Fotos von Michel Gilgen & Layla Baraké)",
     "folder": "2022",
-    "imageNumber": 58
+    "imageNumber": 54
+  },
+  "2023": {
+    "title": "11. Porny Days",
+    "date": "2023",
+    "lead": "RiffRaff, Xenix, Das Gleis, 25Hours Hotel, (T)raum,  Serrat(u)s, Gessnerallee (Fotos von Michel Gilgen)",
+    "folder": "2023",
+    "imageNumber": 38
   },
   "posters": {
     "title": "Porny Days Posters",
