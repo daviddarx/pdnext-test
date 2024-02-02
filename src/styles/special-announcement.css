@@ -32,7 +32,7 @@
   @apply tag;
 
   @screen max-lg {
-    @apply mt-[0.5em] !text-xs;
+    @apply !text-xs;
   }
 
   @screen xl {

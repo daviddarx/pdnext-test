@@ -1,16 +1,24 @@
 .save-the-date {
-  @apply text-xs font-semibold uppercase;
+  @apply py-2 text-xs font-semibold uppercase leading-tight;
+
+  @screen md {
+    @apply space-x-4 py-0;
+  }
 
   @screen lg {
-    @apply space-x-4 pr-gutter self-center;
+    @apply pr-gutter self-center;
     @apply text-left text-base normal-case font-normal;
   }
 }
 
 .save-the-date__title {
-  @apply hidden;
+  @apply block;
 
-  @screen lg {
+  @screen md {
     @apply inline-block;
+  }
+
+  @screen max-lg {
+    @apply text-xs;
   }
 }
