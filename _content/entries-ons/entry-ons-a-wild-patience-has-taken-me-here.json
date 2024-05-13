@@ -1,0 +1,18 @@
+{
+  "forceBlank": false,
+  "entryType": "Film",
+  "deactivated": false,
+  "desc": "Éri Sarmet\\\nBrasilien, 2021, 26 Minuten\n\nEine Motorradfahrerin mittleren Alters, die der Einsamkeit überdrüssig ist, geht zum ersten Mal auf eine Lesbenparty, wo sie vier junge polyamore queere Menschen kennenlernt. Sie lassen sich aufeinander ein und zusammen durch das Wochenende treiben. Eine Begegnung der Generationen und eine Hommage an diejenigen, die uns hierher gebracht haben.",
+  "videourl": "https://vimeo.com/533083466",
+  "title": "A Wild Patience Has Taken Me Here",
+  "image": "/images/uploads/01_a_wild_patience.jpg.jpg",
+  "uuid": "awildpatience",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/02_a_wild_patience.jpg.jpg"
+    },
+    {
+      "image": "/images/uploads/03_a_wild_patience.jpg.jpg"
+    }
+  ]
+}
