@@ -1,0 +1,18 @@
+{
+  "forceBlank": false,
+  "entryType": "Film",
+  "deactivated": false,
+  "desc": "Theo Montoya\\\nKolumbien/Rumänien/Frankreich/Deutschland, 2022, 72 Minuten\n\nEigentlich hätte sein erster Film ein Spielfilm werden sollen. Ein junger Regisseur erinnert sich an die Vorbereitungen für seinen ersten Film, ein B-Movie über Geister. Die Rollen wollte er mit seinen Freunden besetzen, den jungen queeren Menschen aus Medellín, die gegen ein repressives Umfeld kämpfen. Aber sein Hauptdarsteller, der auf Instagram *Anhell69* heisst, stirbt an einer Überdosis, wie auch so viele weitere Freunde. Trotzdem entsteht ein Film, wenngleich ein ganz anderer, als geplant. Halb rekonstruiert, halb imaginiert erzählt Theo Montoya in seinem Regiedebüt *Anhell69* von den Träumen und Ängsten, den Exzessen und der Melancholie einer Generation, die nicht an die Zukunft glaubt. Ein fluider Film über die Kraft der Gemeinschaft und die schmale Grenze zwischen Leben und Tod wurde in der Woche der Kritik der Filmfestspiele in Venedig uraufgeführt und beim internationalen Festival Dok.Leipzig mit der goldenen Taube ausgezeichnet. Eine poetische, zutiefst politische Geisterbeschwörung!",
+  "videourl": "https://vimeo.com/ondemand/anhell69",
+  "title": "Anhell69",
+  "image": "/images/uploads/01_anhell69.jpg.jpg",
+  "uuid": "anhell69",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/03_anhell69.jpg.jpg"
+    },
+    {
+      "image": "/images/uploads/02_anhell69.jpg.jpg"
+    }
+  ]
+}
