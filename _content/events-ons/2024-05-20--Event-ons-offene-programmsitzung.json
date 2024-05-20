@@ -4,7 +4,9 @@
   "eventlocationlink": "https://www.riffraff-houdini.ch/de-ch/programm.html",
   "layout": "event",
   "eventlocation": "Kino Riffraff 4",
-  "entries": [],
+  "entries": [
+    "offeneprogrammsitzung"
+  ],
   "desc": "Wie wird das Filmprogramm eines Festivals zum Thema Körperlichkeit und Sexualität kuratiert? Was sind No-Gos für das Team, wo schauen wir genauer hin und was bedeutet die Markierung „Tripple Crazy Yess“ im Submission-Tool? Und schauen wir wirklich alle hunderte eingereichte Filme ganz?",
   "ticketsLinkTitle": "",
   "subtitle": "",
