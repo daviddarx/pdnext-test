@@ -150,7 +150,10 @@
           ]
         }
       ],
-      "secondText": "**Verein Porny Days Film Kunst Festival**"
+      "secondText": "**Verein Porny Days Film Kunst Festival**",
+      "collapsableText": {
+        "text": ""
+      }
     }
   ],
   "video": true,
