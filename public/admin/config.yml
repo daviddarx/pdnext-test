@@ -3,7 +3,7 @@ backend:
   repo: daviddarx/pdnext-test # Path to your GitHub repository
   branch: 2024
 
-# local_backend: true  For local admin, remove for production
+local_backend: false # For local admin, remove for production
 
 media_folder: 'public/images/uploads' # Media files will be stored in the repo under public/images/uploads
 public_folder: '/images/uploads' # The src attribute for uploaded media will begin with /images/uploads
