@@ -57,14 +57,18 @@
 }
 
 .content-slot--splitted {
-  @apply grid grid-cols-2 gap-gutter-2;
+  @apply grid gap-gutter-2 px-gutter;
 
-  & .content-slot__content {
-    @apply pr-gutter-2;
-  }
+  @screen lg {
+    @apply grid-cols-2  px-0;
 
-  & .content-slot__splitted-image {
-    @apply self-start sticky top-gutter;
+    & .content-slot__content {
+      @apply pr-gutter-2;
+    }
+
+    & .content-slot__splitted-image {
+      @apply self-start sticky top-gutter;
+    }
   }
 }
 
