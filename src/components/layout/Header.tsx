@@ -27,7 +27,7 @@ const Header: React.FC<Props> = ({ commonPageData }) => {
     // if (currentScrollTop > lastScrollTopRef.current) {
     //   dispatch(uiActions.setBurgerVisibility(false));
     // } else {
-    //   dispatch(uiActions.setBurgerVisibility(true));
+    //  dispatch(uiActions.setBurgerVisibility(true));
     // }
 
     if (currentScrollTop > 50) {
