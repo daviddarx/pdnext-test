@@ -1,5 +1,34 @@
 import getImageDimensions from './get-image-dimensions';
 
+export interface ContentSlot {
+  title: string;
+  deactivated?: boolean;
+  hiddenTitle?: boolean;
+  anchorTitle?: string;
+  image?: string;
+  imageWidth?: number;
+  imageHeight?: number;
+  splittedLayout?: boolean;
+  firstText?: string;
+  definitionLists?: {
+    title?: string;
+    listItem?: {
+      title: string;
+      description?: string;
+    }[];
+  }[];
+  secondText?: string;
+  collapsableText?: {
+    title?: string;
+    text?: string;
+  };
+  downloads?: {
+    downloadTitle: string;
+    fileTypeWeight: string;
+    file: string;
+  }[];
+}
+
 export interface ContentPageContent {
   title: string;
   headerSubline?: string;
@@ -7,33 +36,7 @@ export interface ContentPageContent {
   headerCentered: boolean;
   lead?: string;
   video?: boolean;
-  contentSlot?: {
-    title: string;
-    deactivated?: boolean;
-    hiddenTitle?: boolean;
-    anchorTitle?: string;
-    image?: string;
-    imageWidth?: number;
-    imageHeight?: number;
-    firstText?: string;
-    definitionLists?: {
-      title?: string;
-      listItem?: {
-        title: string;
-        description?: string;
-      }[];
-    }[];
-    secondText?: string;
-    collapsableText?: {
-      title?: string;
-      text?: string;
-    };
-    downloads?: {
-      downloadTitle: string;
-      fileTypeWeight: string;
-      file: string;
-    }[];
-  }[];
+  contentSlot: ContentSlot[];
 }
 
 export async function fetchContentPageContent(json: string): Promise<ContentPageContent> {

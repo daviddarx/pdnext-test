@@ -56,6 +56,22 @@
   @apply mt-gutter-4 scroll-mt-gutter-4;
 }
 
+.content-slot--splitted {
+  @apply grid gap-gutter-2 px-gutter;
+
+  @screen lg {
+    @apply grid-cols-2  px-0;
+
+    & .content-slot__content {
+      @apply pr-gutter-2;
+    }
+
+    & .content-slot__splitted-image {
+      @apply self-start sticky top-gutter;
+    }
+  }
+}
+
 .content-slot__title {
   @apply mb-[0.7em];
 
