@@ -1,0 +1,33 @@
+{
+  "timetable": [
+    {
+      "time": "21:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "22:00",
+      "title": "Filme"
+    },
+    {
+      "time": "23:00",
+      "title": "Podium-Diskussion"
+    }
+  ],
+  "ticketsLink": "https://www.riffraff-houdini.ch/de-ch/programm.html",
+  "eventdate": "2024-11-27T21:00:00.000Z",
+  "eventlocationlink": "https://www.riffraff-houdini.ch/",
+  "price": "C﻿HF 20.00 (Lorem Ipsum)",
+  "layout": "event",
+  "hideReducedPrice": false,
+  "eventlocation": "Riff-Raff",
+  "entries": [
+    "test-entry"
+  ],
+  "deactivated": false,
+  "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed ultrices lacus. Sed elementum dui enim, eget elementum felis pharetra nec. Nulla egestas sapien tellus, vel vehicula enim fermentum ac. Cras nec orci vitae justo euismod finibus sed in arcu. Praesent dictum justo vel tortor bibendum, et posuere elit porta. Cras ultricies tortor quis quam dictum tempor. Integer pharetra faucibus porttitor.",
+  "eventlocationcomplement": "Salle 4",
+  "ticketsLinkTitle": "Ticket",
+  "subtitle": "Kurze Beschreibung der Event",
+  "title": "Test event",
+  "specialstate": "Sold out"
+}
