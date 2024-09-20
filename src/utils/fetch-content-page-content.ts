@@ -15,6 +15,7 @@ export interface ContentPageContent {
     image?: string;
     imageWidth?: number;
     imageHeight?: number;
+    splittedLayout?: boolean;
     firstText?: string;
     definitionLists?: {
       title?: string;

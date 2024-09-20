@@ -3,6 +3,7 @@ export type Route = {
   slug: string;
   complement?: string;
   json?: string;
+  hidden?: boolean;
 };
 
 export type RoutesCollection = {
@@ -44,6 +45,12 @@ export const routes = {
       json: 'contentpage-submissions.json',
     },
     press: { slug: 'press', title: 'Press', json: 'contentpage-presse.json' },
+    support: {
+      slug: 'support-us',
+      title: 'Unterstütze uns',
+      json: 'contentpage-support.json',
+      hidden: true,
+    },
   },
   footer: {
     impressum: {

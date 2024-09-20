@@ -24,6 +24,7 @@ const LoadedImage: React.FC<Props> = ({
   onLoaded,
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const transparent = src.split('.png').length > 1 || src.split('.svg').length > 1;
 
   const handleLoaded = () => {
     if (onLoaded) onLoaded();
@@ -36,6 +37,7 @@ const LoadedImage: React.FC<Props> = ({
         'loaded-image',
         {
           'loaded-image--loaded': isLoaded,
+          'loaded-image--transparent': transparent,
         },
         className,
       )}

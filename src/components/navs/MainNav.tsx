@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { routes, Route } from '@/routes/routes';
+import { routes, type Route } from '@/routes/routes';
 import { uiActions } from '@/store';
 import { uiStateType } from '@/store/ui-slice';
 
@@ -55,17 +55,19 @@ const MainNav = () => {
           <ul className='main-nav__nav main-nav__nav--secondary'>
             {Object.keys(routes.secondary).map((key) => {
               const route = routes.secondary[key as keyof typeof routes.secondary] as Route;
-              return (
-                <li key={route.slug}>
-                  <ActiveLink
-                    className='main-nav__link main-nav__link--secondary text-link'
-                    activeClassName='main-nav__link--active'
-                    href={'/' + route.slug}
-                  >
-                    {route.title}
-                  </ActiveLink>
-                </li>
-              );
+              if (!route.hidden) {
+                return (
+                  <li key={route.slug}>
+                    <ActiveLink
+                      className='main-nav__link main-nav__link--secondary text-link'
+                      activeClassName='main-nav__link--active'
+                      href={'/' + route.slug}
+                    >
+                      {route.title}
+                    </ActiveLink>
+                  </li>
+                );
+              }
             })}
           </ul>
 

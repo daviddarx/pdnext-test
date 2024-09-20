@@ -644,6 +644,12 @@ collections:
             widget: 'image'
             required: false
 
+          - label: 'Splitted Layout'
+            name: 'splittedLayout'
+            widget: 'boolean'
+            default: false
+            required: false
+
           - label: 'First Text'
             name: 'firstText'
             widget: 'markdown'

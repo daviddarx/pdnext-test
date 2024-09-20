@@ -187,6 +187,10 @@
       @apply mb-[1em] max-w-[45em];
     }
 
+    p + h2 {
+      @apply mt-[2em];
+    }
+
     ul {
       @apply mb-[1em];
     }
@@ -479,6 +483,10 @@
     .dark & {
       @apply bg-white/5;
     }
+  }
+
+  .loaded-image--transparent {
+    @apply bg-transparent;
   }
 
   .loaded-image--loaded {
