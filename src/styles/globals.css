@@ -93,7 +93,9 @@ html {
 }
 
 body {
-  @apply text-black text-base leading-normal tracking-normal bg-pink font-normal;
+  @apply text-black text-base leading-normal tracking-normal bg-white font-normal;
+
+  /* background-color: #fff198; */
 }
 
 :focus-visible {

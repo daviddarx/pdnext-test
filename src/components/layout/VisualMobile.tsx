@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import { screens } from '@/utils/screens';
 
 const Visual = () => {
-  const [mounted, setMounted] = useState(false);
+  const [mounted, setMounted] = useState(true);
   const [active, setActive] = useState(false);
   const [faded, setFaded] = useState(false);
 
@@ -18,9 +18,9 @@ const Visual = () => {
         setMounted(false);
       }
     };
-    onResize();
+    // onResize();
 
-    window.addEventListener('resize', onResize);
+    // window.addEventListener('resize', onResize);
 
     return () => {
       window.removeEventListener('resize', onResize);
@@ -60,14 +60,7 @@ const Visual = () => {
             playsInline
             onPlay={onPlay}
           >
-            <source
-              src='https://files.daviddarx.com/pornydays/videos/2023/teaser.webm'
-              type='video/webm'
-            />
-            <source
-              src='https://files.daviddarx.com/pornydays/videos/2023/teaser.mp4'
-              type='video/mp4'
-            />
+            <source src='videos/slow.mp4' type='video/mp4' />
           </video>
         </div>
       )}

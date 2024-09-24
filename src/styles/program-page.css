@@ -11,6 +11,8 @@
     @apply border-r border-black;
 
     padding-top: calc(var(--gutter) + var(--h-logo));
+
+    @apply backdrop-blur-xl;
   }
 }
 

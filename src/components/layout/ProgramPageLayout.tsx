@@ -129,8 +129,6 @@ const ProgramPageLayout: React.FC<Props> = ({ header, children, hideEventNav = f
         ref={detailRef}
         onKeyDown={handleKeyDown}
       >
-        <VisualDesktop />
-
         <EventDetailCloseButton disabled={openedEvent && isDetailInViewport} />
         <EventDetail hideEventNav={hideEventNav} />
 
