@@ -187,7 +187,8 @@
       @apply mb-[1em] max-w-[45em];
     }
 
-    p + h2 {
+    h2,
+    h3 {
       @apply mt-[2em];
     }
 

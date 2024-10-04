@@ -624,6 +624,7 @@ collections:
               - link
               - quote
               - heading-two
+              - heading-three
               - bulleted-list
               - numbered-list
 

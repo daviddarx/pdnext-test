@@ -1,0 +1,30 @@
+{
+  "title": "Barrierefreiheit",
+  "headerTitle": "Barrierefrei und Bunt: Zugang für Alle",
+  "lead": "Bei Porny Days setzen wir uns dafür ein, unsere Festivalräume für alle zugänglich und einladend zu gestalten.",
+  "contentSlot": [
+    {
+      "deactivated": false,
+      "splittedLayout": false,
+      "title": "Gessnerallee",
+      "anchorTitle": "gessnerallee",
+      "firstText": "### **Barrierefreiheit**\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis ligula velit. Donec non ornare augue. Nunc fringilla aliquam orci a ornare. Curabitur tristique accumsan ipsum nec ornare. Duis non lobortis lectus. Curabitur blandit felis quis convallis commodo. Aliquam erat volutpat.\n\n### E﻿inlass\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis ligula velit. Donec non ornare augue. Nunc fringilla aliquam orci a ornare. Curabitur tristique accumsan ipsum nec ornare. Duis non lobortis lectus. Curabitur blandit felis quis convallis commodo. Aliquam erat volutpat.\n\n### L﻿icht\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis ligula velit. Donec non ornare augue. Nunc fringilla aliquam orci a ornare. Curabitur tristique accumsan ipsum nec ornare. Duis non lobortis lectus. Curabitur blandit felis quis convallis commodo. Aliquam erat volutpat."
+    },
+    {
+      "deactivated": false,
+      "splittedLayout": false,
+      "title": "RiffRaff",
+      "anchorTitle": "riffraff",
+      "firstText": "\n\n### **Barrierefreiheit**\n\n\n\n### E﻿inlass\n\nMenschen mit Barrierefreiheitsbedarf und ihre Begleitpersonen dürfen gerne zum Beginn der Schlange kommen.\n\n### L﻿icht\n\n**Donnerstag**\n\n* **Stall 6:** Während Bazar: Statisches Licht. Während Konzert: bewegtes Licht kann vorkommen.\n\n**Freitag**\n\n* **Stall 6 & Nordflügel:** Statisches Licht\n* **Halle:** Bewegtes Licht kann vorkommen\n\n**Samstag** \n\n* **Stall 6 & Nordflügel:** Statisches Licht\n* **Halle:** Es kann bewegtes Licht und stärkere Lichteffekte auftreten, KEIN Stroboskop\\\n  Vor dem Vorhang: weniger Lichteffekte, können aber teilweise über den Vorhang scheinen\n* Unsere \"Darkrooms\" sind niemals komplett dunkel, so genannte Greyrooms."
+    },
+    {
+      "deactivated": false,
+      "splittedLayout": false,
+      "title": "Schauspielhaus",
+      "anchorTitle": "schauspielhaus",
+      "firstText": "### **Barrierefreiheit**\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis ligula velit. Donec non ornare augue. Nunc fringilla aliquam orci a ornare. Curabitur tristique accumsan ipsum nec ornare. Duis non lobortis lectus. Curabitur blandit felis quis convallis commodo. Aliquam erat volutpat.\n\n### E﻿inlass\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis ligula velit. Donec non ornare augue. Nunc fringilla aliquam orci a ornare. Curabitur tristique accumsan ipsum nec ornare. Duis non lobortis lectus. Curabitur blandit felis quis convallis commodo. Aliquam erat volutpat.\n\n### L﻿icht\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis ligula velit. Donec non ornare augue. Nunc fringilla aliquam orci a ornare. Curabitur tristique accumsan ipsum nec ornare. Duis non lobortis lectus. Curabitur blandit felis quis convallis commodo. Aliquam erat volutpat."
+    }
+  ],
+  "headerCentered": true,
+  "headerSubline": "Barrierefreiheit"
+}
