@@ -1,11 +1,9 @@
-import { ReactNode, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import classNames from 'classnames';
 
 import eases from '@/utils/eases';
 import { CommonPageData } from '@/utils/fetch-common-page-content';
-import { uiActions } from '@/store/';
 
 import Header from '@/components/layout/Header';
 import BottomNav from '@/components/navs/BottomNav';
@@ -45,12 +43,6 @@ type Props = {
 };
 
 const Layout: React.FC<Props> = ({ children, isDark = false, commonPageData }) => {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(uiActions.closeSupportUs());
-  }, [dispatch]);
-
   return (
     <motion.div
       initial='initial'

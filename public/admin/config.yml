@@ -539,42 +539,6 @@ collections:
         default: false
         required: false
 
-  - name: 'supportUsSlot'
-    label: 'Support-us Slot'
-    create: true
-    folder: '_content/supportUsSlots'
-    slug: 'supportUsSlot-{{title}}'
-    extension: 'json'
-    format: 'json'
-    summary: '{{position}} {{title}}'
-    fields:
-      - label: 'Position'
-        name: 'position'
-        widget: 'number'
-        valueType: 'int'
-        min: 0
-        step: 1
-
-      - label: 'Title'
-        name: 'title'
-        widget: 'string'
-
-      - label: 'Description'
-        name: 'desc'
-        widget: 'markdown'
-        buttons:
-          - bold
-          - italic
-          - link
-          - heading-four
-          - bulleted-list
-          - numbered-list
-
-      - label: 'With Paypal Button'
-        name: 'paypal'
-        widget: 'boolean'
-        required: false
-
   - name: 'contentPage'
     label: 'Content Page'
     create: false

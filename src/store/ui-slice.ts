@@ -3,7 +3,6 @@ import { FormatedEvent } from '@/types/FormatedEvent';
 export interface uiStateType {
   ui: {
     isNavigationOpened: boolean;
-    isSupportUsOpened: boolean;
     isBurgerVisible: boolean;
     isBurgerTextVisible: boolean;
     openedEvent: FormatedEvent | undefined;
@@ -26,7 +25,6 @@ export const uiSlice = createSlice({
   name: 'ui',
   initialState: {
     isNavigationOpened: false,
-    isSupportUsOpened: false,
     isBurgerVisible: true,
     isBurgerTextVisible: true,
     openedEvent: undefined as FormatedEvent | undefined,
@@ -75,12 +73,6 @@ export const uiSlice = createSlice({
     },
     closeNavigation: (state) => {
       state.isNavigationOpened = false;
-    },
-    openSupportUs: (state) => {
-      state.isSupportUsOpened = true;
-    },
-    closeSupportUs: (state) => {
-      state.isSupportUsOpened = false;
     },
     setBurgerVisibility: (state, action) => {
       state.isBurgerVisible = action.payload;

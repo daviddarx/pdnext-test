@@ -486,7 +486,7 @@
   }
 
   .loaded-image--transparent {
-    @apply bg-transparent;
+    @apply !bg-transparent;
   }
 
   .loaded-image--loaded {

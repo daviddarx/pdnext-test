@@ -11,16 +11,21 @@ import classNames from 'classnames';
 
 type Props = {
   slot: ContentSlot;
+  className?: string;
 };
 
-const ContentSlot: React.FC<Props> = ({ slot }) => {
+const ContentSlot: React.FC<Props> = ({ slot, className }) => {
   const splittedLayout = slot.splittedLayout && slot.image;
 
   return (
     <article
-      className={classNames('content-slot', {
-        'content-slot--splitted': slot.splittedLayout && slot.image,
-      })}
+      className={classNames(
+        'content-slot',
+        {
+          'content-slot--splitted': slot.splittedLayout && slot.image,
+        },
+        className,
+      )}
       id={getCleanedAnchorID(slot.anchorTitle)}
     >
       {slot.splittedLayout && slot.image && (
