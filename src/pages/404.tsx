@@ -24,7 +24,7 @@ const Page: NextPage<PageProps> = ({ commonPageData }) => {
   );
 };
 
-export const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
+export const getStaticProps: GetStaticProps<PageProps> = async () => {
   const commonPageData = await fetchCommonPageContent();
 
   const props: PageProps = {

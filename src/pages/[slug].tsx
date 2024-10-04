@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 
-import { routes, findRouteBySlug, Route } from '@/routes/routes';
+import { routes, findRouteBySlug } from '@/routes/routes';
 import { fetchProgramContent, ProgramContent } from '@/utils/fetch-program-content';
 import { fetchOnsContent, OnsContent } from '@/utils/fetch-ons-content';
 import { fetchNewsContent, NewsContent } from '@/utils/fetch-news-content';
