@@ -34,7 +34,7 @@
 }
 
 .main-nav__link--active {
-  @apply !text-pink opacity-50;
+  @apply !text-white opacity-50;
 }
 
 .main-nav__link-text {

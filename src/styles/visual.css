@@ -1,5 +1,5 @@
 .visual {
-  @apply w-full h-full pointer-events-none opacity-70;
+  @apply w-full h-full pointer-events-none opacity-70 fixed top-0 left-0 -z-10;
 }
 
 .visual__video {
@@ -12,12 +12,4 @@
 
 .visual__video--fadedout {
   @apply opacity-50;
-}
-
-.visual--desktop {
-  @apply absolute blur-sm;
-}
-
-.visual--mobile {
-  @apply fixed top-0 left-0 -z-10;
 }

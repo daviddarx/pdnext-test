@@ -169,8 +169,8 @@
     @apply translate-y-[0.025em];
   }
 
-  .pink-box {
-    @apply bg-pink py-[0.75em] px-[1em] rounded-[0.5em];
+  .white-box {
+    @apply bg-white py-[0.75em] px-[1em] rounded-[0.5em];
   }
 
   .text-content {
@@ -187,7 +187,8 @@
       @apply mb-[1em] max-w-[45em];
     }
 
-    p + h2 {
+    p + h2,
+    h3 {
       @apply mt-[2em];
     }
 
@@ -299,14 +300,14 @@
   }
 
   .dark {
-    @apply bg-black text-pink;
+    @apply bg-black text-white;
 
     .text-link {
       @apply text-white;
 
       @media (hover: hover) {
         &:hover {
-          @apply text-pink;
+          @apply text-white;
         }
       }
     }
@@ -328,7 +329,7 @@
   .scrollable {
     @apply overflow-y-auto overscroll-contain;
 
-    --sb-track-color: theme('colors.pinkScrollable');
+    --sb-track-color: theme('colors.whiteScrollable');
     --sb-thumb-color: theme('colors.black');
     --sb-thumb-width: 1px;
     --sb-track-padding: 5px;
@@ -353,7 +354,7 @@
 
     .dark & {
       --sb-track-color: theme('colors.black');
-      --sb-thumb-color: theme('colors.pinkScrollable');
+      --sb-thumb-color: theme('colors.whiteScrollable');
     }
   }
 }
@@ -447,7 +448,7 @@
     --s-icon: calc(var(--s-button) * 0.35);
 
     @apply relative inline-block w-[--s-button] h-[--s-button];
-    @apply text-0 bg-pink rounded-full transition-colors ease-out duration-150;
+    @apply text-0 bg-white rounded-full transition-colors ease-out duration-150;
 
     &::after {
       @apply absolute top-1/2 left-1/2;
@@ -464,7 +465,7 @@
       background-color: theme('colors.black');
 
       &::after {
-        border-color: transparent transparent transparent theme('colors.pink');
+        border-color: transparent transparent transparent theme('colors.white');
       }
     }
   }
@@ -486,7 +487,7 @@
   }
 
   .loaded-image--transparent {
-    @apply bg-transparent;
+    @apply !bg-transparent;
   }
 
   .loaded-image--loaded {
@@ -518,7 +519,7 @@
 
   .background-overlay {
     @apply fixed top-0 left-0 w-screen h-screen z-30;
-    @apply bg-pink/75 cursor-pointer;
+    @apply bg-white/75 cursor-pointer;
   }
 
   .background-overlay__dark {

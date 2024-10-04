@@ -17,7 +17,7 @@
   }
 
   .dark & {
-    @apply border-y border-pink;
+    @apply border-y border-white;
   }
 }
 
@@ -26,7 +26,7 @@
 
   @media (hover: hover) {
     &:hover {
-      @apply text-pink;
+      @apply text-white;
     }
   }
 
@@ -131,7 +131,7 @@
   @apply h3 border-b border-current pb-[0.4em] mb-gutter;
 
   .dark & {
-    @apply border-pink;
+    @apply border-white;
   }
 }
 

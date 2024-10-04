@@ -28,11 +28,10 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      white: '#ffffff',
+      white: '#EEECE7',
       black: 'hsl(200, 100%, 0%)',
       lightGrey: 'hsla(200, 100%, 10%, 0.07)',
-      pink: 'white',
-      pinkScrollable: 'hsla(0, 80%, 90%, 0.65)',
+      whiteScrollable: 'rgba(255, 255, 255, 0.65)',
       focusVisible: 'hsla(200, 100%, 60%, 0.7)',
     },
     fontSize: {

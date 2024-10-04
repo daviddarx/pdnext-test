@@ -8,8 +8,7 @@ import { scrollToEvent } from '@/hooks/useScrollToEventOnPageLoad';
 import { setFocusables, resetFocusables, loopFocusables } from '@/utils/get-focusables';
 import { screens } from '@/utils/screens';
 
-import VisualDesktop from '@/components/layout/VisualDesktop';
-import VisualMobile from '@/components/layout/VisualMobile';
+import Visual from '@/components/layout/Visual';
 import EventDetail from '@/components/events/EventDetail';
 import EventDetailCloseButton from '@/components/events/EventDetailCloseButton';
 import EventDetailNavigation from '@/components/events/EventDetailNavigation';
@@ -138,7 +137,7 @@ const ProgramPageLayout: React.FC<Props> = ({ header, children, hideEventNav = f
           </div>
         )}
       </div>
-      <VisualMobile />
+      <Visual />
     </section>
   );
 };

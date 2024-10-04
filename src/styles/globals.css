@@ -23,7 +23,6 @@
 @import './page-header.css';
 @import './partners.css';
 @import './program-page.css';
-@import './rainbow-background.css';
 @import './save-the-date.css';
 @import './special-announcement.css';
 @import './support-us.css';
@@ -44,9 +43,9 @@
   --height-topbar: calc((var(--size-burger) + var(--gutter)) * -1); /* overwritten from Header */
   --content-page-px-col: var(--gutter);
   --columns-vertical-shift: 15vw;
-  --plyr-color-main: theme(colors.pink);
-  --plyr-video-control-color: theme(colors.pink);
-  --plyr-range-thumb-background: theme(colors.pink);
+  --plyr-color-main: theme(colors.white);
+  --plyr-video-control-color: theme(colors.white);
+  --plyr-range-thumb-background: theme(colors.white);
   --plyr-video-control-color-hover: theme(colors.black);
   --plyr-video-progress-buffered-background: rgba(255, 255, 255, 0.1);
 
@@ -94,8 +93,6 @@ html {
 
 body {
   @apply text-black text-base leading-normal tracking-normal bg-white font-normal;
-
-  /* background-color: #fff198; */
 }
 
 :focus-visible {
@@ -107,10 +104,10 @@ body {
 }
 
 ::selection {
-  @apply text-pink bg-black;
+  @apply text-white bg-black;
   text-shadow: none;
 
   .dark & {
-    @apply text-black bg-pink;
+    @apply text-black bg-white;
   }
 }
