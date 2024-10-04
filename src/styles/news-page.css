@@ -40,6 +40,10 @@
 
 .news-item__image-container {
   @apply zoomed-image-on-hover aspect-w-1 aspect-h-1;
+
+  & img {
+    @apply !h-full object-cover;
+  }
 }
 
 .news-item__content {
