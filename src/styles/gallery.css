@@ -40,7 +40,7 @@
   }
 
   .yarl__counter {
-    @apply filter-none text-pink top-gutter-1/2 left-gutter-1/2;
+    @apply filter-none text-white top-gutter-1/2 left-gutter-1/2;
   }
 
   .yarl__slide {
@@ -57,7 +57,7 @@
   }
 
   .yarl__button {
-    @apply filter-none text-pink;
+    @apply filter-none text-white;
   }
 
   .yarl__navigation_prev {

@@ -19,7 +19,7 @@
         @apply bg-black;
 
         .impression__title {
-          @apply !text-pink opacity-50;
+          @apply !text-white opacity-50;
         }
       }
     }

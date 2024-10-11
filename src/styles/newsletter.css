@@ -24,6 +24,10 @@
   @screen lg {
     @apply w-[20em];
   }
+
+  &::placeholder {
+    @apply text-black/60;
+  }
 }
 
 .newsletter__button {
