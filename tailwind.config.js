@@ -28,7 +28,7 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      white: '#EEECE7',
+      white: '#E1DED5',
       black: 'hsl(285, 45, 15)',
       lightGrey: 'hsla(200, 100%, 10%, 0.07)',
       whiteScrollable: 'rgba(255, 255, 255, 0.65)',
