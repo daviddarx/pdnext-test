@@ -8,11 +8,10 @@
 
 .program-page__list {
   @screen xl {
-    @apply border-r border-black;
+    @apply border-r border-black backdrop-blur-xl;
 
     padding-top: calc(var(--gutter) + var(--h-logo));
-
-    @apply backdrop-blur-xl;
+    background-image: linear-gradient(to bottom right, theme('colors.white') 10%, transparent 40%);
   }
 }
 
