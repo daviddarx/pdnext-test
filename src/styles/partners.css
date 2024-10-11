@@ -1,5 +1,9 @@
 .partners {
   @apply pt-gutter-3 lg:px-gutter backdrop-blur-sm lg:backdrop-blur-xl;
+
+  .dark & {
+    @apply backdrop-blur-none;
+  }
 }
 
 .partners__title {
@@ -42,6 +46,20 @@
 
   .dark & {
     @apply mix-blend-screen;
+  }
+}
+
+.partner__logo-marinello--black {
+  .dark & {
+    @apply hidden;
+  }
+}
+
+.partner__logo-marinello--white {
+  @apply hidden;
+
+  .dark & {
+    @apply block;
   }
 }
 
