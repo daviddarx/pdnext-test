@@ -12,6 +12,10 @@
   will-change: transform;
 }
 
+.nav-burger--dark {
+  @apply border transparent-white-border;
+}
+
 .nav-burger--hidden {
   @apply duration-300 ease-in-quart;
 

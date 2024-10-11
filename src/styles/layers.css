@@ -102,13 +102,13 @@
   .tag {
     @apply inline-block px-[0.75em] pt-[0.5em] pb-[0.25em];
     @apply text-base font-semibold leading-none uppercase tracking-tag;
-    @apply bg-white rounded-full border border-black;
+    @apply bg-white rounded-full border themed-border;
     @apply transition-colors duration-200 ease-out;
 
     font-family: var(--font-title);
 
     .dark & {
-      @apply bg-black text-white border-white;
+      @apply bg-black text-white;
     }
   }
 
@@ -324,6 +324,18 @@
 
   .dark--no-bg {
     @apply bg-transparent;
+  }
+
+  .transparent-white-border {
+    @apply border-white/40;
+  }
+
+  .themed-border {
+    @apply border-black;
+
+    .dark & {
+      @apply transparent-white-border;
+    }
   }
 
   .scrollable {

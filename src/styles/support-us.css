@@ -1,10 +1,8 @@
 .support-us {
+  @apply border-y themed-border;
+
   .accordion__button {
     @apply text-left;
-  }
-
-  .dark & {
-    @apply border-y border-current;
   }
 }
 
@@ -52,7 +50,7 @@
 }
 
 .support-us__content-container {
-  @apply space-y-gutter-2 py-gutter-2 px-gutter border-t border-current;
+  @apply space-y-gutter-2 py-gutter-2 px-gutter border-t themed-border;
 
   @screen lg {
     @apply grid grid-cols-3 space-y-0 py-gutter pl-gutter pr-0;

@@ -8,7 +8,7 @@
 
 .decorative-video__mute-icon {
   @apply absolute top-gutter right-gutter flex items-center justify-center;
-  @apply text-white bg-black border border-white rounded-full;
+  @apply text-white bg-black border themed-border rounded-full;
 
   width: var(--size-burger);
   height: var(--size-burger);

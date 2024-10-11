@@ -1,5 +1,9 @@
 .visual {
-  @apply w-full h-full pointer-events-none opacity-70 fixed top-0 left-0 -z-10;
+  @apply w-full h-full pointer-events-none opacity-70 fixed top-0 left-0 -z-10 transition-opacity duration-300;
+}
+
+.visual--dark {
+  @apply opacity-100 after:w-full after:absolute after:h-full after:top-0 after:left-0 after:bg-black after:z-0;
 }
 
 .visual__video {

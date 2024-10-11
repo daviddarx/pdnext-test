@@ -10,14 +10,10 @@
 
 .content-page__nav {
   @apply w-full flex flex-wrap justify-center px-gutter py-gutter-1/2;
-  @apply text-center bg-black text-white;
+  @apply text-center bg-black text-white themed-border border-y;
 
   @screen lg {
     @apply py-0;
-  }
-
-  .dark & {
-    @apply border-y border-white;
   }
 }
 
@@ -128,11 +124,7 @@
 }
 
 .definition-list__title {
-  @apply h3 border-b border-current pb-[0.4em] mb-gutter;
-
-  .dark & {
-    @apply border-white;
-  }
+  @apply h3 border-b themed-border pb-[0.4em] mb-gutter;
 }
 
 .definition-list__dl {

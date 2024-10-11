@@ -8,15 +8,11 @@
 
   @screen lg {
     @apply flex justify-between px-gutter py-gutter;
-    @apply bg-transparent border-b border-current;
+    @apply bg-transparent border-b themed-border;
   }
 
   @screen xl {
     @apply grid grid-cols-2 py-[0.8em];
-  }
-
-  .dark & {
-    @apply bg-transparent border-b;
   }
 }
 

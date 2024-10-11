@@ -1,6 +1,6 @@
 .footer {
   @apply mt-gutter p-gutter space-y-gutter;
-  @apply border-t border-t-current;
+  @apply border-t themed-border;
 
   @screen md {
     @apply flex justify-between space-y-0;

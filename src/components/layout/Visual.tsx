@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import { debounce } from 'lodash-es';
 import classNames from 'classnames';
+import { uiStateType } from '@/store/ui-slice';
 
 const Visual = () => {
   const [faded, setFaded] = useState(false);
+  const isDark = useSelector((state: uiStateType) => state.ui.isDark);
 
   useEffect(() => {
     const onScroll = () => {
@@ -18,7 +21,11 @@ const Visual = () => {
   }, []);
 
   return (
-    <div className='visual'>
+    <div
+      className={classNames('visual', {
+        'visual--dark': isDark,
+      })}
+    >
       <video
         className={classNames('visual__video', {
           'visual__video--fadedout': faded,
