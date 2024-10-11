@@ -9,15 +9,7 @@
 }
 
 .program-page__list {
-  @apply relative pt-[50vh];
-
-  &::before {
-    @apply absolute w-full h-full top-0 left-0 backdrop-blur-sm;
-    @apply transition-opacity duration-500 delay-500 opacity-0;
-
-    content: '';
-    z-index: -2;
-  }
+  @apply relative pt-[50vh] backdrop-blurred-faded;
 
   &::after {
     @apply absolute w-full top-0 left-0 z-10;
@@ -32,20 +24,6 @@
     @apply border-r border-black;
 
     padding-top: calc(var(--gutter) + var(--h-logo));
-
-    &::before {
-      @apply backdrop-blur-xl;
-    }
-  }
-
-  /*
-    Fade-in of backdrop after mounted as it's buggy while
-    page transition (animated opacity)
-  */
-  .program-page--mounted & {
-    &::before {
-      @apply opacity-100;
-    }
   }
 }
 

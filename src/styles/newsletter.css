@@ -1,5 +1,5 @@
 .newsletter {
-  @apply py-gutter-3 lg:py-gutter-2 px-gutter text-center border-t themed-border;
+  @apply py-gutter-3 lg:py-gutter-2 px-gutter text-center border-t themed-border mt-px;
 }
 
 .newsletter__subtitle {

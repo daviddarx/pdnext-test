@@ -118,10 +118,7 @@ const ProgramPageLayout: React.FC<Props> = ({ header, children, hideEventNav = f
   };
 
   return (
-    <section
-      className={classNames('program-page', { 'program-page--mounted': isMounted })}
-      ref={pageRef}
-    >
+    <section className={classNames('program-page', { mounted: isMounted })} ref={pageRef}>
       <div className='program-page__list'>
         <header className='program-page__header'>{header}</header>
         {children}

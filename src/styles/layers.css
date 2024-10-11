@@ -338,6 +338,32 @@
     }
   }
 
+  .backdrop-blurred {
+    @apply backdrop-blur-sm lg:backdrop-blur-xl;
+  }
+
+  /*
+    Fade-in of backdrop after mounted as it's buggy while
+    page transition (animated opacity) - for elements visible
+    above foil on page load
+  */
+  .backdrop-blurred-faded {
+    &::before {
+      @apply absolute w-full h-full top-0 left-0 backdrop-blurred;
+      @apply transition-opacity duration-500 delay-500 opacity-0;
+
+      content: '';
+      z-index: -2;
+    }
+
+    .mounted &,
+    &.mounted {
+      &::before {
+        @apply opacity-100;
+      }
+    }
+  }
+
   .scrollable {
     @apply overflow-y-auto overscroll-contain;
 
@@ -530,7 +556,7 @@
   }
 
   .background-overlay {
-    @apply fixed top-0 left-0 w-screen h-screen z-30;
+    @apply fixed top-0 left-0 w-screen h-screen z-30 backdrop-blur-sm;
     @apply bg-white/75 cursor-pointer;
   }
 

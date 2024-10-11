@@ -1,5 +1,5 @@
 .footer {
-  @apply p-gutter space-y-gutter;
+  @apply p-gutter space-y-gutter backdrop-blurred;
   @apply border-t themed-border;
 
   @screen md {
