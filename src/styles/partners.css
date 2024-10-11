@@ -1,5 +1,5 @@
 .partners {
-  @apply mt-gutter-3 lg:mx-gutter;
+  @apply pt-gutter-3 lg:px-gutter backdrop-blur-sm lg:backdrop-blur-xl;
 }
 
 .partners__title {

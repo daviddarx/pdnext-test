@@ -4,7 +4,7 @@ const LogoMarinello = () => {
   return (
     <Image
       className='partner__logo partner__logo-img'
-      src='/images/logo_marinello.png'
+      src='/images/logo_marinello_final.png'
       alt='Marinello'
       width={800}
       height={480}
