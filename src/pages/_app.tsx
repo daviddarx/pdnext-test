@@ -84,6 +84,12 @@ const App = ({ Component, pageProps }: AppProps) => {
       store.dispatch(uiActions.setDark(false));
     }
 
+    if (pageSlug === routes.main.festival.slug || pageSlug === routes.main.ons.slug) {
+      store.dispatch(uiActions.setContentPage(false));
+    } else {
+      store.dispatch(uiActions.setContentPage(true));
+    }
+
     return () => {
       router.events.off('routeChangeStart', handleRouteChangeStart);
       router.events.off('routeChangeComplete', handleRouteChangeComplete);

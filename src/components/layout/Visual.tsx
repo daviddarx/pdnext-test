@@ -7,6 +7,7 @@ import { uiStateType } from '@/store/ui-slice';
 const Visual = () => {
   const [faded, setFaded] = useState(false);
   const isDark = useSelector((state: uiStateType) => state.ui.isDark);
+  const isContentPage = useSelector((state: uiStateType) => state.ui.isContentPage);
 
   useEffect(() => {
     const onScroll = () => {
@@ -24,6 +25,7 @@ const Visual = () => {
     <div
       className={classNames('visual', {
         'visual--dark': isDark,
+        'visual--content-page': isContentPage && !isDark,
       })}
     >
       <video

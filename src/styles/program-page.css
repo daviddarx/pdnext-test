@@ -1,17 +1,22 @@
 .program-page {
-  @apply mt-[50vh];
+  @apply logo-gradient;
 
   @screen xl {
-    @apply grid grid-cols-2 mt-0;
+    @apply grid grid-cols-2;
+
+    &::after {
+      background-image: none;
+    }
   }
 }
 
 .program-page__list {
+  @apply backdrop-blur-sm pt-[50vh];
+
   @screen xl {
-    @apply border-r border-black backdrop-blur-xl;
+    @apply border-r border-black backdrop-blur-xl logo-gradient;
 
     padding-top: calc(var(--gutter) + var(--h-logo));
-    background-image: linear-gradient(to bottom right, theme('colors.white') 10%, transparent 40%);
   }
 }
 

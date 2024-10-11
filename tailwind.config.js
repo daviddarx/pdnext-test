@@ -29,7 +29,7 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
       white: '#EEECE7',
-      black: '#25112C',
+      black: 'hsl(285, 45, 15)',
       lightGrey: 'hsla(200, 100%, 10%, 0.07)',
       whiteScrollable: 'rgba(255, 255, 255, 0.65)',
       focusVisible: 'hsla(321, 100%, 66%, 0.7)',

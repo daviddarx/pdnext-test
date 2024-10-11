@@ -538,6 +538,23 @@
     @apply bg-black/90;
   }
 
+  .background-overlay__black {
+    background-color: rgba(0, 0, 0, 0.65);
+  }
+
+  .logo-gradient {
+    @apply relative after:absolute after:w-full after:top-0 after:left-0 after:-z-[1];
+
+    &::after {
+      background-image: linear-gradient(
+        to bottom right,
+        theme('colors.white') 10%,
+        transparent 40%
+      );
+      aspect-ratio: 1 / 1;
+    }
+  }
+
   [type='submit'] {
     @apply tag tag--inverted cursor-pointer;
   }
