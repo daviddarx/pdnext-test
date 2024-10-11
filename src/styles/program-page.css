@@ -1,6 +1,4 @@
 .program-page {
-  @apply logo-gradient;
-
   @screen xl {
     @apply grid grid-cols-2;
 
@@ -11,17 +9,48 @@
 }
 
 .program-page__list {
-  @apply backdrop-blur-sm pt-[50vh];
+  @apply relative pt-[50vh];
+
+  &::before {
+    @apply absolute w-full h-full top-0 left-0 backdrop-blur-sm;
+    @apply transition-opacity duration-500 delay-500 opacity-0;
+
+    content: '';
+    z-index: -2;
+  }
+
+  &::after {
+    @apply absolute w-full top-0 left-0 z-10;
+
+    content: '';
+    background-image: linear-gradient(to bottom right, theme('colors.white') 10%, transparent 40%);
+    aspect-ratio: 1 / 1;
+    z-index: -1;
+  }
 
   @screen xl {
-    @apply border-r border-black backdrop-blur-xl logo-gradient;
+    @apply border-r border-black;
 
     padding-top: calc(var(--gutter) + var(--h-logo));
+
+    &::before {
+      @apply backdrop-blur-xl;
+    }
+  }
+
+  /*
+    Fade-in of backdrop after mounted as it's buggy while
+    page transition (animated opacity)
+  */
+  .program-page--mounted & {
+    &::before {
+      @apply opacity-100;
+    }
   }
 }
 
 .program-page__header {
-  @apply p-gutter pt-gutter-2 mb-gutter-1/2 text-center;
+  @apply p-gutter pt-gutter-2 mb-gutter-1/2 text-center relative z-10;
 }
 
 .program-page__subtitle {

@@ -30,6 +30,7 @@ const ProgramPageLayout: React.FC<Props> = ({ header, children, hideEventNav = f
   const dispatch = useDispatch();
 
   const [isDetailInViewport, setIsDetailInViewport] = useState(true);
+  const [isMounted, setIsMounted] = useState(false);
 
   const pageRef = useRef<HTMLElement>(null);
   const detailRef = useRef<HTMLDivElement>(null);
@@ -51,6 +52,8 @@ const ProgramPageLayout: React.FC<Props> = ({ header, children, hideEventNav = f
     );
 
     observer.observe(detailRef.current!);
+
+    setIsMounted(true);
 
     return () => {
       observer.disconnect();
@@ -115,7 +118,10 @@ const ProgramPageLayout: React.FC<Props> = ({ header, children, hideEventNav = f
   };
 
   return (
-    <section className='program-page' ref={pageRef}>
+    <section
+      className={classNames('program-page', { 'program-page--mounted': isMounted })}
+      ref={pageRef}
+    >
       <div className='program-page__list'>
         <header className='program-page__header'>{header}</header>
         {children}
