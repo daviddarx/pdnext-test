@@ -1,9 +1,7 @@
 {
-  "forceBlank": false,
-  "deactivated": false,
-  "uuid": "A-Cyborg-Manifesto",
-  "title": "A Cyborg Manifesto",
-  "desc": "Vex Ashley \\\nGrossbritannien, 2020, 5 Min, Englisch\n\nWir senden unser Bild in Zellen und Pixeln über Kontinente hinweg, werden von Objektiven betrachtet, durch Codecs und Kompressionsalgorithmen gepresst und entwickeln neue Möglichkeiten, das Körperliche zu umgehen. Tausende von Menschen ficken und ficken sich jeden Tag, live per Webcam übertragen.",
-  "image": "/images/uploads/cyborg_01.jpg",
-  "entryType": "Film"
+  "uuid": "maman",
+  "title": "Maman",
+  "entryType": "Film",
+  "desc": "Vex Ashley\\\nGrossbritannien, 2022, 24 Min, Englisch\n\nIch sah im Internet, wie jemand über die Einnahme von Stillkräutern sprach, und tauchte ins Internet ein, wo es darum ging, wie man die Stillzeit einleiten kann, selbst bei jemandem, der gar nicht schwanger war oder werden kann. Dieser Film ist das Ergebnis jahrelanger Recherchen, langer Gespräche und der Reflexion darüber, was es für uns bedeutet, Mami zu sein. Woher kommt diese Neigung und womit hängt sie zusammen?",
+  "image": "/images/uploads/maman_03.jpg"
 }
