@@ -53,7 +53,11 @@ const MainNav = () => {
                       activeClassName='main-nav__link--active'
                       href={`/${route.slug}`}
                     >
-                      {route.title}
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html: route.title,
+                        }}
+                      />
                     </ActiveLink>
                   </li>
                 );

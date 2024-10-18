@@ -69,7 +69,7 @@
   }
 
   @screen xl {
-    --font-s: 1.5vw;
+    --font-s: 1.25vw;
     --h-logo: 8vw;
     --content-page-px-col: 10%;
   }
