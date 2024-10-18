@@ -71,6 +71,10 @@
   @apply tag;
 }
 
+.news-page {
+  @apply pb-0;
+}
+
 .news-page__content {
   @apply grid gap-gutter-2 px-gutter;
 }
@@ -94,14 +98,15 @@
 }
 
 .news-page__nav {
-  @apply mt-gutter-2 border-t;
-  @apply grid md:grid-cols-2 gap-gutter-2;
-}
+  @apply mt-gutter-2;
 
-.news-page__nav-link {
-  @apply flex flex-col gap-[1em] items-center p-gutter;
-}
+  & .event-detail-nav__button {
+    @apply pt-gutter-2 pb-gutter-4;
+  }
 
-.news-page__nav-link__title {
-  @apply h3 text-center;
+  & .event-detail-nav__title {
+    @screen xl {
+      @apply h3;
+    }
+  }
 }

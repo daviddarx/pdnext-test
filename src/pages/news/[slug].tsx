@@ -11,6 +11,7 @@ import Metas from '@/components/layout/Metas';
 import PageHeader from '@/components/layout/PageHeader';
 import LoadedImage from '@/components/ui/LoadedImage';
 import ActiveLink from '@/components/ui/ActiveLink';
+import ArrowIcon from '@/components/icons/ArrowIcon';
 
 type PageProps = {
   news: News;
@@ -24,7 +25,7 @@ const Page: NextPage<PageProps> = ({ news, prevNews, nextNews, commonPageData })
     <Layout commonPageData={commonPageData}>
       <Metas title={news.title} />
 
-      <section className='content-page gallery-page'>
+      <section className='content-page news-page'>
         <PageHeader
           subline={`News – ${news.dateReadable}`}
           title={news.title}
@@ -56,14 +57,28 @@ const Page: NextPage<PageProps> = ({ news, prevNews, nextNews, commonPageData })
             )}
           </div>
         </div>
-        <nav className='news-page__nav'>
-          <ActiveLink href={prevNews.detailPageLink} className='news-page__nav-link'>
-            <span className='subline'>Vorheriges News</span>
-            <span className='news-page__nav-link__title'>{prevNews.title}</span>
+        <nav className='event-detail-nav news-page__nav'>
+          <ActiveLink
+            href={nextNews.detailPageLink}
+            className='event-detail-nav__button event-detail-nav__button--prev'
+          >
+            <span className='event-detail-nav__subline'>
+              <span className='xl:order-2'>{nextNews.dateReadable}</span>
+              <ArrowIcon className='event-detail-nav__icon' />
+            </span>
+
+            <span className='event-detail-nav__title'>{nextNews.title}</span>
           </ActiveLink>
-          <ActiveLink href={nextNews.detailPageLink} className='news-page__nav-link'>
-            <span className='subline'>Nächstes News</span>
-            <span className='news-page__nav-link__title'>{nextNews.title}</span>
+          <ActiveLink
+            href={prevNews.detailPageLink}
+            className='event-detail-nav__button event-detail-nav__button--next'
+          >
+            <span className='event-detail-nav__subline'>
+              <span className='xl:order-2'>{prevNews.dateReadable}</span>
+              <ArrowIcon className='event-detail-nav__icon' />
+            </span>
+
+            <span className='event-detail-nav__title'>{prevNews.title}</span>
           </ActiveLink>
         </nav>
       </section>
@@ -89,10 +104,16 @@ export const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
 
   const newsItem = await fetchNews(`${slug}.json`);
 
-  const newsIndex = news.findIndex((newsItem) => newsItem.slug === newsItem.slug);
-  const prevNewsItem = news[(newsIndex - 1 + news.length) % news.length];
-  const nextNewsItem = news[(newsIndex + 1) % news.length];
+  const newsIndex = news.findIndex((item) => item.slug === newsItem.slug);
+  const prevNewsItem = news[(newsIndex + 1) % news.length];
+  const nextNewsItem = news[(newsIndex - 1 + news.length) % news.length];
   const commonPageData = await fetchCommonPageContent();
+
+  console.log(
+    'slugs',
+    news.map((item) => item.slug),
+  );
+  console.log('newsIndex', newsIndex);
 
   const props: PageProps = {
     news: newsItem,
