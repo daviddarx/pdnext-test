@@ -92,3 +92,16 @@
 .news-page__link {
   @apply text-bigger !no-underline mt-gutter;
 }
+
+.news-page__nav {
+  @apply mt-gutter-2 border-t;
+  @apply grid md:grid-cols-2 gap-gutter-2;
+}
+
+.news-page__nav-link {
+  @apply flex flex-col gap-[1em] items-center p-gutter;
+}
+
+.news-page__nav-link__title {
+  @apply h3 text-center;
+}

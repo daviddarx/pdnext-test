@@ -1,4 +1,4 @@
-import loadJsonFiles from '@/utils/load-json-files';
+import loadJsonFiles, { getJsonSlug } from '@/utils/load-json-files';
 import getImageDimensions from './get-image-dimensions';
 
 export interface News {
@@ -21,7 +21,7 @@ export interface NewsContent {
   news: News[];
 }
 
-const setNewsImageDimensions = (news: News) => {
+const completeNews = (news: News) => {
   if (news.image) {
     // log image to help clean images folder (empty folder, and add again the listed images)
     // console.log(newItem.image.split('images/uploads/')[1]);
@@ -30,10 +30,17 @@ const setNewsImageDimensions = (news: News) => {
     news.imageWidth = dimensions.width;
     news.imageHeight = dimensions.height;
   }
+
+  news.detailPageLink = getNewsRoute(news.slug);
+  news.dateReadable = new Date(news.date).toLocaleDateString('de-DE', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  });
 };
 
-const setNewsDetailPageLink = (news: News) => {
-  news.detailPageLink = `/news/${news.slug}`;
+export const getNewsRoute = (slug: string) => {
+  return `/news/${slug}`;
 };
 
 export async function fetchNewsContent(): Promise<NewsContent> {
@@ -43,14 +50,7 @@ export async function fetchNewsContent(): Promise<NewsContent> {
   // console.log('----------------- FETCH NEWS CONTENT');
 
   for (const newItem of news) {
-    newItem.dateReadable = new Date(newItem.date).toLocaleDateString('de-DE', {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
-    });
-
-    setNewsImageDimensions(newItem);
-    setNewsDetailPageLink(newItem);
+    completeNews(newItem);
   }
 
   news.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
@@ -62,7 +62,8 @@ export async function fetchNewsContent(): Promise<NewsContent> {
 
 export async function fetchNews(json: string): Promise<News> {
   const newItem = require('../../_content/news/' + json) as News;
-  setNewsImageDimensions(newItem);
-  setNewsDetailPageLink(newItem);
+  newItem.slug = getJsonSlug(json);
+  completeNews(newItem);
+
   return newItem;
 }

@@ -10,19 +10,26 @@ import Layout from '@/components/layout/Layout';
 import Metas from '@/components/layout/Metas';
 import PageHeader from '@/components/layout/PageHeader';
 import LoadedImage from '@/components/ui/LoadedImage';
+import ActiveLink from '@/components/ui/ActiveLink';
 
 type PageProps = {
   news: News;
+  prevNews: News;
+  nextNews: News;
   commonPageData: CommonPageData;
 };
 
-const Page: NextPage<PageProps> = ({ news, commonPageData }) => {
+const Page: NextPage<PageProps> = ({ news, prevNews, nextNews, commonPageData }) => {
   return (
     <Layout commonPageData={commonPageData}>
       <Metas title={news.title} />
 
       <section className='content-page gallery-page'>
-        <PageHeader subline='News' title={news.title} lead={news.shortDesc || ''} />
+        <PageHeader
+          subline={`News – ${news.dateReadable}`}
+          title={news.title}
+          lead={news.shortDesc || ''}
+        />
         <div
           className={classNames('news-page__content', {
             'news-page__content--splitted': news.image,
@@ -49,6 +56,16 @@ const Page: NextPage<PageProps> = ({ news, commonPageData }) => {
             )}
           </div>
         </div>
+        <nav className='news-page__nav'>
+          <ActiveLink href={prevNews.detailPageLink} className='news-page__nav-link'>
+            <span className='subline'>Vorheriges News</span>
+            <span className='news-page__nav-link__title'>{prevNews.title}</span>
+          </ActiveLink>
+          <ActiveLink href={nextNews.detailPageLink} className='news-page__nav-link'>
+            <span className='subline'>Nächstes News</span>
+            <span className='news-page__nav-link__title'>{nextNews.title}</span>
+          </ActiveLink>
+        </nav>
       </section>
     </Layout>
   );
@@ -68,12 +85,19 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
   const { slug } = params ?? {};
-  const news = await fetchNews(`${slug}.json`);
+  const { news } = await fetchNewsContent();
 
+  const newsItem = await fetchNews(`${slug}.json`);
+
+  const newsIndex = news.findIndex((newsItem) => newsItem.slug === newsItem.slug);
+  const prevNewsItem = news[(newsIndex - 1 + news.length) % news.length];
+  const nextNewsItem = news[(newsIndex + 1) % news.length];
   const commonPageData = await fetchCommonPageContent();
 
   const props: PageProps = {
-    news,
+    news: newsItem,
+    prevNews: prevNewsItem,
+    nextNews: nextNewsItem,
     commonPageData,
   };
 
