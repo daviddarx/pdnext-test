@@ -1,21 +1,40 @@
 import loadJsonFiles from '@/utils/load-json-files';
 import getImageDimensions from './get-image-dimensions';
 
-interface News {
+export interface News {
   title: string;
   date: string;
   dateReadable: string;
   image?: string;
   imageWidth?: number;
   imageHeight?: number;
-  desc?: string;
+  shortDesc?: string;
+  longDesc?: string;
+  detailPageLink: string;
+  detailPageLinkTitle?: string;
   link?: string;
   linkTitle?: string;
+  slug: string;
 }
 
 export interface NewsContent {
   news: News[];
 }
+
+const setNewsImageDimensions = (news: News) => {
+  if (news.image) {
+    // log image to help clean images folder (empty folder, and add again the listed images)
+    // console.log(newItem.image.split('images/uploads/')[1]);
+
+    const dimensions = getImageDimensions(`public${news.image}`);
+    news.imageWidth = dimensions.width;
+    news.imageHeight = dimensions.height;
+  }
+};
+
+const setNewsDetailPageLink = (news: News) => {
+  news.detailPageLink = `/news/${news.slug}`;
+};
 
 export async function fetchNewsContent(): Promise<NewsContent> {
   const newsDir: News[] = [];
@@ -30,14 +49,8 @@ export async function fetchNewsContent(): Promise<NewsContent> {
       day: 'numeric',
     });
 
-    if (newItem.image) {
-      // log image to help clean images folder (empty folder, and add again the listed images)
-      // console.log(newItem.image.split('images/uploads/')[1]);
-
-      const dimensions = getImageDimensions(`public${newItem.image}`);
-      newItem.imageWidth = dimensions.width;
-      newItem.imageHeight = dimensions.height;
-    }
+    setNewsImageDimensions(newItem);
+    setNewsDetailPageLink(newItem);
   }
 
   news.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
@@ -45,4 +58,11 @@ export async function fetchNewsContent(): Promise<NewsContent> {
   return {
     news: news,
   };
+}
+
+export async function fetchNews(json: string): Promise<News> {
+  const newItem = require('../../_content/news/' + json) as News;
+  setNewsImageDimensions(newItem);
+  setNewsDetailPageLink(newItem);
+  return newItem;
 }

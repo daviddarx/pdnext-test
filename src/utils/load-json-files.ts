@@ -9,7 +9,8 @@ const loadJsonFiles = async <T>(typeDirArray: T[], directory: string) => {
   jsonsInDir.forEach((file: string) => {
     const fileData = fs.readFileSync(path.join(directory, file));
     const json = JSON.parse(fileData.toString());
-    typeDirArray.push(json);
+    const slug = file.split('.json')[0];
+    typeDirArray.push({ ...json, slug });
   });
 
   return typeDirArray;

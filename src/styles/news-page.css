@@ -62,6 +62,33 @@
   @apply mt-[1em] text-content !text-base;
 }
 
-.news-item__link {
-  @apply tag mt-[1.5em];
+.news-item__links {
+  @apply flex flex-wrap gap-4 mt-[1.5em];
+}
+
+.news-item__link,
+.news-page__link {
+  @apply tag;
+}
+
+.news-page__content {
+  @apply grid gap-gutter-2 px-gutter;
+}
+
+.news-page__content--splitted {
+  @screen lg {
+    @apply grid-cols-2 px-0;
+
+    & .news-page__desc {
+      @apply pr-gutter-2;
+    }
+
+    & .news-page__image {
+      @apply self-start sticky top-gutter;
+    }
+  }
+}
+
+.news-page__link {
+  @apply text-bigger !no-underline mt-gutter;
 }

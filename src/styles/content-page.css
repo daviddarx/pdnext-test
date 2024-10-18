@@ -60,7 +60,7 @@
   @apply grid gap-gutter-2 px-gutter;
 
   @screen lg {
-    @apply grid-cols-2  px-0;
+    @apply grid-cols-2 px-0;
 
     & .content-slot__content {
       @apply pr-gutter-2;
