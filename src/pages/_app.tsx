@@ -13,7 +13,7 @@ import { fontText, fontTitle } from '@/utils/get-fonts';
 import store from '@/store/';
 import { uiActions } from '@/store/';
 
-import RainbowBackground from '@/components/layout/RainbowBackground';
+import Visual from '@/components/layout/Visual';
 import CookieBanner from '@/components/layout/CookieBanner';
 import NavBurger from '@/components/navs/NavBurger';
 import MainNavPanel from '@/components/navs/MainNav';
@@ -82,6 +82,12 @@ const App = ({ Component, pageProps }: AppProps) => {
       store.dispatch(uiActions.setDark(true));
     } else {
       store.dispatch(uiActions.setDark(false));
+    }
+
+    if (pageSlug === routes.main.festival.slug || pageSlug === routes.main.ons.slug) {
+      store.dispatch(uiActions.setContentPage(false));
+    } else {
+      store.dispatch(uiActions.setContentPage(true));
     }
 
     return () => {
@@ -173,7 +179,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         <AnimatePresence mode='wait' initial={false} onExitComplete={handleExitComplete}>
           <Component key={pageKey} {...pageProps} />
         </AnimatePresence>
-        <RainbowBackground />
+        <Visual />
         <VideoOverlay />
         <CookieBanner />
       </div>

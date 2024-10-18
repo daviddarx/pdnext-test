@@ -1,6 +1,6 @@
 .nav-burger {
   @apply fixed z-20 right-gutter top-gutter;
-  @apply bg-black border border-pink rounded-full;
+  @apply bg-black rounded-full;
   @apply transform-3d transition-transform duration-500 ease-out-back;
   @apply safari-fixed-fix;
 
@@ -10,6 +10,10 @@
   --tw-translate-y: var(--height-topbar);
   --tw-translate-z: 0;
   will-change: transform;
+}
+
+.nav-burger--dark {
+  @apply border transparent-white-border;
 }
 
 .nav-burger--hidden {
@@ -28,14 +32,14 @@
   }
 
   .nav-burger--dark & {
-    @apply text-pink;
+    @apply text-white;
   }
 }
 
 .nav-burger__icon {
   @apply absolute top-1/2 left-1/2;
   @apply -translate-x-1/2 -translate-y-1/2;
-  @apply bg-pink rounded-full;
+  @apply bg-white rounded-full;
 
   --size-icon: calc(var(--size-burger) * 0.15);
   width: var(--size-icon);
@@ -47,7 +51,7 @@
   transform: translateZ(0);
 
   svg {
-    @apply w-full h-full fill-pink;
+    @apply w-full h-full fill-white;
     @apply transition-transform ease-in-quart;
 
     will-change: transform;

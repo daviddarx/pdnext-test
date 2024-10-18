@@ -10,7 +10,7 @@
   @apply block subline subline--above-title;
 
   .dark & {
-    @apply text-pink;
+    @apply text-white;
   }
 }
 

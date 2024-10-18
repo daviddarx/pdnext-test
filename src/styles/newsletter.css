@@ -1,5 +1,5 @@
 .newsletter {
-  @apply my-gutter-3 lg:my-gutter-2 mx-gutter text-center;
+  @apply py-gutter-3 lg:py-gutter-2 px-gutter text-center border-t themed-border mt-px;
 }
 
 .newsletter__subtitle {
@@ -23,6 +23,14 @@
 
   @screen lg {
     @apply w-[20em];
+  }
+
+  &::placeholder {
+    @apply text-black/60;
+
+    .dark & {
+      @apply text-white/60;
+    }
   }
 }
 

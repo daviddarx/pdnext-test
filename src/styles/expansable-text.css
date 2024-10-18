@@ -1,5 +1,5 @@
 .expandable-text {
-  @apply border-y border-current bg-white;
+  @apply border-y themed-border bg-white;
 
   .dark & {
     @apply bg-black;
