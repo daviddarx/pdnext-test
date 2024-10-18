@@ -104,7 +104,7 @@
 /* PREV/NEXT NAV */
 
 .news-nav {
-  @apply relative md:grid md:grid-cols-2 mt-gutter-3;
+  @apply relative md:grid md:grid-cols-2 mt-gutter-3 backdrop-blurred;
   @apply border-t border-current;
 
   @screen md {
