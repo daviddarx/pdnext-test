@@ -59,28 +59,28 @@ const Page: NextPage<PageProps> = ({ news, prevNews, nextNews, commonPageData })
             </div>
           )}
         </div>
-        <nav className='event-detail-nav news-page__nav'>
+        <nav className='news-nav news-page__nav'>
           <ActiveLink
             href={nextNews.detailPageLink}
-            className='event-detail-nav__button event-detail-nav__button--prev'
+            className='news-nav__button news-nav__button--prev'
           >
-            <span className='event-detail-nav__subline'>
-              <span className='xl:order-2'>{nextNews.dateReadable}</span>
-              <ArrowIcon className='event-detail-nav__icon' />
+            <span className='news-nav__subline'>
+              <span className='order-2'>{nextNews.dateReadable}</span>
+              <ArrowIcon className='news-nav__icon' />
             </span>
 
-            <span className='event-detail-nav__title'>{nextNews.title}</span>
+            <span className='news-nav__title'>{nextNews.title}</span>
           </ActiveLink>
           <ActiveLink
             href={prevNews.detailPageLink}
-            className='event-detail-nav__button event-detail-nav__button--next'
+            className='news-nav__button news-nav__button--next'
           >
-            <span className='event-detail-nav__subline'>
-              <span className='xl:order-2'>{prevNews.dateReadable}</span>
-              <ArrowIcon className='event-detail-nav__icon' />
+            <span className='news-nav__subline'>
+              <span className='order-2'>{prevNews.dateReadable}</span>
+              <ArrowIcon className='news-nav__icon' />
             </span>
 
-            <span className='event-detail-nav__title'>{prevNews.title}</span>
+            <span className='news-nav__title'>{prevNews.title}</span>
           </ActiveLink>
         </nav>
       </section>
