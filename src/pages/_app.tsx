@@ -8,6 +8,7 @@ import { detect } from 'detect-browser';
 import classNames from 'classnames';
 
 import * as gtag from '@/utils/ga';
+import { addFullscreenShortcut } from '@/utils/fullscreen';
 import { routes } from '@/routes/routes';
 import { fontText, fontTitle } from '@/utils/get-fonts';
 import store from '@/store/';
@@ -132,6 +133,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         }),
       );
     }
+    addFullscreenShortcut();
   });
 
   const handleExitComplete = () => {
