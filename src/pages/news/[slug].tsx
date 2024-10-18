@@ -33,7 +33,7 @@ const Page: NextPage<PageProps> = ({ news, prevNews, nextNews, commonPageData })
         />
         <div
           className={classNames('news-page__content', {
-            'news-page__content--splitted': news.image,
+            'news-page__content--splitted': news.image && news.longDesc,
           })}
         >
           {news.image && (
@@ -46,16 +46,18 @@ const Page: NextPage<PageProps> = ({ news, prevNews, nextNews, commonPageData })
               className='news-page__image'
             />
           )}
-          <div className='news-page__desc text-content'>
-            {news.longDesc && (
-              <ReactMarkdown remarkPlugins={[remarkGfm]}>{news.longDesc}</ReactMarkdown>
-            )}
-            {news.link && (
-              <a href={news.link} className='news-page__link'>
-                {news.linkTitle ? news.linkTitle : 'Link'}
-              </a>
-            )}
-          </div>
+          {(news.longDesc || news.link) && (
+            <div className='news-page__desc text-content'>
+              {news.longDesc && (
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>{news.longDesc}</ReactMarkdown>
+              )}
+              {news.link && (
+                <a href={news.link} className='news-page__link'>
+                  {news.linkTitle ? news.linkTitle : 'Link'}
+                </a>
+              )}
+            </div>
+          )}
         </div>
         <nav className='event-detail-nav news-page__nav'>
           <ActiveLink
