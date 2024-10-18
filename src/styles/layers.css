@@ -424,7 +424,7 @@
     --h: calc(var(--size-burger) - 2px);
 
     @apply flex items-center justify-center;
-    @apply text-current border border-current rounded-full;
+    @apply text-current border themed-border rounded-full;
     @apply transition-all duration-300 ease-out-quart;
 
     width: var(--w);

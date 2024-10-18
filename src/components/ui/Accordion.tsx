@@ -26,7 +26,7 @@ type Props = {
   header?: ReactNode;
   children: ReactNode;
   isOpenedExt?: boolean;
-  onToggle?: (isOpened: boolean) => void;
+  onToggle?: (_isOpened: boolean) => void;
 };
 
 const Accordion: React.FC<Props> = ({

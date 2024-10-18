@@ -110,8 +110,18 @@ collections:
         widget: 'image'
         required: false
 
-      - label: 'Description'
-        name: 'desc'
+      - label: 'Short Description (max 250 chars)'
+        name: 'shortDesc'
+        widget: 'markdown'
+        buttons:
+          - bold
+          - italic
+          - link
+        required: false
+        pattern: ['^.{0,300}$', 'Must not exceed 250 characters']
+
+      - label: 'Long Description (will create a detail page for the new)'
+        name: 'longDesc'
         widget: 'markdown'
         buttons:
           - bold
@@ -119,7 +129,12 @@ collections:
           - link
         required: false
 
-      - label: 'Link (optional)'
+      - label: 'Detail Page Link Title'
+        name: 'detailPageLinkTitle'
+        widget: 'string'
+        required: false
+
+      - label: 'Link (will be placed at the end of the news)'
         name: 'link'
         widget: 'string'
         required: false
@@ -539,42 +554,6 @@ collections:
         default: false
         required: false
 
-  - name: 'supportUsSlot'
-    label: 'Support-us Slot'
-    create: true
-    folder: '_content/supportUsSlots'
-    slug: 'supportUsSlot-{{title}}'
-    extension: 'json'
-    format: 'json'
-    summary: '{{position}} {{title}}'
-    fields:
-      - label: 'Position'
-        name: 'position'
-        widget: 'number'
-        valueType: 'int'
-        min: 0
-        step: 1
-
-      - label: 'Title'
-        name: 'title'
-        widget: 'string'
-
-      - label: 'Description'
-        name: 'desc'
-        widget: 'markdown'
-        buttons:
-          - bold
-          - italic
-          - link
-          - heading-four
-          - bulleted-list
-          - numbered-list
-
-      - label: 'With Paypal Button'
-        name: 'paypal'
-        widget: 'boolean'
-        required: false
-
   - name: 'contentPage'
     label: 'Content Page'
     create: false
@@ -660,6 +639,7 @@ collections:
               - link
               - quote
               - heading-two
+              - heading-three
               - bulleted-list
               - numbered-list
 

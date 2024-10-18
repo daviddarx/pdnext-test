@@ -1,0 +1,30 @@
+{
+  "title": "Barrierefreiheit",
+  "headerTitle": "Barrierefrei und Bunt: Zugang für Alle",
+  "lead": "Bei Porny Days setzen wir uns dafür ein, unsere Festivalräume für alle zugänglich und einladend zu gestalten.",
+  "contentSlot": [
+    {
+      "deactivated": false,
+      "splittedLayout": false,
+      "title": "Gessnerallee",
+      "anchorTitle": "gessnerallee",
+      "firstText": "### **Barrierefreiheit**\n\nDie Räumlichkeiten Halle, stall6 und Nordflügel sind stufenlos begehbar. Freitag und Samstag wird es in der Halle Podeste geben welche (nicht) rollstuhlgängig (via einer Rampe) sind. (Hier ggf Rollstuhlpodest Dancefloor ankündigen). Achtung: unebener Untergrund Stall6.\nBeim Konzert Donnerstag im Stall6 gibt es ZAHL Rollstuhlplätze in der ersten Reihe. \n\n### E﻿inlass\n\nMenschen mit Barrierefreiheitsbedarf und ihre Begleitpersonen dürfen gerne zum Beginn der Schlange kommen.\n\n### L﻿icht\n\n**Donnerstag**\n\n* **Stall 6:** Während Bazar: Statisches Licht. Während Konzert: bewegtes Licht kann vorkommen.\n\n**Freitag**\n\n* **Stall 6 & Nordflügel:** Statisches Licht\n* **Halle:** Bewegtes Licht kann vorkommen\n\n**Samstag** \n\n* **Stall 6 & Nordflügel:** Statisches Licht\n* **Halle:** Es kann bewegtes Licht und stärkere Lichteffekte auftreten, KEIN Stroboskop\\\n  Vor dem Vorhang: weniger Lichteffekte, können aber teilweise über den Vorhang scheinen\n* Unsere \"Darkrooms\" sind niemals komplett dunkel, so genannte Greyrooms."
+    },
+    {
+      "deactivated": false,
+      "splittedLayout": false,
+      "title": "RiffRaff",
+      "anchorTitle": "riffraff",
+      "firstText": "### **Barrierefreiheit**\n\nDer Kassen- und Barbereich vom Riffraff ist über eine Rampe rollstuhlgängig.\n\nDer Saal 1 ist über eine Rampe zugänglich. Die zwei Rollstuhlplätze befinden sich in der ersten Reihe. Die Rollstühle können auch im Seitengang platziert werden.\n\nDer Saal 2 ist barrierefrei zugänglich. Der Rollstuhlplatz befindet sich in der ersten Reihe. Die Sicht ist stark eingeschränkt.\n\nDer Saal 3 ist über den Hauseingang (Schlüssel an der Kinokasse verlangen) und Lift (Eurokey) erreichbar. Die zwei Rollstuhlplätze befinden sich in der hintersten Reihe.\n\nIn beiden Gebäuden (Saal 1/2 und Saal 3) hat es jeweils eine rollstuhlgängige Toilette (zugänglich mit Eurokey)."
+    },
+    {
+      "deactivated": false,
+      "splittedLayout": false,
+      "title": "Schauspielhaus",
+      "anchorTitle": "schauspielhaus",
+      "firstText": "### **Barrierefreiheit**\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis ligula velit. Donec non ornare augue. Nunc fringilla aliquam orci a ornare. Curabitur tristique accumsan ipsum nec ornare. Duis non lobortis lectus. Curabitur blandit felis quis convallis commodo. Aliquam erat volutpat.\n\n### E﻿inlass\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis ligula velit. Donec non ornare augue. Nunc fringilla aliquam orci a ornare. Curabitur tristique accumsan ipsum nec ornare. Duis non lobortis lectus. Curabitur blandit felis quis convallis commodo. Aliquam erat volutpat.\n\n### L﻿icht\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis ligula velit. Donec non ornare augue. Nunc fringilla aliquam orci a ornare. Curabitur tristique accumsan ipsum nec ornare. Duis non lobortis lectus. Curabitur blandit felis quis convallis commodo. Aliquam erat volutpat."
+    }
+  ],
+  "headerCentered": true,
+  "headerSubline": "Barrierefreiheit"
+}
