@@ -155,7 +155,7 @@
   @apply subline flex gap-[1em] leading-none pt-[0.5em] pb-[0.25em] items-center justify-center;
 
   @screen xl {
-    @apply flex-col gap-[0.5em] py-[0] !text-xs align-text-v;
+    @apply flex-col gap-[1.5em] py-[0] !text-xs align-text-v;
   }
 }
 
@@ -167,6 +167,6 @@
   @apply hidden;
 
   @screen xl {
-    @apply block pt-[0.75em] h5 font-semibold w-full line-clamp-2;
+    @apply block pt-[0.75em] h5 font-semibold w-full line-clamp-2 text-center max-w-[30ch];
   }
 }
