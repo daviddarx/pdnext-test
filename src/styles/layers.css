@@ -170,7 +170,7 @@
   }
 
   .white-box {
-    @apply bg-white py-[0.75em] px-[1em] rounded-[0.5em];
+    @apply bg-black/10 py-[0.75em] px-[1em] rounded-[0.5em];
   }
 
   .text-content {
