@@ -134,7 +134,7 @@
     @apply transition-colors duration-200 ease-out;
 
     &:hover {
-      @apply bg-white;
+      @apply bg-black/10;
     }
   }
 }
