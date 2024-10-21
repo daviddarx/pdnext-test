@@ -9,12 +9,8 @@
 }
 
 .content-page__nav {
-  @apply w-full flex flex-wrap px-[--content-page-px-col] py-gutter-1/2;
+  @apply w-full flex flex-wrap gap-x-gutter gap-y-gutter-1/2 px-[--content-page-px-col] py-gutter;
   @apply text-center themed-border border-y backdrop-blurred;
-
-  @screen lg {
-    @apply py-0;
-  }
 
   .dark & {
     @apply bg-black text-white items-center justify-center px-gutter;
@@ -22,19 +18,7 @@
 }
 
 .content-page__nav-link {
-  @apply block py-[0.4em] px-gutter h5 font-semibold align-text-v text-link;
-
-  @screen lg {
-    @apply py-gutter px-gutter-1/2;
-  }
-
-  :first-of-type > & {
-    @apply pl-0;
-
-    .dark & {
-      @apply px-gutter-1/2;
-    }
-  }
+  @apply block h5 font-semibold align-text-v text-link;
 }
 
 .content-page__slots {
