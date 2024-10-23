@@ -1,7 +1,7 @@
 {
-  "title": "Barrierefreiheit",
-  "headerTitle": "Barrierefrei und Bunt: Zugang für Alle",
-  "lead": "Bei Porny Days setzen wir uns dafür ein, unsere Festivalräume für alle zugänglich und einladend zu gestalten.",
+  "title": "Accessibility",
+  "headerTitle": "Informationen zu Barrierefreiheit, Einlass und Licht während dem Festival",
+  "lead": "",
   "contentSlot": [
     {
       "deactivated": false,
@@ -15,7 +15,7 @@
       "splittedLayout": false,
       "title": "RiffRaff",
       "anchorTitle": "riffraff",
-      "firstText": "### **Barrierefreiheit**\n\nDer Kassen- und Barbereich vom Riffraff ist über eine Rampe rollstuhlgängig.\n\nDer Saal 1 ist über eine Rampe zugänglich. Die zwei Rollstuhlplätze befinden sich in der ersten Reihe. Die Rollstühle können auch im Seitengang platziert werden.\n\nDer Saal 2 ist barrierefrei zugänglich. Der Rollstuhlplatz befindet sich in der ersten Reihe. Die Sicht ist stark eingeschränkt.\n\nDer Saal 3 ist über den Hauseingang (Schlüssel an der Kinokasse verlangen) und Lift (Eurokey) erreichbar. Die zwei Rollstuhlplätze befinden sich in der hintersten Reihe.\n\nIn beiden Gebäuden (Saal 1/2 und Saal 3) hat es jeweils eine rollstuhlgängige Toilette (zugänglich mit Eurokey)."
+      "firstText": "### Kontakt\n\n[mail@neugasskino.ch](mailto:mail@neugasskino.ch)\n\nReservierungen Rollstuhlplätzen: während den Kinoöffnungszeiten unter dieser Rufnummer: +4144 444 22 00\n\n### **Barrierefreiheit**\n\nDer Kassen- und Barbereich vom Riffraff ist über eine Rampe rollstuhlgängig.\n\nDer Saal 1 ist über eine Rampe zugänglich. Die zwei Rollstuhlplätze befinden sich in der ersten Reihe. Die Rollstühle können auch im Seitengang platziert werden.\n\nDer Saal 2 ist barrierefrei zugänglich. Der Rollstuhlplatz befindet sich in der ersten Reihe. Die Sicht ist stark eingeschränkt.\n\nDer Saal 3 ist über den Hauseingang (Schlüssel an der Kinokasse verlangen) und Lift (Eurokey) erreichbar. Die zwei Rollstuhlplätze befinden sich in der hintersten Reihe.\n\nIn beiden Gebäuden (Saal 1/2 und Saal 3) hat es jeweils eine rollstuhlgängige Toilette (zugänglich mit Eurokey)."
     },
     {
       "deactivated": false,
@@ -26,5 +26,5 @@
     }
   ],
   "headerCentered": true,
-  "headerSubline": "Barrierefreiheit"
+  "headerSubline": ""
 }
