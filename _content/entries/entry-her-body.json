@@ -1,0 +1,19 @@
+{
+  "forceBlank": false,
+  "entryType": "Film",
+  "deactivated": false,
+  "desc": "Natalie Cisarovska\\\nTschechien, 2023, 110 Min, Tschechisch/Englische Untertitel\n\nDieser Film setzt sich mit Themen wie Performance- und Leistungsdruck sowie der Nutzung des Körpers als Mittel zur Existenzsicherung auseinander. Besonders prägnant ist der Kontrast zwischen dem angesehenen Spitzensport und der gesellschaftlich stigmatisierten Sexarbeit. Andrea's Lebensweg wirft Fragen auf über den Wert und die Anerkennung körperlicher Arbeit sowie die Doppelmoral, die der Gesellschaft gegenüber der Pornoindustrie innewohnt. Lichtblicke bietet dieser Film in rührenden Momenten intimer Freund:innenschaft.",
+  "videourl": "https://www.youtube.com/watch?v=BcGYYonNrb0",
+  "title": "Her Body",
+  "image": "/images/uploads/her_body_01.jpg.jpg",
+  "uuid": "her-body",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/her_body_02.jpg.jpg"
+    },
+    {
+      "image": "/images/uploads/her_body_03.jpg.jpg"
+    }
+  ]
+}
