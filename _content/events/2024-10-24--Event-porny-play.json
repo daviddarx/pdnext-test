@@ -1,0 +1,29 @@
+{
+  "timetable": [
+    {
+      "time": "18:30",
+      "title": "Start Einlass"
+    },
+    {
+      "time": "19:30",
+      "title": "Türe zu - kein Nacheinlass"
+    },
+    {
+      "time": "01:00",
+      "title": "Ende Veranstaltung"
+    }
+  ],
+  "eventdate": "2024-11-29T00:00:00.000Z",
+  "eventlocationlink": "https://gessnerallee.ch/en/events/porny-heart-core",
+  "price": "CHF 35",
+  "layout": "event",
+  "hideReducedPrice": false,
+  "eventlocation": "Gessneralle Zürich",
+  "deactivated": false,
+  "desc": "Wir versuchen uns in einem neuen Format und laden am Freitag zur PORNY PLAY ein, einer partizipativen Veranstaltung, einem «Play Space», an dem die Teilnehmer:innen das Programm mitgestalten und ausgerüstet mit ihren Lieblingsspielzeugen ihre Kinks zelebrieren können.\\\n \\\nEin Eröffnungsritual bringt uns als Gruppe zusammen. Ein Boxring lädt zu «Playfights» ein, während nebenan ein Laufsteg für Pet-Besitzer:innen zur Verfügung steht, wo «Pornys most talented pet» gekürt wird. Es gibt ein FINTA-Space, eine Fesselecke und viel Raum für Begegnungen. PORNY PLAY soll ein unvergesslicher Ort der Begegnung, des Spiels und der Lust sein. Ihr könnt allein oder mit Partner:innen kommen, wir sorgen für einen achtsamen und toleranten Rahmen. Ihr seid von Vorteil kontaktfreudig, engagiert und experimentierfreudig. Newbies & Old-Timers welcome, bring your own toys!\\\n \\\n*Desscode: keine Strassenkleider, dress to impress, playful, kinky, fanciful. Please bring-your-own toys.*\\\n*Sober Event für alle Sinne - ohne Alkohol oder anderen Drogen*",
+  "eventlocationcomplement": "Halle",
+  "ticketsLinkTitle": "Persönlicher Vorverkauf: 6.11. und 13.11. jeweils von 19 bis 21 Uhr im Stall 6, Gessnerallee",
+  "subtitle": "partizipativer PLAY SPACE",
+  "title": "Porny Play",
+  "specialstate": "new!"
+}
