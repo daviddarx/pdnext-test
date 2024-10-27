@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
 import classNames from 'classnames';
 import { uiStateType } from '@/store/ui-slice';
@@ -16,22 +16,6 @@ const videosURL = 'https://files.daviddarx.com/pornydays/videos/2024/';
 const Visual = () => {
   const isDark = useSelector((state: uiStateType) => state.ui.isDark);
   const isContentPage = useSelector((state: uiStateType) => state.ui.isContentPage);
-  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  const handleVideoEnd = useCallback(() => {
-    const newIndex = currentVideoIndex === videosNames.length - 1 ? 0 : currentVideoIndex + 1;
-    console.log('newIndex', newIndex);
-    setCurrentVideoIndex(newIndex);
-  }, [currentVideoIndex]);
-
-  // Effect to play the new video when the index changes
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.load(); // Reload the video
-      videoRef.current.play(); // Start playing the new video
-    }
-  }, [currentVideoIndex]);
 
   return (
     <div
@@ -40,16 +24,9 @@ const Visual = () => {
         'visual--content-page': isContentPage && !isDark,
       })}
     >
-      <video
-        className='visual__video'
-        ref={videoRef}
-        autoPlay
-        muted
-        playsInline
-        onEnded={handleVideoEnd}
-      >
-        <source src={`${videosURL}${videosNames[currentVideoIndex]}.webm`} type='video/webm' />
-        <source src={`${videosURL}${videosNames[currentVideoIndex]}.mp4`} type='video/mp4' />
+      <video className='visual__video' autoPlay muted loop playsInline>
+        <source src={`${videosURL}${videosNames[0]}.webm`} type='video/webm' />
+        <source src={`${videosURL}${videosNames[0]}.mp4`} type='video/mp4' />
       </video>
     </div>
   );
