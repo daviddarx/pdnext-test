@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import classNames from 'classnames';
 import { uiStateType } from '@/store/ui-slice';
@@ -16,6 +16,11 @@ const videosURL = 'https://files.daviddarx.com/pornydays/videos/2024/';
 const Visual = () => {
   const isDark = useSelector((state: uiStateType) => state.ui.isDark);
   const isContentPage = useSelector((state: uiStateType) => state.ui.isContentPage);
+  const [videoURL, setVideoURL] = useState('');
+
+  useEffect(() => {
+    setVideoURL(videosNames[Math.floor(Math.random() * videosNames.length)]);
+  }, [setVideoURL]);
 
   return (
     <div
@@ -24,10 +29,12 @@ const Visual = () => {
         'visual--content-page': isContentPage && !isDark,
       })}
     >
-      <video className='visual__video' autoPlay muted loop playsInline>
-        <source src={`${videosURL}${videosNames[0]}.webm`} type='video/webm' />
-        <source src={`${videosURL}${videosNames[0]}.mp4`} type='video/mp4' />
-      </video>
+      {videoURL && (
+        <video className='visual__video' autoPlay muted loop playsInline>
+          <source src={`${videosURL}${videoURL}.webm`} type='video/webm' />
+          <source src={`${videosURL}${videoURL}.mp4`} type='video/mp4' />
+        </video>
+      )}
     </div>
   );
 };
