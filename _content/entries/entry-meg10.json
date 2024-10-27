@@ -1,0 +1,18 @@
+{
+  "typeComplement": "DJ Set",
+  "forceBlank": false,
+  "entryType": "Musik",
+  "deactivated": false,
+  "desc": "Meg10\\\n*Deutschland, 90 Minuten*\n\nMeg10 ist eine der aufregendsten DJs, die aus Berlin hervorgegangen sind. Ihre politische Unverblümtheit und ihre Liebe zum Y2K Hip Hop & RnB sind entscheidende Bestandteile ihrer klanglichen Identität. Mit ihrem genreübergreifenden Sound, der Elemente von Rap und elektronischer Musik kombiniert jasst sie Sets raus, die vor Bass, weiblicher Energie und expliziten Texten zum Lippenlesen strotzen.",
+  "title": "Meg10",
+  "image": "/images/uploads/meg10_1.jpg",
+  "uuid": "meg10",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/meg10_3.jpeg"
+    },
+    {
+      "image": "/images/uploads/meg10_2.jpg"
+    }
+  ]
+}
