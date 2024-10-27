@@ -1,0 +1,16 @@
+{
+  "timetable": [],
+  "eventdate": "2024-11-29T20:00:00.000Z",
+  "eventlocationlink": "https://www.25hours-hotels.com/en/hotels/zurich/langstrasse",
+  "layout": "event",
+  "hideReducedPrice": false,
+  "eventlocation": "25hours Hotel Langstrasse",
+  "entries": [
+    "portal-las-rosas"
+  ],
+  "deactivated": false,
+  "desc": "xxx",
+  "eventlocationcomplement": "",
+  "subtitle": "from Bogota to Zurich",
+  "title": "Portal Las Rosas"
+}
