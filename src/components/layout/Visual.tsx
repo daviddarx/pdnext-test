@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
 import classNames from 'classnames';
 import { uiStateType } from '@/store/ui-slice';
@@ -19,12 +19,13 @@ const Visual = () => {
   const [faded, setFaded] = useState(false);
   const isDark = useSelector((state: uiStateType) => state.ui.isDark);
   const isContentPage = useSelector((state: uiStateType) => state.ui.isContentPage);
-  const [videoURL, setVideoURL] = useState('');
+  const [currentVideoId, setCurrentVideoId] = useState<number | null>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    setVideoURL(videosNames[Math.floor(Math.random() * videosNames.length)]);
+    setCurrentVideoId(Math.floor(Math.random() * videosNames.length));
     setMounted(true);
-  }, [setVideoURL, setMounted]);
+  }, [setCurrentVideoId, setMounted]);
 
   useEffect(() => {
     const onScroll = () => {
@@ -40,6 +41,20 @@ const Visual = () => {
     };
   }, [mounted]);
 
+  const randomizeNextVideo = () => {
+    if (currentVideoId) {
+      const newVideoId = currentVideoId === videosNames.length - 1 ? 0 : currentVideoId + 1;
+      setCurrentVideoId(newVideoId);
+    }
+  };
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.load();
+      videoRef.current.play();
+    }
+  }, [currentVideoId]);
+
   return (
     <div
       className={classNames('visual', {
@@ -48,10 +63,17 @@ const Visual = () => {
         'visual--content-page': isContentPage && !isDark,
       })}
     >
-      {videoURL && (
-        <video className='visual__video' autoPlay muted loop playsInline>
-          <source src={`${videosURL}${videoURL}.webm`} type='video/webm' />
-          <source src={`${videosURL}${videoURL}.mp4`} type='video/mp4' />
+      {currentVideoId && (
+        <video
+          className='visual__video'
+          ref={videoRef}
+          autoPlay
+          muted
+          playsInline
+          onEnded={randomizeNextVideo}
+        >
+          <source src={`${videosURL}${videosNames[currentVideoId]}.webm`} type='video/webm' />
+          <source src={`${videosURL}${videosNames[currentVideoId]}.mp4`} type='video/mp4' />
         </video>
       )}
     </div>
