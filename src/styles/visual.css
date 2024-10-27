@@ -3,6 +3,10 @@
   @apply after:w-full after:absolute after:h-full after:top-0 after:left-0 after:bg-black after:z-0 after:opacity-0 after:transition-opacity after:duration-300;
 }
 
+.visual--fadedout {
+  @apply max-xl:opacity-20;
+}
+
 .visual--content-page {
   @apply opacity-[0.12];
 }
