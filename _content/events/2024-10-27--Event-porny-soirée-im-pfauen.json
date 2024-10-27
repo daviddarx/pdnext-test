@@ -1,0 +1,24 @@
+{
+  "timetable": [
+    {
+      "time": "20:00",
+      "title": "Beginn"
+    },
+    {
+      "time": "22:00",
+      "title": "Ende"
+    }
+  ],
+  "ticketsLink": "https://www.zurichticket.ch/shz.webshop/webticket/seatmap?eventId=11688",
+  "eventdate": "2024-12-01T20:00:00.000Z",
+  "eventlocationlink": "https://www.schauspielhaus.ch/de/kalender/32322/porny-soire-im-pfauen",
+  "price": "CHF 40",
+  "layout": "event",
+  "hideReducedPrice": false,
+  "eventlocation": "Schauspielhaus Zürich",
+  "deactivated": false,
+  "desc": "Zum Abschluss des Festivals laden die Porny Days und das Schauspielhaus Zürich zu einem Soirée der Extraklasse in den Pfauen ein: Sieben schillernde Persönlichkeiten erkunden auf der Bühne das erotische Spannungsfeld zwischen Liebe und Sexualität. Wie gehen wir mit Dating-Apps, Einsamkeit und kommerzialisierter Romantik um? Wie macht Liebe geil? \n\nIn kurzen Performances und Geschichten suchen Dr. phil. Reyhan Şahin aka Lady Bitch Ray, Fatima Moumouni, Edwin Ramirez, Klamydia von Karma, Anna Rosenwasser, Naya de Souza und Peter Schneider grosse Gefühle, brechen Tabus und feiern mit Euch die Liebe.",
+  "eventlocationcomplement": "Pfauen",
+  "ticketsLinkTitle": "Karten kaufen",
+  "title": "Porny Soirée im Pfauen"
+}
