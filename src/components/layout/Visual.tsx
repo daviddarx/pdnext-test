@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import classNames from 'classnames';
 import { uiStateType } from '@/store/ui-slice';
+import { shuffleArray } from '@/utils/core';
 
 const videosNames = [
   'porny_2024-01',
@@ -14,6 +15,8 @@ const videosNames = [
 const Visual = () => {
   const isDark = useSelector((state: uiStateType) => state.ui.isDark);
   const isContentPage = useSelector((state: uiStateType) => state.ui.isContentPage);
+
+  console.log(shuffleArray(videosNames));
 
   return (
     <div
