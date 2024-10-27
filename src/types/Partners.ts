@@ -3,6 +3,7 @@ type Partner = {
   link: string;
   logo: string;
   label: string;
+  internalLink?: boolean;
 };
 
 export type PartnersType = Partner[];

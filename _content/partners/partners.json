@@ -1,6 +1,6 @@
 [
   {
-    "title": "Migros Kulturpozent",
+    "title": "Migros Kulturprozent",
     "link": "https://engagement.migros.ch/de/kulturprozent",
     "logo": "LogoMigros",
     "label": "Finanzielle Unterstützung"
@@ -30,9 +30,9 @@
     "label": "Finanzielle Unterstützung"
   },
   {
-    "title": "Cassinelli-Vogel-Stiftung",
-    "link": "https://cassinelli-vogel-stiftung.ch/",
-    "logo": "LogoCVS",
+    "title": "Stiftung Corymbo",
+    "link": "https://corymbo.ch/",
+    "logo": "LogoCorymbo",
     "label": "Finanzielle Unterstützung"
   },
   {
@@ -42,16 +42,11 @@
     "label": "Finanzielle Unterstützung"
   },
   {
-    "title": "Ernst Göhner Stiftung",
-    "link": "https://www.ernst-goehner-stiftung.ch/",
-    "logo": "LogoErnstGoehner",
-    "label": "Finanzielle Unterstützung"
-  },
-  {
-    "title": "Stiftung Corymbo",
-    "link": "https://corymbo.ch/",
-    "logo": "LogoCorymbo",
-    "label": "Finanzielle Unterstützung"
+    "title": "Sugar Ponys",
+    "link": "/support-us",
+    "logo": "LogoSugarPonys",
+    "label": "Finanzielle Unterstützung",
+    "internalLink": true
   },
   {
     "title": "25 Hours Hotel Langstrasse",
@@ -84,27 +79,15 @@
     "label": "Sachsponsoring"
   },
   {
-    "title": "Einhorn",
-    "link": "https://einhorn.my/",
-    "logo": "LogoEinhorn",
-    "label": "Sachsponsoring"
-  },
-  {
-    "title": "Marinello",
-    "link": "https://www.marinello.ch/",
-    "logo": "LogoMarinello",
-    "label": "Sachsponsoring"
-  },
-  {
-    "title": "Fairamour",
-    "link": "https://fairamour.ch/",
-    "logo": "LogoFairAmour",
-    "label": "Sachsponsoring"
-  },
-  {
     "title": "Die Wochenzeitung WOZ",
     "link": "https://www.woz.ch/",
     "logo": "LogoWOZ",
+    "label": "Media Partner:in"
+  },
+  {
+    "title": "Tsüri.ch",
+    "link": "https://tsri.ch/",
+    "logo": "LogoTsueri",
     "label": "Media Partner:in"
   },
   {
@@ -120,9 +103,9 @@
     "label": "Kultur Partner:in"
   },
   {
-    "title": "Cinématèque suisse",
-    "link": "https://www.cinematheque.ch/",
-    "logo": "LogoCinemateque",
+    "title": "Gessnerallee",
+    "link": "https://gessnerallee.ch/",
+    "logo": "LogoGesnerallee",
     "label": "Kultur Partner:in"
   },
   {
@@ -132,45 +115,27 @@
     "label": "Kultur Partner:in"
   },
   {
-    "title": "Das Gleis",
-    "link": "https://dasgleis.ch/",
-    "logo": "LogoGleis",
+    "title": "Kurzfilmtage Winterthur",
+    "link": "https://www.kurzfilmtage.ch/",
+    "logo": "LogoKurzFilmTage",
     "label": "Kultur Partner:in"
   },
   {
-    "title": "Langstrasse 200",
-    "link": "https://langstrasse200.ch/",
-    "logo": "LogoLS200",
+    "title": "My Hentai Club",
+    "link": "https://www.myhentai.porn/",
+    "logo": "LogoMyHentai",
     "label": "Kultur Partner:in"
   },
   {
-    "title": "Exil",
-    "link": "https://exil.club/",
-    "logo": "LogoExil",
+    "title": "Porn Film Festival Brüssel",
+    "link": "https://brusselspornfilmfestival.com/",
+    "logo": "LogoPFFB",
     "label": "Kultur Partner:in"
   },
   {
-    "title": "Baby Angel",
-    "link": "https://www.instagram.com/babyangelpr/",
-    "logo": "LogoBabyAngel",
-    "label": "Kultur Partner:in"
-  },
-  {
-    "title": "Paranoia City",
-    "link": "https://paranoiacity.ch/",
-    "logo": "LogoParanoiaCity",
-    "label": "Kultur Partner:in"
-  },
-  {
-    "title": "Shedhalle",
-    "link": "https://shedhalle.ch/",
-    "logo": "LogoShedhalle",
-    "label": "Kultur Partner:in"
-  },
-  {
-    "title": "Strapazin",
-    "link": "https://strapazin.ch/",
-    "logo": "LogoStrapazin",
+    "title": "Aorta films",
+    "link": "https://aortafilms.com/",
+    "logo": "LogoAorta",
     "label": "Kultur Partner:in"
   }
 ]
