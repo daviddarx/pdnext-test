@@ -49,6 +49,7 @@ const Visual = () => {
   };
 
   useEffect(() => {
+    console.log(currentVideoId);
     if (videoRef.current) {
       videoRef.current.load();
       videoRef.current.play();
@@ -63,7 +64,7 @@ const Visual = () => {
         'visual--content-page': isContentPage && !isDark,
       })}
     >
-      {currentVideoId && (
+      {currentVideoId !== null && (
         <video
           className='visual__video'
           ref={videoRef}
