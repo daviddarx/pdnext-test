@@ -1,6 +1,15 @@
 {
-  "timetable": [],
-  "eventdate": "2024-11-29T20:00:00.000Z",
+  "timetable": [
+    {
+      "time": "14:00",
+      "title": "Start"
+    },
+    {
+      "time": "22:00",
+      "title": "Ende"
+    }
+  ],
+  "eventdate": "2024-11-28T14:00:00.000Z",
   "eventlocationlink": "https://www.25hours-hotels.com/en/hotels/zurich/langstrasse",
   "layout": "event",
   "hideReducedPrice": false,
@@ -9,8 +18,9 @@
     "portal-las-rosas"
   ],
   "deactivated": false,
-  "desc": "xxx",
-  "eventlocationcomplement": "",
-  "subtitle": "from Bogota to Zurich",
+  "desc": "Portal Las Palmas\\\n*Kolumbien 2024, Video-Installation (40min) und Cam2Cam-Interview (siehe Zeitplan)*\n\n\"Hola. Ich bin Romea Diabla und arbeite seit fünf Jahren in verschiedenen Bereichen der Sexarbeit. Ich bin Domina und Künstlerin. Ich wollte dieses Video zeigen und die Möglichkeit anbieten, mich im gleichen Format wie Cam2Cam zu kontaktieren. Wir könnten über Liebe, Intimität oder das Video selbst sprechen.”\n\n*Der Film wird den ganzen Tag in einem Hotelzimmer des 25hours Hotel Langstrasse gezeigt. Der Schlüssel kann während der Öffnungszeiten an der Rezeption abgeholt werden.*",
+  "eventlocationcomplement": "Schlüssel für Zimmer liegt an der Reception",
+  "ticketsLinkTitle": "freier eintritt",
+  "subtitle": "Video-Installation",
   "title": "Portal Las Rosas"
 }
