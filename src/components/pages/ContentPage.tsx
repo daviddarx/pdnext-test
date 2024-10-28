@@ -1,17 +1,11 @@
 import { useRef, useEffect } from 'react';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
 
 import { ContentPageContent } from '@/utils/fetch-content-page-content';
 import { getCleanedAnchorID } from '@/utils/content-page';
-import { Fragment } from 'react';
 
 import PageHeader from '@/components/layout/PageHeader';
-import LoadedImage from '@/components/ui/LoadedImage';
-import ExpansableText from '@/components/layout/ExpansableText';
 import ContentSlot from '@/components/layout/ContentSlot';
 import DecorativeVideo from '../ui/DecorativeVideo';
-import classNames from 'classnames';
 
 type Props = {
   data: ContentPageContent;

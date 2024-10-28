@@ -7,6 +7,6 @@ export const fontText = Golos_Text({
 import localFont from 'next/font/local';
 
 export const fontTitle = localFont({
-  src: './../fonts/Agrandir_Variable.ttf',
+  src: './../fonts/NaNHolo-Black.ttf',
   variable: '--font-title',
 });

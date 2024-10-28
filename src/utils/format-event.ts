@@ -80,7 +80,7 @@ const formatEvent = (event: Event, entries: Entry[], isONS = false): FormatedEve
       hour: dateHour,
     },
     types: eventTypes,
-    entriesObjects: eventEntries.filter((entry) => !entry.deactivated),
+    entriesObjects: eventEntries.filter((entry) => !!entry).filter((entry) => !entry.deactivated),
     hideReducedPrice: hideReducedPrice,
   };
 

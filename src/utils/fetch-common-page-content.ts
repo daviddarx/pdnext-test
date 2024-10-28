@@ -1,22 +1,20 @@
-import loadJsonFiles from '@/utils/load-json-files';
-
+import { routes } from '@/routes/routes';
 import { SaveTheDate } from '@/types/SaveTheDate';
 import { SpecialAnnouncement } from '@/types/SpecialAnnouncement';
-import { SupportUsSlot } from '@/types/SupportUsSlot';
+import { fetchContentPageContent, ContentPageContent } from '@/utils/fetch-content-page-content';
 import { PartnersType } from '@/types/Partners';
 import { Settings } from '@/types/Settings';
 
 export type CommonPageData = {
   saveTheDateData: SaveTheDate;
   specialAnnouncementData: SpecialAnnouncement;
-  supportUsData: SupportUsSlot[];
+  supportUsData: ContentPageContent;
   partnersData: PartnersType;
   settingsData: Settings;
 };
 
 export async function fetchCommonPageContent(): Promise<CommonPageData> {
-  const supportUsSlotsDir: SupportUsSlot[] = [];
-  const supportUsSlots = await loadJsonFiles(supportUsSlotsDir, '_content/supportUsSlots');
+  const supportUs = await fetchContentPageContent(routes.secondary.support.json);
 
   const partners = require('../../_content/partners/partners.json') as PartnersType;
 
@@ -30,7 +28,7 @@ export async function fetchCommonPageContent(): Promise<CommonPageData> {
   return {
     saveTheDateData: saveTheDate,
     specialAnnouncementData: specialAnnouncement,
-    supportUsData: supportUsSlots,
+    supportUsData: supportUs,
     partnersData: partners,
     settingsData: settings,
   };

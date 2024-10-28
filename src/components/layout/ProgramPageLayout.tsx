@@ -8,8 +8,6 @@ import { scrollToEvent } from '@/hooks/useScrollToEventOnPageLoad';
 import { setFocusables, resetFocusables, loopFocusables } from '@/utils/get-focusables';
 import { screens } from '@/utils/screens';
 
-import VisualDesktop from '@/components/layout/VisualDesktop';
-import VisualMobile from '@/components/layout/VisualMobile';
 import EventDetail from '@/components/events/EventDetail';
 import EventDetailCloseButton from '@/components/events/EventDetailCloseButton';
 import EventDetailNavigation from '@/components/events/EventDetailNavigation';
@@ -32,6 +30,7 @@ const ProgramPageLayout: React.FC<Props> = ({ header, children, hideEventNav = f
   const dispatch = useDispatch();
 
   const [isDetailInViewport, setIsDetailInViewport] = useState(true);
+  const [isMounted, setIsMounted] = useState(false);
 
   const pageRef = useRef<HTMLElement>(null);
   const detailRef = useRef<HTMLDivElement>(null);
@@ -53,6 +52,8 @@ const ProgramPageLayout: React.FC<Props> = ({ header, children, hideEventNav = f
     );
 
     observer.observe(detailRef.current!);
+
+    setIsMounted(true);
 
     return () => {
       observer.disconnect();
@@ -117,7 +118,7 @@ const ProgramPageLayout: React.FC<Props> = ({ header, children, hideEventNav = f
   };
 
   return (
-    <section className='program-page' ref={pageRef}>
+    <section className={classNames('program-page', { mounted: isMounted })} ref={pageRef}>
       <div className='program-page__list'>
         <header className='program-page__header'>{header}</header>
         {children}
@@ -129,8 +130,6 @@ const ProgramPageLayout: React.FC<Props> = ({ header, children, hideEventNav = f
         ref={detailRef}
         onKeyDown={handleKeyDown}
       >
-        <VisualDesktop />
-
         <EventDetailCloseButton disabled={openedEvent && isDetailInViewport} />
         <EventDetail hideEventNav={hideEventNav} />
 
@@ -140,7 +139,6 @@ const ProgramPageLayout: React.FC<Props> = ({ header, children, hideEventNav = f
           </div>
         )}
       </div>
-      <VisualMobile />
     </section>
   );
 };

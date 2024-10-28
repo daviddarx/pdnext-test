@@ -3,7 +3,6 @@ import { FormatedEvent } from '@/types/FormatedEvent';
 export interface uiStateType {
   ui: {
     isNavigationOpened: boolean;
-    isSupportUsOpened: boolean;
     isBurgerVisible: boolean;
     isBurgerTextVisible: boolean;
     openedEvent: FormatedEvent | undefined;
@@ -12,6 +11,7 @@ export interface uiStateType {
     eventSwitchDirection: 'prev' | 'next';
     openedVideo: string | undefined;
     isDark: boolean;
+    isContentPage: boolean;
     system: {
       os: string | undefined;
       browser: string | undefined;
@@ -26,7 +26,6 @@ export const uiSlice = createSlice({
   name: 'ui',
   initialState: {
     isNavigationOpened: false,
-    isSupportUsOpened: false,
     isBurgerVisible: true,
     isBurgerTextVisible: true,
     openedEvent: undefined as FormatedEvent | undefined,
@@ -34,6 +33,7 @@ export const uiSlice = createSlice({
     eventSwitchDirection: 'next',
     openedVideo: undefined,
     isDark: false,
+    isContentPage: false,
     system: {
       os: undefined,
       browser: undefined,
@@ -76,12 +76,6 @@ export const uiSlice = createSlice({
     closeNavigation: (state) => {
       state.isNavigationOpened = false;
     },
-    openSupportUs: (state) => {
-      state.isSupportUsOpened = true;
-    },
-    closeSupportUs: (state) => {
-      state.isSupportUsOpened = false;
-    },
     setBurgerVisibility: (state, action) => {
       state.isBurgerVisible = action.payload;
     },
@@ -96,6 +90,9 @@ export const uiSlice = createSlice({
     },
     setDark: (state, action) => {
       state.isDark = action.payload;
+    },
+    setContentPage: (state, action) => {
+      state.isContentPage = action.payload;
     },
     setSystem: (state, action) => {
       state.system = action.payload;

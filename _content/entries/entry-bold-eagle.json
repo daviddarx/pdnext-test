@@ -1,0 +1,16 @@
+{
+  "forceBlank": false,
+  "entryType": "Film",
+  "deactivated": false,
+  "desc": "Faye Tsakas/Enrique Pedráza-Botero\\\nPhilippinen, 2023, 15 Min, Englisch\n\nAlleine zu Hause mit seiner sprechenden Katze sehnt sich Bold nach starken Armen fremder Männer, mit denen er in den Abgründen des Internets nach dem Glück trachtet. Gefangen im Wirrwarr von Technologie und sozialen Medien sucht er seinen Platz in der Welt. Kann er seine Schwingen ausbreiten und fliegen?",
+  "videourl": "",
+  "title": "Bold Eagle",
+  "image": "/images/uploads/bold_eagle_01.jpg.png",
+  "uuid": "bold-eagle",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/bold_eagle_02.jpg.png"
+    }
+  ]
+}

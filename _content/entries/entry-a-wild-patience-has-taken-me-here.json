@@ -1,0 +1,20 @@
+{
+  "typeComplement": "Fiktion",
+  "forceBlank": false,
+  "entryType": "Film",
+  "deactivated": false,
+  "desc": "Éri Sarmet\\\nBrasilien, 2021, 26 Min, Portugiesisch/Englische Untertitel\\\n \\\nDer Einsamkeit überdrüssig, beschliesst Vange, über die Brücke des Rio-Niterói zu fahren und an einer Lesbenparty teilzunehmen. Dort lernt sie vier junge Lesben kennen, die ein Haus und ihre Zuneigung teilen. Ein intimes, ehrliches und erotisches Treffen der Generationen; eine Hommage an diejenigen, die uns hierher gebracht haben.",
+  "videourl": "https://www.youtube.com/watch?v=zRdFoKIYcU4",
+  "title": "A Wild Patience Has Taken Me Here",
+  "image": "/images/uploads/a_wild_patience_has_taken_me_here_03.jpg",
+  "uuid": "a-wild-patience",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/a_wild_patience_has_taken_me_here_02.jpg"
+    },
+    {
+      "image": "/images/uploads/a_wild_patience_has_taken_me_here_01.jpg"
+    }
+  ]
+}

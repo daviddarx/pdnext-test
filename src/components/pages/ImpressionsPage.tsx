@@ -1,5 +1,4 @@
 import { useDispatch } from 'react-redux';
-import Link from 'next/link';
 
 import { uiActions } from '@/store';
 import { ImpressionsContent } from '@/utils/fetch-impressions-content';

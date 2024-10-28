@@ -1,0 +1,18 @@
+{
+  "typeComplement": "Documentary",
+  "forceBlank": false,
+  "entryType": "Film",
+  "deactivated": false,
+  "desc": "Molly Hope\\\n*USA/Deutschland, 2024, 8 Minuten, Englisch ohne Untertitel*\n\nIn der Webserie «Cis Toys - Trans Woman» stellt uns Molly Hope Sexspielzeuge vor, die offenbar für Cis-Körper gemacht sind. Doch, und das testet Molly gleich selber, sie können auch für trans Personen ganz schön interessant sein!",
+  "title": "Cis Toys - Trans Woman / Part 1",
+  "image": "/images/uploads/cistoys1.jpg",
+  "uuid": "cis_toys",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/cistoys2.jpg"
+    },
+    {
+      "image": "/images/uploads/cistoys3.jpg"
+    }
+  ]
+}

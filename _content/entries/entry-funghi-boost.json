@@ -1,0 +1,16 @@
+{
+  "forceBlank": false,
+  "entryType": "Film",
+  "deactivated": false,
+  "desc": "Bande James Bonde\\\nBelgien, 2023, 12 Min, Französisch/Englische Untertitel\n\nEine seltsame Suche nach magischen Pilzchen und extravaganten Schätzen führt zu aussergewöhnlichen Begegnungen mit einer schelmischen, diamantenliebenden Fee, skrupellosen Gremlins und einer donnernden Vampirella-Königin. Von Verlangen zu Verlangen – wie weit wird uns dieses Abenteuer führen?",
+  "videourl": "",
+  "title": "Funghi Boost",
+  "image": "/images/uploads/funghi_boost_01.jpg",
+  "uuid": "funghi-boost",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/funghi_boost_02.jpg"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "forceBlank": false,
+  "entryType": "Film",
+  "deactivated": false,
+  "desc": "Arnaud Dufey\\\nBelgien, 2024, 19 Min, Französisch/Englische Untertitel\\\n \\\nEin heisser Sommerabend. Allein zu Hause, sitzt der 16-jährige Clément gelangweilt am Pool und swiped auf Dating-Apps. Entschlossen, seine Jungfräulichkeit zu verlieren, lügt er über sein Alter bei seinem Date mit Naël, einem 8 Jahre älteren  Mann. Das Date wird intimer und die Dinge überstürzen sich.",
+  "videourl": "",
+  "title": "Invincible Summer",
+  "image": "/images/uploads/invincible_summer_01.jpg",
+  "uuid": "invincible-summer",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/invincible_summer_02.jpg"
+    }
+  ]
+}

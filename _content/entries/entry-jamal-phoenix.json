@@ -1,0 +1,18 @@
+{
+  "typeComplement": "Strip",
+  "forceBlank": false,
+  "entryType": "Performance",
+  "deactivated": false,
+  "desc": "Eine getanzte Reise: Burlesque, sinnlich, tough, sexy und dunkel-romantisch. Jamal Phoenix halt.",
+  "title": "Jamal Phoenix",
+  "image": "/images/uploads/img_0416-kopie.jpg",
+  "uuid": "jamal-strip",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/img_5378-kopie.jpeg"
+    },
+    {
+      "image": "/images/uploads/img_0411-kopie.jpg"
+    }
+  ]
+}

@@ -1,10 +1,8 @@
 .support-us {
+  @apply border-y themed-border;
+
   .accordion__button {
     @apply text-left;
-  }
-
-  .dark & {
-    @apply border-y border-current;
   }
 }
 
@@ -52,23 +50,5 @@
 }
 
 .support-us__content-container {
-  @apply space-y-gutter-2 py-gutter-2 px-gutter border-t border-current;
-
-  @screen lg {
-    @apply grid grid-cols-3 space-y-0 py-gutter pl-gutter pr-0;
-  }
-}
-
-.support-us__slot {
-  @screen lg {
-    @apply pr-gutter;
-  }
-}
-
-.support-us__slot-title {
-  @apply h5 mb-[0.75em];
-}
-
-.support-us__paypal-button {
-  @apply tag mt-gutter;
+  @apply border-t border-current !pt-gutter-2 transparent-white-border;
 }

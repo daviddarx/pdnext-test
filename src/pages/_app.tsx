@@ -8,12 +8,13 @@ import { detect } from 'detect-browser';
 import classNames from 'classnames';
 
 import * as gtag from '@/utils/ga';
+import { addFullscreenShortcut } from '@/utils/fullscreen';
 import { routes } from '@/routes/routes';
 import { fontText, fontTitle } from '@/utils/get-fonts';
 import store from '@/store/';
 import { uiActions } from '@/store/';
 
-import RainbowBackground from '@/components/layout/RainbowBackground';
+import Visual from '@/components/layout/Visual';
 import CookieBanner from '@/components/layout/CookieBanner';
 import NavBurger from '@/components/navs/NavBurger';
 import MainNavPanel from '@/components/navs/MainNav';
@@ -72,7 +73,7 @@ const App = ({ Component, pageProps }: AppProps) => {
      */
     window.history.scrollRestoration = 'manual';
 
-    const pageSlug = pageKey.split('/')[1].split('#')[0];
+    const pageSlug = pageKey.split('/')[1].split('#')[0].split('?')[0];
 
     if (
       pageSlug === routes.secondary.about.slug ||
@@ -82,6 +83,12 @@ const App = ({ Component, pageProps }: AppProps) => {
       store.dispatch(uiActions.setDark(true));
     } else {
       store.dispatch(uiActions.setDark(false));
+    }
+
+    if (pageSlug === routes.main.festival.slug || pageSlug === routes.main.ons.slug) {
+      store.dispatch(uiActions.setContentPage(false));
+    } else {
+      store.dispatch(uiActions.setContentPage(true));
     }
 
     return () => {
@@ -132,6 +139,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         }),
       );
     }
+    addFullscreenShortcut();
   });
 
   const handleExitComplete = () => {
@@ -173,7 +181,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         <AnimatePresence mode='wait' initial={false} onExitComplete={handleExitComplete}>
           <Component key={pageKey} {...pageProps} />
         </AnimatePresence>
-        <RainbowBackground />
+        <Visual />
         <VideoOverlay />
         <CookieBanner />
       </div>

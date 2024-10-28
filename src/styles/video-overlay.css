@@ -1,6 +1,6 @@
 .video-overlay {
   @apply fixed top-0 left-0 z-30 flex items-center justify-center w-full h-full;
-  @apply text-pink pointer-events-none;
+  @apply text-white pointer-events-none;
 }
 
 .video-overlay--active {

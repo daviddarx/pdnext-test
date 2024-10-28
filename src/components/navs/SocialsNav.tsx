@@ -19,7 +19,7 @@ const socialsNavItems = [
   },
   {
     title: 'Newsletter',
-    link: 'https://pornydays.us10.list-manage.com/subscribe/post?u=9c7ed05ab79d08599fd3d90ee&id=7073021cc1',
+    link: 'https://pornydays.us10.list-manage.com/subscribe?u=9c7ed05ab79d08599fd3d90ee&id=7073021cc1',
   },
 ];
 

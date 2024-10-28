@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import Link from 'next/link';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { routes, type Route } from '@/routes/routes';
@@ -14,19 +15,8 @@ const MainNav = () => {
 
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    if (isNavigationOpened) {
-      dispatch(uiActions.closeSupportUs());
-    }
-  }, [isNavigationOpened, dispatch]);
-
   const closeNavigation = () => {
     dispatch(uiActions.closeNavigation());
-  };
-
-  const goToSupportUs = () => {
-    dispatch(uiActions.openSupportUs());
-    closeNavigation();
   };
 
   return (
@@ -61,9 +51,13 @@ const MainNav = () => {
                     <ActiveLink
                       className='main-nav__link main-nav__link--secondary text-link'
                       activeClassName='main-nav__link--active'
-                      href={'/' + route.slug}
+                      href={`/${route.slug}`}
                     >
-                      {route.title}
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html: route.title,
+                        }}
+                      />
                     </ActiveLink>
                   </li>
                 );
@@ -71,9 +65,9 @@ const MainNav = () => {
             })}
           </ul>
 
-          <button className='main-nav__support tag' onClick={goToSupportUs}>
+          <Link href={`/${routes.secondary.support.slug}`} className='main-nav__support tag'>
             Unterstütze uns
-          </button>
+          </Link>
         </div>
 
         <SocialNav className='main-nav__socials' />
