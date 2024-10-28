@@ -137,5 +137,47 @@
     "link": "https://aortafilms.com/",
     "logo": "LogoAorta",
     "label": "Kultur Partner:in"
+  },
+  {
+    "title": "Black Film Festival Zürich",
+    "link": "https://www.blackfilmfestivalzurich.com/",
+    "logo": "LogoBFF",
+    "label": "Kultur Partner:in"
+  },
+  {
+    "title": "ProCore",
+    "link": "https://procore-info.ch/",
+    "logo": "LogoProCore",
+    "label": "Kultur Partner:in"
+  },
+  {
+    "title": "SWC",
+    "link": "https://sexworkers.ch/",
+    "logo": "LogoSWC",
+    "label": "Kultur Partner:in"
+  },
+  {
+    "title": "Hochschule Luzern",
+    "link": "https://www.hslu.ch/",
+    "logo": "LogoHSLU",
+    "label": "Kultur Partner:in"
+  },
+  {
+    "title": "Saferparty.ch",
+    "link": "https://www.saferparty.ch/",
+    "logo": "LogoSaferParty",
+    "label": "Kultur Partner:in"
+  },
+  {
+    "title": "Letstalkaboutsexanddrugs",
+    "link": "https://www.instagram.com/letstalkaboutsexanddrugs/",
+    "logo": "LogoLTASD",
+    "label": "Kultur Partner:in"
+  },
+  {
+    "title": "Eve & Rave",
+    "link": "https://www.eve-rave.ch/",
+    "logo": "LogoEveRave",
+    "label": "Kultur Partner:in"
   }
 ]
