@@ -1,0 +1,21 @@
+{
+  "timetable": [
+    {
+      "time": "20:30",
+      "title": "Sascha"
+    },
+    {
+      "time": "21:00",
+      "title": "Tami T (Konzert)"
+    }
+  ],
+  "eventdate": "2024-11-28T20:30:00.000Z",
+  "eventlocationlink": "www.gessnerallee.ch",
+  "layout": "event",
+  "hideReducedPrice": false,
+  "eventlocation": "Gesserallee",
+  "deactivated": false,
+  "desc": "XXX",
+  "eventlocationcomplement": "Stall 6",
+  "title": "Konzert Tami T & Vorspiel Sascha Rijkeboer"
+}
