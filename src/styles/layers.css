@@ -76,7 +76,7 @@
   }
 
   .text-link {
-    @apply transition-[opacity] duration-300 ease-out-quart;
+    @apply transition-[opacity] duration-300 ease-out-quart font-semibold;
 
     @media (hover: hover) {
       &:hover {
@@ -100,7 +100,7 @@
   }
 
   .tag {
-    @apply inline-block px-[0.75em] pt-[0.4em] pb-[0.3em];
+    @apply inline-block px-[0.9em] pt-[0.55em] pb-[0.5em];
     @apply text-base font-semibold leading-none uppercase tracking-tag;
     @apply bg-white rounded-full border themed-border;
     @apply transition-colors duration-200 ease-out;
@@ -150,19 +150,11 @@
   }
 
   .tag--sm {
-    @apply text-xs px-[0.4em] pt-[0.3em] pb-[0.05em];
-
-    .ios & {
-      @apply px-[0.8em] pt-[0.4em];
-    }
+    @apply text-xs px-[0.8em] py-[0.3em];
 
     @screen lg {
-      @apply px-[0.6em] pt-[0.4em] pb-[0.15em];
+      @apply px-[0.8em] pt-[0.4em] pb-[0.35em];
     }
-  }
-
-  .align-text-v {
-    @apply translate-y-[0.1em];
   }
 
   .align-title-font-v {

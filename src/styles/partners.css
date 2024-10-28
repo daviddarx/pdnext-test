@@ -1,5 +1,5 @@
 .partners {
-  @apply pt-gutter-3 lg:px-gutter backdrop-blurred;
+  @apply pt-gutter-3 pb-gutter-2 lg:px-gutter backdrop-blurred;
 
   .dark & {
     @apply backdrop-blur-none;

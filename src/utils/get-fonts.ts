@@ -7,10 +7,6 @@ export const fontText = Golos_Text({
 import localFont from 'next/font/local';
 
 export const fontTitle = localFont({
-  src: './../fonts/NaNHolo_TRIAL-ExtraBold.ttf',
+  src: './../fonts/NaNHolo-Black.ttf',
   variable: '--font-title',
 });
-// export const fontTitle = localFont({
-//   src: './../fonts/NaNFiascoTRIAL-Black.ttf',
-//   variable: '--font-title',
-// });

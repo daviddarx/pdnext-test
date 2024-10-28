@@ -49,7 +49,7 @@ module.exports = {
     },
     fontWeight: {
       normal: '400',
-      semibold: '500',
+      semibold: '600',
       bold: '800',
     },
     lineHeight: {

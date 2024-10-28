@@ -18,7 +18,7 @@
 }
 
 .content-page__nav-link {
-  @apply block h5 font-semibold align-text-v text-link;
+  @apply block h5 font-semibold text-link;
 }
 
 .content-page__slots {

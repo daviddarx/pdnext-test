@@ -42,14 +42,13 @@ const Visual = () => {
   }, [mounted]);
 
   const randomizeNextVideo = () => {
-    if (currentVideoId) {
+    if (currentVideoId !== null) {
       const newVideoId = currentVideoId === videosNames.length - 1 ? 0 : currentVideoId + 1;
       setCurrentVideoId(newVideoId);
     }
   };
 
   useEffect(() => {
-    console.log(currentVideoId);
     if (videoRef.current) {
       videoRef.current.load();
       videoRef.current.play();
