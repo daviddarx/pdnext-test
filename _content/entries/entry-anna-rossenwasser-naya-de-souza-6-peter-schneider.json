@@ -2,8 +2,9 @@
   "forceBlank": false,
   "deactivated": false,
   "uuid": "panel-2",
-  "title": "Anna Rossenwasser, Naya de Souza 6 Peter Schneider",
-  "entryType": "Talk",
-  "desc": "XXX",
-  "image": "/images/uploads/panel_2-2.jpg"
+  "title": "Anna Rossenwasser, Naya de Souza & Peter Schneider",
+  "entryType": "Performance",
+  "desc": "**Anna Rosenwasser** arbeitet als frisch gewählte Nationalrätin und ist Autorin des «Rosa Buch. Queere Texte von Herzen». \n\n**Naya de Souza**, geboren 1991 in der Caatinga-Region Brasiliens, wuchs an der Grenze von Bahia und Pernambuco auf. Unter verschiedenen Alter-Egos wie \"LUX VENÉREA\" und \"@Bundaskanzlerin\" bewegt sie sich zwischen Performance-Kunst, Comedy und Kochen.\n\n**Peter Schneider** lebt in Zürich und arbeitet dort als Psychoanalytiker. Peter Schneider war auch als Erzählstimme bei “Philip Maloney” und bei der Satiresendung \"die andere Presseschau” auf SRF3 zu hören.",
+  "image": "/images/uploads/panel_2-2.jpg",
+  "typeComplement": "Talk"
 }
