@@ -16,7 +16,11 @@ const Partners = ({ data }: Props) => {
           );
           return (
             <li key={partner.title} className='partner'>
-              <a href={partner.link} className='partner__link' target='_blank'>
+              <a
+                href={partner.link}
+                className='partner__link'
+                target={partner.internalLink ? '_self' : '_blank'}
+              >
                 <LogoComponent />
                 <h3 className='hidden'>{partner.title}</h3>
                 <span className='partner__label'>{partner.label}</span>
