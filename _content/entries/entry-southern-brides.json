@@ -1,0 +1,20 @@
+{
+  "typeComplement": "Fiktion",
+  "forceBlank": false,
+  "entryType": "Film",
+  "deactivated": false,
+  "desc": "Elena López Riera\\\nSchweiz/Spanien, 2024, 40 Min, Spanisch/Englische Untertitel\\\n \\\nÄltere Frauen sprechen über ihre Hochzeit, ihr erstes Mal, ihr intimes Verhältnis zum Sex. Indem sie diese uralten Rituale wiederholt, hinterfragt die Regisseurin ihren eigenen Zustand als unverheiratete Frau ohne Kinder und damit das Ende einer Mutter-Tochter-Kettenbeziehung.",
+  "videourl": "https://www.youtube.com/watch?v=5tEwBiLI1mI",
+  "title": "Southern Brides",
+  "image": "/images/uploads/la_novias_01.jpg",
+  "uuid": "souther-brides",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/las_novias_04.png"
+    },
+    {
+      "image": "/images/uploads/las_novias_02.png"
+    }
+  ]
+}
