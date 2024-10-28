@@ -1,0 +1,15 @@
+{
+  "typeComplement": "Film",
+  "forceBlank": false,
+  "entryType": "Ausstellung",
+  "deactivated": false,
+  "desc": "Romea Diabla\\\n*Bogota, Kolumbien 2024, 40 Min., Spanisch mit Untertiteln*\n\nDieses Video entstand mit der Hilfe meiner Freund:innen und Kolleg:innen. Das Video zeigt unsere Vorstellungen von Liebe, unsere Arbeitsidentitäten als Sexarbeiter:innen und unsere verletzlichen Seiten. Wir haben dieses Video in einem Motel gedreht, in dem wir seit drei Jahren in Bogotá, Kolumbien, arbeiten.",
+  "title": "Portal Las Rosas",
+  "image": "/images/uploads/captura_de_pantalla_2024-10-23_a_las_12.25.48.png",
+  "uuid": "portal-las-rosas",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/captura_de_pantalla_2024-10-23_a_las_12.22.06.png"
+    }
+  ]
+}

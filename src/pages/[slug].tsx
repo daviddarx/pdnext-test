@@ -62,7 +62,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
   const paths = slugs.map((slug: string) => ({ params: { slug } }));
 
-  return { paths, fallback: false };
+  return { paths, fallback: 'blocking' };
 };
 
 export const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
@@ -120,6 +120,7 @@ export const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
 
   return {
     props: props,
+    revalidate: 10,
   };
 };
 

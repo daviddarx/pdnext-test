@@ -42,7 +42,7 @@ const Page: NextPage<PageProps> = ({ news, prevNews, nextNews, commonPageData })
               alt={news.title}
               width={news.imageWidth}
               height={news.imageHeight}
-              sizes='(min-width: 1920px) 25vw, (min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw'
+              sizes='(min-width: 768px) 50vw, 100vw'
               className='news-page__image'
             />
           )}
@@ -96,7 +96,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false,
+    fallback: 'blocking',
   };
 };
 
@@ -126,6 +126,7 @@ export const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
 
   return {
     props: props,
+    revalidate: 10,
   };
 };
 

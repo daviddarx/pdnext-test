@@ -68,6 +68,10 @@
 
 .content-slot__image {
   @apply mt-gutter-2 w-full;
+
+  & img {
+    width: auto !important;
+  }
 }
 
 .content-slot__definition-list {

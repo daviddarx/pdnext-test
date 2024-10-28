@@ -1,0 +1,16 @@
+{
+  "forceBlank": false,
+  "entryType": "Film",
+  "deactivated": false,
+  "desc": "Lina Bembe\\\nDeutschland, 2023, 11 Min, kein Dialog\\\n \\\nIrma und Vep sind Vampirliebhaber:innen, deren Durst nach silbernem Blut nichts anderes als überwältigendes Vergnügen ist. Eines Tages besucht Vep Irma, ohne zu bemerken, dass eine rot-gelbe Bedrohung auf sie lauert. Als sie den Eindringling entdecken, finden Irma und Vep ihren Weg zur Rache und zum ekstatischen gegenseitigen Vergnügen, auf die Art, die sie am meisten lieben. Eine Geschichte der Rache in einer Ära der Unternehmenszensur und der Doppelmoral in Bezug auf Blut, Sex und das Weibliche.",
+  "videourl": "",
+  "title": "Silver V",
+  "image": "/images/uploads/silver_v_02.jpg",
+  "uuid": "silver-v",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/silver_v_01.jpeg"
+    }
+  ]
+}
