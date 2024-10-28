@@ -30,7 +30,7 @@
 }
 
 .event-detail__special-state {
-  @apply tag relative top-[-0.75em] xl:top-[-0.9em];
+  @apply tag relative top-[-0.5em] xl:top-[-0.7em];
 
   @screen max-xl {
     @apply tag--sm;
@@ -38,7 +38,7 @@
 }
 
 .event-detail__subtitle {
-  @apply font-semibold mt-gutter-1/4;
+  @apply font-semibold mt-gutter-3/4;
 }
 
 .event-detail__desc {
@@ -91,7 +91,7 @@
 }
 
 .event-detail__reduced-price-text {
-  @apply mt-gutter text-sm pink-box;
+  @apply mt-gutter text-sm white-box;
 }
 
 .event-detail__tickets {
@@ -119,7 +119,7 @@
   }
 
   @screen max-xl {
-    @apply bg-pink m-gutter rounded-full border overflow-hidden;
+    @apply bg-white m-gutter rounded-full border overflow-hidden;
   }
 }
 
@@ -134,7 +134,7 @@
     @apply transition-colors duration-200 ease-out;
 
     &:hover {
-      @apply bg-pink;
+      @apply bg-black/10;
     }
   }
 }
@@ -152,15 +152,15 @@
 }
 
 .event-detail-nav__subline {
-  @apply subline flex gap-[1em] leading-none pt-[0.5em] pb-[0.25em] items-center justify-center;
+  @apply subline flex gap-[1em] leading-none pt-[0.5em] pb-[0.55em] items-center justify-center;
 
   @screen xl {
-    @apply flex-col gap-[1.5em] py-[0] !text-xs align-text-v;
+    @apply flex-col gap-[1.5em] py-[0] !text-xs;
   }
 }
 
 .event-detail-nav__icon {
-  @apply relative inline-block h-[0.9em] w-auto -top-[0.1em];
+  @apply relative inline-block h-[0.9em] w-auto;
 }
 
 .event-detail-nav__title {

@@ -28,12 +28,11 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      white: '#ffffff',
-      black: 'hsl(200, 100%, 10%)',
+      white: '#E1DED5',
+      black: '#2F1537',
       lightGrey: 'hsla(200, 100%, 10%, 0.07)',
-      pink: 'hsl(0, 80%, 90%)',
-      pinkScrollable: 'hsla(0, 80%, 90%, 0.65)',
-      focusVisible: 'hsla(200, 100%, 60%, 0.7)',
+      whiteScrollable: 'rgba(255, 255, 255, 0.65)',
+      focusVisible: 'hsla(321, 100%, 66%, 0.7)',
     },
     fontSize: {
       0: '0px',
@@ -50,7 +49,7 @@ module.exports = {
     },
     fontWeight: {
       normal: '400',
-      semibold: '500',
+      semibold: '600',
       bold: '800',
     },
     lineHeight: {

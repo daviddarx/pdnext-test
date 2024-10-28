@@ -30,12 +30,12 @@
   @apply relative inline-block w-[4em] shrink-0 text-base -top-[0.15em];
 
   @screen 2xl {
-    @apply -top-[0.1em];
+    @apply top-[0.15em];
   }
 }
 
 .event__title {
-  @apply h5 font-semibold mt-[0.2em] mb-[0.4em] lg:mb-[0.5em];
+  @apply h5 mt-[0.2em] mb-[0.4em] lg:mb-[0.5em];
 }
 
 .event__subtitle {
@@ -47,7 +47,7 @@
 }
 
 .event__special-state {
-  @apply tag tag--sm relative -top-[0.2em] lg:-top-[0.25em] xl:-top-[0.35em] !bg-transparent;
+  @apply tag tag--sm relative -top-[0.2em] lg:-top-[0.2em] xl:-top-[0.25em] !bg-transparent;
 }
 
 .event__btn {

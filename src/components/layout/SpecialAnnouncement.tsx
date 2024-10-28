@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import classNames from 'classnames';
 
-import { SpecialAnnouncement } from '@/types/SpecialAnnouncement';
+import type { SpecialAnnouncement } from '@/types/SpecialAnnouncement';
 
 import Drawer from '@/components/ui/Drawer';
 import ArrowIcon from '@/components/icons/ArrowIcon';

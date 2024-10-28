@@ -39,7 +39,7 @@ export const routes = {
     awareness: { slug: 'awareness', title: 'Awareness', json: 'contentpage-awarness.json' },
     accessibility: {
       slug: 'accessibility',
-      title: 'Barrierefreiheit',
+      title: 'Barriere&shy;freiheit',
       json: 'contentpage-accessibility.json',
     },
     news: { slug: 'news', title: 'News' },

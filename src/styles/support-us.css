@@ -1,10 +1,8 @@
 .support-us {
+  @apply border-y themed-border;
+
   .accordion__button {
     @apply text-left;
-  }
-
-  .dark & {
-    @apply border-y border-current;
   }
 }
 
@@ -52,5 +50,5 @@
 }
 
 .support-us__content-container {
-  @apply border-t border-current !pt-gutter-2;
+  @apply border-t border-current !pt-gutter-2 transparent-white-border;
 }

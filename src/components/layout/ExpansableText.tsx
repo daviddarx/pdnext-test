@@ -42,7 +42,7 @@ const ExpansableText: React.FC<Props> = ({ className = '', title, markdown }) =>
       className={classNames('expandable-text', className)}
       header={
         <h3 className='expandable-text__title content-page__column-left text-link'>
-          <span className='align-text-v'>{title}</span>
+          <span>{title}</span>
           <CloseIcon className='expandable-text__close' />
         </h3>
       }

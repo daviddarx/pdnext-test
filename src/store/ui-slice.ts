@@ -11,6 +11,7 @@ export interface uiStateType {
     eventSwitchDirection: 'prev' | 'next';
     openedVideo: string | undefined;
     isDark: boolean;
+    isContentPage: boolean;
     system: {
       os: string | undefined;
       browser: string | undefined;
@@ -32,6 +33,7 @@ export const uiSlice = createSlice({
     eventSwitchDirection: 'next',
     openedVideo: undefined,
     isDark: false,
+    isContentPage: false,
     system: {
       os: undefined,
       browser: undefined,
@@ -88,6 +90,9 @@ export const uiSlice = createSlice({
     },
     setDark: (state, action) => {
       state.isDark = action.payload;
+    },
+    setContentPage: (state, action) => {
+      state.isContentPage = action.payload;
     },
     setSystem: (state, action) => {
       state.system = action.payload;
