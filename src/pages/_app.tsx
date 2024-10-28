@@ -84,7 +84,7 @@ const App = ({ Component, pageProps }: AppProps) => {
     } else {
       store.dispatch(uiActions.setDark(false));
     }
-    console.log(pageSlug, routes.main.festival.slug, routes.main.ons.slug);
+
     if (pageSlug === routes.main.festival.slug || pageSlug === routes.main.ons.slug) {
       store.dispatch(uiActions.setContentPage(false));
     } else {
