@@ -15,7 +15,8 @@
       "splittedLayout": false,
       "title": "RiffRaff",
       "anchorTitle": "riffraff",
-      "firstText": "### Kontakt\n\n[mail@neugasskino.ch](mailto:mail@neugasskino.ch)\n\nReservierungen Rollstuhlplätzen: während den Kinoöffnungszeiten unter dieser Rufnummer: +4144 444 22 00\n\n### **Barrierefreiheit**\n\nDer Kassen- und Barbereich vom Riffraff ist über eine Rampe rollstuhlgängig.\n\nDer Saal 1 ist über eine Rampe zugänglich. Die zwei Rollstuhlplätze befinden sich in der ersten Reihe. Die Rollstühle können auch im Seitengang platziert werden.\n\nDer Saal 2 ist barrierefrei zugänglich. Der Rollstuhlplatz befindet sich in der ersten Reihe. Die Sicht ist stark eingeschränkt.\n\nDer Saal 3 ist über den Hauseingang (Schlüssel an der Kinokasse verlangen) und Lift (Eurokey) erreichbar. Die zwei Rollstuhlplätze befinden sich in der hintersten Reihe.\n\nIn beiden Gebäuden (Saal 1/2 und Saal 3) hat es jeweils eine rollstuhlgängige Toilette (zugänglich mit Eurokey)."
+      "firstText": "### Kontakt\n\n[mail@neugasskino.ch](mailto:mail@neugasskino.ch)\n\nReservierungen Rollstuhlplätzen: während den Kinoöffnungszeiten unter dieser Rufnummer: +4144 444 22 00\n\n### **Barrierefreiheit**\n\nDer Kassen- und Barbereich vom Riffraff ist über eine Rampe rollstuhlgängig.\n\nDer Saal 1 ist über eine Rampe zugänglich. Die zwei Rollstuhlplätze befinden sich in der ersten Reihe. Die Rollstühle können auch im Seitengang platziert werden.\n\nDer Saal 2 ist barrierefrei zugänglich. Der Rollstuhlplatz befindet sich in der ersten Reihe. Die Sicht ist stark eingeschränkt.\n\nDer Saal 3 ist über den Hauseingang (Schlüssel an der Kinokasse verlangen) und Lift (Eurokey) erreichbar. Die zwei Rollstuhlplätze befinden sich in der hintersten Reihe.\n\nIn beiden Gebäuden (Saal 1/2 und Saal 3) hat es jeweils eine rollstuhlgängige Toilette (zugänglich mit Eurokey).",
+      "secondText": "### **Barrierefreiheit**\n\nDas Kino Xenix kann mit dem Rollstuhl über den Haupteingang via Bar erreicht werden. Die Toilette befindet sich in der Bar. \\\nDer Kinosaal bietet zwei Plätze für Personen mit Rollstuhl. Voranmeldung via [kasse@xenix.ch](<>) oder 044 242 04 11 empfohlen.\n\nParkplatz: Für gehbehinderte Fahrzeuglenker:innen gibt es die Möglichkeit, auf dem Kanzleiareal zu parkieren.\\\nBitte vorab anmelden: [admin@xenix.ch](<>) oder 044 242 04 11"
     },
     {
       "deactivated": false,
@@ -23,6 +24,11 @@
       "title": "Schauspielhaus",
       "anchorTitle": "schauspielhaus",
       "firstText": "### **Barrierefreiheit**\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis ligula velit. Donec non ornare augue. Nunc fringilla aliquam orci a ornare. Curabitur tristique accumsan ipsum nec ornare. Duis non lobortis lectus. Curabitur blandit felis quis convallis commodo. Aliquam erat volutpat.\n\n### E﻿inlass\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis ligula velit. Donec non ornare augue. Nunc fringilla aliquam orci a ornare. Curabitur tristique accumsan ipsum nec ornare. Duis non lobortis lectus. Curabitur blandit felis quis convallis commodo. Aliquam erat volutpat.\n\n### L﻿icht\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis ligula velit. Donec non ornare augue. Nunc fringilla aliquam orci a ornare. Curabitur tristique accumsan ipsum nec ornare. Duis non lobortis lectus. Curabitur blandit felis quis convallis commodo. Aliquam erat volutpat."
+    },
+    {
+      "deactivated": false,
+      "splittedLayout": false,
+      "title": "Xenix"
     }
   ],
   "headerCentered": true,
