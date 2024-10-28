@@ -1,0 +1,24 @@
+{
+  "timetable": [
+    {
+      "time": "17:00",
+      "title": "open"
+    },
+    {
+      "time": "21:00",
+      "title": "closed"
+    }
+  ],
+  "eventdate": "2024-11-29T17:00:00.000Z",
+  "eventlocationlink": "http://www.gessnerallee.ch",
+  "layout": "event",
+  "hideReducedPrice": false,
+  "eventlocation": "Gessnerallee",
+  "deactivated": false,
+  "desc": "Der Stall 6 der Gessneralle wird während des Festivals von uns zum horny Porny Hofladen umfunktioniert. Es gibt einen Markt mit Ständen, an denen kinky Objekte zum Stylen für die Party oder als Weihnachtsgeschenk für Freund:innen und Liebhaber:innen erworben werden können. Besucher:innen können sich zu Themen rund um Körper, Sex und Beziehungen beraten lassen, sich Tarot-Karten legen lassen – oder wie wär's mit einem Gesichts-Harness?",
+  "eventlocationcomplement": "Stall 6",
+  "ticketsLinkTitle": "freier Eintritt",
+  "subtitle": "kinky toys, accessoires and Beratung",
+  "title": "Porny Hofladen",
+  "specialstate": ""
+}
