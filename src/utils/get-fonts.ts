@@ -10,7 +10,6 @@ export const fontTitle = localFont({
   src: './../fonts/NaNHolo_TRIAL-ExtraBold.ttf',
   variable: '--font-title',
 });
-
 // export const fontTitle = localFont({
 //   src: './../fonts/NaNFiascoTRIAL-Black.ttf',
 //   variable: '--font-title',
