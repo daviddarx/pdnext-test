@@ -30,7 +30,7 @@
   @apply relative inline-block w-[4em] shrink-0 text-base -top-[0.15em];
 
   @screen 2xl {
-    @apply -top-[0.1em];
+    @apply top-[0.15em];
   }
 }
 
