@@ -35,6 +35,10 @@
   @screen max-xl {
     @apply tag--sm;
   }
+
+  @screen max-sm {
+    @apply !block w-fit mt-[0.75em];
+  }
 }
 
 .event-detail__subtitle {
