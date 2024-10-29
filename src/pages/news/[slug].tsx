@@ -126,7 +126,6 @@ export const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
 
   return {
     props: props,
-    revalidate: 10,
   };
 };
 
