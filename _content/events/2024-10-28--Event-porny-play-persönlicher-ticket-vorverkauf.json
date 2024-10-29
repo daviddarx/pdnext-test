@@ -2,11 +2,11 @@
   "timetable": [
     {
       "time": "19:00",
-      "title": "Beginn"
+      "title": "Beginn Vorverkauf PLAY"
     },
     {
       "time": "21:00",
-      "title": "Ende"
+      "title": "Ende Vorverkauf PLAY"
     }
   ],
   "eventdate": "2024-11-06T19:00:00.000Z",
