@@ -9,7 +9,7 @@
 }
 
 .program-page__list {
-  @apply relative pt-[50vh] backdrop-blurred-faded;
+  @apply relative pt-[50vh] backdrop-blurred-faded xl:bg-white/10;
 
   &::after {
     @apply absolute w-full top-0 left-0 z-10;

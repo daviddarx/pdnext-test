@@ -27,11 +27,7 @@
 }
 
 .event__hour {
-  @apply relative inline-block w-[4em] shrink-0 text-base -top-[0.15em];
-
-  @screen 2xl {
-    @apply top-[0.15em];
-  }
+  @apply relative inline-block w-[4em] shrink-0 text-base lg:top-[0.05em] xl:top-[0.15em] 2xl:top-[0.2em];
 }
 
 .event__title {
