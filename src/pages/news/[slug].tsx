@@ -111,12 +111,6 @@ export const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
   const nextNewsItem = news[(newsIndex - 1 + news.length) % news.length];
   const commonPageData = await fetchCommonPageContent();
 
-  console.log(
-    'slugs',
-    news.map((item) => item.slug),
-  );
-  console.log('newsIndex', newsIndex);
-
   const props: PageProps = {
     news: newsItem,
     prevNews: prevNewsItem,
