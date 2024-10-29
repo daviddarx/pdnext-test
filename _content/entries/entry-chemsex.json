@@ -1,0 +1,20 @@
+{
+  "typeComplement": "Dokumentation",
+  "forceBlank": false,
+  "entryType": "Film",
+  "deactivated": false,
+  "desc": "Daniel Porto\\\nBrasilien, 2024, 7 Min, Portugiesisch/Englische Untertitel\n\nEine Gruppe schwuler Männer verabredet sich über eine Dating-App zu einem zwanglosen Treffen an einer Chemsex-Party, wo Drogen die sexuellen Erfahrungen intensivieren sollen. CHEMSEX beleuchtet sowohl den Reiz und das Gefühl von Befreiung in diesen Momenten als auch die Leere und Einsamkeit, die das Leben schwuler Männer prägen können, und offenbart dabei die emotionalen Tiefen menschlicher Begegnungen.",
+  "videourl": "",
+  "title": "Chemsex",
+  "image": "/images/uploads/chemsex_1.jpg",
+  "uuid": "chemsex",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/chemsex_2.jpg"
+    },
+    {
+      "image": "/images/uploads/chemsex_3.jpg"
+    }
+  ]
+}
