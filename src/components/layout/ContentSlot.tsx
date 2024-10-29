@@ -42,7 +42,13 @@ const ContentSlot: React.FC<Props> = ({ slot, className }) => {
       <div className='content-slot__content'>
         <div></div>
         {!slot.hiddenTitle && (
-          <h2 className='content-slot__title content-page__column'>{slot.title}</h2>
+          <h2
+            className={classNames('content-slot__title', {
+              'content-page__column': !splittedLayout,
+            })}
+          >
+            {slot.title}
+          </h2>
         )}
 
         {slot.firstText && slot.firstText !== '' && (
