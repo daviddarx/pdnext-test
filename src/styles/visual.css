@@ -1,6 +1,7 @@
 .visual {
   @apply w-full h-full pointer-events-none opacity-50 xl:opacity-70 fixed top-0 left-0 -z-10 transition-opacity duration-300;
   @apply after:w-full after:absolute after:h-full after:top-0 after:left-0 after:bg-black after:z-0 after:opacity-0 after:transition-opacity after:duration-300;
+  @apply mix-blend-multiply;
 }
 
 .visual--fadedout {
