@@ -35,7 +35,7 @@
 }
 
 .bottom-nav__link {
-  @apply inline-block h3 font-semibold text-link;
+  @apply inline-block h4 font-semibold text-link truncate w-full sm:h3;
 
   .bottom-nav__title & {
     @apply subline;
