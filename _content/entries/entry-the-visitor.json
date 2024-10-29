@@ -1,4 +1,5 @@
 {
+  "typeComplement": "Fiktion/Porn",
   "forceBlank": false,
   "entryType": "Film",
   "deactivated": false,
@@ -7,7 +8,7 @@
   "title": "The Visitor",
   "image": "/images/uploads/the_visitor_02.jpg",
   "uuid": "the-visitor",
-  "warning": "Thematisiert Rassismus, Diskrimierung und Gewalt\\\nBeinhaltet Stroboskopeffekte",
+  "warning": "Hinweis: Thematisiert Rassismus, Diskrimierung und Gewalt.\\\nBeinhaltet Stroboskopeffekte",
   "additionalImages": [
     {
       "image": "/images/uploads/the_visitor_01.jpg"
