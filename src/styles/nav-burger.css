@@ -10,6 +10,10 @@
   --tw-translate-y: var(--height-topbar);
   --tw-translate-z: 0;
   will-change: transform;
+
+  @screen max-xl {
+    @apply border border-white;
+  }
 }
 
 .nav-burger--dark {

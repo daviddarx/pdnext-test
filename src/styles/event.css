@@ -27,7 +27,8 @@
 }
 
 .event__hour {
-  @apply relative inline-block w-[4em] shrink-0 text-base lg:top-[0.05em] xl:top-[0.15em] 2xl:top-[0.2em];
+  @apply relative inline-block w-[4em] shrink-0 text-base;
+  @apply top-[0.05em] xl:top-[0.15em] 2xl:top-[0.2em];
 }
 
 .event__title {
@@ -43,7 +44,11 @@
 }
 
 .event__special-state {
-  @apply tag tag--sm relative -top-[0.2em] lg:-top-[0.2em] xl:-top-[0.25em] !bg-transparent;
+  @apply tag tag--sm relative -top-[0.2em] lg:-top-[0.2em] xl:-top-[0.35em] !bg-transparent;
+
+  @screen max-sm {
+    @apply !block w-fit mt-[0.75em];
+  }
 }
 
 .event__btn {
