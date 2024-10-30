@@ -1,5 +1,5 @@
 .save-the-date {
-  @apply py-2 text-xs font-semibold uppercase leading-tight;
+  @apply py-2 text-xs uppercase leading-tight;
 
   @screen md {
     @apply space-x-4 py-0;

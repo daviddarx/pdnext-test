@@ -30,7 +30,7 @@
 }
 
 .main-nav__link--secondary {
-  @apply h5 font-semibold pb-[0.5em] lg:pb-[0.5em] xl:pb-[0.65em] pr-[1em];
+  @apply h5 pb-[0.5em] lg:pb-[0.5em] xl:pb-[0.65em] pr-[1em];
 }
 
 .main-nav__link--active {
@@ -38,7 +38,7 @@
 }
 
 .main-nav__link-text {
-  @apply block h2 font-semibold;
+  @apply block h2;
 }
 
 .main-nav__link-detail {

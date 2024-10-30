@@ -162,7 +162,7 @@
 }
 
 .news-nav__title {
-  @apply pt-[0.75em] font-semibold w-full line-clamp-2 max-w-[30ch] h5 text-center;
+  @apply pt-[0.75em] w-full line-clamp-2 max-w-[30ch] h5 text-center;
 
   @screen xl {
     @apply h3;

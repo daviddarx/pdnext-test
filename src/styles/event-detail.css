@@ -171,6 +171,6 @@
   @apply hidden;
 
   @screen xl {
-    @apply block pt-[0.75em] h5 font-semibold w-full line-clamp-2 text-center max-w-[30ch];
+    @apply block pt-[0.75em] h5 w-full line-clamp-2 text-center max-w-[30ch];
   }
 }

@@ -5,7 +5,7 @@
   h4,
   h5,
   h6 {
-    @apply font-semibold;
+    @apply font-normal;
   }
 
   h1,
@@ -86,7 +86,7 @@
   }
 
   .subline {
-    @apply text-base font-semibold tracking-tag uppercase;
+    @apply text-base font-normal tracking-tag uppercase;
 
     font-family: var(--font-title);
   }
@@ -101,7 +101,7 @@
 
   .tag {
     @apply inline-block px-[0.9em] pt-[0.55em] pb-[0.5em];
-    @apply text-base font-semibold leading-none uppercase tracking-tag;
+    @apply text-base font-normal leading-none uppercase tracking-tag;
     @apply bg-white rounded-full border themed-border;
     @apply transition-colors duration-200 ease-out;
 
@@ -214,11 +214,6 @@
 
     & > *:last-child {
       @apply mb-0;
-    }
-
-    strong {
-      font-family: var(--font-title);
-      @apply font-semibold;
     }
   }
 
