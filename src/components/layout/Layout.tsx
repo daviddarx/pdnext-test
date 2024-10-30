@@ -9,7 +9,7 @@ import Header from '@/components/layout/Header';
 import BottomNav from '@/components/navs/BottomNav';
 import SupportUs from '@/components/layout/SupportUs';
 import Partners from '@/components/layout/Partners';
-import Newsletter from '@/components/layout/Newsletter';
+// import Newsletter from '@/components/layout/Newsletter';
 import Footer from '@/components/layout/Footer';
 
 const motionVariants = {
@@ -58,7 +58,7 @@ const Layout: React.FC<Props> = ({ children, isDark = false, commonPageData }) =
       <SupportUs data={commonPageData.supportUsData} />
       <BottomNav />
       <Partners data={commonPageData.partnersData} />
-      <Newsletter />
+      {/* <Newsletter /> */}
       <Footer />
     </motion.div>
   );
