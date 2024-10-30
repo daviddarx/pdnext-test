@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: daviddarx/pdnext-test # Path to your GitHub repository
-  branch: '2024'
+  branch: 'main'
 
 local_backend: true # For local admin, remove for production
 
