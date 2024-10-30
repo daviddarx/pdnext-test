@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
+import { useSelector } from 'react-redux';
 import classNames from 'classnames';
 
+import { uiStateType } from '@/store/ui-slice';
 import eases from '@/utils/eases';
 
 const motionVariants = {
@@ -28,10 +30,13 @@ type Props = {
 };
 
 const BackgroundOverlay: React.FC<Props> = ({ dark, onClick }) => {
+  const isDark = useSelector((state: uiStateType) => state.ui.isDark);
+
   return (
     <motion.button
       className={classNames('background-overlay', {
         'background-overlay__dark': dark,
+        'background-overlay__black': isDark,
       })}
       initial='initial'
       animate='animate'

@@ -1,0 +1,18 @@
+{
+  "typeComplement": "Talk",
+  "forceBlank": false,
+  "entryType": "Performance",
+  "deactivated": false,
+  "desc": "**Dr. Reyhan Şahin aka Lady Bitch Ray** ist als Wissenschaftlerin, politische Aktivistin, Buchautorin, Performance-Künstlerin, Rapperin, Modedesignerin, Journalistin und Bildungsreferentin tätig. Mit ihren musikalischen Projekten als Lady Bitch Ray zählt sie zu den (queer)feministischen Pionier:innen des Deutschrap. \n\n**Edwin Arsenio Ramírez** (they/them) ist Stand Up Comedian und Performance-Künstler:in aus Zürich. They engagieren sich aktivistisch wie auch künstlerisch in der Kulturlandschaft in Zürich und der Deutschschweiz. Edwin ist Gründer:in und Ko-Leiter:in des Theaterkollektivs Criptonite bei dem they crip-queere Veranstaltungen für ein crippes Publikum kreiert.\n\n**Klamydia von Karma**, if you have a Bad Karma here is Klamydia! Die französisch-tunesische Drag-Creature, geboren in der Underground-Szene Schwedens und jetzt in Zürich aktiv, ist eine Drag-Künstlerin, die mutig Geschlechternormen durch ihre Performances und sexuelle Absurdität herausfordert. Nimm es oder lass es, Klamydia wird immer da sein!",
+  "title": "Dr. phil. Reyan Sahin aka Lady Bitch Ray, Edwin Ramirez & Klamydia von Karma",
+  "image": "/images/uploads/ray_01.jpg",
+  "uuid": "panel-1",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/edwin_01.jpg"
+    },
+    {
+      "image": "/images/uploads/klamydia_01.jpg"
+    }
+  ]
+}

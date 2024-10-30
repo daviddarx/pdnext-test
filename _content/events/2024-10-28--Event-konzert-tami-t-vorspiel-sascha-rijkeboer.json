@@ -1,0 +1,28 @@
+{
+  "timetable": [
+    {
+      "time": "20:30",
+      "title": "My Venus is in Cancer"
+    },
+    {
+      "time": "21:15",
+      "title": "Konzert von Tami T"
+    }
+  ],
+  "eventdate": "2024-11-28T20:30:00.000Z",
+  "eventlocationlink": "https://gessnerallee.ch/en/events/porny-heart-core",
+  "price": "",
+  "layout": "event",
+  "hideReducedPrice": false,
+  "eventlocation": "Gesserallee",
+  "entries": [
+    "tami_t",
+    "Sascha"
+  ],
+  "deactivated": false,
+  "desc": "Unser Gastspiel an der Gessnerallee beginnt mit zwei bekannten Gesichtern. Tami T präsentiert uns their neusten Song und Sascha liest aus their neuem Lyrikband.",
+  "eventlocationcomplement": "Stall 6",
+  "ticketsLinkTitle": "Tickets hier ab 13.11.",
+  "subtitle": "Konzert & Liebesgedichte",
+  "title": "Konzert Tami T & Vorspiel von Sascha Rijkeboer"
+}

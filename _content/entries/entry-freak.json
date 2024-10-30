@@ -1,0 +1,17 @@
+{
+  "typeComplement": "Fiktion",
+  "forceBlank": false,
+  "entryType": "Film",
+  "deactivated": false,
+  "desc": "Barnett Claire\\\n*USA, 2024, 13 Min, Englisch/Englische Untertitel*\n\nAm Vorabend ihres 26. Geburtstags wird Lainey mit einer Frage konfrontiert, die die Grenzen ihrer Beziehung auf die Probe stellt: Was ist deine tiefste, dunkelste Fantasie?",
+  "videourl": "",
+  "title": "Freak",
+  "image": "/images/uploads/freak_01.jpg",
+  "uuid": "freak",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/freak_02.jpg"
+    }
+  ]
+}

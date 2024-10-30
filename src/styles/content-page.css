@@ -9,30 +9,16 @@
 }
 
 .content-page__nav {
-  @apply w-full flex flex-wrap justify-center px-gutter py-gutter-1/2;
-  @apply text-center bg-black text-white;
-
-  @screen lg {
-    @apply py-0;
-  }
+  @apply w-full flex flex-wrap gap-x-gutter gap-y-gutter-1/2 px-[--content-page-px-col] py-gutter;
+  @apply text-center themed-border border-y backdrop-blurred;
 
   .dark & {
-    @apply border-y border-pink;
+    @apply bg-black text-white items-center justify-center px-gutter;
   }
 }
 
 .content-page__nav-link {
-  @apply block py-[0.4em] px-[0.4em] h5 font-semibold align-text-v text-link;
-
-  @media (hover: hover) {
-    &:hover {
-      @apply text-pink;
-    }
-  }
-
-  @screen lg {
-    @apply py-gutter px-gutter-1/2;
-  }
+  @apply block h5 font-semibold text-link;
 }
 
 .content-page__slots {
@@ -60,7 +46,7 @@
   @apply grid gap-gutter-2 px-gutter;
 
   @screen lg {
-    @apply grid-cols-2  px-0;
+    @apply grid-cols-2 px-0;
 
     & .content-slot__content {
       @apply pr-gutter-2;
@@ -82,6 +68,10 @@
 
 .content-slot__image {
   @apply mt-gutter-2 w-full;
+
+  & img {
+    width: auto !important;
+  }
 }
 
 .content-slot__definition-list {
@@ -128,11 +118,7 @@
 }
 
 .definition-list__title {
-  @apply h3 border-b border-current pb-[0.4em] mb-gutter;
-
-  .dark & {
-    @apply border-pink;
-  }
+  @apply h3 border-b themed-border pb-[0.4em] mb-gutter;
 }
 
 .definition-list__dl {

@@ -11,16 +11,21 @@ import classNames from 'classnames';
 
 type Props = {
   slot: ContentSlot;
+  className?: string;
 };
 
-const ContentSlot: React.FC<Props> = ({ slot }) => {
+const ContentSlot: React.FC<Props> = ({ slot, className }) => {
   const splittedLayout = slot.splittedLayout && slot.image;
 
   return (
     <article
-      className={classNames('content-slot', {
-        'content-slot--splitted': slot.splittedLayout && slot.image,
-      })}
+      className={classNames(
+        'content-slot',
+        {
+          'content-slot--splitted': slot.splittedLayout && slot.image,
+        },
+        className,
+      )}
       id={getCleanedAnchorID(slot.anchorTitle)}
     >
       {slot.splittedLayout && slot.image && (
@@ -37,7 +42,13 @@ const ContentSlot: React.FC<Props> = ({ slot }) => {
       <div className='content-slot__content'>
         <div></div>
         {!slot.hiddenTitle && (
-          <h2 className='content-slot__title content-page__column'>{slot.title}</h2>
+          <h2
+            className={classNames('content-slot__title', {
+              'content-page__column': !splittedLayout,
+            })}
+          >
+            {slot.title}
+          </h2>
         )}
 
         {slot.firstText && slot.firstText !== '' && (

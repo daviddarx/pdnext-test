@@ -1,17 +1,15 @@
-import { ReactNode, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import classNames from 'classnames';
 
 import eases from '@/utils/eases';
 import { CommonPageData } from '@/utils/fetch-common-page-content';
-import { uiActions } from '@/store/';
 
 import Header from '@/components/layout/Header';
 import BottomNav from '@/components/navs/BottomNav';
 import SupportUs from '@/components/layout/SupportUs';
 import Partners from '@/components/layout/Partners';
-import Newsletter from '@/components/layout/Newsletter';
+// import Newsletter from '@/components/layout/Newsletter';
 import Footer from '@/components/layout/Footer';
 
 const motionVariants = {
@@ -45,12 +43,6 @@ type Props = {
 };
 
 const Layout: React.FC<Props> = ({ children, isDark = false, commonPageData }) => {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(uiActions.closeSupportUs());
-  }, [dispatch]);
-
   return (
     <motion.div
       initial='initial'
@@ -66,7 +58,7 @@ const Layout: React.FC<Props> = ({ children, isDark = false, commonPageData }) =
       <SupportUs data={commonPageData.supportUsData} />
       <BottomNav />
       <Partners data={commonPageData.partnersData} />
-      <Newsletter />
+      {/* <Newsletter /> */}
       <Footer />
     </motion.div>
   );

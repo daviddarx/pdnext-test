@@ -5,6 +5,7 @@ import { NewsContent } from '@/utils/fetch-news-content';
 
 import PageHeader from '@/components/layout/PageHeader';
 import LoadedImage from '@/components/ui/LoadedImage';
+import ActiveLink from '@/components/ui/ActiveLink';
 
 type Props = {
   data: NewsContent;
@@ -19,8 +20,8 @@ const NewsPage: React.FC<Props> = ({ data }) => {
           <article key={item.date + item.title} className='news-item'>
             {item.image && (
               <div className='news-item__image'>
-                {item.link ? (
-                  <a href={item.link}>
+                {item.longDesc || item.link ? (
+                  <a href={item.longDesc ? item.detailPageLink : item.link}>
                     <div className='news-item__image-container'>
                       <LoadedImage
                         src={item.image}
@@ -47,16 +48,23 @@ const NewsPage: React.FC<Props> = ({ data }) => {
             <div className='news-item__content'>
               <div className='news-item__date'>{item.dateReadable}</div>
               <h2 className='news-item__title'>{item.title}</h2>
-              {item.desc && (
+              {item.shortDesc && (
                 <ReactMarkdown className='news-item__desc' remarkPlugins={[remarkGfm]}>
-                  {item.desc}
+                  {item.shortDesc}
                 </ReactMarkdown>
               )}
-              {item.link && (
-                <a href={item.link} className='news-item__link'>
-                  {item.linkTitle ? item.linkTitle : 'Link'}
-                </a>
-              )}
+              <div className='news-item__links'>
+                {item.longDesc && (
+                  <ActiveLink href={item.detailPageLink} className='news-item__link'>
+                    {item.detailPageLinkTitle ? item.detailPageLinkTitle : 'Mehr erfahren'}
+                  </ActiveLink>
+                )}
+                {item.link && (
+                  <a href={item.link} className='news-item__link'>
+                    {item.linkTitle ? item.linkTitle : 'Link'}
+                  </a>
+                )}
+              </div>
             </div>
           </article>
         ))}

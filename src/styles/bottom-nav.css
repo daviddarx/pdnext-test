@@ -1,5 +1,5 @@
 .bottom-nav {
-  @apply bg-white border-b border-current;
+  @apply bg-white border-b themed-border;
 
   @screen lg {
     @apply grid grid-cols-2;
@@ -14,7 +14,7 @@
   @apply p-gutter;
 
   &:first-of-type {
-    @apply border-current border-b;
+    @apply border-b themed-border;
 
     @screen lg {
       @apply border-b-0 border-r;
@@ -35,7 +35,7 @@
 }
 
 .bottom-nav__link {
-  @apply inline-block h3 font-semibold text-link;
+  @apply inline-block h4 font-semibold text-link truncate w-full sm:h3;
 
   .bottom-nav__title & {
     @apply subline;

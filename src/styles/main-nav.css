@@ -30,11 +30,11 @@
 }
 
 .main-nav__link--secondary {
-  @apply h5 font-semibold pb-[0.5em] lg:pb-[0.5em] xl:pb-[0.65em];
+  @apply h5 font-semibold pb-[0.5em] lg:pb-[0.5em] xl:pb-[0.65em] pr-[1em];
 }
 
 .main-nav__link--active {
-  @apply !text-pink opacity-50;
+  @apply !text-white opacity-50;
 }
 
 .main-nav__link-text {

@@ -76,7 +76,7 @@
   }
 
   .text-link {
-    @apply transition-[opacity] duration-300 ease-out-quart;
+    @apply transition-[opacity] duration-300 ease-out-quart font-semibold;
 
     @media (hover: hover) {
       &:hover {
@@ -100,15 +100,15 @@
   }
 
   .tag {
-    @apply inline-block px-[0.75em] pt-[0.5em] pb-[0.25em];
+    @apply inline-block px-[0.9em] pt-[0.55em] pb-[0.5em];
     @apply text-base font-semibold leading-none uppercase tracking-tag;
-    @apply bg-white rounded-full border border-black;
+    @apply bg-white rounded-full border themed-border;
     @apply transition-colors duration-200 ease-out;
 
     font-family: var(--font-title);
 
     .dark & {
-      @apply bg-black text-white border-white;
+      @apply bg-black text-white transparent-white-border;
     }
   }
 
@@ -150,27 +150,19 @@
   }
 
   .tag--sm {
-    @apply text-xs px-[0.4em] pt-[0.3em] pb-[0.05em];
-
-    .ios & {
-      @apply px-[0.8em] pt-[0.4em];
-    }
+    @apply text-xs px-[0.8em] py-[0.3em];
 
     @screen lg {
-      @apply px-[0.6em] pt-[0.4em] pb-[0.15em];
+      @apply px-[0.8em] pt-[0.4em] pb-[0.35em];
     }
-  }
-
-  .align-text-v {
-    @apply translate-y-[0.1em];
   }
 
   .align-title-font-v {
     @apply translate-y-[0.025em];
   }
 
-  .pink-box {
-    @apply bg-pink py-[0.75em] px-[1em] rounded-[0.5em];
+  .white-box {
+    @apply bg-black/10 py-[0.75em] px-[1em] rounded-[0.5em];
   }
 
   .text-content {
@@ -187,7 +179,8 @@
       @apply mb-[1em] max-w-[45em];
     }
 
-    p + h2 {
+    p + h2,
+    h3 {
       @apply mt-[2em];
     }
 
@@ -221,6 +214,11 @@
 
     & > *:last-child {
       @apply mb-0;
+    }
+
+    strong {
+      font-family: var(--font-title);
+      @apply font-semibold;
     }
   }
 
@@ -299,14 +297,14 @@
   }
 
   .dark {
-    @apply bg-black text-pink;
+    @apply bg-black text-white;
 
     .text-link {
       @apply text-white;
 
       @media (hover: hover) {
         &:hover {
-          @apply text-pink;
+          @apply text-white;
         }
       }
     }
@@ -325,10 +323,48 @@
     @apply bg-transparent;
   }
 
+  .transparent-white-border {
+    @apply border-white/40;
+  }
+
+  .themed-border {
+    @apply border-black;
+
+    .dark & {
+      @apply transparent-white-border;
+    }
+  }
+
+  .backdrop-blurred {
+    @apply backdrop-blur-sm lg:backdrop-blur-xl;
+  }
+
+  /*
+    Fade-in of backdrop after mounted as it's buggy while
+    page transition (animated opacity) - for elements visible
+    above foil on page load
+  */
+  .backdrop-blurred-faded {
+    &::before {
+      @apply absolute w-full h-full top-0 left-0 backdrop-blurred;
+      @apply transition-opacity duration-500 delay-500 opacity-0;
+
+      content: '';
+      z-index: -2;
+    }
+
+    .mounted &,
+    &.mounted {
+      &::before {
+        @apply opacity-100;
+      }
+    }
+  }
+
   .scrollable {
     @apply overflow-y-auto overscroll-contain;
 
-    --sb-track-color: theme('colors.pinkScrollable');
+    --sb-track-color: theme('colors.whiteScrollable');
     --sb-thumb-color: theme('colors.black');
     --sb-thumb-width: 1px;
     --sb-track-padding: 5px;
@@ -353,7 +389,7 @@
 
     .dark & {
       --sb-track-color: theme('colors.black');
-      --sb-thumb-color: theme('colors.pinkScrollable');
+      --sb-thumb-color: theme('colors.whiteScrollable');
     }
   }
 }
@@ -385,7 +421,7 @@
     --h: calc(var(--size-burger) - 2px);
 
     @apply flex items-center justify-center;
-    @apply text-current border border-current rounded-full;
+    @apply text-current border themed-border rounded-full;
     @apply transition-all duration-300 ease-out-quart;
 
     width: var(--w);
@@ -447,7 +483,7 @@
     --s-icon: calc(var(--s-button) * 0.35);
 
     @apply relative inline-block w-[--s-button] h-[--s-button];
-    @apply text-0 bg-pink rounded-full transition-colors ease-out duration-150;
+    @apply text-0 bg-white rounded-full transition-colors ease-out duration-150;
 
     &::after {
       @apply absolute top-1/2 left-1/2;
@@ -464,7 +500,7 @@
       background-color: theme('colors.black');
 
       &::after {
-        border-color: transparent transparent transparent theme('colors.pink');
+        border-color: transparent transparent transparent theme('colors.white');
       }
     }
   }
@@ -486,7 +522,7 @@
   }
 
   .loaded-image--transparent {
-    @apply bg-transparent;
+    @apply !bg-transparent;
   }
 
   .loaded-image--loaded {
@@ -517,12 +553,16 @@
   }
 
   .background-overlay {
-    @apply fixed top-0 left-0 w-screen h-screen z-30;
-    @apply bg-pink/75 cursor-pointer;
+    @apply fixed top-0 left-0 w-screen h-screen z-30 backdrop-blur-sm;
+    @apply bg-white/75 cursor-pointer;
   }
 
   .background-overlay__dark {
     @apply bg-black/90;
+  }
+
+  .background-overlay__black {
+    background-color: rgba(0, 0, 0, 0.65);
   }
 
   [type='submit'] {

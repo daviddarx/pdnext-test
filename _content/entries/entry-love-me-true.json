@@ -1,0 +1,17 @@
+{
+  "typeComplement": "Animation",
+  "forceBlank": false,
+  "entryType": "Film",
+  "deactivated": false,
+  "desc": "Inés Sedan\\\n*Frankreich, 2023, 7 Min, Französisch/Englische Untertitel*\\\n \\\nLaurence sucht verzweifelt nach Liebe. Auf Anraten einer Freundin meldet sie sich auf Online-Dating-Seiten an, um ihre Seelenverwandtschaft zu finden. Sie wird süchtig nach ihrem Handy und einem toxischen Mann.",
+  "videourl": "",
+  "title": "Love Me True",
+  "image": "/images/uploads/love_me_true_01.jpg",
+  "uuid": "love-me-true",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/love_me_true_02.jpg"
+    }
+  ]
+}

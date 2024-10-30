@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 
-import { routes, findRouteBySlug, Route } from '@/routes/routes';
+import { routes, findRouteBySlug } from '@/routes/routes';
 import { fetchProgramContent, ProgramContent } from '@/utils/fetch-program-content';
 import { fetchOnsContent, OnsContent } from '@/utils/fetch-ons-content';
 import { fetchNewsContent, NewsContent } from '@/utils/fetch-news-content';
@@ -62,7 +62,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
   const paths = slugs.map((slug: string) => ({ params: { slug } }));
 
-  return { paths, fallback: false };
+  return { paths, fallback: 'blocking' };
 };
 
 export const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {

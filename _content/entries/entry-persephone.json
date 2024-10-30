@@ -1,0 +1,19 @@
+{
+  "forceBlank": false,
+  "entryType": "Film",
+  "deactivated": false,
+  "desc": "Papi Femme\\\n*USA, 2022, 7 Min, Englisch*\n\nGarnet Lake verliert sich in einer mythischen Ode an Stiefel und an diejenige, die sie lieben. In einem Lederstiefel-Reigen umkreisen Bobbi B. Good, Chip Matsuda und Empress Wu ihre Beute und ziehen Garnet Lake in ihren Bann. Ein surrealer Liebesbrief an Stiefel, Schmerz und Machtspiele.",
+  "videourl": "",
+  "title": "Persephone",
+  "image": "/images/uploads/persephone_05.jpg.jpg",
+  "uuid": "persephone",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/persephone_02.jpg.jpg"
+    },
+    {
+      "image": "/images/uploads/persephone_03.jpg.jpg"
+    }
+  ]
+}

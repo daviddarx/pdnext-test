@@ -11,7 +11,7 @@
 .special-announcement__title {
   @apply hidden;
 
-  @screen 2xl {
+  @screen 3xl {
     @apply inline-block mr-4;
   }
 }

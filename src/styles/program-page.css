@@ -1,12 +1,25 @@
 .program-page {
-  @apply mt-[50vh];
-
   @screen xl {
-    @apply grid grid-cols-2 mt-0;
+    @apply grid grid-cols-2;
+
+    &::after {
+      background-image: none;
+    }
   }
 }
 
 .program-page__list {
+  @apply relative pt-[50vh] backdrop-blurred-faded xl:bg-white/10;
+
+  &::after {
+    @apply absolute w-full top-0 left-0 z-10;
+
+    content: '';
+    background-image: linear-gradient(to bottom right, theme('colors.white') 10%, transparent 40%);
+    aspect-ratio: 1 / 1;
+    z-index: -1;
+  }
+
   @screen xl {
     @apply border-r border-black;
 
@@ -15,7 +28,7 @@
 }
 
 .program-page__header {
-  @apply p-gutter pt-gutter-2 mb-gutter-1/2 text-center;
+  @apply p-gutter pt-gutter-2 mb-gutter-1/2 text-center relative z-10;
 }
 
 .program-page__subtitle {

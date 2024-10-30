@@ -75,5 +75,5 @@
 }
 
 .entry__warning {
-  @apply mt-gutter pink-box;
+  @apply mt-gutter white-box;
 }

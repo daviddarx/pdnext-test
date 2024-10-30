@@ -11,7 +11,7 @@ const nextConfig = {
     return [
       {
         source: '/',
-        destination: '/one-night-stands',
+        destination: '/festival-program',
         permanent: false,
       },
     ];

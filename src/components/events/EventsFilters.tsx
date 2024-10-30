@@ -27,10 +27,10 @@ const motionVariants = {
 type Props = {
   typeFilters: string[];
   currentType: string;
-  onFilterByType: (type: string) => void;
+  onFilterByType: (_type: string) => void;
   dateFilters: string[];
   currentDate: string;
-  onFilterByDate: (date: string) => void;
+  onFilterByDate: (_date: string) => void;
 };
 
 const EventsFilters: React.FC<Props> = (props) => {

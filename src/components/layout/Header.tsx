@@ -1,5 +1,6 @@
-import React, { useRef, useEffect, useCallback } from 'react';
+import React, { useRef, useEffect, useCallback, useState } from 'react';
 import { useDispatch } from 'react-redux';
+import classNames from 'classnames';
 
 import { uiActions } from '@/store';
 import { CommonPageData } from '@/utils/fetch-common-page-content';
@@ -19,6 +20,7 @@ const Header: React.FC<Props> = ({ commonPageData }) => {
   const topbarHeight = useRef(0);
   const lastScrollTopRef = useRef(0);
   const topBarRef = useRef<HTMLDivElement>(null);
+  const [isMounted, setIsMounted] = useState(false);
 
   const handleScroll = useCallback(() => {
     const currentScrollTop = Math.max(window.scrollY, 0);
@@ -27,7 +29,7 @@ const Header: React.FC<Props> = ({ commonPageData }) => {
     // if (currentScrollTop > lastScrollTopRef.current) {
     //   dispatch(uiActions.setBurgerVisibility(false));
     // } else {
-    //   dispatch(uiActions.setBurgerVisibility(true));
+    //  dispatch(uiActions.setBurgerVisibility(true));
     // }
 
     if (currentScrollTop > 50) {
@@ -65,6 +67,8 @@ const Header: React.FC<Props> = ({ commonPageData }) => {
     handleResize();
     handleScroll();
 
+    setIsMounted(true);
+
     dispatch(uiActions.setBurgerVisibility(true));
 
     return () => {
@@ -74,7 +78,7 @@ const Header: React.FC<Props> = ({ commonPageData }) => {
   }, [handleResize, handleScroll, dispatch]);
 
   return (
-    <header className='header'>
+    <header className={classNames('header', { mounted: isMounted })}>
       {(!commonPageData.saveTheDateData.disable ||
         !commonPageData.specialAnnouncementData.disable) && (
         <div className='header__top-bar' ref={topBarRef}>
