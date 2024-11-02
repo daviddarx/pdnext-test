@@ -100,7 +100,7 @@
   }
 
   .tag {
-    @apply inline-block px-[0.9em] pt-[0.55em] pb-[0.5em];
+    @apply inline-block px-[0.9em] pt-[0.5em] pb-[0.5em];
     @apply text-base font-normal leading-none uppercase tracking-tag;
     @apply bg-white rounded-full border themed-border;
     @apply transition-colors duration-200 ease-out;
@@ -153,7 +153,7 @@
     @apply text-xs px-[0.8em] py-[0.3em];
 
     @screen lg {
-      @apply px-[0.8em] pt-[0.4em] pb-[0.35em];
+      @apply px-[0.8em] pt-[0.35em] pb-[0.35em];
     }
   }
 
