@@ -2,7 +2,7 @@ const Newsletter = () => {
   return (
     <section className='newsletter'>
       <form
-        action='https://pornydays.us10.list-manage.com/subscribe/post?u=9c7ed05ab79d08599fd3d90ee&amp;id=7073021cc1'
+        action='https://filmkunstfestival.us8.list-manage.com/subscribe?u=da1c3611e239cb857c6673aa3&id=3e4ca7fbe7'
         method='post'
         id='mc-embedded-subscribe-form'
         name='mc-embedded-subscribe-form'
