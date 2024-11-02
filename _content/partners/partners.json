@@ -42,6 +42,12 @@
     "label": "Finanzielle Unterstützung"
   },
   {
+    "title": "Pro Helvetia",
+    "link": "https://prohelvetia.ch/",
+    "logo": "LogoProHelvetia",
+    "label": "Finanzielle Unterstützung"
+  },
+  {
     "title": "Sugar Ponys",
     "link": "/support-us",
     "logo": "LogoSugarPonys",
@@ -76,6 +82,12 @@
     "title": "John Baker",
     "link": "https://johnbaker.ch/",
     "logo": "LogoJohnBaker",
+    "label": "Sachsponsoring"
+  },
+  {
+    "title": "Öpfelchasper",
+    "link": "https://oepfelchasper.ch/",
+    "logo": "LogoOepfelchasper",
     "label": "Sachsponsoring"
   },
   {
