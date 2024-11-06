@@ -2,20 +2,21 @@
   "timetable": [
     {
       "time": "19:00",
-      "title": "Beginn Vorverkauf PLAY"
+      "title": "Beginn Zoom"
     },
     {
       "time": "21:00",
-      "title": "Ende Vorverkauf PLAY"
+      "title": "Ende Zoom"
     }
   ],
-  "eventdate": "2024-11-06T19:00:00.000Z",
-  "eventlocationlink": "www.gesserallee.ch",
+  "eventdate": "2024-11-13T19:00:00.000Z",
+  "eventlocationlink": "www.zoom.com",
   "layout": "event",
   "hideReducedPrice": false,
-  "eventlocation": "Gessnerallee",
+  "eventlocation": "Zoom",
   "deactivated": false,
-  "desc": "**FREQUENTLY ASKED QUESTIONS - FAQ**\n\n**Wo kann ich Tickets für die PORNY PLAY am FR 29.11 kaufen?**\\\nTickets für die Porny Play gibt es ausschliesslich beim persönlichen Vorverkauf am 06.11. im Stall6 der Gessnerallee. \n\n**Was brauche ich dazu?**\\\nBring ein Ausweisdokument mit Foto und vollem Namen mit (ID, Führerschein, SwissPass, Legi,…) Falls du dich noch nicht mit dem Akronym RACK befasst hast, recherchiere es bitte im Voraus.\n\n**Was, wenn ich nicht zum VVK kommen kann?**\\\nJede Person, die zum persönlichen VVK am 6.11. anwesend ist, kann bis zu zwei Extratickets für Freund*innen und Partnerpersonen kaufen, also schick uns deine Liebsten! \n\n**Wie viele Tickets kann ich kaufen?**\\\nBeim persönlichen Vorverkauf am 6.11. kann jede anwesende Person bis zu drei Tickets kaufen.\n\n**Warum gibt es einen persönlichen Vorverkauf?**\\\nWir wünschen uns, einen Rahmen in dem wir unser Konzept, unsere Ideen und Vorstellungen, aber auch unsere Regeln in Ruhe mit euch teilen können, denn ihr seid der wichtigste Bestandteil eines hot, cute, funny, fantstic Porny Play. Wir finden es ausserdem cool, wenn ihr euch schonmal sehen könnt und während ihr wartet ein Schwätzchen haltet. Das persönliche Awareness Gespräch ermöglicht es uns auch, einen Raum für unsere Community zu halten in dem wir uns wohlfühlen und unter Gleichgesinnten freizügig sein können.\n\n**Sind Alkohol und Drogen verboten?**\\\nJa, die Porny Play ist ein „sober-Event“. Nüchternheit bedeutet für uns, ein Zustand in dem ihr legal und mit gutem Gewissen Auto fahren würdet. \n\n**Gibt es einen Dresscode?**\\\nJa! Wir haben euch eine Bühne gebaut und wir wünschen uns, dass ihr sie bespielt. Dazu gehört ein festliches, verspieltes, sexy, kuschliges, glitzerndes, kinky, lustiges – einfach besonderes – Gewand.",
-  "eventlocationcomplement": "Stall 6",
-  "title": "PORNY PLAY - persönlicher Ticket-Vorverkauf"
+  "desc": "**FREQUENTLY ASKED QUESTIONS - FAQ**\n\n**Wo kann ich Tickets für die PORNY PLAY am FR 29.11 kaufen?**\\\nTickets für die Porny Play gibt es ausschliesslich bei der Ticket-Anmeldung per Zoom am 13.11. um 19 Uhr.\n\n**Was brauche ich dazu?**\\\nBring ein Ausweisdokument mit Foto und vollem Namen mit (ID, Führerschein, SwissPass, Legi,…) Falls du dich noch nicht mit dem Akronym RACK befasst hast, recherchiere es bitte im Voraus.\n\n**Wie viele Tickets kann ich kaufen?**\\\nDu kannst dich nur für dich selbst anmelden, alle sollten am Zoom-Gespräch dabei sein.\n\n**Warum gibt es ein persönliches Gespräch?**\\\nWir wünschen uns, einen Rahmen in dem wir unser Konzept, unsere Ideen und Vorstellungen, aber auch unsere Regeln in Ruhe mit euch teilen können, denn ihr seid der wichtigste Bestandteil eines hot, cute, funny, fantstic Porny Play. Wir finden es ausserdem cool, wenn ihr euch schonmal sehen könnt und während ihr wartet ein Schwätzchen haltet. Das persönliche Awareness Gespräch ermöglicht es uns auch, einen Raum für unsere Community zu halten in dem wir uns wohlfühlen und unter Gleichgesinnten freizügig sein können.\n\n**Sind Alkohol und Drogen verboten?**\\\nJa, die Porny Play ist ein „sober-Event“. Nüchternheit bedeutet für uns, ein Zustand in dem ihr legal und mit gutem Gewissen Auto fahren würdet. \n\n**Gibt es einen Dresscode?**\\\nJa! Wir haben euch eine Bühne gebaut und wir wünschen uns, dass ihr sie bespielt. Dazu gehört ein festliches, verspieltes, sexy, kuschliges, glitzerndes, kinky, lustiges – einfach besonderes – Gewand.",
+  "eventlocationcomplement": "",
+  "ticketsLinkTitle": "Zoom Link hier ab 13. November",
+  "title": "PORNY PLAY - Ticket-Anmeldung per Zoom"
 }
