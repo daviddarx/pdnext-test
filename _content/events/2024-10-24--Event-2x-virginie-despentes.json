@@ -12,7 +12,7 @@
   "eventdate": "2024-11-30T20:00:56.060Z",
   "eventlocationlink": "https://www.xenix.ch/",
   "layout": "event",
-  "hideReducedPrice": false,
+  "hideReducedPrice": true,
   "eventlocation": "Kino Xenix",
   "entries": [
     "baise-moi",
