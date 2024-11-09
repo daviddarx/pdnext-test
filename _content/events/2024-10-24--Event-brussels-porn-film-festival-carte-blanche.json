@@ -3,7 +3,7 @@
   "eventdate": "2024-11-30T20:40:56.060Z",
   "eventlocationlink": "https://www.riffraff-houdini.ch/",
   "layout": "event",
-  "hideReducedPrice": false,
+  "hideReducedPrice": true,
   "eventlocation": "Riffraff 3",
   "entries": [
     "the-lesbian-alien",
