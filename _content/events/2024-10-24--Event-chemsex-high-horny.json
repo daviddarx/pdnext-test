@@ -4,7 +4,7 @@
   "eventdate": "2024-12-01T14:20:56.060Z",
   "eventlocationlink": "https://www.riffraff-houdini.ch/",
   "layout": "event",
-  "hideReducedPrice": false,
+  "hideReducedPrice": true,
   "eventlocation": "Riffraff 2",
   "entries": [
     "bad-witch",
