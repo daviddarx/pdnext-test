@@ -1,0 +1,20 @@
+{
+  "typeComplement": "NEW FILM/NEW ACT",
+  "forceBlank": false,
+  "entryType": "Film",
+  "deactivated": false,
+  "desc": "Agniia Galdanova\\\nUSA/Frankreich, 2023, 98 Min, Russisch/Englische Untertitel\n\nDie 21 jährige Jenna Marvin ist eine queere Künstlerin aus einer kleinen Stadt in Russland, die mit radikalen Performances auf den Strassen Moskaus Kunst und Aktivismus verbindet. Geboren in Magadan, einem kalten Aussenposten des sowjetischen Gulags, kreiert sie aus Schrott und Klebeband aussergewöhnliche, extrovertierte Kostüme, mit denen sie gegen die Regierung protestiert. Ihre düsteren und surrealen Performances, oft durchdrungen von Queerness, hinterfragen gesellschaftliche Vorstellungen von Schönheit und Freiheit und machen auf die Unterdrückung der LGBTQ+-Community aufmerksam. Die Regisseurin Agniia Galdanova hat Jenna bei ihren mutigen Performances in überwältigenden Bildern dokumentiert.",
+  "videourl": "ttps://www.youtube.com/watch?v=7UviaVo1QbI ",
+  "title": "Queendom",
+  "image": "/images/uploads/queendom_still_final_2023.jpg",
+  "uuid": "queendom",
+  "warning": "thematisiert Queerfeindlichkeit",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/queendom_still_3_feb10.jpg"
+    },
+    {
+      "image": "/images/uploads/queendom_still_2_feb10.jpg"
+    }
+  ]
+}
