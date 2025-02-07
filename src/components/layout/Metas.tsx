@@ -5,7 +5,7 @@ interface Props {
 }
 
 const Metas = ({ title }: Props) => {
-  const combinedTitle = `12. Porny Days / 27. Nov. - 1. Dez. 2024 / Zürich – ${title}`;
+  const combinedTitle = `13. Porny Days / 26. - 30. November 2025 / Zürich – ${title}`;
   const description =
     'Porny Days ist ein Film Kunst Festival in Zürich: Filme, Debatten, Performances &amp; Party – von Stummfilm bis Postporn.';
 

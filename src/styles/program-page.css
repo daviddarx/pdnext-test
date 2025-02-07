@@ -27,6 +27,12 @@
   }
 }
 
+.program-page__list--coming-soon {
+  @screen max-xl {
+    padding-top: calc(var(--gutter) * 8);
+  }
+}
+
 .program-page__header {
   @apply p-gutter pt-gutter-2 mb-gutter-1/2 text-center relative z-10;
 }
@@ -41,6 +47,10 @@
 
 .program-page__subtitle-date {
   @apply max-sm:block max-sm:pt-[0.3em];
+}
+
+.program-page__coming-soon {
+  @apply flex flex-col items-center text-center px-gutter pb-gutter-4 xl:pb-0;
 }
 
 .program-page__filters {

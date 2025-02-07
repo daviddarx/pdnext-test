@@ -16,6 +16,7 @@ import OnsPage from '@/components/pages/OnsPage';
 import NewsPage from '@/components/pages/NewsPage';
 import ImpressionsPage from '@/components/pages/ImpressionsPage';
 import ContentPage from '@/components/pages/ContentPage';
+import ProgramPageComingSoon from '@/components/pages/ProgramPageComingSoon';
 
 type PageProps = {
   page: {
@@ -38,7 +39,12 @@ const Page: NextPage<PageProps> = ({ page, commonPageData }) => {
        * Forced to declaratively cast the
        * components and data to get them typed.
        */}
-      {type === routes.main.festival.slug && <ProgramPage data={data as ProgramContent} />}
+      {type === routes.main.festival.slug && routes.main.festival.comingSoon == false && (
+        <ProgramPage data={data as ProgramContent} />
+      )}
+      {type === routes.main.festival.slug && routes.main.festival.comingSoon == true && (
+        <ProgramPageComingSoon />
+      )}
       {type === routes.main.ons.slug && <OnsPage data={data as OnsContent} />}
       {type === routes.secondary.news.slug && <NewsPage data={data as NewsContent} />}
       {type === routes.secondary.impressions.slug && (

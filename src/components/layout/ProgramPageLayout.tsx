@@ -11,6 +11,7 @@ import { screens } from '@/utils/screens';
 import EventDetail from '@/components/events/EventDetail';
 import EventDetailCloseButton from '@/components/events/EventDetailCloseButton';
 import EventDetailNavigation from '@/components/events/EventDetailNavigation';
+import { routes } from '@/routes/routes';
 
 type Props = {
   header: ReactNode;
@@ -119,7 +120,11 @@ const ProgramPageLayout: React.FC<Props> = ({ header, children, hideEventNav = f
 
   return (
     <section className={classNames('program-page', { mounted: isMounted })} ref={pageRef}>
-      <div className='program-page__list'>
+      <div
+        className={classNames('program-page__list', {
+          'program-page__list--coming-soon': routes.main.festival.comingSoon,
+        })}
+      >
         <header className='program-page__header'>{header}</header>
         {children}
       </div>

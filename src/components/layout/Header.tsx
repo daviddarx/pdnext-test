@@ -91,7 +91,7 @@ const Header: React.FC<Props> = ({ commonPageData }) => {
         </div>
       )}
       <ActiveLink
-        href='/festival-program'
+        href='/one-night-stands'
         className='header__logo-link'
         aria-label='Zur Startseite'
       >
