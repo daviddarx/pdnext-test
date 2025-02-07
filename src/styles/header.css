@@ -1,5 +1,5 @@
 .header {
-  @apply relative z-10 backdrop-blurred-faded;
+  @apply relative z-10;
 }
 
 .header__top-bar {
