@@ -54,15 +54,11 @@
             },
             {
               "title": "Programmgruppe Film",
-              "description": "Shona Zehnder, Pepe Le Puke, Yris Apsit, Selina Wenger, Emanuel Signer & Dario Schoch"
+              "description": "Shona Zehnder, Pepe Le Puke, Yris Apsit, Selina Wenger, Karin Vögeli, Emanuel Signer & Dario Schoch"
             },
             {
               "title": "Programmgruppen Kunst",
               "description": "Anaju Haugwitz, Yris Apsit, Pepe Le Puke, Dario Schoch, Talaya Schmid & Emanuel Signer"
-            },
-            {
-              "title": "Programmgruppe Wissenstransfer",
-              "description": "Tina Beerli & Jemma Wolf"
             },
             {
               "title": "Social Media",
@@ -71,6 +67,10 @@
             {
               "title": "Grafik",
               "description": "Maurice Ettlin"
+            },
+            {
+              "title": "Programmgruppe Wissenstransfer",
+              "description": "Tina Beerli & Jemma Wolf"
             },
             {
               "title": "Web",
