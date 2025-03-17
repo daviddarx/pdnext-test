@@ -1,0 +1,18 @@
+{
+  "typeComplement": "Dokumentation",
+  "forceBlank": false,
+  "entryType": "Film",
+  "deactivated": false,
+  "desc": "Gabriel Gutiérrez Morales\\\n*USA/Mexiko, 2024, 16 Min, Englisch/Englische Untertitel*\\\n\\\nDer Dokumentarfilm A CERTAIN KIND erkundet die aufregende Welt von Vanessa Cliff, der Chefin der US-Pornoproduktionsfirma Cliff Media. Vanessa Cliff, eine pansexuelle Filmproduzentin und Schauspielerin, schafft einen Raum, in dem Sexarbeiter:innen und Darsteller:innen der Pornobranche eine Gemeinschaft aufbauen können – basierend auf den Werten gesunder Nicht-Monogamie, lustvollem Kink und Consent.",
+  "title": "A Certain Kind ",
+  "image": "/images/uploads/certain_3.jpg",
+  "uuid": "a-certain-kind",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/certain_2.jpg"
+    },
+    {
+      "image": "/images/uploads/certain_1.jpg"
+    }
+  ]
+}
