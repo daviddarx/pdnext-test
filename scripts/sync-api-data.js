@@ -387,22 +387,6 @@ async function processEntries(filmsData, talentsData) {
   }
 }
 
-// Update the last sync timestamp in settings
-async function updateLastSyncTimestamp() {
-  try {
-    const settingsPath = path.join(__dirname, '..', '_content', 'settings', 'settings.json');
-    const settingsContent = await fs.readFile(settingsPath, 'utf8');
-    const settings = JSON.parse(settingsContent);
-
-    settings.lastApiSync = new Date().toISOString();
-
-    await fs.writeFile(settingsPath, JSON.stringify(settings, null, 2));
-    console.log('📝 Updated last sync timestamp in settings');
-  } catch (error) {
-    console.log('⚠️  Could not update last sync timestamp:', error.message);
-  }
-}
-
 // Main execution function
 async function main() {
   console.log('🚀 Starting API sync...\n');
@@ -438,9 +422,6 @@ async function main() {
     // Process the data
     await processEvents(programData);
     await processEntries(filmsData, talentsData);
-
-    // Update the last sync timestamp
-    await updateLastSyncTimestamp();
 
     console.log('\n✅ API sync completed successfully!');
     console.log(`📊 Summary:`);
