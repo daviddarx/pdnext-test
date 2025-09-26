@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: daviddarx/pdnext-test # Path to your GitHub repository
-  branch: 'feat/2025/2025'
+  branch: 'feat/2025/api-update'
 
 local_backend: true # For local admin, remove for production
 
