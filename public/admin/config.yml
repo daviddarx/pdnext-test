@@ -197,6 +197,27 @@ collections:
         widget: 'string'
         required: false
 
+      - label: 'Author Name'
+        name: 'authorName'
+        widget: 'string'
+        required: false
+
+      - label: 'Author Country'
+        name: 'authorCountry'
+        widget: 'string'
+        required: false
+
+      - label: 'Year of Production'
+        name: 'yearOfProduction'
+        widget: 'number'
+        required: false
+        valueType: 'int'
+
+      - label: 'Duration (minutes)'
+        name: 'duration'
+        widget: 'string'
+        required: false
+
       - label: 'Description'
         name: 'desc'
         widget: 'markdown'
