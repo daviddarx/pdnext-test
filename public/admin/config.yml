@@ -19,6 +19,19 @@ collections:
     format: 'json'
     summary: 'Settings'
     fields:
+      - label: 'API Sync Trigger'
+        name: 'apiSyncTrigger'
+        widget: 'string'
+        required: false
+        hint: 'Change this value to trigger an API sync and rebuild. Any text will work - just change it and save! For local development, run "npm run sync-api" manually.'
+        default: 'Ready to sync'
+
+      - label: 'Last API Sync'
+        name: 'lastApiSync'
+        widget: 'datetime'
+        required: false
+        hint: 'Automatically updated when API sync runs'
+
       - label: 'Reduced Price Text'
         name: 'reducedPriceText'
         widget: 'markdown'
