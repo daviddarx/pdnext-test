@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run sync-api && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "sync-api": "node scripts/sync-api-data.js",
