@@ -1,0 +1,20 @@
+{
+  "timetable": [],
+  "ticketsLink": "",
+  "eventdate": "2025-11-26T20:00:00.000Z",
+  "eventlocationlink": "#test",
+  "price": "",
+  "layout": "event",
+  "hideReducedPrice": false,
+  "eventlocation": "Riffraff Cinema",
+  "entries": [
+    "boobies--film-251",
+    "capucha-cada--film-294",
+    "esto-es-chile--film-287"
+  ],
+  "deactivated": false,
+  "desc": "T﻿his is a test description",
+  "eventlocationcomplement": "",
+  "ticketsLinkTitle": "",
+  "title": "Opening Quickies"
+}

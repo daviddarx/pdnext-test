@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "sync-api": "node scripts/sync-api-data.js",
+    "dev:sync": "npm run sync-api && npm run dev"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
