@@ -26,7 +26,7 @@ export const routes = {
     festival: {
       slug: 'festival-program',
       title: 'Festival Programm',
-      complement: '13. Edition – 26. - 30. November 2025',
+      complement: '13. Edition – 21. - 30. November 2025',
       comingSoon: false,
     },
     ons: {
