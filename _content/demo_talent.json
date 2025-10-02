@@ -1,6 +1,6 @@
 {
   "api_version": "1.0.0",
-  "paging": { "count": 162, "current_page": 1, "number_of_pages": 4, "items_per_page": 50 },
+  "paging": { "count": 184, "current_page": 1, "number_of_pages": 4, "items_per_page": 50 },
   "talents": [
     {
       "id": "2",
