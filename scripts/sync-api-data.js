@@ -202,12 +202,12 @@ function mapProgramToEvent(programItem) {
 
   return {
     layout: 'event',
-    title: programItem.title_l1 || programItem.title_l2 || 'Untitled Event',
+    title: programItem.title_l2 || programItem.title_l1 || 'Untitled Event',
     eventlocation: programItem.theater || programItem.place || '',
     eventlocationcomplement: '',
     eventlocationlink: '',
     eventdate: eventDate.toISOString(),
-    desc: programItem.detail_l1 || programItem.detail_l2 || '',
+    desc: programItem.detail_l2 || programItem.detail_l1 || '',
     ticketsLink: '',
     ticketsLinkTitle: '',
     timetable: [],
