@@ -207,7 +207,7 @@ function mapProgramToEvent(programItem) {
     eventlocationcomplement: '',
     eventlocationlink: '',
     eventdate: eventDate.toISOString(),
-    desc: programItem.detail_l2 || programItem.detail_l1 || '',
+    desc: '',
     ticketsLink: '',
     ticketsLinkTitle: '',
     timetable: [],
