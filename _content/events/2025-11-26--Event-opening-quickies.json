@@ -7,7 +7,11 @@
   "layout": "event",
   "hideReducedPrice": false,
   "eventlocation": "Riffraff Cinema",
-  "entries": [],
+  "entries": [
+    "boobies--film-251",
+    "capucha-cada--film-294",
+    "esto-es-chile--film-287"
+  ],
   "deactivated": false,
   "desc": "T﻿his is a test description",
   "eventlocationcomplement": "",
