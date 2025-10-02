@@ -1,10 +1,6 @@
 name: Sync API Data
 
 on:
-  # Run on schedule (daily at 6 AM UTC)
-  schedule:
-    - cron: '0 6 * * *'
-
   # Run when the API sync trigger is updated
   push:
     paths:
@@ -12,6 +8,12 @@ on:
 
   # Allow manual trigger
   workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Reason for manual sync'
+        required: false
+        default: 'Manual trigger'
+        type: string
 
 jobs:
   sync-api:
@@ -60,5 +62,6 @@ jobs:
 
           - Updated events and entries from API
           - Preserved manual edits
-          - Generated on $(date)"
+          - Generated on $(date)
+          - Trigger: ${{ github.event.inputs.reason || 'Settings update' }}"
           git push
