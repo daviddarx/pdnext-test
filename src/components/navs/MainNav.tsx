@@ -39,7 +39,7 @@ const MainNav = () => {
                     activeClassName='main-nav__link--active'
                     href={'/' + route.slug}
                   >
-                    <span className='main-nav__link-text'>{route.title}</span>
+                    <span className='main-nav__link-text title-effect'>{route.title}</span>
                     <span className='main-nav__link-detail'>{route.complement}</span>
                   </ActiveLink>
                 </li>
