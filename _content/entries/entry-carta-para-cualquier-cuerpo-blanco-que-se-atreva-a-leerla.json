@@ -1,16 +1,20 @@
 {
-  "uuid": "carta-para-cualquier-cuerpo-blanco-que-se-atreva-a-leerla--film-298",
-  "title": "Carta para cualquier cuerpo blanco que se atreva a leerla",
-  "entryType": "Film",
-  "authorName": "Ricardo VELMOR",
-  "authorCountry": "Bolivien",
-  "yearOfProduction": 2019,
-  "duration": "3 Minutes",
-  "desc": "<p>A missive aimed at overcoming the fear of crossing the fence of white privilege and engaging through sex.</p>",
-  "warning": "",
-  "image": "",
-  "additionalImages": [],
-  "videourl": "",
   "forceBlank": false,
-  "deactivated": false
+  "authorCountry": "Bolivien",
+  "entryType": "Film",
+  "yearOfProduction": 2019,
+  "deactivated": false,
+  "desc": "Der Film erzählt von der Angst, die Schranke des weissen Privilegs zu überschreiten und über Sex in Beziehung zu treten.",
+  "duration": "3 Minutes, Spanish/Englische UT",
+  "videourl": "",
+  "authorName": "Ricardo Velmor",
+  "title": "Carta para cualquier cuerpo blanco que se atreva a leerla",
+  "image": "/images/uploads/01_carta_para.jpg",
+  "uuid": "carta-para-cualquier-cuerpo-blanco-que-se-atreva-a-leerla",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/02_carta_para.jpg"
+    }
+  ]
 }
