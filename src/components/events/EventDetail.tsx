@@ -114,7 +114,7 @@ const EventDetail: React.FC<Props> = ({ hideEventNav = false }) => {
 
             <h2 className='event-detail__title'>
               <span
-                className='event-detail__title-text'
+                className='event-detail__title-text title-effect'
                 dangerouslySetInnerHTML={{
                   __html: event.title,
                 }}

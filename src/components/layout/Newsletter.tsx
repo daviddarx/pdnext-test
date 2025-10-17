@@ -12,7 +12,7 @@ const Newsletter = () => {
       >
         <h2 className='newsletter__subtitle'>Newsletter</h2>
 
-        <label className='newsletter__title' htmlFor='mce-EMAIL'>
+        <label className='newsletter__title title-effect' htmlFor='mce-EMAIL'>
           War&apos;s das schon
           <br />
           zwischen uns?

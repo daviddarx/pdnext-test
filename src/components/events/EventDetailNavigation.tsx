@@ -71,7 +71,7 @@ const EventDetailNavigation = ({ currentEvent }: Props) => {
               </span>
               {currentEvent.prevTitle && (
                 <span
-                  className='event-detail-nav__title'
+                  className='event-detail-nav__title title-effect'
                   dangerouslySetInnerHTML={{
                     __html: currentEvent.prevTitle,
                   }}
@@ -90,7 +90,7 @@ const EventDetailNavigation = ({ currentEvent }: Props) => {
               </span>
               {currentEvent.nextTitle && (
                 <span
-                  className='event-detail-nav__title'
+                  className='event-detail-nav__title title-effect'
                   dangerouslySetInnerHTML={{
                     __html: currentEvent.nextTitle,
                   }}
