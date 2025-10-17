@@ -1,16 +1,20 @@
 {
-  "uuid": "no-pasa-ms--film-290",
-  "title": "No pasa más",
-  "entryType": "Film",
-  "authorName": "Wincy OYARCE",
-  "authorCountry": "Chile",
-  "yearOfProduction": 2015,
-  "duration": "3 Minutes",
-  "desc": "<p>A multi-sexual fantasy centered on a transvestite with prosthetics and devices made for pleasure. A delirium in which bodies and traditional power relations are subverted. A love letter the famous chilean perfomer \"Hija de Perra\" with the special performances of Josecarlo Henríquez and MariaBsura</p>",
-  "warning": "",
-  "image": "",
-  "additionalImages": [],
-  "videourl": "",
   "forceBlank": false,
-  "deactivated": false
+  "authorCountry": "Chile",
+  "entryType": "Film",
+  "yearOfProduction": 2015,
+  "deactivated": false,
+  "desc": "Eine multisexuelle Fantasie rund um eine Travestiefigur mit Prothesen und luststeigernden Apparaten. Ein Delirium, in dem Körper und traditionelle Machtverhältnisse umgestürzt werden. Ein Liebesbrief an die berühmte chilenische Performerin Hija de Perra, mit Auftritten von Josecarlo Henríquez und Maria Basura.\n\nIn Anwesenheit von: Maria Basura",
+  "duration": "3 Min, Spanisch/Englische UT",
+  "videourl": "",
+  "authorName": "Wincy Oyarce",
+  "title": "No pasa más",
+  "image": "/images/uploads/01_no_pasa_mas.jpg",
+  "uuid": "no-pasa",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/02_no_pasa_mas.jpg"
+    }
+  ]
 }
