@@ -1,16 +1,20 @@
 {
-  "uuid": "mosquero--film-293",
-  "title": "Mosquerío",
-  "entryType": "Film",
-  "authorName": "Fernanda GALLARDO & María CATALINA",
-  "authorCountry": "Chile",
-  "yearOfProduction": 2020,
-  "duration": "10 Minutes",
-  "desc": "<p>Each insect in its compartment. The bodies slowly begin to intertwine, discovering collectivity. Naturally and spontaneously, they embark on a journey through movement, longing to find freedom.</p>",
-  "warning": "",
-  "image": "",
-  "additionalImages": [],
-  "videourl": "",
   "forceBlank": false,
-  "deactivated": false
+  "authorCountry": "Chile",
+  "entryType": "Film",
+  "yearOfProduction": 2020,
+  "deactivated": false,
+  "desc": "Jedes Insekt in seinem Abteil. Die Körper beginnen sich langsam zu verweben, entdecken Kollektivität. Natürlich und spontan begeben sie sich durch Bewegung auf eine Reise, in der Sehnsucht nach Freiheit.",
+  "duration": "10 Min, Spanisch/Englische UT",
+  "videourl": "",
+  "authorName": "Fernanda Gallardo & María Catalina",
+  "title": "Mosquerío",
+  "image": "/images/uploads/01_mosquerío.jpeg",
+  "uuid": "mosquero",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/02_mosquerío.jpeg"
+    }
+  ]
 }
