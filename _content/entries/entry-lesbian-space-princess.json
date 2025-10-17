@@ -1,16 +1,23 @@
 {
-  "uuid": "lesbian-space-princess--film-268",
-  "title": "Lesbian Space Princess",
-  "entryType": "Film",
-  "authorName": "Emma HOUGH HOBBS & Leela VARGHESE",
-  "authorCountry": "Australien",
-  "yearOfProduction": 2025,
-  "duration": "87 Minutes",
-  "desc": "",
-  "warning": "",
-  "image": "",
-  "additionalImages": [],
-  "videourl": "",
   "forceBlank": false,
-  "deactivated": false
+  "authorCountry": "Australien",
+  "entryType": "Film",
+  "yearOfProduction": 2025,
+  "deactivated": false,
+  "desc": "Umwerfend witzig, knallbunt und euphorisch, kompromisslos queer: Der erste Spielfilm des australischen Regie-Duos Leela Varghese und Emma Hough Hobbs ist ein mitreissender intergalaktischer Selbstfindungstrip mit Lust auf Krawall und grossem Herzen, irgendwo zwischen wilder Sci-fi-Musical-Komödie und heilsamer Coming-of-Age-Abenteuerreise. Dafür gab es auf der Berlinale 2025 den Teddy-Award und den 2. Platz beim Panorama-Publikumspreis.",
+  "duration": "87 Min, Englisch/Deutsche UT",
+  "videourl": "",
+  "authorName": "Emma Hough Hobbs & Leela Varghese",
+  "title": "Lesbian Space Princess",
+  "image": "/images/uploads/01_lesbian_space.jpg",
+  "uuid": "lesbian-space-princess",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/03_lesbian_space.jpg"
+    },
+    {
+      "image": "/images/uploads/05_lesbian_space.jpg"
+    }
+  ]
 }
