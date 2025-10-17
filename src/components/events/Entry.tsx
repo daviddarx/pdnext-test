@@ -88,7 +88,7 @@ const Entry: React.FC<Props> = ({ entry }) => {
         </div>
       </div>
 
-      <h3 className='entry__title'>{entry.title}</h3>
+      <h3 className='entry__title title-effect'>{entry.title}</h3>
       <div className='entry__type'>
         {entry.entryType} {entry.typeComplement && <span> – {entry.typeComplement}</span>}
       </div>
