@@ -1,16 +1,20 @@
 {
-  "uuid": "cam-girls--film-302",
-  "title": "Cam Girls",
-  "entryType": "Film",
-  "authorName": "Malena MASUELLI",
-  "authorCountry": "Argentinien",
-  "yearOfProduction": 2025,
-  "duration": "5 Minutes",
-  "desc": "<p> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> </p>\r\n<p> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>Two Cam Girls meet in a virtual environment where they capitalize on their eroticism and turn their bodies into a pornographic territory—between flesh and pixels, between pleasure and violence, between censorship and exposure.</p>",
-  "warning": "",
-  "image": "",
-  "additionalImages": [],
-  "videourl": "",
   "forceBlank": false,
-  "deactivated": false
+  "authorCountry": "Argentinien",
+  "entryType": "Film",
+  "yearOfProduction": 2025,
+  "deactivated": false,
+  "desc": "Zwei Cam-Girls begegnen sich im virtuellen Raum, in dem sie ihre Erotik vermarkten und ihre Körper in ein pornografisches Territorium verwandeln – zwischen Fleisch und Pixeln, Lust und Gewalt, Zensur und Entblössung.",
+  "duration": "5 Min, Spanisch/Englische UT",
+  "videourl": "",
+  "authorName": "Malena Masuelli",
+  "title": "Cam Girls",
+  "image": "/images/uploads/02_cam_girls.jpg",
+  "uuid": "cam-girls",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/01_cam_girls.jpg"
+    }
+  ]
 }
