@@ -1,16 +1,23 @@
 {
-  "uuid": "mr-bound-and-gagged--film-313",
-  "title": "Mr. Bound and Gagged",
-  "entryType": "Film",
-  "authorName": "Carson PARISH",
-  "authorCountry": "Vereinigte Staaten",
-  "yearOfProduction": 2025,
-  "duration": "35 Minutes",
-  "desc": "<p>His name is Bob Wingate, but he’s better known as Mr. Bound &amp; Gagged. Together with Lee Clauss, his partner of over 30 years, they published and edited the gay pornographic magazine Bound &amp; Gagged from 1987-2005, and directed nearly forty videos featuring A-list gay pornstars of the nineties.</p>",
-  "warning": "",
-  "image": "",
-  "additionalImages": [],
-  "videourl": "",
   "forceBlank": false,
-  "deactivated": false
+  "authorCountry": "Vereinigte Staaten",
+  "entryType": "Film",
+  "yearOfProduction": 2025,
+  "deactivated": false,
+  "desc": "Zusammen mit seinem Partner Lee Clauss, veröffentlichte Bob Windgate, auch bekannt als Mr. Bound & Gagged, von 1987 bis 2005 das schwule pornografische Magazin Bound & Gagged und drehte fast vierzig Videos mit den bekanntesten Gay-Pornostars der neunziger Jahre und der frühen 2000er.\n\nHeute, als Acht- bzw. Siebzigjährige, reisen die beiden New Yorker nach Chicago, um im Leather Archives & Museum (LA&M) ihre privaten Sammlungen durchzugehen. Dabei stossen sie auf wahre Schatzkammern an Geschichten aus ihrem Leben mit Pornografie: Korrespondenzen mit Geistlichen; selten gesehene Werke legendärer schwuler Künstler und Autoren wie Howard Cruse, Stanley Stellar und Larry Townsend; radikale politische Kommentare zu AIDS, staatlicher Zensur und modernem Konservatismus – all das durchsetzt mit Stapeln expliziter Pornografie und Stunden von pikanten Videobändern.\n\nAls scharfe Kritiker einer amerikanischen „Gesellschaft, die Sex als böse betrachtet“, und einst von einem US-Senator als „schockierend und abstossend“ verurteilt, werden diese älteren Liebenden als Bewahrer einer lange übersehenen Gemeinschaft queerer Kreativer und Dissidenten in Erinnerung bleiben.",
+  "duration": "35 Min, Englisch",
+  "videourl": "",
+  "authorName": "Carson Parish",
+  "title": "Mr. Bound and Gagged",
+  "image": "/images/uploads/01_mr_bound_gagged.jpg",
+  "uuid": "mr-bound-and-gagged",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/02_mr_bound_gagged.jpg"
+    },
+    {
+      "image": "/images/uploads/03_mr_bound_gagged.jpg"
+    }
+  ]
 }
