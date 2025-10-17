@@ -60,7 +60,7 @@
     --shadow-offset: 0.01em;
     --shadow-color: theme(colors.black);
     --blur-start: 0em;
-    --blur-end: 0.1em;
+    --blur-end: 0.075em;
 
     -webkit-text-stroke: 0.05em var(--shadow-color);
     text-stroke: 0.05em var(--shadow-color);
