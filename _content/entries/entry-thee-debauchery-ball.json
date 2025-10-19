@@ -1,16 +1,23 @@
 {
-  "uuid": "thee-debauchery-ball--film-314",
-  "title": "Thee Debauchery Ball",
-  "entryType": "Film",
-  "authorName": "David WEATHERSBY",
-  "authorCountry": "Vereinigte Staaten",
-  "yearOfProduction": 2019,
-  "duration": "71 Minutes",
-  "desc": "<p>Thee Debauchery Ball tells the story of a single house music event that was</p>\r\n<p>intended to pay reverence to the original intention of House Music culture<br>of Chicago, and grew to become the only kink and fetish-themed,<br>BDSM-friendly, body-positive house party in the city. It has helped<br>redefine Black music, community, art, and sexuality. The documentary tells<br>the personal story of the founder, the DJ, and the participants who view<br>this event as a bastion of freedom and an escape from preconceived notions.</p>",
-  "warning": "",
-  "image": "",
-  "additionalImages": [],
-  "videourl": "",
   "forceBlank": false,
-  "deactivated": false
+  "authorCountry": "Vereinigte Staaten",
+  "entryType": "Film",
+  "yearOfProduction": 2019,
+  "deactivated": false,
+  "desc": "*Thee Debauchery Ball* erzählt die Geschichte eines Events, der anfänglich ins Leben gerufen wurde, um den ursprünglichen Geist der House-Musik-Kultur Chicagos zu ehren - und der sich im Laufe der Jahre zur einzigen Kink- und Fetisch-themed, BDSM-friendly und body-positiven House-Party der Stadt entwickelte. *Thee Debauchery Ball* hat so dazu beigetragen, Schwarze Musik, Community, Kunst und Sexualität neu zu definieren.\n\nDie Dokumentation beleuchtet die persönliche Geschichte des Gründers, des DJs und der Teilnehmenden, die in diesem Event einen Ort der Freiheit und einen Ausbruch aus gesellschaftlichen Vorstellungen sehen.",
+  "duration": "71 Min, Englisch/Englische Untertitel",
+  "videourl": "",
+  "authorName": "David Weathersby",
+  "title": "Thee Debauchery Ball",
+  "image": "/images/uploads/thee_debauchery_ball_02.jpg",
+  "uuid": "thee-debauchery-ball",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/thee_debauchery_ball_03.jpg"
+    },
+    {
+      "image": "/images/uploads/thee_debauchery_ball_01.jpg"
+    }
+  ]
 }
