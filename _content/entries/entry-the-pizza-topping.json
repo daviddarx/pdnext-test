@@ -1,16 +1,20 @@
 {
-  "uuid": "the-pizza-topping--film-324",
-  "title": "The Pizza Topping",
-  "entryType": "Film",
-  "authorName": "Ty WARDWELL & Ethan FOLK",
-  "authorCountry": "Deutschland",
-  "yearOfProduction": 2019,
-  "duration": "4 Minutes",
-  "desc": "<p> Horny Pizza orders up a Hungry Boy.</p>",
-  "warning": "",
-  "image": "",
-  "additionalImages": [],
-  "videourl": "",
   "forceBlank": false,
-  "deactivated": false
+  "authorCountry": "Deutschland",
+  "entryType": "Film",
+  "yearOfProduction": 2019,
+  "deactivated": false,
+  "desc": "Geile Pizza bestellt einen hungrigen Jungen.",
+  "duration": "4 Min, Englisch",
+  "videourl": "",
+  "authorName": "Ty Wardwell & Ethan Folk",
+  "title": "The Pizza Topping",
+  "image": "/images/uploads/01_the_pizza_topping.jpg",
+  "uuid": "the-pizza-topping",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/02_the_pizza_topping.jpg"
+    }
+  ]
 }
