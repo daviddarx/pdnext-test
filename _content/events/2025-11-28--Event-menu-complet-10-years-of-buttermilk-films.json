@@ -1,16 +1,27 @@
 {
-  "layout": "event",
-  "title": "Menu Complet: 10 years of Buttermilk Films",
-  "eventlocation": "Riffraff Cinema",
-  "eventlocationcomplement": "",
-  "eventlocationlink": "",
-  "eventdate": "2025-11-28T22:00:00.000Z",
-  "desc": "",
-  "ticketsLink": "",
-  "ticketsLinkTitle": "",
   "timetable": [],
+  "ticketsLink": "",
+  "eventdate": "2025-11-28T22:00:00.000Z",
+  "eventlocationlink": "https://www.riffraff-houdini.ch/de-ch/programm.html",
   "price": "",
+  "layout": "event",
   "hideReducedPrice": false,
-  "entries": [],
-  "deactivated": false
+  "eventlocation": "Riffraff 1",
+  "entries": [
+    "breakfast-in-bed",
+    "breakfast-in-bed-un cut",
+    "dear-babe--film-327",
+    "brunch-on-bikes",
+    "the-pizza-topping",
+    "dic-pic-picnic",
+    "pops-corn",
+    "the-holey-grail",
+    "the-cannoli-brothers--film-319",
+    "mes-cheris--film-323"
+  ],
+  "deactivated": false,
+  "desc": "Zwischen 2016 und 2025 servierten Ty Wardwell und Ethan Folk ihr „New Queer Cuisine“ dem Publikum in Kinos, Museen, Hinterhöfen und online: neun filmische Gänge, die in Seattle mit Breakfast in Bed begannen und in Berlin mit The Cannoli Brothers ihren krönenden Abschluss fanden. Sie sind nicht nur „nasty chefs who kiss“, sondern vor allem Meister darin, Pornografie mit Humor, Sinnlichkeit und radikaler Zärtlichkeit zu verbinden.\n\nUmso schwerer wog daher ihre Abwesenheit im letzten Jahr: Zum ersten Mal seit sieben Jahren fehlte im Eröffnungsprogramm ein wesentlicher Bestandteil, ein weiterer absurd lustiger, heisser Foodporn von Buttermilk Films. Seit 2017 bereichern Ty und Ethan die Porny Days jedes Jahr mit einem neuen Film, bis zum vergangenen Jahr, als ihr kulinarisch-pornografischer Zyklus zu Ende ging.\n\nUmso wunderbarer ist es daher, dass sie in diesem Jahr alle Filme auf einmal als Menu Complet mit Einführung und Gespräch im Kino präsentieren werden. Ebenfalls gezeigt wird die noch nie zuvor gezeigte, 20-minütige One-Take-Version Breakfast in Bed: Uncut Director’s Cut: A Walk to Remember. Kommt hungrig!",
+  "eventlocationcomplement": "",
+  "ticketsLinkTitle": "",
+  "title": "Menu Complet: 10 years of Buttermilk Films"
 }
