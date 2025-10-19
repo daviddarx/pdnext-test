@@ -1,16 +1,16 @@
 {
-  "layout": "event",
-  "title": "Danger danger it's porn! - Panel",
-  "eventlocation": "Riffraff Cinema",
-  "eventlocationcomplement": "",
-  "eventlocationlink": "",
-  "eventdate": "2025-11-29T14:00:00.000Z",
-  "desc": "",
-  "ticketsLink": "",
-  "ticketsLinkTitle": "",
   "timetable": [],
+  "ticketsLink": "",
+  "eventdate": "2025-11-29T14:00:00.000Z",
+  "eventlocationlink": "https://www.riffraff-houdini.ch/de-ch/programm.html",
   "price": "",
+  "layout": "event",
   "hideReducedPrice": false,
+  "eventlocation": "Riffraff 1",
   "entries": [],
-  "deactivated": false
+  "deactivated": false,
+  "desc": "Porno auf deinem Handy, unter deiner Bettdecke, in deinem Kopf.\\\nAber: hast du beim Mittagessen mit den Arbeitskolleg:innen schon mal von deiner neusten Porno-Entdeckung erzählt – und wie du dabei abgegangen bist? Schaust du deine Pornos zu Hause in voller Lautstärke? Wieso scheint es unmöglich, bei der Berufsberatung über eine mögliche Pornokarriere zu sprechen?\n\nPornografie ist allgegenwärtig und doch mit Scham, Tabus und heftigen gesellschaftlichen Debatten aufgeladen. Dieses Panel versammelt unterschiedliche Perspektiven auf die Frage, warum Porno häufig als „gefährlich“ markiert und im sozialen wie politischen Alltag ausgeklammert wird und wie ein selbstbestimmter, kritischer Umgang damit aussehen kann.\n\nGibt es „gute“ und „schlechte“ Pornos? Wie prägt Sexualmoral unser Schamgefühl? Was bedeutet Pornokompetenz? Und ist es sinnvoll, von Pornosucht zu sprechen? Wie zeigen sich Stigmatisierungen gegenüber Menschen, die Pornos machen oder schauen? Wer hat warum Interesse an Zensur? Und prägen Pornos unsere Gesellschaft oder ist es genau umgekehrt?",
+  "eventlocationcomplement": "",
+  "ticketsLinkTitle": "",
+  "title": "Danger danger it's porn! - Panel"
 }
