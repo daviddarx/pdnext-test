@@ -1,16 +1,23 @@
 {
-  "uuid": "brunch-on-bikes--film-325",
-  "title": "Brunch on Bikes",
-  "entryType": "Film",
-  "authorName": "Ethan FOLK & Ty WARDWELL",
-  "authorCountry": "Deutschland",
-  "yearOfProduction": 2019,
-  "duration": "2 Minutes",
-  "desc": "<p> Freshly-fucked foodies dial up a special delivery. ink doesn't flow until the arrival of a couple horny houseguests.</p>",
-  "warning": "",
-  "image": "",
-  "additionalImages": [],
-  "videourl": "",
   "forceBlank": false,
-  "deactivated": false
+  "authorCountry": "Deutschland",
+  "entryType": "Film",
+  "yearOfProduction": 2019,
+  "deactivated": false,
+  "desc": "Frisch gefickte Feinschmecker:innen rufen eine spezielle Lieferung herbei.",
+  "duration": "2 Min, Englisch",
+  "videourl": "",
+  "authorName": "Ty Wardwell & Ethan Folk",
+  "title": "Brunch on Bikes",
+  "image": "/images/uploads/02_brunch_on_bikes.jpg",
+  "uuid": "brunch-on-bikes",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/01_brunch_on_bikes.jpg"
+    },
+    {
+      "image": "/images/uploads/03_brunch_on_bikes.jpg"
+    }
+  ]
 }
