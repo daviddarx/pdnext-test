@@ -1,7 +1,20 @@
 {
-  "timetable": [],
+  "timetable": [
+    {
+      "time": "12:00",
+      "title": "Einlass"
+    },
+    {
+      "time": "12:30",
+      "title": "Gemeinsame Anfang"
+    },
+    {
+      "time": "15:00",
+      "title": "Ende"
+    }
+  ],
   "ticketsLink": "https://eventfrog.ch/de/p/diverses/tunnel-der-lust-satisfy-my-hunger-by-nexus-7386057045122771083.html",
-  "eventdate": "2025-11-23T10:00:00.000Z",
+  "eventdate": "2025-11-23T00:00:00.000Z",
   "eventlocationlink": "https://www.instagram.com/babyangelpr/",
   "price": "25 – 45 CHF (solidarische Preissystem)",
   "layout": "event",
