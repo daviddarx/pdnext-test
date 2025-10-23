@@ -1,16 +1,23 @@
 {
-  "uuid": "sexodelica--film-259",
-  "title": "SEXODELICA",
-  "entryType": "Film",
-  "authorName": "Johann DEBO",
-  "authorCountry": "Polen",
-  "yearOfProduction": 2024,
-  "duration": "3 Minutes",
-  "desc": "<p>SexoDelica - Journey of the Soul into the Mysteries of Desire<br>In the subtle balance of this World<br>the search for the Spirit on the wings of the Flesh<br>of the highest Form of pleasure by the Body</p>",
-  "warning": "",
-  "image": "",
-  "additionalImages": [],
-  "videourl": "",
   "forceBlank": false,
-  "deactivated": false
+  "authorCountry": "Polen",
+  "entryType": "Film",
+  "yearOfProduction": 2024,
+  "deactivated": false,
+  "desc": "SEXODELICA, so die Regie, sei inmitten der feinen Blanace dieser Welt die Suche nach dem \"Geist auf den Flügeln des Fleisches\". \n\nIn knapp drei Minuten entfaltet der Film eine dichte Folge verstörend-poetischer Bilder, die sich einer klaren Deutung entziehen und dennoch einen nachhaltigen Nachhall hinterlassen.",
+  "duration": "3 Min, ohne Dialog",
+  "videourl": "",
+  "authorName": "Johann Debo",
+  "title": "SEXODELICA",
+  "image": "/images/uploads/sexodelica_1.jpeg",
+  "uuid": "sexodelica--film-259",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/sexodelica_2.jpeg"
+    },
+    {
+      "image": "/images/uploads/sexodelica_3.jpeg"
+    }
+  ]
 }
