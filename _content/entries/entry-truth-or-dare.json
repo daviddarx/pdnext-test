@@ -1,16 +1,26 @@
 {
-  "uuid": "truth-or-dare--film-239",
-  "title": "Truth or Dare",
-  "entryType": "Film",
-  "authorName": "Maja CLASSEN",
-  "authorCountry": "Deutschland",
-  "yearOfProduction": 2024,
-  "duration": "75 Minutes",
-  "desc": "",
-  "warning": "",
-  "image": "",
-  "additionalImages": [],
-  "videourl": "",
   "forceBlank": false,
-  "deactivated": false
+  "authorCountry": "Deutschland",
+  "entryType": "Film",
+  "yearOfProduction": 2024,
+  "deactivated": false,
+  "desc": "xx",
+  "duration": "75 Minutes",
+  "videourl": "",
+  "authorName": "Maja CLASSEN",
+  "title": "Truth or Dare",
+  "image": "/images/uploads/tod_cinedoc_1.jpg",
+  "uuid": "truth-or-dare--film-239",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/tod_cinedoc_2.jpg"
+    },
+    {
+      "image": "/images/uploads/tod_cinedoc_3.jpg"
+    },
+    {
+      "image": "/images/uploads/tod_cinedoc_5.jpg"
+    }
+  ]
 }
