@@ -1,16 +1,23 @@
 {
-  "uuid": "heatwave--film-242",
-  "title": "Heatwave",
-  "entryType": "Film",
-  "authorName": "Zuma LINK",
-  "authorCountry": "Brasilien",
-  "yearOfProduction": 2024,
-  "duration": "17 Minutes",
-  "desc": "<p>On a terribly hot day, four workers are surprised by the appearance of BixaPuta on the construction site. The naughty girl seeks to satisfy her obscene desires and bring pleasure to this sweaty group.</p>",
-  "warning": "",
-  "image": "",
-  "additionalImages": [],
-  "videourl": "",
   "forceBlank": false,
-  "deactivated": false
+  "authorCountry": "Brasilien",
+  "entryType": "Film",
+  "yearOfProduction": 2024,
+  "deactivated": false,
+  "desc": "<p>On a terribly hot day, four workers are surprised by the appearance of BixaPuta on the construction site. The naughty girl seeks to satisfy her obscene desires and bring pleasure to this sweaty group.</p>",
+  "duration": "17 Minutes",
+  "videourl": "",
+  "authorName": "Zuma Link",
+  "title": "Heatwave",
+  "image": "/images/uploads/ondadicalor_clean.mp4.00_19_26_19.quadro002.jpg",
+  "uuid": "heatwave--film-242",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/ondadicalor_clean.mp4.00_19_53_22.quadro003.jpg"
+    },
+    {
+      "image": "/images/uploads/ondadicalor_sh.mov.00_01_18_20.quadro001.jpg"
+    }
+  ]
 }
