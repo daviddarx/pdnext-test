@@ -1,16 +1,20 @@
 {
-  "uuid": "chulicha--film-245",
-  "title": "Chulicha",
-  "entryType": "Film",
-  "authorName": "Sonia PATRINOU",
-  "authorCountry": "Griechenland",
-  "yearOfProduction": 2025,
-  "duration": "15 Minutes",
-  "desc": "<p>Summer, heat, car washing, loud music and two hotties. Fem queer Sasa is bored and sweaty in the middle of the summer with this heatwave while doing nothing at her house, in a village outside Lamia, Greece. Almost every day she sees Alexis across the street, a trans masc cutie doing errands and working with cars occasionally for pocket money. One evening, and while the heat is unbearable, Sasa decides to put on her shortest outfit and with a speaker on one hand and a mop bucket on the other she heads towards Alexis' house, to wash the car that he’s been working on. Alexis finds himself with his back on the hood of the car and Sasa takes action…</p>",
-  "warning": "",
-  "image": "",
-  "additionalImages": [],
-  "videourl": "",
   "forceBlank": false,
-  "deactivated": false
+  "authorCountry": "Griechenland",
+  "entryType": "Film",
+  "yearOfProduction": 2025,
+  "deactivated": false,
+  "desc": "Sommer, Hitze, Autowaschen, laute Musik – und zwei heisse Menschen.\n\nSasa schwitzt und langweilt sich während einer Hitzewelle in einem Dorf bei Lamia. Täglich beobachtet sie Alexis auf der anderen Strassenseite – einen trans-maskulinen Cutie, der an Autos arbeitet. Als die Hitze unerträglich wird, zieht Sasa ihr kürzestes Outfit an und geht zu Alexis rüber... Ein Film so hot wie die griechische Sonne im August!\n\n*In Anwesenheit von Sonia Patrinou*",
+  "duration": "15 Min., Griechisch mit englischen UT",
+  "videourl": "",
+  "authorName": "Sonia Patrinou",
+  "title": "Chulicha",
+  "image": "/images/uploads/chulicha-still-2.jpg",
+  "uuid": "chulicha--film-245",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/chulicha-still-3.jpg"
+    }
+  ]
 }
