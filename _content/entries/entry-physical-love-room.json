@@ -1,0 +1,23 @@
+{
+  "forceBlank": false,
+  "entryType": "Film",
+  "yearOfProduction": 2025,
+  "deactivated": false,
+  "desc": "xx",
+  "duration": "10 Min., ohne Dialog",
+  "authorName": "Oil Productions",
+  "title": "Physical Love Room",
+  "image": "/images/uploads/physicalloveroom_oilproductions_202519.jpg",
+  "uuid": "physical-love",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/physicalloveroom_oilproductions_202520.jpg"
+    },
+    {
+      "image": "/images/uploads/physicalloveroom_oilproductions_202517.jpg"
+    },
+    {
+      "image": "/images/uploads/physicalloveroom_oilproductions_202521.jpg"
+    }
+  ]
+}
