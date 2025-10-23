@@ -1,16 +1,23 @@
 {
-  "uuid": "in-all-the-rooms-we-met--film-246",
-  "title": "In All The Rooms We Met",
-  "entryType": "Film",
-  "authorName": "Bonaventure TAIN",
-  "authorCountry": "Malaysia",
-  "yearOfProduction": 2024,
-  "duration": "14 Minutes",
-  "desc": "<p>In All The Rooms We Met follows filmmaker Bonaventure Tain tracing the path of Asia’s iconic queer porn actor Ryuji Suzuki over the course of a year. Moving through cities and transient rooms, fragments of desire, memory, and imagination unfold. Between lens and body, reality and fiction blur, forming an intimate, experimental portrait of fantasy, creation, and the spaces where they intertwine.</p>\r\n<p> </p>\r\n<p> </p>",
-  "warning": "",
-  "image": "",
-  "additionalImages": [],
-  "videourl": "",
   "forceBlank": false,
-  "deactivated": false
+  "authorCountry": "Malaysia",
+  "entryType": "Film",
+  "yearOfProduction": 2024,
+  "deactivated": false,
+  "desc": "<p>In All The Rooms We Met follows filmmaker Bonaventure Tain tracing the path of Asia’s iconic queer porn actor Ryuji Suzuki over the course of a year. Moving through cities and transient rooms, fragments of desire, memory, and imagination unfold. Between lens and body, reality and fiction blur, forming an intimate, experimental portrait of fantasy, creation, and the spaces where they intertwine.</p>\r\n<p> </p>\r\n<p> </p>",
+  "duration": "14 Minutes",
+  "videourl": "",
+  "authorName": "Bonaventure Tain",
+  "title": "In All The Rooms We Met",
+  "image": "/images/uploads/in-all-the-rooms-we-met_still1.jpg",
+  "uuid": "in-all-the-rooms-we-met--film-246",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/in-all-the-rooms-we-met_still7.jpg"
+    },
+    {
+      "image": "/images/uploads/in-all-the-rooms-we-met_still5.jpg"
+    }
+  ]
 }
