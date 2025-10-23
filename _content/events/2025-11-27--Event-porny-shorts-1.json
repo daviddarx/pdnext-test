@@ -1,16 +1,17 @@
 {
-  "layout": "event",
-  "title": "Porny Shorts 1",
-  "eventlocation": "Riffraff Cinema",
-  "eventlocationcomplement": "",
-  "eventlocationlink": "",
-  "eventdate": "2025-11-27T18:20:00.000Z",
-  "desc": "",
-  "ticketsLink": "",
-  "ticketsLinkTitle": "",
   "timetable": [],
+  "ticketsLink": "",
+  "eventdate": "2025-11-27T18:00:00.000Z",
+  "eventlocationlink": "https://www.riffraff-houdini.ch/",
   "price": "",
+  "layout": "event",
   "hideReducedPrice": false,
+  "eventlocation": "Riffraff Cinema",
   "entries": [],
-  "deactivated": false
+  "deactivated": false,
+  "desc": "Ein Herzstück bildet auch bei der 13. Ausgabe unseres Festivals der Kurzfilmwettbewerb. Das Filmprogrammteam hatte die lustvolle und nicht immer ganz einfache Aufgabe, aus mehreren hundert Einreichungen ein sinnliches, heisses, aufwühlendes, überwältigendes, lustiges und zum Nachahmen anregendes Programm zusammen zu stellen. Der Gewinner:innenfilm erhält von unsere Jury am Sonntagabend dann den PORNY SHORTS Award.",
+  "eventlocationcomplement": "",
+  "ticketsLinkTitle": "",
+  "subtitle": "Kurzfilmwettbewerb",
+  "title": "Porny Shorts 1"
 }
