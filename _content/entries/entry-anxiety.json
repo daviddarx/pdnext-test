@@ -1,16 +1,23 @@
 {
-  "uuid": "anxiety--film-258",
-  "title": "anxiety",
-  "entryType": "Film",
-  "authorName": "Lola PISTOLA",
-  "authorCountry": "Spanien",
-  "yearOfProduction": 2023,
-  "duration": "6 Minutes",
-  "desc": "<p>Ansiedad is a claim to dispute pathologization of mental health and unease phases. We face the need to build a structural and political framework which considers the oppressive systemic regimes which take part in the processes of unease and pain.</p>",
-  "warning": "",
-  "image": "",
-  "additionalImages": [],
-  "videourl": "",
   "forceBlank": false,
-  "deactivated": false
+  "authorCountry": "Spanien",
+  "entryType": "Film",
+  "yearOfProduction": 2023,
+  "deactivated": false,
+  "desc": "ANSIEDAD will den Raum öffnen für ein anderes Verstädnis von Angst – als Teil unseres Lebens, unserer Körper und unserer Sehnsucht nach Heilung.",
+  "duration": "5 Min, Spanisch mit englischen UT",
+  "videourl": "",
+  "authorName": "Lola Pistola",
+  "title": "anxiety",
+  "image": "/images/uploads/ansiedad.jpg",
+  "uuid": "anxiety--film-258",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/ansiedad_3.jpg"
+    },
+    {
+      "image": "/images/uploads/ansiedad_2.jpg"
+    }
+  ]
 }
