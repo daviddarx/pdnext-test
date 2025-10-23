@@ -1,16 +1,23 @@
 {
-  "uuid": "camping--film-272",
-  "title": "Camping",
-  "entryType": "Film",
-  "authorName": "Klöklö WAGNER",
-  "authorCountry": "Schweiz",
-  "yearOfProduction": 2024,
-  "duration": "1 Minutes",
-  "desc": "<p>Candy and Coach are on a camping trip in the Swiss Alps. While Coach is making a fire, Candy plays with her shadows...</p>",
-  "warning": "",
-  "image": "",
-  "additionalImages": [],
-  "videourl": "",
   "forceBlank": false,
-  "deactivated": false
+  "authorCountry": "Schweiz",
+  "entryType": "Film",
+  "yearOfProduction": 2024,
+  "deactivated": false,
+  "desc": "<p>Candy and Coach are on a camping trip in the Swiss Alps. While Coach is making a fire, Candy plays with her shadows...</p>",
+  "duration": "1 & 1 Min, ohne Dialog",
+  "videourl": "",
+  "authorName": "Klöklö WAGNER",
+  "title": "Camping & Watersports",
+  "image": "/images/uploads/camping_1.jpeg",
+  "uuid": "camping--film-272",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/camping_2.jpeg"
+    },
+    {
+      "image": "/images/uploads/watersports_1.jpeg"
+    }
+  ]
 }
