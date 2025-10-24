@@ -1,16 +1,26 @@
 {
-  "uuid": "le-sexe-de-ma-mre--film-249",
-  "title": "Le sexe de ma mère",
-  "entryType": "Film",
-  "authorName": "Canitrot FRANCIS",
+  "forceBlank": true,
   "authorCountry": "Frankreich",
+  "entryType": "Film",
   "yearOfProduction": 2023,
+  "deactivated": false,
+  "desc": "Éli ist fünfzig Jahre alt, und sein ganzes Leben dreht sich um die Pflege seiner im Rollstuhl sitzenden Mutter. Diese mischt sich ständig in sein Liebesleben ein und will ihn mit der Nachbarin Nathalie verkuppeln. Sehnsüchtig nach ihrer wilden Jugend ist sie von Sex besessen, sehr zum Leidwesen ihres Sohnes. Eines Nachts stirbt die alte Frau. Doch die konfliktreiche Beziehung zwischen Éli und seiner Mutter findet damit kein Ende.\n\nDer Stop-Motion-Film feierte Premiere in Cannes und setzt sich mit dem uralten Thema des Ödipuskomplexes auseinander.",
   "duration": "15 Minutes",
-  "desc": "<p>Éli is fifty years old and his sole occupation in life is taking care of and putting up with his wheelchair-bound mother. Meddling in her son's sex life, she wants him to hook up with their neighbor, Nathalie. Nostalgic for her wild youth, she's obsessed with sex, which makes her son's life hell. One night, the old lady dies.<br>However, the conflictual relationship between Éli and his mother is not resolved…</p>",
+  "videourl": "https://www.youtube.com/watch?v=dyCP7K3h3ws",
+  "authorName": "Canitrot FRANCIS",
+  "title": "Le sexe de ma mère",
+  "image": "/images/uploads/com03_1080p.jpg",
+  "uuid": "le-sexe-de-ma-mre--film-249",
   "warning": "",
-  "image": "",
-  "additionalImages": [],
-  "videourl": "",
-  "forceBlank": false,
-  "deactivated": false
+  "additionalImages": [
+    {
+      "image": "/images/uploads/com02_1080p.jpg"
+    },
+    {
+      "image": "/images/uploads/com01_1080p.jpg"
+    },
+    {
+      "image": "/images/uploads/com04_1080p.jpg"
+    }
+  ]
 }

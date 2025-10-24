@@ -1,16 +1,23 @@
 {
-  "uuid": "ob-scena--film-308",
-  "title": "Ob Scena",
-  "entryType": "Film",
-  "authorName": "Paloma ORLANDINI CASTRO",
-  "authorCountry": "Argentinien",
-  "yearOfProduction": 2021,
-  "duration": "17 Minutes",
-  "desc": "<p><br>Ob Scena es un cortometraje documental-experimental que retoma textos académicos sobre sexualidad escrito por un psiquiatra en Cuba en los ’80 y establece un vinculo con la pornografía actual. Una reflexión sobre el lugar de control social infiltrado discretamente en la representación del sexo.</p>\r\n<p>Ob Scena is an experimental documentary short that revisits academic writings on sexuality penned by a Cuban psychiatrist in the 1980s, weaving them into a dialogue with contemporary pornography. It is a reflection on the mechanisms of social control discreetly embedded in the representation of sex.</p>",
-  "warning": "",
-  "image": "",
-  "additionalImages": [],
-  "videourl": "",
   "forceBlank": false,
-  "deactivated": false
+  "authorCountry": "Argentinien",
+  "entryType": "Film",
+  "yearOfProduction": 2021,
+  "deactivated": false,
+  "desc": "OB SCENA ist ein experimenteller dokumentarischer Kurzfilm, der wissenschaftliche Schriften eines kubanischen Psychiaters aus den 1980er-Jahren über Sexualität neu aufgreift und sie in einen Dialog mit zeitgenössischer Pornografie stellt. Der Film ist eine Reflexion über die Mechanismen sozialer Kontrolle, die sich unauffällig in der Darstellung von Sexualität verbergen.",
+  "duration": "17 Min, Spanisch/Englische UT",
+  "videourl": "",
+  "authorName": "Paloma Orlandini Castro",
+  "title": "Ob Scena",
+  "image": "/images/uploads/ob_scena_01.jpg",
+  "uuid": "ob-scena",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/ob_scena_02.jpg"
+    },
+    {
+      "image": "/images/uploads/ob_scena_03.jpg"
+    }
+  ]
 }

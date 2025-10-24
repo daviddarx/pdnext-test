@@ -1,16 +1,24 @@
 {
-  "uuid": "our-first--film-264",
-  "title": "Our First",
-  "entryType": "Film",
-  "authorName": "Finn DARRELL & Keaton Brignall MCDOUGALL",
-  "authorCountry": "Vereinigtes Königreich",
-  "yearOfProduction": 2024,
-  "duration": "3 Minutes",
-  "desc": "<p>two gimps, the performance duo - KIN - experiment with how to use each other's bodies, aided by the voice of their voyeur. Bizarre baby-making and unconventional tastes collide in this surreal noire erotica.</p>",
-  "warning": "",
-  "image": "",
-  "additionalImages": [],
-  "videourl": "",
+  "typeComplement": "",
   "forceBlank": false,
-  "deactivated": false
+  "authorCountry": "UK",
+  "entryType": "Film",
+  "yearOfProduction": 2025,
+  "deactivated": false,
+  "desc": "Zwei Gimps – das provokante Performance-Duo KIN – erkunden lustvoll, wie sie die Körper des anderen einsetzen und formen können, geführt von der verführerischen Stimme ihres Voyeurs. Bizarr-erotische Fantasien von ekstatischer Vereinigung und unkonventionellen Begierden verschmelzen zu einem sinnlich-düsteren Noir-Erlebnis.",
+  "duration": "3 Min, Englisch ohne Untertitel",
+  "videourl": "",
+  "authorName": "Finn Darrell & Keaton Brignall McDougnall",
+  "title": "Our First",
+  "image": "/images/uploads/our_first_2.jpeg",
+  "uuid": "our-first--film-264",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/our_first_1.jpeg"
+    },
+    {
+      "image": "/images/uploads/our_first_3.jpg"
+    }
+  ]
 }

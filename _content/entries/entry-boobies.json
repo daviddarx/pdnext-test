@@ -1,16 +1,20 @@
 {
-  "uuid": "boobies--film-251",
-  "title": "Boobies",
-  "entryType": "Film",
-  "authorName": "Emma CHEVALIER",
-  "authorCountry": "Frankreich",
-  "yearOfProduction": 2024,
-  "duration": "6 Minutes",
-  "desc": "",
-  "warning": "",
-  "image": "",
-  "additionalImages": [],
-  "videourl": "",
   "forceBlank": false,
-  "deactivated": false
+  "authorCountry": "Frankreich",
+  "entryType": "Film",
+  "yearOfProduction": 2024,
+  "deactivated": false,
+  "desc": "Ein Paar will ein erotisches Video drehen. Doch aus dem Spiel mit der Kamera wird rasch eine Diskussion über Liebe, Körper und hypothetische Verluste. \n\n*In Anwesenheit von Emma Chevalier*",
+  "duration": "6 Min, Französisch mit engl. UT",
+  "videourl": "",
+  "authorName": "Emma Chevalier",
+  "title": "Boobies",
+  "image": "/images/uploads/boobies_1.jpeg",
+  "uuid": "boobies--film-251",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/03-les_seins_boobies.jpg"
+    }
+  ]
 }

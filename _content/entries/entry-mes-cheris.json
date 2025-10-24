@@ -1,16 +1,23 @@
 {
-  "uuid": "mes-cheris--film-323",
-  "title": "Mes Chéris",
-  "entryType": "Film",
-  "authorName": "Ethan FOLK & Ty WARDWELL",
-  "authorCountry": "Deutschland",
-  "yearOfProduction": 2020,
-  "duration": "12 Minutes",
-  "desc": "<p>Part documentary, part pornography, Mes Chéris is a transboi’s farewell to his boobs. One month before his mastectomy, Jamal Phoenix takes on the role of Chéri, a character modeled after his experiences as a Fierce Fem sex worker. This raunchy tribute subverts straight porn tropes and mainstream trans* representation in a radical act of self-love.</p>",
-  "warning": "",
-  "image": "",
-  "additionalImages": [],
-  "videourl": "",
   "forceBlank": false,
-  "deactivated": false
+  "authorCountry": "Deutschland",
+  "entryType": "Film",
+  "yearOfProduction": 2020,
+  "deactivated": false,
+  "desc": "MES CHÉRIS ist der Abschied eines Transbois von seinen Brüsten. Einen Monat vor seiner Mastektomie schlüpft Bat Boi in die Rolle von Chéri, einer Figur, die seinen Erfahrungen als wilde Fem Sexarbeiterin nachempfunden ist. Diese schlüpfrige Hommage untergräbt die Tropen des Heteropornos und der Mainstream-Trans*-Darstellung in einem radikalen Akt der Selbstliebe.",
+  "duration": "12 Min, Englisch",
+  "videourl": "",
+  "authorName": "Ty Wardwell, Ethan Folk & Jamal Phoenix",
+  "title": "Mes Chéris",
+  "image": "/images/uploads/03_mes_cheris.jpg",
+  "uuid": "mes-cheris--film-323",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/02_mes_cheris.jpg"
+    },
+    {
+      "image": "/images/uploads/01_mes_cheris.jpg"
+    }
+  ]
 }

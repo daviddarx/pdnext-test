@@ -1,16 +1,29 @@
 {
-  "uuid": "she-and-her-good-vibrations--film-266",
-  "title": "She and Her Good Vibrations",
-  "entryType": "Film",
-  "authorName": "Olivia GRISELDA & Sarah CHEOK",
-  "authorCountry": "Singapur",
-  "yearOfProduction": 2023,
-  "duration": "11 Minutes",
-  "desc": "<p>She and Her Good Vibrations is an animated short celebrating female self-pleasure and sex positivity. It follows a stressed, middle-aged woman who finds liberation in discovering her vibrator. But as her delight turns to obsession, she blurs the line between fantasy and reality — exploring the humorous, heartfelt chaos of rediscovering desire and control.</p>\r\n<p> </p>",
-  "warning": "",
-  "image": "",
-  "additionalImages": [],
-  "videourl": "",
   "forceBlank": false,
-  "deactivated": false
+  "authorCountry": "Singapur",
+  "entryType": "Film",
+  "yearOfProduction": 2023,
+  "deactivated": false,
+  "desc": "SHE AND HER GOOD VIBRATIONSist ein animierter Kurzfilm, der die weibliche Selbstlust feiert. Er erzählt von einer gestressten Frau, die durch die Entdeckung eines Vibrators Befreiung findet. Doch als ihre Freude in Besessenheit umschlägt, verwischt sie die Grenze zwischen Fantasie und Realität. Der Film erkundet das humorvolle, herzliche Chaos des Wiederentdeckens von sexueller Lust.",
+  "duration": "11 Min., ohne Dialog",
+  "videourl": "",
+  "authorName": "Olivia Griselda & Sarah Cheok",
+  "title": "She and Her Good Vibrations",
+  "image": "/images/uploads/01_she-and-her-good-vibrations.jpg",
+  "uuid": "she-and-her-good-vibrations--film-266",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/02_she-and-her-good-vibrations.jpg"
+    },
+    {
+      "image": "/images/uploads/04_she-and-her-good-vibrations.jpg"
+    },
+    {
+      "image": "/images/uploads/03_she-and-her-good-vibrations.jpg"
+    },
+    {
+      "image": "/images/uploads/05_she-and-her-good-vibrations_title-card.jpg"
+    }
+  ]
 }

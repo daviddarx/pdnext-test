@@ -1,16 +1,20 @@
 {
-  "uuid": "untitled-fucking--film-284",
-  "title": "Untitled Fucking",
-  "entryType": "Film",
-  "authorName": "Xandra IBARRA & Hawk Swanson AMBER",
-  "authorCountry": "Mexiko",
-  "yearOfProduction": 2013,
-  "duration": "15 Minutes",
-  "desc": "<p>In Western gay male subculture, being the Bottom is associated with femininity, faggotry, weakness, sexual insatiability, and decadence. I have noticed in conversations with my gay male friends that to call someone a Bottom is almost a put-down, a devaluation of his masculinity, his manhood, his aspiration-to-butchness. To call oneself a Bottom in polite conversation invariably elicits nervous (&amp; knowing?) giggles and opens oneself to ridicule. While pointing out the problems of relegating Asian men to the exclusive role of Bottom and instead of offering the reverse argument that Asian men are really Butch Tops, in this pseudo-instructional work-out videotape, I articulate, trace, and embrace the pleasures and desires of full-on, unrepentant Bottomhood. This aggressive and insatiable Asian Boy-Bottom is forever-ready: in the shower, the kitchen, on the carpet, the floor, the balcony, the front lawn, at the park, the beach, in the car…</p>",
-  "warning": "",
-  "image": "",
-  "additionalImages": [],
-  "videourl": "",
   "forceBlank": false,
-  "deactivated": false
+  "authorCountry": "Mexiko",
+  "entryType": "Film",
+  "yearOfProduction": 2013,
+  "deactivated": false,
+  "desc": "UNTITLED FUCKING inszeniert einen queeren Verkehr zwischen Sexakten und Sprechakten. Indem es Elemente der jeweiligen Performance-Personas von Xandra Ibarra und Amber Hawk Swanson zusammenführt, untersucht diese Zusammenarbeit die schwierige Naht zwischen Sagen und Tun, die nicht nur politische Fragen von Identität und Verkörperung vernäht, sondern auch tiefere Konzepte von Repräsentation und Performance, von Stellvertreterin und Selbst. Durch die Inszenierung einer sexuellen Begegnung zwischen zwei Künstlerinnen bringt UNTITLED FUCKING zwei queere feministische Kunstpraktiken zusammen, die sich mit Fragen von Repräsentation und Performance auseinandersetzen.",
+  "duration": "15 Minutes, Englisch",
+  "videourl": "",
+  "authorName": "Xandra Ibarra & Hawk Swanson Amber",
+  "title": "Untitled Fucking",
+  "image": "/images/uploads/01_untiled_fucking.jpg",
+  "uuid": "untitled-fucking",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/untiled_fucking_tapatio_cock_02.jpg"
+    }
+  ]
 }

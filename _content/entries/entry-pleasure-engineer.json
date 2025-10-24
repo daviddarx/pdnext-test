@@ -1,16 +1,23 @@
 {
-  "uuid": "pleasure-engineer--film-247",
-  "title": "PLEASURE ENGINEER",
-  "entryType": "Film",
-  "authorName": "Christina CASTALIA",
-  "authorCountry": "Niederlande",
-  "yearOfProduction": 2025,
-  "duration": "11 Minutes",
-  "desc": "<p>This short film offers a dual perspective on intimacy, contrasting the gaze of the viewer with the lived experience of the cam model. Through the lens of Christina Castalia—who has spent 14 years cultivating connections with her clients. Following a week in her life, the film provides a rare, intimate insight into the emotional realities behind the screen.</p>\r\n<p> </p>\r\n<p> </p>",
-  "warning": "",
-  "image": "",
-  "additionalImages": [],
-  "videourl": "",
   "forceBlank": false,
-  "deactivated": false
+  "authorCountry": "Niederlande",
+  "entryType": "Film",
+  "yearOfProduction": 2025,
+  "deactivated": false,
+  "desc": "In diesem Kurzfilm erleben wir Intimität aus zwei unterschiedlichen Perspektiven: aus der Sicht der Zuschauer*innen und aus der Sicht des Cam-Models.\n\nChristina Castalia arbeitet seit 14 Jahren als Cam-Model und hat im Laufe der Zeit viele starke und intime Verbindungen zu ihren Kund*innen aufgebaut. Der Film gewährt einen Einblick in eine Woche ihres Lebens.\n\n*In Anwesenheit von Christina Castalia*",
+  "duration": "11 Min, Englisch mit engl. UT",
+  "videourl": "",
+  "authorName": "Christina Castalia",
+  "title": "Pleasure Engineer",
+  "image": "/images/uploads/pleasure_1.jpeg",
+  "uuid": "pleasure-engineer--film-247",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/pleasure_3.jpeg"
+    },
+    {
+      "image": "/images/uploads/pleasure_2.jpeg"
+    }
+  ]
 }

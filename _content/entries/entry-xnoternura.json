@@ -1,16 +1,23 @@
 {
-  "uuid": "xnoternura--film-307",
-  "title": "Xnoternura",
-  "entryType": "Film",
-  "authorName": "Julian MERLO",
-  "authorCountry": "Argentinien",
-  "yearOfProduction": 2023,
-  "duration": "20 Minutes",
-  "desc": "<p>Against the common imagination of what it means to take part in a scene of explicit sex before a camera, \"Xnoternura\" seeks to humanize those involved through an intimate conversation about desires, insecurities, and life experiences—while also showing that tenderness and affection can be part of porn</p>",
-  "warning": "",
-  "image": "",
-  "additionalImages": [],
-  "videourl": "",
   "forceBlank": false,
-  "deactivated": false
+  "authorCountry": "Argentinien",
+  "entryType": "Film",
+  "yearOfProduction": 2023,
+  "deactivated": false,
+  "desc": "Gegen die gängige Vorstellung davon, was es bedeutet, Teil einer expliziten Sexszene vor der Kamera zu sein, zeigt XNOTERNURA die Beteiligten in einem intimen Gespräch über Begehren, Unsicherheiten und Lebenserfahrungen und macht sichtbar, dass Zärtlichkeit und Zuneigung Teil von Pornografie sein können.",
+  "duration": "20 Min, Spanisch/Englische UT",
+  "videourl": "",
+  "authorName": "Julian Merlo",
+  "title": "Xnoternura",
+  "image": "/images/uploads/01_xnoternura.jpg",
+  "uuid": "xnoternura",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/02_xnoternura.jpg"
+    },
+    {
+      "image": "/images/uploads/03_xnoternura.jpg"
+    }
+  ]
 }

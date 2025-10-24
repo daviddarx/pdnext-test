@@ -1,0 +1,21 @@
+{
+  "timetable": [
+    {
+      "time": "14:30-15:00 ",
+      "title": "Ankommen"
+    }
+  ],
+  "eventdate": "2025-11-29T15:00:00.000Z",
+  "eventlocationlink": "https://www.instagram.com/das_gleis/?hl=el",
+  "price": "Gratis Eintritt\n\n**Plätze sind beschränkt auf 50 Personen.**",
+  "layout": "event",
+  "hideReducedPrice": false,
+  "eventlocation": "Das Gleis ",
+  "entries": [
+    "sex and drugs "
+  ],
+  "deactivated": false,
+  "desc": "Die Veranstaltungsreihe „let's talkabout sex and drugs\" ist ein Open-Mic über wichtige Themen rund um Sex,Substanzen und Party in einem cozy Umfeld unter Freund*innen.\n\nOrganisiert wird die Veranstaltungsreihe vom Drogeninformationszentrum (DIZ) in Zusammenarbeit mit Dr. Martin Viehweger und Dario Callerame und findet im Rahmen der Porny Days statt.\n\nAnkommen und sich mit Getränken versorgen ab 14:30 Uhr, Veranstaltungsbeginn um 15:00 Uhr - kostenlos und unverbindlich!",
+  "eventlocationcomplement": "Zollstrasse 121, 8005 Zürich",
+  "title": "Let's talk about sex and drugs"
+}

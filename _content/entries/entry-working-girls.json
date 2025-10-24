@@ -1,16 +1,26 @@
 {
-  "uuid": "working-girls--film-318",
-  "title": "Working Girls",
-  "entryType": "Film",
-  "authorName": "Lizzie BORDEN",
-  "authorCountry": "Vereinigte Staaten",
-  "yearOfProduction": 1986,
-  "duration": "93 Minutes",
-  "desc": "",
-  "warning": "",
-  "image": "",
-  "additionalImages": [],
-  "videourl": "",
   "forceBlank": false,
-  "deactivated": false
+  "authorCountry": "Vereinigte Staaten",
+  "entryType": "Film",
+  "yearOfProduction": 1986,
+  "deactivated": false,
+  "desc": "In WORKING GILRS widmet sich Lizzie Borden dem Alltag von Sexarbeiter:innen in einem New Yorker Bordell. Fernab von voyeuristischen Klischees und moralischen Zuschreibungen, die die Darstellung von Sexarbeit oft begleiten, zeigt der Film die Routinen und Gespräche eines Arbeitstags und gibt Einblick in die Arbeitsbedingungen der Frauen.",
+  "duration": "93 Min, Englisch/Deutsche UT",
+  "videourl": "",
+  "authorName": "Lizzie Borden",
+  "title": "Working Girls",
+  "image": "/images/uploads/01_working_girls.jpg",
+  "uuid": "working-girls",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/02_working-girls.jpeg"
+    },
+    {
+      "image": "/images/uploads/03_working_girls.jpeg"
+    },
+    {
+      "image": "/images/uploads/04_working_girls.jpeg"
+    }
+  ]
 }

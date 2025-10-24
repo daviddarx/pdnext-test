@@ -1,16 +1,19 @@
 {
-  "layout": "event",
-  "title": "Truth or Dare",
-  "eventlocation": "Riffraff Cinema",
-  "eventlocationcomplement": "",
-  "eventlocationlink": "",
-  "eventdate": "2025-11-27T18:30:00.000Z",
-  "desc": "",
-  "ticketsLink": "",
-  "ticketsLinkTitle": "",
   "timetable": [],
+  "ticketsLink": "",
+  "eventdate": "2025-11-27T18:20:00.000Z",
+  "eventlocationlink": "https://www.riffraff-houdini.ch/",
   "price": "",
+  "layout": "event",
   "hideReducedPrice": false,
-  "entries": [],
-  "deactivated": false
+  "eventlocation": "Riffraff 2",
+  "entries": [
+    "truth-or-dare--film-239"
+  ],
+  "deactivated": false,
+  "desc": "Im Herzen der sex-positiven queeren Szene Berlins kommt ein Kollektiv von Menschen zu einem Spiel aus „Wahrheit oder Pflicht“ zusammen – rund um Sexualität, Einvernehmen und Selbsterkenntnis.",
+  "eventlocationcomplement": "",
+  "ticketsLinkTitle": "",
+  "subtitle": "Dokumentarfilm",
+  "title": "Truth or Dare"
 }

@@ -1,16 +1,20 @@
 {
-  "uuid": "eden-iii-medusa--film-304",
-  "title": "Eden III: Medusa",
-  "entryType": "Film",
-  "authorName": "Tevo IAN",
-  "authorCountry": "Peru",
-  "yearOfProduction": 2022,
-  "duration": "4 Minutes",
-  "desc": "<p>EDEN III is part of a series of video performances that critique the mandate of hegemonic masculinity and its notions of performance and virility. The participants are six Venezuelan migrant sex workers, a population whose migration to Peru has grown significantly over the years. Through conversations and exercises, we step out of our comfort zones to question masculinity and the weight we place on the erection as the supposed reflex of sexual desire</p>",
-  "warning": "",
-  "image": "",
-  "additionalImages": [],
-  "videourl": "",
   "forceBlank": false,
-  "deactivated": false
+  "authorCountry": "Peru",
+  "entryType": "Film",
+  "yearOfProduction": 2022,
+  "deactivated": false,
+  "desc": "EDEN III ist Teil einer Serie von Videoperformances, die das Gebot hegemonialer Männlichkeit und ihre Vorstellungen von Performance und Virilität kritisieren. Die Beteiligten sind sechs venezolanische migrantische Sexarbeiter, eine Bevölkerung, deren Migration nach Peru über die Jahre stark zugenommen hat. Durch Gespräche und Übungen verlassen wir unsere Komfortzone, um Männlichkeit und das Gewicht, das wir auf die Erektion als vermeintlichen Reflex sexuellen Begehrens legen, in Frage zu stellen.",
+  "duration": "4 Min, kein Dialog",
+  "videourl": "",
+  "authorName": "Tevo Ian",
+  "title": "Eden III: Medusa",
+  "image": "/images/uploads/01_eden.jpg",
+  "uuid": "eden-iii-medusa",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/02_eden.jpg"
+    }
+  ]
 }

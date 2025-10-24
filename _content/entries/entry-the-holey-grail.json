@@ -1,16 +1,23 @@
 {
-  "uuid": "the-holey-grail--film-320",
-  "title": "The Holey Grail",
-  "entryType": "Film",
-  "authorName": "Ty WARDWELL & Ethan FOLK",
-  "authorCountry": "Deutschland",
-  "yearOfProduction": 2022,
-  "duration": "6 Minutes",
-  "desc": "<p>It’s trial by goblet for this horny cup-bearer on his first day. Madame is thirsty and he’d better not spill a drop!</p>",
-  "warning": "",
-  "image": "",
-  "additionalImages": [],
-  "videourl": "",
   "forceBlank": false,
-  "deactivated": false
+  "authorCountry": "Deutschland",
+  "entryType": "Film",
+  "yearOfProduction": 2022,
+  "deactivated": false,
+  "desc": "Für diesen geilen Kellner ist es eine Bewährungsprobe an seinem ersten Tag. Madame ist durstig und er darf keinen einzigen Tropfen verschütten!",
+  "duration": "6 Min, Englisch",
+  "videourl": "",
+  "authorName": "Ty Wardwell & Ethan Folk",
+  "title": "The Holey Grail",
+  "image": "/images/uploads/03_the_holey_grail.jpg",
+  "uuid": "the-holey-grail",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/02_the_holey_grail.jpg"
+    },
+    {
+      "image": "/images/uploads/01_the_holey_grail.jpg"
+    }
+  ]
 }

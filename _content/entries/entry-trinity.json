@@ -1,16 +1,23 @@
 {
-  "uuid": "trinity--film-309",
-  "title": "Trinity",
-  "entryType": "Film",
-  "authorName": "Ms. NAUGHTY",
-  "authorCountry": "Australien",
-  "yearOfProduction": 2016,
-  "duration": "5 Minutes",
-  "desc": "<p>A couple invite a third partner into their bed for an afternoon of experimentation. They share playful, intimate and intense moments in a bisexual threesome - but not everything is as it seems.</p>",
-  "warning": "",
-  "image": "",
-  "additionalImages": [],
-  "videourl": "",
   "forceBlank": false,
-  "deactivated": false
+  "authorCountry": "Australien",
+  "entryType": "Film",
+  "yearOfProduction": 2016,
+  "deactivated": false,
+  "desc": "Ein Couple lädt eine dritte Person zu einem Nachmittag voller Experimente in ihr Bett ein. In einem bisexuellen Dreier erleben sie verspielte, intime und intensive Momente – doch nicht alles ist so wie es scheint.",
+  "duration": "5 Min, Englisch",
+  "videourl": "",
+  "authorName": "Ms. Naughty",
+  "title": "Trinity",
+  "image": "/images/uploads/trinity_01.jpg",
+  "uuid": "trinity--film",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/trinity_02.jpg"
+    },
+    {
+      "image": "/images/uploads/trinity_03.jpg"
+    }
+  ]
 }

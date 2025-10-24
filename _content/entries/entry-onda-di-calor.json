@@ -1,16 +1,23 @@
 {
-  "uuid": "onda-di-calor--film-300",
-  "title": "Onda di Calor",
-  "entryType": "Film",
-  "authorName": "Link ZUMA",
-  "authorCountry": "Brasilien",
-  "yearOfProduction": 2024,
-  "duration": "17 Minutes",
-  "desc": "<p>On a terribly hot day, four construction workers are surprised by the sudden appearance of BixaPuta at the site. Bold and shameless, she is determined to satisfy her obscene desires and bring pleasure to this sweaty crew.</p>",
-  "warning": "",
-  "image": "",
-  "additionalImages": [],
-  "videourl": "",
   "forceBlank": false,
-  "deactivated": false
+  "authorCountry": "Brasilien",
+  "entryType": "Film",
+  "yearOfProduction": 2024,
+  "deactivated": false,
+  "desc": "An einem furchtbar heissen Tag überrascht BixaPuta eine Baustelle mit ihrem plötzlichen Auftauchen. Vier Bauarbeiter:innen, verschwitzt von der Arbeit, werden Teil ihrer obszönen Begierde.",
+  "duration": "17 Min, Portugiesisch/Englische UT",
+  "videourl": "",
+  "authorName": "Link Zuma",
+  "title": "Onda di Calor",
+  "image": "/images/uploads/01_onda_di_calor.jpg",
+  "uuid": "onda-di-calor",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/02_onda_di_calor.jpg"
+    },
+    {
+      "image": "/images/uploads/04_onda_di_calor.jpg"
+    }
+  ]
 }

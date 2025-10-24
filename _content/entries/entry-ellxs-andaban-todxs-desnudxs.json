@@ -1,16 +1,20 @@
 {
-  "uuid": "ellxs-andaban-todxs-desnudxs--film-306",
-  "title": "Ellxs andaban todxs desnudxs",
-  "entryType": "Film",
-  "authorName": " COLECTIVO AYLLU",
-  "authorCountry": "Spanien",
-  "yearOfProduction": 2018,
-  "duration": "3 Minutes",
-  "desc": "<p>In the gardens of the Monastery of La Cartuja in Seville once lay the remains of Christopher Columbus, now kept in Seville Cathedral. In one of his earliest letters, the conquistador wrote that the Indigenous people walked naked and bore no weapons, making it easy to turn them into servants. This embodied performance sought to confront those words with the statue of a young Columbus that was installed in the gardens in 1887.</p>",
-  "warning": "",
-  "image": "",
-  "additionalImages": [],
-  "videourl": "",
   "forceBlank": false,
-  "deactivated": false
+  "authorCountry": "Spanien",
+  "entryType": "Film",
+  "yearOfProduction": 2018,
+  "deactivated": false,
+  "desc": "In den Gärten des Klosters La Cartuja in Sevilla lagen einst die sterblichen Überreste von Christoph Kolumbus, die heute in der Kathedrale von Sevilla aufbewahrt werden. In einem seiner frühesten Briefe schrieb der Eroberer, dass die Indigenen nackt gingen und keine Waffen trugen, was es einfach mache, sie zu Dienern zu machen. Diese verkörperte Performance suchte die Konfrontation mit jenen Worten anhand der Statue eines jungen Kolumbus, die 1887 in den Gärten errichtet wurde.",
+  "duration": "3 Min, Spanisch/Englische UT",
+  "videourl": "",
+  "authorName": "Colectivo Ayllu",
+  "title": "Ellxs andaban todxs desnudxs",
+  "image": "/images/uploads/01_ellsxs.jpg",
+  "uuid": "ellxs-andaban-todxs-desnudxs--film-306",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/02_ellsxs.jpg"
+    }
+  ]
 }
