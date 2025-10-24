@@ -5,7 +5,7 @@
   "eventlocationlink": "https://www.riffraff-houdini.ch/de-ch/programm.html",
   "price": "CHF 25",
   "layout": "event",
-  "hideReducedPrice": false,
+  "hideReducedPrice": true,
   "eventlocation": "Riffraff 1",
   "entries": [
     "our-first--film-264",
