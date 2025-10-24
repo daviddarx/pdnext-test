@@ -39,11 +39,12 @@ const Event = ({ event, dateVisible = false }: Props) => {
         {!dateVisible && <div className='event__hour'>{event.date.hour}</div>}
 
         <div className='event__infos'>
-          <h3 className='event__title title-effect'>
+          <h3 className='event__title'>
             <span
               dangerouslySetInnerHTML={{
                 __html: event.title,
               }}
+              className='title-effect'
             />{' '}
             {event.specialstate && (
               <span className='tag tag--sm event__special-state'>{event.specialstate}</span>
