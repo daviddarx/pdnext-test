@@ -28,8 +28,8 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      white: '#F6DEE0',
-      black: '#5D075A',
+      white: '#E1DED5',
+      black: '#2F1537',
       lightGrey: 'hsla(200, 100%, 10%, 0.07)',
       whiteScrollable: 'rgba(255, 255, 255, 0.65)',
       focusVisible: 'hsla(321, 100%, 66%, 0.7)',
