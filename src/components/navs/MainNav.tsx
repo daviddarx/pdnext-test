@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import classNames from 'classnames';
 
 import { routes, type Route } from '@/routes/routes';
 import { uiActions } from '@/store';
@@ -24,7 +25,11 @@ const MainNav = () => {
       <div className='main-nav'>
         <h2 className='hidden'>Navigation</h2>
         <div>
-          <ul className='main-nav__nav main-nav__nav--main'>
+          <ul
+            className={classNames('main-nav__nav main-nav__nav--main', {
+              'main-nav__nav--ons-home': routes.main.ons.home,
+            })}
+          >
             {Object.keys(routes.main).map((key) => {
               const route = routes.main[key as keyof typeof routes.main] as Route;
               return (
@@ -34,7 +39,7 @@ const MainNav = () => {
                     activeClassName='main-nav__link--active'
                     href={'/' + route.slug}
                   >
-                    <span className='main-nav__link-text'>{route.title}</span>
+                    <span className='main-nav__link-text title-effect'>{route.title}</span>
                     <span className='main-nav__link-detail'>{route.complement}</span>
                   </ActiveLink>
                 </li>

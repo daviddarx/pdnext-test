@@ -25,7 +25,7 @@ const BottomNavGroup = ({ header, items, withSocials }: BottomNavGroupProps) => 
           return (
             <li key={route.slug}>
               <ActiveLink
-                className='bottom-nav__link'
+                className='bottom-nav__link title-effect'
                 activeClassName='bottom-nav__link--active'
                 href={'/' + route.slug}
               >

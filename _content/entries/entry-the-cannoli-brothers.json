@@ -1,0 +1,23 @@
+{
+  "forceBlank": false,
+  "authorCountry": "Deutschland",
+  "entryType": "Film",
+  "yearOfProduction": 2023,
+  "deactivated": false,
+  "desc": "Sie sind vielleicht keine echten Brüder, aber ihre Cannoli sind alles andere als fake.",
+  "duration": "3 Min, Englisch",
+  "videourl": "",
+  "authorName": "Ty Wardwell & Ethan Folk",
+  "title": "The Cannoli Brothers",
+  "image": "/images/uploads/03_cannoli_brothers.jpg",
+  "uuid": "the-cannoli-brothers--film-319",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/02_cannoli_brothers.jpg"
+    },
+    {
+      "image": "/images/uploads/01_cannoli_brothers.jpg"
+    }
+  ]
+}

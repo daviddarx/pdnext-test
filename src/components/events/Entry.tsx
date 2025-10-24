@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
 import { uiActions } from '@/store';
-import { Entry } from '@/types/Entry';
+import type { Entry } from '@/types/Entry';
 
 import LoadedImage from '@/components/ui/LoadedImage';
 import EntryGallery from './EntryGallery';
@@ -19,6 +19,21 @@ const Entry: React.FC<Props> = ({ entry }) => {
 
   const handleImageLoaded = () => {
     setIsImageLoaded(true);
+  };
+
+  const buildDescriptionContent = () => {
+    let authorPart = '';
+    if (entry.authorName || entry.authorCountry || entry.yearOfProduction || entry.duration) {
+      if (entry.authorName) {
+        authorPart += `${entry.authorName}  \n`;
+      }
+      if (entry.authorCountry || entry.yearOfProduction || entry.duration) {
+        const parts = [entry.authorCountry, entry.yearOfProduction, entry.duration].filter(Boolean);
+        authorPart += parts.join(', ') + '.\n\n';
+      }
+    }
+
+    return authorPart + entry.desc;
   };
 
   const launchVideo = (e: React.MouseEvent<HTMLAnchorElement>, videoURL: string) => {
@@ -73,13 +88,13 @@ const Entry: React.FC<Props> = ({ entry }) => {
         </div>
       </div>
 
-      <h3 className='entry__title'>{entry.title}</h3>
+      <h3 className='entry__title title-effect'>{entry.title}</h3>
       <div className='entry__type'>
         {entry.entryType} {entry.typeComplement && <span> – {entry.typeComplement}</span>}
       </div>
 
       <ReactMarkdown className='text-content entry__desc' remarkPlugins={[remarkGfm]}>
-        {entry.desc}
+        {buildDescriptionContent()}
       </ReactMarkdown>
 
       {entry.warning && (

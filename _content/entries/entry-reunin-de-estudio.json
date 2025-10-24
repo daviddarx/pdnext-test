@@ -1,0 +1,20 @@
+{
+  "forceBlank": false,
+  "authorCountry": "Kolumbien",
+  "entryType": "Film",
+  "yearOfProduction": 2023,
+  "deactivated": false,
+  "desc": "Zwei Universitätsstudenten, Kevin und Paco, treffen sich bei Paco zu Hause, um an einer Präsentation zu arbeiten. Doch Kevin ist irritiert von Pacos ungewöhnlicher Beziehung zu seinem Haustier, Coco.",
+  "duration": "3 Min, Spanisch/Englische UT",
+  "videourl": "",
+  "authorName": "Sakura Ardila Ortiz",
+  "title": "Reunión de estudio",
+  "image": "/images/uploads/01_reunion_de_estudio.jpg",
+  "uuid": "reunin-de-estudio",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/02_reunion_de_estudio.jpg"
+    }
+  ]
+}

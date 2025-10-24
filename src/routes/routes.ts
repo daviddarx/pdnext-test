@@ -23,16 +23,17 @@ export type BottomNavRoutes = {
 
 export const routes = {
   main: {
-    ons: {
-      slug: 'one-night-stands',
-      title: 'One Night Stands',
-      complement: 'Saisonales Programm',
-    },
     festival: {
       slug: 'festival-program',
       title: 'Festival Programm',
       complement: '13. Edition – 21. - 30. November 2025',
-      comingSoon: true,
+      comingSoon: false,
+    },
+    ons: {
+      slug: 'one-night-stands',
+      title: 'One Night Stands',
+      complement: 'Saisonales Programm',
+      home: false,
     },
   },
   secondary: {

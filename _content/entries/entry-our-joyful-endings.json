@@ -1,0 +1,23 @@
+{
+  "forceBlank": false,
+  "authorCountry": "Frankreich",
+  "entryType": "Film",
+  "yearOfProduction": 2025,
+  "deactivated": false,
+  "desc": "OUR JOYFUL ENDINGS folgt dem Tagebuch eines transmaskulinen Menschen, der miterlebt, wie sich sein Körper und die Wahrnehmung anderer während seiner Transition verändern. Zwischen Verlangen, Angst und Selbstzweifeln lernt er, den Wandel zu umarmen. Durch die Verbindung mit anderen, die ähnliche Erfahrungen teilen, entstehen Trost und Freude – und es zeigt sich, dass jedes Ende zugleich ein Anfang auf dem Weg zur Selbstakzeptanz sein kann.",
+  "duration": "7 Min., Französisch mit engl. UT",
+  "videourl": "",
+  "authorName": "La Fille Renne & Lucie Babayan",
+  "title": "Our Joyful Endings",
+  "image": "/images/uploads/joy_2.jpeg",
+  "uuid": "our-joyful-endings--film-265",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/joy_1.jpeg"
+    },
+    {
+      "image": "/images/uploads/joy_3.jpeg"
+    }
+  ]
+}
