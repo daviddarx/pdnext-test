@@ -1,0 +1,23 @@
+{
+  "forceBlank": false,
+  "authorCountry": "Argentinien",
+  "entryType": "Film",
+  "yearOfProduction": 2021,
+  "deactivated": false,
+  "desc": "OB SCENA ist ein experimenteller dokumentarischer Kurzfilm, der wissenschaftliche Schriften eines kubanischen Psychiaters aus den 1980er-Jahren über Sexualität neu aufgreift und sie in einen Dialog mit zeitgenössischer Pornografie stellt. Der Film ist eine Reflexion über die Mechanismen sozialer Kontrolle, die sich unauffällig in der Darstellung von Sexualität verbergen.",
+  "duration": "17 Min, Spanisch/Englische UT",
+  "videourl": "",
+  "authorName": "Paloma Orlandini Castro",
+  "title": "Ob Scena",
+  "image": "/images/uploads/ob_scena_01.jpg",
+  "uuid": "ob-scena",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/ob_scena_02.jpg"
+    },
+    {
+      "image": "/images/uploads/ob_scena_03.jpg"
+    }
+  ]
+}

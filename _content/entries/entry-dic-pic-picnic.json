@@ -1,0 +1,23 @@
+{
+  "forceBlank": false,
+  "authorCountry": "Deutschland",
+  "entryType": "Film",
+  "yearOfProduction": 2020,
+  "deactivated": false,
+  "desc": "Als Jesse sich krank zum jährlichen Picknick meldet, schicken diese Perversen das Buffet per Sexting direkt in Jesses Bett.",
+  "duration": "2 Min, Englisch",
+  "videourl": "",
+  "authorName": "Ty Wardwell & Ethan Folk",
+  "title": "Dic Pic Picnic",
+  "image": "/images/uploads/03_dic_pic.jpg",
+  "uuid": "dic-pic-picnic",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/02_dic_pic.jpg"
+    },
+    {
+      "image": "/images/uploads/01_dic_pic.jpg"
+    }
+  ]
+}

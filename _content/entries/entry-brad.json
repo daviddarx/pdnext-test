@@ -1,0 +1,23 @@
+{
+  "forceBlank": false,
+  "authorCountry": "USA",
+  "entryType": "Film",
+  "yearOfProduction": 2024,
+  "deactivated": false,
+  "desc": "Nachdem Greg verlassen und aus seiner Wohnung geworfen wird, steht er vor der Haustür seiner Eltern – in der Hoffnung, in sein Elternhaus zurückkehren zu können. Doch statt eines vertrauten Empfangs erwartet ihn dort ein gutaussehender Fremder namens Brad.\n\nAmüsante Komödie aus New York.",
+  "duration": "9 Min., Englisch",
+  "videourl": "",
+  "authorName": "Eugene Kolb",
+  "title": "Brad",
+  "image": "/images/uploads/brad-frame_02.jpeg",
+  "uuid": "brad--film-256",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/brad-frame_01.jpeg"
+    },
+    {
+      "image": "/images/uploads/brad-frame_03.jpeg"
+    }
+  ]
+}
