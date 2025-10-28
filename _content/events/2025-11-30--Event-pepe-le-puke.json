@@ -1,0 +1,16 @@
+{
+  "layout": "event",
+  "title": "Pepe Le Puke",
+  "eventlocation": "Kauz",
+  "eventlocationcomplement": "",
+  "eventlocationlink": "",
+  "eventdate": "2025-11-30T00:00:00.000Z",
+  "desc": "",
+  "ticketsLink": "",
+  "ticketsLinkTitle": "",
+  "timetable": [],
+  "price": "",
+  "hideReducedPrice": false,
+  "entries": [],
+  "deactivated": false
+}
