@@ -4,6 +4,7 @@ import classNames from 'classnames';
 
 import { uiActions } from '@/store';
 import { CommonPageData } from '@/utils/fetch-common-page-content';
+import { routes } from '@/routes/routes';
 
 import ActiveLink from '@/components/ui/ActiveLink';
 import SaveTheDate from '@/components/layout/SaveTheDate';
@@ -91,7 +92,7 @@ const Header: React.FC<Props> = ({ commonPageData }) => {
         </div>
       )}
       <ActiveLink
-        href='/one-night-stands'
+        href={routes.main.ons.home ? routes.main.ons.slug : routes.main.festival.slug}
         className='header__logo-link'
         aria-label='Zur Startseite'
       >

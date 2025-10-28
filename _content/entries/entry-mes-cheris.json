@@ -1,0 +1,23 @@
+{
+  "forceBlank": false,
+  "authorCountry": "Deutschland",
+  "entryType": "Film",
+  "yearOfProduction": 2020,
+  "deactivated": false,
+  "desc": "MES CHÉRIS ist der Abschied eines Transbois von seinen Brüsten. Einen Monat vor seiner Mastektomie schlüpft Bat Boi in die Rolle von Chéri, einer Figur, die seinen Erfahrungen als wilde Fem Sexarbeiterin nachempfunden ist. Diese schlüpfrige Hommage untergräbt die Tropen des Heteropornos und der Mainstream-Trans*-Darstellung in einem radikalen Akt der Selbstliebe.",
+  "duration": "12 Min, Englisch",
+  "videourl": "",
+  "authorName": "Ty Wardwell, Ethan Folk & Jamal Phoenix",
+  "title": "Mes Chéris",
+  "image": "/images/uploads/03_mes_cheris.jpg",
+  "uuid": "mes-cheris--film-323",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/02_mes_cheris.jpg"
+    },
+    {
+      "image": "/images/uploads/01_mes_cheris.jpg"
+    }
+  ]
+}

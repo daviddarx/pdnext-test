@@ -1,0 +1,20 @@
+{
+  "forceBlank": false,
+  "authorCountry": "Deutschland",
+  "entryType": "Film",
+  "yearOfProduction": 2016,
+  "deactivated": false,
+  "desc": "Dieses Loch ist warm und bereit, das Lieblingsfrühstück des Liebhabers zuzubereiten.",
+  "duration": "2 Min, Englisch",
+  "videourl": "",
+  "authorName": "Ty Wardwell & Ethan Folk",
+  "title": "Breakfast in Bed",
+  "image": "/images/uploads/01_breakfast_in_bed.jpg",
+  "uuid": "breakfast-in-bed",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/03_breakfast_in_bed.jpg"
+    }
+  ]
+}

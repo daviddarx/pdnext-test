@@ -8,7 +8,11 @@
 }
 
 .main-nav__nav {
-  @apply mb-gutter-1/2;
+  @apply mb-gutter-1/2 flex flex-col;
+}
+
+.main-nav__nav--ons-home {
+  @apply flex-col-reverse;
 }
 
 .main-nav__nav--secondary {

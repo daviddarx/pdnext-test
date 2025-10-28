@@ -1,0 +1,67 @@
+name: Sync API Data
+
+on:
+  # Run when the API sync trigger is updated
+  push:
+    paths:
+      - '_content/settings/settings.json'
+
+  # Allow manual trigger
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Reason for manual sync'
+        required: false
+        default: 'Manual trigger'
+        type: string
+
+jobs:
+  sync-api:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run API sync
+        env:
+          FESTICINE_API_USERNAME: ${{ secrets.FESTICINE_API_USERNAME }}
+          FESTICINE_API_PASSWORD: ${{ secrets.FESTICINE_API_PASSWORD }}
+        run: npm run sync-api
+
+      - name: Check for changes
+        id: verify-changed-files
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.verify-changed-files.outputs.changed == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add _content/events/ _content/entries/
+          git commit -m "🔄 Auto-sync API data from festicine.pro
+
+          - Updated events and entries from API
+          - Preserved manual edits
+          - Generated on $(date)
+          - Trigger: ${{ github.event.inputs.reason || 'Settings update' }}"
+          git push
