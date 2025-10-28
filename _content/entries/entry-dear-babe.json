@@ -1,0 +1,23 @@
+{
+  "forceBlank": false,
+  "authorCountry": "Deutschland",
+  "entryType": "Film",
+  "yearOfProduction": 2018,
+  "deactivated": false,
+  "desc": "Die Tinte dieser Brieffreundschaft beginnt erst zu fliessen, als ein paar notgeile Hausgäste eintreffen.",
+  "duration": "3 Min, Englisch",
+  "videourl": "",
+  "authorName": "Ty Wardwell & Ethan Folk",
+  "title": "Dear Babe",
+  "image": "/images/uploads/01_dear_babe.jpg",
+  "uuid": "dear-babe--film-327",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/03_dear_babe.jpg"
+    },
+    {
+      "image": "/images/uploads/02_dear_babe.jpg"
+    }
+  ]
+}

@@ -18,7 +18,7 @@ const OnsPage: React.FC<Props> = ({ data }) => {
       header={
         <h1>
           <span className='program-page__subtitle'>One Night Stands</span>
-          <span>Saisonales Programm</span>
+          <span className='title-effect'>Saisonales Programm</span>
         </h1>
       }
       hideEventNav={true}

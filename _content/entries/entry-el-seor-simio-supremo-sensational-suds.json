@@ -1,0 +1,23 @@
+{
+  "forceBlank": false,
+  "authorCountry": "Frankreich",
+  "entryType": "Film",
+  "yearOfProduction": 2024,
+  "deactivated": false,
+  "desc": "Ein ehemaliger Wrestling-Star, einst ein Tier im Ring wie im Bett, geniesst nun im Ruhestand das süsse Leben und vermarktet seine eigene Linie verführerischer Reinigungsprodukte.",
+  "duration": "3 Min, Englisch mit engl. UT",
+  "videourl": "",
+  "authorName": "Monsterbait",
+  "title": "El Señor Simio Supremo Sensational Suds",
+  "image": "/images/uploads/img_5285.jpeg",
+  "uuid": "el-seor-simio-supremo-sensational-suds--film-253",
+  "warning": "",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/img_5282.jpeg"
+    },
+    {
+      "image": "/images/uploads/img_5281.jpeg"
+    }
+  ]
+}

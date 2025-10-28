@@ -8,6 +8,10 @@ export interface Entry {
   typeComplement?: string;
   forceBlank?: boolean;
   entryType: string;
+  authorName?: string;
+  authorCountry?: string;
+  yearOfProduction?: number;
+  duration?: string;
   desc: string;
   warning?: string;
   videourl?: string;

@@ -44,6 +44,7 @@ const Event = ({ event, dateVisible = false }: Props) => {
               dangerouslySetInnerHTML={{
                 __html: event.title,
               }}
+              className='title-effect'
             />{' '}
             {event.specialstate && (
               <span className='tag tag--sm event__special-state'>{event.specialstate}</span>
