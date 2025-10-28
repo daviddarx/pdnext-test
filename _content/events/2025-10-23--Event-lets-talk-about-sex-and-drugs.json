@@ -1,8 +1,12 @@
 {
   "timetable": [
     {
-      "time": "14:30-15:00 ",
+      "time": "14:30-15:00 Uhr",
       "title": "Ankommen"
+    },
+    {
+      "time": "15:00 - 17:00 Uhr",
+      "title": "Talk"
     }
   ],
   "eventdate": "2025-11-29T15:00:00.000Z",
