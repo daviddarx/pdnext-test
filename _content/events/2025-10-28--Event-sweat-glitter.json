@@ -19,6 +19,22 @@
     {
       "time": "22:00-00:00",
       "title": "Migrart "
+    },
+    {
+      "time": "00:00-02:00",
+      "title": "36Birds"
+    },
+    {
+      "time": "02:00-04:00",
+      "title": "Yugo Boss"
+    },
+    {
+      "time": "04:00-06:00",
+      "title": "Noxatra "
+    },
+    {
+      "time": "00:00-05:00",
+      "title": "Pepe Le Puke"
     }
   ],
   "eventdate": "2025-11-29T22:00:00.000Z",
