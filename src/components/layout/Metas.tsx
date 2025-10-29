@@ -16,7 +16,7 @@ const Metas = ({ title }: Props) => {
       <meta property='og:description' content={description} />
       <meta property='og:url' content='https://www.pornydays.love' />
       <meta property='og:title' content={combinedTitle} />
-      <meta property='og:image:url' content='https://www.pornydays.love/images/pornydays.jpg' />
+      <meta property='og:image' content='https://www.pornydays.love/images/pornydays.jpg' />
       <meta
         property='og:image:secure_url'
         content='https://www.pornydays.love/images/pornydays.jpg'
@@ -24,6 +24,7 @@ const Metas = ({ title }: Props) => {
       <meta property='og:image:type' content='image/jpeg' />
       <meta property='og:image:width' content='1200' />
       <meta property='og:image:height' content='630' />
+      <meta property='og:type' content='website' />
       <meta name='format-detection' content='telephone=no' />
     </Head>
   );
