@@ -16,8 +16,11 @@ const Metas = ({ title }: Props) => {
       <meta property='og:description' content={description} />
       <meta property='og:url' content='https://www.pornydays.love' />
       <meta property='og:title' content={combinedTitle} />
-      <meta property='og:image:url' content='/images/pornydays.jpg' />
-      <meta property='og:image:secure_url' content='/images/pornydays.jpg' />
+      <meta property='og:image:url' content='https://www.pornydays.love/images/pornydays.jpg' />
+      <meta
+        property='og:image:secure_url'
+        content='https://www.pornydays.love/images/pornydays.jpg'
+      />
       <meta property='og:image:type' content='image/jpeg' />
       <meta property='og:image:width' content='1200' />
       <meta property='og:image:height' content='630' />
