@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import classNames from 'classnames';
 
 import eases from '@/utils/eases';
+import rehypeEmailObfuscate from '@/utils/rehype-email-obfuscate';
 import Accordion from '@/components/ui/Accordion';
 import CloseIcon from '@/components/icons/CloseIcon';
 
@@ -51,6 +52,7 @@ const ExpansableText: React.FC<Props> = ({ className = '', title, markdown }) =>
         <ReactMarkdown
           className='expandable-text__copy text-content content-page__column-left'
           remarkPlugins={[remarkGfm]}
+          rehypePlugins={[rehypeEmailObfuscate]}
         >
           {markdown}
         </ReactMarkdown>

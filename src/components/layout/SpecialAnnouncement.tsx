@@ -4,6 +4,7 @@ import remarkGfm from 'remark-gfm';
 import classNames from 'classnames';
 
 import type { SpecialAnnouncement } from '@/types/SpecialAnnouncement';
+import rehypeEmailObfuscate from '@/utils/rehype-email-obfuscate';
 
 import Drawer from '@/components/ui/Drawer';
 import ArrowIcon from '@/components/icons/ArrowIcon';
@@ -46,6 +47,7 @@ const SpecialAnnouncement: React.FC<Props> = ({ data }) => {
           <ReactMarkdown
             className='text-content special-announcement-panel__desc'
             remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeEmailObfuscate]}
           >
             {data.desc}
           </ReactMarkdown>

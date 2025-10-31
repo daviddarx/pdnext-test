@@ -1,5 +1,6 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import rehypeEmailObfuscate from '@/utils/rehype-email-obfuscate';
 import classNames from 'classnames';
 
 type Props = {
@@ -23,7 +24,11 @@ const PageHeader: React.FC<Props> = ({ className = '', subline, title, lead, cen
     >
       <h1>
         {subline && <span className='page-header__subline'>{subline}</span>}
-        <ReactMarkdown className='page-header__title title-effect' remarkPlugins={[remarkGfm]}>
+        <ReactMarkdown
+          className='page-header__title title-effect'
+          remarkPlugins={[remarkGfm]}
+          rehypePlugins={[rehypeEmailObfuscate]}
+        >
           {/* Replace '.' with html entity '&#46;' to avoid '10.' to be interpreted as an ordered list, which cause error on iOS.  */}
           {title.replace('{shy}', '&shy;').replace('.', '&#46;')}
         </ReactMarkdown>

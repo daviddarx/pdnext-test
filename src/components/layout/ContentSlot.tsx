@@ -3,6 +3,7 @@ import remarkGfm from 'remark-gfm';
 
 import { type ContentSlot } from '@/utils/fetch-content-page-content';
 import { getCleanedAnchorID } from '@/utils/content-page';
+import rehypeEmailObfuscate from '@/utils/rehype-email-obfuscate';
 import { Fragment } from 'react';
 
 import LoadedImage from '@/components/ui/LoadedImage';
@@ -57,6 +58,7 @@ const ContentSlot: React.FC<Props> = ({ slot, className }) => {
               'content-page__column': !splittedLayout,
             })}
             remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeEmailObfuscate]}
           >
             {slot.firstText}
           </ReactMarkdown>
@@ -94,7 +96,10 @@ const ContentSlot: React.FC<Props> = ({ slot, className }) => {
                         <dt className='definition-list__dt'>{item.title}</dt>
                         {item.description && (
                           <dd className='definition-list__dd text-content'>
-                            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                            <ReactMarkdown
+                              remarkPlugins={[remarkGfm]}
+                              rehypePlugins={[rehypeEmailObfuscate]}
+                            >
                               {item.description}
                             </ReactMarkdown>
                           </dd>
@@ -114,6 +119,7 @@ const ContentSlot: React.FC<Props> = ({ slot, className }) => {
               'content-page__column': !splittedLayout,
             })}
             remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeEmailObfuscate]}
           >
             {slot.secondText}
           </ReactMarkdown>

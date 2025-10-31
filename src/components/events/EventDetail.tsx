@@ -5,6 +5,7 @@ import remarkGfm from 'remark-gfm';
 import { AnimatePresence, motion } from 'framer-motion';
 
 import eases from '@/utils/eases';
+import rehypeEmailObfuscate from '@/utils/rehype-email-obfuscate';
 import { uiActions } from '@/store';
 import { uiStateType } from '@/store/ui-slice';
 
@@ -128,7 +129,11 @@ const EventDetail: React.FC<Props> = ({ hideEventNav = false }) => {
             {event.subtitle && <div className='event-detail__subtitle'>{event.subtitle}</div>}
           </header>
 
-          <ReactMarkdown className='text-content event-detail__desc' remarkPlugins={[remarkGfm]}>
+          <ReactMarkdown
+            className='text-content event-detail__desc'
+            remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeEmailObfuscate]}
+          >
             {event.desc}
           </ReactMarkdown>
 
@@ -160,7 +165,11 @@ const EventDetail: React.FC<Props> = ({ hideEventNav = false }) => {
             {event.price && (
               <div className='event-detail__info event-detail__info--price'>
                 <h3 className='event-detail__info-title h5'>Preis</h3>
-                <ReactMarkdown remarkPlugins={[remarkGfm]} className='event-detail__price-text'>
+                <ReactMarkdown
+                  remarkPlugins={[remarkGfm]}
+                  rehypePlugins={[rehypeEmailObfuscate]}
+                  className='event-detail__price-text'
+                >
                   {event.price}
                 </ReactMarkdown>
 
@@ -186,6 +195,7 @@ const EventDetail: React.FC<Props> = ({ hideEventNav = false }) => {
               <ReactMarkdown
                 className='event-detail__reduced-price-text text-content'
                 remarkPlugins={[remarkGfm]}
+                rehypePlugins={[rehypeEmailObfuscate]}
               >
                 {reducedPriceText}
               </ReactMarkdown>

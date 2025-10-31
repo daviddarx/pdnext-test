@@ -5,6 +5,7 @@ import remarkGfm from 'remark-gfm';
 
 import { uiActions } from '@/store';
 import type { Entry } from '@/types/Entry';
+import rehypeEmailObfuscate from '@/utils/rehype-email-obfuscate';
 
 import LoadedImage from '@/components/ui/LoadedImage';
 import EntryGallery from './EntryGallery';
@@ -93,12 +94,20 @@ const Entry: React.FC<Props> = ({ entry }) => {
         {entry.entryType} {entry.typeComplement && <span> – {entry.typeComplement}</span>}
       </div>
 
-      <ReactMarkdown className='text-content entry__desc' remarkPlugins={[remarkGfm]}>
+      <ReactMarkdown
+        className='text-content entry__desc'
+        remarkPlugins={[remarkGfm]}
+        rehypePlugins={[rehypeEmailObfuscate]}
+      >
         {buildDescriptionContent()}
       </ReactMarkdown>
 
       {entry.warning && (
-        <ReactMarkdown className='text-content entry__warning' remarkPlugins={[remarkGfm]}>
+        <ReactMarkdown
+          className='text-content entry__warning'
+          remarkPlugins={[remarkGfm]}
+          rehypePlugins={[rehypeEmailObfuscate]}
+        >
           {entry.warning}
         </ReactMarkdown>
       )}

@@ -11,6 +11,7 @@ import * as gtag from '@/utils/ga';
 import { addFullscreenShortcut } from '@/utils/fullscreen';
 import { routes } from '@/routes/routes';
 import { fontText, fontTitle } from '@/utils/get-fonts';
+import { deobfuscateEmails, startEmailDeobfuscationObserver } from '@/utils/email-obfuscation';
 import store from '@/store/';
 import { uiActions } from '@/store/';
 
@@ -90,6 +91,11 @@ const App = ({ Component, pageProps }: AppProps) => {
     } else {
       store.dispatch(uiActions.setContentPage(true));
     }
+
+    setTimeout(() => {
+      deobfuscateEmails();
+      startEmailDeobfuscationObserver();
+    }, 100);
 
     return () => {
       router.events.off('routeChangeStart', handleRouteChangeStart);

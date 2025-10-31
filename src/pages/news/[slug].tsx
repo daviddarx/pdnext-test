@@ -5,6 +5,7 @@ import remarkGfm from 'remark-gfm';
 
 import { fetchCommonPageContent, CommonPageData } from '@/utils/fetch-common-page-content';
 import { fetchNewsContent, fetchNews, type News } from '@/utils/fetch-news-content';
+import rehypeEmailObfuscate from '@/utils/rehype-email-obfuscate';
 
 import Layout from '@/components/layout/Layout';
 import Metas from '@/components/layout/Metas';
@@ -49,7 +50,9 @@ const Page: NextPage<PageProps> = ({ news, prevNews, nextNews, commonPageData })
           {(news.longDesc || news.link) && (
             <div className='news-page__desc text-content'>
               {news.longDesc && (
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>{news.longDesc}</ReactMarkdown>
+                <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeEmailObfuscate]}>
+                  {news.longDesc}
+                </ReactMarkdown>
               )}
               {news.link && (
                 <a href={news.link} className='news-page__link'>

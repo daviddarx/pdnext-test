@@ -2,6 +2,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
 import { NewsContent } from '@/utils/fetch-news-content';
+import rehypeEmailObfuscate from '@/utils/rehype-email-obfuscate';
 
 import PageHeader from '@/components/layout/PageHeader';
 import LoadedImage from '@/components/ui/LoadedImage';
@@ -49,7 +50,11 @@ const NewsPage: React.FC<Props> = ({ data }) => {
               <div className='news-item__date'>{item.dateReadable}</div>
               <h2 className='news-item__title'>{item.title}</h2>
               {item.shortDesc && (
-                <ReactMarkdown className='news-item__desc' remarkPlugins={[remarkGfm]}>
+                <ReactMarkdown
+                  className='news-item__desc'
+                  remarkPlugins={[remarkGfm]}
+                  rehypePlugins={[rehypeEmailObfuscate]}
+                >
                   {item.shortDesc}
                 </ReactMarkdown>
               )}
