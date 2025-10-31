@@ -23,7 +23,7 @@ collections:
         name: 'apiSyncTrigger'
         widget: 'string'
         required: false
-        hint: 'Change this value to trigger an API sync and rebuild. Any text will work - just change it and save! For local development, run "npm run sync-api" manually.'
+        hint: 'Automatic GitHub Action trigger is disabled for this season. To sync API data, manually trigger the workflow in GitHub Actions or run "npm run sync-api" locally.'
         default: 'Ready to sync'
 
       - label: 'Reduced Price Text'

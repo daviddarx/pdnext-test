@@ -1,10 +1,11 @@
 name: Sync API Data
 
 on:
-  # Run when the API sync trigger is updated
-  push:
-    paths:
-      - '_content/settings/settings.json'
+  # Run when settings.json is updated (we'll check if apiSyncTrigger changed)
+  # DISABLED for 2024 season - will re-enable next year
+  # push:
+  #   paths:
+  #     - '_content/settings/settings.json'
 
   # Allow manual trigger
   workflow_dispatch:
@@ -26,7 +27,58 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          fetch-depth: 0
+          fetch-depth: 2
+
+      - name: Check if apiSyncTrigger changed
+        id: check-trigger
+        if: github.event_name == 'push'
+        run: |
+          # Extract apiSyncTrigger value from JSON using node (more reliable than sed/grep)
+          node -e "
+            const fs = require('fs');
+            const extractValue = (file) => {
+              try {
+                const content = fs.readFileSync(file, 'utf8');
+                const json = JSON.parse(content);
+                return json.apiSyncTrigger || '';
+              } catch (e) {
+                return '';
+              }
+            };
+
+            const oldFile = '_content/settings/settings.json.old';
+            const newFile = '_content/settings/settings.json';
+
+            // Get previous version from git
+            let oldValue = '';
+            try {
+              const { execSync } = require('child_process');
+              const prevContent = execSync('git show HEAD~1:_content/settings/settings.json', { encoding: 'utf8' });
+              fs.writeFileSync(oldFile, prevContent);
+              oldValue = extractValue(oldFile);
+            } catch (e) {
+              // Previous commit doesn't have the file, assume changed
+              process.exit(1);
+            }
+
+            const newValue = extractValue(newFile);
+
+            if (oldValue !== newValue) {
+              console.log('✅ apiSyncTrigger changed from', oldValue, 'to', newValue);
+              process.exit(0); // Changed
+            } else {
+              console.log('⏭️  apiSyncTrigger unchanged:', newValue);
+              process.exit(2); // Unchanged
+            }
+          " && echo "trigger_changed=true" >> $GITHUB_OUTPUT || EXIT_CODE=$?
+
+          if [ "$EXIT_CODE" = "2" ]; then
+            echo "trigger_changed=false" >> $GITHUB_OUTPUT
+          elif [ "$EXIT_CODE" != "0" ]; then
+            # Error or file didn't exist - assume changed to be safe
+            echo "trigger_changed=true" >> $GITHUB_OUTPUT
+            echo "ℹ️  Assuming trigger changed (first commit or error checking)"
+          fi
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -35,15 +87,18 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
+        if: github.event_name == 'workflow_dispatch' || steps.check-trigger.outputs.trigger_changed == 'true'
         run: npm ci
 
       - name: Run API sync
+        if: github.event_name == 'workflow_dispatch' || steps.check-trigger.outputs.trigger_changed == 'true'
         env:
           FESTICINE_API_USERNAME: ${{ secrets.FESTICINE_API_USERNAME }}
           FESTICINE_API_PASSWORD: ${{ secrets.FESTICINE_API_PASSWORD }}
         run: npm run sync-api
 
       - name: Check for changes
+        if: github.event_name == 'workflow_dispatch' || steps.check-trigger.outputs.trigger_changed == 'true'
         id: verify-changed-files
         run: |
           if [ -n "$(git status --porcelain)" ]; then
@@ -53,7 +108,7 @@ jobs:
           fi
 
       - name: Commit and push changes
-        if: steps.verify-changed-files.outputs.changed == 'true'
+        if: (github.event_name == 'workflow_dispatch' || steps.check-trigger.outputs.trigger_changed == 'true') && steps.verify-changed-files.outputs.changed == 'true'
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
