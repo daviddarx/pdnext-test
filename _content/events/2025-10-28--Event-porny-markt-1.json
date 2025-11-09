@@ -11,6 +11,11 @@
   "layout": "event",
   "hideReducedPrice": false,
   "eventlocation": "Das Gleis",
+  "entries": [
+    "Javel ",
+    "PETITE MORT",
+    "Studio Olivia"
+  ],
   "deactivated": false,
   "desc": "**Fashion, Harnesses, Schmuck** und mehr – alles mit Liebe gemacht.",
   "eventlocationcomplement": "Zollstrasse 121, 8005 Zürich",
