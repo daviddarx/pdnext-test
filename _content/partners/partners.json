@@ -30,6 +30,12 @@
     "label": "Finanzielle Unterstützung"
   },
   {
+    "title": "Ernst Göhner Stiftung",
+    "link": "https://www.ernst-goehner-stiftung.ch/",
+    "logo": "LogoErnstGoehner",
+    "label": "Finanzielle Unterstützung"
+  },
+  {
     "title": "Sugar Ponys",
     "link": "/support-us",
     "logo": "LogoSugarPonys",
@@ -49,10 +55,22 @@
     "label": "Hotel Partner:in"
   },
   {
+    "title": "Bistro Riffraff",
+    "link": "https://www.bistroriffraff.ch/",
+    "logo": "LogoBistroRiffraff",
+    "label": "Restaurant Parnter:in"
+  },
+  {
     "title": "Restaurant Osso",
     "link": "https://ossozuerich.ch/",
     "logo": "LogoOsso",
     "label": "Restaurant Partner:in"
+  },
+  {
+    "title": "Intercomestible",
+    "link": "https://intercomestibles.ch/",
+    "logo": "LogoIntercomestible",
+    "label": "Sachsponsoring"
   },
   {
     "title": "Riff Raff",
