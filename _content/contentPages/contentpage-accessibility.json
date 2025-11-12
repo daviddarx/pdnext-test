@@ -31,6 +31,12 @@
       "splittedLayout": false,
       "title": "Gleis",
       "firstText": "### **Kontakt**\n\nDas GLEIS ist dankbar um Anmeldungen von Rollstuhlfahrer:innen, damit entsprechend Platz frei gehalten werden kann. \n\nAnmeldung unter: kultur@dasgleis.ch \n\n### **Barrierefreiheit**\n\nIm Erdgeschoss des Haupteingangs des Zollhauses (Zollstrasse 121) befindet sich ein Lift. Wenn man diesen bis in den 1. Stock nimmt, befindet man sich auf der Galerie und vis-à -is vom GLEIS. Auf der Galerie, kann man dann rundherum fahren, um ins GLESI zu kommen."
+    },
+    {
+      "deactivated": false,
+      "splittedLayout": false,
+      "title": "Flex Zollhaus - Raum D",
+      "firstText": "### **Barrierefreiheit**\n\nBeim Haupteingang Zollstrasse 121 befindet sich links der Aufzug, welcher direkt ins 1. OG geht, wo sich der Flex Raum D befindet."
     }
   ],
   "headerCentered": true,
