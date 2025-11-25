@@ -9,15 +9,12 @@
   "videourl": "",
   "authorName": "Ty Wardwell & Ethan Folk",
   "title": "Pops’ Corn",
-  "image": "/images/uploads/01_pops_corn.jpg",
+  "image": "/images/uploads/02_pops_corn.jpg",
   "uuid": "pops-corn",
   "warning": "",
   "additionalImages": [
     {
       "image": "/images/uploads/03_pops_corn.jpg"
-    },
-    {
-      "image": "/images/uploads/02_pops_corn.jpg"
     }
   ]
 }
