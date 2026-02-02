@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react';
-import Plyr from 'plyr';
+import { useEffect, useState, useRef } from 'react';
 import classNames from 'classnames';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -11,6 +10,7 @@ type Props = {
 
 const VideoPlayer: React.FC<Props> = ({ videoUrl, autoPlay = false, className }) => {
   const [playerId, setPlayerId] = useState('');
+  const plyrInstanceRef = useRef<any>(null);
 
   let videoType = '';
   let videoId = '';
@@ -39,10 +39,14 @@ const VideoPlayer: React.FC<Props> = ({ videoUrl, autoPlay = false, className })
    * When the uuid is hydrated, init the player.
    */
   useEffect(() => {
-    let plyr: Plyr;
+    if (typeof window === 'undefined' || playerId === '') {
+      return;
+    }
 
-    if (playerId !== '') {
-      plyr = new Plyr(`#${playerId}`, {
+    // Dynamically import Plyr only on the client side
+    import('plyr').then((PlyrModule) => {
+      const Plyr = PlyrModule.default;
+      plyrInstanceRef.current = new Plyr(`#${playerId}`, {
         controls: [
           'play-large',
           'play',
@@ -55,10 +59,12 @@ const VideoPlayer: React.FC<Props> = ({ videoUrl, autoPlay = false, className })
         autoplay: autoPlay,
         fullscreen: { enabled: true, fallback: true, iosNative: true },
       });
-    }
+    });
+
     return () => {
-      if (plyr) {
-        plyr.destroy();
+      if (plyrInstanceRef.current) {
+        plyrInstanceRef.current.destroy();
+        plyrInstanceRef.current = null;
       }
     };
   }, [playerId, autoPlay]);
