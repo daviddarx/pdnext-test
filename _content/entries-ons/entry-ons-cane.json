@@ -1,0 +1,15 @@
+{
+  "typeComplement": "Von Bendix Mignon",
+  "forceBlank": false,
+  "entryType": "Film",
+  "deactivated": false,
+  "desc": "TBD",
+  "title": "Cane",
+  "image": "/images/uploads/bendix_cane_03.png",
+  "uuid": "cane",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/cover-laurels-09.png"
+    }
+  ]
+}
