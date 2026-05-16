@@ -1,0 +1,15 @@
+{
+  "typeComplement": "Von Nova Lov & Clapclap Collectif",
+  "forceBlank": false,
+  "entryType": "Film",
+  "deactivated": false,
+  "desc": "TBD",
+  "title": "Gamètes",
+  "image": "/images/uploads/photo-1-color_grading.00_13_57_01.still138.jpg",
+  "uuid": "gametes",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/photo-2-color_grading.00_13_50_02.still137.jpg"
+    }
+  ]
+}
