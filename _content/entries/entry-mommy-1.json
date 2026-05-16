@@ -1,0 +1,18 @@
+{
+  "forceBlank": false,
+  "authorCountry": "United States",
+  "entryType": "Film",
+  "yearOfProduction": 2025,
+  "deactivated": false,
+  "desc": "Sechs Jahre nach ihrer geschlechtsangleichenden Operation teilt Manon Praline ein bewegendes Zeugnis über die Herausforderungen und Freuden, die sie auf diesem Weg erlebt hat.\n\nIhre Geschichte wird ergänzt durch wunderschöne Bilder, aufgenommen von der Künstlerin Eva Wu in der dramatischen Landschaft des US-Südwestens, und musikalisch untermalt von Josephine Shetty.\n\nWie Honig auf der Zunge eines Naschkaters, schenkt Mommy den Augen, Ohren und Herzen der Zuschauer pure Ehrlichkeit und Verletzlichkeit.",
+  "duration": "8 minutes 40 seconds",
+  "authorName": "Manon Praline, Evie Snax",
+  "title": "Mommy",
+  "image": "/images/uploads/current-cut.00_01_32_22.still008.jpg",
+  "uuid": "Mommy",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/current-cut.00_06_47_16.still023.jpg"
+    }
+  ]
+}
