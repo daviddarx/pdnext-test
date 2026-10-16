@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "sync-api": "node scripts/sync-api-data.js",
-    "dev:sync": "npm run sync-api && npm run dev"
+    "dev:sync": "npm run sync-api && npm run dev",
+    "cms": "(for i in $(seq 20); do sleep 0.5; nc -z localhost 8081 2>/dev/null && printf '\\nAdmin: http://localhost:3000/admin/index.html\\n\\n' && break; done) & npx decap-server"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
@@ -41,6 +42,7 @@
     "@types/react-portal": "^4.0.4",
     "@types/uuid": "^9.0.2",
     "autoprefixer": "10.4.14",
+    "decap-server": "^3.11.5",
     "eslint": "8.39.0",
     "eslint-config-next": "13.3.1",
     "postcss": "8.4.23"
