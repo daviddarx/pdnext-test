@@ -73,6 +73,13 @@ function makeApiRequest(url) {
 
     https
       .get(url, options, (res) => {
+        // Fail on wrong credentials or server errors instead of syncing nothing
+        if (res.statusCode !== 200) {
+          res.resume();
+          reject(new Error(`API returned HTTP ${res.statusCode} for ${url}`));
+          return;
+        }
+
         let data = '';
 
         res.on('data', (chunk) => {
@@ -198,7 +205,9 @@ function createSlug(title) {
 
 // Map program data to event structure
 function mapProgramToEvent(programItem) {
-  const eventDate = new Date(`${programItem.day}T${programItem.starting_time}`);
+  // Stored as UTC like the CMS (picker_utc) and the site display (format-event.ts),
+  // so the time is the same whatever timezone the script runs in
+  const eventDate = new Date(`${programItem.day}T${programItem.starting_time}Z`);
 
   return {
     layout: 'event',
@@ -348,7 +357,8 @@ async function processEvents(programData) {
 
   for (const programItem of programData) {
     const slug = createSlug(programItem.title_l1 || programItem.title_l2 || 'untitled');
-    const filename = `${programItem.day}--Event-${slug}.json`;
+    // Screening ID keeps events with the same title on the same day in separate files
+    const filename = `${programItem.day}--Event-${slug}--screening-${programItem.id_screening}.json`;
     const filePath = path.join(EVENTS_DIR, filename);
 
     const apiEventData = mapProgramToEvent(programItem);
