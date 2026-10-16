@@ -118,8 +118,8 @@ const ProgramPage: React.FC<Props> = ({ data }) => {
         <Fragment>
           <h1>
             <span className='program-page__subtitle'>
-              13. Porny Days <span className='program-page__subtitle-separation'>·</span>{' '}
-              <span className='program-page__subtitle-date'>21. – 30. November 2025</span>
+              14. Porny Days <span className='program-page__subtitle-separation'>·</span>{' '}
+              <span className='program-page__subtitle-date'>27. – 29. November 2026</span>
             </span>
             <span className='title-effect'>Festival Programm</span>
           </h1>
