@@ -1,0 +1,18 @@
+{
+  "timetable": [],
+  "ticketsLink": "",
+  "eventdate": "2026-11-27T21:36:00.000Z",
+  "eventlocationlink": "http://www.test.com",
+  "price": "",
+  "layout": "event",
+  "hideReducedPrice": false,
+  "eventlocation": "Riffraff Cinema",
+  "entries": [
+    "test-entry"
+  ],
+  "deactivated": false,
+  "desc": "D﻿as ist ein Event.",
+  "eventlocationcomplement": "",
+  "ticketsLinkTitle": "",
+  "title": "Test Program DE - please don't delete for now"
+}

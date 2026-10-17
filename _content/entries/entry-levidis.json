@@ -1,0 +1,21 @@
+{
+  "forceBlank": false,
+  "authorCountry": "Griechenland & Deutschland",
+  "entryType": "Film",
+  "yearOfProduction": 2023,
+  "deactivated": false,
+  "desc": "*Queere Lust* trifft auf die goldene Ära des griechischen Mainstream-Kinos. In der **Villa Levidis** entsteht ein Dialog über Geschlechterrollen und gesellschaftliche Normen.\n\n**Mit:** Ju Goma & Iris Glitter",
+  "duration": "11min. / Griechisch mit Eng. UT",
+  "authorName": "Iris Glitzer",
+  "title": "LEVIDIS",
+  "image": "/images/uploads/levidis_01.jpg",
+  "uuid": "LEVIDIS",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/levidis_03.jpg"
+    },
+    {
+      "image": "/images/uploads/levidis_02.jpg"
+    }
+  ]
+}

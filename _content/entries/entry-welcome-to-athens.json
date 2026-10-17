@@ -1,0 +1,21 @@
+{
+  "forceBlank": false,
+  "authorCountry": "Griechenland",
+  "entryType": "Film",
+  "yearOfProduction": 2018,
+  "deactivated": false,
+  "desc": "Zuerst wurde der Werbefilm in Auftrag gegeben, dann verboten. Das ist der Tourismuswerbespot, den die griechische Zentrale für Tourismus lieber unter Verschluss halten würde. Kürzlich aus der Regierungsdatenbank gehackt, **präsentieren wir euch Athen**, wie ihr es verdient habt.\\\n\\\n**Mit:** Dr. Alexandros Papadopoulos, Nico Deen, Kangela Tromokratisch, John Strap, Pan Bash, Myron m. Pavenos, Loucas, Costas & Giannis Maskidis",
+  "duration": "7min. / Griechisch mit Eng. UT",
+  "authorName": "Menelas",
+  "title": "WELCOME TO ATHENS",
+  "image": "/images/uploads/welcome-to-athens-02.jpg",
+  "uuid": "Welcome to Athens",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/welcome-to-athens-03.jpg"
+    },
+    {
+      "image": "/images/uploads/welcome-to-athens-01.jpg"
+    }
+  ]
+}

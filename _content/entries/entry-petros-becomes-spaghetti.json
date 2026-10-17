@@ -1,0 +1,18 @@
+{
+  "forceBlank": false,
+  "authorCountry": "Griechenland",
+  "entryType": "Film",
+  "yearOfProduction": 2024,
+  "deactivated": false,
+  "desc": "In diesem Film erfahren wir, was mit dem menschlichen Körper passiert, wenn er einem **Schwarzen Loch** zu nahe kommt. *Unser Astronaut Petros* führt uns dieses Phänomen anschaulich vor.\n\n**Mit:** Sylvia Robyn Gionti & Hans MoDell",
+  "duration": "2min. / Griechisch mit Eng. UT",
+  "authorName": "Sylvia Robyn Gionti",
+  "title": "Petros becomes spaghetti",
+  "image": "/images/uploads/petros-becomes-spaghetti_02.jpg",
+  "uuid": "Petros becomes spaghetti",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/petros-becomes-spaghetti_01.jpg"
+    }
+  ]
+}
