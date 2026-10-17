@@ -1,0 +1,18 @@
+{
+  "forceBlank": false,
+  "authorCountry": "Belgien & Frankreich",
+  "entryType": "Film",
+  "yearOfProduction": 2025,
+  "deactivated": false,
+  "desc": "Mein Name ist **Lilith**. Ich bin die erste Frau, die zusammen mit Adam erschaffen wurde. \n\n*Meine Begegnung mit Eva* wird **alle Stereotypen zerschlagen**, in denen wir bisher gefangen waren.",
+  "duration": "14min. / Französisch mit De. UT ",
+  "authorName": "Leo Luna Robert-Tourneur",
+  "title": "MON NOM EST LILITH",
+  "image": "/images/uploads/mon-nom-est-lilith-2.jpg",
+  "uuid": "Mon nom est Lilith",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/mon-nom-est-lilith-1.jpg"
+    }
+  ]
+}
