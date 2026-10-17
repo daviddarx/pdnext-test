@@ -10,7 +10,7 @@
   "eventlocationlink": "https://25hours-hotels.com",
   "price": "Kostenloser Eintritt – Ticketreservierung ist notwendig!",
   "layout": "event",
-  "hideReducedPrice": false,
+  "hideReducedPrice": true,
   "eventlocation": "25HOURS HOTEL",
   "entries": [
     "Im Bett mit Untamed Love"
