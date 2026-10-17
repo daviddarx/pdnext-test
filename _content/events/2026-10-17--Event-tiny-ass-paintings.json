@@ -9,7 +9,7 @@
   "eventlocationlink": "https://www.riffraff-houdini.ch/de-ch/programm.html",
   "price": "79CHF für ein single-ass-portrait\\\n129CHF für ein double-ass-portrait",
   "layout": "event",
-  "hideReducedPrice": false,
+  "hideReducedPrice": true,
   "eventlocation": "Riffraff Foyer",
   "entries": [
     "tiny ass paintings"
