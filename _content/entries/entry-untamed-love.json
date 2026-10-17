@@ -1,0 +1,14 @@
+{
+  "forceBlank": false,
+  "deactivated": false,
+  "uuid": "untamed",
+  "title": "UNTAMED LOVE ",
+  "entryType": "Ausstellung",
+  "desc": "Der erste *queer-feministische* Sex Shop der Schweiz.\n\n**Sextoys, Safer Sex Produkte** und Accessoires für Alle von [Untamed Love](www.untamed.love).",
+  "image": "/images/uploads/untamed_yellow.jpg",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/untamed.jpg"
+    }
+  ]
+}
