@@ -4,7 +4,7 @@
   "eventlocationlink": "https://www.riffraff-houdini.ch/",
   "price": "",
   "layout": "event",
-  "hideReducedPrice": true,
+  "hideReducedPrice": false,
   "eventlocation": "RiffRaff 1",
   "entries": [
     "Jeanne Dieldoman",
