@@ -1,0 +1,14 @@
+{
+  "forceBlank": false,
+  "deactivated": false,
+  "uuid": "studiolivia",
+  "title": "STUDIOLIVIA",
+  "entryType": "Ausstellung",
+  "desc": "**Handgefertigter Schmuck** aus *Lötzinn, Süsswasserperlen, Steine*n und anderen Materialien von [STUDIOLIVIA](https://studiolivia.ch)",
+  "image": "/images/uploads/studiolivia.jpg",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/studiolivia_schleife.jpg"
+    }
+  ]
+}
