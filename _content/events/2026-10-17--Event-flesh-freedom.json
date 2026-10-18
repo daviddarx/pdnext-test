@@ -1,10 +1,10 @@
 {
   "timetable": [],
-  "eventdate": "2026-11-28T18:00:00.000Z",
+  "eventdate": "2026-11-28T14:00:00.000Z",
   "eventlocationlink": "https://www.riffraff-houdini.ch/de-ch/programm.html",
   "layout": "event",
   "hideReducedPrice": false,
-  "eventlocation": "Riffraff",
+  "eventlocation": "Riffraff 1",
   "entries": [
     "Rite of Sweat",
     "Glimmer",
