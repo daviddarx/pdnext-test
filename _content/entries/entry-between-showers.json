@@ -9,6 +9,14 @@
   "duration": "11min. / Französisch mit Eng. UT",
   "authorName": "Rose Palissandre & Clap! Collectif",
   "title": "BETWEEN SHOWERS",
-  "image": "/images/uploads/beetween-showers-1.jpg",
-  "uuid": "Between Showers"
+  "image": "/images/uploads/beetweenshowersstill-4.jpeg",
+  "uuid": "Between Showers",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/beetweenshowersstill-7.jpeg"
+    },
+    {
+      "image": "/images/uploads/beetweenshowers-2.jpeg"
+    }
+  ]
 }
