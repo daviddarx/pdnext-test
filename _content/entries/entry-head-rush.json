@@ -8,6 +8,14 @@
   "duration": "8min. / Englisch mit De UT",
   "authorName": "Ariana Molly",
   "title": "HEAD RUSH",
-  "image": "/images/uploads/01_a_wild_patience.jpg.jpg",
-  "uuid": "Head Rush"
+  "image": "/images/uploads/headrush_1.jpg",
+  "uuid": "Head Rush",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/headrush_3.jpg"
+    },
+    {
+      "image": "/images/uploads/headrush_2.jpg"
+    }
+  ]
 }
