@@ -1,0 +1,18 @@
+{
+  "forceBlank": false,
+  "authorCountry": "Slovenien & Italien",
+  "entryType": "Film",
+  "yearOfProduction": 2026,
+  "deactivated": false,
+  "desc": "Auf einer intergalaktischen Kreuzfahrt *für Singles* suchen einsame Seelen nach einem **Kuss**, einer **Liebkosung** oder einfach nur nach dem **Schimmer der Liebe** zwischen den Sternen.",
+  "duration": "14min. / Englisch mit De. UT",
+  "authorName": "Leo Černic",
+  "title": "COSMONAUTS",
+  "image": "/images/uploads/cosmonauts-1.jpg",
+  "uuid": "Cosmonauts",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/cosmonauts-2.jpg"
+    }
+  ]
+}

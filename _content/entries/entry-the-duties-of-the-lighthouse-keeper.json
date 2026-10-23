@@ -1,0 +1,21 @@
+{
+  "forceBlank": false,
+  "authorCountry": "Deutschland",
+  "entryType": "Film",
+  "yearOfProduction": 2026,
+  "deactivated": false,
+  "desc": "**The Duties of a Lighthouse Keeper** begleitet den Alltag eines isolierten Seemanns, der ganz allein auf einem harten, harten Felsen lebt und seinen Pflichten nachgeht – während er sich nach der *Berührung eines anderen Mannes* sehnt. Doch ist das Leben vielleicht mehr, als nur auf **B(u)oys zu warten**?",
+  "duration": "8min. / Englisch mit De UT",
+  "authorName": "Rory Midhani",
+  "title": "The duties of the lighthouse keeper",
+  "image": "/images/uploads/the-duties-of-a-lighthouse-keeper_02.jpg",
+  "uuid": "The duties of the lighthouse keeper",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/the-duties-of-a-lighthouse-keeper_03.jpg"
+    },
+    {
+      "image": "/images/uploads/the-duties-of-a-lighthouse-keeper_01.jpg"
+    }
+  ]
+}
