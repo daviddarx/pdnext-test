@@ -26,14 +26,14 @@ export const routes = {
     festival: {
       slug: 'festival-program',
       title: 'Festival Programm',
-      complement: '14. Edition – 27. - 29. November 2025',
+      complement: '14. Edition – 27. - 29. November 2026',
       comingSoon: false,
     },
     ons: {
       slug: 'one-night-stands',
       title: 'One Night Stands',
       complement: 'Saisonales Programm',
-      home: false,
+      home: true,
     },
   },
   secondary: {
