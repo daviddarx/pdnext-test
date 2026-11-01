@@ -1,3 +1,16 @@
+/* Registered so the title shadows can fade (see .title-effect). */
+@property --title-shadow-color {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: transparent;
+}
+
+@property --title-shadow-color-dark {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: transparent;
+}
+
 @layer utilities {
   h1,
   h2,
@@ -55,163 +68,56 @@
     @apply text-xl xl:text-2xl;
   }
 
-  .title-effect {
-    @apply text-white;
-    --shadow-offset: 0.01em;
-    --shadow-color: theme(colors.black);
-    --blur-start: 0em;
-    --blur-end: 0.075em;
+  /* Keep in sync with CHROME_SELECTOR in components/ui/ChromeFilter.tsx. */
+  .title-effect,
+  .content-slot__title,
+  .content-page .text-content h2 {
+    /*
+     * Chrome shading and outline come from the SVG filters in components/ui/ChromeFilter.tsx.
+     * The amount of chrome is encoded in the text color (--title-chrome-color[-dark], set on :root
+     * by ChromeFilter): transitioning to the plain theme color fades the chrome out. The theme
+     * color is also the fallback if filters don't apply.
+     */
+    --title-shadow-color: theme(colors.black / 45%);
+    --title-shadow-color-dark: rgb(0 0 0 / 0.6);
+    color: var(--title-chrome-color, theme(colors.black));
+    filter: var(--chrome-filter, url(#chrome-2))
+      drop-shadow(0.02em 0.05em 0.04em var(--title-shadow-color));
+    transition:
+      color 0.4s theme(transitionTimingFunction.out-quart),
+      --title-shadow-color 0.4s theme(transitionTimingFunction.out-quart),
+      --title-shadow-color-dark 0.4s theme(transitionTimingFunction.out-quart);
 
-    -webkit-text-stroke: 0.05em var(--shadow-color);
-    text-stroke: 0.05em var(--shadow-color);
+    @media (hover: hover) {
+      &:hover {
+        @apply title-effect-off;
+      }
+    }
 
-    animation: title-effect-shadow-rotate 6s theme(transitionTimingFunction.in-out-sine) infinite;
+    /* Selected text turns plain on a translucent highlight, so it stays readable. */
+    &::selection,
+    & *::selection {
+      @apply bg-black/20 text-black;
+    }
 
     .dark & {
-      @apply text-black;
-      --shadow-color: theme(colors.white);
+      color: var(--title-chrome-color-dark, theme(colors.white));
+      filter: var(--chrome-filter-dark, url(#chrome-dark-2))
+        drop-shadow(0.02em 0.05em 0.05em var(--title-shadow-color-dark));
+
+      &::selection,
+      & *::selection {
+        @apply bg-white/20 text-white;
+      }
     }
   }
 
-  @keyframes title-effect-shadow-rotate {
-    0% {
-      text-shadow: var(--shadow-offset) var(--shadow-offset) var(--blur-start) var(--shadow-color),
-        calc(var(--shadow-offset) * 2) calc(var(--shadow-offset) * 2) calc(var(--blur-end) * 1 / 12)
-          var(--shadow-color),
-        calc(var(--shadow-offset) * 3) calc(var(--shadow-offset) * 3) calc(var(--blur-end) * 2 / 12)
-          var(--shadow-color),
-        calc(var(--shadow-offset) * 4) calc(var(--shadow-offset) * 4) calc(var(--blur-end) * 3 / 12)
-          var(--shadow-color),
-        calc(var(--shadow-offset) * 5) calc(var(--shadow-offset) * 5) calc(var(--blur-end) * 4 / 12)
-          var(--shadow-color),
-        calc(var(--shadow-offset) * 6) calc(var(--shadow-offset) * 6) calc(var(--blur-end) * 5 / 12)
-          var(--shadow-color),
-        calc(var(--shadow-offset) * 7) calc(var(--shadow-offset) * 7) calc(var(--blur-end) * 6 / 12)
-          var(--shadow-color),
-        calc(var(--shadow-offset) * 8) calc(var(--shadow-offset) * 8) calc(var(--blur-end) * 7 / 12)
-          var(--shadow-color),
-        calc(var(--shadow-offset) * 9) calc(var(--shadow-offset) * 9) calc(var(--blur-end) * 8 / 12)
-          var(--shadow-color),
-        calc(var(--shadow-offset) * 10) calc(var(--shadow-offset) * 10)
-          calc(var(--blur-end) * 9 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * 11) calc(var(--shadow-offset) * 11)
-          calc(var(--blur-end) * 10 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * 12) calc(var(--shadow-offset) * 12)
-          calc(var(--blur-end) * 11 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * 13) calc(var(--shadow-offset) * 13) var(--blur-end)
-          var(--shadow-color);
-    }
-    25% {
-      text-shadow: calc(var(--shadow-offset) * -1) var(--shadow-offset) var(--blur-start)
-          var(--shadow-color),
-        calc(var(--shadow-offset) * -2) calc(var(--shadow-offset) * 2)
-          calc(var(--blur-end) * 1 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * -3) calc(var(--shadow-offset) * 3)
-          calc(var(--blur-end) * 2 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * -4) calc(var(--shadow-offset) * 4)
-          calc(var(--blur-end) * 3 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * -5) calc(var(--shadow-offset) * 5)
-          calc(var(--blur-end) * 4 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * -6) calc(var(--shadow-offset) * 6)
-          calc(var(--blur-end) * 5 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * -7) calc(var(--shadow-offset) * 7)
-          calc(var(--blur-end) * 6 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * -8) calc(var(--shadow-offset) * 8)
-          calc(var(--blur-end) * 7 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * -9) calc(var(--shadow-offset) * 9)
-          calc(var(--blur-end) * 8 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * -10) calc(var(--shadow-offset) * 10)
-          calc(var(--blur-end) * 9 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * -11) calc(var(--shadow-offset) * 11)
-          calc(var(--blur-end) * 10 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * -12) calc(var(--shadow-offset) * 12)
-          calc(var(--blur-end) * 11 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * -13) calc(var(--shadow-offset) * 13) var(--blur-end)
-          var(--shadow-color);
-    }
-    50% {
-      text-shadow: calc(var(--shadow-offset) * -1) calc(var(--shadow-offset) * -1) var(--blur-start)
-          var(--shadow-color),
-        calc(var(--shadow-offset) * -2) calc(var(--shadow-offset) * -2)
-          calc(var(--blur-end) * 1 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * -3) calc(var(--shadow-offset) * -3)
-          calc(var(--blur-end) * 2 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * -4) calc(var(--shadow-offset) * -4)
-          calc(var(--blur-end) * 3 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * -5) calc(var(--shadow-offset) * -5)
-          calc(var(--blur-end) * 4 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * -6) calc(var(--shadow-offset) * -6)
-          calc(var(--blur-end) * 5 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * -7) calc(var(--shadow-offset) * -7)
-          calc(var(--blur-end) * 6 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * -8) calc(var(--shadow-offset) * -8)
-          calc(var(--blur-end) * 7 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * -9) calc(var(--shadow-offset) * -9)
-          calc(var(--blur-end) * 8 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * -10) calc(var(--shadow-offset) * -10)
-          calc(var(--blur-end) * 9 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * -11) calc(var(--shadow-offset) * -11)
-          calc(var(--blur-end) * 10 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * -12) calc(var(--shadow-offset) * -12)
-          calc(var(--blur-end) * 11 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * -13) calc(var(--shadow-offset) * -13) var(--blur-end)
-          var(--shadow-color);
-    }
-    75% {
-      text-shadow: var(--shadow-offset) calc(var(--shadow-offset) * -1) var(--blur-start)
-          var(--shadow-color),
-        calc(var(--shadow-offset) * 2) calc(var(--shadow-offset) * -2)
-          calc(var(--blur-end) * 1 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * 3) calc(var(--shadow-offset) * -3)
-          calc(var(--blur-end) * 2 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * 4) calc(var(--shadow-offset) * -4)
-          calc(var(--blur-end) * 3 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * 5) calc(var(--shadow-offset) * -5)
-          calc(var(--blur-end) * 4 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * 6) calc(var(--shadow-offset) * -6)
-          calc(var(--blur-end) * 5 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * 7) calc(var(--shadow-offset) * -7)
-          calc(var(--blur-end) * 6 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * 8) calc(var(--shadow-offset) * -8)
-          calc(var(--blur-end) * 7 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * 9) calc(var(--shadow-offset) * -9)
-          calc(var(--blur-end) * 8 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * 10) calc(var(--shadow-offset) * -10)
-          calc(var(--blur-end) * 9 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * 11) calc(var(--shadow-offset) * -11)
-          calc(var(--blur-end) * 10 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * 12) calc(var(--shadow-offset) * -12)
-          calc(var(--blur-end) * 11 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * 13) calc(var(--shadow-offset) * -13) var(--blur-end)
-          var(--shadow-color);
-    }
-    100% {
-      text-shadow: var(--shadow-offset) var(--shadow-offset) var(--blur-start) var(--shadow-color),
-        calc(var(--shadow-offset) * 2) calc(var(--shadow-offset) * 2) calc(var(--blur-end) * 1 / 12)
-          var(--shadow-color),
-        calc(var(--shadow-offset) * 3) calc(var(--shadow-offset) * 3) calc(var(--blur-end) * 2 / 12)
-          var(--shadow-color),
-        calc(var(--shadow-offset) * 4) calc(var(--shadow-offset) * 4) calc(var(--blur-end) * 3 / 12)
-          var(--shadow-color),
-        calc(var(--shadow-offset) * 5) calc(var(--shadow-offset) * 5) calc(var(--blur-end) * 4 / 12)
-          var(--shadow-color),
-        calc(var(--shadow-offset) * 6) calc(var(--shadow-offset) * 6) calc(var(--blur-end) * 5 / 12)
-          var(--shadow-color),
-        calc(var(--shadow-offset) * 7) calc(var(--shadow-offset) * 7) calc(var(--blur-end) * 6 / 12)
-          var(--shadow-color),
-        calc(var(--shadow-offset) * 8) calc(var(--shadow-offset) * 8) calc(var(--blur-end) * 7 / 12)
-          var(--shadow-color),
-        calc(var(--shadow-offset) * 9) calc(var(--shadow-offset) * 9) calc(var(--blur-end) * 8 / 12)
-          var(--shadow-color),
-        calc(var(--shadow-offset) * 10) calc(var(--shadow-offset) * 10)
-          calc(var(--blur-end) * 9 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * 11) calc(var(--shadow-offset) * 11)
-          calc(var(--blur-end) * 10 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * 12) calc(var(--shadow-offset) * 12)
-          calc(var(--blur-end) * 11 / 12) var(--shadow-color),
-        calc(var(--shadow-offset) * 13) calc(var(--shadow-offset) * 13) var(--blur-end)
-          var(--shadow-color);
-    }
+  /* Plain title, without chrome nor shadow (both fade through .title-effect's transitions). */
+  .title-effect-off {
+    --title-chrome-color: theme(colors.black);
+    --title-chrome-color-dark: theme(colors.white);
+    --title-shadow-color: transparent;
+    --title-shadow-color-dark: transparent;
   }
 
   .text-bigger {
