@@ -1,0 +1,23 @@
+{
+  "typeComplement": "Dokumentarfilm",
+  "forceBlank": false,
+  "authorCountry": "Frankreich",
+  "entryType": "Film",
+  "yearOfProduction": 2026,
+  "deactivated": false,
+  "desc": "In Gesprächen, Begegnungen und Fotosessions kommt «Art, Chaos, Riot» María Riot ganz nah: Der Film begleitet die argentinische Künstlerin, Aktivistin und Sexarbeiterin bei der Entwicklung ihres Fotoprojekts «Archivo Puta».",
+  "duration": "73 Minuten",
+  "videourl": "https://www.instagram.com/reel/DexFsz7uA_w/",
+  "authorName": "Carmina & Sören",
+  "title": "Art, Chaos, Riot",
+  "image": "/images/uploads/art_chaos_riot_1.jpg",
+  "uuid": "art-chaos-riot",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/screenshot_3.6.1_small.jpg"
+    },
+    {
+      "image": "/images/uploads/screenshot_1.16.1_small.jpg"
+    }
+  ]
+}
