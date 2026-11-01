@@ -5,7 +5,7 @@
   "price": "",
   "layout": "event",
   "hideReducedPrice": false,
-  "eventlocation": "RiffRaff 1",
+  "eventlocation": "Riffraff 1",
   "entries": [
     "Jeanne Dieldoman",
     "Metamorphosis",
@@ -16,8 +16,9 @@
     "Between Showers"
   ],
   "deactivated": false,
-  "desc": "Was, wenn wir nie unabhängig waren und Begehren eine Weise ist, wie Welt(en) uns berühren? – In \"**More than Human**\" erkunden acht Filme **Begehren als sorgsame Aufmerksamkeit** und **becoming-with**. \n\n«\\[…] und jedes irdische Wesen entsteht aus diesem **Geflecht** als ein dichter Knoten verkörperter multispezifischer Zeit.» \n\n\"Deborah Bird Rose, Kin\"",
+  "desc": "Was, wenn die Welt uns durch Begehren miteinander verbindet? \n\nSieben Kurzfilme laden in «More than Human» dazu ein, Verbundenheit neu zu entdecken. Von kosmischer Sehnsucht bis zu radikaler Intimität erkunden sie Begehren, Lust und Berührung, als Erfahrungen, die weit über uns selbst hinausreichen. Ein sinnliches Filmprogramm über die vielfältigen Beziehungen zwischen uns und der Welt.",
   "eventlocationcomplement": "Neugasse 57-63, 8005 Zürich",
   "ticketsLinkTitle": "TICKET-VORVERKAUF AB 11. NOV. 2026",
-  "title": "MORE-THAN-HUMAN"
+  "subtitle": "Kurzfilmprogramm",
+  "title": "MORE THAN HUMAN"
 }
