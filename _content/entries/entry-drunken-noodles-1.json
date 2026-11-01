@@ -10,6 +10,11 @@
   "videourl": "https://www.youtube.com/watch?v=laox7KPzUfY",
   "authorName": "Lucio Castro",
   "title": "Drunken Noodles",
-  "image": "/images/uploads/drunken_noodles_1.jpeg",
-  "uuid": "drunken-noodles"
+  "image": "/images/uploads/drunkennoodles_presse_01.jpg",
+  "uuid": "drunken-noodles",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/drunkennoodles_presse_04.jpg"
+    }
+  ]
 }
