@@ -1,26 +1,8 @@
 [
   {
-    "title": "Migros Kulturprozent",
-    "link": "https://engagement.migros.ch/de/kulturprozent",
-    "logo": "LogoMigros",
-    "label": "Finanzielle Unterstützung"
-  },
-  {
     "title": "Kanton Zürich Fachstelle Kultur",
     "link": "https://www.zh.ch/de/direktion-der-justiz-und-des-innern/fachstelle-kultur.html",
     "logo": "LogoZurichFK",
-    "label": "Finanzielle Unterstützung"
-  },
-  {
-    "title": "Kultur Stadt Zürich",
-    "link": "https://www.stadt-zuerich.ch/prd/de/index/kultur.html",
-    "logo": "LogoKulturStadtZurich",
-    "label": "Finanzielle Unterstützung"
-  },
-  {
-    "title": "Stiftung Corymbo",
-    "link": "https://corymbo.ch/",
-    "logo": "LogoCorymbo",
     "label": "Finanzielle Unterstützung"
   },
   {
@@ -30,9 +12,9 @@
     "label": "Finanzielle Unterstützung"
   },
   {
-    "title": "Ernst Göhner Stiftung",
-    "link": "https://www.ernst-goehner-stiftung.ch/",
-    "logo": "LogoErnstGoehner",
+    "title": "Athens Porn Film Festival (PFF)",
+    "link": "https://athenspff.com/",
+    "logo": "LogoAthensPFF",
     "label": "Finanzielle Unterstützung"
   },
   {
@@ -61,39 +43,15 @@
     "label": "Restaurant Parnter:in"
   },
   {
-    "title": "Restaurant Osso",
-    "link": "https://ossozuerich.ch/",
-    "logo": "LogoOsso",
-    "label": "Restaurant Partner:in"
-  },
-  {
-    "title": "Intercomestible",
-    "link": "https://intercomestibles.ch/",
-    "logo": "LogoIntercomestible",
-    "label": "Sachsponsoring"
-  },
-  {
     "title": "Riff Raff",
     "link": "https://www.riffraff.ch/",
     "logo": "LogoRiffRaff",
     "label": "Kultur Partner:in"
   },
   {
-    "title": "Kino Xenix",
-    "link": "https://xenix.ch/",
-    "logo": "LogoXenix",
-    "label": "Kultur Partner:in"
-  },
-  {
     "title": "Kauz",
     "link": "https://www.kauzig.ch/",
     "logo": "LogoKauz",
-    "label": "Kultur Partner:in"
-  },
-  {
-    "title": "Babyangel",
-    "link": "https://www.instagram.com/babyangelpr",
-    "logo": "LogoBabyAngel",
     "label": "Kultur Partner:in"
   },
   {
@@ -106,24 +64,6 @@
     "title": "Cinématèque suisse",
     "link": "https://www.cinematheque.ch/",
     "logo": "LogoCinemateque",
-    "label": "Kultur Partner:in"
-  },
-  {
-    "title": "Black Film Festival Zürich",
-    "link": "https://www.blackfilmfestivalzurich.com/",
-    "logo": "LogoBFF",
-    "label": "Kultur Partner:in"
-  },
-  {
-    "title": "Excentrico",
-    "link": "https://excentricofest.com/",
-    "logo": "LogoExcentrico",
-    "label": "Kultur Partner:in"
-  },
-  {
-    "title": "Letstalkaboutsexanddrugs",
-    "link": "https://www.instagram.com/letstalkaboutsexanddrugs/",
-    "logo": "LogoLTASD",
     "label": "Kultur Partner:in"
   }
 ]
