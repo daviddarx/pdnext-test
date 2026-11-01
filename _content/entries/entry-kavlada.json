@@ -1,0 +1,18 @@
+{
+  "forceBlank": false,
+  "authorCountry": "Griechenland",
+  "entryType": "Film",
+  "yearOfProduction": 2025,
+  "deactivated": false,
+  "desc": "In einer Welt, die uns ständig *zu Produktivität und Isolation* antreibt, scheint Begehren fast fehl am Platz. **Begehren** wir einander überhaupt noch? Begegnen wir uns wirklich, oder spielen wir einfach nur Fantasien in unseren eigenen Köpfen immer wieder durch?\\\n \\\n**Mit:** Ilias HGW",
+  "duration": "3min. / Griechisch mit Eng. UT",
+  "authorName": "Ilias HGW",
+  "title": "KAVLADA",
+  "image": "/images/uploads/kavlada_01.jpg",
+  "uuid": "KAVLADA",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/kavlada_02.jpg"
+    }
+  ]
+}

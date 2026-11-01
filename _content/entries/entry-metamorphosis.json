@@ -1,0 +1,18 @@
+{
+  "forceBlank": false,
+  "authorCountry": "Griechenland & USA",
+  "entryType": "Film",
+  "yearOfProduction": 2025,
+  "deactivated": false,
+  "desc": "Eine Neuinterpretation des **Metamorphosen-Tropus von Ovid**, gedreht in Athen. Nun verwandelt nicht die Flucht vor einem gottgewollten Übergriff Daphne, sondern ihr eigenes Begehren: der Gewalt enthoben, bestimmt nun ihre Lust das Geschehen. \n\n*Ihre Lust und ihre Verbindung* zum **Lorbeerbaum** und seinen **Beeren** – ermöglicht durch die alchemistische Hilfe des personifizierten **Windes** und **Regens** – verwandeln sie in ebendiesen, dessen Beeren eine neue Person anlocken und so den Wiederbeginn des Kreislaufs andeuten.",
+  "duration": "4min. / Kein Dialog",
+  "authorName": "Marizó Siller & Daviel Shy",
+  "title": "METAMORPHOSIS",
+  "image": "/images/uploads/metamorphosis-1.jpg",
+  "uuid": "Metamorphosis",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/metamorphosis-2.jpg"
+    }
+  ]
+}

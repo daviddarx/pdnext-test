@@ -1,0 +1,21 @@
+{
+  "forceBlank": false,
+  "authorCountry": "Vereinigte Staaten",
+  "entryType": "Film",
+  "yearOfProduction": 2026,
+  "deactivated": false,
+  "desc": "Ein *maskierter Vigilante* gönnt sich zwischen seinen Einsätzen gegen das Verbrechen ein **Beauty-Treatment im Spa**.",
+  "duration": "7min. / Englisch mit De UT",
+  "authorName": "Esther Kim",
+  "title": "The Dark Knight Waxes",
+  "image": "/images/uploads/dark-knight-waxes_01.jpeg",
+  "uuid": "The Dark Knight Waxes",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/dark-knight-waxes_02.jpeg"
+    },
+    {
+      "image": "/images/uploads/dark-knight-waxes_03.jpeg"
+    }
+  ]
+}
