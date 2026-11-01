@@ -1,6 +1,6 @@
 {
   "typeComplement": "Spielfilm",
-  "forceBlank": true,
+  "forceBlank": false,
   "authorCountry": "USA, Argentinien",
   "entryType": "Film",
   "yearOfProduction": 2025,
