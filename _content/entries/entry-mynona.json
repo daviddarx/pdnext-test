@@ -1,10 +1,15 @@
 {
-  "forceBlank": false,
-  "deactivated": false,
-  "uuid": "mynona",
-  "title": "Mynona",
-  "entryType": "Musik",
   "typeComplement": "DJ",
+  "forceBlank": false,
+  "entryType": "Musik",
+  "deactivated": false,
   "desc": "Bouncy Beats, funky Abzweigungen und ein Bass, der Fragen aufwirft. Zwischen *Tech House, Indie Dance, Bass House* und *Downtempo* ist alles möglich, nichts in Stein gemeisselt. Ausser der Groove mit **[Mynona](https://soundcloud.com/engine-jerry)**, der ist unverhandelbar!",
-  "image": "/images/uploads/01_mynona.jpeg"
+  "title": "Mynona",
+  "image": "/images/uploads/01_mynona.jpeg",
+  "uuid": "mynona",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/whatsapp-image-2026-10-28-at-20.48.01.jpeg"
+    }
+  ]
 }
