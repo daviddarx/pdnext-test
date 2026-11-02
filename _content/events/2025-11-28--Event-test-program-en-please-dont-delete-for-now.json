@@ -10,7 +10,7 @@
   "entries": [
     "test-entry"
   ],
-  "deactivated": false,
+  "deactivated": true,
   "desc": "D﻿as ist ein Event.",
   "eventlocationcomplement": "",
   "ticketsLinkTitle": "",
