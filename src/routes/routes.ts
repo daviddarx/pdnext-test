@@ -33,7 +33,7 @@ export const routes = {
       slug: 'one-night-stands',
       title: 'One Night Stands',
       complement: 'Saisonales Programm',
-      home: true,
+      home: false,
     },
   },
   secondary: {
