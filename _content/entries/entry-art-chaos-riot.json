@@ -10,5 +10,10 @@
   "authorName": "Carmina and Sören",
   "title": "Art, Chaos, Riot",
   "image": "/images/uploads/art_chaos_riot_1.jpg",
-  "uuid": "Art, Chaos, Riot"
+  "uuid": "Art, Chaos, Riot",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/screenshot_3.6.1_small.jpg"
+    }
+  ]
 }
