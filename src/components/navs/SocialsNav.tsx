@@ -1,10 +1,8 @@
 import classNames from 'classnames';
 
+import { NEWSLETTER_URL } from '@/utils/newsletter';
+
 const socialsNavItems = [
-  {
-    title: 'Facebook',
-    link: 'https://www.facebook.com/pornydays',
-  },
   {
     title: 'Twitter',
     link: 'https://twitter.com/pornydays',
@@ -19,7 +17,7 @@ const socialsNavItems = [
   },
   {
     title: 'Newsletter',
-    link: 'https://pornydays.us10.list-manage.com/subscribe?u=9c7ed05ab79d08599fd3d90ee&id=7073021cc1',
+    link: NEWSLETTER_URL,
   },
 ];
 

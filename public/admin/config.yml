@@ -97,7 +97,7 @@ collections:
     create: true
     folder: '_content/news'
     slug: 'news-{{slug}}'
-    description: 'Short news with links to Facebook, Twitter, Instagram, PDF, etc'
+    description: 'Short news with links to Twitter, Instagram, PDF, etc'
     extension: 'json'
     format: 'json'
     summary: 'Version: {{version}} - {{title}}'

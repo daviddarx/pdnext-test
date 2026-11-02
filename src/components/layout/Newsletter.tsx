@@ -1,8 +1,10 @@
+import { NEWSLETTER_HONEYPOT_NAME, NEWSLETTER_URL } from '@/utils/newsletter';
+
 const Newsletter = () => {
   return (
     <section className='newsletter'>
       <form
-        action='https://filmkunstfestival.us8.list-manage.com/subscribe?u=da1c3611e239cb857c6673aa3&id=3e4ca7fbe7'
+        action={NEWSLETTER_URL}
         method='post'
         id='mc-embedded-subscribe-form'
         name='mc-embedded-subscribe-form'
@@ -31,12 +33,7 @@ const Newsletter = () => {
 
           {/* real people should not fill this in and expect good things - do not remove this or risk form bot signups */}
           <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden='true'>
-            <input
-              type='text'
-              name='b_9c7ed05ab79d08599fd3d90ee_7073021cc1'
-              tabIndex={-1}
-              defaultValue=''
-            />
+            <input type='text' name={NEWSLETTER_HONEYPOT_NAME} tabIndex={-1} defaultValue='' />
           </div>
 
           <input
