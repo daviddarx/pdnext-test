@@ -1,16 +1,3 @@
-/* Registered so the title shadows can fade (see .title-effect). */
-@property --title-shadow-color {
-  syntax: '<color>';
-  inherits: false;
-  initial-value: transparent;
-}
-
-@property --title-shadow-color-dark {
-  syntax: '<color>';
-  inherits: false;
-  initial-value: transparent;
-}
-
 @layer utilities {
   h1,
   h2,
@@ -68,56 +55,8 @@
     @apply text-xl xl:text-2xl;
   }
 
-  /* Keep in sync with CHROME_SELECTOR in components/ui/ChromeFilter.tsx. */
-  .title-effect,
-  .content-slot__title,
-  .content-page .text-content h2 {
-    /*
-     * Chrome shading and outline come from the SVG filters in components/ui/ChromeFilter.tsx.
-     * The amount of chrome is encoded in the text color (--title-chrome-color[-dark], set on :root
-     * by ChromeFilter): transitioning to the plain theme color fades the chrome out. The theme
-     * color is also the fallback if filters don't apply.
-     */
-    --title-shadow-color: theme(colors.black / 45%);
-    --title-shadow-color-dark: rgb(0 0 0 / 0.6);
-    color: var(--title-chrome-color, theme(colors.black));
-    filter: var(--chrome-filter, url(#chrome-2))
-      drop-shadow(0.02em 0.05em 0.04em var(--title-shadow-color));
-    transition:
-      color 0.4s theme(transitionTimingFunction.out-quart),
-      --title-shadow-color 0.4s theme(transitionTimingFunction.out-quart),
-      --title-shadow-color-dark 0.4s theme(transitionTimingFunction.out-quart);
-
-    @media (hover: hover) {
-      &:hover {
-        @apply title-effect-off;
-      }
-    }
-
-    /* Selected text turns plain on a translucent highlight, so it stays readable. */
-    &::selection,
-    & *::selection {
-      @apply bg-black/20 text-black;
-    }
-
-    .dark & {
-      color: var(--title-chrome-color-dark, theme(colors.white));
-      filter: var(--chrome-filter-dark, url(#chrome-dark-2))
-        drop-shadow(0.02em 0.05em 0.05em var(--title-shadow-color-dark));
-
-      &::selection,
-      & *::selection {
-        @apply bg-white/20 text-white;
-      }
-    }
-  }
-
-  /* Plain title, without chrome nor shadow (both fade through .title-effect's transitions). */
-  .title-effect-off {
-    --title-chrome-color: theme(colors.black);
-    --title-chrome-color-dark: theme(colors.white);
-    --title-shadow-color: transparent;
-    --title-shadow-color-dark: transparent;
+  /* Hook for a future title effect, intentionally empty for now. */
+  .title-effect {
   }
 
   .text-bigger {

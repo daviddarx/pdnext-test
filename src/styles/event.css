@@ -14,20 +14,12 @@
   @media (hover: hover) {
     &:hover {
       @apply bg-white;
-
-      .title-effect {
-        @apply title-effect-off;
-      }
     }
   }
 }
 
 .event--active {
   @apply bg-white;
-
-  .title-effect {
-    @apply title-effect-off;
-  }
 }
 
 .event__cols {

@@ -20,7 +20,6 @@ import CookieBanner from '@/components/layout/CookieBanner';
 import NavBurger from '@/components/navs/NavBurger';
 import MainNavPanel from '@/components/navs/MainNav';
 import VideoOverlay from '@/components/ui/VideoOverlay';
-import ChromeFilter from '@/components/ui/ChromeFilter';
 
 import '@/styles/globals.css';
 
@@ -183,7 +182,6 @@ const App = ({ Component, pageProps }: AppProps) => {
         }}
       />
       <div className={classNames(fontText.className, fontTitle.variable)}>
-        <ChromeFilter />
         <MainNavPanel />
         <NavBurger />
         <AnimatePresence mode='wait' initial={false} onExitComplete={handleExitComplete}>
