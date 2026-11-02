@@ -1,10 +1,15 @@
 {
-  "forceBlank": false,
-  "deactivated": false,
-  "uuid": "yugo-boss-2026",
-  "title": "Yugo Boss",
-  "entryType": "Musik",
   "typeComplement": "DJ",
+  "forceBlank": false,
+  "entryType": "Musik",
+  "deactivated": false,
   "desc": "**[Yugo Boss](https://soundcloud.com/yugo-girlboss)** ist ein\\*e schweiz-albanische\\*r DJ, di*er* **Tech House wieder queer macht** *–* Ibiza-Vibes ohne Macho-Energie und ohne cheesy Sexismus*. Deir Sets sind *groovig, sexy* und *ausdauernd tanzbar* – perfekt für alle, die die ganze Nacht bleiben wollen. Yugo Boss verführt das Publikum mit Charme und lässt alle mit sich selbst – und miteinander – flirten.",
-  "image": "/images/uploads/01_yugo_jpg.jpeg"
+  "title": "Yugo Boss",
+  "image": "/images/uploads/01_yugo_jpg.jpeg",
+  "uuid": "yugo-boss-2026",
+  "additionalImages": [
+    {
+      "image": "/images/uploads/whatsapp-image-2026-10-23-at-17.10.24.jpeg"
+    }
+  ]
 }
