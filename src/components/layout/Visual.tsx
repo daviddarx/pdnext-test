@@ -5,14 +5,13 @@ import { uiStateType } from '@/store/ui-slice';
 import { debounce } from 'lodash-es';
 
 const videosNames = [
-  'porny_2025-01',
-  'porny_2025-02',
-  'porny_2025-03',
-  'porny_2025-04',
-  'porny_2025-05',
+  'porny-bg-2026-01',
+  'porny-bg-2026-02',
+  'porny-bg-2026-03',
+  'porny-bg-2026-04',
 ];
 
-const videosURL = 'https://files.daviddarx.com/pornydays/videos/2025/';
+const videosURL = 'https://files.daviddarx.com/pornydays/videos/2026/';
 
 const Visual = () => {
   const [mounted, setMounted] = useState(false);
