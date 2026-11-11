@@ -1,7 +1,9 @@
 {
   "timetable": [],
+  "ticketsLink": "https://www.riffraff-houdini.ch/de-ch/film/flesh-freedom.html",
   "eventdate": "2026-11-28T15:00:00.000Z",
   "eventlocationlink": "https://www.riffraff-houdini.ch/de-ch/programm.html",
+  "price": "CHF 21",
   "layout": "event",
   "hideReducedPrice": false,
   "eventlocation": "Riffraff 1",
