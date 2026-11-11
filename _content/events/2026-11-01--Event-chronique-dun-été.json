@@ -1,7 +1,9 @@
 {
   "timetable": [],
+  "ticketsLink": "https://www.riffraff-houdini.ch/de-ch/film/chronique-dun-ete.html",
   "eventdate": "2026-11-28T18:50:00.000Z",
   "eventlocationlink": "www.riffraff.ch",
+  "price": "CHF 21",
   "layout": "event",
   "hideReducedPrice": false,
   "eventlocation": "Riffraff 2",
