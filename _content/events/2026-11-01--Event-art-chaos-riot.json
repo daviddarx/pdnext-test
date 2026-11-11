@@ -1,7 +1,9 @@
 {
   "timetable": [],
+  "ticketsLink": "https://www.riffraff-houdini.ch/de-ch/film/art-chaos-riot.html",
   "eventdate": "2026-11-29T14:10:00.000Z",
   "eventlocationlink": "www.riffraff.ch",
+  "price": "",
   "layout": "event",
   "hideReducedPrice": false,
   "eventlocation": "Riffraff 2",
