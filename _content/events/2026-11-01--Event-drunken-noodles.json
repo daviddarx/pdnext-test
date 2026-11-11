@@ -1,7 +1,9 @@
 {
   "timetable": [],
+  "ticketsLink": "https://www.riffraff-houdini.ch/de-ch/film/drunken-noodles.html",
   "eventdate": "2026-11-28T14:50:00.000Z",
   "eventlocationlink": "www.riffraff.ch",
+  "price": "CHF 21",
   "layout": "event",
   "hideReducedPrice": false,
   "eventlocation": "Riffraff 2 ",
