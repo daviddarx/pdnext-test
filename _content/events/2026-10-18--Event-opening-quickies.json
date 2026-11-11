@@ -1,5 +1,15 @@
 {
-  "timetable": [],
+  "timetable": [
+    {
+      "time": "20:30",
+      "title": "Opening Performance"
+    },
+    {
+      "time": "21:00",
+      "title": "Opening Quickies"
+    }
+  ],
+  "ticketsLink": "https://www.riffraff-houdini.ch/de-ch/film/opening-quickies_3.html",
   "eventdate": "2026-11-27T20:30:47.617Z",
   "eventlocationlink": "https://www.riffraff-houdini.ch/",
   "layout": "event",
