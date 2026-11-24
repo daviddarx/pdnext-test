@@ -1,11 +1,11 @@
 {
   "timetable": [
     {
-      "time": "15:30-18:00",
+      "time": "16:30-21:30",
       "title": "Timeslot 3"
     }
   ],
-  "eventdate": "2026-11-28T15:30:03.178Z",
+  "eventdate": "2026-11-28T16:30:03.178Z",
   "eventlocationlink": "https://www.riffraff-houdini.ch/de-ch/programm.html",
   "price": "69CHF für ein single-ass-portrait\\\n99CHF für ein double-ass-portrait",
   "layout": "event",
